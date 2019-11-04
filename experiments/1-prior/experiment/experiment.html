@@ -1,0 +1,199 @@
+<html>
+
+<head>
+    <title>How likely is it?</title>
+
+    <!--JS-->
+
+    <!-- external general utilities -->
+    <script src="../_shared/js/jquery-1.11.1.min.js "></script>
+    <script src="../_shared/full-projects/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../_shared/js/underscore-min.js"></script>
+    <!-- if you want to draw stuff: -->
+    <!-- <script src="../_shared/js/raphael-min.js"></script> -->
+
+    <!-- cocolab experiment logic -->
+    <script src="../_shared/js/exp-V2.js"></script>
+    <script src="../_shared/js/stream-V2.js"></script>
+
+    <!-- cocolab general utilities -->
+    <script src="../_shared/js/mmturkey.js "></script>
+    <script src="../_shared/js/browserCheck.js"></script>
+    <script src="../_shared/js/utils.js"></script>
+    <!-- if you want to draw cute creatures (depends on raphael): -->
+    <!-- <script src="../_shared/js/ecosystem.js"></script> -->
+
+    <!-- experiment specific helper functions -->
+    <!-- <script src="js/local-utils.js"></script> -->
+
+    <!--CSS-->
+    <link href="../_shared/full-projects/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../_shared/css/cocolab-style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/local-style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- experiment file -->
+    <script src="js/stims.js"></script>
+    <script src="js/template.js"></script>
+
+</head>
+
+<body onload="init();">
+  <noscript>This task requires JavaScript.</noscript>
+
+  <div class="slide" id="i0" >
+    <p id="instruct-text">
+
+<p align="left">You will read a fact about the world and are asked to assess how likely an event is, given that fact. For example:</p>
+Fact: Patty lives in Canada.
+<br>
+<br>
+How likely is it that Patty watches hockey? 
+<br>
+<p align="left">You will give your answer on a sliding scale from 'impossible' to 'definitely'.</p>
+
+<p align="left">There are a total of 22 items. The task will take about 4 minutes and you will be paid 55 cents.</p>
+
+<p align="left">We have included some items for which we already know the answer. If you are paying attention, you are sure to get those right! At the end of the task, we will ask you four short questions about you and your language use. You will be paid no matter what you answer there, so please answer truthfully.</p>
+
+Thank you!
+
+<br>
+<br>
+
+    <button id="start_button" type="button">Start Experiment</button>
+    <p id="legal">By clicking on the button above you agree to participate in this experiment, which is conducted by a researcher at The Ohio State University. The goal of this research is to understand how English sentences are interpreted and, if you participate in the experiment, you will be asked, as explained above, to provide judgments about English sentences. You may withdraw from this experiment at any time or skip any questions without penalty or loss of benefits, including loss or reduction of payment. If you do withdraw from the study before the end, please contact the researchers for information on how to collect payment (tonhauser dot 1 at osu dot edu). The data collected will be anonymous and confidential.  If you have any questions, you may contact the requester through Amazon’s Mechanical Turk platform, or directly at tonhauser dot 1 at osu dot edu. For questions about your rights as a participant in this study or to discuss other study-related concerns or complaints with someone who is not part of the research team, you may contact Ms. Sandra Meadows in the Ohio State University Office of Responsible Research Practices at 1-800-678-6251.</p>
+  </div>
+
+  <!-- 
+<div class="slide" id="instructions">
+    <h3>Instructions</h3>
+    <p>Here are some instructions.</p>
+    <button onclick="_s.button()">Continue</button>
+  </div>
+ -->
+
+  <!-- 
+<div class="slide" id="single_trial">
+    <p class="display_condition">{{}}</p>
+      <label><input type="radio"  name="pet" value="No"/>No</label>
+      <label><input type="radio"  name="pet" value="Yes"/>Yes</label>
+      <br>
+    <button onclick="_s.button()">Continue</button>
+    <p class="err">Please click a button.</p>
+  </div>
+ -->
+
+  <div class="slide" id="one_slider">
+    <p class="prompt"></p>
+    <table id="slider_table" class="slider_table">
+      <tr><td class="left">impossible</td><td class="right">definitely</td></tr>
+      <tr><td colspan="2"><div id="single_slider" class="slider"></div></td></tr>
+    </table>
+    <button onclick="_s.button()">Continue</button>
+    <div class="err">Please adjust the slider before continuing.</div>
+  </div>
+
+  <!-- 
+<div class="slide" id="multi_slider">
+    <p>Here are a bunch of sliders.</p>
+    <p>How likely do you think it is that someone would say each of the following?</p>
+    <table id="multi_slider_table" class="slider_table">
+      <tr><td></td><td class="left">very unlikely</td><td class="right">very likely</td></tr>
+    </table>
+    <button onclick="_s.button()">Continue</button>
+    <div class="err">Please adjust all the sliders before continuing.</div>
+  </div>
+
+  <div class="slide" id="vertical_sliders">
+    <p>Here are a bunch of vertical sliders.</p>
+    <p id="vertical_question">{{}}</p>
+    <table id="vertical_slider_table" class="slider_table">
+      <tbody>
+        <tr id="sliders">
+        </tr>
+        <tr id="bin_labels">
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="_s.button()">Continue</button>
+    <div class="err">Please adjust all the sliders before continuing.</div>
+  </div>
+ -->
+
+  <div class="slide"  id="subj_info">
+    <div class="long_form">
+      <div class="subj_info_title">Demographic information</div>
+      
+      <p align="left">Gender:
+        <select id="gender">
+          <label><option value=""/></label>
+          <label><option value="Male"/>Male</label>
+          <label><option value="Female"/>Female</label>
+          <label><option value="Other"/>Other</label>
+        </select>
+      </p>
+
+      <p align="left">Age: <input type="text" id="age"/></p>
+      
+      <p align="left">Native Language: <input type="text" id="language"/></p>
+      <label>(the language(s) spoken at home when you were a child)</label>
+
+      <p align="left">If English is your native language, is it AMERICAN English, as opposed to e.g., INDIAN or AUSTRALIAN English?</p>
+      <select id="american">
+        <label><option value="-1"></option></label>
+        <label><option value="0">Yes</option></label>
+        <label><option value="1" >No</option></label>
+      </select>
+      
+      <!-- 
+<p class="info">Answering these questions is optional, but will help us understand your answers.</p>
+      <p>Did you read the instructions and do you think you did the HIT correctly?</p>
+      <label><input type="radio"  name="assess" value="No"/>No</label>
+      <label><input type="radio"  name="assess" value="Yes"/>Yes</label>
+      <label><input type="radio"  name="assess" value="Confused"/>I was confused</label>
+ -->
+
+      <!-- 
+<p>Were there any problems or bugs in the experiment?</p>
+      <textarea id="problems" rows="2" cols="50"></textarea>
+      -->
+
+      <!-- 
+<p>What do you think is a fair price for the work you did?</p>
+      <textarea id="fairprice" rows="1" cols="10"></textarea>
+ 
+ -->
+      <!-- 
+<p>Level Of Education:
+        <select id="education">
+          <label><option value="-1"/></label>
+          <label><option value="0"/>Some High School</label>
+          <label><option value="1"/>Graduated High School</label>
+          <label><option value="2"/>Some College</label>
+          <label><option value="3"/>Graduated College</label>
+          <label><option value="4"/>Hold a higher degree</label>
+        </select>
+      </p>
+ -->
+
+<p align="left">We would be interested in any comments you have about this experiment, including what you think is a fair price for the work you did:</p>
+      <textarea id="comments" rows="3" cols="50"></textarea>
+      <br/>
+      <button onclick="_s.submit()">Submit</button>
+    </div>
+  </div>
+
+  <div id="thanks" class="slide js" >
+    <p  class="big">Thank you for your time!</p>
+  </div>
+
+  <div class="progress">
+    <span>Progress:</span>
+    <div class="bar-wrapper">
+      <div class="bar" width="0%">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

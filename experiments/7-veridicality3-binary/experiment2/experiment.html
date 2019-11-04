@@ -1,0 +1,256 @@
+<html>
+
+<head>
+    <title>Language study</title>
+
+    <!--JS-->
+
+    <!-- external general utilities -->
+    <script src="../_shared/js/jquery-1.11.1.min.js "></script>
+    <script src="../_shared/full-projects/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../_shared/js/underscore-min.js"></script>
+
+    <!-- cocolab experiment logic -->
+    <script src="../_shared/js/exp-V2.js"></script>
+    <script src="../_shared/js/stream-V2.js"></script>
+
+    <!-- cocolab general utilities -->
+    <script src="../_shared/js/mmturkey.js "></script>
+    <script src="../_shared/js/browserCheck.js"></script>
+    <!-- if you want to draw cute creatures (depends on raphael): -->
+    <!-- <script src="../_shared/js/ecosystem.js"></script> -->
+
+    <!-- experiment specific helper functions -->
+    <script src="../_shared/js/utils.js"></script>
+    <!-- <script src="js/local-utils.js"></script> -->
+
+    <!--CSS-->
+    <link href="../_shared/full-projects/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../_shared/css/cocolab-style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/local-style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>    
+
+    <!-- experiment file -->
+    <script src="js/experiment.js"></script>
+    
+</head>
+
+<body onload="init();">
+  <noscript>This task requires JavaScript.</noscript>
+
+<!-- 
+<script src='https://www.google.com/recaptcha/api.js'></script>
+  
+  <div class = "slide" id = "auth">
+  <p> <br> <p>
+    <p>
+
+    <form target="_blank" id="verify_form" method="post">
+    <center>
+      <!~~ SITE KEY FOR DEMO PURPOSES ONLY ~~>
+      <div class="g-recaptcha" data-sitekey="6LcGfIsUAAAAACS-Bp~~dNE-wsZ_DYxNxhhIQ4Vz"></div>
+    <p>
+    <input type="submit" name="submit" value="Begin HIT"><br>
+    </center>
+    </form>
+    <div class="loading" style="display:none"><p>Loading HIT...</div> 
+    <div class="captcha_error" style="display:none"><p><font color="FF0000">ERROR: You must pass the reCaptcha authentication before proceeding.</font></div> 
+  </div>
+
+
+<script>
+
+// Attach a submit handler to the form
+$( "#verify_form" ).submit(function( event ) {
+ 
+  // Stop form from submitting normally
+  event.preventDefault();
+
+  $(".captcha_error").hide()
+
+  $(".loading").show();
+
+  function looseJsonParse(obj){
+    return Function('"use strict";return (' + obj + ')')();
+  }
+ 
+  $.ajax({
+  type: "POST",
+  url: "https://www.asc.ohio-state.edu/tonhauser.1/experiment/verify.php/",
+  data : {"captcha" : grecaptcha.getResponse()},
+  success: function(data) {
+    console.log(looseJsonParse(data));
+    },
+  error: function() { 
+    console.log("Error: form not sent"); 
+    },  
+  });
+});
+
+</script> 
+ -->
+
+  <div class="slide" id="i0" > 
+  <p class="block-text" id="instruct-text"><br><br>In this experiment, you will read a true statement and be asked to assess whether a second statement follows from the first, true statement. Here is an example:
+<br>
+<br>
+<b> What is true: </b> Katinka lives in Poland.
+<br>
+<br>
+Does it follow from this true statement that Katinka lives in Europe?
+<br>
+<br>
+You will respond 'Yes' or 'No'.
+<br>
+<br>
+There are 28 items total. The HIT will take about 5 minutes and pays $1. At the end of the HIT, we will ask you four short questions about you and your language use. You will be paid no matter what you answer there, so please answer truthfully.
+<br>
+<br>
+
+Let's start with some examples! </p>
+
+
+<br>
+
+    <button id="start_button" type="button">Start Experiment</button>
+    <p id="legal">By clicking on the button above you agree to participate in this experiment, which is conducted by a researcher at The Ohio State University. The goal of this research is to understand how English sentences are interpreted and, if you participate in the experiment, you will be asked, as explained above, to provide judgments about English sentences. You may withdraw from this experiment at any time or skip any questions without penalty or loss of benefits, including loss or reduction of payment. If you do withdraw from the study before the end, please contact the researchers for information on how to collect payment (tonhauser dot 1 at osu dot edu). The data collected will be anonymous and confidential.  If you have any questions, you may contact the requester through Amazon’s Mechanical Turk platform, or directly at tonhauser dot 1 at osu dot edu. For questions about your rights as a participant in this study or to discuss other study-related concerns or complaints with someone who is not part of the research team, you may contact Ms. Sandra Meadows in the Ohio State University Office of Responsible Research Practices at 1-800-678-6251.</p>
+  </div></p> </div>
+
+ 
+
+ <div class="slide" id="practice1">
+  <br> 
+  
+<b>What is true: </b> Drew is correct that Patty lives in Canada.
+
+<br>
+<br>
+  <p>Does it follow that Patty lives in Canada?</p>
+
+      <label><input type="radio"  name="practice1" value="No"/>No</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label><input type="radio"  name="practice1" value="Yes"/>Yes</label> 
+    <br>
+    <button onclick="_s.button()">Next</button>
+  <p class="err">Please respond before continuing.</p>  
+  <p id="practice_err1">Actually, that Patty lives in Canada does follow from this true statement: Drew can only be correct that Patty lives in Canada if she actually lives in Canada. Please adjust your response accordingly.</p>  
+</div>
+
+
+<div class="slide" id="practice2">
+  <br> 
+  <p class="block-text" id="instruct-text">
+    Great! Let's do another one.
+  </p>
+    <br>
+    <p>
+<b>What is true: </b> Drew believes that Patty lives in Canada.</p>
+
+  <p>Does it follow that Patty lives in Canada?</p>
+
+     <label><input type="radio"  name="practice2" value="No"/>No</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label><input type="radio"  name="practice2" value="Yes"/>Yes</label>
+    <br>
+
+    <button onclick="_s.button()">Next</button>
+  <p class="err">Please respond before continuing.</p>  
+  <p id="practice_err2">Actually, it does not follow from the true statement that Patty lives in Canada because Drew might be mistaken: he believes that Patty lives in Canada but she actually lives in the USA. Please adjust your response accordingly.</p>  
+</div>
+
+
+<div class="slide" id="i1">
+  <br> 
+<p class="block-text" id="instruct-text">Great, you're ready to go!</p>
+
+<p class="block-text" id="instruct-text">We have included some items for which we already know the answer. If you are paying attention, you are sure to get those right.</p>
+
+<p class="block-text" id="instruct-text">
+Thank you!  
+</p>
+
+    <button onclick="_s.button()">Next</button>
+
+</div>
+
+
+ <div class="slide" id="block1">
+  <br> 
+  	<br>
+  	<!-- <p class="debby">{{}}</p> <br> --> 
+	<p class="sentence">{{}}</p> 
+	<p class="question">{{}}</p><br>
+
+     <label><input type="radio"  name="critical" value="No"/>No</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label><input type="radio"  name="critical" value="Yes"/>Yes</label>
+    <br>
+    
+    <button onclick="_s.button()">Next</button>
+	<p class="err">Please adjust your response before continuing.</p>
+</div>
+
+  <div class="slide"  id="questionaire">
+    <div class="long_form">
+      <div class="subj_info_title">Demographic information</div>
+      
+      <p align="left">Gender:
+        <select id="gender">
+          <label><option value=""/></label>
+          <label><option value="Male"/>Male</label>
+          <label><option value="Female"/>Female</label>
+          <label><option value="Other"/>Other</label>
+        </select>
+      </p>
+
+      <p align="left">Age: <input type="text" id="age"/></p>
+      
+      <p align="left">Native Language(s) (spoken at home when you were a child): <input type="text" id="language"/></p>
+<!-- 
+      <label>(the language(s) spoken at home when you were a child)</label>
+ -->
+
+      <p align="left">If English is your native language, is it AMERICAN English, as opposed to e.g., INDIAN or AUSTRALIAN English?</p>
+      <select id="american">
+        <label><option value="-1"></option></label>
+        <label><option value="0">Yes</option></label>
+        <label><option value="1" >No</option></label>
+      </select>
+
+<p class="info"></p>
+      <p>Do you think you did the HIT correctly?</p>
+      <label><input type="radio"  name="assess" value="No"/>No</label>
+      <label><input type="radio"  name="assess" value="Yes"/>Yes</label>
+      <label><input type="radio"  name="assess" value="Confused"/>I was confused</label>
+
+ 
+<p align="left">We would be interested in any comments you have about this experiment, including what you think is a fair price for the work you did:</p>
+      <textarea id="comments" rows="3" cols="50"></textarea>
+      <br/>
+      <button onclick="_s.submit()">Submit</button>
+    </div>
+  </div>
+
+  <div id="thanks" class="slide js" >
+    <p  class="big">Thank you for your time!</p>
+  </div>
+
+  <div class="progress">
+    <span>Progress:</span>
+    <div class="bar-wrapper">
+      <div class="bar" width="0%">
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="finished">
+  You're finished - thanks for participating! Submitting to Mechanical Turk...
+  </div>
+
+  <div class="progress">
+    <span>Progress:</span>
+    <div class="bar-wrapper">
+      <div class="bar" width="0%">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
