@@ -1,0 +1,48 @@
+# Latex files
+# .pdf .aux .toc .bbl . blg .synctex.gz
+paper/prior.pdf
+paper/prior.synctex.gz
+paper/prior.log
+paper/prior.aux
+paper/prior.toc
+paper/prior.out
+paper/prior.bbl
+paper/prior.blg
+paper/factives-paper.pdf
+paper/factives-paper.synctex.gz
+paper/factives-paper.log
+paper/factives-paper.aux
+paper/factives-paper.toc
+paper/factives-paperout
+paper/factives-paper.bbl
+paper/factives-paper.blg
+
+
+# SALT 2018 submission
+/salt2018
+
+# MIT talk outline
+/mit2018
+
+# Other files */node_modules/
+*.RData
+*.config
+*.input
+*.properties
+*.question
+*.results
+*.success
+*_invoice.csv
+*.Rhistory
+*.DS_Store
+*.DS_Store*
+*catch_trials.csv
+*subject_information.csv
+*system.csv
+*trials.csv
+*mturk.csv
+*mturk/
+*.gitattributes
+
+# Rds files of models (too big)
+*models/
