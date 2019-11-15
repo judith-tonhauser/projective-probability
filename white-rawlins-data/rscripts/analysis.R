@@ -201,7 +201,7 @@ ggplot(v_means, aes(x=verb, y=Mean,fill=VeridicalityGroup)) +
   ylab("Mean veridicality rating") +
   xlab("Predicate") +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
-ggsave("../graphs/means-veridicality-by-predicate.pdf",height=4,width=15)
+ggsave("../graphs/means-veridicality-by-predicate.pdf",height=4,width=7)
 
 
 # plot projection ratings (embedding is negation, conditional or both)
@@ -265,24 +265,24 @@ ggplot(p_means, aes(x=verb, y=Mean,fill=VeridicalityGroup)) +
   ylab("Mean projectivity rating") +
   xlab("Predicate") +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
-ggsave("../graphs/means-projection-by-predicate.pdf",height=4,width=15)
+ggsave("../graphs/means-projection-by-predicate.pdf",height=4,width=7)
 
 ## comparison between our ratings and MegaVeridicality ratings ----
 
 # load our continuous data 
 
 # projection
-d_proj = read.csv("../../Git-projective-probability/results/5-projectivity-no-fact/data/cd.csv") %>%
+d_proj = read.csv("../../results/5-projectivity-no-fact/data/cd.csv") %>%
   mutate(verb=recode(verb, control = "MC", annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform"))
 table(d_proj$verb)
 
 # inference diagnostic
-d_inf = read.csv("../../Git-projective-probability/results/4-veridicality3/data/cd.csv") %>%
+d_inf = read.csv("../../results/4-veridicality3/data/cd.csv") %>%
   mutate(verb=recode(verb, control = "MC", annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform"))
 table(d_inf$verb)
 
 # contradictoriness diagnostics
-d_contr = read.csv("../../Git-projective-probability/results/2-veridicality2/data/cd.csv") %>%
+d_contr = read.csv("../../results/2-veridicality2/data/cd.csv") %>%
   mutate(verb=recode(verb, control = "MC", annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform"))
 table(d_contr$verb)
 
@@ -356,7 +356,7 @@ ggplot(pd, aes(x=MeanOUR, y=Mean, fill=VeridicalityGroup)) +
   coord_fixed(ratio = 1) +
   xlim(c(0,1)) +
   ylim(c(0,1))
-ggsave("../graphs/projectivity-comparison.pdf",height=3,width=3)
+ggsave("../graphs/projectivity-comparison.pdf",height=4,width=4)
 
 corr_projectivity = pd %>%
   summarize(Cor=cor(MeanOUR,Mean,method="spearman"))
@@ -421,7 +421,7 @@ ggplot(vinfd, aes(x=MeanOUR, y=Mean, fill=VeridicalityGroup)) +
   coord_fixed(ratio = 1) +
   xlim(c(0,1)) +
   ylim(c(0,1))
-ggsave("../graphs/entailment-inference-comparison.pdf",height=3,width=3)
+ggsave("../graphs/entailment-inference-comparison.pdf",height=4,width=4)
 
 corr_inference = vinfd %>% 
   summarize(Cor=cor(MeanOUR,Mean,method="spearman"))
@@ -483,8 +483,9 @@ ggplot(vcontrd, aes(x=MeanOUR, y=Mean, fill=VeridicalityGroup)) +
   coord_fixed(ratio = 1) +
   xlim(c(0,1)) +
   ylim(c(0,1))
-ggsave("../graphs/entailment-contradictoriness-comparison.pdf",height=3,width=3)
+ggsave("../graphs/entailment-contradictoriness-comparison.pdf",height=4,width=4)
 
 corr_inference = vcontrd %>% 
   summarize(Cor=cor(MeanOUR,Mean,method="spearman"))
 corr_inference #.514
+
