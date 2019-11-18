@@ -358,6 +358,9 @@ ggplot(pd, aes(x=MeanOUR, y=Mean, fill=VeridicalityGroup)) +
   ylim(c(0,1))
 ggsave("../graphs/projectivity-comparison.pdf",height=4,width=4)
 
+cor.test(pd$MeanOUR,pd$Mean,method="spearman")
+length(unique(pd$verb)) #19 verbs, rho = .852, p-value < .001
+
 corr_projectivity = pd %>%
   summarize(Cor=cor(MeanOUR,Mean,method="spearman"))
 corr_projectivity #.852
@@ -423,6 +426,9 @@ ggplot(vinfd, aes(x=MeanOUR, y=Mean, fill=VeridicalityGroup)) +
   ylim(c(0,1))
 ggsave("../graphs/entailment-inference-comparison.pdf",height=4,width=4)
 
+cor.test(vinfd$MeanOUR,vinfd$Mean,method="spearman")
+length(unique(vinfd$verb)) #19 verbs, rho = .596, p-value = 0.07126
+
 corr_inference = vinfd %>% 
   summarize(Cor=cor(MeanOUR,Mean,method="spearman"))
 corr_inference #.596
@@ -484,6 +490,9 @@ ggplot(vcontrd, aes(x=MeanOUR, y=Mean, fill=VeridicalityGroup)) +
   xlim(c(0,1)) +
   ylim(c(0,1))
 ggsave("../graphs/entailment-contradictoriness-comparison.pdf",height=4,width=4)
+
+cor.test(vcontrd$MeanOUR,vcontrd$Mean,method="spearman")
+length(unique(vcontrd$verb)) #rho = .514, p-value = 0.02439
 
 corr_inference = vcontrd %>% 
   summarize(Cor=cor(MeanOUR,Mean,method="spearman"))
