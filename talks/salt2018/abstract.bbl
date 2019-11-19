@@ -1,0 +1,104 @@
+\newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{}
+\begin{thebibliography}{17}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[Abrus{\'a}n(2011)]{abrusan2011}
+Abrus{\'a}n, M{\'a}rta. 2011.
+\newblock Predicting the presuppositions of soft triggers.
+\newblock {\em Linguistics \& Philosophy\/} 34:491--535.
+
+\bibitem[Abrus{\'a}n(2016)]{abrusan2016}
+Abrus{\'a}n, M{\'a}rta. 2016.
+\newblock Presupposition cancellation: {E}xplaining the `soft-hard' trigger
+  distinction.
+\newblock {\em Natural Language Semantics\/} 24:165--202.
+
+\bibitem[Anand and Hacquard(2014)]{anand-hacquard2014}
+Anand, Pranav and Valentine Hacquard. 2014.
+\newblock Factivity, belief and discourse.
+\newblock In {\em The Art and Craft of Semantics: A Festschrift for Irene
+  Heim\/}, pages 69--90. MIT Working Papers in Linguistics.
+
+\bibitem[Beaver(2010)]{beaver-belly}
+Beaver, David. 2010.
+\newblock Have you noticed that your belly button lint colour is related to the
+  colour of your clothing?
+\newblock In R.~B\"auerle, U.~Reyle, and E.~Zimmermann, eds., {\em
+  Presuppositions and Discourse: {Essays Offered to Hans Kamp}\/}, pages
+  65--99. Oxford: Elsevier.
+
+\bibitem[Beaver et~al.(2017)Beaver, Roberts, Simons, and Tonhauser]{brst-ar}
+Beaver, David, Craige Roberts, Mandy Simons, and Judith Tonhauser. 2017.
+\newblock Questions {U}nder {D}iscussion: Where information structure meets
+  projective content.
+\newblock {\em Annual Review of Linguistics\/} 3.
+
+\bibitem[Chierchia and McConnell-Ginet(1990)]{ccmg90}
+Chierchia, Gennaro and Sally McConnell-Ginet. 1990.
+\newblock {\em Meaning and Grammar\/}.
+\newblock Cambridge, MA: MIT Press.
+
+\bibitem[Cummins and Rohde(2015)]{cummins-rohde2015}
+Cummins, Chris and Hannah Rohde. 2015.
+\newblock Evoking context with contrastive stress: {E}ffects on pragmatic
+  enrichment.
+\newblock {\em Frontiers in Psychology\/} 6:Article 1779.
+
+\bibitem[Heim(1983)]{heim83}
+Heim, Irene. 1983.
+\newblock On the projection problem for presuppositions.
+\newblock In M.~Barlow, D.~Flickinger, and M.~Westcoat, eds., {\em {West Coast
+  Conference on Formal Linguistics (WCCFL)} 2\/}, pages 114--125.
+
+\bibitem[Kadmon(2001)]{kadmon01}
+Kadmon, Nirit. 2001.
+\newblock {\em Formal Pragmatics\/}.
+\newblock Oxford: Blackwell.
+
+\bibitem[Karttunen(1971)]{karttunen71b}
+Karttunen, Lauri. 1971.
+\newblock Some observations on factivity.
+\newblock {\em Papers in Linguistics\/} 4:55--69.
+
+\bibitem[Potts(2005)]{potts05}
+Potts, Christopher. 2005.
+\newblock {\em The {L}ogic of {C}onventional {I}mplicatures\/}.
+\newblock Oxford: OUP.
+
+\bibitem[Schlenker(2010)]{schlenker10}
+Schlenker, Philippe. 2010.
+\newblock Local contexts and local meanings.
+\newblock {\em Philosophical Studies\/} 151:115--142.
+
+\bibitem[Simons et~al.(2010)Simons, Tonhauser, Beaver, and
+  Roberts]{brst-salt10}
+Simons, Mandy, Judith Tonhauser, David Beaver, and Craige Roberts. 2010.
+\newblock What projects and why.
+\newblock In {\em Semantics and Linguistic Theory (SALT) XXI\/}, pages
+  309--327. Ithaca, NY: CLC Publications.
+
+\bibitem[Swanson(2012)]{swanson2012}
+Swanson, Eric. 2012.
+\newblock Propositional attitudes.
+\newblock In {\em Semantics: An International Handbook of Natural Language
+  Meaning\/}, vol.~2, pages 1538--1561. Berlin: Mouton de Gruyter.
+
+\bibitem[Tonhauser(2016)]{tonhauser-salt26}
+Tonhauser, Judith. 2016.
+\newblock Prosodic cues to speaker commitment.
+\newblock In {\em Semantics and Linguistic Theory (SALT) XXVI\/}, pages
+  934--960. Ithaca, NY: CLC Publications.
+
+\bibitem[Tonhauser et~al.(ms)Tonhauser, Beaver, and Degen]{tbd-variability}
+Tonhauser, Judith, David Beaver, and Judith Degen. ms.
+\newblock How projective is projective content? {G}radience in projectivity and
+  at-issueness.
+\newblock Ms. under re-review, The Ohio State University, University of Texas
+  at Austin, Stanford University.
+
+\bibitem[van~der Sandt(1992)]{vds92}
+van~der Sandt, Rob. 1992.
+\newblock Presupposition projection as anaphora resolution.
+\newblock {\em Journal of Semantics\/} 9:333--377.
+
+\end{thebibliography}
