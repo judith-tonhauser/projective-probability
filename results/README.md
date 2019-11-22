@@ -8,7 +8,9 @@ Comment for JD: you need to fit models to two sets of experiments, namely those 
 
 ## slider ratings
 2-veridicality2: ratings of contradictoriness (stimulus: "S-CC, but not CC"; task: "Is Bill's utterance contradictory?")
+
 3-projectivity: certainty ratings (stimulus: "S-CC?"; task: "Is Bill certain that CC?")
+
 4-veridicality3: ratings of inference strength (stimulus: "What is true: S-CC."; task: "Does it follow that CC?")
 
 ## binary ratings
