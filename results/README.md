@@ -12,6 +12,7 @@ JD, you need to fit models for the two sets of three experiments under "slider r
 
 ## binary ratings
 6-veridicality2-binary: contradictoriness ratings (stimulus: "Sue: Jane knows that Bill dances salsa, but he doesn't"; task: "Is Sue's utterance contradictory?")
+
 7-veridicality3-binary: inference strength ratings (stimulus: "What is true: Jane knows that Bill dances salsa."; task: "Does it follow that Bill dances salsa?")
 
 8-projectivity-no-fact-binary: certainty ratings (stimulus: "Sue asks: Does Jane know that Bill dances salsa?"; task: "Is Sue certain that Bill dances salsa?")
