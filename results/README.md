@@ -18,11 +18,11 @@ JD, you need to fit models for the two sets of three experiments under "slider r
 8-projectivity-no-fact-binary: certainty ratings (stimulus: "Sue asks: Does Jane know that Bill dances salsa?"; task: "Is Sue certain that Bill dances salsa?")
 
 ## other experiment results in this folder
-1-prior: collected slider ratings on "how likely is it that p?" (fully analyzed)
+1-prior: slider ratings on prior probability (stimulus: "Fact: Bill is Cuban."; task: "How likely is it that Bill dances salsa?")
 
-2-veridicality: slider ratings of contradictoriness of sentences with "...but I know that not p"
+2-veridicality: slider ratings of contradictoriness with "I know" in continuation (stimulus: "Sue: Jane knows that Bill dances salsa, but I know that he doesn't"; task: "Is Sue's utterance contradictory?")
 
-3-projectivity: certainty ratings (stimulus: "Fact (which Sue knows): Bill is Cuban. Sue asks: Does Jane know that Bill dances salsa?"; task: "Is Sue certain that Bill dances salsa?")
+3-projectivity: certainty ratings with Fact info (stimulus: "Fact (which Sue knows): Bill is Cuban. Sue asks: Does Jane know that Bill dances salsa?"; task: "Is Sue certain that Bill dances salsa?")
 
 
 
