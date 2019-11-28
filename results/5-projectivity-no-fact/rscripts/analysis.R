@@ -13,6 +13,8 @@ library(dplyr)
 library(dichromat)
 library(forcats)
 library(ggrepel)
+library(brms)
+library(knitr)
 theme_set(theme_bw())
 
 ## NO NEED TO RUN THIS FIRST BIT IF YOU JUST WANT TO LOAD CLEAN DATA. 
@@ -786,12 +788,169 @@ comparison
 # see - be_annoyed          -0.075857787 0.02172323 364.40  -3.492  0.0691
 # know - be_annoyed         -0.020731106 0.02171705 366.90  -0.955  1.0000
 
-# brms models
-cd$verb = relevel(cd$verb,ref="MC")
+# JD CODE STARTS HERE
+# TL;DR: all verbs are different from bad controls
+cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
 
-# no slope
-model.brms.proj.nb = brm(response ~ verb + (1|workerid) + (1|item), data=cd, family=gaussian())
-summary(model.brms.proj.nb) # pretend is not significantly different
+# Bayesian mixed effects regression to test whether ratings differ by predicate from good controls
+cd$workerid = as.factor(as.character(cd$workerid))
 
-model.brms.proj.nb2 = brm(response ~ verb + (1+verb|workerid) + (1|item), data=cd, family=gaussian())
-summary(model.brms.proj.nb2) # crashed
+# plotting slider ratings suggests we should use a zoib model
+ggplot(cd, aes(x=response)) +
+  geom_histogram()
+
+# exclude bad controls from analysis -- they're not relevant, right?
+d = cd %>%
+  droplevels() %>%
+  mutate(verb = fct_relevel(verb,"control"))
+
+# zoib model
+zoib_model <- bf(
+  response ~ verb, # beta distribution’s mean
+  phi ~ verb, # beta distribution’s precision
+  zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
+  coi ~ verb, # conditional one-inflation
+  family = zero_one_inflated_beta()
+)
+
+# fit model
+m <- brm(
+  formula = zoib_model,
+  data = d,
+  cores = 4#,
+  # file = here::here("zoib-ex")
+)
+# no need to run this multiple times:
+saveRDS(m,file="../data/zoib-model.rds")
+
+summary(m) # see summary printed below
+
+# transform each of the posterior samples, and then re-calculate the summaries on original scale
+posterior_samples(m, pars = "b_")[,1:4] %>% 
+  mutate_at(c("b_phi_Intercept"), exp) %>% 
+  mutate_at(vars(-"b_phi_Intercept"), plogis) %>% 
+  posterior_summary() %>% 
+  as.data.frame() %>% 
+  rownames_to_column("Parameter") %>% 
+  kable(digits = 2) 
+
+# |Parameter       | Estimate| Est.Error| Q2.5| Q97.5|
+#   |:---------------|--------:|---------:|----:|-----:|
+#   |b_Intercept     |     0.17|      0.01| 0.16|  0.18|
+#   |b_phi_Intercept |     3.77|      0.16| 3.46|  4.11|
+#   |b_zoi_Intercept |     0.27|      0.01| 0.25|  0.29|
+#   |b_coi_Intercept |     0.00|      0.00| 0.00|  0.01|
+
+# The .17 and 3.77 values are the mean and precision of the beta distribution that characterizes the bad controls that are not zeroes and ones -- this is a distribution skewed towards 0
+# The .27 value is the probability that an observation will be either 0 or 1, and of these 27% endpoint values, 0% (last value) are ones. So: as expected, the MC controls are heavily 0-skewed, see also this histogram:
+ggplot(d[d$verb=="control",], aes(x=response)) +
+  geom_histogram()
+
+# in principle, we can ask for each verb whether it differs from the bad controls, as follows:
+h <- c("pretend - control" = "plogis(Intercept + verbpretend) = plogis(Intercept)")
+hypothesis(m, h) # even the least projecty is more projecty than control
+
+# plot estimated mu parameter
+plot(
+  marginal_effects(m, dpar = "mu"), 
+  points = TRUE, 
+  point_args = list(width = .05, shape = 1)
+)
+
+# > summary(m)
+# Family: zero_one_inflated_beta 
+# Links: mu = logit; phi = log; zoi = logit; coi = logit 
+# Formula: response ~ verb 
+# phi ~ verb
+# zoi ~ verb
+# coi ~ verb
+# Data: d (Number of observations: 6916) 
+# Samples: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+# total post-warmup samples = 4000
+# 
+# Population-Level Effects: 
+#   Estimate Est.Error l-95% CI u-95% CI Eff.Sample Rhat
+# Intercept                -1.62      0.04    -1.69    -1.55        660 1.01
+# phi_Intercept             1.33      0.04     1.24     1.41        738 1.01
+# zoi_Intercept            -1.01      0.06    -1.12    -0.90       1486 1.00
+# coi_Intercept            -6.37      1.23    -9.54    -4.61        159 1.03
+# verbacknowledge           2.31      0.09     2.13     2.49       2036 1.00
+# verbadmit                 2.16      0.08     1.99     2.32       2172 1.00
+# verbannounce              1.87      0.08     1.71     2.03       2327 1.00
+# verbannoyed               3.16      0.09     2.97     3.34       2243 1.00
+# verbbe_right_that         0.39      0.09     0.22     0.57       2413 1.00
+# verbconfess               2.15      0.08     1.99     2.31       1924 1.00
+# verbconfirm               1.14      0.08     0.99     1.30       1909 1.00
+# verbdemonstrate           1.60      0.08     1.44     1.76       2077 1.00
+# verbdiscover              2.57      0.09     2.39     2.74       2472 1.00
+# verbestablish             1.15      0.08     0.99     1.31       1913 1.00
+# verbhear                  2.40      0.09     2.23     2.57       2444 1.00
+# verbinform_Sam            2.65      0.09     2.48     2.83       2133 1.00
+# verbknow                  3.11      0.10     2.92     3.30       2014 1.00
+# verbpretend               0.32      0.09     0.14     0.49       1937 1.00
+# verbprove                 0.91      0.08     0.75     1.06       1780 1.00
+# verbreveal                2.32      0.09     2.15     2.49       1985 1.00
+# verbsay                   0.71      0.08     0.54     0.88       1907 1.00
+# verbsee                   2.68      0.09     2.50     2.86       2603 1.00
+# verbsuggest               0.65      0.08     0.49     0.82       1628 1.00
+# verbthink                 0.42      0.08     0.26     0.57       1970 1.00
+# phi_verbacknowledge      -0.74      0.09    -0.92    -0.56       1966 1.00
+# phi_verbadmit            -0.66      0.09    -0.83    -0.49       1951 1.00
+# phi_verbannounce         -0.62      0.09    -0.79    -0.44       1674 1.00
+# phi_verbannoyed          -0.14      0.11    -0.35     0.08       1644 1.00
+# phi_verbbe_right_that    -0.21      0.11    -0.41    -0.00       2002 1.00
+# phi_verbconfess          -0.69      0.09    -0.87    -0.51       1577 1.00
+# phi_verbconfirm          -0.51      0.09    -0.69    -0.34       1867 1.00
+# phi_verbdemonstrate      -0.72      0.09    -0.89    -0.55       1676 1.00
+# phi_verbdiscover         -0.53      0.10    -0.73    -0.34       1712 1.00
+# phi_verbestablish        -0.69      0.09    -0.86    -0.52       1841 1.00
+# phi_verbhear             -0.66      0.10    -0.85    -0.47       1972 1.00
+# phi_verbinform_Sam       -0.56      0.10    -0.76    -0.36       1803 1.00
+# phi_verbknow             -0.23      0.11    -0.45    -0.02       1842 1.00
+# phi_verbpretend          -0.18      0.10    -0.39     0.02       1775 1.00
+# phi_verbprove            -0.30      0.09    -0.48    -0.11       1773 1.00
+# phi_verbreveal           -0.67      0.09    -0.86    -0.49       1911 1.00
+# phi_verbsay              -0.45      0.10    -0.64    -0.26       1623 1.00
+# phi_verbsee              -0.54      0.10    -0.74    -0.35       1766 1.00
+# phi_verbsuggest          -0.24      0.10    -0.43    -0.05       1691 1.00
+# phi_verbthink            -0.03      0.10    -0.23     0.16       1951 1.00
+# zoi_verbacknowledge      -0.89      0.19    -1.26    -0.52       3119 1.00
+# zoi_verbadmit            -1.11      0.21    -1.54    -0.71       3420 1.00
+# zoi_verbannounce         -0.96      0.19    -1.35    -0.60       3160 1.00
+# zoi_verbannoyed          -0.17      0.16    -0.48     0.13       3136 1.00
+# zoi_verbbe_right_that    -0.54      0.17    -0.87    -0.21       3174 1.00
+# zoi_verbconfess          -1.19      0.21    -1.61    -0.79       3244 1.00
+# zoi_verbconfirm          -1.00      0.20    -1.40    -0.62       3232 1.00
+# zoi_verbdemonstrate      -1.28      0.22    -1.72    -0.86       3790 1.00
+# zoi_verbdiscover         -0.62      0.17    -0.97    -0.29       2895 1.00
+# zoi_verbestablish        -1.20      0.21    -1.63    -0.80       3503 1.00
+# zoi_verbhear             -0.54      0.17    -0.88    -0.22       3442 1.00
+# zoi_verbinform_Sam       -0.62      0.17    -0.98    -0.29       2808 1.00
+# zoi_verbknow             -0.34      0.16    -0.67    -0.03       2551 1.00
+# zoi_verbpretend          -0.32      0.16    -0.64    -0.01       3192 1.00
+# zoi_verbprove            -1.18      0.21    -1.61    -0.79       3648 1.00
+# zoi_verbreveal           -0.93      0.19    -1.30    -0.56       2976 1.00
+# zoi_verbsay              -1.07      0.20    -1.47    -0.67       3372 1.00
+# zoi_verbsee              -0.39      0.16    -0.72    -0.07       2981 1.00
+# zoi_verbsuggest          -0.74      0.18    -1.11    -0.39       3539 1.00
+# zoi_verbthink            -0.93      0.19    -1.32    -0.57       3508 1.00
+# coi_verbacknowledge       8.91      1.39     6.67    12.19        227 1.02
+# coi_verbadmit             7.38      1.30     5.36    10.59        183 1.02
+# coi_verbannounce          7.24      1.30     5.25    10.53        161 1.03
+# coi_verbannoyed          11.12      1.83     8.28    15.54        263 1.02
+# coi_verbbe_right_that     2.03      1.73    -1.36     5.56        294 1.01
+# coi_verbconfess           6.77      1.30     4.79    10.10        176 1.02
+# coi_verbconfirm           4.31      1.34     2.15     7.53        191 1.02
+# coi_verbdemonstrate       6.45      1.30     4.46     9.73        172 1.02
+# coi_verbdiscover          9.16      1.40     6.98    12.59        194 1.02
+# coi_verbestablish         5.47      1.30     3.45     8.67        185 1.02
+# coi_verbhear              8.38      1.32     6.36    11.57        166 1.02
+# coi_verbinform_Sam       10.76      1.79     7.95    14.91        340 1.02
+# coi_verbknow              9.42      1.40     7.20    12.72        210 1.02
+# coi_verbpretend         -26.43     27.84   -98.77     1.90        751 1.00
+# coi_verbprove             4.15      1.39     1.78     7.48        188 1.02
+# coi_verbreveal            7.78      1.30     5.75    11.08        181 1.02
+# coi_verbsay               2.51      1.72    -0.83     6.18        277 1.02
+# coi_verbsee               9.35      1.39     7.16    12.71        195 1.02
+# coi_verbsuggest           2.16      1.78    -1.42     5.85        348 1.01
+# coi_verbthink           -26.14     27.76  -102.44     2.14       1114 1.00
