@@ -313,6 +313,66 @@ ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
 ggsave("../graphs/means-projectivity-by-predicate-variability.pdf",height=4,width=7)
 
+# mean projectivity by predicate, including the main clause controls (3-way distinction for Stuttgart job talk Dec 2019)
+means = cd %>%
+  group_by(verb) %>%
+  summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+  mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, verb = fct_reorder(as.factor(verb),Mean))
+means
+levels(means$verb)
+
+# define colors for the predicates
+cols = data.frame(V=levels(means$verb))
+
+cols$VeridicalityGroup = as.factor(
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+         ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
+                ifelse(cols$V %in% c("be_right","demonstrate"),"NF",
+                       ifelse(cols$V %in% c("MC"),"MC","V")))))
+
+levels(cols$V)
+cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, ordered = TRUE)
+
+cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
+                      ifelse(cols$VeridicalityGroup == "NF", "gray60", 
+                             ifelse(cols$VeridicalityGroup == "VNF","dodgerblue",
+                                    ifelse(cols$VeridicalityGroup == "MC","black","tomato1"))))
+
+
+cols$Colors
+cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, ordered = TRUE)
+levels(cols$V)
+
+means$VeridicalityGroup = as.factor(
+  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+         ifelse(means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
+                ifelse(means$verb  %in% c("be_right","demonstrate"),"NF",
+                       ifelse(means$verb  %in% c("MC"),"MC","V")))))
+
+subjmeans = cd %>%
+  group_by(verb,workerid) %>%
+  summarize(Mean = mean(response)) 
+subjmeans$verb <- factor(subjmeans$verb, levels = unique(levels(means$verb)))
+levels(subjmeans$verb)
+
+
+# plot of means, 95% CIs and participants' ratings 
+ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
+  #geom_point(shape=21,fill="gray60",data=subjmeans, alpha=.1, color="gray40") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="black") +
+  geom_point(shape=21,stroke=.5,size=2.5,color="black") +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_alpha(range = c(.3,1)) +
+  scale_fill_manual(values=c("darkorchid","black","gray60","tomato1","dodgerblue")) +
+  guides(fill=FALSE) +
+  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
+                                                                 color=cols$Colors)) +
+  theme(legend.position="top") +
+  ylab("Mean certainty rating \n (higher is more projective)") +
+  xlab("Predicate") +
+  theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
+ggsave("../graphs/3-way-means-projectivity-by-predicate-variability.pdf",height=4,width=7)
+
 # boxplot
 ggplot(cd, aes(x=verb, y=response)) + 
   geom_boxplot(width=0.2,position=position_dodge(.9)) +
@@ -550,6 +610,12 @@ library(brms)
 
 # create item as combination of predicate and complement clause
 cd$item = as.factor(paste(cd$verb,cd$content))
+
+# LME model predicting rating from predicate
+table(cd$verb)
+cd$verb <- relevel(cd$verb, ref = "MC")
+m = lmer(response ~ verb + (1+verb|workerid) + (1|content), data = cd, REML=F)
+summary(m)
 
 # reorder verb by mean
 means = cd %>%
@@ -806,8 +872,8 @@ d = cd %>%
 
 # zoib model
 zoib_model <- bf(
-  response ~ verb, # beta distribution’s mean
-  phi ~ verb, # beta distribution’s precision
+  response ~ verb, # beta distribution???s mean
+  phi ~ verb, # beta distribution???s precision
   zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
   coi ~ verb, # conditional one-inflation
   family = zero_one_inflated_beta()
