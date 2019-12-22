@@ -13,6 +13,7 @@ library(dplyr)
 library(dichromat)
 library(forcats)
 library(ggrepel)
+library(brms)
 theme_set(theme_bw())
 
 ## NO NEED TO RUN THIS FIRST BIT IF YOU JUST WANT TO LOAD CLEAN DATA. 
@@ -204,6 +205,7 @@ prop$VeridicalityGroup = as.factor(
                 ifelse(prop$verb  %in% c("be_right","demonstrate"),"VNF",
                        ifelse(prop$verb  %in% c("contradictory C", "non-contrd. C"),"MC","V")))))
 
+
 ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25) +
   geom_point(shape=21,stroke=.5,size=2.5,color="black") +
@@ -216,38 +218,50 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
   theme(legend.position="top") +
   ylab("Proporition of 'yes (contrd.)' answers") +
   xlab("Predicate") +
+  # geom_jitter(data=cd,aes(y=nResponse),color="gray40",alpha=.2,fill="black") +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
+
 ggsave("../graphs/proportion-by-predicate-variability.pdf",height=4,width=7)
 
 
-## Bayesian models -----
-library(emmeans)
-library(lme4)
-library(languageR)
-library(brms)
+# JD CODE STARTS HERE
+# TL;DR: all verbs are different from bad controls
+cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
 
-# brms model
-table(cd$verb)
-cd$verb = relevel(cd$verb,ref="contradictory C")
-cd$item = as.factor(paste(cd$verb,cd$content))
+# Bayesian mixed effects regression to test whether ratings differ by predicate from good controls
+cd$workerid = as.factor(as.character(cd$workerid))
 
-run_model <- function(expr, path, reuse = TRUE) {
-  path <- paste0(path, ".Rds")
-  if (reuse) {
-    fit <- suppressWarnings(try(readRDS(path), silent = TRUE))
-  }
-  if (is(fit, "try-error")) {
-    fit <- eval(expr)
-    saveRDS(fit, file = path)
-  }
-  fit
-}
+# plotting slider ratings suggests we should use a zoib model
+ggplot(cd, aes(x=response)) +
+  geom_histogram(stat="count")
 
-fit <- run_model(brm(nResponse ~ verb + (verb|workerid) + (1|item), data=cd, family=bernoulli()), path = "../models/predict-response-from-verb-with-slope.Rds")
-tmp <- readRDS('../models/predict-response-from-verb-with-slope.Rds.Rds')
-summary(tmp) #model saved, but didn't converge
+# exclude bad controls from analysis -- they're not relevant, right?
+d = cd %>%
+  # filter(verb != "control_bad") %>%
+  droplevels() %>%
+  # mutate(verb = fct_relevel(verb,"contradictory C")) %>%
+  mutate(verb = fct_relevel(verb,"be_right")) %>%
+  mutate(nResponse = ifelse(response == "Yes", 1, 0))
 
-fit <- run_model(brm(nResponse ~ verb + (1|workerid) + (1|item), data=cd, family=bernoulli()), path = "../models/predict-response-from-verb-no-slope.Rds")
-tmp <- readRDS('../models/predict-response-from-verb-no-slope.Rds.Rds')
-summary(tmp)
+# JD removed the by-content intercepts and slopes for verb because it was taking TOO DAMN LONG and appeared to get stuck and not converge, and the reason for this is simply that the data are extreme and there is basically no item variability to speak of. barely any subject variability, too. had to 
+m <- glmer(response ~ verb + (1|workerid), data=d, family="binomial")
+# m <- glm(response ~ verb, data=d, family="binomial")
+summary(m)
 
+allm = allFit(m)
+
+is.OK <- sapply(allm,is,"merMod")  ##  failed, others succeeded
+allm.OK <- allm[is.OK]
+allm.OK
+lapply(allm.OK,function(x) x@optinfo$conv$lme4$messages)
+
+summary(allm) # bobyqa exited ok, so we can interpret model above
+summary(m)
+
+
+m <- brm(nResponse~verb + (1|workerid), data=d, family=bernoulli())
+
+# no neeed to run this multiple times
+saveRDS(m,file="../data/bernoulli-model.rds")
+
+summary(m) # see summary printed below
