@@ -9,6 +9,7 @@ source('helpers.R')
 
 # load required packages
 library(tidyverse)
+library(tidybayes)
 library(dplyr)
 library(dichromat)
 library(forcats)
@@ -259,6 +260,7 @@ means = cd %>%
   summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
   mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, verb = fct_reorder(as.factor(verb),Mean))
 means
+print(as_tibble(means), n = 22)
 levels(means$verb)
 
 # define colors for the predicates
@@ -854,9 +856,10 @@ comparison
 # see - be_annoyed          -0.075857787 0.02172323 364.40  -3.492  0.0691
 # know - be_annoyed         -0.020731106 0.02171705 366.90  -0.955  1.0000
 
-# JD CODE STARTS HERE
-# TL;DR: all verbs are different from bad controls
+# JD CODE STARTS HERE ----
+# TL;DR: all verbs are different from main clause (non-projecting) controls (called "control")
 cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
+table(cd$verb)
 
 # Bayesian mixed effects regression to test whether ratings differ by predicate from good controls
 cd$workerid = as.factor(as.character(cd$workerid))
@@ -865,29 +868,34 @@ cd$workerid = as.factor(as.character(cd$workerid))
 ggplot(cd, aes(x=response)) +
   geom_histogram()
 
-# exclude bad controls from analysis -- they're not relevant, right?
+# set reference level to main clause controls
 d = cd %>%
   droplevels() %>%
   mutate(verb = fct_relevel(verb,"control"))
+table(d$verb)
 
-# zoib model
-zoib_model <- bf(
-  response ~ verb, # beta distribution???s mean
-  phi ~ verb, # beta distribution???s precision
-  zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
-  coi ~ verb, # conditional one-inflation
-  family = zero_one_inflated_beta()
-)
+# JT commented the following code, to prevent accidental re-runs
+# # zoib model
+# zoib_model <- bf(
+#   response ~ verb, # beta distribution???s mean
+#   phi ~ verb, # beta distribution???s precision
+#   zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
+#   coi ~ verb, # conditional one-inflation
+#   family = zero_one_inflated_beta()
+# )
+# 
+# # fit model
+# m <- brm(
+#   formula = zoib_model,
+#   data = d,
+#   cores = 4#,
+#   # file = here::here("zoib-ex")
+# )
+# # no need to run this multiple times:
+# saveRDS(m,file="../data/zoib-model.rds")
 
-# fit model
-m <- brm(
-  formula = zoib_model,
-  data = d,
-  cores = 4#,
-  # file = here::here("zoib-ex")
-)
-# no need to run this multiple times:
-saveRDS(m,file="../data/zoib-model.rds")
+# load ZOIB model ----
+m <- readRDS(file="../data/zoib-model.rds")
 
 summary(m) # see summary printed below
 
@@ -907,12 +915,15 @@ posterior_samples(m, pars = "b_")[,1:4] %>%
 #   |b_zoi_Intercept |     0.27|      0.01| 0.25|  0.29|
 #   |b_coi_Intercept |     0.00|      0.00| 0.00|  0.01|
 
-# The .17 and 3.77 values are the mean and precision of the beta distribution that characterizes the bad controls that are not zeroes and ones -- this is a distribution skewed towards 0
-# The .27 value is the probability that an observation will be either 0 or 1, and of these 27% endpoint values, 0% (last value) are ones. So: as expected, the MC controls are heavily 0-skewed, see also this histogram:
+# The .17 and 3.77 values are the mean and precision of the beta distribution that characterizes the 
+# controls that are not zeroes and ones -- this is a distribution skewed towards 0
+# The .27 value is the probability that an observation will be either 0 or 1, and of these 
+# 27% endpoint values, 0% (last value) are ones. So: as expected, the MC controls are heavily 0-skewed, 
+# see also this histogram:
 ggplot(d[d$verb=="control",], aes(x=response)) +
   geom_histogram()
 
-# in principle, we can ask for each verb whether it differs from the bad controls, as follows:
+# in principle, we can ask for each verb whether it differs from the controls, as follows:
 h <- c("pretend - control" = "plogis(Intercept + verbpretend) = plogis(Intercept)")
 hypothesis(m, h) # even the least projecty is more projecty than control
 

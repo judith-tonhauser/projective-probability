@@ -211,6 +211,7 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
   geom_point(shape=21,stroke=.5,size=2.5,color="black") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_alpha(range = c(.3,1)) +
+  geom_jitter(data=cd,aes(y=nResponse),color="gray40",alpha=.2,fill="black") +
   scale_fill_manual(values=c("darkorchid","black","gray60","tomato1","dodgerblue")) +
   guides(fill=FALSE) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
@@ -218,10 +219,8 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
   theme(legend.position="top") +
   ylab("Proporition of 'yes (contrd.)' answers") +
   xlab("Predicate") +
-  # geom_jitter(data=cd,aes(y=nResponse),color="gray40",alpha=.2,fill="black") +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
-
-ggsave("../graphs/proportion-by-predicate-variability.pdf",height=4,width=7)
+ggsave("../graphs/proportion-by-predicate-variability-individual.pdf",height=4,width=7)
 
 
 # JD CODE STARTS HERE

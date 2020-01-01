@@ -11,6 +11,7 @@ source('helpers.R')
 
 # load required packages
 library(tidyverse)
+library(tidybayes)
 library(dichromat)
 library(brms)
 library(knitr)
@@ -273,12 +274,13 @@ mean(tmp$Freq) #13.2
 cd$item <- paste(cd$verb,cd$content,sep="-")
 table(cd$item)
 
-# median contradictoriness by verb
-median = cd %>%
+# mean contradictoriness by verb
+mean = cd %>%
   group_by(verb) %>%
-  summarize(Median = median(response)) %>%
-  select(verb,Median)
-median
+  summarize(Mean = mean(response)) %>%
+  select(verb,Mean) %>%
+  tbl_df %>% 
+  print(n=22)
 
 # mean contradictoriness by item
 means = cd %>%
@@ -1078,41 +1080,45 @@ comparison
 # 
 # P value adjustment: tukey method for comparing a family of 21 estimates
 
-# JD CODE STARTS HERE
-# TL;DR: all verbs are different from bad controls
+# JD CODE STARTS HERE ----
+# TL;DR: all verbs are different from contradictory, i.e., entailing, controls
 cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
 
-# Bayesian mixed effects regression to test whether ratings differ by predicate from good controls
+# Bayesian mixed effects regression to test whether ratings differ by predicate from contradictory controls
+# contradictory controls are called control_bad
 cd$workerid = as.factor(as.character(cd$workerid))
 
 # plotting slider ratings suggests we should use a zoib model
 ggplot(cd, aes(x=response)) +
   geom_histogram()
 
-# exclude bad controls from analysis -- they're not relevant, right?
+# exclude non-contracictory controls (called control_good) from analysis -- they're not relevant, right? (JT: right)
 d = cd %>%
   filter(verb != "control_good") %>%
   droplevels() %>%
   mutate(verb = fct_relevel(verb,"control_bad"))
 
 # zoib model
-zoib_model <- bf(
-  response ~ verb, # beta distribution’s mean
-  phi ~ verb, # beta distribution’s precision
-  zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
-  coi ~ verb, # conditional one-inflation
-  family = zero_one_inflated_beta()
-)
+# zoib_model <- bf(
+#   response ~ verb, # beta distribution???s mean
+#   phi ~ verb, # beta distribution???s precision
+#   zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
+#   coi ~ verb, # conditional one-inflation
+#   family = zero_one_inflated_beta()
+# )
+# 
+# # fit model
+# m <- brm(
+#   formula = zoib_model,
+#   data = d,
+#   cores = 4#,
+#   # file = here::here("zoib-ex")
+# )
+# save model (no need to run this multiple times); JT commented this out to prevent accidential save of something else
+#saveRDS(m,file="../data/zoib-model.rds")
 
-# fit model
-m <- brm(
-  formula = zoib_model,
-  data = d,
-  cores = 4#,
-  # file = here::here("zoib-ex")
-)
-# no need to run this multiple times:
-saveRDS(m,file="../data/zoib-model.rds")
+# load ZOIB model ----
+m <- readRDS(file="../data/zoib-model.rds")
 
 summary(m) # see summary printed below
 
@@ -1125,7 +1131,7 @@ posterior_samples(m, pars = "b_")[,1:4] %>%
   rownames_to_column("Parameter") %>% 
   kable(digits = 2) 
 
-# this gives us the summary of the bad control condition:
+# this gives us the summary of the contradictory control condition:
 # |Parameter       | Estimate| Est.Error| Q2.5| Q97.5|
 #   |:---------------|--------:|---------:|----:|-----:|
 #   |b_Intercept     |     0.93|      0.00| 0.92|  0.93|
@@ -1133,14 +1139,25 @@ posterior_samples(m, pars = "b_")[,1:4] %>%
 #   |b_zoi_Intercept |     0.40|      0.02| 0.37|  0.43|
 #   |b_coi_Intercept |     0.99|      0.01| 0.97|  0.99|
 
-# The .93 and 9.25 values are the mean and precision of the beta distribution that characterizes the bad controls that are not zeroes and ones -- this is a distribution heavily skewed towards 1
-# The .40 value is the probability that an observation will be either 0 or 1, and of these 40% endpoint values, 99% (last value) are ones. So: as expected, the bad controls are heavily 1-skewed, see also this histogram:
+# The .93 and 9.25 values are the mean and precision of the beta distribution that characterizes 
+# the contradictory controls that are not zeroes and ones -- this is a distribution heavily skewed towards 1
+# The .40 value is the probability that an observation will be either 0 or 1, and of these 40% endpoint values, 
+# 99% (last value) are ones. So: as expected, the contradictory controls are heavily 1-skewed, see also this histogram:
 ggplot(d[d$verb=="control_bad",], aes(x=response)) +
   geom_histogram()
 
-# in principle, we can ask for each verb whether it differs from the bad controls, as follows:
-h <- c("acknowledge - control_bad" = "plogis(Intercept + verbacknowledge) = plogis(Intercept)")
-hypothesis(m, h) # The expected value under the hypothesis lies outside the 95% credible interval. **Can we use this for pairwise comparisons?**
+# in principle, we can ask for each verb whether it differs from the contradictory controls, as follows:
+# JT: I changed the verb here from "acknowledge" to "be_right", as the verb that is most like the contradictory
+# controls 
+#h <- c("acknowledge - control_bad" = "plogis(Intercept + verbacknowledge) = plogis(Intercept)")
+h <- c("be_right_that - control_bad" = "plogis(Intercept + verbbe_right_that) = plogis(Intercept)")
+hypothesis(m, h) 
+# for be_right
+# JT: I think this says that the expected value under the hypothesis lies outside the 95% credible interval
+
+# for acknowledge:
+# The expected value under the hypothesis lies outside the 95% credible interval. 
+# **Can we use this for pairwise comparisons?**
 
 # plot estimated mu parameter
 plot(

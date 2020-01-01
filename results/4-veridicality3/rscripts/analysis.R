@@ -11,6 +11,7 @@ source('helpers.R')
 
 # load required packages
 library(tidyverse)
+library(tidybayes)
 library(dichromat)
 library(brms)
 library(knitr)
@@ -1265,11 +1266,12 @@ ggplot(bla, aes(x=InferenceMean, y=ContradictorinessMean,color=DataType)) +
   xlab("Item mean inference rating") #+
 ggsave("../graphs/by-item-mean-inference-by-mean-contradictoriness-predictions.pdf",height=4,width=9)
 
-# JD CODE STARTS HERE
-# TL;DR: all verbs are different from bad controls
+# JD CODE STARTS HERE ----
+# TL;DR: XXX
 cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
 
-# Bayesian mixed effects regression to test whether ratings differ by predicate from good controls
+# Bayesian mixed effects regression to test whether ratings differ by predicate from entailing controls
+# entailing controls are called good_controls
 cd$workerid = as.factor(as.character(cd$workerid))
 
 # plotting slider ratings suggests we should use a zoib model
@@ -1277,29 +1279,34 @@ ggplot(cd, aes(x=response)) +
   geom_histogram()
 
 # exclude bad controls from analysis -- they're not relevant, right?
+# JT: right, for those, the relevant content is not entailed
 d = cd %>%
   filter(verb != "control_bad") %>%
   droplevels() %>%
   mutate(verb = fct_relevel(verb,"control_good"))
 
+# JT commented the following code, to prevent accidential re-runs
 # zoib model
-zoib_model <- bf(
-  response ~ verb, # beta distribution’s mean
-  phi ~ verb, # beta distribution’s precision
-  zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
-  coi ~ verb, # conditional one-inflation
-  family = zero_one_inflated_beta()
-)
+# zoib_model <- bf(
+#   response ~ verb, # beta distribution???s mean
+#   phi ~ verb, # beta distribution???s precision
+#   zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
+#   coi ~ verb, # conditional one-inflation
+#   family = zero_one_inflated_beta()
+# )
+# 
+# # fit model
+# m <- brm(
+#   formula = zoib_model,
+#   data = d,
+#   cores = 4#,
+#   # file = here::here("zoib-ex")
+# )
+# # no need to run this multiple times:
+# saveRDS(m,file="../data/zoib-model.rds")
 
-# fit model
-m <- brm(
-  formula = zoib_model,
-  data = d,
-  cores = 4#,
-  # file = here::here("zoib-ex")
-)
-# no need to run this multiple times:
-saveRDS(m,file="../data/zoib-model.rds")
+# load ZOIB model ----
+m <- readRDS(file="../data/zoib-model.rds")
 
 summary(m) # see summary printed below
 
@@ -1327,6 +1334,10 @@ ggplot(d[d$verb=="control_good",], aes(x=response)) +
 # in principle, we can ask for each verb whether it differs from the bad controls, as follows:
 h <- c("prove - control_good" = "plogis(Intercept + verbprove) = plogis(Intercept)")
 hypothesis(m, h) # no diff for "prove"
+h <- c("be_right_that - control_good" = "plogis(Intercept + verbbe_right_that) = plogis(Intercept)")
+hypothesis(m, h) # diff for "be right"
+h <- c("see - control_good" = "plogis(Intercept + verbsee) = plogis(Intercept)")
+hypothesis(m, h) # diff for "see"
 h <- c("acknowledge - control_good" = "plogis(Intercept + verbacknowledge) = plogis(Intercept)")
 hypothesis(m, h) # diff for "acknowledge"
 
