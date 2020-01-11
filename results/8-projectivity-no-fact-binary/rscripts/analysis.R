@@ -196,6 +196,41 @@ median(cd$age,na.rm=TRUE) #37
 table(cd$gender)
 #200 female, 220 male, 2 other
 
+# how many participants said 'no' to which predicates?
+str(cd$response)
+cd %>% 
+  select(workerid,response,verb) %>% 
+  unique() %>% 
+  group_by(verb) %>% 
+  summarise(sum(response == "No")) %>%
+  print(n=40)
+
+# who are the workers who responded 'no' to the predicates up to demonstrate?
+summary(cd)
+table(cd$verb)
+not.entailed <- filter(cd, (verb == "demonstrate" | verb == "confess" |verb == "reveal" |
+           verb == "establish" | verb == "admit" |verb == "acknowledge" |
+           verb == "be_annoyed" | verb == "confirm" | verb == "discover" | 
+           verb == "know" | verb == "see" | verb == "be_right" | verb == "prove") &  response == "No")
+table(not.entailed$verb)  
+
+
+not.entailed <- droplevels(subset(cd,verb == "demonstrate" | verb == "confess" |verb == "reveal" |
+                                    verb == "establish" | verb == "admit" |verb == "acknowledge" |
+                                  verb == "be_annoyed" | verb == "confirm" | verb == "discover" | 
+                                    verb == "know" | verb == "see" | verb == "be_right" | verb == "prove"))
+not.entailed <- droplevels(subset(not.entailed,response == "No"))
+
+
+
+cd %>% 
+  filter(verb == "demonstrate") %>% 
+  select(workerid,response,verb) %>% 
+  unique() %>% 
+  group_by(verb) %>% 
+  summarise(sum(response == "No")) %>%
+  print(n=40)
+
 # plots ----
 
 # mean projectivity by predicate, including the main clause controls
@@ -241,6 +276,7 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
   geom_point(shape=21,stroke=.5,size=2.5,color="black") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_alpha(range = c(.3,1)) +
+  geom_jitter(data=cd,aes(y=nResponse),color="gray40",alpha=.2,fill="black") +
   scale_fill_manual(values=c("darkorchid","black","gray60","tomato1","dodgerblue")) +
   guides(fill=FALSE) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 

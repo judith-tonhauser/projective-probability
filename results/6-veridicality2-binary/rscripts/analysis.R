@@ -158,6 +158,7 @@ nrow(cd) #8456 / 26 items = 302 participants
 # load clean data for analysis ----
 cd = read.csv("../data/cd.csv")
 nrow(cd) #8456 (302 Turkers)
+summary(cd)
 
 # age info
 table(cd$age) #18-73
@@ -169,6 +170,15 @@ cd %>%
   group_by(gender) %>% 
   summarize(count=n())
 # 150 female 152 male
+
+# how many participants said 'no' to which predicates?
+str(cd$response)
+cd %>% 
+  select(workerid,response,verb) %>% 
+  unique() %>% 
+  group_by(verb) %>% 
+  summarise(sum(response == "No")) %>%
+  print(n=40)
 
 # plots ----
 
@@ -222,6 +232,89 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
 ggsave("../graphs/proportion-by-predicate-variability-individual.pdf",height=4,width=7)
 
+# plot Turker's 'no' responses for predicates up to "demonstrate" ----
+table(cd$verb)
+
+# subset by relevant 13 predicates
+no <- droplevels(subset(cd,verb == "be_right" | verb == "discover" |verb == "prove" |
+                          verb == "see" | verb == "know" |verb == "confirm" |
+                          verb == "establish" | verb == "demonstrate" | verb == "admit" | 
+                          verb == "confess" | verb == "acknowledge" | verb == "reveal" | verb == "be_annoyed"))
+
+table(no$verb)
+str(no$verb)
+
+# calculate mean response, for ordering
+prop = no %>%
+  group_by(verb) %>%
+  summarize(Mean = mean(nResponse)) %>%
+  mutate(verb = fct_reorder(as.factor(verb),Mean))
+prop
+levels(prop$verb)
+
+
+no <- merge(no,prop,by="verb")
+head(no)
+no$verb <- reorder(no$verb,no$Mean)
+levels(no$verb)
+
+
+length(unique(no[no$response == "No",]$workerid)) #196 different workers
+
+
+# plot
+
+no$VeridicalityGroup = as.factor(
+  ifelse(no$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+         ifelse(no$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
+                ifelse(no$verb  %in% c("be_right","demonstrate"),"VNF",
+                       ifelse(no$verb  %in% c("entailing C", "non-ent. C"),"MC","V")))))
+
+# define colors for the predicates
+cols = data.frame(V=levels(no$verb))
+
+cols$VeridicalityGroup = as.factor(
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+         ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
+                ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
+                       ifelse(cols$V %in% c("entailing C", "non-ent. C"),"MC","V")))))
+
+levels(cols$V)
+cols$V <- factor(cols$V, levels = cols[order(as.character(prop$verb)),]$V, ordered = TRUE)
+
+cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
+                      ifelse(cols$VeridicalityGroup == "NF", "gray60", 
+                             ifelse(cols$VeridicalityGroup == "VNF","dodgerblue",
+                                    ifelse(cols$VeridicalityGroup == "MC","black","tomato1"))))
+
+
+# how many 'no' responses did the Turkers give
+no.part = no %>%
+  group_by(workerid) %>%
+  summarise(Sum = sum(response == "No")) %>%
+  print(n=100) %>%
+  mutate(workerid = fct_reorder(as.factor(as.character(workerid)),Sum))
+
+levels(no.part$workerid)
+
+# reorder participants
+no <- merge(no,no.part,by="workerid")
+head(no)
+no$workerid <- reorder(no$workerid,-no$Sum)
+
+#no$workerid <- factor(no$workerid, levels = no[order(as.character(no.part$workerid)),]$workerid, ordered = TRUE)
+
+# plot 'no' responses by predicate and Turker ID
+levels(no$verb)
+
+ggplot(no[no$response == "No",], aes(x=verb, y=workerid, fill=VeridicalityGroup)) +
+  geom_point(shape=21,stroke=.5,size=2.5,color="black",show.legend = FALSE) +
+  scale_fill_manual(values=c("darkorchid","tomato1","dodgerblue")) +
+  ylab("Participant ID") +
+  xlab("Predicate") +
+  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
+                                                                 color=cols$Colors))
+ggsave("../graphs/no-entailment-responses-by-pred-and-worker.pdf",height=3,width=4)
 
 # JD CODE STARTS HERE
 # TL;DR: all verbs are different from bad controls

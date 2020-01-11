@@ -1445,3 +1445,81 @@ plot(
 # coi_verbsee              16.14     24.34   -16.02    79.83        864 1.00
 # coi_verbsuggest         -14.62      6.56   -32.72    -7.29        251 1.02
 # coi_verbthink           -15.45      6.57   -33.48    -7.97        248 1.02
+
+# JT CODE STARTS HERE ----
+# I re-ran the ZOIB model with "prove" as the reference level, for better comparison with the
+# binary version of the experiment
+cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
+
+# Bayesian mixed effects regression to test whether ratings differ by predicate from entailing controls
+# entailing controls are called good_controls
+cd$workerid = as.factor(as.character(cd$workerid))
+
+# plotting slider ratings suggests we should use a zoib model
+ggplot(cd, aes(x=response)) +
+  geom_histogram()
+
+# exclude bad controls from analysis -- they're not relevant, right?
+# JT: right, for those, the relevant content is not entailed
+d = cd %>%
+  filter(verb != "control_bad") %>%
+  droplevels() %>%
+  mutate(verb = fct_relevel(verb,"prove"))
+
+# zoib model
+zoib_model <- bf(
+  response ~ verb, # beta distribution???s mean
+  phi ~ verb, # beta distribution???s precision
+  zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
+  coi ~ verb, # conditional one-inflation
+  family = zero_one_inflated_beta()
+)
+
+# fit model
+m <- brm(
+  formula = zoib_model,
+  data = d,
+  cores = 4#,
+  # file = here::here("zoib-ex")
+)
+# no need to run this multiple times:
+saveRDS(m,file="../data/zoib-model-prove.rds")
+
+# load ZOIB model ----
+m <- readRDS(file="../data/zoib-model-prove.rds")
+
+summary(m) # see summary printed below
+
+# transform each of the posterior samples, and then re-calculate the summaries on original scale
+posterior_samples(m, pars = "b_")[,1:4] %>% 
+  mutate_at(c("b_phi_Intercept"), exp) %>% 
+  mutate_at(vars(-"b_phi_Intercept"), plogis) %>% 
+  posterior_summary() %>% 
+  as.data.frame() %>% 
+  rownames_to_column("Parameter") %>% 
+  kable(digits = 2) 
+
+# |Parameter       | Estimate| Est.Error|  Q2.5| Q97.5|
+#   |:---------------|--------:|---------:|-----:|-----:|
+#   |b_Intercept     |     0.94|      0.00|  0.93|  0.94|
+#   |b_phi_Intercept |    14.30|      0.87| 12.63| 16.03|
+#   |b_zoi_Intercept |     0.37|      0.02|  0.34|  0.40|
+#   |b_coi_Intercept |     1.00|      0.00|  1.00|  1.00|
+
+# The .94 and 14.3 values are the mean and precision of the beta distribution that characterizes the bad controls that are not zeroes and ones -- this is a distribution heavily skewed towards 1
+# The .37 value is the probability that an observation will be either 0 or 1, and of these 37% endpoint values, 100% (last value) are ones. So: as expected, the bad controls are heavily 1-skewed, see also this histogram:
+ggplot(d[d$verb=="prove",], aes(x=response)) +
+  geom_histogram()
+
+# we can now ask for each verb whether it differs from prove:
+h <- c("be_right_that - prove" = "plogis(Intercept + verbbe_right_that) = plogis(Intercept)")
+hypothesis(m, h) # be right is different from prove
+h <- c("see - prove" = "plogis(Intercept + verbsee) = plogis(Intercept)")
+hypothesis(m, h) # see is different from prove
+
+# plot estimated mu parameter
+plot(
+  marginal_effects(m, dpar = "mu"), 
+  points = TRUE, 
+  point_args = list(width = .05, shape = 1)
+)
