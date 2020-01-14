@@ -2,6 +2,7 @@
 @PREAMBLE{"\newcommand{\noopsort}[1]{}"}
 %@PREAMBLE{"\newcommand{\SortNoop}[1]{}"}
 
+@preamble{ " \newcommand{\noop}[1]{} " } % a do-nothing command that serves a purpose
  
 @article{Chevallier2008,
   title={Making disjunctions exclusive},
@@ -27,6 +28,13 @@
  year = {2013}
 }
 
+@misc{van-rij-etal2017,
+ author = {{van Rij}, Jacolien and Martijn Wieling and Harald Baayen and Hedderik {van Rijn}},
+ title = {``itsadug'': {I}nterpreting time series and autocorrelated data using {G}{A}{M}{M}s. {R} package},
+ note = {Version 2.3.0},
+ year = {2017}
+}
+
 @article{tbd-variability,
  author = {Tonhauser, Judith and David Beaver and Judith Degen},
  title = {How projective is projective content? {G}radience in projectivity and at-issueness},
@@ -36,17 +44,26 @@
  year = {2018}
 }
 
-@Unpublished{vaiksnoraite-etal2018,
+@inproceedings{vaiksnoraite-etal2018,
   author = 	 {Vaik\v{s}norait\.e, Elena and Marie-Catherine de Marneffe and Judith Tonhauser},
   title = 	 {The prosody of presupposition projection: A production experiment},
-  year =	 {2018},
-  note =	 {Talk to be presented at NELS}}
+  booktitle = {North East Linguistics Society},
+  pages = {},
+  year =	 {2019}}
+  
+  @inproceedings{degen-goodman2014,
+  title={Lost your marbles? {T}he puzzle of dependent measures in experimental pragmatics},
+  author={Degen, Judith and Goodman, Noah D.},
+  booktitle = {Proceedings of the 36th Annual Conference of the Cognitive Science Society},
+  	publisher = {Austin, TX: Cognitive Science Society},
+  year={2014}
+}
 
 @Unpublished{tonhauser-degen,
   author = 	 {Tonhauser, Judith and Judith Degen},
-  title = 	 {On the distinction between `factive' and `non-factive' predicates},
+  title = 	 {Which predicates are factive? {A}n empirical investigation},
   year =	 {ms},
-  note =	 {Manuscript, The Ohio State University and Stanford University}}
+  note =	 {Manuscript, The Ohio State U and Stanford U}}
   
 @Unpublished{degen-tonhauser-prior,
   author = 	 {Degen, Judith and Judith Tonhauser},
@@ -108,7 +125,7 @@
   booktitle = {Handbook of Experimental Semantics and
 Pragmatics},
   year = {2019},
-  pages = {},
+  pages = {494-511},
   editor = {Cummins, Chris and Naopoleon Katsos}, 
   publisher = {Oxford: Oxford University Press}}
 
@@ -238,6 +255,34 @@ pages = {15--48},
 year={1992},
 }
 
+@article{frankejaeger2016,
+author = {Franke, Michael and J{\"{a}}ger, Gerhard},
+journal = {Zeitschrift f{\"{u}}r Sprachwissenschaft},
+number = {1},
+pages = {3-44},
+title = {{Probabilistic pragmatics, or why Bayes ' rule is probably important for pragmatics}},
+volume = {35},
+year = {2016}
+}
+
+@article{goodmanfrank2016,
+abstract = {Understanding language requires more than the use of fixed conventions and more than decoding combinatorial structure. Instead, comprehenders make exquisitely sensitive inferences about what utterances mean given their knowledge of the speaker, language, and context. Building on developments in game theory and probabilistic modeling, we describe the rational speech act (RSA) framework for pragmatic reasoning. RSA models provide a principled way to formalize inferences about meaning in context; they have been used to make successful quantitative predictions about human behavior in a variety of different tasks and situations, and they explain why complex phenomena, such as hyperbole and vagueness, occur. More generally, they provide a computational framework for integrating linguistic structure, world knowledge, and context in pragmatic language understanding.},
+author = {Goodman, Noah D. and Frank, Michael C.},
+doi = {10.1016/j.tics.2016.08.005},
+file = {:Users/titlis/cogsci/papers{\_}misc/goodman2016.pdf:pdf},
+isbn = {1879-307X (Electronic)
+1364-6613 (Linking)},
+issn = {1879307X},
+journal = {Trends in Cognitive Sciences},
+number = {11},
+pages = {818--829},
+pmid = {27692852},
+publisher = {Elsevier Ltd},
+title = {{Pragmatic Language Interpretation as Probabilistic Inference}},
+url = {http://dx.doi.org/10.1016/j.tics.2016.08.005},
+volume = {20},
+year = {2016}
+}
 
 @article{goodman-stuhlmueller2013,
   title={Knowledge and implicature: Modeling language understanding as social cognition},
@@ -290,6 +335,40 @@ pages = {64-76}
   journal={International Conference on Spoken Language Processing (ICSLP 2000)},
   pages={235-238},
   year={2000}
+}
+
+@article{wood2011,
+  title={Fast stable restricted maximum likelihood and marginal likelihood estimation of semiparametric generalized linear models},
+  author={Wood, Simon},
+  journal={Journal of the Royal Statistical Society: Series B (Statistical Methodology)},
+  volume = {73},
+  pages={3-36},
+  year={2011}
+}
+
+@Book{wood2017,
+ author =	 {Wood, Simon},
+ title = 	 {Generalized Additive Models: {A}n Introduction with {R}},
+ publisher = 	 {Boca Raton: CRC Press},
+ year = 	 2017}
+
+
+@article{podesva2011,
+  title={Salience and the social meaning of declarative contours: Three case studies of gay professionals},
+  author={Podesva, Robert},
+  journal={Journal of English Linguistics},
+  pages={233-264},
+  volume = {39},
+  year={2011}
+}
+
+@article{poschmann2008,
+  title={All declarative questions are attributive?},
+  author={Poschmann, Claudia},
+  journal={Journal of Belgian Linguistics},
+  volume = {22},
+  pages={247-269},
+  year={2008}
 }
 
 @inproceedings{pierrehumbert-hirschberg1990,
@@ -521,11 +600,11 @@ year = 	 2014}
   note =  {Ms., The Ohio State University, Stanford University, Carnegie Mellon University},
   year = 	 {ms}}
   
-@Unpublished{tonhauser-guarani-variability,
+@article{tonhauser-guarani-variability,
   author = 	 {Tonhauser, Judith},
   title = 	 {Projection variability in {P}araguayan {G}uaran\'i},
-  note =  {Ms., The Ohio State University},
-  year = 	 {ms}}
+  journal =  {Natural Language and Linguistic Theory},
+  year = 	 {\noop{3001}in press}}
 
 @Unpublished{matthewson-dgfs2015,
   author = 	 {Matthewson, Lisa},
@@ -1188,7 +1267,7 @@ year = 2013}
   year = 	 2014}
 
 @incollection{hoehle1992,
-  title={\"Uber {V}erum-{F}okus im {D}eutschen},
+  title={{\"U}ber {V}erum-{F}okus im {D}eutschen},
   author={H\"ohle, Tilman},
   booktitle={Informationsstruktur und Grammatik},
   editor={Jacobs, Joachim},
@@ -1206,11 +1285,13 @@ year = 2013}
   publisher={Amsterdam/Philadelphia: John Benjamins}
 }
 
-@Unpublished{tonhauser-companion,
+@incollection{tonhauser-companion,
   author = 	 {Tonhauser, Judith},
   title = 	 {Temporal properties of noun phrases},
-  note = 	 {Article commissioned for the {\em Companion to Semantics}, Wiley. Edited by L.\ Matthewson, C.\ Meier, H.\ Rullmann and T.\ E.\ Zimmermann},
-  year = 	 {accepted}}
+  booktitle = 	 {Companion to Semantics},
+  editor = 	 {Matthewson, L. and C.\ Meier and H.\ Rullmann and {T.\ E.\} Zimmermann},
+  publisher = 	 {Wiley},
+  year = 	 {\noop{3002}in press}}
   
   
 @incollection{tonhauser-bruno,
@@ -1356,7 +1437,30 @@ publisher = {Oxford University Press}
 	publisher = {Oxford University Press}
 }
 
+@inproceedings{white-etal2018b,
+    title = "Lexicosyntactic Inference in Neural Models",
+    author = "White, Aaron Steven  and
+      Rudinger, Rachel  and
+      Rawlins, Kyle  and
+      Van Durme, Benjamin",
+    booktitle = "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+    month = oct # "-" # nov,
+    year = "2018",
+    address = "Brussels, Belgium",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D18-1501",
+    doi = "10.18653/v1/D18-1501",
+    pages = "4717-4724"}
 
+@inproceedings{pavlick-kwiatkowski2019,
+    title = "Inherent disagreements in human textual inferences",
+    author = "Pavlick, Ellie and Tom Kwiatkowski",
+    booktitle = "Transactions of the Association for Computational Linguistics",
+    year = "2019",
+    publisher = "Association for Computational Linguistics",
+    doi = "10.1162/tacl_a_00293",
+    pages = "677-694"}
+    
 @article{beavervelleman11,
 	author = {Beaver, David and Velleman, Daniel},
 	year=2011,
@@ -1364,9 +1468,17 @@ publisher = {Oxford University Press}
 	journal = {Lingua}, 
 	volume = 121,
 	number = 11, 
-	pages={1671--1692}
+	pages={1671-1692}
 	}
-	
+
+@article{kastner2015,
+	author = {Kastner, Itamar},
+	year=2015,
+	title = {Factivity mirrors interpretation: {T}he selectional requirements of presuppositional verbs},
+	journal = {Lingua}, 
+	volume = 164,
+	pages={156-188}}
+		
 @article{barker02,
 	author = {Barker, Chris},
 	year=2002,
@@ -1632,6 +1744,7 @@ pages={7-36},
   year={2002}
 }
 
+
 @inproceedings{zaenen-karttunen,
   title={Veridicity annotation in the lexicon? A look at factive adjectives},
   author={Zaenen, Annie and Lauri Karttunen},
@@ -1761,7 +1874,8 @@ note = {ms., Carnegie Mellon University, Pittsburgh}
   title = 	 {Inferring meaning from indirect answers to polar questions: {T}he contribution of the rise-fall-rise contour},
   booktitle = 	 {Questions in Discourse},
   publisher =	 {Leiden: Brill},
-  year =	 {to appear},
+  year =	 {2019},
+  pages = {132-163},
   editor =	 {Onea, Edgar and Malte Zimmermann and Klaus {von Heusinger}}
 }
 
@@ -2283,9 +2397,15 @@ and implicature},
 
 @InProceedings{mahler-nels,
   author = 	 {Mahler, Taylor},
-  title = 	 {Does at-issueness predict projection? It's complicated!},
+  title = 	 {Does at-issueness predict projection? {I}t's complicated!},
   booktitle = {49th Annual Meeting of the North East Linguistic Society},
   year = 	 2019}  
+  
+@unpublished{mahler-qp2,
+  author = 	 {Mahler, Taylor},
+  title = 	 {The social component of projection behavior of clausal complements},
+  note = {Qualifying Paper, The Ohio State University},
+  year = 	 2019} 
   
 @Article{degen-tanenhaus2015,
 arxivId = {arXiv:1011.1669v3},
@@ -2316,7 +2436,7 @@ year = {2018}
 @InProceedings{djaerv-etal2016,
   author = 	 {Dj\"arv, Kajsa and J\'er\'emy Zehr and Florian Schwarz},
   title = 	 {Cognitive vs.\ emotive factives: {A}n experimental differentiation},
-  booktitle = {Proceedings of Sinn und Bedeutung 21},
+  booktitle = {Sinn und Bedeutung 21},
   pages = {367-385},
   year = 	 2016}
   
@@ -2339,7 +2459,7 @@ year = {2018}
   title = 	 {Presupposition processing and accommodation: {A}n experiment on {\em wieder} (`again') and consequences for other triggers},
   editor = {Schwarz, Florian},
   booktitle = {Experimental Perspectives on Presuppositions},
-  publisher = {??},
+  publisher = {Springer},
   pages = {39-65},
   year = 	 2015}
 
@@ -2396,6 +2516,7 @@ year = {2018}
 @InProceedings{abrusan2013b,
   author = 	 {Abrus{\'a}n, M{\'a}rta},
   title = 	 {On the focus-sensitive presupposition triggers {\em too, again, also, even}},
+  pages = {6-23},
   booktitle = {Sinn und Bedeutung 18},
   year = 	 2013}
 
@@ -2413,6 +2534,14 @@ year = {2018}
   volume = 	 54,
   pages = 	 {883-906}}
 
+@Article{acton2019,
+  author = 	 {Acton, Eric K.},
+  title = 	 {Pragmatics and the social life of the {E}nglish definite article},
+  journal = 	 {Language},
+  year = 	 2019,
+  volume = 	 95,
+  pages = 	 {37-65}}
+  
 @PhdThesis{spenader02,
   author = 	 {Spenader, Jennifer},
   title = 	 {Presuppositions in Spoken Discourse},
@@ -2497,7 +2626,13 @@ year = {2018}
   journal = 	 {Linguistics \& Philosophy},
   year = 	 {to appear}}
 
-
+@Book{cohen88,
+  author = 	 {Cohen, Jacob},
+  title = 	 {Statistical power analysis for the behavioral sciences},
+  edition = {2nd},
+  publisher = 	 {New Jersey: Lawrence Erlbaum},
+  year = 	 1988}
+  
 @Book{levelt74,
   author = 	 {Levelt, W.J.M},
   title = 	 {Formal Grammars in Linguistics and Psycholinguistics},
@@ -2640,7 +2775,7 @@ pages = {88-124},
 @inproceedings{zeevat:2000,
  title={Discourse particles as speech act markers},
  author={Zeevat, Henk.},
-editors = {Schr\"oder, Bernhard and Hans-Christian Schmitz},
+editor = {Schr\"oder, Bernhard and Hans-Christian Schmitz},
  booktitle={LDV Forum. Forum der Gesellschaft f\"ur Linguistische Datenverarbeitung (GLDV)},
  volume={17.1/2},
  pages={74--91},
@@ -3022,9 +3157,10 @@ year = 1997,
   author = 	 {Kubota, Yusuke and Jungmee Lee and Anastasia Smirnova and Judith Tonhauser},
   title = 	 {Cross-linguistic variation in temporal adjunct clauses},
   booktitle = {Cahier Chronos: Selected Proceedings of Chronos 8},
-  editor = {},
+  editor = {Nishida, C. and C. Russi},
+  pages = {135-155},
   publisher = {Amsterdam/Atlanta: Rodopi},
-  year = 	 {to appear}}
+  year = 	 {2011}}
   
 @Article{landau2009,
  author = {Landau, Idan},
@@ -3529,15 +3665,28 @@ Cultures of Asia and Africa, Tokyo University of Foreign Studies},
   year = 	 2008,
   editor = 	 {Lihoreau, L}}
   
-@InCollection{kiparsky-kiparsky71,
+@Article{kiparsky-kiparsky70,
   author = 	 {Kiparsky, Paul and Carol Kiparsky},
   title = 	 {Fact},
-  booktitle = 	 {Semantics. An Interdisciplinary Reader in Philosophy, Linguistics and Psychology},
-  pages = 	 {345-369},
-  publisher = {Cambridge: Cambridge University Press},
-  year = 	 1971,
-  editor = 	 {Steinberg, {Danny D.} and {Leon A.} Jakobovits}}
+  journal = 	 {Progress in Linguistics},
+  pages = 	 {143-173},
+  year = 	 1970}
+  
+@Article{white-etal2018,
+  author = 	 {White, Aaron S. and Valentine Hacquard and Jeffrey Lidz},
+  title = 	 {Semantic information and the syntax of propositional attitude verbs},
+  journal = 	 {Cognitive Science},
+  pages = 	 {416-456},
+  volume = 42,
+  year = 	 2018}
 
+@InProceedings{white-rawlins-nels2018,
+  author = 	 {White, Aaron S. and Kyle Rawlins},
+  title = 	 {The role of veridicality and factivity in clause selection},
+  booktitle = {48th Meeting of the North East Linguistic Society},
+  pages = 	 {??},
+  year = 	 2018}
+  
 @Article{tenny06,
   author = 	 {Tenny, Carol},
   title = 	 {Evidentiality, experiencers, and the syntax of sentience in {J}apanese},
@@ -6072,8 +6221,6 @@ pages="17--53"}
   editor = 	 {Maienborn, Claudia and Klaus {von Heusinger} and Paul Portner}}
 
 
-
-
 @Article{ward-hirschberg85,
   author = 	 {Ward, Gregory and Julia Hirschberg},
   title = 	 {Implicating uncertainty: {T}he pragmatics of fall-rise intonation},
@@ -6081,6 +6228,15 @@ pages="17--53"}
   year = 	 1985,
   volume = 	 61,
   pages = 	 {746-776}}
+  
+@Article{hirschberg-ward1995,
+  author = 	 {Hirschberg, Julia and Gregory Ward},
+  title = 	 {The interpretation of the high-rise question contour in {E}nglish},
+  journal = 	 {Journal of Pragmatics},
+  year = 	 1995,
+  volume = 	 24,
+  pages = 	 {407-412}}
+   
 
 @Book{Schiffrin87,
   author = 	 {Schiffrin, Deborah},
@@ -6256,15 +6412,15 @@ pages="17--53"}
   year = 	 2010
 }
 
-@InCollection{hooper1974,
+@InCollection{hooper1975,
   author = 	 {Hooper, Joan B.},
   title = 	 {On assertive predicates},
   booktitle = 	 {Syntax and Semantics},
   pages =	 {91-124},
   volume = 4,
   publisher =	 {New York: Academic Press},
-  year =	 1974,
-  editor =	 {Kimball, J}
+  year =	 1975,
+  editor =	 {Kimball, J.}
 }
 
 @InCollection{melvold1991,
@@ -6319,7 +6475,7 @@ pages="17--53"}
   title = 	 {Propositional attitudes},
   booktitle = {Semantics: An International Handbook of Natural Language Meaning},
   volume = 2,
-  editors = {von Heusinger, Klaus and Claudia Maienborn and Paul Portner},
+  editor = {von Heusinger, Klaus and Claudia Maienborn and Paul Portner},
   pages = {1538-1561},
   publisher = {Berlin: Mouton de Gruyter},
   year = 	 2012}
@@ -6360,7 +6516,7 @@ pages="17--53"}
   author = 	 {Deo, Ashwini and Judith Tonhauser},
   title = 	 {On the prosodic realization of pragmatic focus in {C}hodri, {G}ujarati and {M}arathi},
   year =	 2018,
-  note =	 {Talk to be presented at {\em Workshop on prosody of {S}outh {A}sian languages}, University of Konstanz, June 18}}
+  note =	 {Talk presented at {\em Workshop on prosody of {S}outh {A}sian languages}, University of Konstanz, June 18}}
   
 
 @Unpublished{tonhauser-humboldt2017,
@@ -7402,6 +7558,13 @@ note = {Keynote presentation at {\em Semantics and Linguistic Theory} 26}
   publisher = 	 {Amsterdam: John Benjamins},
   year = 	 2014}
 
+
+@Book{van-gelderen2004,
+  author = 	 {{van Gelderen}, Elly},
+  title = 	 {Grammaticalization as economy},
+  publisher = 	 {Amsterdam: John Benjamins},
+  year = 	 2004}
+  
 @Article{murphy88,
   author = 	 {Murphy, Gregory L.},
   title = 	 {Personal reference in English},
@@ -7550,6 +7713,17 @@ An International Handbook / Ein internationales Handbuch},
   year = 	 2006,
   editor = 	 {Birner, Betty J. and Gregory Ward}}
 
+
+@InCollection{chierchia-etal2012,
+  author = 	 {Chierchia, Gennaro and Danny Fox and Benjamin Spector},
+  title = 	 {The grammatical view of scalar implicatures and the relation between semantics and pragmatics},
+  booktitle = 	 {Semantics: {A}n international handbook of natural language meaning},
+  pages = 	 {2297-2332},
+  publisher = {Berlin: Mouton de Gruyter},
+  volume = 3,
+  year = 	 2012,
+  editor = 	 {Maienborn, Claudia and Klaus {von Heusinger} and Paul Portner}}
+  
 @Article{abusch10,
   author = 	 {Abusch, Dorit},
   title = 	 {Presupposition triggering from alternatives},
@@ -7593,11 +7767,20 @@ An International Handbook / Ein internationales Handbuch},
   year = 	 2015,
   volume = 	 32,
   pages = 	 {173-291}}
-
+  
+@InProceedings{romoli2011,
+  author = 	 {Romoli, Jacopo},
+  title = 	 {The presuppositions of soft triggers aren't presuppositions},
+  booktitle = {Proceedings of {S}emantics and {L}inguistic {T}heory ({S}{A}{L}{T}) 21},
+  pages = 	 {236-256},
+  year = 	 2011,
+  publisher = {Ithaca, NY: CLC Publications}}
+  
+  
 @InProceedings{abusch02,
   author = 	 {Abusch, Dorit},
   title = 	 {Lexical alternatives as a source of pragmatic presupposition},
-  booktitle = {Proceedings of {S}emantics and {L}inguistic {T}heory ({S}{A}{L}{T}) {X}{I}{I}},
+  booktitle = {{S}emantics and {L}inguistic {T}heory ({S}{A}{L}{T}) {X}{I}{I}},
   pages = 	 {1-19},
   year = 	 2002,
   publisher = {Ithaca, NY: CLC Publications}}
@@ -8218,6 +8401,14 @@ Structure},
   volume = 	 18,
   pages = 	 {79-114}}
   
+@Article{giannakidou2001,
+  author = 	 {Giannakidou, Anastasia},
+  title = 	 {The meaning of free choice},
+  journal = 	 {Linguistics and Philosophy},
+  year = 	 2001,
+  volume = 	24,
+  pages = 	 {659-735}}
+  
 @InCollection{giannakidou04,
   author = 	 {Giannakidou, Anastasia},
   title = 	 {Domain restriction and the arguments of quantificational determiners},
@@ -8279,6 +8470,14 @@ Structure},
   pages =	 {325-346}
 }
 
+@Article{hukari-levine1995,
+  author = 	 {Hukari, Thomas and Robert Levine},
+  title = 	 {Adjunct extraction},
+  journal = 	 {Natural Language and Linguistic Theory},
+  year = 	 1995,
+  volume =	 31,
+  pages =	 {195-226}}
+
 @Article{schwenter-silva2002,
   author = 	 {Schwenter, Scott and Gl\'aucia Silva},
   title = 	 {Overt vs.\ null direct objects in spoken {B}razilian {P}ortuguese},
@@ -8334,10 +8533,17 @@ Structure},
   year = 	 2015}
   
 @Book{giannakidou1998,
-  editor = 	 {Giannakidou, Anastasia},
+  author = 	 {Giannakidou, Anastasia},
   title = 	 {Polarity sensitivity as (non)veridical dependency},
   publisher = 	 {Dordrecht: John Benjamins},
   year = 	 1998}
+  
+
+@Book{landau2001,
+  author = 	 {Landau, Idan}, 
+  title = 	 {Elements of control: {S}tructure and meaning in infinitival constructions},
+  publisher = 	 {Springer},
+  year = 	 2001}
   
 @PhdThesis{cover10,
   author = 	 {Cover, Rebecca},
@@ -8352,6 +8558,14 @@ Structure},
   year = 	 2011,
   volume = 	 121,
   pages = 	 {1315-1343}}
+  
+@Article{zanuttini-portner2003,
+  author = 	 {Zanuttini, Raffaella and Paul Portner},
+  title = 	 {Exclamative clauses: {A}t the syntax-semantics interface},
+  journal = 	 {Language},
+  year = 	 2003,
+  volume = 	 79,
+  pages = 	 {39-81}}
 
 @Article{matthewson01,
   author = 	 {Matthewson, Lisa},
@@ -8385,6 +8599,26 @@ Structure},
   year =	 1996,
   editor =	 {Thomason, Sarah G.}
 }
+
+@InCollection{devillers2005,
+  author = 	 {{de Villiers}, Jill G.},
+  title = 	 {Can language acquisition give children a point of view},
+  booktitle = 	 {Why language acquisition matters for theory of mind},
+  pages =	 {186-219},
+  publisher =	 {Oxford University Press},
+  year =	 2005,
+  editor =	 {Astington, {Janet Wilde} and {Jodie A} Baird}
+}
+
+  
+@InCollection{anand-etal2019,
+  author = 	 {Anand, Pranav and Jane Grimshaw and Valentine Hacquard},
+  title = 	 {Sentence embedding predicates, factivity and subjects},
+  booktitle = 	 {A Festschrift for Lauri Karttunen},
+  publisher =	 {Stanford: CSLI Publications},
+  year =	 {ms},
+  editor =	 {Condoravdi, Cleo},
+  pages =	 {}}
 
 @Book{lekens58,
   author =	 {Lekens, Benjamin},
@@ -8622,7 +8856,14 @@ pages = {299-310},
   note = 	 {Unpublished ms., The Ohio State University},
   year = 	 2012}
 
-
+@Article{jeong2018,
+  author = 	 {Jeong, Sunwoo},
+  title = 	 {Intonation and sentence type conventions: Two types of rising declaratives},
+  journal = 	 {Journal of Semantics},
+  year = 	 2018,
+  volume = 	 35,
+  pages = 	 {305-356}}
+  
 
 @InProceedings{jeong-potts-salt,
   author = 	 {Jeong, Sunwoo and Christopher Potts},
@@ -8724,7 +8965,8 @@ pages = {299-310},
   title = 	 {Semantics of Inflection},
   booktitle = {Semantics: An International Handbook of Natural Language Meaning},
   volume = 3,
-  editors = {Maienborn, Claudia and Klaus {von Heusinger} and Paul Portner},
+  pages = {2070-2097},
+  editor = {Maienborn, Claudia and Klaus {von Heusinger} and Paul Portner},
   publisher = {Berlin: Mouton de Gruyter},
   year = 	 2013}
 
@@ -8901,6 +9143,12 @@ pages = {299-310},
   publisher = 	 {New York: Oxford University Press},
   year = 	 1968}
 
+@Book{abrusan2014,
+  author = 	 {Abrus\'an, M\'arta},
+  title = 	 {Weak island semantics},
+  publisher = 	 {New York: Oxford University Press},
+  year = 	 2014}
+  
 @Article{strawson50,
   author = 	 {Strawson, Peter},
   title = 	 {On referring},
@@ -9890,17 +10138,17 @@ Reference in English},
   howpublished = 	 {Pragmatics Microfiche it 1.1. frames B5ÐC14},
   year = 	 1975}
   
-@misc{karttunen71a,
-  author = 	 {Karttunen, Lauri},
-  title = 	 {The logic of {E}nglish predicate complement constructions},
-  howpublished = 	 {Indiana University Linguistics Club, Bloomington},
-  year = 	 1971}
-
 @misc{tonhauser-bls2016,
   author = 	 {Tonhauser},
   title = 	 {Speaker commitment in English and Paraguayan Guaran\'i attitude reports},
   note = 	 {Keynote address at the 2016 Annual Meeting of the Berkeley Linguistic Society},
   year = 	 2016}
+
+@misc{karttunen71a,
+  author = 	 {Karttunen, Lauri},
+  title = 	 {The logic of {E}nglish predicate complement constructions},
+  howpublished = 	 {Indiana University Linguistics Club, Bloomington},
+  year = 	 1971}
 
 
 @Article{karttunen71b,
@@ -9957,6 +10205,15 @@ Reference in English},
   title = 	 {Plurality, Conjunction, and Events},
   publisher = 	 {Dordrecht: Kluwer},
   year = 	 1995
+}
+
+@Article{lasersohn2009,
+  author = 	 {Lasersohn, Peter},
+  title = 	 {Relative truth, speaker commitment, and control of implicit arguments},
+  journal = 	 {Synthese},
+  year = 	 2009,
+  volume =	 166,
+  pages =	 {359-374}
 }
 
 @Article{maienborn04,
@@ -10264,7 +10521,6 @@ on the semantics and pragmatics of wh-exclamatives},
   journal = 	 {Lingua},
   year = 	 2007,
   volume = 	 117,
-  number = 	 6,
   pages = 	 {1034-1056}}
 
 
@@ -11578,7 +11834,7 @@ note = {Updated from 1996 publication in  OSU Working Papers in Linguistics, vol
   author = 	 {{van der Sandt}, Rob and Janneke Huitink},
   title = 	 {Again},
   booktitle = 	 {Proceedings of the 2003 Amsterdam Colloquium},
-  publisher =	 {??},
+  pages =	 {181-186},
   year =	 {2003}
 }
 
@@ -13010,6 +13266,14 @@ author = {Sapir, Edward},
   note = 	 {Poster presented at the {\em Workshop on Prosody and Meaning}, Barcelona, Spain, September 17-19.},
   year = 	 2009}
 
+@Unpublished{tonhauser-degen-xprag2019,
+  author = 	 {Tonhauser, Judith and Judith Degen},
+  title = 	 {Higher-probability content is more projective than lower-probability content},
+  note = 	 {Talk presented at the {\em Experimental Pragmatics} conference, Edinburgh, June 2019},
+  year = 	 2019}
+  
+
+
 
 @Unpublished{clopper-tonhauser-wscla,
   author = 	 {Clopper, Cynthia G. and Judith Tonhauser},
@@ -13235,7 +13499,12 @@ author = {Sapir, Edward},
   year = 	 1996
 }
 
-
+@Book{rooryck2000,
+  author =	 {Rooryck, Johan},
+  title = 	 {Configurations of sentential complementation},
+  publisher = 	 {London: Routledge},
+  year = 	 2000
+}
 
 @Book{jespersen33,
   author = 	 {Jespersen, Otto},
@@ -13715,7 +13984,7 @@ author = {Sapir, Edward},
 
 @Book{jackendoff87,
   author = 	 {Jackendoff, Ray},
-  title = 	 {Consciousness and the computatinal mind},
+  title = 	 {Consciousness and the computational mind},
   publisher = 	 {MIT Press, Mass.},
   year = 	 1987
 }
@@ -14290,6 +14559,7 @@ author = {Sapir, Edward},
   pages =	 {201-270}
 }
 
+
 @Article{percus00,
   author = 	 {Percus, Orin},
   title = 	 {Constraints on some other variables in syntax},
@@ -14335,6 +14605,16 @@ author = {Sapir, Edward},
   editor = {{B{Š}uerle}, Rainer and Schwarze, Chr. and von Stechow, Arnim},
   pages = {361-383},
   address = {Berlin}
+}
+
+@incollection{heycock2006,
+  author = 	 {Heycock, Caroline},
+  title = 	 {Embedded root phenomena},
+  booktitle = {The Blackwell Companion to Syntax},
+  publisher = 	 {Wiley},
+  year = 	 2006,
+  editor = {Everaert, Martin and Henk {van Riemsdijk}},
+  pages =	 {xxx}
 }
 
 @InProceedings{schlenker08b,
@@ -15022,10 +15302,9 @@ pages="1-30"}
   author = 	 {L.T.F. Gamut},
   title = 	 {Logic, Language and Meaning. Intensional Logic and Logical Grammar},  
   publisher = 	 {Chicago: The University of Chicago Press},
+  volum = 1,
   year = 	 1991,
 }
-
-
 
 @Book{gamut2,
   author = 	 {L.T.F. Gamut},
@@ -15100,7 +15379,12 @@ pages="1-30"}
   year = 	 2007
 }
 
-
+@Book{jenkins2009,
+  author =	 {Jenkins, Jennifer},
+  title = 	 {World Englishes},
+  publisher = 	 {Routledge},
+  year = 	 2009
+}
 
 @Article{kadmon-landman93,
   author = 	 {Kadmon, Nirit and Fred Landman},
@@ -16270,6 +16554,58 @@ volume = {30},
   booktitle = {Proceedings of {Semantics and Linguistic Theory (SALT)} 22},
   year = 	 2012}
 
+@Article{buerkner2017,
+    title = {{brms}: An {R} Package for Bayesian Multilevel Models Using {Stan}},
+    author = {Paul-Christian B\"urkner},
+    journal = {Journal of Statistical Software},
+    year = {2017},
+    volume = {80},
+    number = {1},
+    pages = {1--28},
+    doi = {10.18637/jss.v080.i01},
+    encoding = {UTF-8},
+  }
+@article{Nicenboim2016,
+author = {Nicenboim, Bruno and Vasishth, Shravan},
+doi = {10.1111/lnc3.12207},
+eprint = {1602.00245},
+issn = {1749818X},
+journal = {Linguistics and Language Compass},
+number = {11},
+pages = {591--613},
+title = {{Statistical methods for linguistic research: Foundational Ideas, Part II}},
+volume = {10},
+year = {2016}
+}
+
+@article{Morey2016,
+author = {Morey, Richard D. and Hoekstra, Rink and Rouder, Jeffrey N. and Lee, Michael D. and Wagenmakers, Eric Jan},
+doi = {10.3758/s13423-015-0947-8},
+eprint = {1105.1486},
+isbn = {1069-9384},
+issn = {15315320},
+journal = {Psychonomic Bulletin and Review},
+keywords = {Bayesian inference and parameter estimation,Bayesian statistics,Statistical inference,Statistics},
+number = {1},
+pages = {103--123},
+pmid = {22837590},
+title = {{The fallacy of placing confidence in confidence intervals}},
+volume = {23},
+year = {2016}
+}
+
+@incollection{Jaynes1976,
+address = {Dordrecht},
+author = {Jaynes, Edwin and Kempthorne, O.},
+booktitle = {Foundations of probability theory, statistical inference, and statistical theories of science},
+editor = {Harper, W. L. and Hooker, C. A.},
+pages = {175--257},
+publisher = {Springer Netherlands},
+title = {{Confidence intervals vs. Bayesian intervals}},
+year = {1976}
+}
+
+
 @Book{lyons99,
   author = 	 {Lyons, Christopher},
   title = 	 {Definiteness},
@@ -16481,6 +16817,14 @@ year = {2017}}
   title = 	 {Rapanui: A Descriptive Grammar},
   publisher = 	 {Routledge},
   year = 	 1996
+}
+
+@Book{meyerhoff2018,
+  author = 	 {Meyerhoff, Miriam},
+  title = 	 {Introducing Sociolinguistics},
+  publisher = 	 {Routledge},
+  edition = {3},
+  year = 	 2018
 }
 
 @Unpublished{partee02,
@@ -17071,6 +17415,12 @@ year = {2017}}
   title = 	 {True to Form: Rising and Falling Declaratives as Questions in English},
   school = 	 {University of California, Santa Cruz},
   year = 	 2001}
+
+@Book{gunlogson2003,
+  title =	 {True to form: Rising and falling declaratives as questions in {E}nglish},
+  author = 	 {Gunlogson, Christine},
+  publisher = 	 {New York: Routledge},
+  year = 	 2003}
 
 @InCollection{dahl01,
   author = 	 {Dahl, {\"O}sten},
@@ -17665,6 +18015,33 @@ DOI={10.3389/fpsyg.2015.01779}}
   Language Studies; II:6}
 }
 
+@article{acton-potts2014,
+author = {Acton, Eric K. and Potts, Christopher},
+title = {That straight talk: Sarah {P}alin and the sociolinguistics of demonstratives},
+journal = {Journal of Sociolinguistics},
+volume = {18},
+pages = {3-31},
+year = {2014}
+}
+
+@article{burnett2017,
+author = {Burnett, Heather},
+title = {Sociolinguistic interaction and identity construction: The view from game-theoretic pragmatics},
+journal = {Journal of Sociolinguistics},
+volume = {21},
+number = {2},
+pages = {238-271},
+year = {2017}
+}
+
+@article{beltrama-staum-casasanto2017,
+author = {Beltrama, Andrea and Laura {Staum Casasanto}},
+title = {{\em Totally} tall sounds {\em totally} younger: {I}ntensification at the socio-semantics interface},
+journal = {Journal of Sociolinguistics},
+volume = {21},
+pages = {154-182},
+year = {2017}
+}
 
 @Article{harris-potts09,
   author = 	 {Harris, Jesse A. and Christopher Potts},
@@ -17679,6 +18056,13 @@ DOI={10.3389/fpsyg.2015.01779}}
   title = 	 {The {L}ogic of {C}onventional {I}mplicatures},
   publisher = 	 {Oxford: OUP},
   year = 	 2005
+}
+
+@Book{kroeger2018,
+  author =	 {Kroeger, Paul R.},
+  title = 	 {Analyzing meaning: An introduction to semantics and pragmatics},
+  publisher = 	 {Language Sciences Press},
+  year = 	 2018
 }
 
 @PhdThesis{potts03,
@@ -17966,6 +18350,14 @@ DOI={10.3389/fpsyg.2015.01779}}
   year =	 1973,
   editor =	 {Hintikka, Jaako and Julius Moravcsik and Patrick Suppes}
 }
+
+@InCollection{hintikka1975,
+  author = 	 {Hintikka, Jaakko},
+  title = 	 {Different constructions in terms of the basic epistemological verbs: {A} survey of some problems and proposals},
+  booktitle = 	 {The intentions of intentionality and other new models for modalities},
+  publisher =	 {Dordrecht: Reidel},
+  year =	 1975,
+  editor =	 {??}}
 
 @Article{bloom96,
   author = 	 {Bloom, Paul},
@@ -18393,6 +18785,13 @@ DOI={10.3389/fpsyg.2015.01779}}
   year = 	 2002
 }
 
+@Unpublished{white-ms,
+  author = 	 {White, {Aaron Steve}},
+  title = 	 {Lexically triggered veridicality inferences},
+  note = 	 {Under review for {\em Handbook of Pragmatics}},
+  year =	 {ms}}
+
+  
 @InCollection{bohnemeyer02c,
   author = 	 {Bohnemeyer, J\"urgen},
   title = 	 {Event order in language and cognition},
@@ -18594,6 +18993,47 @@ Nanette Veilleux, Stefanie Shattuck-Hufnagel, and Alejna Brugos. 6.911 Transcrib
   pages = 	 {249-257},
   year = 	 2011,
   publisher = {Somerville, MA: Cascadilla Proceedings Project}}
+  
+@InProceedings{tonhauser-etal-sub23,
+  author = 	 {Tonhauser, Judith and Marie-Catherine de Marneffe and {Shari R.} Speer and Jon Stevens},
+  title = 	 {On the information structure sensitivity of projective content},
+  booktitle = {Sinn und Bedeutung 23},
+  pages = {363-389},
+  year = 	 2019}
+  
+@InProceedings{demarneffe-etal-sub23,
+  author = 	 {{de Marneffe}, Marie and Mandy Simons and Judith Tonhauser},
+  title = 	 {The {C}ommitment{B}ank: {I}nvestigating projection in naturally occurring discourse},
+  booktitle = {Sinn und Bedeutung 23},
+  pages = {107-124},
+  year = 	 2019}
+  
+
+@InProceedings{karttunen-zaenen2005,
+  author =	{Karttunen, Lauri and Annie Zaenen},
+  title =	{Veridicity},
+  booktitle =	{Annotating, Extracting and Reasoning about Time and Events},
+  year =	{2005},
+  editor =	{Graham Katz and James Pustejovsky and Frank Schilder},
+  number =	{05151},
+  series =	{Dagstuhl Seminar Proceedings},
+  publisher =	{Internationales Begegnungs- und Forschungszentrum f{\"u}r Informatik (IBFI), Schloss Dagstuhl, Germany}
+}
+  
+@InProceedings{aravind-hackl2017,
+  author = 	 {Aravind, Athulya and Martin Hackl},
+  title = 	 {Factivity and at-issueness in the acquisition of {\em forget} and {\em remember}},
+  booktitle = {41st Annual Boston University Conference on Language Development},
+  pages = {46-59},
+  year = 	 2017}
+
+@Article{cremers2018,
+  author = 	 {Cremers, Alexandre},
+  title = 	 {Plurality effects in an exhaustification-based theory of embedded questions},
+  journal = 	 {Natural Language Semantics},
+  year = 	 2018,
+  volume = 	 26,
+  pages = 	 {193-251}}
 
 @Article{deo09,
   author = 	 {Deo, Ashwini},
@@ -18603,6 +19043,15 @@ Nanette Veilleux, Stefanie Shattuck-Hufnagel, and Alejna Brugos. 6.911 Transcrib
   year = 	 2009,
   volume = 	 32,
   pages = 	 {475-521}}
+  
+@Article{guerzoni-sharvit2007,
+  author = 	 {Guerzoni, Elena and Yael Sharvit},
+  title = 	 {A question of strength: {O}n {N}{P}{I}s in interrogative clauses},
+  journal = 	 {Linguistics \& Philosophy},
+  year = 	 2007,
+  volume = 	 30,
+  pages = 	 {361-391}}
+
 
 @InCollection{tonhauser09d,
   author = 	 {Tonhauser, Judith},
@@ -18743,6 +19192,21 @@ Nanette Veilleux, Stefanie Shattuck-Hufnagel, and Alejna Brugos. 6.911 Transcrib
   booktitle =	 {Papers from the Sixth Regional Meeting of the Chicago Linguistic Society},
   pages =	 {250-261},
   year =	 1970
+}
+
+@Book{givon93,
+  author = 	 {Giv\'on, Talmy},
+  title = 	 {English Grammar: {A} function-based introduction},
+  volume = {2},
+  publisher = 	 {Amsterdam: John Benjamins},
+  year = 	 1993
+}
+
+@Book{givon95,
+  author = 	 {Giv\'on, Talmy},
+  title = 	 {Functionalism and grammar},
+  publisher = 	 {Amsterdam: John Benjamins},
+  year = 	 1995
 }
 
 @Book{givon84,
@@ -19398,6 +19862,22 @@ Fillmore, Charles J. 1986.
   volume = 	 25,
   pages = 	 {313-342}}
 
+@Article{milroy-margrain1980,
+  author = 	 {Milroy, Lesley and Sue Margrain},
+  title = 	 {Vernacular language loyalty and social network},
+  journal = 	 {Language in Society},
+  year = 	 1980,
+  volume = 	 9,
+  pages = 	 {43-70}}
+
+@Article{moore-podesva2009,
+  author = 	 {Moore, Emma and Robert Podesva},
+  title = 	 {Style, indexicality, and the social meaning of tag questions},
+  journal = 	 {Language in Society},
+  year = 	 2009,
+  volume = 	 38,
+  pages = 	 {447-485}}
+  
 @Book{carden76a,
   author = 	 {Carden, Guy},
   title = 	 {English Quantifiers: Logical Structure and Linguistic Variation},
@@ -19413,8 +19893,23 @@ Fillmore, Charles J. 1986.
   year = 	 1996,
   volume = 	 32}
 
+@InCollection{labov1972,
+  author = 	 {Labov, William},
+  title = 	 {The social stratification of (r) in {N}ew {Y}ork {C}ity department stores},
+  booktitle = 	 {Sociolinguistic Patterns},
+  pages = 	 {43-54},
+  publisher = {Philadelphia: University of Pennsylvania Press},
+  year = 	 1972}
 
-
+@InCollection{labov1997,
+  author = 	 {Labov, William},
+  title = 	 {The social stratification of (r) in {N}ew {Y}ork {C}ity department stores},
+  booktitle = 	 {Sociolinguistics},
+  pages = 	 {168-178},
+  publisher = {London: Palgrave},
+  year = 	 1997,
+  editor = {Coupland, N. and A. Jaworski}}  
+  
 @InCollection{clopper-etal,
   author = 	 {Clopper, {Cynthia G.} and Jennifer Hay and Bart{\l}omiej Plichta},
   title = 	 {Experimental speech perception and perceptual dialectology},
