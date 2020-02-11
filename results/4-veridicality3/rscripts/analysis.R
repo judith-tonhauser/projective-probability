@@ -321,7 +321,7 @@ str(t$verb)
 
 ## plots ----
 
-# plot of means with participant ratings
+# plot of means with participant ratings (4-way distinction, factivity paper)
 means = cd %>%
   group_by(verb) %>%
   summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
@@ -380,6 +380,67 @@ ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
   xlab("Predicate") +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
 ggsave("../graphs/means-inference-by-predicate-variability.pdf",height=4,width=7)
+
+# plot of means with participant ratings (3-way distinction, Tuebingen talk)
+means = cd %>%
+  group_by(verb) %>%
+  summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+  mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, verb = fct_reorder(as.factor(verb),Mean))
+options(tibble.print_max = Inf)
+means
+levels(means$verb)
+
+cd$verb <-factor(cd$verb, levels=levels(means$verb))
+levels(cd$verb)
+
+# define colors for the predicates
+cols = data.frame(V=levels(cd$verb))
+cols
+
+levels(cols$V)
+cols$V <- factor(cols$V, levels = levels(means$verb))
+
+cols$VeridicalityGroup = as.factor(
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+         ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
+                ifelse(cols$V %in% c("be_right","demonstrate"),"NF",
+                       ifelse(cols$V %in% c("non-ent. C","entailing C"),"MC","V")))))
+
+cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
+                      ifelse(cols$VeridicalityGroup == "NF", "gray60", 
+                             ifelse(cols$VeridicalityGroup == "VNF","dodgerblue",
+                                    ifelse(cols$VeridicalityGroup == "MC","black","tomato1"))))
+
+cols$Colors
+levels(cols$VeridicalityGroup)
+
+
+subjmeans = cd %>%
+  group_by(verb,workerid) %>%
+  summarize(Mean = mean(response)) 
+subjmeans$verb <- factor(subjmeans$verb, levels = unique(levels(means$verb)))
+levels(subjmeans$verb)
+
+means$VeridicalityGroup = as.factor(
+  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+         ifelse(means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
+                ifelse(means$verb  %in% c("be_right","demonstrate"),"NF",
+                       ifelse(means$verb  %in% c("non-ent. C","entailing C"),"MC","V")))))
+
+ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
+  geom_point(shape=21,fill="gray60",data=subjmeans, alpha=.1, color="gray40") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="black") +
+  geom_point(shape=21,stroke=.5,size=2.5,color="black") +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_alpha(range = c(.3,1)) +
+  scale_fill_manual(values=c("darkorchid","black","gray60","tomato1")) +
+  guides(fill=FALSE) +
+  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
+                                                                 color=cols$Colors)) +
+  ylab("Mean inference rating") +
+  xlab("Predicate") +
+  theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
+ggsave("../graphs/means-inference-by-predicate-variability-3way.pdf",height=4,width=7)
 
 # plot by-participant variability
 cd$PresumedVerbType = as.factor(
