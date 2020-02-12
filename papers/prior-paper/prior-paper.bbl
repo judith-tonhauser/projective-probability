@@ -1,0 +1,152 @@
+\newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
+\begin{thebibliography}{23}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[Anand et~al.(ms)Anand, Grimshaw, and Hacquard]{anand-etal2019}
+Anand, Pranav, Jane Grimshaw, and Valentine Hacquard. ms.
+\newblock Sentence embedding predicates, factivity and subjects.
+\newblock In C.~Condoravdi, ed., {\em A Festschrift for Lauri Karttunen\/}.
+  Stanford: CSLI Publications.
+
+\bibitem[Anand and Hacquard(2014)]{anand-hacquard2014}
+Anand, Pranav and Valentine Hacquard. 2014.
+\newblock Factivity, belief and discourse.
+\newblock In {\em The Art and Craft of Semantics: A Festschrift for Irene
+  Heim\/}, pages 69--90. MIT Working Papers in Linguistics.
+
+\bibitem[Anderson(1986)]{anderson86}
+Anderson, Lloyd~B. 1986.
+\newblock Evidentials, paths of change, and mental maps: {T}ypologically
+  regular asymmetries.
+\newblock In W.~Chafe and J.~Nichols, eds., {\em Evidentiality: {T}he
+  Linguistic Coding of Epistemology\/}, pages 273--312. New Jersey: Ablex
+  Publishing Corporation.
+
+\bibitem[Beaver(2010)]{beaver-belly}
+Beaver, David. 2010.
+\newblock Have you noticed that your belly button lint colour is related to the
+  colour of your clothing?
+\newblock In R.~B\"auerle, U.~Reyle, and E.~Zimmermann, eds., {\em
+  Presuppositions and Discourse: {Essays Offered to Hans Kamp}\/}, pages
+  65--99. Oxford: Elsevier.
+
+\bibitem[{de Marneffe} et~al.(2019){de Marneffe}, Simons, and
+  Tonhauser]{demarneffe-etal-sub23}
+{de Marneffe}, Marie, Mandy Simons, and Judith Tonhauser. 2019.
+\newblock The {C}ommitment{B}ank: {I}nvestigating projection in naturally
+  occurring discourse.
+\newblock In {\em Sinn und Bedeutung 23\/}, pages 107--124.
+
+\bibitem[Dj\"arv and Bacovcin(2017)]{djaerv-bacovcin-salt27}
+Dj\"arv, Kajsa and {Hezekiah Akiva} Bacovcin. 2017.
+\newblock Prosodic effects on factive presupposition projection.
+\newblock In {\em Semantics and Linguistic Theory (SALT) XXVII\/}, pages
+  116--133. Ithaca, NY: CLC Publications.
+
+\bibitem[Egr\'e(2008)]{egre2008}
+Egr\'e, Paul. 2008.
+\newblock Question-embedding and factivity.
+\newblock In L.~Lihoreau, ed., {\em Grazer Philosophische Studien\/}, pages
+  85--125. Amsterdam: Rodopi.
+
+\bibitem[Karttunen(2016)]{karttunen2016}
+Karttunen, Lauri. 2016.
+\newblock Presupposition: {W}hat went wrong?
+\newblock In {\em Proceedings of {Semantics and Linguistic Theory (SALT)
+  XXVI}\/}, pages 705--731. Ithaca, NY: CLC Publications.
+
+\bibitem[Kiparsky and Kiparsky(1970)]{kiparsky-kiparsky70}
+Kiparsky, Paul and Carol Kiparsky. 1970.
+\newblock Fact.
+\newblock In M.~Bierwisch and K.~Heidolph, eds., {\em Progress in
+  Linguistics\/}, pages 143--173. The Hague: Mouton.
+
+\bibitem[Mahler(2019)]{mahler-nels}
+Mahler, Taylor. 2019.
+\newblock Does at-issueness predict projection? {I}t's complicated!
+\newblock In {\em 49th Annual Meeting of the North East Linguistic Society\/}.
+
+\bibitem[Schlenker(2010)]{schlenker10}
+Schlenker, Philippe. 2010.
+\newblock Local contexts and local meanings.
+\newblock {\em Philosophical Studies\/} 151:115--142.
+
+\bibitem[Simons(2007)]{simons07}
+Simons, Mandy. 2007.
+\newblock Observations on embedding verbs, evidentiality, and presupposition.
+\newblock {\em Lingua\/} 117:1034--1056.
+
+\bibitem[Smith and Hall(2011)]{smith-hall11}
+Smith, {E.\ Allyn} and Kathleen~Currie Hall. 2011.
+\newblock Projection diversity: {E}xperimental evidence.
+\newblock In {\em Proceedings of the 2011 {ESSLLI} Workshop on Projective
+  Content\/}, pages 156--170.
+
+\bibitem[Spector and Egr\'e(2015)]{spector-egre2015}
+Spector, Benjamin and Paul Egr\'e. 2015.
+\newblock A uniform semantics for embedding interrogatives: {\em {A}n} answer,
+  not necessarily {\em the} answer.
+\newblock {\em Synthese\/} 192:1729--1784.
+
+\bibitem[Stevens et~al.(2017)Stevens, {de Marneffe}, Speer, and
+  Tonhauser]{stevens-etal2017}
+Stevens, {Jon Scott}, Marie-Catherine {de Marneffe}, {Shari R.} Speer, and
+  Judith Tonhauser. 2017.
+\newblock Rational use of prosody predicts projectivity in manner adverb
+  utterances.
+\newblock In {\em 39th Annual Meeting of the Cognitive Science Society\/},
+  pages 1144--1149.
+
+\bibitem[Swanson(2012)]{swanson2012}
+Swanson, Eric. 2012.
+\newblock Propositional attitudes.
+\newblock In K.~von Heusinger, C.~Maienborn, and P.~Portner, eds., {\em
+  Semantics: An International Handbook of Natural Language Meaning\/}, vol.~2,
+  pages 1538--1561. Berlin: Mouton de Gruyter.
+
+\bibitem[Tonhauser(2016)]{tonhauser-salt26}
+Tonhauser, Judith. 2016.
+\newblock Prosodic cues to speaker commitment.
+\newblock In {\em Semantics and Linguistic Theory (SALT) XXVI\/}, pages
+  934--960. Ithaca, NY: CLC Publications.
+
+\bibitem[Tonhauser et~al.(2018)Tonhauser, Beaver, and Degen]{tbd-variability}
+Tonhauser, Judith, David Beaver, and Judith Degen. 2018.
+\newblock How projective is projective content? {G}radience in projectivity and
+  at-issueness.
+\newblock {\em Journal of Semantics\/} 35:495--542.
+
+\bibitem[Tonhauser et~al.(2013)Tonhauser, Beaver, Roberts, and
+  Simons]{brst-lang11}
+Tonhauser, Judith, David Beaver, Craige Roberts, and Mandy Simons. 2013.
+\newblock Toward a taxonomy of projective content.
+\newblock {\em Language\/} 89:66--109.
+
+\bibitem[White and Rawlins(2018)]{white-rawlins-nels2018}
+White, Aaron~S. and Kyle Rawlins. 2018.
+\newblock The role of veridicality and factivity in clause selection.
+\newblock In {\em 48th Meeting of the North East Linguistic Society\/}, page~??
+
+\bibitem[White et~al.(2018)White, Rudinger, Rawlins, and
+  Van~Durme]{white-etal2018b}
+White, Aaron~Steven, Rachel Rudinger, Kyle Rawlins, and Benjamin Van~Durme.
+  2018.
+\newblock Lexicosyntactic inference in neural models.
+\newblock In {\em Proceedings of the 2018 Conference on Empirical Methods in
+  Natural Language Processing\/}, pages 4717--4724. Brussels, Belgium:
+  Association for Computational Linguistics.
+
+\bibitem[Wyse(2010)]{wyse}
+Wyse, Brendan. 2010.
+\newblock {\em Factive/non-factive predicate recognition within Question
+  Generation systems\/}.
+\newblock Master's thesis, Open University.
+
+\bibitem[Xue and Onea(2011)]{xue-onea11}
+Xue, Jingyang and Edgar Onea. 2011.
+\newblock Correlation between projective meaning and at-issueness: {A}n
+  empirical study.
+\newblock In {\em Proceedings of the 2011 {ESSLLI} Workshop on Projective
+  Content\/}, pages 171--184.
+
+\end{thebibliography}

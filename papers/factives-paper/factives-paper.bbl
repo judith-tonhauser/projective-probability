@@ -1,5 +1,5 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{67}
+\begin{thebibliography}{71}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abbott(2006)]{abbott06}
@@ -64,6 +64,11 @@ Beaver, David. 2010.
 \newblock In R.~B\"auerle, U.~Reyle, and E.~Zimmermann, eds., {\em
   Presuppositions and Discourse: {Essays Offered to Hans Kamp}\/}, pages
   65--99. Oxford: Elsevier.
+
+\bibitem[B\"urkner(2017)]{buerkner2017}
+B\"urkner, Paul-Christian. 2017.
+\newblock {brms}: An {R} package for bayesian multilevel models using {Stan}.
+\newblock {\em Journal of Statistical Software\/} 80(1):1--28.
 
 \bibitem[Chierchia and McConnell-Ginet(1990)]{ccmg90}
 Chierchia, Gennaro and Sally McConnell-Ginet. 1990.
@@ -184,6 +189,13 @@ Hukari, Thomas and Robert Levine. 1995.
 \newblock Adjunct extraction.
 \newblock {\em Natural Language and Linguistic Theory\/} 31:195--226.
 
+\bibitem[Jaynes and Kempthorne(1976)]{Jaynes1976}
+Jaynes, Edwin and O.~Kempthorne. 1976.
+\newblock {Confidence intervals vs. Bayesian intervals}.
+\newblock In W.~L. Harper and C.~A. Hooker, eds., {\em Foundations of
+  probability theory, statistical inference, and statistical theories of
+  science\/}, pages 175--257. Dordrecht: Springer Netherlands.
+
 \bibitem[Karttunen(1971{\natexlab{a}})]{karttunen71-implicative}
 Karttunen, Lauri. 1971{\natexlab{a}}.
 \newblock Implicative verbs.
@@ -223,7 +235,8 @@ Kastner, Itamar. 2015.
 \bibitem[Kiparsky and Kiparsky(1970)]{kiparsky-kiparsky70}
 Kiparsky, Paul and Carol Kiparsky. 1970.
 \newblock Fact.
-\newblock {\em Progress in Linguistics\/} pages 143--173.
+\newblock In M.~Bierwisch and K.~Heidolph, eds., {\em Progress in
+  Linguistics\/}, pages 143--173. The Hague: Mouton.
 
 \bibitem[Klein(1975)]{klein1975}
 Klein, Ewan. 1975.
@@ -246,6 +259,19 @@ Lasersohn, Peter. 2009.
 Mahler, Taylor. 2019.
 \newblock Does at-issueness predict projection? {I}t's complicated!
 \newblock In {\em 49th Annual Meeting of the North East Linguistic Society\/}.
+
+\bibitem[Morey et~al.(2016)Morey, Hoekstra, Rouder, Lee, and
+  Wagenmakers]{Morey2016}
+Morey, Richard~D., Rink Hoekstra, Jeffrey~N. Rouder, Michael~D. Lee, and
+  Eric~Jan Wagenmakers. 2016.
+\newblock {The fallacy of placing confidence in confidence intervals}.
+\newblock {\em Psychonomic Bulletin and Review\/} 23(1):103--123.
+
+\bibitem[Nicenboim and Vasishth(2016)]{Nicenboim2016}
+Nicenboim, Bruno and Shravan Vasishth. 2016.
+\newblock {Statistical methods for linguistic research: Foundational Ideas,
+  Part II}.
+\newblock {\em Linguistics and Language Compass\/} 10(11):591--613.
 
 \bibitem[Pavlick and Kwiatkowski(2019)]{pavlick-kwiatkowski2019}
 Pavlick, Ellie and Tom Kwiatkowski. 2019.
