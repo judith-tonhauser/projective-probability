@@ -285,11 +285,11 @@ cols$Colors
 cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, ordered = TRUE)
 levels(cols$V)
 
-means$VeridicalityGroup = as.factor(
+means$VeridicalityGroup = factor(x=
   ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
          ifelse(means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
                 ifelse(means$verb  %in% c("be_right","demonstrate"),"VNF",
-                       ifelse(means$verb  %in% c("MC"),"MC","V")))))
+                       ifelse(means$verb  %in% c("MC"),"MC","V")))),levels=rev(c("F","V","VNF","NF","MC")))
 
 subjmeans = cd %>%
   group_by(verb,workerid) %>%
@@ -299,21 +299,22 @@ levels(subjmeans$verb)
 
 
 # plot of means, 95% CIs and participants' ratings 
-ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
-  geom_point(shape=21,fill="gray60",data=subjmeans, alpha=.1, color="gray40") +
+ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup)) +
+  geom_point(shape=21,fill="gray70",data=subjmeans, alpha=.1, color="gray40") +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="black") +
-  geom_point(shape=21,stroke=.5,size=2.5,color="black") +
+  geom_point(stroke=.5,size=2.5,color="black") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_alpha(range = c(.3,1)) +
-  scale_fill_manual(values=c("darkorchid","black","gray60","tomato1","dodgerblue")) +
-  guides(fill=FALSE) +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","main clause\ncontrols")),name="Predicate type") +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","main clause\ncontrols")),name="Predicate type") +
+  # guides(fill=FALSE, shape=F) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
                                                                  color=cols$Colors)) +
-  theme(legend.position="top") +
+  theme(legend.position="bottom") +
   ylab("Mean certainty rating") +
   xlab("Predicate") +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
-ggsave("../graphs/means-projectivity-by-predicate-variability.pdf",height=4,width=7)
+ggsave("../graphs/means-projectivity-by-predicate-variability.pdf",height=4.5,width=7)
 
 # mean projectivity by predicate, including the main clause controls (3-way distinction for Stuttgart job talk Dec 2019)
 means = cd %>%
