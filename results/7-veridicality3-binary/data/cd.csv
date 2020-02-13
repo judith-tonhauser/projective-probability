@@ -1,4 +1,32 @@
 "","workerid","rt","content","subjectGender","speakerGender","verb","contentNr","trigger_class","response","slide_number_in_experiment","age","language","american","gender","comments","Answer.time_in_minutes","nResponse"
+"1",310,7787,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",5,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"2",310,2641,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",6,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"3",310,1444,"Emma studied on Saturday morning","M","F","admit","3","C","Yes",7,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"4",310,1400,"Emily bought a car yesterday","M","M","confess","8","C","Yes",8,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"5",310,1407,"Josie went on vacation to France","M","F","confirm","2","C","Yes",9,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"6",310,5816,"Isabella ate a steak on Sunday","M","F","think","7","NonProj","Yes",10,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"7",310,5478,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","No",11,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,0
+"8",310,3432,"Mary is pregnant","M","F","pretend","1","NonProj","Yes",12,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"9",310,2113,"Charley speaks Spanish","F","F","be_right","20","C","Yes",13,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"10",310,4577,"the apartment has a balcony",NA,"M","non-ent. C","control_bad2","control","Yes",14,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"11",310,3302,"Tony had a drink last night","F","F","inform","15","C","Yes",15,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"12",310,1808,"Jackson ran 10 miles","F","F","demonstrate","13","C","Yes",16,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"13",310,3586,"Zack owns a car",NA,"M","entailing C","control_good1","control","Yes",17,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"14",310,3285,"Jon walks to work","F","M","prove","19","C","Yes",18,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"15",310,3425,"Frank got a cat","F","M","be_annoyed","12","NonProj","Yes",19,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"16",310,3679,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",20,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,0
+"17",310,3728,"Danny ate the last cupcake","F","M","acknowledge","11","C","Yes",21,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"18",310,6415,"Sophia got a tattoo","M","F","say","5","C","Yes",22,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"19",310,3951,"Julian dances salsa","F","M","reveal","18","NonProj","Yes",23,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"20",310,2248,"Zoe calculated the tip","M","M","hear","10","C","Yes",24,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"21",310,3570,"Josh learned to ride a bike yesterday","F","F","establish","16","NonProj","Yes",25,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"22",310,2368,"Grace visited her sister","M","F","suggest","9","C","Yes",26,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"23",310,2543,"Jayden rented a car","F","M","discover","14","NonProj","Yes",27,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"24",310,3160,"Olivia sleeps until noon","M","M","know","4","NonProj","Yes",28,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"25",310,2569,"Owen shoveled snow last winter","F","F","announce","17","C","Yes",29,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"26",310,1912,"the window broke",NA,"M","entailing C","control_good2","control","Yes",30,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
+"27",310,33624,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",31,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,0
+"28",310,1926,"Mia drank 2 cocktails last night","M","M","see","6","NonProj","Yes",32,65,"English",0,"Male","It was very interesting to do the experiment.",3.8103,1
 "29",25,6671,"Vanessa looked into the mirror",NA,"M","entailing C","control_good4","control","Yes",5,44,"english",0,"Female","I thought it was interesting, challenging and very fair.",4.46931666666667,1
 "30",25,5413,"Dana wears a wig",NA,"M","non-ent. C","control_bad1","control","No",6,44,"english",0,"Female","I thought it was interesting, challenging and very fair.",4.46931666666667,0
 "31",25,7158,"Zoe calculated the tip","M","M","inform","10","C","Yes",7,44,"english",0,"Female","I thought it was interesting, challenging and very fair.",4.46931666666667,1
@@ -643,6 +671,34 @@
 "894",388,4429,"Charley speaks Spanish","F","M","announce","20","C","Yes",30,33,"English",0,"Male","Great price and interesting survey.",3.53051666666667,1
 "895",388,4603,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",31,33,"English",0,"Male","Great price and interesting survey.",3.53051666666667,1
 "896",388,4415,"Emma studied on Saturday morning","M","F","confirm","3","C","Yes",32,33,"English",0,"Male","Great price and interesting survey.",3.53051666666667,1
+"925",404,5869,"Olivia sleeps until noon","M","F","hear","4","C","No",5,55,"English",0,"Male","1.10",5.71771666666667,0
+"926",404,5588,"Josie went on vacation to France","M","F","suggest","2","C","No",6,55,"English",0,"Male","1.10",5.71771666666667,0
+"927",404,4848,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",7,55,"English",0,"Male","1.10",5.71771666666667,0
+"928",404,12508,"Jackson ran 10 miles","F","F","be_annoyed","13","NonProj","Yes",8,55,"English",0,"Male","1.10",5.71771666666667,1
+"929",404,54002,"Emily bought a car yesterday","M","M","see","8","NonProj","Yes",9,55,"English",0,"Male","1.10",5.71771666666667,1
+"930",404,4774,"Charley speaks Spanish","F","F","discover","20","NonProj","Yes",10,55,"English",0,"Male","1.10",5.71771666666667,1
+"931",404,4859,"the apartment has a balcony",NA,"M","non-ent. C","control_bad2","control","No",11,55,"English",0,"Male","1.10",5.71771666666667,0
+"932",404,7154,"Owen shoveled snow last winter","F","M","prove","17","C","Yes",12,55,"English",0,"Male","1.10",5.71771666666667,1
+"933",404,6005,"Jon walks to work","F","F","say","19","C","No",13,55,"English",0,"Male","1.10",5.71771666666667,0
+"934",404,9065,"Emma studied on Saturday morning","M","F","admit","3","C","Yes",14,55,"English",0,"Male","1.10",5.71771666666667,1
+"935",404,5203,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",15,55,"English",0,"Male","1.10",5.71771666666667,1
+"936",404,6201,"Josh learned to ride a bike yesterday","F","M","pretend","16","NonProj","No",16,55,"English",0,"Male","1.10",5.71771666666667,0
+"937",404,4885,"Madison closed the window",NA,"M","non-ent. C","control_bad3","control","Yes",17,55,"English",0,"Male","1.10",5.71771666666667,1
+"938",404,5219,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",18,55,"English",0,"Male","1.10",5.71771666666667,0
+"939",404,4962,"Sophia got a tattoo","M","F","announce","5","C","Yes",19,55,"English",0,"Male","1.10",5.71771666666667,1
+"940",404,5107,"Mary is pregnant","M","M","know","1","NonProj","Yes",20,55,"English",0,"Male","1.10",5.71771666666667,1
+"941",404,6083,"Danny ate the last cupcake","F","F","demonstrate","11","C","Yes",21,55,"English",0,"Male","1.10",5.71771666666667,1
+"942",404,4260,"Tony had a drink last night","F","M","confirm","15","C","Yes",22,55,"English",0,"Male","1.10",5.71771666666667,1
+"943",404,6809,"the window broke",NA,"F","entailing C","control_good2","control","Yes",23,55,"English",0,"Male","1.10",5.71771666666667,1
+"944",404,10903,"Mia drank 2 cocktails last night","M","F","inform","6","C","Yes",24,55,"English",0,"Male","1.10",5.71771666666667,1
+"945",404,6542,"Isabella ate a steak on Sunday","M","M","acknowledge","7","C","Yes",25,55,"English",0,"Male","1.10",5.71771666666667,1
+"946",404,4762,"Frederick solved the problem",NA,"M","entailing C","control_good3","control","Yes",26,55,"English",0,"Male","1.10",5.71771666666667,1
+"947",404,6606,"Grace visited her sister","M","F","establish","9","NonProj","Yes",27,55,"English",0,"Male","1.10",5.71771666666667,1
+"948",404,4674,"Julian dances salsa","F","F","confess","18","C","Yes",28,55,"English",0,"Male","1.10",5.71771666666667,1
+"949",404,4493,"Zoe calculated the tip","M","F","reveal","10","NonProj","Yes",29,55,"English",0,"Male","1.10",5.71771666666667,1
+"950",404,4161,"Frank got a cat","F","F","think","12","NonProj","No",30,55,"English",0,"Male","1.10",5.71771666666667,0
+"951",404,9587,"Zack owns a car",NA,"M","entailing C","control_good1","control","Yes",31,55,"English",0,"Male","1.10",5.71771666666667,1
+"952",404,14129,"Jayden rented a car","F","M","be_right","14","C","Yes",32,55,"English",0,"Male","1.10",5.71771666666667,1
 "953",369,6242,"Mary is pregnant","M","M","confess","1","C","Yes",5,29,"english",0,"Female","$1",6.03181666666667,1
 "954",369,3801,"Zack owns a car",NA,"M","entailing C","control_good1","control","Yes",6,29,"english",0,"Female","$1",6.03181666666667,1
 "955",369,5018,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",7,29,"english",0,"Female","$1",6.03181666666667,1
@@ -699,6 +755,34 @@
 "1006",274,4776,"Jon walks to work","F","M","confess","19","C","No",30,34,"English",0,"Male",NA,3.30166666666667,0
 "1007",274,4984,"Charley speaks Spanish","F","F","be_right","20","C","Yes",31,34,"English",0,"Male",NA,3.30166666666667,1
 "1008",274,7168,"the window broke",NA,"F","entailing C","control_good2","control","Yes",32,34,"English",0,"Male",NA,3.30166666666667,1
+"1009",147,5067,"Frank got a cat","F","F","hear","12","C","No",5,27,"english",0,"Male",NA,3.35386666666667,0
+"1010",147,4241,"Emily bought a car yesterday","M","M","be_right","8","C","Yes",6,27,"english",0,"Male",NA,3.35386666666667,1
+"1011",147,2308,"Tony had a drink last night","F","F","know","15","NonProj","Yes",7,27,"english",0,"Male",NA,3.35386666666667,1
+"1012",147,5230,"Julian dances salsa","F","F","acknowledge","18","C","Yes",8,27,"english",0,"Male",NA,3.35386666666667,1
+"1013",147,7747,"Jon walks to work","F","M","suggest","19","C","No",9,27,"english",0,"Male",NA,3.35386666666667,0
+"1014",147,2013,"Mary is pregnant","M","F","think","1","NonProj","No",10,27,"english",0,"Male",NA,3.35386666666667,0
+"1015",147,2560,"Olivia sleeps until noon","M","F","discover","4","NonProj","Yes",11,27,"english",0,"Male",NA,3.35386666666667,1
+"1016",147,4597,"Josie went on vacation to France","M","F","be_annoyed","2","NonProj","Yes",12,27,"english",0,"Male",NA,3.35386666666667,1
+"1017",147,5579,"Josh learned to ride a bike yesterday","F","F","reveal","16","NonProj","Yes",13,27,"english",0,"Male",NA,3.35386666666667,1
+"1018",147,2838,"Danny ate the last cupcake","F","M","announce","11","C","Yes",14,27,"english",0,"Male",NA,3.35386666666667,1
+"1019",147,1749,"Jayden rented a car","F","M","admit","14","C","Yes",15,27,"english",0,"Male",NA,3.35386666666667,1
+"1020",147,5331,"the window broke",NA,"M","entailing C","control_good2","control","Yes",16,27,"english",0,"Male",NA,3.35386666666667,1
+"1021",147,3789,"Madison closed the window",NA,"M","non-ent. C","control_bad3","control","No",17,27,"english",0,"Male",NA,3.35386666666667,0
+"1022",147,3589,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","Yes",18,27,"english",0,"Male",NA,3.35386666666667,1
+"1023",147,12248,"Owen shoveled snow last winter","F","F","confess","17","C","Yes",19,27,"english",0,"Male",NA,3.35386666666667,1
+"1024",147,2770,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",20,27,"english",0,"Male",NA,3.35386666666667,1
+"1025",147,4166,"Isabella ate a steak on Sunday","M","F","establish","7","NonProj","Yes",21,27,"english",0,"Male",NA,3.35386666666667,1
+"1026",147,6096,"Grace visited her sister","M","F","demonstrate","9","C","Yes",22,27,"english",0,"Male",NA,3.35386666666667,1
+"1027",147,3926,"Sebastian did really well on the exam",NA,"M","non-ent. C","control_bad4","control","No",23,27,"english",0,"Male",NA,3.35386666666667,0
+"1028",147,8280,"Vanessa looked into the mirror",NA,"M","entailing C","control_good4","control","Yes",24,27,"english",0,"Male",NA,3.35386666666667,1
+"1029",147,3086,"Zoe calculated the tip","M","M","confirm","10","C","Yes",25,27,"english",0,"Male",NA,3.35386666666667,1
+"1030",147,6420,"Jackson ran 10 miles","F","F","see","13","NonProj","Yes",26,27,"english",0,"Male",NA,3.35386666666667,1
+"1031",147,3612,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",27,27,"english",0,"Male",NA,3.35386666666667,1
+"1032",147,4512,"Mia drank 2 cocktails last night","M","M","prove","6","C","Yes",28,27,"english",0,"Male",NA,3.35386666666667,1
+"1033",147,12616,"Sophia got a tattoo","M","F","inform","5","C","Yes",29,27,"english",0,"Male",NA,3.35386666666667,1
+"1034",147,3872,"Charley speaks Spanish","F","F","pretend","20","NonProj","No",30,27,"english",0,"Male",NA,3.35386666666667,0
+"1035",147,8865,"Emma studied on Saturday morning","M","M","say","3","C","Yes",31,27,"english",0,"Male",NA,3.35386666666667,1
+"1036",147,8948,"the apartment has a balcony",NA,"F","non-ent. C","control_bad2","control","No",32,27,"english",0,"Male",NA,3.35386666666667,0
 "1037",87,12517,"Josie went on vacation to France","M","M","be_annoyed","2","NonProj","Yes",5,40,"english",0,"Male",NA,5.18535,1
 "1038",87,7988,"the window broke",NA,"F","entailing C","control_good2","control","Yes",6,40,"english",0,"Male",NA,5.18535,1
 "1039",87,6821,"Emily bought a car yesterday","M","F","admit","8","C","Yes",7,40,"english",0,"Male",NA,5.18535,1
@@ -1847,6 +1931,34 @@
 "2210",430,3009,"Julian dances salsa","F","F","be_annoyed","18","NonProj","Yes",30,29,"English",0,"Male","Everything seemed fine.",2.70788333333333,1
 "2211",430,2675,"Frederick solved the problem",NA,"M","entailing C","control_good3","control","Yes",31,29,"English",0,"Male","Everything seemed fine.",2.70788333333333,1
 "2212",430,3415,"Owen shoveled snow last winter","F","M","establish","17","NonProj","Yes",32,29,"English",0,"Male","Everything seemed fine.",2.70788333333333,1
+"2213",254,10431,"Tony had a drink last night","F","M","confess","15","C","Yes",5,25,"english",0,"Male","",8.70148333333333,1
+"2214",254,8055,"Vanessa looked into the mirror",NA,"M","entailing C","control_good4","control","Yes",6,25,"english",0,"Male","",8.70148333333333,1
+"2215",254,11185,"Zoe calculated the tip","M","F","suggest","10","C","No",7,25,"english",0,"Male","",8.70148333333333,0
+"2216",254,44358,"Mia drank 2 cocktails last night","M","F","demonstrate","6","C","Yes",8,25,"english",0,"Male","",8.70148333333333,1
+"2217",254,8610,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",9,25,"english",0,"Male","",8.70148333333333,0
+"2218",254,17026,"Charley speaks Spanish","F","M","reveal","20","NonProj","Yes",10,25,"english",0,"Male","",8.70148333333333,1
+"2219",254,5494,"Frank got a cat","F","F","discover","12","NonProj","Yes",11,25,"english",0,"Male","",8.70148333333333,1
+"2220",254,147694,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",12,25,"english",0,"Male","",8.70148333333333,0
+"2221",254,10202,"Olivia sleeps until noon","M","M","say","4","C","Yes",13,25,"english",0,"Male","",8.70148333333333,1
+"2222",254,9675,"Emma studied on Saturday morning","M","M","acknowledge","3","C","Yes",14,25,"english",0,"Male","",8.70148333333333,1
+"2223",254,7350,"Sophia got a tattoo","M","F","inform","5","C","Yes",15,25,"english",0,"Male","",8.70148333333333,1
+"2224",254,4135,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",16,25,"english",0,"Male","",8.70148333333333,1
+"2225",254,5612,"Jackson ran 10 miles","F","F","be_right","13","C","Yes",17,25,"english",0,"Male","",8.70148333333333,1
+"2226",254,8074,"Josie went on vacation to France","M","F","establish","2","NonProj","Yes",18,25,"english",0,"Male","",8.70148333333333,1
+"2227",254,6449,"Julian dances salsa","F","F","confirm","18","C","Yes",19,25,"english",0,"Male","",8.70148333333333,1
+"2228",254,6150,"Mary is pregnant","M","F","be_annoyed","1","NonProj","Yes",20,25,"english",0,"Male","",8.70148333333333,1
+"2229",254,7601,"Owen shoveled snow last winter","F","M","see","17","NonProj","Yes",21,25,"english",0,"Male","",8.70148333333333,1
+"2230",254,5608,"Madison closed the window",NA,"M","non-ent. C","control_bad3","control","Yes",22,25,"english",0,"Male","",8.70148333333333,1
+"2231",254,5346,"Zack owns a car",NA,"M","entailing C","control_good1","control","Yes",23,25,"english",0,"Male","",8.70148333333333,1
+"2232",254,8728,"Josh learned to ride a bike yesterday","F","M","pretend","16","NonProj","No",24,25,"english",0,"Male","",8.70148333333333,0
+"2233",254,6627,"Emily bought a car yesterday","M","M","admit","8","C","Yes",25,25,"english",0,"Male","",8.70148333333333,1
+"2234",254,6726,"Jayden rented a car","F","M","know","14","NonProj","Yes",26,25,"english",0,"Male","",8.70148333333333,1
+"2235",254,6220,"Danny ate the last cupcake","F","F","announce","11","C","Yes",27,25,"english",0,"Male","",8.70148333333333,1
+"2236",254,18142,"the apartment has a balcony",NA,"M","non-ent. C","control_bad2","control","No",28,25,"english",0,"Male","",8.70148333333333,0
+"2237",254,6198,"Grace visited her sister","M","M","think","9","NonProj","No",29,25,"english",0,"Male","",8.70148333333333,0
+"2238",254,7306,"the window broke",NA,"F","entailing C","control_good2","control","Yes",30,25,"english",0,"Male","",8.70148333333333,1
+"2239",254,7514,"Isabella ate a steak on Sunday","M","M","hear","7","C","Yes",31,25,"english",0,"Male","",8.70148333333333,1
+"2240",254,12374,"Jon walks to work","F","F","prove","19","C","Yes",32,25,"english",0,"Male","",8.70148333333333,1
 "2297",18,11492,"Jackson ran 10 miles","F","F","confirm","13","C","Yes",5,55,"English",0,"Female","Thanks!  The amount suggested, $1 is fair.",5.31918333333333,1
 "2298",18,11584,"Dana wears a wig",NA,"M","non-ent. C","control_bad1","control","No",6,55,"English",0,"Female","Thanks!  The amount suggested, $1 is fair.",5.31918333333333,0
 "2299",18,10016,"Josie went on vacation to France","M","M","see","2","NonProj","Yes",7,55,"English",0,"Female","Thanks!  The amount suggested, $1 is fair.",5.31918333333333,1
@@ -2435,6 +2547,34 @@
 "2966",213,3694,"Tony had a drink last night","F","M","prove","15","C","Yes",30,48,"English",0,"Male","It was fine. I think $1.50 would be a fair price.",3.43535,1
 "2967",213,4118,"Josh learned to ride a bike yesterday","F","M","know","16","NonProj","Yes",31,48,"English",0,"Male","It was fine. I think $1.50 would be a fair price.",3.43535,1
 "2968",213,3812,"Vanessa looked into the mirror",NA,"M","entailing C","control_good4","control","Yes",32,48,"English",0,"Male","It was fine. I think $1.50 would be a fair price.",3.43535,1
+"2969",335,7565,"Jayden rented a car","F","F","discover","14","NonProj","Yes",5,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2970",335,4766,"Zoe calculated the tip","M","F","admit","10","C","Yes",6,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2971",335,3734,"Sophia got a tattoo","M","M","know","5","NonProj","Yes",7,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2972",335,10136,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",8,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2973",335,3729,"Charley speaks Spanish","F","M","see","20","NonProj","Yes",9,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2974",335,5655,"Emma studied on Saturday morning","M","F","reveal","3","NonProj","Yes",10,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2975",335,6366,"Jon walks to work","F","F","say","19","C","No",11,31,"english",0,"Female","1.00 per hit",4.25951666666667,0
+"2976",335,4940,"the window broke",NA,"F","entailing C","control_good2","control","Yes",12,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2977",335,6369,"Josh learned to ride a bike yesterday","F","F","confirm","16","C","Yes",13,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2978",335,9715,"Jackson ran 10 miles","F","F","inform","13","C","Yes",14,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2979",335,5043,"Emily bought a car yesterday","M","M","suggest","8","C","No",15,31,"english",0,"Female","1.00 per hit",4.25951666666667,0
+"2980",335,11481,"Owen shoveled snow last winter","F","F","be_right","17","C","Yes",16,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2981",335,12040,"Julian dances salsa","F","M","announce","18","C","Yes",17,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2982",335,4168,"Tony had a drink last night","F","F","be_annoyed","15","NonProj","Yes",18,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2983",335,3100,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",19,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2984",335,4962,"Olivia sleeps until noon","M","M","demonstrate","4","C","Yes",20,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2985",335,3317,"Danny ate the last cupcake","F","F","prove","11","C","Yes",21,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2986",335,5780,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",22,31,"english",0,"Female","1.00 per hit",4.25951666666667,0
+"2987",335,4880,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",23,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2988",335,5494,"Isabella ate a steak on Sunday","M","F","acknowledge","7","C","Yes",24,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2989",335,22804,"Grace visited her sister","M","F","confess","9","C","Yes",25,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2990",335,3740,"the apartment has a balcony",NA,"M","non-ent. C","control_bad2","control","No",26,31,"english",0,"Female","1.00 per hit",4.25951666666667,0
+"2991",335,3887,"Madison closed the window",NA,"M","non-ent. C","control_bad3","control","Yes",27,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2992",335,13523,"Josie went on vacation to France","M","F","establish","2","NonProj","Yes",28,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2993",335,3759,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",29,31,"english",0,"Female","1.00 per hit",4.25951666666667,0
+"2994",335,5877,"Mia drank 2 cocktails last night","M","F","pretend","6","NonProj","Yes",30,31,"english",0,"Female","1.00 per hit",4.25951666666667,1
+"2995",335,5603,"Mary is pregnant","M","M","hear","1","C","No",31,31,"english",0,"Female","1.00 per hit",4.25951666666667,0
+"2996",335,3452,"Frank got a cat","F","F","think","12","NonProj","No",32,31,"english",0,"Female","1.00 per hit",4.25951666666667,0
 "2997",210,6021,"Emily bought a car yesterday","M","F","announce","8","C","Yes",5,41,"english",0,"Female","",4.24166666666667,1
 "2998",210,4376,"the window broke",NA,"F","entailing C","control_good2","control","Yes",6,41,"english",0,"Female","",4.24166666666667,1
 "2999",210,14856,"Vanessa looked into the mirror",NA,"M","entailing C","control_good4","control","Yes",7,41,"english",0,"Female","",4.24166666666667,1
@@ -2995,6 +3135,34 @@
 "3666",235,4655,"Grace visited her sister","M","F","establish","9","NonProj","Yes",30,23,"English",0,"Male","",2.44403333333333,1
 "3667",235,2885,"the window broke",NA,"M","entailing C","control_good2","control","Yes",31,23,"English",0,"Male","",2.44403333333333,1
 "3668",235,3407,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",32,23,"English",0,"Male","",2.44403333333333,1
+"3669",50,3974,"Zoe calculated the tip","M","M","see","10","NonProj","Yes",5,31,"English",0,"Male","",2.4109,1
+"3670",50,2970,"Jayden rented a car","F","F","confirm","14","C","Yes",6,31,"English",0,"Male","",2.4109,1
+"3671",50,2891,"Sophia got a tattoo","M","M","hear","5","C","No",7,31,"English",0,"Male","",2.4109,0
+"3672",50,5832,"Tony had a drink last night","F","F","admit","15","C","Yes",8,31,"English",0,"Male","",2.4109,1
+"3673",50,3159,"Owen shoveled snow last winter","F","M","know","17","NonProj","Yes",9,31,"English",0,"Male","",2.4109,1
+"3674",50,1955,"Grace visited her sister","M","F","suggest","9","C","No",10,31,"English",0,"Male","",2.4109,0
+"3675",50,3320,"Olivia sleeps until noon","M","F","think","4","NonProj","No",11,31,"English",0,"Male","",2.4109,0
+"3676",50,2838,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","Yes",12,31,"English",0,"Male","",2.4109,1
+"3677",50,3609,"Jon walks to work","F","F","reveal","19","NonProj","Yes",13,31,"English",0,"Male","",2.4109,1
+"3678",50,5129,"Danny ate the last cupcake","F","F","demonstrate","11","C","Yes",14,31,"English",0,"Male","",2.4109,1
+"3679",50,2572,"Frank got a cat","F","F","inform","12","C","Yes",15,31,"English",0,"Male","",2.4109,1
+"3680",50,4272,"the apartment has a balcony",NA,"M","non-ent. C","control_bad2","control","No",16,31,"English",0,"Male","",2.4109,0
+"3681",50,2712,"Emma studied on Saturday morning","M","F","acknowledge","3","C","Yes",17,31,"English",0,"Male","",2.4109,1
+"3682",50,3298,"Josh learned to ride a bike yesterday","F","M","announce","16","C","Yes",18,31,"English",0,"Male","",2.4109,1
+"3683",50,3258,"Jackson ran 10 miles","F","M","prove","13","C","Yes",19,31,"English",0,"Male","",2.4109,1
+"3684",50,2347,"Mary is pregnant","M","F","establish","1","NonProj","Yes",20,31,"English",0,"Male","",2.4109,1
+"3685",50,3206,"Josie went on vacation to France","M","F","discover","2","NonProj","Yes",21,31,"English",0,"Male","",2.4109,1
+"3686",50,3311,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",22,31,"English",0,"Male","",2.4109,0
+"3687",50,3538,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",23,31,"English",0,"Male","",2.4109,0
+"3688",50,3866,"Mia drank 2 cocktails last night","M","M","pretend","6","NonProj","No",24,31,"English",0,"Male","",2.4109,0
+"3689",50,3782,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",25,31,"English",0,"Male","",2.4109,1
+"3690",50,4871,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",26,31,"English",0,"Male","",2.4109,1
+"3691",50,4654,"Charley speaks Spanish","F","M","confess","20","C","Yes",27,31,"English",0,"Male","",2.4109,1
+"3692",50,3374,"Julian dances salsa","F","M","be_annoyed","18","NonProj","Yes",28,31,"English",0,"Male","",2.4109,1
+"3693",50,4064,"the window broke",NA,"M","entailing C","control_good2","control","Yes",29,31,"English",0,"Male","",2.4109,1
+"3694",50,4731,"Isabella ate a steak on Sunday","M","F","be_right","7","C","Yes",30,31,"English",0,"Male","",2.4109,1
+"3695",50,3836,"Emily bought a car yesterday","M","F","say","8","C","No",31,31,"English",0,"Male","",2.4109,0
+"3696",50,2394,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",32,31,"English",0,"Male","",2.4109,1
 "3697",173,4175,"Jayden rented a car","F","F","reveal","14","NonProj","Yes",5,24,"English",0,"Male","1.00",2.56731666666667,1
 "3698",173,2253,"Danny ate the last cupcake","F","F","be_right","11","C","Yes",6,24,"English",0,"Male","1.00",2.56731666666667,1
 "3699",173,1856,"Frank got a cat","F","M","know","12","NonProj","Yes",7,24,"English",0,"Male","1.00",2.56731666666667,1
@@ -3387,6 +3555,34 @@
 "4170",24,2865,"Vanessa looked into the mirror",NA,"M","entailing C","control_good4","control","Yes",30,33,"English",0,"Female","none",2.66225,1
 "4171",24,3320,"Sebastian did really well on the exam",NA,"M","non-ent. C","control_bad4","control","No",31,33,"English",0,"Female","none",2.66225,0
 "4172",24,3871,"Frederick solved the problem",NA,"M","entailing C","control_good3","control","Yes",32,33,"English",0,"Female","none",2.66225,1
+"4173",333,5439,"Jayden rented a car","F","M","discover","14","NonProj","Yes",5,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4174",333,5615,"Jackson ran 10 miles","F","F","say","13","C","Yes",6,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4175",333,4704,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",7,42,"English",0,"Female","Fair, thank you",4.12773333333333,0
+"4176",333,5344,"Emma studied on Saturday morning","M","M","know","3","NonProj","Yes",8,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4177",333,5000,"Sophia got a tattoo","M","M","reveal","5","NonProj","Yes",9,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4178",333,4342,"Zoe calculated the tip","M","M","think","10","NonProj","No",10,42,"English",0,"Female","Fair, thank you",4.12773333333333,0
+"4179",333,4624,"Jon walks to work","F","F","establish","19","NonProj","Yes",11,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4180",333,6208,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",12,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4181",333,6272,"Mia drank 2 cocktails last night","M","M","be_right","6","C","Yes",13,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4182",333,4089,"Grace visited her sister","M","M","acknowledge","9","C","Yes",14,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4183",333,4263,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",15,42,"English",0,"Female","Fair, thank you",4.12773333333333,0
+"4184",333,4921,"the apartment has a balcony",NA,"M","non-ent. C","control_bad2","control","No",16,42,"English",0,"Female","Fair, thank you",4.12773333333333,0
+"4185",333,7727,"Isabella ate a steak on Sunday","M","F","prove","7","C","Yes",17,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4186",333,3503,"Mary is pregnant","M","F","admit","1","C","Yes",18,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4187",333,4984,"Charley speaks Spanish","F","M","pretend","20","NonProj","No",19,42,"English",0,"Female","Fair, thank you",4.12773333333333,0
+"4188",333,6497,"Olivia sleeps until noon","M","F","confess","4","C","Yes",20,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4189",333,5407,"Emily bought a car yesterday","M","F","suggest","8","C","No",21,42,"English",0,"Female","Fair, thank you",4.12773333333333,0
+"4190",333,5715,"Josh learned to ride a bike yesterday","F","M","see","16","NonProj","Yes",22,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4191",333,4345,"Danny ate the last cupcake","F","F","confirm","11","C","Yes",23,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4192",333,6071,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","Yes",24,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4193",333,3832,"Vanessa looked into the mirror",NA,"M","entailing C","control_good4","control","Yes",25,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4194",333,5424,"Josie went on vacation to France","M","F","hear","2","C","No",26,42,"English",0,"Female","Fair, thank you",4.12773333333333,0
+"4195",333,10040,"Julian dances salsa","F","F","inform","18","C","No",27,42,"English",0,"Female","Fair, thank you",4.12773333333333,0
+"4196",333,4336,"Frank got a cat","F","F","demonstrate","12","C","Yes",28,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4197",333,7409,"the window broke",NA,"F","entailing C","control_good2","control","Yes",29,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4198",333,5288,"Tony had a drink last night","F","F","announce","15","C","Yes",30,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4199",333,4823,"Zack owns a car",NA,"M","entailing C","control_good1","control","Yes",31,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
+"4200",333,5777,"Owen shoveled snow last winter","F","M","be_annoyed","17","NonProj","Yes",32,42,"English",0,"Female","Fair, thank you",4.12773333333333,1
 "4201",267,5247,"Tony had a drink last night","F","M","prove","15","C","Yes",5,37,"English",0,"Female","Very fair. :)",6.46451666666667,1
 "4202",267,7336,"Owen shoveled snow last winter","F","F","confess","17","C","Yes",6,37,"English",0,"Female","Very fair. :)",6.46451666666667,1
 "4203",267,7168,"Isabella ate a steak on Sunday","M","F","think","7","NonProj","No",7,37,"English",0,"Female","Very fair. :)",6.46451666666667,0
@@ -4059,6 +4255,62 @@
 "4982",114,2768,"Jayden rented a car","F","M","acknowledge","14","C","Yes",30,51,"English",0,"Male","No comments.  $1.00",2.92088333333333,1
 "4983",114,4384,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",31,51,"English",0,"Male","No comments.  $1.00",2.92088333333333,1
 "4984",114,5216,"Grace visited her sister","M","F","pretend","9","NonProj","No",32,51,"English",0,"Male","No comments.  $1.00",2.92088333333333,0
+"4985",66,6159,"Isabella ate a steak on Sunday","M","M","establish","7","NonProj","Yes",5,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"4986",66,7895,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","No",6,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,0
+"4987",66,8960,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",7,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"4988",66,4888,"Julian dances salsa","F","M","acknowledge","18","C","Yes",8,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"4989",66,3776,"Mary is pregnant","M","F","suggest","1","C","No",9,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,0
+"4990",66,4032,"Zoe calculated the tip","M","F","confess","10","C","Yes",10,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"4991",66,14752,"Josie went on vacation to France","M","M","announce","2","C","Yes",11,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"4992",66,3680,"Charley speaks Spanish","F","M","hear","20","C","No",12,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,0
+"4993",66,4776,"Emma studied on Saturday morning","M","F","reveal","3","NonProj","Yes",13,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"4994",66,3544,"Grace visited her sister","M","F","be_right","9","C","Yes",14,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"4995",66,5320,"Frederick solved the problem",NA,"M","entailing C","control_good3","control","Yes",15,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"4996",66,11440,"Jackson ran 10 miles","F","F","say","13","C","No",16,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,0
+"4997",66,3632,"the apartment has a balcony",NA,"F","non-ent. C","control_bad2","control","Yes",17,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"4998",66,3400,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",18,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,0
+"4999",66,7680,"Tony had a drink last night","F","M","inform","15","C","Yes",19,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"5000",66,4120,"Olivia sleeps until noon","M","F","see","4","NonProj","Yes",20,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"5001",66,6215,"the window broke",NA,"M","entailing C","control_good2","control","Yes",21,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"5002",66,5016,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",22,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"5003",66,4224,"Jon walks to work","F","M","be_annoyed","19","NonProj","Yes",23,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"5004",66,3168,"Jayden rented a car","F","F","prove","14","C","Yes",24,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"5005",66,5065,"Josh learned to ride a bike yesterday","F","F","admit","16","C","Yes",25,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"5006",66,4895,"Mia drank 2 cocktails last night","M","F","know","6","NonProj","Yes",26,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"5007",66,3904,"Sophia got a tattoo","M","M","pretend","5","NonProj","No",27,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,0
+"5008",66,3248,"Danny ate the last cupcake","F","M","confirm","11","C","Yes",28,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"5009",66,9344,"Owen shoveled snow last winter","F","F","discover","17","NonProj","Yes",29,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"5010",66,5240,"Sebastian did really well on the exam",NA,"M","non-ent. C","control_bad4","control","No",30,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,0
+"5011",66,5024,"Frank got a cat","F","F","demonstrate","12","C","Yes",31,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,1
+"5012",66,3776,"Emily bought a car yesterday","M","M","think","8","NonProj","No",32,42,"English",0,"Male","Thank you.  Good luck with your research.",4.11251666666667,0
+"5041",291,10261,"Emily bought a car yesterday","M","F","hear","8","C","Yes",5,24,"English",0,"Male","",3.2048,1
+"5042",291,3417,"Jackson ran 10 miles","F","M","confirm","13","C","Yes",6,24,"English",0,"Male","",3.2048,1
+"5043",291,12035,"Owen shoveled snow last winter","F","F","announce","17","C","Yes",7,24,"English",0,"Male","",3.2048,1
+"5044",291,5246,"Zoe calculated the tip","M","F","be_annoyed","10","NonProj","Yes",8,24,"English",0,"Male","",3.2048,1
+"5045",291,3763,"Mia drank 2 cocktails last night","M","F","be_right","6","C","Yes",9,24,"English",0,"Male","",3.2048,1
+"5046",291,3338,"Danny ate the last cupcake","F","M","admit","11","C","Yes",10,24,"English",0,"Male","",3.2048,1
+"5047",291,2003,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",11,24,"English",0,"Male","",3.2048,1
+"5048",291,2303,"Frank got a cat","F","F","demonstrate","12","C","Yes",12,24,"English",0,"Male","",3.2048,1
+"5049",291,1761,"Mary is pregnant","M","F","reveal","1","NonProj","Yes",13,24,"English",0,"Male","",3.2048,1
+"5050",291,3244,"Jayden rented a car","F","F","acknowledge","14","C","Yes",14,24,"English",0,"Male","",3.2048,1
+"5051",291,5708,"Isabella ate a steak on Sunday","M","M","see","7","NonProj","Yes",15,24,"English",0,"Male","",3.2048,1
+"5052",291,5931,"the window broke",NA,"M","entailing C","control_good2","control","Yes",16,24,"English",0,"Male","",3.2048,1
+"5053",291,3433,"Tony had a drink last night","F","M","know","15","NonProj","Yes",17,24,"English",0,"Male","",3.2048,1
+"5054",291,3219,"Jon walks to work","F","M","confess","19","C","Yes",18,24,"English",0,"Male","",3.2048,1
+"5055",291,3972,"the apartment has a balcony",NA,"M","non-ent. C","control_bad2","control","No",19,24,"English",0,"Male","",3.2048,0
+"5056",291,6833,"Grace visited her sister","M","M","say","9","C","Yes",20,24,"English",0,"Male","",3.2048,1
+"5057",291,2964,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",21,24,"English",0,"Male","",3.2048,0
+"5058",291,5174,"Josie went on vacation to France","M","M","establish","2","NonProj","Yes",22,24,"English",0,"Male","",3.2048,1
+"5059",291,9028,"Charley speaks Spanish","F","M","pretend","20","NonProj","No",23,24,"English",0,"Male","",3.2048,0
+"5060",291,3523,"Emma studied on Saturday morning","M","M","prove","3","C","Yes",24,24,"English",0,"Male","",3.2048,1
+"5061",291,16952,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",25,24,"English",0,"Male","",3.2048,1
+"5062",291,1904,"Sophia got a tattoo","M","F","discover","5","NonProj","Yes",26,24,"English",0,"Male","",3.2048,1
+"5063",291,2702,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","Yes",27,24,"English",0,"Male","",3.2048,1
+"5064",291,5184,"Olivia sleeps until noon","M","F","inform","4","C","Yes",28,24,"English",0,"Male","",3.2048,1
+"5065",291,3124,"Julian dances salsa","F","M","suggest","18","C","Yes",29,24,"English",0,"Male","",3.2048,1
+"5066",291,3811,"Josh learned to ride a bike yesterday","F","M","think","16","NonProj","Yes",30,24,"English",0,"Male","",3.2048,1
+"5067",291,2991,"Dana wears a wig",NA,"M","non-ent. C","control_bad1","control","No",31,24,"English",0,"Male","",3.2048,0
+"5068",291,13965,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",32,24,"English",0,"Male","",3.2048,1
 "5069",425,8273,"Charley speaks Spanish","F","F","inform","20","C","Yes",5,46,"English",0,"Male","I felt like I wanted to have a ""Maybe"" choice on some answers because the verb could be either yes or no based on more data (e.g. hearing something needs more observations to be confirmed true) but other than that it was fun. Thanks!",6.65485,1
 "5070",425,7503,"Josh learned to ride a bike yesterday","F","M","demonstrate","16","C","Yes",6,46,"English",0,"Male","I felt like I wanted to have a ""Maybe"" choice on some answers because the verb could be either yes or no based on more data (e.g. hearing something needs more observations to be confirmed true) but other than that it was fun. Thanks!",6.65485,1
 "5071",425,4855,"Vanessa looked into the mirror",NA,"M","entailing C","control_good4","control","Yes",7,46,"English",0,"Male","I felt like I wanted to have a ""Maybe"" choice on some answers because the verb could be either yes or no based on more data (e.g. hearing something needs more observations to be confirmed true) but other than that it was fun. Thanks!",6.65485,1
@@ -5627,6 +5879,34 @@
 "6970",184,3017,"Tony had a drink last night","F","M","suggest","15","C","No",30,37,"English",0,"Female","$1",3.61381666666667,0
 "6971",184,4843,"Josie went on vacation to France","M","M","see","2","NonProj","Yes",31,37,"English",0,"Female","$1",3.61381666666667,1
 "6972",184,5582,"Emily bought a car yesterday","M","F","be_right","8","C","Yes",32,37,"English",0,"Female","$1",3.61381666666667,1
+"6973",169,4611,"Tony had a drink last night","F","F","say","15","C","No",5,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,0
+"6974",169,3937,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",6,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6975",169,4952,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","Yes",7,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6976",169,4347,"Danny ate the last cupcake","F","M","admit","11","C","Yes",8,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6977",169,4427,"Owen shoveled snow last winter","F","F","know","17","NonProj","Yes",9,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6978",169,6870,"Josie went on vacation to France","M","F","think","2","NonProj","No",10,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,0
+"6979",169,5621,"Jackson ran 10 miles","F","F","discover","13","NonProj","Yes",11,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6980",169,3652,"Mary is pregnant","M","F","see","1","NonProj","Yes",12,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6981",169,12326,"Julian dances salsa","F","M","hear","18","C","No",13,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,0
+"6982",169,2421,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",14,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6983",169,39383,"Olivia sleeps until noon","M","M","reveal","4","NonProj","Yes",15,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6984",169,10819,"Isabella ate a steak on Sunday","M","M","be_right","7","C","Yes",16,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6985",169,2989,"Mia drank 2 cocktails last night","M","F","confess","6","C","Yes",17,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6986",169,3149,"Jayden rented a car","F","M","demonstrate","14","C","Yes",18,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6987",169,3626,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",19,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,0
+"6988",169,5655,"Emily bought a car yesterday","M","F","acknowledge","8","C","Yes",20,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6989",169,3383,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",21,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,0
+"6990",169,2484,"the apartment has a balcony",NA,"M","non-ent. C","control_bad2","control","No",22,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,0
+"6991",169,4387,"Jon walks to work","F","M","pretend","19","NonProj","Yes",23,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6992",169,6138,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",24,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6993",169,4292,"Frank got a cat","F","F","suggest","12","C","Yes",25,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6994",169,4087,"Charley speaks Spanish","F","F","be_annoyed","20","NonProj","Yes",26,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6995",169,5444,"Grace visited her sister","M","F","prove","9","C","Yes",27,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6996",169,3456,"Sophia got a tattoo","M","F","establish","5","NonProj","Yes",28,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6997",169,4096,"the window broke",NA,"F","entailing C","control_good2","control","Yes",29,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6998",169,3729,"Zoe calculated the tip","M","F","confirm","10","C","Yes",30,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"6999",169,5280,"Emma studied on Saturday morning","M","F","inform","3","C","Yes",31,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
+"7000",169,5931,"Josh learned to ride a bike yesterday","F","F","announce","16","C","Yes",32,32,"English",0,"Male","You should put if the HIT has a limit in the information.",4.50765,1
 "7001",131,4464,"Emily bought a car yesterday","M","M","establish","8","NonProj","Yes",5,35,"eng",0,"Male","",2.99705,1
 "7002",131,2899,"Jayden rented a car","F","M","acknowledge","14","C","Yes",6,35,"eng",0,"Male","",2.99705,1
 "7003",131,5422,"Tony had a drink last night","F","F","pretend","15","NonProj","No",7,35,"eng",0,"Male","",2.99705,0
@@ -5655,6 +5935,34 @@
 "7026",131,4113,"the window broke",NA,"F","entailing C","control_good2","control","Yes",30,35,"eng",0,"Male","",2.99705,1
 "7027",131,4523,"Josie went on vacation to France","M","F","be_right","2","C","Yes",31,35,"eng",0,"Male","",2.99705,1
 "7028",131,3399,"Owen shoveled snow last winter","F","F","confess","17","C","Yes",32,35,"eng",0,"Male","",2.99705,1
+"7029",288,6085,"Frank got a cat","F","F","demonstrate","12","C","Yes",5,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7030",288,7075,"Tony had a drink last night","F","M","inform","15","C","Yes",6,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7031",288,4300,"Olivia sleeps until noon","M","F","hear","4","C","No",7,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,0
+"7032",288,7500,"Danny ate the last cupcake","F","F","say","11","C","Yes",8,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7033",288,4612,"Jon walks to work","F","M","admit","19","C","Yes",9,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7034",288,7197,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",10,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,0
+"7035",288,4988,"Zack owns a car",NA,"M","entailing C","control_good1","control","Yes",11,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7036",288,5168,"the window broke",NA,"M","entailing C","control_good2","control","Yes",12,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7037",288,5056,"Emma studied on Saturday morning","M","F","know","3","NonProj","Yes",13,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7038",288,3700,"Mary is pregnant","M","M","prove","1","C","Yes",14,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7039",288,3100,"Julian dances salsa","F","F","reveal","18","NonProj","Yes",15,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7040",288,3508,"Jayden rented a car","F","M","be_right","14","C","Yes",16,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7041",288,9857,"Josh learned to ride a bike yesterday","F","M","suggest","16","C","No",17,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,0
+"7042",288,5887,"the apartment has a balcony",NA,"M","non-ent. C","control_bad2","control","No",18,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,0
+"7043",288,4108,"Charley speaks Spanish","F","M","be_annoyed","20","NonProj","Yes",19,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7044",288,3452,"Sophia got a tattoo","M","F","discover","5","NonProj","Yes",20,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7045",288,4175,"Emily bought a car yesterday","M","M","think","8","NonProj","No",21,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,0
+"7046",288,4556,"Grace visited her sister","M","M","see","9","NonProj","Yes",22,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7047",288,3983,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","Yes",23,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7048",288,12319,"Jackson ran 10 miles","F","F","announce","13","C","Yes",24,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7049",288,4352,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","No",25,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,0
+"7050",288,3963,"Owen shoveled snow last winter","F","F","establish","17","NonProj","Yes",26,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7051",288,3732,"Mia drank 2 cocktails last night","M","F","pretend","6","NonProj","No",27,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,0
+"7052",288,4343,"Isabella ate a steak on Sunday","M","M","acknowledge","7","C","Yes",28,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7053",288,4871,"Josie went on vacation to France","M","F","confess","2","C","Yes",29,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7054",288,4363,"Frederick solved the problem",NA,"M","entailing C","control_good3","control","Yes",30,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7055",288,3972,"Zoe calculated the tip","M","M","confirm","10","C","Yes",31,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
+"7056",288,3776,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",32,50,"English",0,"Female","I really liked this HIT and would like to do more of them. Thank you",3.47973333333333,1
 "7057",367,6663,"Emily bought a car yesterday","M","M","pretend","8","NonProj","No",5,47,"English",0,"Male","",3.6767,0
 "7058",367,5878,"Jon walks to work","F","F","inform","19","C","Yes",6,47,"English",0,"Male","",3.6767,1
 "7059",367,4845,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","No",7,47,"English",0,"Male","",3.6767,0
@@ -6075,6 +6383,34 @@
 "7502",313,3920,"Josie went on vacation to France","M","M","say","2","C","Yes",30,34,"English",0,"Female","",3.215,1
 "7503",313,2999,"Olivia sleeps until noon","M","F","know","4","NonProj","Yes",31,34,"English",0,"Female","",3.215,1
 "7504",313,4761,"Isabella ate a steak on Sunday","M","F","acknowledge","7","C","Yes",32,34,"English",0,"Female","",3.215,1
+"7505",177,10877,"Josh learned to ride a bike yesterday","F","F","be_right","16","C","Yes",5,29,"English",0,"Male","",2.786,1
+"7506",177,7309,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","No",6,29,"English",0,"Male","",2.786,0
+"7507",177,2593,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",7,29,"English",0,"Male","",2.786,1
+"7508",177,4153,"Owen shoveled snow last winter","F","F","say","17","C","No",8,29,"English",0,"Male","",2.786,0
+"7509",177,4341,"Emma studied on Saturday morning","M","F","announce","3","C","No",9,29,"English",0,"Male","",2.786,0
+"7510",177,2592,"the apartment has a balcony",NA,"M","non-ent. C","control_bad2","control","Yes",10,29,"English",0,"Male","",2.786,1
+"7511",177,3087,"Danny ate the last cupcake","F","F","be_annoyed","11","NonProj","Yes",11,29,"English",0,"Male","",2.786,1
+"7512",177,5217,"Frank got a cat","F","F","demonstrate","12","C","Yes",12,29,"English",0,"Male","",2.786,1
+"7513",177,4310,"Mia drank 2 cocktails last night","M","F","hear","6","C","No",13,29,"English",0,"Male","",2.786,0
+"7514",177,3287,"Jon walks to work","F","F","establish","19","NonProj","Yes",14,29,"English",0,"Male","",2.786,1
+"7515",177,2336,"Julian dances salsa","F","F","admit","18","C","Yes",15,29,"English",0,"Male","",2.786,1
+"7516",177,2904,"Isabella ate a steak on Sunday","M","F","think","7","NonProj","No",16,29,"English",0,"Male","",2.786,0
+"7517",177,3191,"Mary is pregnant","M","M","confess","1","C","Yes",17,29,"English",0,"Male","",2.786,1
+"7518",177,3424,"Olivia sleeps until noon","M","M","acknowledge","4","C","Yes",18,29,"English",0,"Male","",2.786,1
+"7519",177,2677,"Sophia got a tattoo","M","M","prove","5","C","Yes",19,29,"English",0,"Male","",2.786,1
+"7520",177,3952,"Tony had a drink last night","F","F","pretend","15","NonProj","No",20,29,"English",0,"Male","",2.786,0
+"7521",177,4111,"Emily bought a car yesterday","M","M","see","8","NonProj","Yes",21,29,"English",0,"Male","",2.786,1
+"7522",177,5391,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",22,29,"English",0,"Male","",2.786,0
+"7523",177,7071,"Jayden rented a car","F","M","reveal","14","NonProj","Yes",23,29,"English",0,"Male","",2.786,1
+"7524",177,7000,"Josie went on vacation to France","M","F","inform","2","C","Yes",24,29,"English",0,"Male","",2.786,1
+"7525",177,3440,"Jackson ran 10 miles","F","F","know","13","NonProj","Yes",25,29,"English",0,"Male","",2.786,1
+"7526",177,4126,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",26,29,"English",0,"Male","",2.786,1
+"7527",177,3311,"Grace visited her sister","M","M","confirm","9","C","Yes",27,29,"English",0,"Male","",2.786,1
+"7528",177,4759,"the window broke",NA,"M","entailing C","control_good2","control","Yes",28,29,"English",0,"Male","",2.786,1
+"7529",177,4600,"Zoe calculated the tip","M","M","suggest","10","C","No",29,29,"English",0,"Male","",2.786,0
+"7530",177,4887,"Charley speaks Spanish","F","M","discover","20","NonProj","Yes",30,29,"English",0,"Male","",2.786,1
+"7531",177,3286,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",31,29,"English",0,"Male","",2.786,0
+"7532",177,3018,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",32,29,"English",0,"Male","",2.786,1
 "7533",40,15847,"Mia drank 2 cocktails last night","M","M","say","6","C","Yes",5,35,"English",0,"Male","I felt that the price was fair. Thanks",7.13628333333333,1
 "7534",40,5759,"Frank got a cat","F","M","admit","12","C","Yes",6,35,"English",0,"Male","I felt that the price was fair. Thanks",7.13628333333333,1
 "7535",40,9326,"Julian dances salsa","F","F","acknowledge","18","C","Yes",7,35,"English",0,"Male","I felt that the price was fair. Thanks",7.13628333333333,1
@@ -6383,6 +6719,34 @@
 "7922",266,4507,"Vanessa looked into the mirror",NA,"M","entailing C","control_good4","control","Yes",30,28,"English",0,"Male","I really like these experiments. $1.00 is fair.",3.82353333333333,1
 "7923",266,3785,"Julian dances salsa","F","M","establish","18","NonProj","Yes",31,28,"English",0,"Male","I really like these experiments. $1.00 is fair.",3.82353333333333,1
 "7924",266,5081,"Grace visited her sister","M","F","pretend","9","NonProj","No",32,28,"English",0,"Male","I really like these experiments. $1.00 is fair.",3.82353333333333,0
+"7925",27,11638,"Jackson ran 10 miles","F","F","see","13","NonProj","No",5,37,"English",0,"Male","NICE STUDY",7.58505,0
+"7926",27,6123,"Vanessa looked into the mirror",NA,"M","entailing C","control_good4","control","Yes",6,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7927",27,6317,"Charley speaks Spanish","F","F","announce","20","C","Yes",7,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7928",27,6847,"Danny ate the last cupcake","F","F","inform","11","C","Yes",8,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7929",27,6170,"Grace visited her sister","M","F","demonstrate","9","C","Yes",9,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7930",27,7369,"Emily bought a car yesterday","M","F","be_annoyed","8","NonProj","Yes",10,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7931",27,5771,"Mia drank 2 cocktails last night","M","M","hear","6","C","No",11,37,"English",0,"Male","NICE STUDY",7.58505,0
+"7932",27,7439,"Josh learned to ride a bike yesterday","F","M","establish","16","NonProj","No",12,37,"English",0,"Male","NICE STUDY",7.58505,0
+"7933",27,5520,"Olivia sleeps until noon","M","F","discover","4","NonProj","Yes",13,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7934",27,4610,"Dana wears a wig",NA,"M","non-ent. C","control_bad1","control","Yes",14,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7935",27,4102,"Emma studied on Saturday morning","M","M","prove","3","C","Yes",15,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7936",27,4154,"Frank got a cat","F","M","know","12","NonProj","Yes",16,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7937",27,11114,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","No",17,37,"English",0,"Male","NICE STUDY",7.58505,0
+"7938",27,10289,"Owen shoveled snow last winter","F","M","confess","17","C","Yes",18,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7939",27,5513,"Julian dances salsa","F","F","acknowledge","18","C","Yes",19,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7940",27,8569,"Mary is pregnant","M","F","say","1","C","Yes",20,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7941",27,5958,"Josie went on vacation to France","M","M","be_right","2","C","Yes",21,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7942",27,7320,"the apartment has a balcony",NA,"M","non-ent. C","control_bad2","control","No",22,37,"English",0,"Male","NICE STUDY",7.58505,0
+"7943",27,6819,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",23,37,"English",0,"Male","NICE STUDY",7.58505,0
+"7944",27,6929,"Isabella ate a steak on Sunday","M","F","confirm","7","C","Yes",24,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7945",27,8710,"Tony had a drink last night","F","M","suggest","15","C","Yes",25,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7946",27,5089,"Sophia got a tattoo","M","F","reveal","5","NonProj","Yes",26,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7947",27,7988,"Zack owns a car",NA,"M","entailing C","control_good1","control","Yes",27,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7948",27,14681,"the window broke",NA,"F","entailing C","control_good2","control","Yes",28,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7949",27,22614,"Jon walks to work","F","F","think","19","NonProj","Yes",29,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7950",27,3659,"Zoe calculated the tip","M","F","admit","10","C","Yes",30,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7951",27,2991,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",31,37,"English",0,"Male","NICE STUDY",7.58505,1
+"7952",27,4513,"Jayden rented a car","F","M","pretend","14","NonProj","Yes",32,37,"English",0,"Male","NICE STUDY",7.58505,1
 "7953",241,4819,"the window broke",NA,"F","entailing C","control_good2","control","Yes",5,54,"english",0,"Male","",3.60963333333333,1
 "7954",241,8381,"Zack owns a car",NA,"M","entailing C","control_good1","control","Yes",6,54,"english",0,"Male","",3.60963333333333,1
 "7955",241,4488,"Sophia got a tattoo","M","F","hear","5","C","No",7,54,"english",0,"Male","",3.60963333333333,0
@@ -6803,6 +7167,34 @@
 "8398",73,7149,"Owen shoveled snow last winter","F","M","announce","17","C","No",30,47,"English",0,"Female","There were some questions that I answered yes to that as the test went along , I may have gone back and changed to no.",6.20516666666667,0
 "8399",73,6494,"the window broke",NA,"F","entailing C","control_good2","control","Yes",31,47,"English",0,"Female","There were some questions that I answered yes to that as the test went along , I may have gone back and changed to no.",6.20516666666667,1
 "8400",73,4472,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",32,47,"English",0,"Female","There were some questions that I answered yes to that as the test went along , I may have gone back and changed to no.",6.20516666666667,0
+"8401",321,5829,"Emily bought a car yesterday","M","M","establish","8","NonProj","Yes",5,38,"english",0,"Male","",2.90318333333333,1
+"8402",321,5573,"the window broke",NA,"F","entailing C","control_good2","control","Yes",6,38,"english",0,"Male","",2.90318333333333,1
+"8403",321,5370,"Isabella ate a steak on Sunday","M","M","hear","7","C","Yes",7,38,"english",0,"Male","",2.90318333333333,1
+"8404",321,5204,"Danny ate the last cupcake","F","F","prove","11","C","No",8,38,"english",0,"Male","",2.90318333333333,0
+"8405",321,3848,"the apartment has a balcony",NA,"M","non-ent. C","control_bad2","control","No",9,38,"english",0,"Male","",2.90318333333333,0
+"8406",321,4065,"Zoe calculated the tip","M","F","demonstrate","10","C","Yes",10,38,"english",0,"Male","",2.90318333333333,1
+"8407",321,3797,"Grace visited her sister","M","M","confess","9","C","Yes",11,38,"english",0,"Male","",2.90318333333333,1
+"8408",321,6412,"Frank got a cat","F","F","admit","12","C","Yes",12,38,"english",0,"Male","",2.90318333333333,1
+"8409",321,6233,"Owen shoveled snow last winter","F","F","pretend","17","NonProj","Yes",13,38,"english",0,"Male","",2.90318333333333,1
+"8410",321,5412,"Jon walks to work","F","M","acknowledge","19","C","Yes",14,38,"english",0,"Male","",2.90318333333333,1
+"8411",321,23068,"Charley speaks Spanish","F","M","suggest","20","C","No",15,38,"english",0,"Male","",2.90318333333333,0
+"8412",321,2202,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","Yes",16,38,"english",0,"Male","",2.90318333333333,1
+"8413",321,4260,"Vanessa looked into the mirror",NA,"M","entailing C","control_good4","control","Yes",17,38,"english",0,"Male","",2.90318333333333,1
+"8414",321,4652,"Mary is pregnant","M","F","say","1","C","Yes",18,38,"english",0,"Male","",2.90318333333333,1
+"8415",321,3314,"Mia drank 2 cocktails last night","M","F","confirm","6","C","Yes",19,38,"english",0,"Male","",2.90318333333333,1
+"8416",321,2055,"Tony had a drink last night","F","M","reveal","15","NonProj","No",20,38,"english",0,"Male","",2.90318333333333,0
+"8417",321,2031,"Olivia sleeps until noon","M","F","be_right","4","C","Yes",21,38,"english",0,"Male","",2.90318333333333,1
+"8418",321,3739,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",22,38,"english",0,"Male","",2.90318333333333,0
+"8419",321,3135,"Sophia got a tattoo","M","F","know","5","NonProj","Yes",23,38,"english",0,"Male","",2.90318333333333,1
+"8420",321,3190,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",24,38,"english",0,"Male","",2.90318333333333,1
+"8421",321,4657,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",25,38,"english",0,"Male","",2.90318333333333,1
+"8422",321,5896,"Jackson ran 10 miles","F","F","be_annoyed","13","NonProj","No",26,38,"english",0,"Male","",2.90318333333333,0
+"8423",321,1546,"Jayden rented a car","F","M","see","14","NonProj","Yes",27,38,"english",0,"Male","",2.90318333333333,1
+"8424",321,2200,"Emma studied on Saturday morning","M","M","announce","3","C","Yes",28,38,"english",0,"Male","",2.90318333333333,1
+"8425",321,2301,"Julian dances salsa","F","F","think","18","NonProj","Yes",29,38,"english",0,"Male","",2.90318333333333,1
+"8426",321,2480,"Josh learned to ride a bike yesterday","F","F","discover","16","NonProj","No",30,38,"english",0,"Male","",2.90318333333333,0
+"8427",321,2730,"Josie went on vacation to France","M","F","inform","2","C","Yes",31,38,"english",0,"Male","",2.90318333333333,1
+"8428",321,6556,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",32,38,"english",0,"Male","",2.90318333333333,0
 "8429",199,10201,"Mia drank 2 cocktails last night","M","F","confess","6","C","Yes",5,53,"English",0,"Male","Minimum wage, based on an hourly rate, would be the fairest.",4.87016666666667,1
 "8430",199,5523,"Jayden rented a car","F","F","suggest","14","C","No",6,53,"English",0,"Male","Minimum wage, based on an hourly rate, would be the fairest.",4.87016666666667,0
 "8431",199,14891,"Zack owns a car",NA,"M","entailing C","control_good1","control","Yes",7,53,"English",0,"Male","Minimum wage, based on an hourly rate, would be the fairest.",4.87016666666667,1
@@ -7839,6 +8231,34 @@
 "9574",11,2523,"Sophia got a tattoo","M","F","confess","5","C","Yes",30,34,"English",0,"Male","",7.42681666666667,1
 "9575",11,3410,"Danny ate the last cupcake","F","F","announce","11","C","Yes",31,34,"English",0,"Male","",7.42681666666667,1
 "9576",11,15172,"Charley speaks Spanish","F","F","establish","20","NonProj","Yes",32,34,"English",0,"Male","",7.42681666666667,1
+"9605",175,10399,"Sophia got a tattoo","M","F","acknowledge","5","C","Yes",5,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9606",175,10710,"the window broke",NA,"F","entailing C","control_good2","control","Yes",6,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9607",175,6129,"Jayden rented a car","F","M","suggest","14","C","No",7,32,"english",0,"Male","thanks have a great day ",7.11743333333333,0
+"9608",175,7944,"Danny ate the last cupcake","F","F","announce","11","C","Yes",8,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9609",175,4319,"Jon walks to work","F","F","reveal","19","NonProj","Yes",9,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9610",175,6547,"Josh learned to ride a bike yesterday","F","F","confess","16","C","Yes",10,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9611",175,7134,"Emma studied on Saturday morning","M","F","demonstrate","3","C","Yes",11,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9612",175,6558,"Josie went on vacation to France","M","F","establish","2","NonProj","Yes",12,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9613",175,5916,"Jackson ran 10 miles","F","M","know","13","NonProj","Yes",13,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9614",175,7932,"Grace visited her sister","M","M","inform","9","C","Yes",14,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9615",175,8492,"Zoe calculated the tip","M","F","pretend","10","NonProj","No",15,32,"english",0,"Male","thanks have a great day ",7.11743333333333,0
+"9616",175,7426,"Isabella ate a steak on Sunday","M","M","hear","7","C","Yes",16,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9617",175,9324,"Zack owns a car",NA,"M","entailing C","control_good1","control","Yes",17,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9618",175,18090,"Charley speaks Spanish","F","M","think","20","NonProj","No",18,32,"english",0,"Male","thanks have a great day ",7.11743333333333,0
+"9619",175,42410,"Mary is pregnant","M","M","be_right","1","C","Yes",19,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9620",175,4705,"Sebastian did really well on the exam",NA,"M","non-ent. C","control_bad4","control","Yes",20,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9621",175,5623,"Julian dances salsa","F","M","discover","18","NonProj","Yes",21,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9622",175,6052,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",22,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9623",175,5378,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",23,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9624",175,4509,"Frank got a cat","F","F","confirm","12","C","Yes",24,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9625",175,7728,"Olivia sleeps until noon","M","F","say","4","C","Yes",25,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9626",175,27044,"Madison closed the window",NA,"M","non-ent. C","control_bad3","control","No",26,32,"english",0,"Male","thanks have a great day ",7.11743333333333,0
+"9627",175,6108,"Emily bought a car yesterday","M","F","be_annoyed","8","NonProj","Yes",27,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9628",175,11227,"Mia drank 2 cocktails last night","M","M","admit","6","C","Yes",28,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9629",175,10664,"Tony had a drink last night","F","F","see","15","NonProj","Yes",29,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9630",175,17358,"Dana wears a wig",NA,"M","non-ent. C","control_bad1","control","No",30,32,"english",0,"Male","thanks have a great day ",7.11743333333333,0
+"9631",175,6695,"Owen shoveled snow last winter","F","F","prove","17","C","Yes",31,32,"english",0,"Male","thanks have a great day ",7.11743333333333,1
+"9632",175,9069,"the apartment has a balcony",NA,"F","non-ent. C","control_bad2","control","No",32,32,"english",0,"Male","thanks have a great day ",7.11743333333333,0
 "9633",252,6183,"Grace visited her sister","M","M","hear","9","C","No",5,37,"English",0,"Male","",2.71613333333333,0
 "9634",252,7591,"Emma studied on Saturday morning","M","M","say","3","C","Yes",6,37,"English",0,"Male","",2.71613333333333,1
 "9635",252,4201,"Sophia got a tattoo","M","F","discover","5","NonProj","Yes",7,37,"English",0,"Male","",2.71613333333333,1
@@ -8035,6 +8455,34 @@
 "9826",315,3709,"Mary is pregnant","M","M","admit","1","C","Yes",30,44,"English",0,"Male","",4.23408333333333,1
 "9827",315,4884,"Josh learned to ride a bike yesterday","F","M","know","16","NonProj","Yes",31,44,"English",0,"Male","",4.23408333333333,1
 "9828",315,4908,"Jackson ran 10 miles","F","F","demonstrate","13","C","Yes",32,44,"English",0,"Male","",4.23408333333333,1
+"9829",22,5859,"Isabella ate a steak on Sunday","M","M","prove","7","C","Yes",5,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9830",22,4212,"Jackson ran 10 miles","F","F","confess","13","C","Yes",6,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9831",22,5609,"the window broke",NA,"M","entailing C","control_good2","control","Yes",7,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9832",22,5369,"Josie went on vacation to France","M","F","discover","2","NonProj","Yes",8,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9833",22,6340,"Julian dances salsa","F","M","inform","18","C","Yes",9,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9834",22,3016,"Frank got a cat","F","F","be_right","12","C","Yes",10,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9835",22,4237,"Mary is pregnant","M","F","hear","1","C","No",11,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,0
+"9836",22,5379,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",12,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9837",22,6066,"Grace visited her sister","M","M","be_annoyed","9","NonProj","Yes",13,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9838",22,4628,"Jon walks to work","F","F","establish","19","NonProj","Yes",14,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9839",22,4465,"Zoe calculated the tip","M","F","confirm","10","C","Yes",15,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9840",22,5264,"Olivia sleeps until noon","M","M","acknowledge","4","C","Yes",16,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9841",22,4118,"Danny ate the last cupcake","F","F","see","11","NonProj","Yes",17,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9842",22,6506,"Emily bought a car yesterday","M","F","demonstrate","8","C","Yes",18,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9843",22,4787,"Jayden rented a car","F","F","pretend","14","NonProj","No",19,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,0
+"9844",22,3226,"Sophia got a tattoo","M","F","announce","5","C","Yes",20,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9845",22,4898,"Emma studied on Saturday morning","M","F","think","3","NonProj","No",21,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,0
+"9846",22,4377,"Sebastian did really well on the exam",NA,"M","non-ent. C","control_bad4","control","No",22,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,0
+"9847",22,4140,"the apartment has a balcony",NA,"F","non-ent. C","control_bad2","control","No",23,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,0
+"9848",22,4844,"Tony had a drink last night","F","M","admit","15","C","Yes",24,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9849",22,4581,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","No",25,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,0
+"9850",22,3727,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",26,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9851",22,4705,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",27,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9852",22,6128,"Josh learned to ride a bike yesterday","F","M","say","16","C","Yes",28,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9853",22,7978,"Owen shoveled snow last winter","F","M","suggest","17","C","No",29,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,0
+"9854",22,2370,"Charley speaks Spanish","F","F","reveal","20","NonProj","Yes",30,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9855",22,3806,"Mia drank 2 cocktails last night","M","F","know","6","NonProj","Yes",31,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
+"9856",22,2348,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","Yes",32,28,"English",0,"Male","I felt like the task was well laid out, and is a reasonable amount of work for the compensation.",3.75226666666667,1
 "9857",166,12893,"Josh learned to ride a bike yesterday","F","M","confess","16","C","Yes",5,29,"English",0,"Male","Pay is very fair, thanks you. ",5.19101666666667,1
 "9858",166,6696,"Sebastian did really well on the exam",NA,"M","non-ent. C","control_bad4","control","No",6,29,"English",0,"Male","Pay is very fair, thanks you. ",5.19101666666667,0
 "9859",166,4582,"Olivia sleeps until noon","M","F","reveal","4","NonProj","Yes",7,29,"English",0,"Male","Pay is very fair, thanks you. ",5.19101666666667,1
@@ -8343,6 +8791,34 @@
 "10162",423,5007,"Emma studied on Saturday morning","M","F","see","3","NonProj","Yes",30,23,"english",0,"Male","1.00",3.7716,1
 "10163",423,4924,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","No",31,23,"english",0,"Male","1.00",3.7716,0
 "10164",423,3957,"Dana wears a wig",NA,"M","non-ent. C","control_bad1","control","No",32,23,"english",0,"Male","1.00",3.7716,0
+"10165",327,5782,"Emily bought a car yesterday","M","F","confirm","8","C","Yes",5,30,"English",0,"Male","",2.67915,1
+"10166",327,2524,"Zoe calculated the tip","M","F","demonstrate","10","C","Yes",6,30,"English",0,"Male","",2.67915,1
+"10167",327,6162,"Danny ate the last cupcake","F","M","announce","11","C","Yes",7,30,"English",0,"Male","",2.67915,1
+"10168",327,2155,"Jackson ran 10 miles","F","M","suggest","13","C","No",8,30,"English",0,"Male","",2.67915,0
+"10169",327,2462,"Tony had a drink last night","F","F","discover","15","NonProj","Yes",9,30,"English",0,"Male","",2.67915,1
+"10170",327,5331,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","No",10,30,"English",0,"Male","",2.67915,0
+"10171",327,2895,"Owen shoveled snow last winter","F","F","say","17","C","Yes",11,30,"English",0,"Male","",2.67915,1
+"10172",327,3055,"Josie went on vacation to France","M","M","be_annoyed","2","NonProj","Yes",12,30,"English",0,"Male","",2.67915,1
+"10173",327,3348,"Julian dances salsa","F","M","be_right","18","C","Yes",13,30,"English",0,"Male","",2.67915,1
+"10174",327,5964,"Zack owns a car",NA,"M","entailing C","control_good1","control","Yes",14,30,"English",0,"Male","",2.67915,1
+"10175",327,4133,"Sophia got a tattoo","M","F","know","5","NonProj","Yes",15,30,"English",0,"Male","",2.67915,1
+"10176",327,2286,"Mary is pregnant","M","F","pretend","1","NonProj","No",16,30,"English",0,"Male","",2.67915,0
+"10177",327,2352,"Sebastian did really well on the exam",NA,"M","non-ent. C","control_bad4","control","Yes",17,30,"English",0,"Male","",2.67915,1
+"10178",327,26322,"Mia drank 2 cocktails last night","M","F","prove","6","C","Yes",18,30,"English",0,"Male","",2.67915,1
+"10179",327,3191,"Jon walks to work","F","F","hear","19","C","No",19,30,"English",0,"Male","",2.67915,0
+"10180",327,3576,"Isabella ate a steak on Sunday","M","M","confess","7","C","Yes",20,30,"English",0,"Male","",2.67915,1
+"10181",327,2334,"Jayden rented a car","F","F","think","14","NonProj","No",21,30,"English",0,"Male","",2.67915,0
+"10182",327,5046,"Charley speaks Spanish","F","F","see","20","NonProj","Yes",22,30,"English",0,"Male","",2.67915,1
+"10183",327,2739,"Frederick solved the problem",NA,"F","entailing C","control_good3","control","Yes",23,30,"English",0,"Male","",2.67915,1
+"10184",327,2115,"Grace visited her sister","M","M","admit","9","C","Yes",24,30,"English",0,"Male","",2.67915,1
+"10185",327,3383,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",25,30,"English",0,"Male","",2.67915,1
+"10186",327,4620,"Emma studied on Saturday morning","M","F","reveal","3","NonProj","Yes",26,30,"English",0,"Male","",2.67915,1
+"10187",327,5055,"Olivia sleeps until noon","M","F","acknowledge","4","C","Yes",27,30,"English",0,"Male","",2.67915,1
+"10188",327,2716,"the apartment has a balcony",NA,"F","non-ent. C","control_bad2","control","No",28,30,"English",0,"Male","",2.67915,0
+"10189",327,4911,"Josh learned to ride a bike yesterday","F","M","establish","16","NonProj","Yes",29,30,"English",0,"Male","",2.67915,1
+"10190",327,6373,"the window broke",NA,"F","entailing C","control_good2","control","Yes",30,30,"English",0,"Male","",2.67915,1
+"10191",327,3275,"Dana wears a wig",NA,"M","non-ent. C","control_bad1","control","No",31,30,"English",0,"Male","",2.67915,0
+"10192",327,4809,"Frank got a cat","F","M","inform","12","C","Yes",32,30,"English",0,"Male","",2.67915,1
 "10193",312,4134,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",5,36,"English",0,"Male","$1 is very fair. Comes to about $12 an hour.",2.82821666666667,0
 "10194",312,5120,"Frank got a cat","F","F","reveal","12","NonProj","Yes",6,36,"English",0,"Male","$1 is very fair. Comes to about $12 an hour.",2.82821666666667,1
 "10195",312,6669,"Owen shoveled snow last winter","F","M","think","17","NonProj","No",7,36,"English",0,"Male","$1 is very fair. Comes to about $12 an hour.",2.82821666666667,0
@@ -9155,6 +9631,34 @@
 "11170",316,6176,"Jon walks to work","F","F","acknowledge","19","C","Yes",30,28,"English",0,"Female","",4.4872,1
 "11171",316,2408,"Charley speaks Spanish","F","F","be_annoyed","20","NonProj","Yes",31,28,"English",0,"Female","",4.4872,1
 "11172",316,10960,"the window broke",NA,"M","entailing C","control_good2","control","Yes",32,28,"English",0,"Female","",4.4872,1
+"11173",240,8154,"Josh learned to ride a bike yesterday","F","F","confirm","16","C","Yes",5,71,"English",0,"Male","N/A",3.6514,1
+"11174",240,10157,"Emily bought a car yesterday","M","M","inform","8","C","Yes",6,71,"English",0,"Male","N/A",3.6514,1
+"11175",240,5430,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","Yes",7,71,"English",0,"Male","N/A",3.6514,1
+"11176",240,6224,"Madison closed the window",NA,"F","non-ent. C","control_bad3","control","No",8,71,"English",0,"Male","N/A",3.6514,0
+"11177",240,4156,"Mary is pregnant","M","F","see","1","NonProj","Yes",9,71,"English",0,"Male","N/A",3.6514,1
+"11178",240,7316,"Danny ate the last cupcake","F","M","discover","11","NonProj","Yes",10,71,"English",0,"Male","N/A",3.6514,1
+"11179",240,6416,"Isabella ate a steak on Sunday","M","M","say","7","C","Yes",11,71,"English",0,"Male","N/A",3.6514,1
+"11180",240,5964,"Frank got a cat","F","F","confess","12","C","Yes",12,71,"English",0,"Male","N/A",3.6514,1
+"11181",240,5717,"Emma studied on Saturday morning","M","F","announce","3","C","Yes",13,71,"English",0,"Male","N/A",3.6514,1
+"11182",240,9878,"Olivia sleeps until noon","M","M","reveal","4","NonProj","Yes",14,71,"English",0,"Male","N/A",3.6514,1
+"11183",240,4779,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",15,71,"English",0,"Male","N/A",3.6514,1
+"11184",240,5463,"Charley speaks Spanish","F","M","demonstrate","20","C","Yes",16,71,"English",0,"Male","N/A",3.6514,1
+"11185",240,4460,"Jon walks to work","F","F","think","19","NonProj","No",17,71,"English",0,"Male","N/A",3.6514,0
+"11186",240,3887,"Julian dances salsa","F","F","suggest","18","C","No",18,71,"English",0,"Male","N/A",3.6514,0
+"11187",240,3578,"Vanessa looked into the mirror",NA,"M","entailing C","control_good4","control","Yes",19,71,"English",0,"Male","N/A",3.6514,1
+"11188",240,4971,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","No",20,71,"English",0,"Male","N/A",3.6514,0
+"11189",240,4933,"Grace visited her sister","M","M","hear","9","C","No",21,71,"English",0,"Male","N/A",3.6514,0
+"11190",240,4916,"Mia drank 2 cocktails last night","M","F","prove","6","C","Yes",22,71,"English",0,"Male","N/A",3.6514,1
+"11191",240,5478,"Josie went on vacation to France","M","F","know","2","NonProj","Yes",23,71,"English",0,"Male","N/A",3.6514,1
+"11192",240,4208,"Sophia got a tattoo","M","F","admit","5","C","Yes",24,71,"English",0,"Male","N/A",3.6514,1
+"11193",240,5116,"Jayden rented a car","F","M","be_right","14","C","Yes",25,71,"English",0,"Male","N/A",3.6514,1
+"11194",240,4986,"Tony had a drink last night","F","F","pretend","15","NonProj","No",26,71,"English",0,"Male","N/A",3.6514,0
+"11195",240,5147,"Jackson ran 10 miles","F","F","acknowledge","13","C","Yes",27,71,"English",0,"Male","N/A",3.6514,1
+"11196",240,8209,"the window broke",NA,"F","entailing C","control_good2","control","Yes",28,71,"English",0,"Male","N/A",3.6514,1
+"11197",240,4437,"Frederick solved the problem",NA,"M","entailing C","control_good3","control","Yes",29,71,"English",0,"Male","N/A",3.6514,1
+"11198",240,5709,"Owen shoveled snow last winter","F","F","be_annoyed","17","NonProj","Yes",30,71,"English",0,"Male","N/A",3.6514,1
+"11199",240,5000,"Zoe calculated the tip","M","F","establish","10","NonProj","Yes",31,71,"English",0,"Male","N/A",3.6514,1
+"11200",240,3277,"the apartment has a balcony",NA,"F","non-ent. C","control_bad2","control","No",32,71,"English",0,"Male","N/A",3.6514,0
 "11201",155,5230,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",5,50,"English",0,"Male","",5.3196,1
 "11202",155,5423,"Sophia got a tattoo","M","M","admit","5","C","Yes",6,50,"English",0,"Male","",5.3196,1
 "11203",155,4961,"Charley speaks Spanish","F","M","be_right","20","C","Yes",7,50,"English",0,"Male","",5.3196,1
@@ -9631,6 +10135,34 @@
 "11702",91,7956,"Julian dances salsa","F","F","acknowledge","18","C","Yes",30,46,"english",0,"Male","none",6.05256666666667,1
 "11703",91,5272,"Jackson ran 10 miles","F","F","establish","13","NonProj","Yes",31,46,"english",0,"Male","none",6.05256666666667,1
 "11704",91,4513,"Josie went on vacation to France","M","F","suggest","2","C","No",32,46,"english",0,"Male","none",6.05256666666667,0
+"11705",328,13888,"Tony had a drink last night","F","M","think","15","NonProj","No",5,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,0
+"11706",328,8110,"Olivia sleeps until noon","M","M","be_right","4","C","Yes",6,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11707",328,8029,"Zoe calculated the tip","M","F","reveal","10","NonProj","Yes",7,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11708",328,5259,"Jackson ran 10 miles","F","F","prove","13","C","Yes",8,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11709",328,9595,"Frank got a cat","F","M","discover","12","NonProj","Yes",9,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11710",328,7544,"Zack owns a car",NA,"F","entailing C","control_good1","control","Yes",10,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11711",328,10572,"Danny ate the last cupcake","F","F","acknowledge","11","C","Yes",11,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11712",328,21712,"Owen shoveled snow last winter","F","F","demonstrate","17","C","No",12,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,0
+"11713",328,15715,"Josh learned to ride a bike yesterday","F","F","establish","16","NonProj","Yes",13,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11714",328,5352,"Isabella ate a steak on Sunday","M","F","admit","7","C","Yes",14,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11715",328,9890,"Sebastian did really well on the exam",NA,"M","non-ent. C","control_bad4","control","No",15,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,0
+"11716",328,3716,"Charley speaks Spanish","F","F","confess","20","C","Yes",16,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11717",328,2888,"Mary is pregnant","M","F","confirm","1","C","Yes",17,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11718",328,7172,"Jon walks to work","F","M","announce","19","C","Yes",18,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11719",328,8061,"Vanessa looked into the mirror",NA,"F","entailing C","control_good4","control","Yes",19,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11720",328,8817,"Julian dances salsa","F","M","pretend","18","NonProj","No",20,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,0
+"11721",328,4550,"Emma studied on Saturday morning","M","F","know","3","NonProj","Yes",21,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11722",328,4914,"Frederick solved the problem",NA,"M","entailing C","control_good3","control","Yes",22,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11723",328,9998,"Emily bought a car yesterday","M","M","hear","8","C","No",23,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,0
+"11724",328,3376,"the window broke",NA,"F","entailing C","control_good2","control","Yes",24,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11725",328,4606,"Sophia got a tattoo","M","M","be_annoyed","5","NonProj","Yes",25,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11726",328,3456,"Dana wears a wig",NA,"F","non-ent. C","control_bad1","control","Yes",26,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11727",328,4637,"Mia drank 2 cocktails last night","M","M","see","6","NonProj","Yes",27,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11728",328,23631,"the apartment has a balcony",NA,"F","non-ent. C","control_bad2","control","No",28,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,0
+"11729",328,17947,"Josie went on vacation to France","M","M","inform","2","C","Yes",29,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11730",328,4023,"Grace visited her sister","M","F","suggest","9","C","No",30,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,0
+"11731",328,3660,"Jayden rented a car","F","F","say","14","C","Yes",31,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,1
+"11732",328,4485,"Madison closed the window",NA,"M","non-ent. C","control_bad3","control","No",32,32,"ENGLISH",0,"Male","This was a very interesting study. I was able to read and understand all contents displayed. If needed further additional concerns, please do not hesitate to contact me.",7.28291666666667,0
 "11733",343,5868,"Zoe calculated the tip","M","M","acknowledge","10","C","Yes",5,23,"English",0,"Male","This is a generous payment",5.53131666666667,1
 "11734",343,4643,"the apartment has a balcony",NA,"F","non-ent. C","control_bad2","control","No",6,23,"English",0,"Male","This is a generous payment",5.53131666666667,0
 "11735",343,4894,"Sebastian did really well on the exam",NA,"F","non-ent. C","control_bad4","control","No",7,23,"English",0,"Male","This is a generous payment",5.53131666666667,0

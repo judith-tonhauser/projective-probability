@@ -19,7 +19,7 @@ theme_set(theme_bw())
 
 # load clean data for analysis ----
 cd = read.csv("../data/cd.csv")
-nrow(cd) #9968
+nrow(cd) #10500
 
 # plots ----
 

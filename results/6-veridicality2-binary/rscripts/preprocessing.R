@@ -129,30 +129,65 @@ ggplot(controlresponses.good, aes(x=n)) +
   geom_histogram()
 # most Turkers only said No to the 4 non-contradictory controls
 
-# remove participants who gave "yes" response to at least one non-contradictory (good) control
-# or "No" response to more than one contradictory (bad) control
-# outliers_bad: Prop smaller than .74 means that they got more than one wrong
-outliers_bad = c.bad %>%
+# exclusion criterion: remove participants who got more than one answer wrong on the 8 controls
+# outliers_bad: Prop 1 means all correct, Prop smaller than .75 means that they got more than 1 wrong
+# outliers_good: Prop 0 means all correct, Prop larger than .25 means that they got more than 1 wrong
+outliers_bad.2plus = c.bad %>%
   group_by(workerid) %>%
   summarize(Prop = mean(nResponse)) %>%
-  filter(Prop < .74)
-outliers_bad
-nrow(outliers_bad) #19
+  filter(Prop < .75)
+outliers_bad.2plus
+nrow(outliers_bad.2plus) #19 (participant who got more than one wrong; remaining have 0 or 1 wrong)
 
-outliers_good = c.good %>%
+ggplot(outliers_bad.2plus, aes(x=Prop)) +
+  geom_histogram()
+#4 people got 4 wrong, 3 people got 3 wrong, 12 people got 2 wrong
+
+outliers_bad.1 = c.bad %>%
   group_by(workerid) %>%
   summarize(Prop = mean(nResponse)) %>%
-  filter(Prop != 0)
-outliers_good 
-nrow(outliers_good) #75
+  filter(Prop == .75)
+outliers_bad.1
+nrow(outliers_bad.1) #37 (participants who got exactly one wrong)
 
-d <- droplevels(subset(d, !(d$workerid %in% outliers_bad$workerid) | !(d$workerid %in% outliers_good$workerid)))
-length(unique(d$workerid)) #386 Turkers (400-386 = 14 excluded)
+outliers_good.2plus = c.good %>%
+  group_by(workerid) %>%
+  summarize(Prop = mean(nResponse)) %>%
+  filter(Prop > .25)
+outliers_good.2plus 
+nrow(outliers_good.2plus) #26 (participant who got more than one wrong; remaining have 0 or 1 wrong)
+
+ggplot(outliers_good.2plus, aes(x=Prop)) +
+  geom_histogram()
+# 9 people got 4 wrong, 11 people got 3 wrong, 6 people got 2 wrong
+
+outliers_good.1 = c.good %>%
+  group_by(workerid) %>%
+  summarize(Prop = mean(nResponse)) %>%
+  filter(Prop == .25)
+outliers_good.1 
+nrow(outliers_good.1) #49 (participants who got exactly one wrong)
+
+# remove 19+26=45 participants who are in either outliers_bad.2plus or outliers_good.2plus, because they definitely have more than 
+# 1 wrong across the 8 controls
+d <- droplevels(subset(d, !(d$workerid %in% outliers_bad.2plus$workerid) & !(d$workerid %in% outliers_good.2plus$workerid)))
+length(unique(d$workerid)) #363 Turkers (400-363 = 37 excluded)
+
+# now remove participants who are in both outliers_bad.1 and outliers_good.1, because they also have more than one wrong
+# across the 8 controls
+
+outliers_bad.1$workerid
+outliers_good.1$workerid
+
+d <- droplevels(subset(d, !(d$workerid %in% outliers_bad.1$workerid & d$workerid %in% outliers_good.1$workerid)))
+length(unique(d$workerid)) #353 Turkers (10 excluded who are in both sets)
+
+# 47 excluded based on controls
 
 # clean data
 cd = d
 write.csv(cd, "../data/cd.csv")
-nrow(cd) #10808 / 28 items = 386 participants
+nrow(cd) #9884 / 28 items = 353 participants
 
 # age info
 table(cd$age) #18-73
@@ -163,10 +198,5 @@ cd %>%
   unique() %>% 
   group_by(gender) %>% 
   summarize(count=n())
-# 193 female 193 male
-
-# load clean data for analysis ----
-cd = read.csv("../data/cd.csv")
-nrow(cd) #8456 (302 Turkers)
-summary(cd)
+# 180 female 173 male
 

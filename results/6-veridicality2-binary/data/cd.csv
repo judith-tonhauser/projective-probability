@@ -1,32 +1,4 @@
 "","workerid","rt","content","subjectGender","speakerGender","verb","contentNr","trigger_class","response","slide_number_in_experiment","age","language","american","gender","comments","Answer.time_in_minutes","nResponse"
-"1",375,10335,"Danny ate the last cupcake","F","M","know","11","NonProj","No",5,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"2",375,1582,"Tony had a drink last night","F","M","confess","15","C","Yes",6,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"3",375,1071,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",7,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"4",375,1057,"Mia drank 2 cocktails last night","M","F","discover","6","NonProj","No",8,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"5",375,983,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","Yes",9,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"6",375,1232,"Josie went on vacation to France","M","F","reveal","2","NonProj","No",10,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"7",375,967,"Grace visited her sister","M","F","say","9","C","Yes",11,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"8",375,1064,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",12,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"9",375,1015,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","Yes",13,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"10",375,1104,"Frank got a cat","F","F","inform","12","C","No",14,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"11",375,1016,"Sophia got a tattoo","M","M","establish","5","NonProj","Yes",15,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"12",375,1072,"Emily bought a car yesterday","M","M","prove","8","C","No",16,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"13",375,1672,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","Yes",17,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"14",375,1224,"Jayden rented a car","F","F","suggest","14","C","No",18,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"15",375,1008,"Zoe calculated the tip","M","F","be_annoyed","10","NonProj","Yes",19,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"16",375,1168,"Charley speaks Spanish","F","M","acknowledge","20","C","No",20,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"17",375,985,"Owen shoveled snow last winter","F","F","be_right","17","C","Yes",21,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"18",375,943,"Julian dances salsa","F","F","see","18","NonProj","No",22,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"19",375,1032,"Isabella ate a steak on Sunday","M","F","hear","7","C","Yes",23,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"20",375,991,"Olivia sleeps until noon","M","F","think","4","NonProj","No",24,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"21",375,888,"Jackson ran 10 miles","F","F","confirm","13","C","Yes",25,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"22",375,959,"Jon walks to work","F","M","admit","19","C","No",26,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"23",375,919,"Emma studied on Saturday morning","M","F","announce","3","C","Yes",27,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"24",375,5193,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","No",28,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"25",375,911,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",29,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"26",375,938,"Josh learned to ride a bike yesterday","F","F","demonstrate","16","C","No",30,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
-"27",375,1037,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",31,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,1
-"28",375,4231,"Mary is pregnant","M","M","pretend","1","NonProj","No",32,46,"ENGLISH",0,"Female","VERY INTERESTING",1.8928,0
 "29",183,4310,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",5,36,"English",0,"Male","",2.41486666666667,1
 "30",183,3273,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",6,36,"English",0,"Male","",2.41486666666667,0
 "31",183,4857,"Josh learned to ride a bike yesterday","F","F","inform","16","C","No",7,36,"English",0,"Male","",2.41486666666667,0
@@ -671,34 +643,6 @@
 "726",228,6640,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",30,50,"English",0,"Male","it&quotechars fair",4.89201666666667,0
 "727",228,5751,"Charley speaks Spanish","F","F","discover","20","NonProj","Yes",31,50,"English",0,"Male","it&quotechars fair",4.89201666666667,1
 "728",228,4785,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",32,50,"English",0,"Male","it&quotechars fair",4.89201666666667,1
-"729",353,8678,"Josie went on vacation to France","M","F","discover","2","NonProj","Yes",5,25,"English",0,"Male","",9.66448333333333,1
-"730",353,5397,"Frank got a cat","F","F","establish","12","NonProj","Yes",6,25,"English",0,"Male","",9.66448333333333,1
-"731",353,3379,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",7,25,"English",0,"Male","",9.66448333333333,0
-"732",353,3152,"Emily bought a car yesterday","M","M","confess","8","C","Yes",8,25,"English",0,"Male","",9.66448333333333,1
-"733",353,8259,"Isabella ate a steak on Sunday","M","F","admit","7","C","No",9,25,"English",0,"Male","",9.66448333333333,0
-"734",353,8830,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","No",10,25,"English",0,"Male","",9.66448333333333,0
-"735",353,7647,"Josh learned to ride a bike yesterday","F","F","demonstrate","16","C","Yes",11,25,"English",0,"Male","",9.66448333333333,1
-"736",353,4250,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",12,25,"English",0,"Male","",9.66448333333333,0
-"737",353,7450,"Jon walks to work","F","F","acknowledge","19","C","Yes",13,25,"English",0,"Male","",9.66448333333333,1
-"738",353,5151,"Olivia sleeps until noon","M","M","think","4","NonProj","Yes",14,25,"English",0,"Male","",9.66448333333333,1
-"739",353,3384,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",15,25,"English",0,"Male","",9.66448333333333,1
-"740",353,9587,"Emma studied on Saturday morning","M","F","see","3","NonProj","No",16,25,"English",0,"Male","",9.66448333333333,0
-"741",353,6846,"Mia drank 2 cocktails last night","M","F","pretend","6","NonProj","Yes",17,25,"English",0,"Male","",9.66448333333333,1
-"742",353,5890,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",18,25,"English",0,"Male","",9.66448333333333,1
-"743",353,2991,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",19,25,"English",0,"Male","",9.66448333333333,1
-"744",353,4996,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","No",20,25,"English",0,"Male","",9.66448333333333,0
-"745",353,4924,"Owen shoveled snow last winter","F","M","reveal","17","NonProj","Yes",21,25,"English",0,"Male","",9.66448333333333,1
-"746",353,3201,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",22,25,"English",0,"Male","",9.66448333333333,1
-"747",353,3009,"Jackson ran 10 miles","F","M","know","13","NonProj","Yes",23,25,"English",0,"Male","",9.66448333333333,1
-"748",353,3074,"Jayden rented a car","F","F","suggest","14","C","Yes",24,25,"English",0,"Male","",9.66448333333333,1
-"749",353,7392,"Tony had a drink last night","F","F","hear","15","C","Yes",25,25,"English",0,"Male","",9.66448333333333,1
-"750",353,5275,"Sophia got a tattoo","M","F","confirm","5","C","Yes",26,25,"English",0,"Male","",9.66448333333333,1
-"751",353,4947,"Mary is pregnant","M","M","be_annoyed","1","NonProj","Yes",27,25,"English",0,"Male","",9.66448333333333,1
-"752",353,31536,"Julian dances salsa","F","F","say","18","C","Yes",28,25,"English",0,"Male","",9.66448333333333,1
-"753",353,18967,"Grace visited her sister","M","M","be_right","9","C","No",29,25,"English",0,"Male","",9.66448333333333,0
-"754",353,3121,"Zoe calculated the tip","M","M","prove","10","C","Yes",30,25,"English",0,"Male","",9.66448333333333,1
-"755",353,4574,"Charley speaks Spanish","F","F","inform","20","C","Yes",31,25,"English",0,"Male","",9.66448333333333,1
-"756",353,3391,"Danny ate the last cupcake","F","M","announce","11","C","Yes",32,25,"English",0,"Male","",9.66448333333333,1
 "757",150,2736,"Charley speaks Spanish","F","F","know","20","NonProj","Yes",5,25,"English",0,"Male","",4.37275,1
 "758",150,3959,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","Yes",6,25,"English",0,"Male","",4.37275,1
 "759",150,49728,"Emma studied on Saturday morning","M","F","inform","3","C","Yes",7,25,"English",0,"Male","",4.37275,1
@@ -755,90 +699,6 @@
 "810",322,36358,"Isabella ate a steak on Sunday","M","M","pretend","7","NonProj","No",30,19,"English",0,"Male","It&quotechars fine in terms of the reward, but I was a bit confused on what was wanted. Some were obvious. ",5.05603333333333,0
 "811",322,3631,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",31,19,"English",0,"Male","It&quotechars fine in terms of the reward, but I was a bit confused on what was wanted. Some were obvious. ",5.05603333333333,1
 "812",322,14286,"Jackson ran 10 miles","F","F","discover","13","NonProj","Yes",32,19,"English",0,"Male","It&quotechars fine in terms of the reward, but I was a bit confused on what was wanted. Some were obvious. ",5.05603333333333,1
-"813",83,12787,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",5,24,"english",0,"Male","",3.57956666666667,1
-"814",83,11271,"Mary is pregnant","M","M","suggest","1","C","No",6,24,"english",0,"Male","",3.57956666666667,0
-"815",83,7811,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",7,24,"english",0,"Male","",3.57956666666667,0
-"816",83,6732,"Olivia sleeps until noon","M","F","be_right","4","C","No",8,24,"english",0,"Male","",3.57956666666667,0
-"817",83,6976,"Frank got a cat","F","F","demonstrate","12","C","No",9,24,"english",0,"Male","",3.57956666666667,0
-"818",83,19750,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","No",10,24,"english",0,"Male","",3.57956666666667,0
-"819",83,12934,"Sophia got a tattoo","M","F","acknowledge","5","C","No",11,24,"english",0,"Male","",3.57956666666667,0
-"820",83,5311,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","No",12,24,"english",0,"Male","",3.57956666666667,0
-"821",83,11048,"Jon walks to work","F","F","pretend","19","NonProj","No",13,24,"english",0,"Male","",3.57956666666667,0
-"822",83,9489,"Jayden rented a car","F","M","discover","14","NonProj","No",14,24,"english",0,"Male","",3.57956666666667,0
-"823",83,7801,"Danny ate the last cupcake","F","M","hear","11","C","No",15,24,"english",0,"Male","",3.57956666666667,0
-"824",83,12054,"Zoe calculated the tip","M","F","confirm","10","C","No",16,24,"english",0,"Male","",3.57956666666667,0
-"825",83,3180,"Julian dances salsa","F","M","confess","18","C","No",17,24,"english",0,"Male","",3.57956666666667,0
-"826",83,3028,"Owen shoveled snow last winter","F","F","think","17","NonProj","No",18,24,"english",0,"Male","",3.57956666666667,0
-"827",83,1108,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","No",19,24,"english",0,"Male","",3.57956666666667,0
-"828",83,1414,"Emma studied on Saturday morning","M","M","inform","3","C","No",20,24,"english",0,"Male","",3.57956666666667,0
-"829",83,927,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","No",21,24,"english",0,"Male","",3.57956666666667,0
-"830",83,3651,"Mia drank 2 cocktails last night","M","M","reveal","6","NonProj","No",22,24,"english",0,"Male","",3.57956666666667,0
-"831",83,1181,"Josh learned to ride a bike yesterday","F","M","prove","16","C","No",23,24,"english",0,"Male","",3.57956666666667,0
-"832",83,1856,"Emily bought a car yesterday","M","F","announce","8","C","No",24,24,"english",0,"Male","",3.57956666666667,0
-"833",83,1221,"Tony had a drink last night","F","F","say","15","C","No",25,24,"english",0,"Male","",3.57956666666667,0
-"834",83,1099,"Grace visited her sister","M","F","be_annoyed","9","NonProj","No",26,24,"english",0,"Male","",3.57956666666667,0
-"835",83,924,"Josie went on vacation to France","M","F","admit","2","C","No",27,24,"english",0,"Male","",3.57956666666667,0
-"836",83,1092,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","No",28,24,"english",0,"Male","",3.57956666666667,0
-"837",83,3439,"Jackson ran 10 miles","F","M","see","13","NonProj","No",29,24,"english",0,"Male","",3.57956666666667,0
-"838",83,1371,"Charley speaks Spanish","F","M","know","20","NonProj","No",30,24,"english",0,"Male","",3.57956666666667,0
-"839",83,904,"Isabella ate a steak on Sunday","M","F","establish","7","NonProj","No",31,24,"english",0,"Male","",3.57956666666667,0
-"840",83,1019,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",32,24,"english",0,"Male","",3.57956666666667,0
-"841",358,91696,"Olivia sleeps until noon","M","F","suggest","4","C","No",5,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"842",358,5309,"Owen shoveled snow last winter","F","M","reveal","17","NonProj","Yes",6,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,1
-"843",358,13051,"Sophia got a tattoo","M","M","be_right","5","C","Yes",7,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,1
-"844",358,9633,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",8,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"845",358,41824,"Zoe calculated the tip","M","M","establish","10","NonProj","No",9,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"846",358,12243,"Mia drank 2 cocktails last night","M","M","acknowledge","6","C","No",10,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"847",358,4515,"Isabella ate a steak on Sunday","M","F","inform","7","C","No",11,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"848",358,6524,"Julian dances salsa","F","F","pretend","18","NonProj","No",12,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"849",358,22335,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","Yes",13,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,1
-"850",358,7533,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","No",14,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"851",358,13770,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","No",15,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"852",358,5671,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",16,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,1
-"853",358,7321,"Emily bought a car yesterday","M","F","admit","8","C","No",17,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"854",358,34796,"Jon walks to work","F","F","see","19","NonProj","No",18,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"855",358,3555,"Emma studied on Saturday morning","M","M","prove","3","C","No",19,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"856",358,3017,"Jackson ran 10 miles","F","F","be_annoyed","13","NonProj","No",20,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"857",358,2494,"Charley speaks Spanish","F","F","discover","20","NonProj","No",21,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"858",358,2681,"Danny ate the last cupcake","F","F","confirm","11","C","No",22,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"859",358,2369,"Josh learned to ride a bike yesterday","F","F","confess","16","C","No",23,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"860",358,2187,"Mary is pregnant","M","M","say","1","C","No",24,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"861",358,1995,"Tony had a drink last night","F","F","think","15","NonProj","No",25,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"862",358,1680,"Frank got a cat","F","F","announce","12","C","No",26,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"863",358,1599,"Grace visited her sister","M","F","hear","9","C","No",27,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"864",358,1994,"Jayden rented a car","F","F","demonstrate","14","C","No",28,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"865",358,3524,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",29,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,1
-"866",358,3109,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",30,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,1
-"867",358,2196,"Josie went on vacation to France","M","M","know","2","NonProj","No",31,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
-"868",358,5093,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",32,28,"english",0,"Male","God bless and have a nice day! Jesus loves you. You gonna have an awesome career full of blessings! 
-PRice is very fair",6.53698333333333,0
 "869",234,41645,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",5,23,"English",0,"Male","1.00 is a fair price.",7.24425,0
 "870",234,8200,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",6,23,"English",0,"Male","1.00 is a fair price.",7.24425,1
 "871",234,9863,"Emma studied on Saturday morning","M","M","inform","3","C","Yes",7,23,"English",0,"Male","1.00 is a fair price.",7.24425,1
@@ -1091,34 +951,6 @@ PRice is very fair",6.53698333333333,0
 "1146",151,4711,"Josie went on vacation to France","M","F","be_right","2","C","Yes",30,32,"English",0,"Female","",3.79726666666667,1
 "1147",151,7999,"Charley speaks Spanish","F","F","confess","20","C","No",31,32,"English",0,"Female","",3.79726666666667,0
 "1148",151,5471,"Tony had a drink last night","F","M","discover","15","NonProj","Yes",32,32,"English",0,"Female","",3.79726666666667,1
-"1149",410,1982,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",5,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1150",410,1773,"Mary is pregnant","M","F","confess","1","C","Yes",6,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1151",410,2329,"Jackson ran 10 miles","F","M","admit","13","C","No",7,61,"ENGLISH",0,"Female","nice",2.43315,0
-"1152",410,1830,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","Yes",8,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1153",410,2168,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",9,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1154",410,2751,"Charley speaks Spanish","F","F","confirm","20","C","No",10,61,"ENGLISH",0,"Female","nice",2.43315,0
-"1155",410,1597,"Josie went on vacation to France","M","F","prove","2","C","Yes",11,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1156",410,1886,"Emily bought a car yesterday","M","F","suggest","8","C","Yes",12,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1157",410,1364,"Jayden rented a car","F","F","demonstrate","14","C","Yes",13,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1158",410,3286,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","Yes",14,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1159",410,2180,"Isabella ate a steak on Sunday","M","M","be_annoyed","7","NonProj","Yes",15,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1160",410,2792,"Grace visited her sister","M","M","inform","9","C","No",16,61,"ENGLISH",0,"Female","nice",2.43315,0
-"1161",410,1711,"Emma studied on Saturday morning","M","F","reveal","3","NonProj","Yes",17,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1162",410,1733,"Mia drank 2 cocktails last night","M","M","discover","6","NonProj","Yes",18,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1163",410,1831,"Zoe calculated the tip","M","M","hear","10","C","No",19,61,"ENGLISH",0,"Female","nice",2.43315,0
-"1164",410,1820,"Olivia sleeps until noon","M","M","announce","4","C","Yes",20,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1165",410,1733,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",21,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1166",410,1682,"Frank got a cat","F","F","be_right","12","C","Yes",22,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1167",410,1517,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","Yes",23,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1168",410,1832,"Sophia got a tattoo","M","M","establish","5","NonProj","Yes",24,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1169",410,1749,"Josh learned to ride a bike yesterday","F","F","think","16","NonProj","No",25,61,"ENGLISH",0,"Female","nice",2.43315,0
-"1170",410,1568,"Julian dances salsa","F","M","acknowledge","18","C","No",26,61,"ENGLISH",0,"Female","nice",2.43315,0
-"1171",410,1898,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",27,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1172",410,6050,"Tony had a drink last night","F","F","know","15","NonProj","Yes",28,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1173",410,1769,"Jon walks to work","F","F","see","19","NonProj","No",29,61,"ENGLISH",0,"Female","nice",2.43315,0
-"1174",410,1201,"Danny ate the last cupcake","F","M","pretend","11","NonProj","Yes",30,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1175",410,1415,"Owen shoveled snow last winter","F","F","say","17","C","Yes",31,61,"ENGLISH",0,"Female","nice",2.43315,1
-"1176",410,1717,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","Yes",32,61,"ENGLISH",0,"Female","nice",2.43315,1
 "1177",36,5020,"Josh learned to ride a bike yesterday","F","M","prove","16","C","Yes",5,43,"english",0,"Female","",3.58731666666667,1
 "1178",36,4483,"Owen shoveled snow last winter","F","F","establish","17","NonProj","Yes",6,43,"english",0,"Female","",3.58731666666667,1
 "1179",36,8806,"Josie went on vacation to France","M","F","confess","2","C","Yes",7,43,"english",0,"Female","",3.58731666666667,1
@@ -1175,34 +1007,6 @@ PRice is very fair",6.53698333333333,0
 "1230",420,4243,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",30,21,"English",0,"Male","I&quotechard like to know what percentage of the questions I got right.",3.60256666666667,0
 "1231",420,4731,"Julian dances salsa","F","M","announce","18","C","Yes",31,21,"English",0,"Male","I&quotechard like to know what percentage of the questions I got right.",3.60256666666667,1
 "1232",420,4333,"Jon walks to work","F","M","be_annoyed","19","NonProj","No",32,21,"English",0,"Male","I&quotechard like to know what percentage of the questions I got right.",3.60256666666667,0
-"1233",14,3888,"Grace visited her sister","M","F","suggest","9","C","Yes",5,60,"english",0,"Male","nice",3.07195,1
-"1234",14,2798,"Emily bought a car yesterday","M","F","demonstrate","8","C","Yes",6,60,"english",0,"Male","nice",3.07195,1
-"1235",14,1056,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",7,60,"english",0,"Male","nice",3.07195,1
-"1236",14,2367,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","No",8,60,"english",0,"Male","nice",3.07195,0
-"1237",14,951,"Emma studied on Saturday morning","M","M","see","3","NonProj","Yes",9,60,"english",0,"Male","nice",3.07195,1
-"1238",14,8152,"Isabella ate a steak on Sunday","M","F","announce","7","C","Yes",10,60,"english",0,"Male","nice",3.07195,1
-"1239",14,1216,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","Yes",11,60,"english",0,"Male","nice",3.07195,1
-"1240",14,904,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","Yes",12,60,"english",0,"Male","nice",3.07195,1
-"1241",14,11177,"Owen shoveled snow last winter","F","M","be_right","17","C","Yes",13,60,"english",0,"Male","nice",3.07195,1
-"1242",14,8295,"Julian dances salsa","F","M","hear","18","C","Yes",14,60,"english",0,"Male","nice",3.07195,1
-"1243",14,4216,"Jackson ran 10 miles","F","F","know","13","NonProj","Yes",15,60,"english",0,"Male","nice",3.07195,1
-"1244",14,2136,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","Yes",16,60,"english",0,"Male","nice",3.07195,1
-"1245",14,1088,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","Yes",17,60,"english",0,"Male","nice",3.07195,1
-"1246",14,872,"Mia drank 2 cocktails last night","M","F","confess","6","C","Yes",18,60,"english",0,"Male","nice",3.07195,1
-"1247",14,840,"Jayden rented a car","F","F","think","14","NonProj","Yes",19,60,"english",0,"Male","nice",3.07195,1
-"1248",14,928,"Danny ate the last cupcake","F","M","acknowledge","11","C","Yes",20,60,"english",0,"Male","nice",3.07195,1
-"1249",14,1184,"Charley speaks Spanish","F","F","pretend","20","NonProj","No",21,60,"english",0,"Male","nice",3.07195,0
-"1250",14,1088,"Sophia got a tattoo","M","F","be_annoyed","5","NonProj","Yes",22,60,"english",0,"Male","nice",3.07195,1
-"1251",14,29407,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","Yes",23,60,"english",0,"Male","nice",3.07195,1
-"1252",14,1024,"Josie went on vacation to France","M","F","discover","2","NonProj","Yes",24,60,"english",0,"Male","nice",3.07195,1
-"1253",14,2160,"Tony had a drink last night","F","F","confirm","15","C","No",25,60,"english",0,"Male","nice",3.07195,0
-"1254",14,784,"Frank got a cat","F","M","prove","12","C","Yes",26,60,"english",0,"Male","nice",3.07195,1
-"1255",14,7193,"Mary is pregnant","M","M","say","1","C","Yes",27,60,"english",0,"Male","nice",3.07195,1
-"1256",14,1943,"Olivia sleeps until noon","M","M","reveal","4","NonProj","Yes",28,60,"english",0,"Male","nice",3.07195,1
-"1257",14,1023,"Zoe calculated the tip","M","M","inform","10","C","Yes",29,60,"english",0,"Male","nice",3.07195,1
-"1258",14,936,"Josh learned to ride a bike yesterday","F","M","establish","16","NonProj","No",30,60,"english",0,"Male","nice",3.07195,0
-"1259",14,879,"Jon walks to work","F","F","admit","19","C","Yes",31,60,"english",0,"Male","nice",3.07195,1
-"1260",14,1152,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",32,60,"english",0,"Male","nice",3.07195,0
 "1261",121,6439,"Mary is pregnant","M","M","be_annoyed","1","NonProj","No",5,37,"English",0,"Male","I think this was very fair for the work.",5.53201666666667,0
 "1262",121,12528,"Emily bought a car yesterday","M","F","be_right","8","C","Yes",6,37,"English",0,"Male","I think this was very fair for the work.",5.53201666666667,1
 "1263",121,7261,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",7,37,"English",0,"Male","I think this was very fair for the work.",5.53201666666667,1
@@ -1399,34 +1203,6 @@ PRice is very fair",6.53698333333333,0
 "1482",189,3432,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","No",30,27,"English",0,"Female","I did the best I could, but I was a little confused as to if I should only say the sentences were contradictory if they were factual versus when someone said that they proved or knew something was true.",6.67858333333333,0
 "1483",189,2581,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",31,27,"English",0,"Female","I did the best I could, but I was a little confused as to if I should only say the sentences were contradictory if they were factual versus when someone said that they proved or knew something was true.",6.67858333333333,1
 "1484",189,7240,"Josh learned to ride a bike yesterday","F","F","know","16","NonProj","Yes",32,27,"English",0,"Female","I did the best I could, but I was a little confused as to if I should only say the sentences were contradictory if they were factual versus when someone said that they proved or knew something was true.",6.67858333333333,1
-"1513",393,8980,"Grace visited her sister","M","F","hear","9","C","Yes",5,40,"English",0,"Male","very nice",2.66135,1
-"1514",393,936,"Julian dances salsa","F","M","inform","18","C","Yes",6,40,"English",0,"Male","very nice",2.66135,1
-"1515",393,2871,"Emma studied on Saturday morning","M","F","demonstrate","3","C","Yes",7,40,"English",0,"Male","very nice",2.66135,1
-"1516",393,2248,"Jackson ran 10 miles","F","M","announce","13","C","Yes",8,40,"English",0,"Male","very nice",2.66135,1
-"1517",393,3782,"Emily bought a car yesterday","M","F","confirm","8","C","Yes",9,40,"English",0,"Male","very nice",2.66135,1
-"1518",393,1328,"Mia drank 2 cocktails last night","M","F","establish","6","NonProj","No",10,40,"English",0,"Male","very nice",2.66135,0
-"1519",393,1384,"Josh learned to ride a bike yesterday","F","F","think","16","NonProj","Yes",11,40,"English",0,"Male","very nice",2.66135,1
-"1520",393,1088,"Isabella ate a steak on Sunday","M","F","admit","7","C","Yes",12,40,"English",0,"Male","very nice",2.66135,1
-"1521",393,1464,"Owen shoveled snow last winter","F","F","see","17","NonProj","No",13,40,"English",0,"Male","very nice",2.66135,0
-"1522",393,1224,"Danny ate the last cupcake","F","F","say","11","C","Yes",14,40,"English",0,"Male","very nice",2.66135,1
-"1523",393,2512,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",15,40,"English",0,"Male","very nice",2.66135,1
-"1524",393,1760,"Jon walks to work","F","M","pretend","19","NonProj","Yes",16,40,"English",0,"Male","very nice",2.66135,1
-"1525",393,4975,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","Yes",17,40,"English",0,"Male","very nice",2.66135,1
-"1526",393,3240,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","Yes",18,40,"English",0,"Male","very nice",2.66135,1
-"1527",393,1240,"Charley speaks Spanish","F","F","be_right","20","C","No",19,40,"English",0,"Male","very nice",2.66135,0
-"1528",393,3136,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",20,40,"English",0,"Male","very nice",2.66135,1
-"1529",393,1175,"Mary is pregnant","M","F","acknowledge","1","C","No",21,40,"English",0,"Male","very nice",2.66135,0
-"1530",393,1071,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","Yes",22,40,"English",0,"Male","very nice",2.66135,1
-"1531",393,896,"Josie went on vacation to France","M","F","confess","2","C","Yes",23,40,"English",0,"Male","very nice",2.66135,1
-"1532",393,1584,"Frank got a cat","F","M","reveal","12","NonProj","Yes",24,40,"English",0,"Male","very nice",2.66135,1
-"1533",393,1175,"Tony had a drink last night","F","F","discover","15","NonProj","Yes",25,40,"English",0,"Male","very nice",2.66135,1
-"1534",393,863,"Olivia sleeps until noon","M","M","be_annoyed","4","NonProj","Yes",26,40,"English",0,"Male","very nice",2.66135,1
-"1535",393,839,"Zoe calculated the tip","M","F","suggest","10","C","Yes",27,40,"English",0,"Male","very nice",2.66135,1
-"1536",393,759,"Jayden rented a car","F","M","know","14","NonProj","Yes",28,40,"English",0,"Male","very nice",2.66135,1
-"1537",393,791,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","Yes",29,40,"English",0,"Male","very nice",2.66135,1
-"1538",393,840,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","Yes",30,40,"English",0,"Male","very nice",2.66135,1
-"1539",393,1199,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","No",31,40,"English",0,"Male","very nice",2.66135,0
-"1540",393,816,"Sophia got a tattoo","M","M","prove","5","C","Yes",32,40,"English",0,"Male","very nice",2.66135,1
 "1541",333,5439,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",5,47,"English",0,"Male","This seems perfectly fair compared to others I&quotecharve done.",4.83166666666667,0
 "1542",333,10440,"Tony had a drink last night","F","F","acknowledge","15","C","No",6,47,"English",0,"Male","This seems perfectly fair compared to others I&quotecharve done.",4.83166666666667,0
 "1543",333,5135,"Sophia got a tattoo","M","F","prove","5","C","Yes",7,47,"English",0,"Male","This seems perfectly fair compared to others I&quotecharve done.",4.83166666666667,1
@@ -1763,62 +1539,6 @@ PRice is very fair",6.53698333333333,0
 "1930",198,4008,"Isabella ate a steak on Sunday","M","F","confess","7","C","Yes",30,23,"English",0,"Female","",2.84656666666667,1
 "1931",198,4040,"Josie went on vacation to France","M","F","prove","2","C","Yes",31,23,"English",0,"Female","",2.84656666666667,1
 "1932",198,3271,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",32,23,"English",0,"Female","",2.84656666666667,0
-"1933",269,1816,"Isabella ate a steak on Sunday","M","M","suggest","7","C","Yes",5,55,"English",0,"Female","Nice",5.17141666666667,1
-"1934",269,1742,"Owen shoveled snow last winter","F","M","prove","17","C","No",6,55,"English",0,"Female","Nice",5.17141666666667,0
-"1935",269,1367,"Jackson ran 10 miles","F","F","pretend","13","NonProj","Yes",7,55,"English",0,"Female","Nice",5.17141666666667,1
-"1936",269,1321,"Emily bought a car yesterday","M","F","know","8","NonProj","Yes",8,55,"English",0,"Female","Nice",5.17141666666667,1
-"1937",269,1568,"Tony had a drink last night","F","F","acknowledge","15","C","Yes",9,55,"English",0,"Female","Nice",5.17141666666667,1
-"1938",269,1231,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","Yes",10,55,"English",0,"Female","Nice",5.17141666666667,1
-"1939",269,1528,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","No",11,55,"English",0,"Female","Nice",5.17141666666667,0
-"1940",269,1256,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","Yes",12,55,"English",0,"Female","Nice",5.17141666666667,1
-"1941",269,1399,"Julian dances salsa","F","M","inform","18","C","Yes",13,55,"English",0,"Female","Nice",5.17141666666667,1
-"1942",269,1263,"Grace visited her sister","M","M","be_right","9","C","Yes",14,55,"English",0,"Female","Nice",5.17141666666667,1
-"1943",269,1513,"Jon walks to work","F","M","establish","19","NonProj","No",15,55,"English",0,"Female","Nice",5.17141666666667,0
-"1944",269,1328,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","Yes",16,55,"English",0,"Female","Nice",5.17141666666667,1
-"1945",269,1383,"Zoe calculated the tip","M","F","reveal","10","NonProj","Yes",17,55,"English",0,"Female","Nice",5.17141666666667,1
-"1946",269,1638,"Mia drank 2 cocktails last night","M","F","be_annoyed","6","NonProj","No",18,55,"English",0,"Female","Nice",5.17141666666667,0
-"1947",269,1225,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",19,55,"English",0,"Female","Nice",5.17141666666667,1
-"1948",269,1480,"Emma studied on Saturday morning","M","M","confess","3","C","Yes",20,55,"English",0,"Female","Nice",5.17141666666667,1
-"1949",269,1609,"Frank got a cat","F","F","confirm","12","C","Yes",21,55,"English",0,"Female","Nice",5.17141666666667,1
-"1950",269,1128,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","Yes",22,55,"English",0,"Female","Nice",5.17141666666667,1
-"1951",269,1312,"Mary is pregnant","M","M","think","1","NonProj","No",23,55,"English",0,"Female","Nice",5.17141666666667,0
-"1952",269,1095,"Jayden rented a car","F","F","see","14","NonProj","Yes",24,55,"English",0,"Female","Nice",5.17141666666667,1
-"1953",269,1159,"Charley speaks Spanish","F","M","demonstrate","20","C","Yes",25,55,"English",0,"Female","Nice",5.17141666666667,1
-"1954",269,1326,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",26,55,"English",0,"Female","Nice",5.17141666666667,1
-"1955",269,1224,"Sophia got a tattoo","M","F","hear","5","C","Yes",27,55,"English",0,"Female","Nice",5.17141666666667,1
-"1956",269,1041,"Josie went on vacation to France","M","M","say","2","C","Yes",28,55,"English",0,"Female","Nice",5.17141666666667,1
-"1957",269,1664,"Olivia sleeps until noon","M","F","admit","4","C","No",29,55,"English",0,"Female","Nice",5.17141666666667,0
-"1958",269,1223,"Josh learned to ride a bike yesterday","F","F","announce","16","C","Yes",30,55,"English",0,"Female","Nice",5.17141666666667,1
-"1959",269,1519,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",31,55,"English",0,"Female","Nice",5.17141666666667,1
-"1960",269,2751,"Danny ate the last cupcake","F","F","discover","11","NonProj","Yes",32,55,"English",0,"Female","Nice",5.17141666666667,1
-"1961",399,1867,"Isabella ate a steak on Sunday","M","F","discover","7","NonProj","Yes",5,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1962",399,871,"Sophia got a tattoo","M","F","inform","5","C","Yes",6,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1963",399,1623,"Grace visited her sister","M","M","suggest","9","C","Yes",7,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1964",399,1167,"Tony had a drink last night","F","F","reveal","15","NonProj","Yes",8,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1965",399,896,"Owen shoveled snow last winter","F","F","think","17","NonProj","Yes",9,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1966",399,1255,"Mary is pregnant","M","M","say","1","C","Yes",10,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1967",399,984,"Julian dances salsa","F","F","confirm","18","C","Yes",11,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1968",399,976,"Emma studied on Saturday morning","M","M","establish","3","NonProj","Yes",12,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1969",399,1016,"Jayden rented a car","F","F","confess","14","C","Yes",13,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1970",399,1080,"Olivia sleeps until noon","M","F","prove","4","C","No",14,44,"ENGLISH",0,"Male","NICE",5.7381,0
-"1971",399,896,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","Yes",15,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1972",399,1392,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",16,44,"ENGLISH",0,"Male","NICE",5.7381,0
-"1973",399,1448,"Mia drank 2 cocktails last night","M","F","be_annoyed","6","NonProj","Yes",17,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1974",399,871,"Emily bought a car yesterday","M","M","be_right","8","C","Yes",18,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1975",399,887,"Josie went on vacation to France","M","F","see","2","NonProj","Yes",19,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1976",399,935,"Jon walks to work","F","F","hear","19","C","Yes",20,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1977",399,887,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",21,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1978",399,847,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","Yes",22,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1979",399,855,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","Yes",23,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1980",399,855,"Charley speaks Spanish","F","F","pretend","20","NonProj","Yes",24,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1981",399,1464,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",25,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1982",399,936,"Zoe calculated the tip","M","M","announce","10","C","Yes",26,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1983",399,912,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",27,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1984",399,6056,"Frank got a cat","F","M","know","12","NonProj","Yes",28,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1985",399,3551,"Danny ate the last cupcake","F","M","admit","11","C","Yes",29,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1986",399,1511,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","Yes",30,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1987",399,1167,"Jackson ran 10 miles","F","F","demonstrate","13","C","Yes",31,44,"ENGLISH",0,"Male","NICE",5.7381,1
-"1988",399,993,"Josh learned to ride a bike yesterday","F","F","acknowledge","16","C","Yes",32,44,"ENGLISH",0,"Male","NICE",5.7381,1
 "1989",197,13624,"Jon walks to work","F","M","be_annoyed","19","NonProj","No",5,48,"English",0,"Male","Interesting and fun task. Thank you.
 $1.00 is a fair price for this hit.",9.54336666666667,0
 "1990",197,9259,"Tony had a drink last night","F","F","know","15","NonProj","No",6,48,"English",0,"Male","Interesting and fun task. Thank you.
@@ -2211,34 +1931,6 @@ $1.00 is a fair price for this hit.",9.54336666666667,0
 "2378",68,7104,"Josie went on vacation to France","M","F","prove","2","C","Yes",30,59,"English",0,"Female","I&quotecharm not sure what this was about. I think that anything over $1.00 would be fair.",6.2321,1
 "2379",68,5266,"Jackson ran 10 miles","F","M","establish","13","NonProj","Yes",31,59,"English",0,"Female","I&quotecharm not sure what this was about. I think that anything over $1.00 would be fair.",6.2321,1
 "2380",68,7527,"Zoe calculated the tip","M","M","demonstrate","10","C","Yes",32,59,"English",0,"Female","I&quotecharm not sure what this was about. I think that anything over $1.00 would be fair.",6.2321,1
-"2381",123,4739,"Danny ate the last cupcake","F","M","know","11","NonProj","Yes",5,25,"English",0,"Male","",2.29941666666667,1
-"2382",123,6380,"Mary is pregnant","M","F","pretend","1","NonProj","No",6,25,"English",0,"Male","",2.29941666666667,0
-"2383",123,7173,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","Yes",7,25,"English",0,"Male","",2.29941666666667,1
-"2384",123,3847,"Frank got a cat","F","M","discover","12","NonProj","Yes",8,25,"English",0,"Male","",2.29941666666667,1
-"2385",123,3286,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",9,25,"English",0,"Male","",2.29941666666667,0
-"2386",123,3854,"Josh learned to ride a bike yesterday","F","M","acknowledge","16","C","Yes",10,25,"English",0,"Male","",2.29941666666667,1
-"2387",123,3611,"Charley speaks Spanish","F","F","inform","20","C","Yes",11,25,"English",0,"Male","",2.29941666666667,1
-"2388",123,3653,"Julian dances salsa","F","F","announce","18","C","Yes",12,25,"English",0,"Male","",2.29941666666667,1
-"2389",123,3199,"Jackson ran 10 miles","F","M","establish","13","NonProj","Yes",13,25,"English",0,"Male","",2.29941666666667,1
-"2390",123,3372,"Josie went on vacation to France","M","M","confirm","2","C","Yes",14,25,"English",0,"Male","",2.29941666666667,1
-"2391",123,3734,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","No",15,25,"English",0,"Male","",2.29941666666667,0
-"2392",123,4209,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",16,25,"English",0,"Male","",2.29941666666667,1
-"2393",123,3372,"Isabella ate a steak on Sunday","M","F","see","7","NonProj","Yes",17,25,"English",0,"Male","",2.29941666666667,1
-"2394",123,3427,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",18,25,"English",0,"Male","",2.29941666666667,1
-"2395",123,3124,"Mia drank 2 cocktails last night","M","F","be_annoyed","6","NonProj","Yes",19,25,"English",0,"Male","",2.29941666666667,1
-"2396",123,2797,"Jayden rented a car","F","F","hear","14","C","Yes",20,25,"English",0,"Male","",2.29941666666667,1
-"2397",123,4321,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",21,25,"English",0,"Male","",2.29941666666667,0
-"2398",123,3438,"Zoe calculated the tip","M","M","prove","10","C","Yes",22,25,"English",0,"Male","",2.29941666666667,1
-"2399",123,3505,"Jon walks to work","F","F","be_right","19","C","Yes",23,25,"English",0,"Male","",2.29941666666667,1
-"2400",123,4039,"Owen shoveled snow last winter","F","M","think","17","NonProj","No",24,25,"English",0,"Male","",2.29941666666667,0
-"2401",123,2702,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","No",25,25,"English",0,"Male","",2.29941666666667,0
-"2402",123,2772,"Olivia sleeps until noon","M","M","confess","4","C","Yes",26,25,"English",0,"Male","",2.29941666666667,1
-"2403",123,2850,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",27,25,"English",0,"Male","",2.29941666666667,1
-"2404",123,3043,"Emily bought a car yesterday","M","F","reveal","8","NonProj","Yes",28,25,"English",0,"Male","",2.29941666666667,1
-"2405",123,2938,"Sophia got a tattoo","M","M","say","5","C","Yes",29,25,"English",0,"Male","",2.29941666666667,1
-"2406",123,2881,"Emma studied on Saturday morning","M","F","suggest","3","C","No",30,25,"English",0,"Male","",2.29941666666667,0
-"2407",123,2813,"Tony had a drink last night","F","F","admit","15","C","Yes",31,25,"English",0,"Male","",2.29941666666667,1
-"2408",123,3338,"Grace visited her sister","M","M","demonstrate","9","C","Yes",32,25,"English",0,"Male","",2.29941666666667,1
 "2409",246,8550,"Isabella ate a steak on Sunday","M","M","be_annoyed","7","NonProj","No",5,38,"English",0,"Female","",3.16471666666667,0
 "2410",246,5843,"Josh learned to ride a bike yesterday","F","M","establish","16","NonProj","Yes",6,38,"English",0,"Female","",3.16471666666667,1
 "2411",246,4664,"Josie went on vacation to France","M","M","acknowledge","2","C","Yes",7,38,"English",0,"Female","",3.16471666666667,1
@@ -2295,34 +1987,6 @@ $1.00 is a fair price for this hit.",9.54336666666667,0
 "2490",133,6656,"Emma studied on Saturday morning","M","M","hear","3","C","No",30,41,"English",0,"Female","",5.01431666666667,0
 "2491",133,4583,"Mary is pregnant","M","F","reveal","1","NonProj","Yes",31,41,"English",0,"Female","",5.01431666666667,1
 "2492",133,6912,"Jackson ran 10 miles","F","F","say","13","C","No",32,41,"English",0,"Female","",5.01431666666667,0
-"2493",172,6971,"Julian dances salsa","F","F","hear","18","C","Yes",5,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2494",172,3558,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",6,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2495",172,4354,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",7,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2496",172,3170,"Owen shoveled snow last winter","F","F","discover","17","NonProj","Yes",8,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2497",172,3641,"Zoe calculated the tip","M","F","see","10","NonProj","Yes",9,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2498",172,2665,"Josie went on vacation to France","M","M","acknowledge","2","C","Yes",10,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2499",172,2941,"Sophia got a tattoo","M","M","demonstrate","5","C","Yes",11,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2500",172,2280,"Emily bought a car yesterday","M","F","think","8","NonProj","Yes",12,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2501",172,3928,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",13,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2502",172,14582,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",14,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,0
-"2503",172,2387,"Mary is pregnant","M","F","confirm","1","C","Yes",15,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2504",172,11613,"Jackson ran 10 miles","F","M","suggest","13","C","Yes",16,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2505",172,4944,"Mia drank 2 cocktails last night","M","F","admit","6","C","Yes",17,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2506",172,7097,"Charley speaks Spanish","F","M","establish","20","NonProj","Yes",18,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2507",172,3377,"Jayden rented a car","F","F","be_right","14","C","Yes",19,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2508",172,3816,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",20,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2509",172,5342,"Jon walks to work","F","M","know","19","NonProj","Yes",21,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2510",172,3958,"Isabella ate a steak on Sunday","M","M","announce","7","C","Yes",22,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2511",172,10146,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","Yes",23,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2512",172,8488,"Josh learned to ride a bike yesterday","F","F","say","16","C","Yes",24,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2513",172,3618,"Grace visited her sister","M","F","pretend","9","NonProj","Yes",25,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2514",172,12373,"Olivia sleeps until noon","M","F","prove","4","C","Yes",26,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2515",172,2043,"Emma studied on Saturday morning","M","M","confess","3","C","Yes",27,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2516",172,3935,"Tony had a drink last night","F","M","be_annoyed","15","NonProj","Yes",28,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2517",172,2608,"Frank got a cat","F","M","reveal","12","NonProj","Yes",29,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2518",172,2816,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",30,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
-"2519",172,3854,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",31,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,0
-"2520",172,4880,"Danny ate the last cupcake","F","F","inform","11","C","Yes",32,36,"english",0,"Male","price was fair, just wasnt really sure what u were asking for.",3.70025,1
 "2521",381,5798,"Charley speaks Spanish","F","F","know","20","NonProj","Yes",5,51,"ENGLISH",0,"Female","",5.06825,1
 "2522",381,5976,"Mia drank 2 cocktails last night","M","M","be_right","6","C","Yes",6,51,"ENGLISH",0,"Female","",5.06825,1
 "2523",381,10655,"Tony had a drink last night","F","F","suggest","15","C","No",7,51,"ENGLISH",0,"Female","",5.06825,0
@@ -2463,34 +2127,6 @@ $1.00 is a fair price for this hit.",9.54336666666667,0
 "2658",61,3161,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","No",30,40,"English",0,"Male","Great survey, the price was fair. ",2.44993333333333,0
 "2659",61,4136,"Danny ate the last cupcake","F","F","admit","11","C","Yes",31,40,"English",0,"Male","Great survey, the price was fair. ",2.44993333333333,1
 "2660",61,2905,"Josh learned to ride a bike yesterday","F","M","hear","16","C","Yes",32,40,"English",0,"Male","Great survey, the price was fair. ",2.44993333333333,1
-"2717",87,6646,"Frank got a cat","F","F","know","12","NonProj","Yes",5,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2718",87,4120,"Emily bought a car yesterday","M","F","prove","8","C","No",6,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,0
-"2719",87,2639,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","Yes",7,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2720",87,2223,"Mary is pregnant","M","M","see","1","NonProj","No",8,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,0
-"2721",87,4104,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",9,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2722",87,1576,"Owen shoveled snow last winter","F","F","think","17","NonProj","Yes",10,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2723",87,7111,"Jackson ran 10 miles","F","F","inform","13","C","Yes",11,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2724",87,2743,"Josh learned to ride a bike yesterday","F","F","pretend","16","NonProj","No",12,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,0
-"2725",87,5440,"Mia drank 2 cocktails last night","M","F","confess","6","C","Yes",13,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2726",87,7880,"Emma studied on Saturday morning","M","F","acknowledge","3","C","Yes",14,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2727",87,6648,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","Yes",15,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2728",87,8463,"Tony had a drink last night","F","M","admit","15","C","Yes",16,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2729",87,2968,"Jayden rented a car","F","F","be_annoyed","14","NonProj","No",17,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,0
-"2730",87,2440,"Danny ate the last cupcake","F","M","demonstrate","11","C","Yes",18,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2731",87,2464,"Zoe calculated the tip","M","F","reveal","10","NonProj","Yes",19,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2732",87,7744,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",20,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,0
-"2733",87,6646,"Olivia sleeps until noon","M","M","be_right","4","C","Yes",21,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2734",87,1911,"Sophia got a tattoo","M","M","establish","5","NonProj","No",22,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,0
-"2735",87,1223,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","Yes",23,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2736",87,2416,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","No",24,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,0
-"2737",87,1519,"Jon walks to work","F","F","discover","19","NonProj","No",25,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,0
-"2738",87,1359,"Josie went on vacation to France","M","F","confirm","2","C","Yes",26,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2739",87,4008,"Julian dances salsa","F","F","suggest","18","C","Yes",27,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2740",87,2696,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",28,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2741",87,2040,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",29,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2742",87,2160,"Isabella ate a steak on Sunday","M","F","announce","7","C","Yes",30,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
-"2743",87,1488,"Grace visited her sister","M","F","say","9","C","No",31,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,0
-"2744",87,1590,"Charley speaks Spanish","F","M","hear","20","C","Yes",32,51,"English",0,"Male","This experiment is very useful to English conversation.",5.13613333333333,1
 "2745",190,11182,"Mia drank 2 cocktails last night","M","F","hear","6","C","No",5,49,"English",0,"Male","This study was interesting.",6.36611666666667,0
 "2746",190,5951,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","No",6,49,"English",0,"Male","This study was interesting.",6.36611666666667,0
 "2747",190,5000,"Emma studied on Saturday morning","M","F","establish","3","NonProj","Yes",7,49,"English",0,"Male","This study was interesting.",6.36611666666667,1
@@ -2771,34 +2407,6 @@ $1.00 is a fair price for this hit.",9.54336666666667,0
 "3050",4,6366,"Charley speaks Spanish","F","F","reveal","20","NonProj","Yes",30,63,"english",0,"Female","",4.63371666666667,1
 "3051",4,5294,"Julian dances salsa","F","M","prove","18","C","Yes",31,63,"english",0,"Female","",4.63371666666667,1
 "3052",4,6420,"Sophia got a tattoo","M","F","demonstrate","5","C","Yes",32,63,"english",0,"Female","",4.63371666666667,1
-"3053",39,18732,"Josie went on vacation to France","M","F","think","2","NonProj","Yes",5,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3054",39,2022,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",6,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3055",39,1808,"Frank got a cat","F","F","inform","12","C","Yes",7,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3056",39,1343,"Jon walks to work","F","M","be_right","19","C","Yes",8,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3057",39,1752,"Olivia sleeps until noon","M","M","admit","4","C","Yes",9,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3058",39,1263,"Charley speaks Spanish","F","F","confirm","20","C","Yes",10,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3059",39,1336,"Emily bought a car yesterday","M","F","see","8","NonProj","No",11,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,0
-"3060",39,3274,"Grace visited her sister","M","M","confess","9","C","Yes",12,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3061",39,3248,"Isabella ate a steak on Sunday","M","M","suggest","7","C","Yes",13,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3062",39,1095,"Mia drank 2 cocktails last night","M","F","discover","6","NonProj","Yes",14,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3063",39,1263,"Tony had a drink last night","F","F","know","15","NonProj","Yes",15,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3064",39,1280,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","Yes",16,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3065",39,1015,"Sophia got a tattoo","M","F","reveal","5","NonProj","Yes",17,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3066",39,991,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",18,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,0
-"3067",39,1015,"Jackson ran 10 miles","F","M","prove","13","C","Yes",19,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3068",39,1088,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",20,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3069",39,1063,"Owen shoveled snow last winter","F","F","hear","17","C","Yes",21,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3070",39,1087,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",22,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3071",39,1064,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",23,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3072",39,1041,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","No",24,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,0
-"3073",39,1214,"Emma studied on Saturday morning","M","F","acknowledge","3","C","Yes",25,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3074",39,936,"Julian dances salsa","F","M","announce","18","C","Yes",26,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3075",39,936,"Zoe calculated the tip","M","F","say","10","C","Yes",27,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3076",39,912,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","Yes",28,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3077",39,921,"Mary is pregnant","M","F","pretend","1","NonProj","Yes",29,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3078",39,855,"Danny ate the last cupcake","F","F","be_annoyed","11","NonProj","Yes",30,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3079",39,960,"Jayden rented a car","F","M","establish","14","NonProj","Yes",31,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,1
-"3080",39,1110,"Josh learned to ride a bike yesterday","F","M","demonstrate","16","C","No",32,40,"ENGLISH",0,"Male","GOOD",4.19356666666667,0
 "3081",427,8536,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",5,22,"English",0,"Female","Interesting experiment, and I wonder what the results will end up being. There were one&quotechars that I had trouble with, but this was a very fair maybe even more than fair price. Thanks! ",6.07595,1
 "3082",427,4822,"Owen shoveled snow last winter","F","M","say","17","C","Yes",6,22,"English",0,"Female","Interesting experiment, and I wonder what the results will end up being. There were one&quotechars that I had trouble with, but this was a very fair maybe even more than fair price. Thanks! ",6.07595,1
 "3083",427,5376,"Isabella ate a steak on Sunday","M","M","prove","7","C","Yes",7,22,"English",0,"Female","Interesting experiment, and I wonder what the results will end up being. There were one&quotechars that I had trouble with, but this was a very fair maybe even more than fair price. Thanks! ",6.07595,1
@@ -3135,34 +2743,6 @@ $1.00 is a fair price for this hit.",9.54336666666667,0
 "3442",34,5134,"Josie went on vacation to France","M","F","acknowledge","2","C","Yes",30,53,"English",0,"Male","I was on the fence about a couple of them. The pay for the work is very fair.",4.65926666666667,1
 "3443",34,3604,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",31,53,"English",0,"Male","I was on the fence about a couple of them. The pay for the work is very fair.",4.65926666666667,1
 "3444",34,6336,"Zoe calculated the tip","M","M","say","10","C","No",32,53,"English",0,"Male","I was on the fence about a couple of them. The pay for the work is very fair.",4.65926666666667,0
-"3445",294,11843,"Josie went on vacation to France","M","M","reveal","2","NonProj","No",5,41,"english",0,"Female","",8.96775,0
-"3446",294,12671,"Jayden rented a car","F","F","discover","14","NonProj","Yes",6,41,"english",0,"Female","",8.96775,1
-"3447",294,3597,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",7,41,"english",0,"Female","",8.96775,1
-"3448",294,2032,"Emily bought a car yesterday","M","F","prove","8","C","No",8,41,"english",0,"Female","",8.96775,0
-"3449",294,7091,"Emma studied on Saturday morning","M","F","pretend","3","NonProj","Yes",9,41,"english",0,"Female","",8.96775,1
-"3450",294,2254,"Grace visited her sister","M","M","say","9","C","Yes",10,41,"english",0,"Female","",8.96775,1
-"3451",294,1570,"Mia drank 2 cocktails last night","M","F","see","6","NonProj","No",11,41,"english",0,"Female","",8.96775,0
-"3452",294,2483,"Frank got a cat","F","M","establish","12","NonProj","Yes",12,41,"english",0,"Female","",8.96775,1
-"3453",294,1179,"Isabella ate a steak on Sunday","M","F","confess","7","C","Yes",13,41,"english",0,"Female","",8.96775,1
-"3454",294,1699,"Owen shoveled snow last winter","F","F","hear","17","C","No",14,41,"english",0,"Female","",8.96775,0
-"3455",294,1714,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",15,41,"english",0,"Female","",8.96775,1
-"3456",294,971,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",16,41,"english",0,"Female","",8.96775,1
-"3457",294,3094,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","Yes",17,41,"english",0,"Female","",8.96775,1
-"3458",294,1115,"Mary is pregnant","M","F","acknowledge","1","C","Yes",18,41,"english",0,"Female","",8.96775,1
-"3459",294,1640,"Tony had a drink last night","F","F","confirm","15","C","No",19,41,"english",0,"Female","",8.96775,0
-"3460",294,1796,"Sophia got a tattoo","M","F","inform","5","C","Yes",20,41,"english",0,"Female","",8.96775,1
-"3461",294,2009,"Danny ate the last cupcake","F","M","announce","11","C","Yes",21,41,"english",0,"Female","",8.96775,1
-"3462",294,1633,"Zoe calculated the tip","M","F","know","10","NonProj","Yes",22,41,"english",0,"Female","",8.96775,1
-"3463",294,1627,"Jackson ran 10 miles","F","M","suggest","13","C","Yes",23,41,"english",0,"Female","",8.96775,1
-"3464",294,1425,"Josh learned to ride a bike yesterday","F","F","admit","16","C","No",24,41,"english",0,"Female","",8.96775,0
-"3465",294,1684,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","Yes",25,41,"english",0,"Female","",8.96775,1
-"3466",294,1429,"Charley speaks Spanish","F","F","think","20","NonProj","Yes",26,41,"english",0,"Female","",8.96775,1
-"3467",294,1809,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",27,41,"english",0,"Female","",8.96775,0
-"3468",294,2158,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","Yes",28,41,"english",0,"Female","",8.96775,1
-"3469",294,1412,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",29,41,"english",0,"Female","",8.96775,1
-"3470",294,1332,"Julian dances salsa","F","M","be_annoyed","18","NonProj","Yes",30,41,"english",0,"Female","",8.96775,1
-"3471",294,1931,"Olivia sleeps until noon","M","F","demonstrate","4","C","Yes",31,41,"english",0,"Female","",8.96775,1
-"3472",294,1436,"Jon walks to work","F","M","be_right","19","C","No",32,41,"english",0,"Female","",8.96775,0
 "3473",315,5272,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",5,45,"English",0,"Female","",4.70745,1
 "3474",315,6540,"Frank got a cat","F","M","demonstrate","12","C","Yes",6,45,"English",0,"Female","",4.70745,1
 "3475",315,4747,"Charley speaks Spanish","F","M","know","20","NonProj","Yes",7,45,"English",0,"Female","",4.70745,1
@@ -3919,34 +3499,6 @@ $1.00 is a fair price for this hit.",9.54336666666667,0
 "4310",63,4919,"Emily bought a car yesterday","M","F","pretend","8","NonProj","Yes",30,38,"English",0,"Female","",3.75051666666667,1
 "4311",63,4847,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",31,38,"English",0,"Female","",3.75051666666667,1
 "4312",63,13629,"Charley speaks Spanish","F","M","inform","20","C","Yes",32,38,"English",0,"Female","",3.75051666666667,1
-"4313",312,9808,"Mary is pregnant","M","M","see","1","NonProj","No",5,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4314",312,13309,"Frank got a cat","F","M","be_right","12","C","No",6,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4315",312,11322,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","No",7,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4316",312,9802,"Danny ate the last cupcake","F","M","be_annoyed","11","NonProj","No",8,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4317",312,8256,"Isabella ate a steak on Sunday","M","F","think","7","NonProj","No",9,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4318",312,8396,"Josh learned to ride a bike yesterday","F","F","know","16","NonProj","No",10,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4319",312,5914,"Emily bought a car yesterday","M","F","pretend","8","NonProj","No",11,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4320",312,5660,"Tony had a drink last night","F","M","confirm","15","C","No",12,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4321",312,6680,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","No",13,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4322",312,7000,"Owen shoveled snow last winter","F","F","say","17","C","No",14,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4323",312,7208,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",15,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4324",312,8052,"Mia drank 2 cocktails last night","M","M","hear","6","C","No",16,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4325",312,5817,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","No",17,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4326",312,4995,"Charley speaks Spanish","F","F","confess","20","C","No",18,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4327",312,7143,"Olivia sleeps until noon","M","F","suggest","4","C","No",19,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4328",312,5696,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","No",20,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4329",312,6668,"Jayden rented a car","F","F","establish","14","NonProj","No",21,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4330",312,5096,"Jackson ran 10 miles","F","M","prove","13","C","No",22,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4331",312,5729,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","No",23,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4332",312,6117,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","No",24,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4333",312,5268,"Sophia got a tattoo","M","M","announce","5","C","No",25,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4334",312,3358,"Jon walks to work","F","F","admit","19","C","No",26,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4335",312,5107,"Josie went on vacation to France","M","M","discover","2","NonProj","No",27,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4336",312,4995,"Julian dances salsa","F","M","acknowledge","18","C","No",28,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4337",312,5392,"Grace visited her sister","M","M","reveal","9","NonProj","No",29,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4338",312,6875,"Zoe calculated the tip","M","M","demonstrate","10","C","No",30,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4339",312,4902,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","No",31,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
-"4340",312,6434,"Emma studied on Saturday morning","M","M","inform","3","C","No",32,46,"English",0,"Male","I think a fair price is the 1.00 that I agreed on.",5.80093333333333,0
 "4341",26,9153,"Jackson ran 10 miles","F","M","inform","13","C","No",5,35,"English",0,"Female","1.00 is a fair price",4.94931666666667,0
 "4342",26,9229,"Danny ate the last cupcake","F","M","pretend","11","NonProj","No",6,35,"English",0,"Female","1.00 is a fair price",4.94931666666667,0
 "4343",26,6289,"Mary is pregnant","M","F","think","1","NonProj","No",7,35,"English",0,"Female","1.00 is a fair price",4.94931666666667,0
@@ -4115,34 +3667,6 @@ $1.00 is a fair price for this hit.",9.54336666666667,0
 "4534",263,3214,"Jackson ran 10 miles","F","F","see","13","NonProj","Yes",30,49,"English",0,"Male","Thank you, $1 is fair, especially considering some requesters here sometimes want to pay what equates to 75 cents an hour!",4.80368333333333,1
 "4535",263,2710,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",31,49,"English",0,"Male","Thank you, $1 is fair, especially considering some requesters here sometimes want to pay what equates to 75 cents an hour!",4.80368333333333,1
 "4536",263,7277,"Sophia got a tattoo","M","F","inform","5","C","No",32,49,"English",0,"Male","Thank you, $1 is fair, especially considering some requesters here sometimes want to pay what equates to 75 cents an hour!",4.80368333333333,0
-"4565",163,4481,"Sophia got a tattoo","M","F","think","5","NonProj","No",5,27,"ENGLISH",0,"Male","",3.45181666666667,0
-"4566",163,4890,"Danny ate the last cupcake","F","F","know","11","NonProj","Yes",6,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4567",163,6488,"Mary is pregnant","M","M","suggest","1","C","Yes",7,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4568",163,7652,"Mia drank 2 cocktails last night","M","F","pretend","6","NonProj","No",8,27,"ENGLISH",0,"Male","",3.45181666666667,0
-"4569",163,2686,"Zoe calculated the tip","M","F","confess","10","C","Yes",9,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4570",163,4595,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",10,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4571",163,3510,"Charley speaks Spanish","F","F","reveal","20","NonProj","Yes",11,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4572",163,5020,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",12,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4573",163,2816,"Emma studied on Saturday morning","M","F","say","3","C","Yes",13,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4574",163,2646,"Emily bought a car yesterday","M","F","acknowledge","8","C","Yes",14,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4575",163,6415,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",15,27,"ENGLISH",0,"Male","",3.45181666666667,0
-"4576",163,5115,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",16,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4577",163,3934,"Jayden rented a car","F","M","inform","14","C","Yes",17,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4578",163,2914,"Grace visited her sister","M","F","establish","9","NonProj","Yes",18,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4579",163,4807,"Isabella ate a steak on Sunday","M","M","hear","7","C","Yes",19,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4580",163,6063,"Josie went on vacation to France","M","M","be_right","2","C","Yes",20,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4581",163,3880,"Jackson ran 10 miles","F","M","see","13","NonProj","Yes",21,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4582",163,2714,"Olivia sleeps until noon","M","F","confirm","4","C","Yes",22,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4583",163,4690,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",23,27,"ENGLISH",0,"Male","",3.45181666666667,0
-"4584",163,3832,"Josh learned to ride a bike yesterday","F","M","announce","16","C","Yes",24,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4585",163,2168,"Tony had a drink last night","F","F","demonstrate","15","C","Yes",25,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4586",163,6286,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","No",26,27,"ENGLISH",0,"Male","",3.45181666666667,0
-"4587",163,5073,"Frank got a cat","F","M","be_annoyed","12","NonProj","Yes",27,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4588",163,2484,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","Yes",28,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4589",163,7828,"Owen shoveled snow last winter","F","F","admit","17","C","Yes",29,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4590",163,3346,"Julian dances salsa","F","M","discover","18","NonProj","Yes",30,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4591",163,2483,"Jon walks to work","F","F","prove","19","C","Yes",31,27,"ENGLISH",0,"Male","",3.45181666666667,1
-"4592",163,6851,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","No",32,27,"ENGLISH",0,"Male","",3.45181666666667,0
 "4593",60,6058,"Josie went on vacation to France","M","F","reveal","2","NonProj","No",5,29,"English",0,"Female","",4.43923333333333,0
 "4594",60,4811,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",6,29,"English",0,"Female","",4.43923333333333,1
 "4595",60,8531,"Frank got a cat","F","M","be_right","12","C","Yes",7,29,"English",0,"Female","",4.43923333333333,1
@@ -4647,34 +4171,6 @@ $1.00 is a fair price for this hit.",9.54336666666667,0
 "5150",400,5992,"Frank got a cat","F","F","hear","12","C","No",30,37,"English",0,"Male","",4.0805,0
 "5151",400,2783,"Sophia got a tattoo","M","F","see","5","NonProj","No",31,37,"English",0,"Male","",4.0805,0
 "5152",400,4912,"Olivia sleeps until noon","M","M","reveal","4","NonProj","No",32,37,"English",0,"Male","",4.0805,0
-"5153",174,14384,"Josh learned to ride a bike yesterday","F","M","inform","16","C","Yes",5,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5154",174,7987,"Emily bought a car yesterday","M","F","demonstrate","8","C","Yes",6,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5155",174,14431,"Isabella ate a steak on Sunday","M","F","suggest","7","C","No",7,54,"English",0,"Male","$1.00 is good.",6.56928333333333,0
-"5156",174,7829,"Tony had a drink last night","F","M","reveal","15","NonProj","Yes",8,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5157",174,7950,"Olivia sleeps until noon","M","M","establish","4","NonProj","Yes",9,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5158",174,5729,"Jayden rented a car","F","M","think","14","NonProj","No",10,54,"English",0,"Male","$1.00 is good.",6.56928333333333,0
-"5159",174,7009,"Julian dances salsa","F","F","confirm","18","C","Yes",11,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5160",174,7441,"Mary is pregnant","M","M","be_annoyed","1","NonProj","No",12,54,"English",0,"Male","$1.00 is good.",6.56928333333333,0
-"5161",174,18124,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","Yes",13,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5162",174,8774,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",14,54,"English",0,"Male","$1.00 is good.",6.56928333333333,0
-"5163",174,6627,"Emma studied on Saturday morning","M","F","be_right","3","C","Yes",15,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5164",174,8233,"Frank got a cat","F","M","pretend","12","NonProj","No",16,54,"English",0,"Male","$1.00 is good.",6.56928333333333,0
-"5165",174,8906,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",17,54,"English",0,"Male","$1.00 is good.",6.56928333333333,0
-"5166",174,8095,"Charley speaks Spanish","F","M","see","20","NonProj","No",18,54,"English",0,"Male","$1.00 is good.",6.56928333333333,0
-"5167",174,4424,"Sophia got a tattoo","M","F","prove","5","C","Yes",19,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5168",174,5520,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","No",20,54,"English",0,"Male","$1.00 is good.",6.56928333333333,0
-"5169",174,7008,"Zoe calculated the tip","M","M","announce","10","C","Yes",21,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5170",174,6168,"Jackson ran 10 miles","F","M","hear","13","C","No",22,54,"English",0,"Male","$1.00 is good.",6.56928333333333,0
-"5171",174,6344,"Mia drank 2 cocktails last night","M","F","say","6","C","Yes",23,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5172",174,11313,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","No",24,54,"English",0,"Male","$1.00 is good.",6.56928333333333,0
-"5173",174,8833,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",25,54,"English",0,"Male","$1.00 is good.",6.56928333333333,0
-"5174",174,7808,"Jon walks to work","F","M","admit","19","C","Yes",26,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5175",174,6248,"Owen shoveled snow last winter","F","F","confess","17","C","Yes",27,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5176",174,4736,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","No",28,54,"English",0,"Male","$1.00 is good.",6.56928333333333,0
-"5177",174,15908,"Josie went on vacation to France","M","F","discover","2","NonProj","Yes",29,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5178",174,7883,"Danny ate the last cupcake","F","M","know","11","NonProj","Yes",30,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5179",174,7087,"Grace visited her sister","M","F","acknowledge","9","C","Yes",31,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
-"5180",174,13633,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",32,54,"English",0,"Male","$1.00 is good.",6.56928333333333,1
 "5181",24,8584,"Isabella ate a steak on Sunday","M","F","see","7","NonProj","Yes",5,33,"english",0,"Male","",4.61545,1
 "5182",24,7538,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",6,33,"english",0,"Male","",4.61545,0
 "5183",24,9038,"Sophia got a tattoo","M","F","demonstrate","5","C","Yes",7,33,"english",0,"Male","",4.61545,1
@@ -4703,34 +4199,6 @@ $1.00 is a fair price for this hit.",9.54336666666667,0
 "5206",24,5535,"Tony had a drink last night","F","F","hear","15","C","No",30,33,"english",0,"Male","",4.61545,0
 "5207",24,6146,"Jon walks to work","F","M","suggest","19","C","No",31,33,"english",0,"Male","",4.61545,0
 "5208",24,7310,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",32,33,"english",0,"Male","",4.61545,1
-"5209",92,38703,"Grace visited her sister","M","F","admit","9","C","No",5,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5210",92,15358,"Charley speaks Spanish","F","F","hear","20","C","No",6,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5211",92,26211,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",7,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
-"5212",92,15964,"Tony had a drink last night","F","F","know","15","NonProj","No",8,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5213",92,16913,"Jackson ran 10 miles","F","M","see","13","NonProj","No",9,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5214",92,6149,"Olivia sleeps until noon","M","F","acknowledge","4","C","No",10,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5215",92,16614,"Danny ate the last cupcake","F","F","confirm","11","C","No",11,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5216",92,16342,"Mia drank 2 cocktails last night","M","F","announce","6","C","No",12,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5217",92,15093,"Emma studied on Saturday morning","M","M","suggest","3","C","No",13,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5218",92,26051,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",14,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5219",92,11389,"Isabella ate a steak on Sunday","M","F","say","7","C","No",15,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5220",92,20507,"Owen shoveled snow last winter","F","F","demonstrate","17","C","No",16,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5221",92,13896,"Josie went on vacation to France","M","F","think","2","NonProj","No",17,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5222",92,10965,"Julian dances salsa","F","F","be_annoyed","18","NonProj","No",18,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5223",92,8451,"Jayden rented a car","F","M","prove","14","C","No",19,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5224",92,49912,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","Yes",20,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
-"5225",92,24654,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","Yes",21,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
-"5226",92,14493,"Josh learned to ride a bike yesterday","F","F","reveal","16","NonProj","Yes",22,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
-"5227",92,9789,"Mary is pregnant","M","M","discover","1","NonProj","Yes",23,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
-"5228",92,9576,"Sophia got a tattoo","M","F","inform","5","C","Yes",24,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
-"5229",92,3807,"Frank got a cat","F","F","pretend","12","NonProj","Yes",25,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
-"5230",92,26582,"Zoe calculated the tip","M","F","establish","10","NonProj","Yes",26,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
-"5231",92,10063,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",27,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
-"5232",92,7253,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",28,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
-"5233",92,7064,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","No",29,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,0
-"5234",92,7438,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",30,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
-"5235",92,13246,"Jon walks to work","F","M","confess","19","C","Yes",31,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
-"5236",92,13367,"Emily bought a car yesterday","M","F","be_right","8","C","Yes",32,36,"English",0,"Male","It is not easy to answer all questions correctly. I enjoyed doing it and i hope that my work was good.",11.9501833333333,1
 "5237",8,26825,"Tony had a drink last night","F","M","confess","15","C","No",5,34,"English",0,"Male","",5.8359,0
 "5238",8,12828,"Danny ate the last cupcake","F","F","acknowledge","11","C","No",6,34,"English",0,"Male","",5.8359,0
 "5239",8,7080,"Josh learned to ride a bike yesterday","F","M","reveal","16","NonProj","No",7,34,"English",0,"Male","",5.8359,0
@@ -5095,34 +4563,6 @@ $1.00 is a fair price for this hit.",9.54336666666667,0
 "5626",82,4200,"Mia drank 2 cocktails last night","M","F","confirm","6","C","Yes",30,36,"English",0,"Male","I noticed a few typos, fyi.  I think the price is fair.",4.7062,1
 "5627",82,7403,"Josh learned to ride a bike yesterday","F","M","prove","16","C","Yes",31,36,"English",0,"Male","I noticed a few typos, fyi.  I think the price is fair.",4.7062,1
 "5628",82,5553,"Grace visited her sister","M","M","inform","9","C","No",32,36,"English",0,"Male","I noticed a few typos, fyi.  I think the price is fair.",4.7062,0
-"5629",320,6433,"Emily bought a car yesterday","M","F","reveal","8","NonProj","Yes",5,28,"English",0,"Female","",2.86361666666667,1
-"5630",320,4668,"Sophia got a tattoo","M","M","suggest","5","C","Yes",6,28,"English",0,"Female","",2.86361666666667,1
-"5631",320,3176,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",7,28,"English",0,"Female","",2.86361666666667,0
-"5632",320,3927,"Jackson ran 10 miles","F","M","discover","13","NonProj","Yes",8,28,"English",0,"Female","",2.86361666666667,1
-"5633",320,5113,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","No",9,28,"English",0,"Female","",2.86361666666667,0
-"5634",320,5036,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",10,28,"English",0,"Female","",2.86361666666667,1
-"5635",320,3448,"Zoe calculated the tip","M","F","demonstrate","10","C","Yes",11,28,"English",0,"Female","",2.86361666666667,1
-"5636",320,3273,"Frank got a cat","F","F","acknowledge","12","C","Yes",12,28,"English",0,"Female","",2.86361666666667,1
-"5637",320,4509,"Danny ate the last cupcake","F","M","think","11","NonProj","Yes",13,28,"English",0,"Female","",2.86361666666667,1
-"5638",320,5063,"Owen shoveled snow last winter","F","F","be_annoyed","17","NonProj","Yes",14,28,"English",0,"Female","",2.86361666666667,1
-"5639",320,4528,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",15,28,"English",0,"Female","",2.86361666666667,1
-"5640",320,7257,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","No",16,28,"English",0,"Female","",2.86361666666667,0
-"5641",320,5529,"Tony had a drink last night","F","F","see","15","NonProj","Yes",17,28,"English",0,"Female","",2.86361666666667,1
-"5642",320,3076,"Jayden rented a car","F","F","pretend","14","NonProj","Yes",18,28,"English",0,"Female","",2.86361666666667,1
-"5643",320,3040,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","Yes",19,28,"English",0,"Female","",2.86361666666667,1
-"5644",320,3775,"Josie went on vacation to France","M","M","say","2","C","Yes",20,28,"English",0,"Female","",2.86361666666667,1
-"5645",320,3734,"Mary is pregnant","M","F","inform","1","C","Yes",21,28,"English",0,"Female","",2.86361666666667,1
-"5646",320,5639,"Emma studied on Saturday morning","M","F","be_right","3","C","Yes",22,28,"English",0,"Female","",2.86361666666667,1
-"5647",320,4200,"Charley speaks Spanish","F","F","announce","20","C","Yes",23,28,"English",0,"Female","",2.86361666666667,1
-"5648",320,4693,"Mia drank 2 cocktails last night","M","F","establish","6","NonProj","Yes",24,28,"English",0,"Female","",2.86361666666667,1
-"5649",320,3711,"Jon walks to work","F","F","prove","19","C","Yes",25,28,"English",0,"Female","",2.86361666666667,1
-"5650",320,3416,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","Yes",26,28,"English",0,"Female","",2.86361666666667,1
-"5651",320,3735,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",27,28,"English",0,"Female","",2.86361666666667,0
-"5652",320,2931,"Grace visited her sister","M","F","confirm","9","C","Yes",28,28,"English",0,"Female","",2.86361666666667,1
-"5653",320,3548,"Isabella ate a steak on Sunday","M","M","confess","7","C","Yes",29,28,"English",0,"Female","",2.86361666666667,1
-"5654",320,3696,"Olivia sleeps until noon","M","F","admit","4","C","Yes",30,28,"English",0,"Female","",2.86361666666667,1
-"5655",320,3679,"Julian dances salsa","F","F","hear","18","C","Yes",31,28,"English",0,"Female","",2.86361666666667,1
-"5656",320,3967,"Josh learned to ride a bike yesterday","F","M","know","16","NonProj","Yes",32,28,"English",0,"Female","",2.86361666666667,1
 "5657",146,16186,"Julian dances salsa","F","F","say","18","C","No",5,48,"English",0,"Male","Everything was great.",7.26245,0
 "5658",146,9304,"Jayden rented a car","F","F","prove","14","C","Yes",6,48,"English",0,"Male","Everything was great.",7.26245,1
 "5659",146,11314,"Danny ate the last cupcake","F","F","discover","11","NonProj","Yes",7,48,"English",0,"Male","Everything was great.",7.26245,1
@@ -5515,34 +4955,6 @@ Thanks.",8.44376666666667,1
 "5962",282,7985,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",30,30,"English",0,"Female","The price is fair, was uncertain when words such as annoyed were used or other unusual word pairings ",6.8332,1
 "5963",282,13116,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",31,30,"English",0,"Female","The price is fair, was uncertain when words such as annoyed were used or other unusual word pairings ",6.8332,0
 "5964",282,8997,"Zoe calculated the tip","M","M","prove","10","C","Yes",32,30,"English",0,"Female","The price is fair, was uncertain when words such as annoyed were used or other unusual word pairings ",6.8332,1
-"5965",155,15735,"Olivia sleeps until noon","M","M","demonstrate","4","C","Yes",5,33,"english",0,"Male","non",16.0584333333333,1
-"5966",155,19623,"Josh learned to ride a bike yesterday","F","F","prove","16","C","Yes",6,33,"english",0,"Male","non",16.0584333333333,1
-"5967",155,9760,"Mia drank 2 cocktails last night","M","F","admit","6","C","Yes",7,33,"english",0,"Male","non",16.0584333333333,1
-"5968",155,13169,"Tony had a drink last night","F","F","establish","15","NonProj","Yes",8,33,"english",0,"Male","non",16.0584333333333,1
-"5969",155,10758,"Jon walks to work","F","F","announce","19","C","Yes",9,33,"english",0,"Male","non",16.0584333333333,1
-"5970",155,12977,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",10,33,"english",0,"Male","non",16.0584333333333,1
-"5971",155,13479,"Charley speaks Spanish","F","M","hear","20","C","Yes",11,33,"english",0,"Male","non",16.0584333333333,1
-"5972",155,27930,"Mary is pregnant","M","F","discover","1","NonProj","Yes",12,33,"english",0,"Male","non",16.0584333333333,1
-"5973",155,13738,"Danny ate the last cupcake","F","M","confirm","11","C","No",13,33,"english",0,"Male","non",16.0584333333333,0
-"5974",155,7960,"Josie went on vacation to France","M","F","know","2","NonProj","No",14,33,"english",0,"Male","non",16.0584333333333,0
-"5975",155,3981,"Grace visited her sister","M","M","reveal","9","NonProj","No",15,33,"english",0,"Male","non",16.0584333333333,0
-"5976",155,39189,"Frank got a cat","F","F","be_right","12","C","No",16,33,"english",0,"Male","non",16.0584333333333,0
-"5977",155,7192,"Jackson ran 10 miles","F","M","say","13","C","No",17,33,"english",0,"Male","non",16.0584333333333,0
-"5978",155,8544,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","Yes",18,33,"english",0,"Male","non",16.0584333333333,1
-"5979",155,17401,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",19,33,"english",0,"Male","non",16.0584333333333,1
-"5980",155,9784,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","Yes",20,33,"english",0,"Male","non",16.0584333333333,1
-"5981",155,7505,"Emma studied on Saturday morning","M","F","inform","3","C","Yes",21,33,"english",0,"Male","non",16.0584333333333,1
-"5982",155,40688,"Isabella ate a steak on Sunday","M","F","acknowledge","7","C","Yes",22,33,"english",0,"Male","non",16.0584333333333,1
-"5983",155,16049,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","No",23,33,"english",0,"Male","non",16.0584333333333,0
-"5984",155,8215,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",24,33,"english",0,"Male","non",16.0584333333333,0
-"5985",155,4530,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","No",25,33,"english",0,"Male","non",16.0584333333333,0
-"5986",155,2717,"Julian dances salsa","F","F","confess","18","C","No",26,33,"english",0,"Male","non",16.0584333333333,0
-"5987",155,5856,"Emily bought a car yesterday","M","F","suggest","8","C","Yes",27,33,"english",0,"Male","non",16.0584333333333,1
-"5988",155,2606,"Sophia got a tattoo","M","F","see","5","NonProj","Yes",28,33,"english",0,"Male","non",16.0584333333333,1
-"5989",155,3058,"Zoe calculated the tip","M","M","be_annoyed","10","NonProj","Yes",29,33,"english",0,"Male","non",16.0584333333333,1
-"5990",155,2560,"Owen shoveled snow last winter","F","M","think","17","NonProj","Yes",30,33,"english",0,"Male","non",16.0584333333333,1
-"5991",155,3535,"Jayden rented a car","F","M","pretend","14","NonProj","Yes",31,33,"english",0,"Male","non",16.0584333333333,1
-"5992",155,3472,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",32,33,"english",0,"Male","non",16.0584333333333,1
 "5993",316,9186,"Josh learned to ride a bike yesterday","F","M","hear","16","C","No",5,28,"English",0,"Male","I could have used a few more examples about contradictory statements to assure that I was doing it correctly. ",5.33056666666667,0
 "5994",316,7597,"Zoe calculated the tip","M","M","be_annoyed","10","NonProj","No",6,28,"English",0,"Male","I could have used a few more examples about contradictory statements to assure that I was doing it correctly. ",5.33056666666667,0
 "5995",316,6147,"Owen shoveled snow last winter","F","F","see","17","NonProj","No",7,28,"English",0,"Male","I could have used a few more examples about contradictory statements to assure that I was doing it correctly. ",5.33056666666667,0
@@ -5571,34 +4983,6 @@ Thanks.",8.44376666666667,1
 "6018",316,3788,"Charley speaks Spanish","F","F","acknowledge","20","C","Yes",30,28,"English",0,"Male","I could have used a few more examples about contradictory statements to assure that I was doing it correctly. ",5.33056666666667,1
 "6019",316,2428,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",31,28,"English",0,"Male","I could have used a few more examples about contradictory statements to assure that I was doing it correctly. ",5.33056666666667,1
 "6020",316,4334,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",32,28,"English",0,"Male","I could have used a few more examples about contradictory statements to assure that I was doing it correctly. ",5.33056666666667,0
-"6021",219,13796,"Jayden rented a car","F","M","suggest","14","C","Yes",5,30,"english",0,"Female","no",4.60931666666667,1
-"6022",219,13854,"Olivia sleeps until noon","M","F","think","4","NonProj","No",6,30,"english",0,"Female","no",4.60931666666667,0
-"6023",219,15115,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","No",7,30,"english",0,"Female","no",4.60931666666667,0
-"6024",219,4670,"Emily bought a car yesterday","M","M","hear","8","C","Yes",8,30,"english",0,"Female","no",4.60931666666667,1
-"6025",219,4933,"Tony had a drink last night","F","F","acknowledge","15","C","Yes",9,30,"english",0,"Female","no",4.60931666666667,1
-"6026",219,6149,"Charley speaks Spanish","F","M","see","20","NonProj","No",10,30,"english",0,"Female","no",4.60931666666667,0
-"6027",219,3876,"Mary is pregnant","M","F","announce","1","C","Yes",11,30,"english",0,"Female","no",4.60931666666667,1
-"6028",219,4705,"Jackson ran 10 miles","F","M","confirm","13","C","Yes",12,30,"english",0,"Female","no",4.60931666666667,1
-"6029",219,3629,"Zoe calculated the tip","M","M","confess","10","C","Yes",13,30,"english",0,"Female","no",4.60931666666667,1
-"6030",219,3507,"Sophia got a tattoo","M","F","demonstrate","5","C","Yes",14,30,"english",0,"Female","no",4.60931666666667,1
-"6031",219,10429,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",15,30,"english",0,"Female","no",4.60931666666667,1
-"6032",219,8549,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","No",16,30,"english",0,"Female","no",4.60931666666667,0
-"6033",219,3900,"Grace visited her sister","M","F","establish","9","NonProj","Yes",17,30,"english",0,"Female","no",4.60931666666667,1
-"6034",219,6033,"Josh learned to ride a bike yesterday","F","F","say","16","C","Yes",18,30,"english",0,"Female","no",4.60931666666667,1
-"6035",219,9714,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",19,30,"english",0,"Female","no",4.60931666666667,1
-"6036",219,7106,"Isabella ate a steak on Sunday","M","F","pretend","7","NonProj","No",20,30,"english",0,"Female","no",4.60931666666667,0
-"6037",219,4876,"Mia drank 2 cocktails last night","M","F","inform","6","C","Yes",21,30,"english",0,"Female","no",4.60931666666667,1
-"6038",219,3973,"Frank got a cat","F","M","admit","12","C","Yes",22,30,"english",0,"Female","no",4.60931666666667,1
-"6039",219,8205,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","Yes",23,30,"english",0,"Female","no",4.60931666666667,1
-"6040",219,9806,"Jon walks to work","F","M","know","19","NonProj","Yes",24,30,"english",0,"Female","no",4.60931666666667,1
-"6041",219,6164,"Josie went on vacation to France","M","F","be_right","2","C","Yes",25,30,"english",0,"Female","no",4.60931666666667,1
-"6042",219,5937,"Julian dances salsa","F","M","be_annoyed","18","NonProj","No",26,30,"english",0,"Female","no",4.60931666666667,0
-"6043",219,5289,"Emma studied on Saturday morning","M","F","reveal","3","NonProj","Yes",27,30,"english",0,"Female","no",4.60931666666667,1
-"6044",219,4445,"Owen shoveled snow last winter","F","F","discover","17","NonProj","Yes",28,30,"english",0,"Female","no",4.60931666666667,1
-"6045",219,8365,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","Yes",29,30,"english",0,"Female","no",4.60931666666667,1
-"6046",219,5186,"Danny ate the last cupcake","F","M","prove","11","C","Yes",30,30,"english",0,"Female","no",4.60931666666667,1
-"6047",219,12863,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",31,30,"english",0,"Female","no",4.60931666666667,1
-"6048",219,4035,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",32,30,"english",0,"Female","no",4.60931666666667,1
 "6049",126,15653,"Tony had a drink last night","F","F","demonstrate","15","C","Yes",5,61,"English",0,"Female","",4.74195,1
 "6050",126,9763,"Zoe calculated the tip","M","F","be_right","10","C","Yes",6,61,"English",0,"Female","",4.74195,1
 "6051",126,5618,"Frank got a cat","F","M","announce","12","C","Yes",7,61,"English",0,"Female","",4.74195,1
@@ -5739,34 +5123,6 @@ Thanks.",8.44376666666667,1
 "6186",71,11965,"Tony had a drink last night","F","F","see","15","NonProj","Yes",30,45,"English, Korean",0,"Female","",5.65573333333333,1
 "6187",71,9286,"Emily bought a car yesterday","M","F","acknowledge","8","C","Yes",31,45,"English, Korean",0,"Female","",5.65573333333333,1
 "6188",71,8559,"Mia drank 2 cocktails last night","M","F","inform","6","C","No",32,45,"English, Korean",0,"Female","",5.65573333333333,0
-"6189",91,19210,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",5,22,"english",0,"Male","",5.33383333333333,1
-"6190",91,7282,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","No",6,22,"english",0,"Male","",5.33383333333333,0
-"6191",91,5168,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","No",7,22,"english",0,"Male","",5.33383333333333,0
-"6192",91,6633,"Josh learned to ride a bike yesterday","F","F","confirm","16","C","Yes",8,22,"english",0,"Male","",5.33383333333333,1
-"6193",91,4917,"Tony had a drink last night","F","F","reveal","15","NonProj","Yes",9,22,"english",0,"Male","",5.33383333333333,1
-"6194",91,9195,"Olivia sleeps until noon","M","M","be_right","4","C","No",10,22,"english",0,"Male","",5.33383333333333,0
-"6195",91,6705,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","Yes",11,22,"english",0,"Male","",5.33383333333333,1
-"6196",91,11166,"Jackson ran 10 miles","F","F","announce","13","C","Yes",12,22,"english",0,"Male","",5.33383333333333,1
-"6197",91,9514,"Charley speaks Spanish","F","F","know","20","NonProj","No",13,22,"english",0,"Male","",5.33383333333333,0
-"6198",91,8801,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",14,22,"english",0,"Male","",5.33383333333333,1
-"6199",91,12800,"Emma studied on Saturday morning","M","M","see","3","NonProj","No",15,22,"english",0,"Male","",5.33383333333333,0
-"6200",91,8697,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","Yes",16,22,"english",0,"Male","",5.33383333333333,1
-"6201",91,7103,"Isabella ate a steak on Sunday","M","M","discover","7","NonProj","No",17,22,"english",0,"Male","",5.33383333333333,0
-"6202",91,12833,"Jon walks to work","F","F","confess","19","C","No",18,22,"english",0,"Male","",5.33383333333333,0
-"6203",91,11796,"Sophia got a tattoo","M","F","suggest","5","C","No",19,22,"english",0,"Male","",5.33383333333333,0
-"6204",91,15002,"Josie went on vacation to France","M","F","pretend","2","NonProj","Yes",20,22,"english",0,"Male","",5.33383333333333,1
-"6205",91,6809,"Jayden rented a car","F","F","prove","14","C","No",21,22,"english",0,"Male","",5.33383333333333,0
-"6206",91,6058,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","Yes",22,22,"english",0,"Male","",5.33383333333333,1
-"6207",91,17967,"Danny ate the last cupcake","F","F","establish","11","NonProj","Yes",23,22,"english",0,"Male","",5.33383333333333,1
-"6208",91,5086,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","Yes",24,22,"english",0,"Male","",5.33383333333333,1
-"6209",91,9561,"Zoe calculated the tip","M","M","acknowledge","10","C","Yes",25,22,"english",0,"Male","",5.33383333333333,1
-"6210",91,3753,"Mary is pregnant","M","F","be_annoyed","1","NonProj","Yes",26,22,"english",0,"Male","",5.33383333333333,1
-"6211",91,4383,"Grace visited her sister","M","M","demonstrate","9","C","Yes",27,22,"english",0,"Male","",5.33383333333333,1
-"6212",91,2935,"Mia drank 2 cocktails last night","M","M","admit","6","C","Yes",28,22,"english",0,"Male","",5.33383333333333,1
-"6213",91,1684,"Frank got a cat","F","F","hear","12","C","Yes",29,22,"english",0,"Male","",5.33383333333333,1
-"6214",91,4595,"Julian dances salsa","F","F","say","18","C","Yes",30,22,"english",0,"Male","",5.33383333333333,1
-"6215",91,4717,"Emily bought a car yesterday","M","M","think","8","NonProj","Yes",31,22,"english",0,"Male","",5.33383333333333,1
-"6216",91,2370,"Owen shoveled snow last winter","F","F","inform","17","C","Yes",32,22,"english",0,"Male","",5.33383333333333,1
 "6217",317,5991,"Charley speaks Spanish","F","M","think","20","NonProj","No",5,37,"english",0,"Male","none",3.18451666666667,0
 "6218",317,4278,"Grace visited her sister","M","M","demonstrate","9","C","Yes",6,37,"english",0,"Male","none",3.18451666666667,1
 "6219",317,4361,"Josh learned to ride a bike yesterday","F","F","pretend","16","NonProj","No",7,37,"english",0,"Male","none",3.18451666666667,0
@@ -5907,34 +5263,6 @@ Thanks.",8.44376666666667,1
 "6354",202,4244,"Sophia got a tattoo","M","M","think","5","NonProj","No",30,27,"American English",0,"Male","None fun HIT thanks!",4.12955,0
 "6355",202,6618,"Owen shoveled snow last winter","F","M","be_annoyed","17","NonProj","Yes",31,27,"American English",0,"Male","None fun HIT thanks!",4.12955,1
 "6356",202,6901,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",32,27,"American English",0,"Male","None fun HIT thanks!",4.12955,0
-"6357",213,11730,"Mia drank 2 cocktails last night","M","F","see","6","NonProj","Yes",5,50,"English",0,"Female","",3.81508333333333,1
-"6358",213,5280,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",6,50,"English",0,"Female","",3.81508333333333,0
-"6359",213,6806,"Olivia sleeps until noon","M","F","be_right","4","C","Yes",7,50,"English",0,"Female","",3.81508333333333,1
-"6360",213,6087,"Danny ate the last cupcake","F","F","reveal","11","NonProj","Yes",8,50,"English",0,"Female","",3.81508333333333,1
-"6361",213,4794,"Julian dances salsa","F","F","think","18","NonProj","Yes",9,50,"English",0,"Female","",3.81508333333333,1
-"6362",213,5540,"Owen shoveled snow last winter","F","F","establish","17","NonProj","Yes",10,50,"English",0,"Female","",3.81508333333333,1
-"6363",213,10557,"Jon walks to work","F","F","pretend","19","NonProj","Yes",11,50,"English",0,"Female","",3.81508333333333,1
-"6364",213,9514,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","No",12,50,"English",0,"Female","",3.81508333333333,0
-"6365",213,2169,"Tony had a drink last night","F","M","confess","15","C","Yes",13,50,"English",0,"Female","",3.81508333333333,1
-"6366",213,2096,"Isabella ate a steak on Sunday","M","F","say","7","C","Yes",14,50,"English",0,"Female","",3.81508333333333,1
-"6367",213,1963,"Emily bought a car yesterday","M","F","announce","8","C","Yes",15,50,"English",0,"Female","",3.81508333333333,1
-"6368",213,11296,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","No",16,50,"English",0,"Female","",3.81508333333333,0
-"6369",213,5932,"Zoe calculated the tip","M","M","inform","10","C","Yes",17,50,"English",0,"Female","",3.81508333333333,1
-"6370",213,7479,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","Yes",18,50,"English",0,"Female","",3.81508333333333,1
-"6371",213,2090,"Frank got a cat","F","M","demonstrate","12","C","Yes",19,50,"English",0,"Female","",3.81508333333333,1
-"6372",213,1926,"Sophia got a tattoo","M","M","be_annoyed","5","NonProj","Yes",20,50,"English",0,"Female","",3.81508333333333,1
-"6373",213,1828,"Mary is pregnant","M","M","suggest","1","C","Yes",21,50,"English",0,"Female","",3.81508333333333,1
-"6374",213,1866,"Josh learned to ride a bike yesterday","F","F","know","16","NonProj","Yes",22,50,"English",0,"Female","",3.81508333333333,1
-"6375",213,1394,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",23,50,"English",0,"Female","",3.81508333333333,1
-"6376",213,1776,"Jackson ran 10 miles","F","M","admit","13","C","Yes",24,50,"English",0,"Female","",3.81508333333333,1
-"6377",213,15875,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",25,50,"English",0,"Female","",3.81508333333333,1
-"6378",213,4023,"Jayden rented a car","F","F","acknowledge","14","C","Yes",26,50,"English",0,"Female","",3.81508333333333,1
-"6379",213,1542,"Josie went on vacation to France","M","M","confirm","2","C","Yes",27,50,"English",0,"Female","",3.81508333333333,1
-"6380",213,2328,"Grace visited her sister","M","F","hear","9","C","Yes",28,50,"English",0,"Female","",3.81508333333333,1
-"6381",213,12473,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",29,50,"English",0,"Female","",3.81508333333333,1
-"6382",213,2072,"Emma studied on Saturday morning","M","F","prove","3","C","Yes",30,50,"English",0,"Female","",3.81508333333333,1
-"6383",213,8221,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","Yes",31,50,"English",0,"Female","",3.81508333333333,1
-"6384",213,2083,"Charley speaks Spanish","F","M","discover","20","NonProj","Yes",32,50,"English",0,"Female","",3.81508333333333,1
 "6385",354,6076,"Jackson ran 10 miles","F","M","acknowledge","13","C","Yes",5,57,"English",0,"Female","Great hit",4.21526666666667,1
 "6386",354,6936,"Danny ate the last cupcake","F","F","think","11","NonProj","No",6,57,"English",0,"Female","Great hit",4.21526666666667,0
 "6387",354,3995,"Grace visited her sister","M","F","admit","9","C","Yes",7,57,"English",0,"Female","Great hit",4.21526666666667,1
@@ -6327,34 +5655,6 @@ Thanks.",8.44376666666667,1
 "6802",292,11880,"Frank got a cat","F","F","admit","12","C","No",30,57,"English",0,"Female","Fun and payment is fair!",6.8345,0
 "6803",292,5552,"Jackson ran 10 miles","F","F","announce","13","C","No",31,57,"English",0,"Female","Fun and payment is fair!",6.8345,0
 "6804",292,6288,"Jon walks to work","F","F","confess","19","C","No",32,57,"English",0,"Female","Fun and payment is fair!",6.8345,0
-"6805",341,12531,"Jon walks to work","F","M","establish","19","NonProj","No",5,30,"english",0,"Female","good experiment",9.97185,0
-"6806",341,18224,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",6,30,"english",0,"Female","good experiment",9.97185,0
-"6807",341,3866,"Danny ate the last cupcake","F","F","reveal","11","NonProj","Yes",7,30,"english",0,"Female","good experiment",9.97185,1
-"6808",341,4664,"Isabella ate a steak on Sunday","M","F","announce","7","C","No",8,30,"english",0,"Female","good experiment",9.97185,0
-"6809",341,8345,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",9,30,"english",0,"Female","good experiment",9.97185,0
-"6810",341,11366,"Julian dances salsa","F","F","be_annoyed","18","NonProj","No",10,30,"english",0,"Female","good experiment",9.97185,0
-"6811",341,5992,"Josh learned to ride a bike yesterday","F","F","pretend","16","NonProj","No",11,30,"english",0,"Female","good experiment",9.97185,0
-"6812",341,14682,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","No",12,30,"english",0,"Female","good experiment",9.97185,0
-"6813",341,53718,"Frank got a cat","F","M","think","12","NonProj","No",13,30,"english",0,"Female","good experiment",9.97185,0
-"6814",341,2920,"Josie went on vacation to France","M","F","inform","2","C","No",14,30,"english",0,"Female","good experiment",9.97185,0
-"6815",341,2319,"Zoe calculated the tip","M","F","discover","10","NonProj","No",15,30,"english",0,"Female","good experiment",9.97185,0
-"6816",341,3168,"Jackson ran 10 miles","F","F","suggest","13","C","No",16,30,"english",0,"Female","good experiment",9.97185,0
-"6817",341,5258,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","No",17,30,"english",0,"Female","good experiment",9.97185,0
-"6818",341,2229,"Owen shoveled snow last winter","F","F","see","17","NonProj","No",18,30,"english",0,"Female","good experiment",9.97185,0
-"6819",341,4464,"Tony had a drink last night","F","M","admit","15","C","No",19,30,"english",0,"Female","good experiment",9.97185,0
-"6820",341,9170,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","No",20,30,"english",0,"Female","good experiment",9.97185,0
-"6821",341,3742,"Grace visited her sister","M","M","hear","9","C","No",21,30,"english",0,"Female","good experiment",9.97185,0
-"6822",341,3624,"Mia drank 2 cocktails last night","M","M","say","6","C","No",22,30,"english",0,"Female","good experiment",9.97185,0
-"6823",341,7789,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","No",23,30,"english",0,"Female","good experiment",9.97185,0
-"6824",341,3186,"Sophia got a tattoo","M","F","confirm","5","C","No",24,30,"english",0,"Female","good experiment",9.97185,0
-"6825",341,32231,"Emma studied on Saturday morning","M","F","know","3","NonProj","No",25,30,"english",0,"Female","good experiment",9.97185,0
-"6826",341,2323,"Mary is pregnant","M","F","be_right","1","C","No",26,30,"english",0,"Female","good experiment",9.97185,0
-"6827",341,3080,"Emily bought a car yesterday","M","M","prove","8","C","No",27,30,"english",0,"Female","good experiment",9.97185,0
-"6828",341,2122,"Charley speaks Spanish","F","M","acknowledge","20","C","No",28,30,"english",0,"Female","good experiment",9.97185,0
-"6829",341,2629,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",29,30,"english",0,"Female","good experiment",9.97185,0
-"6830",341,3791,"Jayden rented a car","F","M","demonstrate","14","C","No",30,30,"english",0,"Female","good experiment",9.97185,0
-"6831",341,2353,"Olivia sleeps until noon","M","M","confess","4","C","No",31,30,"english",0,"Female","good experiment",9.97185,0
-"6832",341,4625,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","No",32,30,"english",0,"Female","good experiment",9.97185,0
 "6833",59,25085,"Emma studied on Saturday morning","M","F","admit","3","C","No",5,49,"english",0,"Male","Confused at 1st, but became clear soon.",7.09343333333333,0
 "6834",59,23508,"Jon walks to work","F","F","pretend","19","NonProj","No",6,49,"english",0,"Male","Confused at 1st, but became clear soon.",7.09343333333333,0
 "6835",59,9632,"Jackson ran 10 miles","F","F","be_annoyed","13","NonProj","Yes",7,49,"english",0,"Male","Confused at 1st, but became clear soon.",7.09343333333333,1
@@ -7027,34 +6327,6 @@ This may be the purpose of the study, but some of the words used were confusing 
 "7530",148,5499,"Isabella ate a steak on Sunday","M","M","announce","7","C","No",30,35,"English",0,"Female","I think it was a great study. The pay is very fair.",5.3726,0
 "7531",148,9527,"Olivia sleeps until noon","M","F","hear","4","C","No",31,35,"English",0,"Female","I think it was a great study. The pay is very fair.",5.3726,0
 "7532",148,7549,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",32,35,"English",0,"Female","I think it was a great study. The pay is very fair.",5.3726,1
-"7533",279,4326,"Julian dances salsa","F","F","confess","18","C","Yes",5,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7534",279,6499,"Isabella ate a steak on Sunday","M","F","inform","7","C","Yes",6,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7535",279,2320,"Jayden rented a car","F","M","hear","14","C","No",7,42,"English",0,"Female","Fun work, fair price",2.61431666666667,0
-"7536",279,3743,"Owen shoveled snow last winter","F","F","be_annoyed","17","NonProj","Yes",8,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7537",279,2655,"Jon walks to work","F","F","see","19","NonProj","Yes",9,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7538",279,6438,"Mia drank 2 cocktails last night","M","F","be_right","6","C","Yes",10,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7539",279,5096,"Josh learned to ride a bike yesterday","F","F","discover","16","NonProj","Yes",11,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7540",279,6271,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","No",12,42,"English",0,"Female","Fun work, fair price",2.61431666666667,0
-"7541",279,4609,"Jackson ran 10 miles","F","M","say","13","C","Yes",13,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7542",279,2454,"Sophia got a tattoo","M","F","establish","5","NonProj","Yes",14,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7543",279,1929,"Mary is pregnant","M","F","prove","1","C","Yes",15,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7544",279,5678,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",16,42,"English",0,"Female","Fun work, fair price",2.61431666666667,0
-"7545",279,4911,"Emma studied on Saturday morning","M","F","suggest","3","C","No",17,42,"English",0,"Female","Fun work, fair price",2.61431666666667,0
-"7546",279,3215,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","No",18,42,"English",0,"Female","Fun work, fair price",2.61431666666667,0
-"7547",279,4870,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",19,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7548",279,9374,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",20,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7549",279,4655,"Danny ate the last cupcake","F","M","admit","11","C","Yes",21,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7550",279,2879,"Charley speaks Spanish","F","M","know","20","NonProj","Yes",22,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7551",279,4120,"Frank got a cat","F","F","pretend","12","NonProj","No",23,42,"English",0,"Female","Fun work, fair price",2.61431666666667,0
-"7552",279,2823,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",24,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7553",279,3175,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","Yes",25,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7554",279,3840,"Grace visited her sister","M","F","acknowledge","9","C","Yes",26,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7555",279,2533,"Olivia sleeps until noon","M","M","reveal","4","NonProj","Yes",27,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7556",279,2801,"Emily bought a car yesterday","M","M","confirm","8","C","Yes",28,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7557",279,3143,"Josie went on vacation to France","M","M","demonstrate","2","C","Yes",29,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
-"7558",279,2152,"Tony had a drink last night","F","F","think","15","NonProj","No",30,42,"English",0,"Female","Fun work, fair price",2.61431666666667,0
-"7559",279,4375,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","No",31,42,"English",0,"Female","Fun work, fair price",2.61431666666667,0
-"7560",279,4472,"Zoe calculated the tip","M","M","announce","10","C","Yes",32,42,"English",0,"Female","Fun work, fair price",2.61431666666667,1
 "7589",166,6909,"Tony had a drink last night","F","M","confirm","15","C","Yes",5,33,"English",0,"Female","",3.3532,1
 "7590",166,4989,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","Yes",6,33,"English",0,"Female","",3.3532,1
 "7591",166,11387,"Frank got a cat","F","F","hear","12","C","No",7,33,"English",0,"Female","",3.3532,0
@@ -7447,34 +6719,6 @@ This may be the purpose of the study, but some of the words used were confusing 
 "8034",47,4712,"Charley speaks Spanish","F","F","pretend","20","NonProj","No",30,40,"english",0,"Female","",5.75628333333333,0
 "8035",47,7632,"Owen shoveled snow last winter","F","F","prove","17","C","Yes",31,40,"english",0,"Female","",5.75628333333333,1
 "8036",47,5864,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",32,40,"english",0,"Female","",5.75628333333333,1
-"8037",352,3718,"Owen shoveled snow last winter","F","F","think","17","NonProj","No",5,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8038",352,1567,"Danny ate the last cupcake","F","F","hear","11","C","No",6,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8039",352,1384,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","No",7,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8040",352,2008,"Jackson ran 10 miles","F","F","reveal","13","NonProj","No",8,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8041",352,2048,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",9,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8042",352,2080,"Emily bought a car yesterday","M","F","prove","8","C","No",10,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8043",352,2168,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",11,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8044",352,1760,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",12,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8045",352,2280,"Grace visited her sister","M","F","be_right","9","C","No",13,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8046",352,1407,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","No",14,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8047",352,2032,"Emma studied on Saturday morning","M","F","say","3","C","No",15,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8048",352,2816,"Frank got a cat","F","F","establish","12","NonProj","No",16,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8049",352,1568,"Mary is pregnant","M","F","admit","1","C","No",17,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8050",352,1424,"Julian dances salsa","F","M","inform","18","C","No",18,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8051",352,1376,"Josh learned to ride a bike yesterday","F","M","confess","16","C","No",19,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8052",352,2056,"Mia drank 2 cocktails last night","M","M","pretend","6","NonProj","No",20,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8053",352,1640,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","No",21,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8054",352,3192,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","No",22,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8055",352,2080,"Tony had a drink last night","F","F","confirm","15","C","No",23,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8056",352,1839,"Josie went on vacation to France","M","F","discover","2","NonProj","No",24,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8057",352,3096,"Jayden rented a car","F","M","acknowledge","14","C","No",25,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8058",352,2240,"Isabella ate a steak on Sunday","M","M","see","7","NonProj","No",26,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8059",352,2528,"Zoe calculated the tip","M","M","demonstrate","10","C","No",27,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8060",352,1337,"Sophia got a tattoo","M","M","suggest","5","C","No",28,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8061",352,1424,"Jon walks to work","F","F","announce","19","C","No",29,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8062",352,999,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",30,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8063",352,1472,"Olivia sleeps until noon","M","F","know","4","NonProj","No",31,42,"ENGLISH",0,"Male","",1.30301666666667,0
-"8064",352,1600,"Charley speaks Spanish","F","F","be_annoyed","20","NonProj","No",32,42,"ENGLISH",0,"Male","",1.30301666666667,0
 "8065",249,6144,"Josh learned to ride a bike yesterday","F","F","pretend","16","NonProj","No",5,45,"english",0,"Female","",3.1392,0
 "8066",249,3974,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","No",6,45,"english",0,"Female","",3.1392,0
 "8067",249,5925,"Jackson ran 10 miles","F","M","see","13","NonProj","Yes",7,45,"english",0,"Female","",3.1392,1
@@ -8175,34 +7419,6 @@ A1E1WY7DFTAMFW",6.20678333333333,1
 "8790",20,2757,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","No",30,29,"English",0,"Male","I think the price was about fair.",4.67016666666667,0
 "8791",20,5165,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",31,29,"English",0,"Male","I think the price was about fair.",4.67016666666667,1
 "8792",20,2744,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",32,29,"English",0,"Male","I think the price was about fair.",4.67016666666667,0
-"8821",363,27828,"Jackson ran 10 miles","F","F","announce","13","C","Yes",5,47,"English",0,"Female","",8.69571666666667,1
-"8822",363,29806,"Emily bought a car yesterday","M","F","confirm","8","C","Yes",6,47,"English",0,"Female","",8.69571666666667,1
-"8823",363,14482,"Josh learned to ride a bike yesterday","F","M","be_annoyed","16","NonProj","Yes",7,47,"English",0,"Female","",8.69571666666667,1
-"8824",363,7974,"Jayden rented a car","F","F","think","14","NonProj","Yes",8,47,"English",0,"Female","",8.69571666666667,1
-"8825",363,31938,"Owen shoveled snow last winter","F","F","reveal","17","NonProj","Yes",9,47,"English",0,"Female","",8.69571666666667,1
-"8826",363,9034,"Danny ate the last cupcake","F","M","hear","11","C","Yes",10,47,"English",0,"Female","",8.69571666666667,1
-"8827",363,10016,"Olivia sleeps until noon","M","M","acknowledge","4","C","Yes",11,47,"English",0,"Female","",8.69571666666667,1
-"8828",363,37174,"Mia drank 2 cocktails last night","M","F","suggest","6","C","Yes",12,47,"English",0,"Female","",8.69571666666667,1
-"8829",363,15458,"Tony had a drink last night","F","F","prove","15","C","No",13,47,"English",0,"Female","",8.69571666666667,0
-"8830",363,11994,"Isabella ate a steak on Sunday","M","M","discover","7","NonProj","No",14,47,"English",0,"Female","",8.69571666666667,0
-"8831",363,7201,"Zoe calculated the tip","M","F","say","10","C","Yes",15,47,"English",0,"Female","",8.69571666666667,1
-"8832",363,7372,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","No",16,47,"English",0,"Female","",8.69571666666667,0
-"8833",363,9504,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",17,47,"English",0,"Female","",8.69571666666667,1
-"8834",363,3136,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",18,47,"English",0,"Female","",8.69571666666667,1
-"8835",363,4769,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","No",19,47,"English",0,"Female","",8.69571666666667,0
-"8836",363,18285,"Jon walks to work","F","F","demonstrate","19","C","Yes",20,47,"English",0,"Female","",8.69571666666667,1
-"8837",363,6902,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",21,47,"English",0,"Female","",8.69571666666667,1
-"8838",363,39042,"Sophia got a tattoo","M","F","admit","5","C","Yes",22,47,"English",0,"Female","",8.69571666666667,1
-"8839",363,11726,"Emma studied on Saturday morning","M","F","establish","3","NonProj","Yes",23,47,"English",0,"Female","",8.69571666666667,1
-"8840",363,9158,"Julian dances salsa","F","M","pretend","18","NonProj","Yes",24,47,"English",0,"Female","",8.69571666666667,1
-"8841",363,7636,"Charley speaks Spanish","F","F","see","20","NonProj","Yes",25,47,"English",0,"Female","",8.69571666666667,1
-"8842",363,4799,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","Yes",26,47,"English",0,"Female","",8.69571666666667,1
-"8843",363,6059,"Josie went on vacation to France","M","F","be_right","2","C","Yes",27,47,"English",0,"Female","",8.69571666666667,1
-"8844",363,4746,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",28,47,"English",0,"Female","",8.69571666666667,0
-"8845",363,3740,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","Yes",29,47,"English",0,"Female","",8.69571666666667,1
-"8846",363,5582,"Mary is pregnant","M","F","know","1","NonProj","Yes",30,47,"English",0,"Female","",8.69571666666667,1
-"8847",363,53302,"Grace visited her sister","M","M","inform","9","C","Yes",31,47,"English",0,"Female","",8.69571666666667,1
-"8848",363,6986,"Frank got a cat","F","F","confess","12","C","Yes",32,47,"English",0,"Female","",8.69571666666667,1
 "8849",238,9366,"Josh learned to ride a bike yesterday","F","M","confirm","16","C","Yes",5,55,"English",0,"Male","",6.10673333333333,1
 "8850",238,10023,"Tony had a drink last night","F","F","be_right","15","C","Yes",6,55,"English",0,"Male","",6.10673333333333,1
 "8851",238,12440,"Mary is pregnant","M","F","see","1","NonProj","No",7,55,"English",0,"Male","",6.10673333333333,0
@@ -8707,34 +7923,6 @@ A1E1WY7DFTAMFW",6.20678333333333,1
 "9350",69,4665,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","No",30,35,"English",0,"Male","Thank you!",4.22068333333333,0
 "9351",69,4534,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",31,35,"English",0,"Male","Thank you!",4.22068333333333,1
 "9352",69,4330,"Sophia got a tattoo","M","F","know","5","NonProj","Yes",32,35,"English",0,"Male","Thank you!",4.22068333333333,1
-"9353",224,5565,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","No",5,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,0
-"9354",224,3450,"Tony had a drink last night","F","M","confirm","15","C","Yes",6,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9355",224,8233,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","Yes",7,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9356",224,4777,"Mia drank 2 cocktails last night","M","F","see","6","NonProj","Yes",8,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9357",224,5091,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","No",9,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,0
-"9358",224,3345,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","No",10,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,0
-"9359",224,4488,"Josh learned to ride a bike yesterday","F","M","know","16","NonProj","Yes",11,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9360",224,4683,"Charley speaks Spanish","F","F","discover","20","NonProj","Yes",12,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9361",224,4715,"Josie went on vacation to France","M","M","confess","2","C","Yes",13,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9362",224,5536,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",14,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9363",224,7234,"Isabella ate a steak on Sunday","M","F","suggest","7","C","Yes",15,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9364",224,3123,"Mary is pregnant","M","M","say","1","C","Yes",16,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9365",224,3760,"Julian dances salsa","F","M","admit","18","C","Yes",17,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9366",224,3708,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",18,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9367",224,3800,"Danny ate the last cupcake","F","M","be_annoyed","11","NonProj","Yes",19,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9368",224,4982,"Olivia sleeps until noon","M","M","hear","4","C","No",20,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,0
-"9369",224,3854,"Zoe calculated the tip","M","F","establish","10","NonProj","Yes",21,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9370",224,3918,"Grace visited her sister","M","F","reveal","9","NonProj","Yes",22,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9371",224,2609,"Jayden rented a car","F","F","announce","14","C","Yes",23,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9372",224,5896,"Owen shoveled snow last winter","F","M","inform","17","C","Yes",24,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9373",224,4638,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","No",25,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,0
-"9374",224,2946,"Frank got a cat","F","F","prove","12","C","Yes",26,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9375",224,3386,"Emily bought a car yesterday","M","F","acknowledge","8","C","Yes",27,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9376",224,3214,"Jon walks to work","F","M","demonstrate","19","C","Yes",28,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9377",224,3064,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",29,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9378",224,4512,"Emma studied on Saturday morning","M","F","be_right","3","C","Yes",30,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
-"9379",224,4122,"Sophia got a tattoo","M","F","think","5","NonProj","No",31,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,0
-"9380",224,6064,"Jackson ran 10 miles","F","F","pretend","13","NonProj","Yes",32,41,"English",0,"Female","I think the price is fair. I may have got 1 or 2 wrong, but  I think I did this correct.",3.1139,1
 "9381",394,5704,"Josh learned to ride a bike yesterday","F","F","be_right","16","C","Yes",5,29,"English",0,"Male","Not gonna lie, when it said things like, ""Bob is good at math, and I am not,"" I thought this was not contradictory. ",25.2214833333333,1
 "9382",394,2961,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","No",6,29,"English",0,"Male","Not gonna lie, when it said things like, ""Bob is good at math, and I am not,"" I thought this was not contradictory. ",25.2214833333333,0
 "9383",394,3892,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",7,29,"English",0,"Male","Not gonna lie, when it said things like, ""Bob is good at math, and I am not,"" I thought this was not contradictory. ",25.2214833333333,1
@@ -8903,34 +8091,6 @@ A1E1WY7DFTAMFW",6.20678333333333,1
 "9574",296,3378,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","Yes",30,34,"English",0,"Female","The pay was great, the wording of the sentences was a little confusing on what is contradictory compared to what isn&quotechart. It&quotechars not hard to follow, but a few of them for me were ""I guess I could see that being contradictory... I think?""",4.59151666666667,1
 "9575",296,13081,"Josie went on vacation to France","M","F","acknowledge","2","C","Yes",31,34,"English",0,"Female","The pay was great, the wording of the sentences was a little confusing on what is contradictory compared to what isn&quotechart. It&quotechars not hard to follow, but a few of them for me were ""I guess I could see that being contradictory... I think?""",4.59151666666667,1
 "9576",296,2837,"Olivia sleeps until noon","M","M","think","4","NonProj","No",32,34,"English",0,"Female","The pay was great, the wording of the sentences was a little confusing on what is contradictory compared to what isn&quotechart. It&quotechars not hard to follow, but a few of them for me were ""I guess I could see that being contradictory... I think?""",4.59151666666667,0
-"9577",346,8574,"Charley speaks Spanish","F","F","demonstrate","20","C","No",5,32,"english",0,"Male","",6.25913333333333,0
-"9578",346,5424,"Grace visited her sister","M","M","reveal","9","NonProj","No",6,32,"english",0,"Male","",6.25913333333333,0
-"9579",346,21207,"Mary is pregnant","M","F","think","1","NonProj","No",7,32,"english",0,"Male","",6.25913333333333,0
-"9580",346,5217,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",8,32,"english",0,"Male","",6.25913333333333,0
-"9581",346,7624,"Zoe calculated the tip","M","F","announce","10","C","Yes",9,32,"english",0,"Male","",6.25913333333333,1
-"9582",346,3832,"Jon walks to work","F","F","confess","19","C","Yes",10,32,"english",0,"Male","",6.25913333333333,1
-"9583",346,3087,"Jayden rented a car","F","F","admit","14","C","Yes",11,32,"english",0,"Male","",6.25913333333333,1
-"9584",346,1904,"Danny ate the last cupcake","F","F","hear","11","C","Yes",12,32,"english",0,"Male","",6.25913333333333,1
-"9585",346,2320,"Jackson ran 10 miles","F","F","say","13","C","Yes",13,32,"english",0,"Male","",6.25913333333333,1
-"9586",346,2479,"Josh learned to ride a bike yesterday","F","M","be_annoyed","16","NonProj","Yes",14,32,"english",0,"Male","",6.25913333333333,1
-"9587",346,4047,"Dana has never smoked in her life and she stopped smoking recently",NA,"F","contradictory C","control_bad1","control","No",15,32,"english",0,"Male","",6.25913333333333,0
-"9588",346,4496,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",16,32,"english",0,"Male","",6.25913333333333,1
-"9589",346,4784,"Julian dances salsa","F","F","suggest","18","C","Yes",17,32,"english",0,"Male","",6.25913333333333,1
-"9590",346,11840,"Emma studied on Saturday morning","M","M","discover","3","NonProj","Yes",18,32,"english",0,"Male","",6.25913333333333,1
-"9591",346,5423,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",19,32,"english",0,"Male","",6.25913333333333,1
-"9592",346,2976,"Tony had a drink last night","F","M","pretend","15","NonProj","Yes",20,32,"english",0,"Male","",6.25913333333333,1
-"9593",346,3320,"Josie went on vacation to France","M","F","confirm","2","C","Yes",21,32,"english",0,"Male","",6.25913333333333,1
-"9594",346,2106,"Olivia sleeps until noon","M","F","inform","4","C","Yes",22,32,"english",0,"Male","",6.25913333333333,1
-"9595",346,11112,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",23,32,"english",0,"Male","",6.25913333333333,1
-"9596",346,6240,"Isabella ate a steak on Sunday","M","F","be_right","7","C","Yes",24,32,"english",0,"Male","",6.25913333333333,1
-"9597",346,2160,"Owen shoveled snow last winter","F","F","establish","17","NonProj","Yes",25,32,"english",0,"Male","",6.25913333333333,1
-"9598",346,5671,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",26,32,"english",0,"Male","",6.25913333333333,1
-"9599",346,17744,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",27,32,"english",0,"Male","",6.25913333333333,0
-"9600",346,6200,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","No",28,32,"english",0,"Male","",6.25913333333333,0
-"9601",346,2087,"Emily bought a car yesterday","M","M","know","8","NonProj","Yes",29,32,"english",0,"Male","",6.25913333333333,1
-"9602",346,2320,"Mia drank 2 cocktails last night","M","M","prove","6","C","Yes",30,32,"english",0,"Male","",6.25913333333333,1
-"9603",346,1831,"Sophia got a tattoo","M","M","acknowledge","5","C","Yes",31,32,"english",0,"Male","",6.25913333333333,1
-"9604",346,1695,"Frank got a cat","F","M","see","12","NonProj","Yes",32,32,"english",0,"Male","",6.25913333333333,1
 "9605",259,31648,"Emily bought a car yesterday","M","F","hear","8","C","No",5,33,"English",0,"Male","The experiment was confusing at first but you get the hang of it after a while. A dollar seems fair.",10.6010666666667,0
 "9606",259,14919,"Emma studied on Saturday morning","M","F","reveal","3","NonProj","No",6,33,"English",0,"Male","The experiment was confusing at first but you get the hang of it after a while. A dollar seems fair.",10.6010666666667,0
 "9607",259,21560,"Grace visited her sister","M","F","acknowledge","9","C","No",7,33,"English",0,"Male","The experiment was confusing at first but you get the hang of it after a while. A dollar seems fair.",10.6010666666667,0
@@ -9211,34 +8371,6 @@ A1E1WY7DFTAMFW",6.20678333333333,1
 "9938",177,6025,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",30,32,"English",0,"Female","",5.03088333333333,1
 "9939",177,6050,"Tony had a drink last night","F","F","think","15","NonProj","No",31,32,"English",0,"Female","",5.03088333333333,0
 "9940",177,9010,"Josie went on vacation to France","M","M","inform","2","C","Yes",32,32,"English",0,"Female","",5.03088333333333,1
-"9941",25,9460,"Josh learned to ride a bike yesterday","F","M","inform","16","C","Yes",5,25,"English",0,"Male","",3.2337,1
-"9942",25,6212,"Olivia sleeps until noon","M","M","hear","4","C","Yes",6,25,"English",0,"Male","",3.2337,1
-"9943",25,5860,"Frank got a cat","F","M","admit","12","C","Yes",7,25,"English",0,"Male","",3.2337,1
-"9944",25,9682,"Danny ate the last cupcake","F","M","confess","11","C","No",8,25,"English",0,"Male","",3.2337,0
-"9945",25,13490,"Josie went on vacation to France","M","M","prove","2","C","No",9,25,"English",0,"Male","",3.2337,0
-"9946",25,5687,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",10,25,"English",0,"Male","",3.2337,1
-"9947",25,7398,"Grace visited her sister","M","F","say","9","C","No",11,25,"English",0,"Male","",3.2337,0
-"9948",25,3306,"Mary is pregnant","M","M","announce","1","C","No",12,25,"English",0,"Male","",3.2337,0
-"9949",25,3056,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",13,25,"English",0,"Male","",3.2337,1
-"9950",25,5049,"Sophia got a tattoo","M","F","confirm","5","C","No",14,25,"English",0,"Male","",3.2337,0
-"9951",25,4382,"Tony had a drink last night","F","F","know","15","NonProj","No",15,25,"English",0,"Male","",3.2337,0
-"9952",25,2994,"Emily bought a car yesterday","M","F","be_right","8","C","No",16,25,"English",0,"Male","",3.2337,0
-"9953",25,7482,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",17,25,"English",0,"Male","",3.2337,0
-"9954",25,3567,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","No",18,25,"English",0,"Male","",3.2337,0
-"9955",25,7602,"Julian dances salsa","F","F","reveal","18","NonProj","No",19,25,"English",0,"Male","",3.2337,0
-"9956",25,4626,"Charley speaks Spanish","F","F","think","20","NonProj","No",20,25,"English",0,"Male","",3.2337,0
-"9957",25,4860,"Jon walks to work","F","M","discover","19","NonProj","Yes",21,25,"English",0,"Male","",3.2337,1
-"9958",25,3936,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","No",22,25,"English",0,"Male","",3.2337,0
-"9959",25,3496,"Jayden rented a car","F","F","be_annoyed","14","NonProj","Yes",23,25,"English",0,"Male","",3.2337,1
-"9960",25,3006,"Zoe calculated the tip","M","M","pretend","10","NonProj","Yes",24,25,"English",0,"Male","",3.2337,1
-"9961",25,2404,"Isabella ate a steak on Sunday","M","M","establish","7","NonProj","Yes",25,25,"English",0,"Male","",3.2337,1
-"9962",25,2754,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"M","non-contrd. C","control_good1","control","No",26,25,"English",0,"Male","",3.2337,0
-"9963",25,4285,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",27,25,"English",0,"Male","",3.2337,1
-"9964",25,3305,"Mia drank 2 cocktails last night","M","F","acknowledge","6","C","Yes",28,25,"English",0,"Male","",3.2337,1
-"9965",25,2373,"Owen shoveled snow last winter","F","F","suggest","17","C","Yes",29,25,"English",0,"Male","",3.2337,1
-"9966",25,3070,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","Yes",30,25,"English",0,"Male","",3.2337,1
-"9967",25,2452,"Jackson ran 10 miles","F","F","demonstrate","13","C","Yes",31,25,"English",0,"Male","",3.2337,1
-"9968",25,1972,"Emma studied on Saturday morning","M","F","see","3","NonProj","Yes",32,25,"English",0,"Male","",3.2337,1
 "10025",49,12800,"Mia drank 2 cocktails last night","M","F","reveal","6","NonProj","Yes",5,36,"english",0,"Female","",3.2172,1
 "10026",49,3966,"Zoe calculated the tip","M","F","admit","10","C","Yes",6,36,"english",0,"Female","",3.2172,1
 "10027",49,4564,"Josie went on vacation to France","M","M","acknowledge","2","C","Yes",7,36,"english",0,"Female","",3.2172,1
@@ -9687,34 +8819,6 @@ Thank you, hope to do more ",8.24846666666667,1
 "10274",391,5344,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","No",30,31,"English",0,"Male","All good",3.16816666666667,0
 "10275",391,4048,"Mia drank 2 cocktails last night","M","F","admit","6","C","No",31,31,"English",0,"Male","All good",3.16816666666667,0
 "10276",391,3536,"Sophia got a tattoo","M","F","think","5","NonProj","No",32,31,"English",0,"Male","All good",3.16816666666667,0
-"10277",142,10094,"Jackson ran 10 miles","F","F","admit","13","C","No",5,25,"English",0,"Female","",3.69213333333333,0
-"10278",142,5375,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","Yes",6,25,"English",0,"Female","",3.69213333333333,1
-"10279",142,11225,"Danny ate the last cupcake","F","M","know","11","NonProj","Yes",7,25,"English",0,"Female","",3.69213333333333,1
-"10280",142,4268,"Jayden rented a car","F","F","think","14","NonProj","Yes",8,25,"English",0,"Female","",3.69213333333333,1
-"10281",142,5684,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",9,25,"English",0,"Female","",3.69213333333333,1
-"10282",142,9786,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","Yes",10,25,"English",0,"Female","",3.69213333333333,1
-"10283",142,6954,"Emily bought a car yesterday","M","M","establish","8","NonProj","Yes",11,25,"English",0,"Female","",3.69213333333333,1
-"10284",142,3844,"Josie went on vacation to France","M","M","reveal","2","NonProj","Yes",12,25,"English",0,"Female","",3.69213333333333,1
-"10285",142,3543,"Owen shoveled snow last winter","F","F","pretend","17","NonProj","Yes",13,25,"English",0,"Female","",3.69213333333333,1
-"10286",142,3109,"Julian dances salsa","F","F","say","18","C","Yes",14,25,"English",0,"Female","",3.69213333333333,1
-"10287",142,3216,"Olivia sleeps until noon","M","M","be_annoyed","4","NonProj","Yes",15,25,"English",0,"Female","",3.69213333333333,1
-"10288",142,3339,"Mary is pregnant","M","M","acknowledge","1","C","Yes",16,25,"English",0,"Female","",3.69213333333333,1
-"10289",142,2309,"Jon walks to work","F","F","inform","19","C","Yes",17,25,"English",0,"Female","",3.69213333333333,1
-"10290",142,5915,"Tony had a drink last night","F","F","be_right","15","C","Yes",18,25,"English",0,"Female","",3.69213333333333,1
-"10291",142,4688,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",19,25,"English",0,"Female","",3.69213333333333,1
-"10292",142,4864,"Mia drank 2 cocktails last night","M","F","see","6","NonProj","Yes",20,25,"English",0,"Female","",3.69213333333333,1
-"10293",142,3703,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",21,25,"English",0,"Female","",3.69213333333333,0
-"10294",142,14136,"Grace visited her sister","M","M","announce","9","C","Yes",22,25,"English",0,"Female","",3.69213333333333,1
-"10295",142,8803,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",23,25,"English",0,"Female","",3.69213333333333,1
-"10296",142,3088,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",24,25,"English",0,"Female","",3.69213333333333,1
-"10297",142,3942,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",25,25,"English",0,"Female","",3.69213333333333,0
-"10298",142,3751,"Frank got a cat","F","F","discover","12","NonProj","Yes",26,25,"English",0,"Female","",3.69213333333333,1
-"10299",142,2231,"Josh learned to ride a bike yesterday","F","F","suggest","16","C","Yes",27,25,"English",0,"Female","",3.69213333333333,1
-"10300",142,3488,"Emma studied on Saturday morning","M","M","confess","3","C","Yes",28,25,"English",0,"Female","",3.69213333333333,1
-"10301",142,3429,"Isabella ate a steak on Sunday","M","F","hear","7","C","Yes",29,25,"English",0,"Female","",3.69213333333333,1
-"10302",142,2385,"Charley speaks Spanish","F","F","confirm","20","C","Yes",30,25,"English",0,"Female","",3.69213333333333,1
-"10303",142,1986,"Sophia got a tattoo","M","F","demonstrate","5","C","Yes",31,25,"English",0,"Female","",3.69213333333333,1
-"10304",142,1828,"Zoe calculated the tip","M","F","prove","10","C","Yes",32,25,"English",0,"Female","",3.69213333333333,1
 "10305",218,9497,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","Yes",5,35,"English",0,"Male","no comments, price is fair",5.80281666666667,1
 "10306",218,8378,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",6,35,"English",0,"Male","no comments, price is fair",5.80281666666667,0
 "10307",218,7484,"Sophia got a tattoo","M","M","announce","5","C","Yes",7,35,"English",0,"Male","no comments, price is fair",5.80281666666667,1
@@ -10191,34 +9295,6 @@ Thank you, hope to do more ",8.24846666666667,1
 "10862",42,16756,"Jackson ran 10 miles","F","M","be_annoyed","13","NonProj","No",30,60,"English",0,"Female","Price is fair.",7.68446666666667,0
 "10863",42,17700,"Jon walks to work","F","F","say","19","C","Yes",31,60,"English",0,"Female","Price is fair.",7.68446666666667,1
 "10864",42,7240,"Sebastian lives in the USA and has never been to the USA",NA,"M","contradictory C","control_bad4","control","Yes",32,60,"English",0,"Female","Price is fair.",7.68446666666667,1
-"10865",349,8979,"Sophia got a tattoo","M","F","confess","5","C","Yes",5,24,"english",0,"Male","",3.65486666666667,1
-"10866",349,5957,"Josie went on vacation to France","M","F","see","2","NonProj","Yes",6,24,"english",0,"Male","",3.65486666666667,1
-"10867",349,9064,"Hendrick&quotechars car is completely red and his car is not red",NA,"M","contradictory C","control_bad2","control","Yes",7,24,"english",0,"Male","",3.65486666666667,1
-"10868",349,6166,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",8,24,"english",0,"Male","",3.65486666666667,1
-"10869",349,5624,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"M","non-contrd. C","control_good2","control","No",9,24,"english",0,"Male","",3.65486666666667,0
-"10870",349,9672,"Grace visited her sister","M","F","establish","9","NonProj","Yes",10,24,"english",0,"Male","",3.65486666666667,1
-"10871",349,3571,"Frederick is both smarter and taller than I am",NA,"M","non-contrd. C","control_good3","control","No",11,24,"english",0,"Male","",3.65486666666667,0
-"10872",349,7544,"Tony had a drink last night","F","M","inform","15","C","Yes",12,24,"english",0,"Male","",3.65486666666667,1
-"10873",349,4639,"Danny ate the last cupcake","F","F","know","11","NonProj","Yes",13,24,"english",0,"Male","",3.65486666666667,1
-"10874",349,5987,"Jon walks to work","F","F","demonstrate","19","C","Yes",14,24,"english",0,"Male","",3.65486666666667,1
-"10875",349,5470,"Madison laughed loudly and she didn&quotechart laugh",NA,"F","contradictory C","control_bad3","control","Yes",15,24,"english",0,"Male","",3.65486666666667,1
-"10876",349,5838,"Julian dances salsa","F","M","reveal","18","NonProj","Yes",16,24,"english",0,"Male","",3.65486666666667,1
-"10877",349,5082,"Isabella ate a steak on Sunday","M","F","admit","7","C","Yes",17,24,"english",0,"Male","",3.65486666666667,1
-"10878",349,15097,"Owen shoveled snow last winter","F","F","suggest","17","C","Yes",18,24,"english",0,"Male","",3.65486666666667,1
-"10879",349,8560,"Olivia sleeps until noon","M","M","pretend","4","NonProj","Yes",19,24,"english",0,"Male","",3.65486666666667,1
-"10880",349,4742,"Mia drank 2 cocktails last night","M","M","discover","6","NonProj","Yes",20,24,"english",0,"Male","",3.65486666666667,1
-"10881",349,2623,"Mary is pregnant","M","F","think","1","NonProj","Yes",21,24,"english",0,"Male","",3.65486666666667,1
-"10882",349,4560,"Emma studied on Saturday morning","M","M","confirm","3","C","Yes",22,24,"english",0,"Male","",3.65486666666667,1
-"10883",349,2198,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","Yes",23,24,"english",0,"Male","",3.65486666666667,1
-"10884",349,5236,"Zoe calculated the tip","M","M","announce","10","C","Yes",24,24,"english",0,"Male","",3.65486666666667,1
-"10885",349,3383,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","Yes",25,24,"english",0,"Male","",3.65486666666667,1
-"10886",349,4257,"Frank got a cat","F","M","say","12","C","Yes",26,24,"english",0,"Male","",3.65486666666667,1
-"10887",349,5227,"Charley speaks Spanish","F","M","be_annoyed","20","NonProj","Yes",27,24,"english",0,"Male","",3.65486666666667,1
-"10888",349,7748,"Emily bought a car yesterday","M","F","prove","8","C","Yes",28,24,"english",0,"Male","",3.65486666666667,1
-"10889",349,2423,"Jayden rented a car","F","F","acknowledge","14","C","Yes",29,24,"english",0,"Male","",3.65486666666667,1
-"10890",349,4886,"Josh learned to ride a bike yesterday","F","M","be_right","16","C","Yes",30,24,"english",0,"Male","",3.65486666666667,1
-"10891",349,2695,"Jackson ran 10 miles","F","F","hear","13","C","Yes",31,24,"english",0,"Male","",3.65486666666667,1
-"10892",349,2612,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",32,24,"english",0,"Male","",3.65486666666667,1
 "10893",222,6759,"Sophia got a tattoo","M","M","discover","5","NonProj","Yes",5,48,"English",0,"Male","My main comment is that it would be good to clarify if you want workers doing multiple HITS; these appear to be different tasks, but I&quotecharm not certain.",3.73206666666667,1
 "10894",222,6740,"Owen shoveled snow last winter","F","M","think","17","NonProj","No",6,48,"English",0,"Male","My main comment is that it would be good to clarify if you want workers doing multiple HITS; these appear to be different tasks, but I&quotecharm not certain.",3.73206666666667,0
 "10895",222,4891,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",7,48,"English",0,"Male","My main comment is that it would be good to clarify if you want workers doing multiple HITS; these appear to be different tasks, but I&quotecharm not certain.",3.73206666666667,0
@@ -10891,34 +9967,6 @@ Thank you, hope to do more ",8.24846666666667,1
 "11590",196,2336,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","No",30,47,"English",0,"Male","",3.74208333333333,0
 "11591",196,4040,"Emily bought a car yesterday","M","M","be_right","8","C","Yes",31,47,"English",0,"Male","",3.74208333333333,1
 "11592",196,5662,"Josh learned to ride a bike yesterday","F","M","establish","16","NonProj","Yes",32,47,"English",0,"Male","",3.74208333333333,1
-"11593",48,5855,"Olivia sleeps until noon","M","F","inform","4","C","No",5,30,"English",0,"Female","",4.24125,0
-"11594",48,4166,"Frank got a cat","F","M","see","12","NonProj","Yes",6,30,"English",0,"Female","",4.24125,1
-"11595",48,4373,"Emma studied on Saturday morning","M","F","admit","3","C","Yes",7,30,"English",0,"Female","",4.24125,1
-"11596",48,70002,"Tony had a drink last night","F","M","be_annoyed","15","NonProj","No",8,30,"English",0,"Female","",4.24125,0
-"11597",48,8326,"Owen shoveled snow last winter","F","M","hear","17","C","No",9,30,"English",0,"Female","",4.24125,0
-"11598",48,2232,"Julian dances salsa","F","F","discover","18","NonProj","Yes",10,30,"English",0,"Female","",4.24125,1
-"11599",48,3551,"Vanessa is really good at math, but I&quotecharm not",NA,"M","non-contrd. C","control_good4","control","No",11,30,"English",0,"Female","",4.24125,0
-"11600",48,5561,"Hendrick&quotechars car is completely red and his car is not red",NA,"F","contradictory C","control_bad2","control","No",12,30,"English",0,"Female","",4.24125,0
-"11601",48,3984,"Josie went on vacation to France","M","M","demonstrate","2","C","Yes",13,30,"English",0,"Female","",4.24125,1
-"11602",48,3110,"Sophia got a tattoo","M","M","pretend","5","NonProj","No",14,30,"English",0,"Female","",4.24125,0
-"11603",48,3377,"Emily bought a car yesterday","M","M","confess","8","C","Yes",15,30,"English",0,"Female","",4.24125,1
-"11604",48,4400,"Dana has never smoked in her life and she stopped smoking recently",NA,"M","contradictory C","control_bad1","control","Yes",16,30,"English",0,"Female","",4.24125,1
-"11605",48,3142,"Isabella ate a steak on Sunday","M","M","acknowledge","7","C","Yes",17,30,"English",0,"Female","",4.24125,1
-"11606",48,1520,"Zack believes that I&quotecharm married, but I&quotecharm actually single",NA,"F","non-contrd. C","control_good1","control","Yes",18,30,"English",0,"Female","",4.24125,1
-"11607",48,2528,"Mary is pregnant","M","F","be_right","1","C","Yes",19,30,"English",0,"Female","",4.24125,1
-"11608",48,14158,"Charley speaks Spanish","F","M","announce","20","C","Yes",20,30,"English",0,"Female","",4.24125,1
-"11609",48,2969,"Jon walks to work","F","M","confirm","19","C","Yes",21,30,"English",0,"Female","",4.24125,1
-"11610",48,2564,"Frederick is both smarter and taller than I am",NA,"F","non-contrd. C","control_good3","control","No",22,30,"English",0,"Female","",4.24125,0
-"11611",48,2376,"Jackson ran 10 miles","F","F","say","13","C","Yes",23,30,"English",0,"Female","",4.24125,1
-"11612",48,2430,"Jayden rented a car","F","F","suggest","14","C","No",24,30,"English",0,"Female","",4.24125,0
-"11613",48,3096,"Mia drank 2 cocktails last night","M","M","think","6","NonProj","No",25,30,"English",0,"Female","",4.24125,0
-"11614",48,1967,"Madison laughed loudly and she didn&quotechart laugh",NA,"M","contradictory C","control_bad3","control","Yes",26,30,"English",0,"Female","",4.24125,1
-"11615",48,1521,"Sebastian lives in the USA and has never been to the USA",NA,"F","contradictory C","control_bad4","control","Yes",27,30,"English",0,"Female","",4.24125,1
-"11616",48,2991,"Josh learned to ride a bike yesterday","F","F","prove","16","C","Yes",28,30,"English",0,"Female","",4.24125,1
-"11617",48,2207,"Zoe calculated the tip","M","F","reveal","10","NonProj","Yes",29,30,"English",0,"Female","",4.24125,1
-"11618",48,1216,"Danny ate the last cupcake","F","F","establish","11","NonProj","Yes",30,30,"English",0,"Female","",4.24125,1
-"11619",48,3792,"Tara wants me to cook for her and I&quotecharm a terrific cook",NA,"F","non-contrd. C","control_good2","control","No",31,30,"English",0,"Female","",4.24125,0
-"11620",48,14807,"Grace visited her sister","M","F","know","9","NonProj","Yes",32,30,"English",0,"Female","",4.24125,1
 "11649",376,11859,"Sophia got a tattoo","M","M","establish","5","NonProj","Yes",5,44,"english",0,"Male","None - Thank you",6.1306,1
 "11650",376,10702,"Vanessa is really good at math, but I&quotecharm not",NA,"F","non-contrd. C","control_good4","control","No",6,44,"english",0,"Male","None - Thank you",6.1306,0
 "11651",376,10810,"Emma studied on Saturday morning","M","F","discover","3","NonProj","Yes",7,44,"english",0,"Male","None - Thank you",6.1306,1

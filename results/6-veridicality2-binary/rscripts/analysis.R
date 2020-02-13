@@ -19,7 +19,7 @@ theme_set(theme_bw())
 
 # load clean data for analysis ----
 cd = read.csv("../data/cd.csv")
-nrow(cd) #10808 (386 Turkers)
+nrow(cd) #9884 (353 Turkers)
 summary(cd)
 
 

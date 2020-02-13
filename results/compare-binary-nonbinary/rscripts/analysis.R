@@ -150,7 +150,7 @@ ggsave("../graphs/entailment-inference.pdf",height=3,width=3)
 corr_inference = einfd %>%
   filter(VeridicalityGroup != "control") %>%
   summarize(Cor=cor(Prop,Mean,method="spearman"))
-corr_inference #.993
+corr_inference #.989
 
 # contradictoriness diagnostic ----
 
@@ -216,7 +216,7 @@ ggsave("../graphs/entailment-contradictory.pdf",height=3,width=3)
 corr_contradict = econtrd %>%
   filter(VeridicalityGroup != "control") %>%
   summarize(Cor=cor(Prop,Mean,method="spearman"))
-corr_contradict #.982
+corr_contradict #.985
 
 # create joint plot ----
 
@@ -288,3 +288,4 @@ corr_inf_contr = e_inf_contr %>%
   filter(VeridicalityGroup != "control") %>%
   summarize(Cor=cor(Mean,Mean2,method="spearman"))
 corr_inf_contr
+
