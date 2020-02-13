@@ -864,6 +864,7 @@ table(cd$verb)
 
 # Bayesian mixed effects regression to test whether ratings differ by predicate from good controls
 cd$workerid = as.factor(as.character(cd$workerid))
+cd$content = as.factor(as.character(cd$content))
 
 # plotting slider ratings suggests we should use a zoib model
 ggplot(cd, aes(x=response)) +
@@ -876,27 +877,47 @@ d = cd %>%
 table(d$verb)
 
 # JT commented the following code, to prevent accidental re-runs
-# # zoib model
-# zoib_model <- bf(
-#   response ~ verb, # beta distribution???s mean
-#   phi ~ verb, # beta distribution???s precision
-#   zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
-#   coi ~ verb, # conditional one-inflation
-#   family = zero_one_inflated_beta()
-# )
-# 
-# # fit model
-# m <- brm(
-#   formula = zoib_model,
-#   data = d,
-#   cores = 4#,
-#   # file = here::here("zoib-ex")
-# )
-# # no need to run this multiple times:
-# saveRDS(m,file="../data/zoib-model.rds")
+# # zoib model without random effects
+zoib_model <- bf(
+  response ~ verb, # beta distribution???s mean
+  zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
+  phi ~ verb, # beta distribution's precision  
+  coi ~ verb, # conditional one-inflation
+  family = zero_one_inflated_beta()
+) 
+
+# fit model
+m <- brm(
+  formula = zoib_model,
+  data = d,
+  cores = 4#,
+  # file = here::here("zoib-ex")
+)
+  # no need to run this multiple times:
+saveRDS(m,file="../data/zoib-model.rds")
+
+# # zoib model with random effects
+zoib_model <- bf(
+  response ~ verb, # beta distribution's mean
+  zoi ~ verb + (1+verb|workerid) + (1+verb|content), # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
+  phi ~ verb, # beta distribution's precision  
+  coi ~ verb + (1+verb|workerid) + (1+verb|content), # conditional one-inflation
+  family = zero_one_inflated_beta()
+) 
+
+# fit model
+m <- brm(
+  formula = zoib_model,
+  data = d,
+  cores = 4#,
+  # file = here::here("zoib-ex")
+)
+# no need to run this multiple times:
+saveRDS(m,file="../data/zoib-model-mixed.rds")
 
 # load ZOIB model ----
-m <- readRDS(file="../data/zoib-model.rds")
+m <- readRDS(file="../data/zoib-model.rds") # no random effects
+m <- readRDS(file="../data/zoib-model-mixed.rds") # random effects
 
 summary(m) # see summary printed below
 
