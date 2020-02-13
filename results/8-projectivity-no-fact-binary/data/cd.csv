@@ -1299,6 +1299,32 @@
 "1610",124,3351,"Jayden rented a car","F","M","reveal","Did Stephanie reveal that Jayden rented a car?","14","NonProj","Yes",25,51,"english","Yes",0,"m","",5.22321666666667,1
 "1611",124,3031,"Vanessa is good at math",NA,"F","MC","Is Vanessa good at math?","control4","control","No",26,51,"english","Yes",0,"m","",5.22321666666667,0
 "1612",124,5385,"Grace visited her sister","M","F","admit","Did Andrew admit that Grace visited her sister?","9","C","Yes",27,51,"english","Yes",0,"m","",5.22321666666667,1
+"1639",424,10097,"Emma studied on Saturday morning","M","F","confess","Did Justin confess that Emma studied on Saturday morning?","3","C","No",2,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,0
+"1640",424,7882,"Mary&quotechars aunt is sick",NA,"F","MC","Is Mary&quotechars aunt sick?","control2","control","No",3,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,0
+"1641",424,9062,"Isabella ate a steak on Sunday","M","F","inform","Did Kevin inform Sam that Isabella ate a steak on Sunday?","7","C","Yes",4,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1642",424,7950,"Tony had a drink last night","F","F","confirm","Did Rebecca confirm that Tony had a drink last night?","15","C","No",5,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,0
+"1643",424,17747,"Vanessa is good at math",NA,"M","MC","Is Vanessa good at math?","control4","control","No",6,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,0
+"1644",424,5093,"Todd played football in high school",NA,"F","MC","Did Todd play football in high school?","control3","control","No",7,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,0
+"1645",424,6023,"Julian dances salsa","F","M","say","Did Kathleen say that Julian dances salsa?","18","C","Yes",8,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1646",424,6687,"Danny ate the last cupcake","F","F","be_right","Is Amanda right that Danny ate the last cupcake?","11","C","Yes",9,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1647",424,7563,"Owen shoveled snow last winter","F","F","admit","Did Cynthia admit that Owen shoveled snow last winter?","17","C","Yes",10,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1648",424,8157,"Olivia sleeps until noon","M","F","pretend","Did Jerry pretend that Olivia sleeps until noon?","4","NonProj","Yes",11,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1649",424,3760,"Madison had a baby",NA,"F","MC","Did Madison have a baby?","control5","control","No",12,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,0
+"1650",424,7154,"Jackson ran 10 miles","F","F","acknowledge","Did Laura acknowledge that Jackson ran 10 miles?","13","C","Yes",13,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1651",424,24178,"Mia drank 2 cocktails last night","M","F","be_annoyed","Is Ray annoyed that Mia drank 2 cocktails last night?","6","NonProj","Yes",14,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1652",424,6359,"Hendrick&quotechars car was expensive",NA,"F","MC","Was Hendrick&quotechars car expensive?","control6","control","Yes",15,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1653",424,5178,"Sophia got a tattoo","M","F","discover","Did Ben discover that Sophia got a tattoo?","5","NonProj","Yes",16,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1654",424,5431,"Zoe calculated the tip","M","M","demonstrate","Did Tim demonstrate that Zoe calculated the tip?","10","C","Yes",17,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1655",424,13553,"Mary is pregnant","M","M","reveal","Did Patrick reveal that Mary is pregnant?","1","NonProj","Yes",18,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1656",424,6541,"Josie went on vacation to France","M","F","prove","Did Scott prove that Josie went on vacation to France?","2","C","Yes",19,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1657",424,6633,"Grace visited her sister","M","F","know","Does Andrew know that Grace visited her sister?","9","NonProj","Yes",20,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1658",424,15431,"Josh learned to ride a bike yesterday","F","M","suggest","Did Sharon suggest that Josh learned to ride a bike yesterday?","16","C","No",21,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,0
+"1659",424,32217,"Jayden rented a car","F","M","hear","Did Stephanie hear that Jayden rented a car?","14","C","Yes",22,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1660",424,6043,"Frank got a cat","F","F","announce","Did Melissa announce that Frank got a cat?","12","C","Yes",23,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
+"1661",424,16478,"Jon walks to work","F","F","think","Does Ruth think that Jon walks to work?","19","NonProj","No",24,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,0
+"1662",424,14787,"Zack is coming to the meeting tomorrow",NA,"M","MC","Is Zack coming to the meeting tomorrow?","control1","control","No",25,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,0
+"1663",424,8902,"Emily bought a car yesterday","M","F","establish","Did Brian establish that Emily bought a car yesterday?","8","NonProj","No",26,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,0
+"1664",424,10544,"Charley speaks Spanish","F","M","see","Did Anna see that Charley speaks Spanish?","20","NonProj","Yes",27,52,"English ","Yes",0,"f","The payment is fair - some were easier than others to answer ad be clear ",5.75413333333333,1
 "1665",65,11218,"Emma studied on Saturday morning","M","F","confirm","Did Justin confirm that Emma studied on Saturday morning?","3","C","No",2,44,"English","Yes",0,"m","A fun HIT!  These ones were pretty cut and dry, IMO.  $1.00 is just right.  Thanks for the HIT!  I did my best and hope the data is useful!",3.80166666666667,0
 "1666",65,6623,"Josh learned to ride a bike yesterday","F","M","be_right","Is Sharon right that Josh learned to ride a bike yesterday?","16","C","No",3,44,"English","Yes",0,"m","A fun HIT!  These ones were pretty cut and dry, IMO.  $1.00 is just right.  Thanks for the HIT!  I did my best and hope the data is useful!",3.80166666666667,0
 "1667",65,7188,"Josie went on vacation to France","M","M","prove","Did Scott prove that Josie went on vacation to France?","2","C","No",4,44,"English","Yes",0,"m","A fun HIT!  These ones were pretty cut and dry, IMO.  $1.00 is just right.  Thanks for the HIT!  I did my best and hope the data is useful!",3.80166666666667,0
@@ -2729,6 +2755,32 @@
 "3456",343,3048,"Zack is coming to the meeting tomorrow",NA,"M","MC","Is Zack coming to the meeting tomorrow?","control1","control","No",25,33,"English","Yes",0,"f","Some of them could have swayed either way, depending on infliction of certain words.",3.55343333333333,0
 "3457",343,14284,"Frank got a cat","F","F","demonstrate","Did Melissa demonstrate that Frank got a cat?","12","C","No",26,33,"English","Yes",0,"f","Some of them could have swayed either way, depending on infliction of certain words.",3.55343333333333,0
 "3458",343,6566,"Emily bought a car yesterday","M","M","acknowledge","Did Brian acknowledge that Emily bought a car yesterday?","8","C","Yes",27,33,"English","Yes",0,"f","Some of them could have swayed either way, depending on infliction of certain words.",3.55343333333333,1
+"3459",26,7037,"Tony had a drink last night","F","F","say","Did Rebecca say that Tony had a drink last night?","15","C","No",2,38,"English","Yes",0,"f","",3.36513333333333,0
+"3460",26,4807,"Isabella ate a steak on Sunday","M","F","demonstrate","Did Kevin demonstrate that Isabella ate a steak on Sunday?","7","C","No",3,38,"English","Yes",0,"f","",3.36513333333333,0
+"3461",26,4452,"Frank got a cat","F","M","suggest","Did Melissa suggest that Frank got a cat?","12","C","No",4,38,"English","Yes",0,"f","",3.36513333333333,0
+"3462",26,10575,"Julian dances salsa","F","F","inform","Did Kathleen inform Sam that Julian dances salsa?","18","C","Yes",5,38,"English","Yes",0,"f","",3.36513333333333,1
+"3463",26,5877,"Grace visited her sister","M","M","admit","Did Andrew admit that Grace visited her sister?","9","C","No",6,38,"English","Yes",0,"f","",3.36513333333333,0
+"3464",26,3971,"Josie went on vacation to France","M","F","think","Does Scott think that Josie went on vacation to France?","2","NonProj","No",7,38,"English","Yes",0,"f","",3.36513333333333,0
+"3465",26,4514,"Olivia sleeps until noon","M","M","be_right","Is Jerry right that Olivia sleeps until noon?","4","C","No",8,38,"English","Yes",0,"f","",3.36513333333333,0
+"3466",26,2664,"Mary&quotechars aunt is sick",NA,"F","MC","Is Mary&quotechars aunt sick?","control2","control","No",9,38,"English","Yes",0,"f","",3.36513333333333,0
+"3467",26,3999,"Emily bought a car yesterday","M","F","be_annoyed","Is Brian annoyed that Emily bought a car yesterday?","8","NonProj","Yes",10,38,"English","Yes",0,"f","",3.36513333333333,1
+"3468",26,8960,"Jon walks to work","F","M","discover","Did Ruth discover that Jon walks to work?","19","NonProj","Yes",11,38,"English","Yes",0,"f","",3.36513333333333,1
+"3469",26,5332,"Madison had a baby",NA,"M","MC","Did Madison have a baby?","control5","control","No",12,38,"English","Yes",0,"f","",3.36513333333333,0
+"3470",26,15473,"Charley speaks Spanish","F","F","acknowledge","Did Anna acknowledge that Charley speaks Spanish?","20","C","No",13,38,"English","Yes",0,"f","",3.36513333333333,0
+"3471",26,4355,"Todd played football in high school",NA,"M","MC","Did Todd play football in high school?","control3","control","No",14,38,"English","Yes",0,"f","",3.36513333333333,0
+"3472",26,2985,"Jackson ran 10 miles","F","F","hear","Did Laura hear that Jackson ran 10 miles?","13","C","Yes",15,38,"English","Yes",0,"f","",3.36513333333333,1
+"3473",26,2994,"Vanessa is good at math",NA,"M","MC","Is Vanessa good at math?","control4","control","No",16,38,"English","Yes",0,"f","",3.36513333333333,0
+"3474",26,3326,"Hendrick&quotechars car was expensive",NA,"F","MC","Was Hendrick&quotechars car expensive?","control6","control","No",17,38,"English","Yes",0,"f","",3.36513333333333,0
+"3475",26,6064,"Mia drank 2 cocktails last night","M","F","see","Did Ray see that Mia drank 2 cocktails last night?","6","NonProj","Yes",18,38,"English","Yes",0,"f","",3.36513333333333,1
+"3476",26,3419,"Jayden rented a car","F","M","announce","Did Stephanie announce that Jayden rented a car?","14","C","No",19,38,"English","Yes",0,"f","",3.36513333333333,0
+"3477",26,3628,"Owen shoveled snow last winter","F","F","pretend","Did Cynthia pretend that Owen shoveled snow last winter?","17","NonProj","No",20,38,"English","Yes",0,"f","",3.36513333333333,0
+"3478",26,6253,"Josh learned to ride a bike yesterday","F","F","establish","Did Sharon establish that Josh learned to ride a bike yesterday?","16","NonProj","No",21,38,"English","Yes",0,"f","",3.36513333333333,0
+"3479",26,11655,"Sophia got a tattoo","M","M","confirm","Did Ben confirm that Sophia got a tattoo?","5","C","No",22,38,"English","Yes",0,"f","",3.36513333333333,0
+"3480",26,3656,"Zoe calculated the tip","M","M","confess","Did Tim confess that Zoe calculated the tip?","10","C","Yes",23,38,"English","Yes",0,"f","",3.36513333333333,1
+"3481",26,5919,"Mary is pregnant","M","M","know","Does Patrick know that Mary is pregnant?","1","NonProj","Yes",24,38,"English","Yes",0,"f","",3.36513333333333,1
+"3482",26,19772,"Emma studied on Saturday morning","M","F","prove","Did Justin prove that Emma studied on Saturday morning?","3","C","No",25,38,"English","Yes",0,"f","",3.36513333333333,0
+"3483",26,8576,"Zack is coming to the meeting tomorrow",NA,"F","MC","Is Zack coming to the meeting tomorrow?","control1","control","Yes",26,38,"English","Yes",0,"f","",3.36513333333333,1
+"3484",26,4288,"Danny ate the last cupcake","F","F","reveal","Did Amanda reveal that Danny ate the last cupcake?","11","NonProj","Yes",27,38,"English","Yes",0,"f","",3.36513333333333,1
 "3485",32,24362,"Jon walks to work","F","F","say","Did Ruth say that Jon walks to work?","19","C","No",2,30,"english","Yes",0,"o","",6.12098333333333,0
 "3486",32,7369,"Todd played football in high school",NA,"M","MC","Did Todd play football in high school?","control3","control","No",3,30,"english","Yes",0,"o","",6.12098333333333,0
 "3487",32,9228,"Madison had a baby",NA,"M","MC","Did Madison have a baby?","control5","control","No",4,30,"english","Yes",0,"o","",6.12098333333333,0
@@ -3509,6 +3561,32 @@
 "4392",169,3856,"Todd played football in high school",NA,"F","MC","Did Todd play football in high school?","control3","control","No",25,44,"English","Yes",0,"m","This is more than a fair price.",10.5681833333333,0
 "4393",169,11883,"Danny ate the last cupcake","F","F","inform","Did Amanda inform Sam that Danny ate the last cupcake?","11","C","Yes",26,44,"English","Yes",0,"m","This is more than a fair price.",10.5681833333333,1
 "4394",169,7033,"Jayden rented a car","F","F","confirm","Did Stephanie confirm that Jayden rented a car?","14","C","No",27,44,"English","Yes",0,"m","This is more than a fair price.",10.5681833333333,0
+"4395",116,7413,"Emily bought a car yesterday","M","F","admit","Did Brian admit that Emily bought a car yesterday?","8","C","Yes",2,36,"English","No",0,"m","",12.9574333333333,1
+"4396",116,5565,"Jackson ran 10 miles","F","M","pretend","Did Laura pretend that Jackson ran 10 miles?","13","NonProj","No",3,36,"English","No",0,"m","",12.9574333333333,0
+"4397",116,4583,"Danny ate the last cupcake","F","F","confirm","Did Amanda confirm that Danny ate the last cupcake?","11","C","No",4,36,"English","No",0,"m","",12.9574333333333,0
+"4398",116,3244,"Vanessa is good at math",NA,"M","MC","Is Vanessa good at math?","control4","control","No",5,36,"English","No",0,"m","",12.9574333333333,0
+"4399",116,5697,"Grace visited her sister","M","M","think","Does Andrew think that Grace visited her sister?","9","NonProj","No",6,36,"English","No",0,"m","",12.9574333333333,0
+"4400",116,555310,"Zoe calculated the tip","M","M","reveal","Did Tim reveal that Zoe calculated the tip?","10","NonProj","No",7,36,"English","No",0,"m","",12.9574333333333,0
+"4401",116,2198,"Todd played football in high school",NA,"M","MC","Did Todd play football in high school?","control3","control","Yes",8,36,"English","No",0,"m","",12.9574333333333,1
+"4402",116,2056,"Jon walks to work","F","F","prove","Did Ruth prove that Jon walks to work?","19","C","No",9,36,"English","No",0,"m","",12.9574333333333,0
+"4403",116,3861,"Hendrick&quotechars car was expensive",NA,"M","MC","Was Hendrick&quotechars car expensive?","control6","control","No",10,36,"English","No",0,"m","",12.9574333333333,0
+"4404",116,2960,"Jayden rented a car","F","F","announce","Did Stephanie announce that Jayden rented a car?","14","C","Yes",11,36,"English","No",0,"m","",12.9574333333333,1
+"4405",116,2843,"Josh learned to ride a bike yesterday","F","F","be_annoyed","Is Sharon annoyed that Josh learned to ride a bike yesterday?","16","NonProj","Yes",12,36,"English","No",0,"m","",12.9574333333333,1
+"4406",116,1839,"Madison had a baby",NA,"M","MC","Did Madison have a baby?","control5","control","No",13,36,"English","No",0,"m","",12.9574333333333,0
+"4407",116,2414,"Sophia got a tattoo","M","F","confess","Did Ben confess that Sophia got a tattoo?","5","C","Yes",14,36,"English","No",0,"m","",12.9574333333333,1
+"4408",116,3933,"Isabella ate a steak on Sunday","M","M","suggest","Did Kevin suggest that Isabella ate a steak on Sunday?","7","C","Yes",15,36,"English","No",0,"m","",12.9574333333333,1
+"4409",116,2719,"Tony had a drink last night","F","M","be_right","Is Rebecca right that Tony had a drink last night?","15","C","No",16,36,"English","No",0,"m","",12.9574333333333,0
+"4410",116,1908,"Mary&quotechars aunt is sick",NA,"F","MC","Is Mary&quotechars aunt sick?","control2","control","No",17,36,"English","No",0,"m","",12.9574333333333,0
+"4411",116,5284,"Charley speaks Spanish","F","F","establish","Did Anna establish that Charley speaks Spanish?","20","NonProj","Yes",18,36,"English","No",0,"m","",12.9574333333333,1
+"4412",116,3195,"Owen shoveled snow last winter","F","M","see","Did Cynthia see that Owen shoveled snow last winter?","17","NonProj","Yes",19,36,"English","No",0,"m","",12.9574333333333,1
+"4413",116,2938,"Mary is pregnant","M","M","discover","Did Patrick discover that Mary is pregnant?","1","NonProj","Yes",20,36,"English","No",0,"m","",12.9574333333333,1
+"4414",116,2453,"Mia drank 2 cocktails last night","M","F","inform","Did Ray inform Sam that Mia drank 2 cocktails last night?","6","C","Yes",21,36,"English","No",0,"m","",12.9574333333333,1
+"4415",116,1703,"Zack is coming to the meeting tomorrow",NA,"F","MC","Is Zack coming to the meeting tomorrow?","control1","control","No",22,36,"English","No",0,"m","",12.9574333333333,0
+"4416",116,5118,"Emma studied on Saturday morning","M","F","know","Does Justin know that Emma studied on Saturday morning?","3","NonProj","Yes",23,36,"English","No",0,"m","",12.9574333333333,1
+"4417",116,2945,"Julian dances salsa","F","F","hear","Did Kathleen hear that Julian dances salsa?","18","C","Yes",24,36,"English","No",0,"m","",12.9574333333333,1
+"4418",116,2061,"Olivia sleeps until noon","M","F","say","Did Jerry say that Olivia sleeps until noon?","4","C","No",25,36,"English","No",0,"m","",12.9574333333333,0
+"4419",116,3221,"Frank got a cat","F","F","acknowledge","Did Melissa acknowledge that Frank got a cat?","12","C","Yes",26,36,"English","No",0,"m","",12.9574333333333,1
+"4420",116,2402,"Josie went on vacation to France","M","F","demonstrate","Did Scott demonstrate that Josie went on vacation to France?","2","C","Yes",27,36,"English","No",0,"m","",12.9574333333333,1
 "4421",83,6408,"Isabella ate a steak on Sunday","M","M","think","Does Kevin think that Isabella ate a steak on Sunday?","7","NonProj","No",2,54,"english","Yes",0,"f","yes fair price",3.0936,0
 "4422",83,8622,"Mia drank 2 cocktails last night","M","F","inform","Did Ray inform Sam that Mia drank 2 cocktails last night?","6","C","Yes",3,54,"english","Yes",0,"f","yes fair price",3.0936,1
 "4423",83,4232,"Mary&quotechars aunt is sick",NA,"F","MC","Is Mary&quotechars aunt sick?","control2","control","No",4,54,"english","Yes",0,"f","yes fair price",3.0936,0
@@ -3561,6 +3639,32 @@
 "4470",68,1720,"Jackson ran 10 miles","F","M","suggest","Did Laura suggest that Jackson ran 10 miles?","13","C","No",25,33,"English","Yes",0,"m","",1.70328333333333,0
 "4471",68,1744,"Madison had a baby",NA,"F","MC","Did Madison have a baby?","control5","control","No",26,33,"English","Yes",0,"m","",1.70328333333333,0
 "4472",68,7792,"Frank got a cat","F","F","announce","Did Melissa announce that Frank got a cat?","12","C","Yes",27,33,"English","Yes",0,"m","",1.70328333333333,1
+"4473",261,2900,"Tony had a drink last night","F","F","inform","Did Rebecca inform Sam that Tony had a drink last night?","15","C","No",2,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4474",261,1352,"Hendrick&quotechars car was expensive",NA,"F","MC","Was Hendrick&quotechars car expensive?","control6","control","No",3,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4475",261,2216,"Josh learned to ride a bike yesterday","F","M","demonstrate","Did Sharon demonstrate that Josh learned to ride a bike yesterday?","16","C","No",4,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4476",261,2488,"Todd played football in high school",NA,"F","MC","Did Todd play football in high school?","control3","control","No",5,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4477",261,3072,"Owen shoveled snow last winter","F","M","suggest","Did Cynthia suggest that Owen shoveled snow last winter?","17","C","Yes",6,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,1
+"4478",261,1864,"Vanessa is good at math",NA,"M","MC","Is Vanessa good at math?","control4","control","No",7,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4479",261,2520,"Sophia got a tattoo","M","M","know","Does Ben know that Sophia got a tattoo?","5","NonProj","Yes",8,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,1
+"4480",261,3752,"Zack is coming to the meeting tomorrow",NA,"F","MC","Is Zack coming to the meeting tomorrow?","control1","control","No",9,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4481",261,2000,"Emma studied on Saturday morning","M","F","acknowledge","Did Justin acknowledge that Emma studied on Saturday morning?","3","C","No",10,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4482",261,2168,"Jon walks to work","F","M","establish","Did Ruth establish that Jon walks to work?","19","NonProj","No",11,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4483",261,3200,"Charley speaks Spanish","F","M","be_right","Is Anna right that Charley speaks Spanish?","20","C","No",12,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4484",261,1544,"Isabella ate a steak on Sunday","M","F","think","Does Kevin think that Isabella ate a steak on Sunday?","7","NonProj","No",13,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4485",261,1872,"Josie went on vacation to France","M","F","confess","Did Scott confess that Josie went on vacation to France?","2","C","No",14,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4486",261,1560,"Mary is pregnant","M","F","say","Did Patrick say that Mary is pregnant?","1","C","No",15,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4487",261,1624,"Emily bought a car yesterday","M","F","reveal","Did Brian reveal that Emily bought a car yesterday?","8","NonProj","No",16,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4488",261,1336,"Jayden rented a car","F","F","see","Did Stephanie see that Jayden rented a car?","14","NonProj","No",17,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4489",261,1880,"Zoe calculated the tip","M","F","hear","Did Tim hear that Zoe calculated the tip?","10","C","No",18,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4490",261,1407,"Mia drank 2 cocktails last night","M","F","be_annoyed","Is Ray annoyed that Mia drank 2 cocktails last night?","6","NonProj","No",19,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4491",261,2896,"Danny ate the last cupcake","F","F","confirm","Did Amanda confirm that Danny ate the last cupcake?","11","C","No",20,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4492",261,1872,"Mary&quotechars aunt is sick",NA,"F","MC","Is Mary&quotechars aunt sick?","control2","control","No",21,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4493",261,1792,"Julian dances salsa","F","M","prove","Did Kathleen prove that Julian dances salsa?","18","C","No",22,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4494",261,1671,"Jackson ran 10 miles","F","F","discover","Did Laura discover that Jackson ran 10 miles?","13","NonProj","No",23,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4495",261,2968,"Grace visited her sister","M","F","pretend","Did Andrew pretend that Grace visited her sister?","9","NonProj","No",24,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
+"4496",261,3231,"Frank got a cat","F","F","announce","Did Melissa announce that Frank got a cat?","12","C","Yes",25,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,1
+"4497",261,4217,"Madison had a baby",NA,"M","MC","Did Madison have a baby?","control5","control","Yes",26,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,1
+"4498",261,2383,"Olivia sleeps until noon","M","M","admit","Did Jerry admit that Olivia sleeps until noon?","4","C","No",27,49,"english","Yes",0,"f","These questions could go either way in an answer.",1.88543333333333,0
 "4499",197,10400,"Todd played football in high school",NA,"M","MC","Did Todd play football in high school?","control3","control","No",2,31,"English","Yes",0,"m","Great HIT at a fair price! Thank You!",5.56465,0
 "4500",197,21827,"Tony had a drink last night","F","F","admit","Did Rebecca admit that Tony had a drink last night?","15","C","Yes",3,31,"English","Yes",0,"m","Great HIT at a fair price! Thank You!",5.56465,1
 "4501",197,13588,"Charley speaks Spanish","F","F","think","Does Anna think that Charley speaks Spanish?","20","NonProj","No",4,31,"English","Yes",0,"m","Great HIT at a fair price! Thank You!",5.56465,0
@@ -5511,6 +5615,32 @@
 "6836",50,1775,"Julian dances salsa","F","M","be_right","Is Kathleen right that Julian dances salsa?","18","C","No",25,31,"English","Yes",0,"m","",1.93503333333333,0
 "6837",50,1585,"Hendrick&quotechars car was expensive",NA,"F","MC","Was Hendrick&quotechars car expensive?","control6","control","No",26,31,"English","Yes",0,"m","",1.93503333333333,0
 "6838",50,1430,"Vanessa is good at math",NA,"F","MC","Is Vanessa good at math?","control4","control","No",27,31,"English","Yes",0,"m","",1.93503333333333,0
+"6839",154,6027,"Hendrick&quotechars car was expensive",NA,"F","MC","Was Hendrick&quotechars car expensive?","control6","control","No",2,29,"English","Yes",0,"m","",3.35675,0
+"6840",154,4284,"Tony had a drink last night","F","F","hear","Did Rebecca hear that Tony had a drink last night?","15","C","Yes",3,29,"English","Yes",0,"m","",3.35675,1
+"6841",154,5356,"Jon walks to work","F","F","prove","Did Ruth prove that Jon walks to work?","19","C","Yes",4,29,"English","Yes",0,"m","",3.35675,1
+"6842",154,4199,"Madison had a baby",NA,"F","MC","Did Madison have a baby?","control5","control","Yes",5,29,"English","Yes",0,"m","",3.35675,1
+"6843",154,3947,"Jayden rented a car","F","F","establish","Did Stephanie establish that Jayden rented a car?","14","NonProj","No",6,29,"English","Yes",0,"m","",3.35675,0
+"6844",154,5274,"Mary is pregnant","M","M","announce","Did Patrick announce that Mary is pregnant?","1","C","No",7,29,"English","Yes",0,"m","",3.35675,0
+"6845",154,3409,"Julian dances salsa","F","F","suggest","Did Kathleen suggest that Julian dances salsa?","18","C","No",8,29,"English","Yes",0,"m","",3.35675,0
+"6846",154,5992,"Emma studied on Saturday morning","M","M","confess","Did Justin confess that Emma studied on Saturday morning?","3","C","Yes",9,29,"English","Yes",0,"m","",3.35675,1
+"6847",154,5851,"Owen shoveled snow last winter","F","F","know","Does Cynthia know that Owen shoveled snow last winter?","17","NonProj","Yes",10,29,"English","Yes",0,"m","",3.35675,1
+"6848",154,3432,"Danny ate the last cupcake","F","F","be_annoyed","Is Amanda annoyed that Danny ate the last cupcake?","11","NonProj","No",11,29,"English","Yes",0,"m","",3.35675,0
+"6849",154,5254,"Frank got a cat","F","M","reveal","Did Melissa reveal that Frank got a cat?","12","NonProj","Yes",12,29,"English","Yes",0,"m","",3.35675,1
+"6850",154,4151,"Sophia got a tattoo","M","M","pretend","Did Ben pretend that Sophia got a tattoo?","5","NonProj","No",13,29,"English","Yes",0,"m","",3.35675,0
+"6851",154,6760,"Zoe calculated the tip","M","F","inform","Did Tim inform Sam that Zoe calculated the tip?","10","C","Yes",14,29,"English","Yes",0,"m","",3.35675,1
+"6852",154,5177,"Josie went on vacation to France","M","F","acknowledge","Did Scott acknowledge that Josie went on vacation to France?","2","C","Yes",15,29,"English","Yes",0,"m","",3.35675,1
+"6853",154,5400,"Charley speaks Spanish","F","M","demonstrate","Did Anna demonstrate that Charley speaks Spanish?","20","C","No",16,29,"English","Yes",0,"m","",3.35675,0
+"6854",154,4503,"Mia drank 2 cocktails last night","M","F","be_right","Is Ray right that Mia drank 2 cocktails last night?","6","C","Yes",17,29,"English","Yes",0,"m","",3.35675,1
+"6855",154,2773,"Mary&quotechars aunt is sick",NA,"M","MC","Is Mary&quotechars aunt sick?","control2","control","No",18,29,"English","Yes",0,"m","",3.35675,0
+"6856",154,7919,"Grace visited her sister","M","F","admit","Did Andrew admit that Grace visited her sister?","9","C","Yes",19,29,"English","Yes",0,"m","",3.35675,1
+"6857",154,63767,"Emily bought a car yesterday","M","M","discover","Did Brian discover that Emily bought a car yesterday?","8","NonProj","Yes",20,29,"English","Yes",0,"m","",3.35675,1
+"6858",154,6262,"Jackson ran 10 miles","F","M","think","Does Laura think that Jackson ran 10 miles?","13","NonProj","No",21,29,"English","Yes",0,"m","",3.35675,0
+"6859",154,3645,"Josh learned to ride a bike yesterday","F","M","see","Did Sharon see that Josh learned to ride a bike yesterday?","16","NonProj","Yes",22,29,"English","Yes",0,"m","",3.35675,1
+"6860",154,3761,"Todd played football in high school",NA,"M","MC","Did Todd play football in high school?","control3","control","No",23,29,"English","Yes",0,"m","",3.35675,0
+"6861",154,2096,"Vanessa is good at math",NA,"F","MC","Is Vanessa good at math?","control4","control","No",24,29,"English","Yes",0,"m","",3.35675,0
+"6862",154,3272,"Zack is coming to the meeting tomorrow",NA,"F","MC","Is Zack coming to the meeting tomorrow?","control1","control","No",25,29,"English","Yes",0,"m","",3.35675,0
+"6863",154,4841,"Isabella ate a steak on Sunday","M","M","confirm","Did Kevin confirm that Isabella ate a steak on Sunday?","7","C","Yes",26,29,"English","Yes",0,"m","",3.35675,1
+"6864",154,4369,"Olivia sleeps until noon","M","M","say","Did Jerry say that Olivia sleeps until noon?","4","C","Yes",27,29,"English","Yes",0,"m","",3.35675,1
 "6865",288,5547,"Sophia got a tattoo","M","F","confirm","Did Ben confirm that Sophia got a tattoo?","5","C","No",2,27,"English","Yes",0,"m","",2.16658333333333,0
 "6866",288,7691,"Mary&quotechars aunt is sick",NA,"F","MC","Is Mary&quotechars aunt sick?","control2","control","No",3,27,"English","Yes",0,"m","",2.16658333333333,0
 "6867",288,3265,"Owen shoveled snow last winter","F","F","demonstrate","Did Cynthia demonstrate that Owen shoveled snow last winter?","17","C","No",4,27,"English","Yes",0,"m","",2.16658333333333,0
@@ -8475,6 +8605,32 @@
 "10450",409,9711,"Jon walks to work","F","F","establish","Did Ruth establish that Jon walks to work?","19","NonProj","Yes",25,49,"English","Yes",0,"m","Well some of them were ambiguous, could be either way depending on more context. Obviously I&quotechard like to get paid more. :)",8.10458333333333,1
 "10451",409,9403,"Hendrick&quotechars car was expensive",NA,"F","MC","Was Hendrick&quotechars car expensive?","control6","control","No",26,49,"English","Yes",0,"m","Well some of them were ambiguous, could be either way depending on more context. Obviously I&quotechard like to get paid more. :)",8.10458333333333,0
 "10452",409,12029,"Josie went on vacation to France","M","F","hear","Did Scott hear that Josie went on vacation to France?","2","C","No",27,49,"English","Yes",0,"m","Well some of them were ambiguous, could be either way depending on more context. Obviously I&quotechard like to get paid more. :)",8.10458333333333,0
+"10453",122,9452,"Mary is pregnant","M","M","announce","Did Patrick announce that Mary is pregnant?","1","C","No",2,50,"english","Yes",0,"f","",6.78181666666667,0
+"10454",122,6047,"Tony had a drink last night","F","F","be_right","Is Rebecca right that Tony had a drink last night?","15","C","No",3,50,"english","Yes",0,"f","",6.78181666666667,0
+"10455",122,8992,"Danny ate the last cupcake","F","F","confirm","Did Amanda confirm that Danny ate the last cupcake?","11","C","No",4,50,"english","Yes",0,"f","",6.78181666666667,0
+"10456",122,8552,"Sophia got a tattoo","M","F","inform","Did Ben inform Sam that Sophia got a tattoo?","5","C","Yes",5,50,"english","Yes",0,"f","",6.78181666666667,1
+"10457",122,8008,"Emily bought a car yesterday","M","M","confess","Did Brian confess that Emily bought a car yesterday?","8","C","Yes",6,50,"english","Yes",0,"f","",6.78181666666667,1
+"10458",122,14657,"Josie went on vacation to France","M","M","establish","Did Scott establish that Josie went on vacation to France?","2","NonProj","Yes",7,50,"english","Yes",0,"f","",6.78181666666667,1
+"10459",122,5455,"Jon walks to work","F","F","discover","Did Ruth discover that Jon walks to work?","19","NonProj","Yes",8,50,"english","Yes",0,"f","",6.78181666666667,1
+"10460",122,12960,"Josh learned to ride a bike yesterday","F","M","say","Did Sharon say that Josh learned to ride a bike yesterday?","16","C","No",9,50,"english","Yes",0,"f","",6.78181666666667,0
+"10461",122,10052,"Frank got a cat","F","F","know","Does Melissa know that Frank got a cat?","12","NonProj","Yes",10,50,"english","Yes",0,"f","",6.78181666666667,1
+"10462",122,34566,"Charley speaks Spanish","F","F","be_annoyed","Is Anna annoyed that Charley speaks Spanish?","20","NonProj","Yes",11,50,"english","Yes",0,"f","",6.78181666666667,1
+"10463",122,54541,"Zoe calculated the tip","M","M","acknowledge","Did Tim acknowledge that Zoe calculated the tip?","10","C","Yes",12,50,"english","Yes",0,"f","",6.78181666666667,1
+"10464",122,4999,"Hendrick&quotechars car was expensive",NA,"F","MC","Was Hendrick&quotechars car expensive?","control6","control","No",13,50,"english","Yes",0,"f","",6.78181666666667,0
+"10465",122,5143,"Todd played football in high school",NA,"M","MC","Did Todd play football in high school?","control3","control","No",14,50,"english","Yes",0,"f","",6.78181666666667,0
+"10466",122,10184,"Owen shoveled snow last winter","F","M","demonstrate","Did Cynthia demonstrate that Owen shoveled snow last winter?","17","C","Yes",15,50,"english","Yes",0,"f","",6.78181666666667,1
+"10467",122,26856,"Mary&quotechars aunt is sick",NA,"F","MC","Is Mary&quotechars aunt sick?","control2","control","No",16,50,"english","Yes",0,"f","",6.78181666666667,0
+"10468",122,9536,"Mia drank 2 cocktails last night","M","M","prove","Did Ray prove that Mia drank 2 cocktails last night?","6","C","No",17,50,"english","Yes",0,"f","",6.78181666666667,0
+"10469",122,20553,"Jayden rented a car","F","F","think","Does Stephanie think that Jayden rented a car?","14","NonProj","No",18,50,"english","Yes",0,"f","",6.78181666666667,0
+"10470",122,5287,"Madison had a baby",NA,"F","MC","Did Madison have a baby?","control5","control","No",19,50,"english","Yes",0,"f","",6.78181666666667,0
+"10471",122,2656,"Olivia sleeps until noon","M","F","admit","Did Jerry admit that Olivia sleeps until noon?","4","C","Yes",20,50,"english","Yes",0,"f","",6.78181666666667,1
+"10472",122,4224,"Jackson ran 10 miles","F","M","pretend","Did Laura pretend that Jackson ran 10 miles?","13","NonProj","Yes",21,50,"english","Yes",0,"f","",6.78181666666667,1
+"10473",122,10744,"Grace visited her sister","M","M","see","Did Andrew see that Grace visited her sister?","9","NonProj","Yes",22,50,"english","Yes",0,"f","",6.78181666666667,1
+"10474",122,9945,"Zack is coming to the meeting tomorrow",NA,"M","MC","Is Zack coming to the meeting tomorrow?","control1","control","Yes",23,50,"english","Yes",0,"f","",6.78181666666667,1
+"10475",122,9014,"Vanessa is good at math",NA,"M","MC","Is Vanessa good at math?","control4","control","No",24,50,"english","Yes",0,"f","",6.78181666666667,0
+"10476",122,52762,"Julian dances salsa","F","M","suggest","Did Kathleen suggest that Julian dances salsa?","18","C","Yes",25,50,"english","Yes",0,"f","",6.78181666666667,1
+"10477",122,6311,"Emma studied on Saturday morning","M","F","reveal","Did Justin reveal that Emma studied on Saturday morning?","3","NonProj","Yes",26,50,"english","Yes",0,"f","",6.78181666666667,1
+"10478",122,11360,"Isabella ate a steak on Sunday","M","F","hear","Did Kevin hear that Isabella ate a steak on Sunday?","7","C","Yes",27,50,"english","Yes",0,"f","",6.78181666666667,1
 "10479",417,40244,"Olivia sleeps until noon","M","F","admit","Did Jerry admit that Olivia sleeps until noon?","4","C","No",2,26,"English","Yes",0,"m","Fair price for this survey and smooth instructions",6.60216666666667,0
 "10480",417,13730,"Sophia got a tattoo","M","M","be_right","Is Ben right that Sophia got a tattoo?","5","C","No",3,26,"English","Yes",0,"m","Fair price for this survey and smooth instructions",6.60216666666667,0
 "10481",417,14711,"Julian dances salsa","F","M","pretend","Did Kathleen pretend that Julian dances salsa?","18","NonProj","No",4,26,"English","Yes",0,"m","Fair price for this survey and smooth instructions",6.60216666666667,0
@@ -8657,6 +8813,32 @@
 "10710",111,14712,"Frank got a cat","F","F","hear","Did Melissa hear that Frank got a cat?","12","C","Yes",25,46,"ENGLISH","Yes",0,"m","IT WAS A FAIR PRICE FOR THE WORK.",3.90908333333333,1
 "10711",111,4855,"Owen shoveled snow last winter","F","M","acknowledge","Did Cynthia acknowledge that Owen shoveled snow last winter?","17","C","Yes",26,46,"ENGLISH","Yes",0,"m","IT WAS A FAIR PRICE FOR THE WORK.",3.90908333333333,1
 "10712",111,2976,"Mary&quotechars aunt is sick",NA,"M","MC","Is Mary&quotechars aunt sick?","control2","control","No",27,46,"ENGLISH","Yes",0,"m","IT WAS A FAIR PRICE FOR THE WORK.",3.90908333333333,0
+"10713",355,5654,"Emma studied on Saturday morning","M","M","be_right","Is Justin right that Emma studied on Saturday morning?","3","C","Yes",2,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,1
+"10714",355,2576,"Frank got a cat","F","F","announce","Did Melissa announce that Frank got a cat?","12","C","Yes",3,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,1
+"10715",355,3216,"Hendrick&quotechars car was expensive",NA,"M","MC","Was Hendrick&quotechars car expensive?","control6","control","Yes",4,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,1
+"10716",355,3224,"Danny ate the last cupcake","F","M","hear","Did Amanda hear that Danny ate the last cupcake?","11","C","No",5,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10717",355,4088,"Emily bought a car yesterday","M","M","pretend","Did Brian pretend that Emily bought a car yesterday?","8","NonProj","Yes",6,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,1
+"10718",355,11704,"Madison had a baby",NA,"F","MC","Did Madison have a baby?","control5","control","No",7,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10719",355,6864,"Josh learned to ride a bike yesterday","F","F","prove","Did Sharon prove that Josh learned to ride a bike yesterday?","16","C","No",8,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10720",355,3992,"Vanessa is good at math",NA,"M","MC","Is Vanessa good at math?","control4","control","No",9,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10721",355,6198,"Owen shoveled snow last winter","F","F","admit","Did Cynthia admit that Owen shoveled snow last winter?","17","C","No",10,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10722",355,4432,"Todd played football in high school",NA,"F","MC","Did Todd play football in high school?","control3","control","No",11,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10723",355,4744,"Jayden rented a car","F","F","confess","Did Stephanie confess that Jayden rented a car?","14","C","Yes",12,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,1
+"10724",355,3376,"Jon walks to work","F","F","discover","Did Ruth discover that Jon walks to work?","19","NonProj","Yes",13,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,1
+"10725",355,5432,"Grace visited her sister","M","F","acknowledge","Did Andrew acknowledge that Grace visited her sister?","9","C","Yes",14,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,1
+"10726",355,3960,"Isabella ate a steak on Sunday","M","F","know","Does Kevin know that Isabella ate a steak on Sunday?","7","NonProj","Yes",15,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,1
+"10727",355,5752,"Mia drank 2 cocktails last night","M","M","suggest","Did Ray suggest that Mia drank 2 cocktails last night?","6","C","No",16,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10728",355,4640,"Mary is pregnant","M","M","be_annoyed","Is Patrick annoyed that Mary is pregnant?","1","NonProj","Yes",17,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,1
+"10729",355,3048,"Sophia got a tattoo","M","F","demonstrate","Did Ben demonstrate that Sophia got a tattoo?","5","C","No",18,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10730",355,3744,"Olivia sleeps until noon","M","M","establish","Did Jerry establish that Olivia sleeps until noon?","4","NonProj","No",19,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10731",355,3375,"Charley speaks Spanish","F","F","say","Did Anna say that Charley speaks Spanish?","20","C","No",20,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10732",355,3265,"Zack is coming to the meeting tomorrow",NA,"F","MC","Is Zack coming to the meeting tomorrow?","control1","control","No",21,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10733",355,3152,"Jackson ran 10 miles","F","M","reveal","Did Laura reveal that Jackson ran 10 miles?","13","NonProj","Yes",22,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,1
+"10734",355,2880,"Josie went on vacation to France","M","F","confirm","Did Scott confirm that Josie went on vacation to France?","2","C","No",23,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10735",355,2497,"Mary&quotechars aunt is sick",NA,"F","MC","Is Mary&quotechars aunt sick?","control2","control","No",24,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10736",355,3122,"Julian dances salsa","F","F","inform","Did Kathleen inform Sam that Julian dances salsa?","18","C","Yes",25,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,1
+"10737",355,2752,"Zoe calculated the tip","M","F","think","Does Tim think that Zoe calculated the tip?","10","NonProj","No",26,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,0
+"10738",355,2407,"Tony had a drink last night","F","F","see","Did Rebecca see that Tony had a drink last night?","15","NonProj","Yes",27,38,"english","Confused",0,"f","These are tough to know who is certain when theyre asking the questions.",2.72578333333333,1
 "10739",86,24003,"Jon walks to work","F","M","pretend","Did Ruth pretend that Jon walks to work?","19","NonProj","No",2,48,"English","Yes",0,"m","I would like to change my answer on the question asking ""if so-so was pregnant"" to no, she did not know----pay was fine for time allotted",7.73933333333333,0
 "10740",86,11311,"Olivia sleeps until noon","M","F","establish","Did Jerry establish that Olivia sleeps until noon?","4","NonProj","No",3,48,"English","Yes",0,"m","I would like to change my answer on the question asking ""if so-so was pregnant"" to no, she did not know----pay was fine for time allotted",7.73933333333333,0
 "10741",86,16233,"Jackson ran 10 miles","F","F","know","Does Laura know that Jackson ran 10 miles?","13","NonProj","Yes",4,48,"English","Yes",0,"m","I would like to change my answer on the question asking ""if so-so was pregnant"" to no, she did not know----pay was fine for time allotted",7.73933333333333,1
@@ -9151,6 +9333,32 @@
 "11386",416,7103,"Danny ate the last cupcake","F","F","demonstrate","Did Amanda demonstrate that Danny ate the last cupcake?","11","C","No",25,31,"english","Yes",0,"m","Very fun survey",7.85655,0
 "11387",416,5989,"Isabella ate a steak on Sunday","M","M","suggest","Did Kevin suggest that Isabella ate a steak on Sunday?","7","C","No",26,31,"english","Yes",0,"m","Very fun survey",7.85655,0
 "11388",416,6584,"Owen shoveled snow last winter","F","F","reveal","Did Cynthia reveal that Owen shoveled snow last winter?","17","NonProj","No",27,31,"english","Yes",0,"m","Very fun survey",7.85655,0
+"11389",214,17527,"Mia drank 2 cocktails last night","M","F","think","Does Ray think that Mia drank 2 cocktails last night?","6","NonProj","No",2,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11390",214,21183,"Jayden rented a car","F","F","prove","Did Stephanie prove that Jayden rented a car?","14","C","No",3,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11391",214,44927,"Zoe calculated the tip","M","F","suggest","Did Tim suggest that Zoe calculated the tip?","10","C","No",4,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11392",214,11160,"Madison had a baby",NA,"F","MC","Did Madison have a baby?","control5","control","Yes",5,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,1
+"11393",214,10173,"Charley speaks Spanish","F","F","know","Does Anna know that Charley speaks Spanish?","20","NonProj","Yes",6,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,1
+"11394",214,5893,"Vanessa is good at math",NA,"M","MC","Is Vanessa good at math?","control4","control","No",7,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11395",214,13674,"Jackson ran 10 miles","F","M","be_right","Is Laura right that Jackson ran 10 miles?","13","C","No",8,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11396",214,7981,"Hendrick&quotechars car was expensive",NA,"F","MC","Was Hendrick&quotechars car expensive?","control6","control","No",9,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11397",214,7807,"Julian dances salsa","F","F","be_annoyed","Is Kathleen annoyed that Julian dances salsa?","18","NonProj","Yes",10,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,1
+"11398",214,13490,"Frank got a cat","F","M","pretend","Did Melissa pretend that Frank got a cat?","12","NonProj","No",11,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11399",214,8949,"Mary is pregnant","M","M","demonstrate","Did Patrick demonstrate that Mary is pregnant?","1","C","Yes",12,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,1
+"11400",214,8417,"Isabella ate a steak on Sunday","M","M","discover","Did Kevin discover that Isabella ate a steak on Sunday?","7","NonProj","Yes",13,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,1
+"11401",214,7058,"Emma studied on Saturday morning","M","F","see","Did Justin see that Emma studied on Saturday morning?","3","NonProj","Yes",14,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,1
+"11402",214,14305,"Jon walks to work","F","F","hear","Did Ruth hear that Jon walks to work?","19","C","Yes",15,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,1
+"11403",214,5618,"Todd played football in high school",NA,"F","MC","Did Todd play football in high school?","control3","control","No",16,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11404",214,10210,"Danny ate the last cupcake","F","F","acknowledge","Did Amanda acknowledge that Danny ate the last cupcake?","11","C","No",17,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11405",214,10729,"Josh learned to ride a bike yesterday","F","M","inform","Did Sharon inform Sam that Josh learned to ride a bike yesterday?","16","C","Yes",18,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,1
+"11406",214,9722,"Josie went on vacation to France","M","M","confess","Did Scott confess that Josie went on vacation to France?","2","C","Yes",19,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,1
+"11407",214,14283,"Grace visited her sister","M","F","say","Did Andrew say that Grace visited her sister?","9","C","No",20,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11408",214,8372,"Sophia got a tattoo","M","F","reveal","Did Ben reveal that Sophia got a tattoo?","5","NonProj","Yes",21,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,1
+"11409",214,12623,"Olivia sleeps until noon","M","F","announce","Did Jerry announce that Olivia sleeps until noon?","4","C","No",22,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11410",214,4695,"Mary&quotechars aunt is sick",NA,"M","MC","Is Mary&quotechars aunt sick?","control2","control","No",23,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11411",214,12809,"Owen shoveled snow last winter","F","M","establish","Did Cynthia establish that Owen shoveled snow last winter?","17","NonProj","No",24,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11412",214,7357,"Zack is coming to the meeting tomorrow",NA,"M","MC","Is Zack coming to the meeting tomorrow?","control1","control","No",25,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11413",214,17511,"Tony had a drink last night","F","M","confirm","Did Rebecca confirm that Tony had a drink last night?","15","C","No",26,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,0
+"11414",214,14334,"Emily bought a car yesterday","M","F","admit","Did Brian admit that Emily bought a car yesterday?","8","C","Yes",27,25,"english","Yes",0,"m","i think 1.00 is fine.",8.74095,1
 "11415",1,6071,"Josie went on vacation to France","M","M","pretend","Did Scott pretend that Josie went on vacation to France?","2","NonProj","No",2,28,"english","Yes",0,"f","",2.23108333333333,0
 "11416",1,3219,"Mia drank 2 cocktails last night","M","M","suggest","Did Ray suggest that Mia drank 2 cocktails last night?","6","C","No",3,28,"english","Yes",0,"f","",2.23108333333333,0
 "11417",1,3492,"Olivia sleeps until noon","M","F","reveal","Did Jerry reveal that Olivia sleeps until noon?","4","NonProj","No",4,28,"english","Yes",0,"f","",2.23108333333333,0
@@ -9931,6 +10139,32 @@
 "12244",314,5707,"Zoe calculated the tip","M","M","announce","Did Tim announce that Zoe calculated the tip?","10","C","No",25,50,"English","Yes",0,"f","I enjoyed this, thanks. ",4.13061666666667,0
 "12245",314,4513,"Hendrick&quotechars car was expensive",NA,"M","MC","Was Hendrick&quotechars car expensive?","control6","control","No",26,50,"English","Yes",0,"f","I enjoyed this, thanks. ",4.13061666666667,0
 "12246",314,5216,"Isabella ate a steak on Sunday","M","F","establish","Did Kevin establish that Isabella ate a steak on Sunday?","7","NonProj","No",27,50,"English","Yes",0,"f","I enjoyed this, thanks. ",4.13061666666667,0
+"12247",105,215375,"Julian dances salsa","F","F","suggest","Did Kathleen suggest that Julian dances salsa?","18","C","No",2,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12248",105,9023,"Frank got a cat","F","F","announce","Did Melissa announce that Frank got a cat?","12","C","No",3,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12249",105,6568,"Isabella ate a steak on Sunday","M","M","admit","Did Kevin admit that Isabella ate a steak on Sunday?","7","C","Yes",4,43,"english","Yes",0,"f","thanks.",11.2142666666667,1
+"12250",105,6408,"Mia drank 2 cocktails last night","M","F","demonstrate","Did Ray demonstrate that Mia drank 2 cocktails last night?","6","C","No",5,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12251",105,4416,"Vanessa is good at math",NA,"M","MC","Is Vanessa good at math?","control4","control","No",6,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12252",105,136931,"Charley speaks Spanish","F","M","say","Did Anna say that Charley speaks Spanish?","20","C","No",7,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12253",105,8028,"Tony had a drink last night","F","F","discover","Did Rebecca discover that Tony had a drink last night?","15","NonProj","Yes",8,43,"english","Yes",0,"f","thanks.",11.2142666666667,1
+"12254",105,2260,"Olivia sleeps until noon","M","M","know","Does Jerry know that Olivia sleeps until noon?","4","NonProj","Yes",9,43,"english","Yes",0,"f","thanks.",11.2142666666667,1
+"12255",105,2432,"Sophia got a tattoo","M","F","confirm","Did Ben confirm that Sophia got a tattoo?","5","C","No",10,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12256",105,5472,"Jackson ran 10 miles","F","F","see","Did Laura see that Jackson ran 10 miles?","13","NonProj","Yes",11,43,"english","Yes",0,"f","thanks.",11.2142666666667,1
+"12257",105,4004,"Josie went on vacation to France","M","M","inform","Did Scott inform Sam that Josie went on vacation to France?","2","C","No",12,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12258",105,5520,"Jayden rented a car","F","M","reveal","Did Stephanie reveal that Jayden rented a car?","14","NonProj","No",13,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12259",105,3236,"Jon walks to work","F","M","be_annoyed","Is Ruth annoyed that Jon walks to work?","19","NonProj","Yes",14,43,"english","Yes",0,"f","thanks.",11.2142666666667,1
+"12260",105,7248,"Mary&quotechars aunt is sick",NA,"M","MC","Is Mary&quotechars aunt sick?","control2","control","No",15,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12261",105,8400,"Owen shoveled snow last winter","F","M","think","Does Cynthia think that Owen shoveled snow last winter?","17","NonProj","No",16,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12262",105,30375,"Grace visited her sister","M","F","be_right","Is Andrew right that Grace visited her sister?","9","C","No",17,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12263",105,63220,"Emma studied on Saturday morning","M","F","pretend","Did Justin pretend that Emma studied on Saturday morning?","3","NonProj","No",18,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12264",105,14828,"Madison had a baby",NA,"M","MC","Did Madison have a baby?","control5","control","No",19,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12265",105,7348,"Josh learned to ride a bike yesterday","F","M","establish","Did Sharon establish that Josh learned to ride a bike yesterday?","16","NonProj","No",20,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12266",105,4183,"Mary is pregnant","M","F","acknowledge","Did Patrick acknowledge that Mary is pregnant?","1","C","No",21,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12267",105,4552,"Zoe calculated the tip","M","M","hear","Did Tim hear that Zoe calculated the tip?","10","C","No",22,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12268",105,2948,"Todd played football in high school",NA,"F","MC","Did Todd play football in high school?","control3","control","Yes",23,43,"english","Yes",0,"f","thanks.",11.2142666666667,1
+"12269",105,5144,"Emily bought a car yesterday","M","M","confess","Did Brian confess that Emily bought a car yesterday?","8","C","No",24,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12270",105,4512,"Danny ate the last cupcake","F","F","prove","Did Amanda prove that Danny ate the last cupcake?","11","C","No",25,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12271",105,4712,"Hendrick&quotechars car was expensive",NA,"M","MC","Was Hendrick&quotechars car expensive?","control6","control","No",26,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
+"12272",105,4996,"Zack is coming to the meeting tomorrow",NA,"F","MC","Is Zack coming to the meeting tomorrow?","control1","control","No",27,43,"english","Yes",0,"f","thanks.",11.2142666666667,0
 "12273",386,25811,"Jackson ran 10 miles","F","M","see","Did Laura see that Jackson ran 10 miles?","13","NonProj","Yes",2,45,"English","Yes",0,"m","Fair price and smooth/efficient layout.",8.25633333333333,1
 "12274",386,11252,"Charley speaks Spanish","F","M","inform","Did Anna inform Sam that Charley speaks Spanish?","20","C","Yes",3,45,"English","Yes",0,"m","Fair price and smooth/efficient layout.",8.25633333333333,1
 "12275",386,8140,"Vanessa is good at math",NA,"F","MC","Is Vanessa good at math?","control4","control","No",4,45,"English","Yes",0,"m","Fair price and smooth/efficient layout.",8.25633333333333,0
@@ -10035,6 +10269,32 @@
 "12374",40,7238,"Julian dances salsa","F","F","reveal","Did Kathleen reveal that Julian dances salsa?","18","NonProj","Yes",25,63,"English","Yes",0,"m","",7.05626666666667,1
 "12375",40,7357,"Mary&quotechars aunt is sick",NA,"M","MC","Is Mary&quotechars aunt sick?","control2","control","No",26,63,"English","Yes",0,"m","",7.05626666666667,0
 "12376",40,9867,"Mia drank 2 cocktails last night","M","F","confess","Did Ray confess that Mia drank 2 cocktails last night?","6","C","No",27,63,"English","Yes",0,"m","",7.05626666666667,0
+"12377",498,12762,"Isabella ate a steak on Sunday","M","M","demonstrate","Did Kevin demonstrate that Isabella ate a steak on Sunday?","7","C","Yes",2,33,"English","Yes",0,"f","",4.4159,1
+"12378",498,6047,"Hendrick&quotechars car was expensive",NA,"M","MC","Was Hendrick&quotechars car expensive?","control6","control","No",3,33,"English","Yes",0,"f","",4.4159,0
+"12379",498,5628,"Grace visited her sister","M","F","see","Did Andrew see that Grace visited her sister?","9","NonProj","Yes",4,33,"English","Yes",0,"f","",4.4159,1
+"12380",498,23107,"Zack is coming to the meeting tomorrow",NA,"M","MC","Is Zack coming to the meeting tomorrow?","control1","control","No",5,33,"English","Yes",0,"f","",4.4159,0
+"12381",498,9283,"Jackson ran 10 miles","F","F","pretend","Did Laura pretend that Jackson ran 10 miles?","13","NonProj","No",6,33,"English","Yes",0,"f","",4.4159,0
+"12382",498,4474,"Tony had a drink last night","F","F","confirm","Did Rebecca confirm that Tony had a drink last night?","15","C","Yes",7,33,"English","Yes",0,"f","",4.4159,1
+"12383",498,6852,"Charley speaks Spanish","F","M","say","Did Anna say that Charley speaks Spanish?","20","C","No",8,33,"English","Yes",0,"f","",4.4159,0
+"12384",498,5509,"Danny ate the last cupcake","F","M","confess","Did Amanda confess that Danny ate the last cupcake?","11","C","Yes",9,33,"English","Yes",0,"f","",4.4159,1
+"12385",498,5230,"Frank got a cat","F","F","admit","Did Melissa admit that Frank got a cat?","12","C","Yes",10,33,"English","Yes",0,"f","",4.4159,1
+"12386",498,3614,"Mary is pregnant","M","F","suggest","Did Patrick suggest that Mary is pregnant?","1","C","No",11,33,"English","Yes",0,"f","",4.4159,0
+"12387",498,6276,"Jon walks to work","F","M","think","Does Ruth think that Jon walks to work?","19","NonProj","No",12,33,"English","Yes",0,"f","",4.4159,0
+"12388",498,3479,"Vanessa is good at math",NA,"F","MC","Is Vanessa good at math?","control4","control","No",13,33,"English","Yes",0,"f","",4.4159,0
+"12389",498,3933,"Julian dances salsa","F","M","hear","Did Kathleen hear that Julian dances salsa?","18","C","Yes",14,33,"English","Yes",0,"f","",4.4159,1
+"12390",498,3794,"Zoe calculated the tip","M","F","know","Does Tim know that Zoe calculated the tip?","10","NonProj","Yes",15,33,"English","Yes",0,"f","",4.4159,1
+"12391",498,4840,"Mia drank 2 cocktails last night","M","F","be_annoyed","Is Ray annoyed that Mia drank 2 cocktails last night?","6","NonProj","Yes",16,33,"English","Yes",0,"f","",4.4159,1
+"12392",498,7622,"Owen shoveled snow last winter","F","M","reveal","Did Cynthia reveal that Owen shoveled snow last winter?","17","NonProj","No",17,33,"English","Yes",0,"f","",4.4159,0
+"12393",498,5481,"Sophia got a tattoo","M","M","inform","Did Ben inform Sam that Sophia got a tattoo?","5","C","Yes",18,33,"English","Yes",0,"f","",4.4159,1
+"12394",498,70333,"Olivia sleeps until noon","M","F","announce","Did Jerry announce that Olivia sleeps until noon?","4","C","Yes",19,33,"English","Yes",0,"f","",4.4159,1
+"12395",498,4806,"Emma studied on Saturday morning","M","F","be_right","Is Justin right that Emma studied on Saturday morning?","3","C","No",20,33,"English","Yes",0,"f","",4.4159,0
+"12396",498,2916,"Mary&quotechars aunt is sick",NA,"F","MC","Is Mary&quotechars aunt sick?","control2","control","No",21,33,"English","Yes",0,"f","",4.4159,0
+"12397",498,5941,"Madison had a baby",NA,"F","MC","Did Madison have a baby?","control5","control","Yes",22,33,"English","Yes",0,"f","",4.4159,1
+"12398",498,3110,"Jayden rented a car","F","M","acknowledge","Did Stephanie acknowledge that Jayden rented a car?","14","C","Yes",23,33,"English","Yes",0,"f","",4.4159,1
+"12399",498,4500,"Emily bought a car yesterday","M","F","discover","Did Brian discover that Emily bought a car yesterday?","8","NonProj","Yes",24,33,"English","Yes",0,"f","",4.4159,1
+"12400",498,6482,"Josh learned to ride a bike yesterday","F","F","establish","Did Sharon establish that Josh learned to ride a bike yesterday?","16","NonProj","Yes",25,33,"English","Yes",0,"f","",4.4159,1
+"12401",498,2639,"Todd played football in high school",NA,"F","MC","Did Todd play football in high school?","control3","control","No",26,33,"English","Yes",0,"f","",4.4159,0
+"12402",498,4483,"Josie went on vacation to France","M","F","prove","Did Scott prove that Josie went on vacation to France?","2","C","Yes",27,33,"English","Yes",0,"f","",4.4159,1
 "12403",402,19828,"Emma studied on Saturday morning","M","F","establish","Did Justin establish that Emma studied on Saturday morning?","3","NonProj","Yes",2,72,"english","Yes",0,"m","An interesting experiment. The price was more than fair",6.07695,1
 "12404",402,9764,"Grace visited her sister","M","F","say","Did Andrew say that Grace visited her sister?","9","C","No",3,72,"english","Yes",0,"m","An interesting experiment. The price was more than fair",6.07695,0
 "12405",402,19818,"Charley speaks Spanish","F","M","prove","Did Anna prove that Charley speaks Spanish?","20","C","No",4,72,"english","Yes",0,"m","An interesting experiment. The price was more than fair",6.07695,0
