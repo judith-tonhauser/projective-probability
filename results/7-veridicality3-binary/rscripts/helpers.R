@@ -1,3 +1,204 @@
+
+# function that generates latex table from brms model
+mcmcReg <- function(mod, 
+                    pars = NULL, 
+                    pointest = 'mean', 
+                    ci = .95, 
+                    hpdi = F,
+                    coefnames = NULL, 
+                    gof = numeric(0),
+                    gofnames = character(0),
+                    format = 'latex', 
+                    file, ...) {
+  
+  ## pull in unexported functions from other packages
+  ## other options for future versions might include lifting this and adding authors as copr holders
+  runjags.as.mcmc.list.runjags = getFromNamespace("as.mcmc.list.runjags", "runjags")
+  
+  ## if only one model object, coerce to a list
+  if (all(class(mod) != 'list')) mod <- list(mod)
+  
+  ##
+  if (length(unique(lapply(mod, class))) > 1) stop('More than one object class supplied to argument "mod"')
+  
+  ## if only one custom coefficient names object, coerce to a list
+  if (class(coefnames) != 'list' & !is.null(coefnames)) coefnames <- list(coefnames)
+  
+  ## if only one parameter vector, coerce to a list
+  if (class(pars) != 'list') pars <- list(pars)
+  
+  ## if only one gof statistic scalar or vector, coerce to a list
+  if (class(gof) != 'list') gof <- list(rep(gof, times = length(mod)))
+  
+  ## if only one gof statistic name scalar or vector, coerce to a list
+  if (class(gofnames) != 'list') gofnames <- list(gofnames)
+  
+  ## extract samples and variable names from jags or rjags objects
+  if (lapply(mod, inherits, what = c('jags', 'rjags'))[[1]]) {
+    
+    ## extract posterior samples from list of model objects
+    samps <- lapply(mod, function(x) as.matrix(coda::as.mcmc(x)))
+    
+  }
+  
+  ## extract samples and variable names from bugs object
+  if (lapply(mod, inherits, what = 'bugs')[[1]]) {
+    
+    ## extract posterior samples from list of model objects
+    samps <- lapply(mod, function(x) x$sims.matrix)
+    
+  }
+  
+  ## extract samples and variable names from runjags object
+  if (lapply(mod, inherits, what = 'runjags')[[1]]) {
+    
+    samps <- lapply(mod, function(x) as.matrix(runjags.as.mcmc.list.runjags(x)))
+    
+  }
+  
+  ## extract samples and variable names from remaining objects
+  if (lapply(mod, inherits, what = c("mcmc", "mcmc.list", "stanfit", "stanreg",
+                                     "brmsfit"))[[1]]) {
+    
+    samps <- lapply(mod, function(x) as.matrix(x))
+  }
+  
+  ## extract coefficient names from dataframe(s)
+  if (!is.null(pars)) {
+    
+    coef_names <- mapply(function(x, y) colnames(x)[grepl(x = colnames(x), pattern = paste(y, collapse = '|'))],
+                         samps, pars, SIMPLIFY = F)
+    
+  }
+  
+  ## limit samples to supplied parameters
+  if (!is.null(pars)) {
+    
+    samps <- mapply(function(x, y) x[, grepl(x = colnames(x), pattern = paste(y, collapse = '|'))],
+                    samps, pars, SIMPLIFY = F)
+    
+  }
+  
+  ## calculate point estimate of posterior density
+  if (pointest == 'mean') {
+    
+    samps_pe <- lapply(samps, function(x) apply(as.matrix(x), 2, mean))
+    
+  } else {
+    
+    samps_pe <- lapply(samps, function(x) apply(as.matrix(x), 2, median))
+    
+  }
+  
+  ## calculate uncertainty interval for ci argument
+  if (hpdi == F) {
+    
+    samps_ci <- lapply(samps, function(x) apply(as.matrix(x), 2, quantile,
+                                                probs = c(.5 - ci/2, .5 + ci/2)))
+    
+  } else {
+    
+    samps_ci <- lapply(samps, function(x) t(coda::HPDinterval(coda::as.mcmc(x),
+                                                              prob = ci)))
+    
+  }
+  
+  ## if coefficent names supplied, replace names from model object(s)
+  if (!is.null(coefnames) & !is.list(coefnames)) coef_names <- list(coefnames)
+  if (!is.null(coefnames)) coef_names <- coefnames
+  
+  ##
+  if (length(mod) != length(coef_names)) {
+    
+    stop('number of models does not match number of custom coefficient vectors')
+    
+  }
+  
+  ## create list of texreg object(s) with point estimates and interval
+  tr_list <- mapply(function(v, w, x, y, z) texreg::createTexreg(coef.names = v,
+                                                                 coef = w,
+                                                                 ci.low = x[1, ],
+                                                                 ci.up = x[2, ],
+                                                                 gof = y,
+                                                                 gof.names = z),
+                    coef_names, samps_pe, samps_ci, gof, gofnames)
+  
+  ## create LaTeX output
+  if (grepl('tex$', format)) {
+    
+    ## create LaTeX code
+    tr <- texreg::texreg(l = tr_list, ...)
+    
+    ## replace confidence w/ credible or highest posterior density in texreg output
+    if (hpdi == F) {
+      
+      tr <- sub('outside the confidence interval',
+                paste('outside ', ci * 100 ,'\\\\% credible interval', sep = ''),
+                tr)
+      
+    } else {
+      
+      tr <- sub('outside the confidence interval',
+                paste('outside ', ci * 100 ,'\\\\% highest posterior density interval',
+                      sep = ''), tr)
+      
+    }
+    
+    ## return LaTeX code to console or write to file
+    if (missing(file)) {
+      
+      return(tr)
+      
+    } else {
+      
+      ## remove newline at start of LaTeX code
+      tr <- sub('^\\n', '', tr)
+      
+      tex_file <- file(paste(sub('\\.tex$', '', file), 'tex', sep = '.'))
+      writeLines(tr, tex_file, sep = '')
+      close(tex_file)
+      
+    }
+    
+  }
+  
+  ## create HTML output
+  if (format == 'html') {
+    
+    hr <- texreg::htmlreg(l = tr_list, ...)
+    
+    ## replace confidence w/ credible or highest posterior density in texreg output
+    if (hpdi == F) {
+      
+      hr <- sub('outside the confidence interval',
+                paste('outside ', ci * 100, '% credible interval', sep = ''),
+                hr)
+      
+    } else {
+      
+      tr <- sub('outside the confidence interval',
+                paste('outside ', ci * 100, '% highest posterior density interval',
+                      sep = ''), hr)
+      
+    }
+    
+    ## return html code to console or write to file
+    if (missing(file)) {
+      
+      return(hr)
+      
+    } else {
+      
+      html_file <- file(paste(sub('\\.html$', '', file), 'html', sep = '.'))
+      writeLines(hr, html_file, sep = '')
+      close(html_file)
+      
+    }
+    
+  }
+  
+}
+
 reshapeProjAI <- function(d)
 {
   d$Trial1 = paste(d$List0,d$ListID0,d$ID0,d$Trigger0,d$OrderProjAI0,d$OrderItems0,d$OrderItemNum0,d$Response0,d$Projecting0,d$Content0,d$ContentType0,d$ContentNum0,d$TriggerClass0,d$CarolsUtt0,d$Question0,d$QuestionType0,sep = " ")
