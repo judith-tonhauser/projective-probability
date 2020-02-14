@@ -23,44 +23,38 @@ nrow(cd) #9884 (353 Turkers)
 summary(cd)
 
 
-# JD CODE STARTS HERE
-# TL;DR: all verbs are different from bad controls
-cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
+## models -----
+head(cd)
 
-# Bayesian mixed effects regression to test whether ratings differ by predicate from good controls
+# brms model 
+cd$verb = relevel(cd$verb,ref="contradictory C")
+cd$item = as.factor(paste(cd$verb,cd$content))
 cd$workerid = as.factor(as.character(cd$workerid))
 
-# plotting slider ratings suggests we should use a zoib model
-ggplot(cd, aes(x=response)) +
-  geom_histogram(stat="count")
+model.brms.proj.b = brm(nResponse ~ verb + (1|workerid) + (1|item), data=cd, family=bernoulli(), cores = 4, control=list(max_treedepth = 15,adapt_delta=.95)) # increase adapt_delta (from default .8) to decrease learning rate
+summary(model.brms.proj.b) 
+saveRDS(model.brms.proj.b, "../models/brm_model.rds")
 
-# exclude bad controls from analysis -- they're not relevant, right?
-d = cd %>%
-  # filter(verb != "control_bad") %>%
-  droplevels() %>%
-  # mutate(verb = fct_relevel(verb,"contradictory C")) %>%
-  mutate(verb = fct_relevel(verb,"be_right")) %>%
-  mutate(nResponse = ifelse(response == "Yes", 1, 0))
+# create LaTeX table
+mcmcReg(model.brms.proj.b, pars = "b_", file="../models/brm_output.tex")
 
-# JD removed the by-content intercepts and slopes for verb because it was taking TOO DAMN LONG and appeared to get stuck and not converge, and the reason for this is simply that the data are extreme and there is basically no item variability to speak of. barely any subject variability, too. had to 
-m <- glmer(response ~ verb + (1|workerid), data=d, family="binomial")
-# m <- glm(response ~ verb, data=d, family="binomial")
-summary(m)
-
-allm = allFit(m)
-
-is.OK <- sapply(allm,is,"merMod")  ##  failed, others succeeded
-allm.OK <- allm[is.OK]
-allm.OK
-lapply(allm.OK,function(x) x@optinfo$conv$lme4$messages)
-
-summary(allm) # bobyqa exited ok, so we can interpret model above
-summary(m)
+# the way to do pairwise comparisons, if we want them:
+q = c(q_know_entailing = "verbknow = 0",
+      q_see_entailing = "verbsee = 0",
+      q_discover_entailing = "verbdiscover = 0",
+      q_confirm_entailing = "verbconfirm = 0",
+      q_be_annoyed_entailing = "verbbe_annoyed = 0")
+q_answer = hypothesis(model.brms.proj.b, q)
+q_answer
+plot(q_answer)
+prop.table(table(q_answer$samples$H1 < 0)) # p(know < entailing) = .69, ie, not very high
+prop.table(table(q_answer$samples$H2 < 0)) # p(see < entailing) = .81, ie, high but not within the 95% credible interval
+prop.table(table(q_answer$samples$H3 < 0)) # p(discover < entailing) = .81, ie, high but not within the 95% credible interval
+prop.table(table(q_answer$samples$H4 < 0)) # p(confirm < entailing) = .949, ie, very high but still not within the 95% credible interval
+prop.table(table(q_answer$samples$H5 < 0)) # p(be_annoyed < entailing) = .999, ie, very high, clear evidence that it's different
 
 
-m <- brm(nResponse~verb + (1|workerid), data=d, family=bernoulli())
+# to load saved model:
+model.brms.proj.b = readRDS(model.brms.proj.b, "../models/brm_model.rds")
 
-# no neeed to run this multiple times
-saveRDS(m,file="../data/bernoulli-model.rds")
 
-summary(m) # see summary printed below
