@@ -62,7 +62,7 @@ library(lme4)
 summary(cd)
 
 # create item as combination of predicate and complement clause
-cd$item = as.factor(paste(cd$verb,cd$content))
+# cd$item = as.factor(paste(cd$verb,cd$content))
 
 # reorder verb by mean
 prop = cd %>%
@@ -81,8 +81,13 @@ cd$verb <- as.factor(cd$verb)
 str(cd$workerid)
 cd$workerid <- as.factor(cd$workerid)
 
-model = lmer(nResponse ~ verb + (1|workerid) + (1|item), data=cd, REML=F)
+model = glmer(response ~ verb + (1|workerid) + (1|content), data=cd, family = "binomial")
 summary(model)
+# model didn't converge
+saveRDS(model, "../models/glmer_model.rds")
+
+# to load saved model:
+model = readRDS(model, "../models/glmer_model.rds")
 
 comparison = emmeans(model, pairwise~verb,adjust="tukey")
 options(max.print=10000)
@@ -90,15 +95,37 @@ comparison
 
 
 ## Bayesian models ----
-
+library(brms)
+library(BayesPostEst)
 head(cd)
 
 # brms model 
 cd$verb = relevel(cd$verb,ref="MC")
 cd$item = as.factor(paste(cd$verb,cd$content))
 
-model.brms.proj.b = brm(nResponse ~ verb + (1|workerid) + (1|item), data=cd, family=bernoulli())
-summary(model.brms.proj.b) #did not converge
+model.brms.proj.b = brm(nResponse ~ verb + (1|workerid) + (1|item), data=cd, family=bernoulli(), cores = 4, control=list(max_treedepth = 15))
+summary(model.brms.proj.b) 
+saveRDS(model.brms.proj.b, "../models/brm_model.rds")
+
+mcmcReg(model.brms.proj.b, pars = "b_", file="../models/brm_output.tex")
+
+# the way to do pairwise comparisons, if we want them:
+q = c(q_think_be_right = "verbthink - verbbe_right = 0",
+      q_pretend_be_right = "verbpretend - verbbe_right = 0",
+      q_prove_be_right = "verbprove - verbbe_right = 0",
+      q_know_be_right = "verbknow - verbbe_right = 0",
+      q_be_right_MC = "verbbe_right = 0")
+q_answer = hypothesis(model.brms.proj.b, q)
+q_answer
+plot(q_answer)
+prop.table(table(q_answer$samples$H1 > 0)) # p(think > be_right = .72, very low)
+prop.table(table(q_answer$samples$H2 > 0)) # p(prove > be_right = .997, very high)
+prop.table(table(q_answer$samples$H3 > 0)) # p(pretend > be_right = 1, very high)
+prop.table(table(q_answer$samples$H4 > 0)) # p(know > be_right = 1, very high)
+prop.table(table(q_answer$samples$H5 > 0))
+
+# to load saved model:
+model.brms.proj.b = readRDS(model.brms.proj.b, "../models/brm_model.rds")
 
 model.proj.b = glmer(nResponse ~ verb + (1+verb|workerid) + (1|item), nAGQ=0, data=cd,family = binomial)
 summary(model.proj.b) # did not converge without nAGQ=0
