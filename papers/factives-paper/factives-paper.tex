@@ -1440,6 +1440,69 @@ b\_verbknow        & $9.72^{*}$        \\
 \end{center}
 \end{table}
 
+\section{Model output of Exp.~1b}
+
+Formula: \tiny \verb|model.brms.proj.b = brm(nResponse ~ verb + (1/workerid) + (1/item), data=cd, family=bernoulli(), cores = 4, control=list(max_treedepth = 15,adapt_delta=.95))| \normalsize
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l c }
+\hline
+ & Model 1 \\
+\hline
+b\_Intercept       & $6.20^{*}$          \\
+                   & $[5.52;\ 6.98]$     \\
+b\_verbacknowledge & $-1.58^{*}$         \\
+                   & $[-2.47;\ -0.70]$   \\
+b\_verbadmit       & $-1.83^{*}$         \\
+                   & $[-2.72;\ -0.97]$   \\
+b\_verbannounce    & $-4.39^{*}$         \\
+                   & $[-5.17;\ -3.68]$   \\
+b\_verbbe\_annoyed & $-1.36^{*}$         \\
+                   & $[-2.31;\ -0.46]$   \\
+b\_verbbe\_right   & $0.36$              \\
+                   & $[-0.93;\ 1.89]$    \\
+b\_verbconfess     & $-2.79^{*}$         \\
+                   & $[-3.60;\ -2.04]$   \\
+b\_verbconfirm     & $-0.85$             \\
+                   & $[-1.84;\ 0.14]$    \\
+b\_verbdemonstrate & $-3.35^{*}$         \\
+                   & $[-4.15;\ -2.63]$   \\
+b\_verbdiscover    & $-0.50$             \\
+                   & $[-1.57;\ 0.64]$    \\
+b\_verbestablish   & $-1.92^{*}$         \\
+                   & $[-2.76;\ -1.12]$   \\
+b\_verbhear        & $-7.57^{*}$         \\
+                   & $[-8.41;\ -6.84]$   \\
+b\_verbinform      & $-3.93^{*}$         \\
+                   & $[-4.71;\ -3.22]$   \\
+b\_verbknow        & $-0.27$             \\
+                   & $[-1.39;\ 0.96]$    \\
+b\_verbnonMent.C   & $-11.92^{*}$        \\
+                   & $[-12.94;\ -11.01]$ \\
+b\_verbpretend     & $-10.78^{*}$        \\
+                   & $[-11.83;\ -9.85]$  \\
+b\_verbprove       & $0.92$              \\
+                   & $[-0.57;\ 2.91]$    \\
+b\_verbreveal      & $-2.37^{*}$         \\
+                   & $[-3.21;\ -1.54]$   \\
+b\_verbsay         & $-5.79^{*}$         \\
+                   & $[-6.59;\ -5.09]$   \\
+b\_verbsee         & $-0.49$             \\
+                   & $[-1.51;\ 0.62]$    \\
+b\_verbsuggest     & $-8.75^{*}$         \\
+                   & $[-9.62;\ -7.95]$   \\
+b\_verbthink       & $-9.71^{*}$         \\
+                   & $[-10.65;\ -8.87]$  \\
+\hline
+\multicolumn{2}{l}{\scriptsize{$^*$ 0 outside 95\% credible interval}}
+\end{tabular}
+\caption{Model output of Exp.~2b}
+\label{table:coefficients}
+\end{center}
+\end{table}
+
+
 
 
 %\bibliographystyle{/Users/tonhauser.1/Library/Latex/cslipubs-natbib}
