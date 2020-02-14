@@ -1,21 +1,21 @@
 # Latex files
 # .pdf .aux .toc .bbl . blg .synctex.gz
-paper/prior.pdf
-paper/prior.synctex.gz
-paper/prior.log
-paper/prior.aux
-paper/prior.toc
-paper/prior.out
-paper/prior.bbl
-paper/prior.blg
-paper/factives-paper.pdf
-paper/factives-paper.synctex.gz
-paper/factives-paper.log
-paper/factives-paper.aux
-paper/factives-paper.toc
-paper/factives-paperout
-paper/factives-paper.bbl
-paper/factives-paper.blg
+papers/prior-paper/prior.pdf
+papers/prior-paper/prior.synctex.gz
+papers/prior-paper/prior.log
+papers/prior-paper/prior.aux
+papers/prior-paper/prior.toc
+papers/prior-paper/prior.out
+papers/prior-paper/prior.bbl
+papers/prior-paper/prior.blg
+papers/factives-paper/factives-paper.pdf
+papers/factives-paper/factives-paper.synctex.gz
+papers/factives-paper/factives-paper.log
+papers/factives-paper/factives-paper.aux
+papers/factives-paper/factives-paper.toc
+papers/factives-paper/factives-paperout
+papers/factives-paper/factives-paper.bbl
+papers/factives-paper/factives-paper.blg
 
 
 # SALT 2018 submission
