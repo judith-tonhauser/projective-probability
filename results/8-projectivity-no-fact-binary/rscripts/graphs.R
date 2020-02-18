@@ -46,6 +46,8 @@ cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid",
                              ifelse(cols$VeridicalityGroup == "VNF","dodgerblue",
                                     ifelse(cols$VeridicalityGroup == "MC","black","tomato1"))))
 
+cols$Colors
+
 # plot of proportions
 
 prop$VeridicalityGroup = as.factor(
@@ -87,7 +89,7 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
                                                                  color=cols$Colors)) +
   theme(legend.position="bottom") +
-  theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
+  #theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
   ylab("Proportion of 'yes (certain)' ratings") +
   xlab("Predicate") 
 ggsave("../graphs/proportion-by-predicate-variability.pdf",height=4.5,width=7)
