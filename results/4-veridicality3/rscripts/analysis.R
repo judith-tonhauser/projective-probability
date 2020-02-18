@@ -322,6 +322,9 @@ str(t$verb)
 ## plots ----
 
 # plot of means with participant ratings (4-way distinction, factivity paper)
+cd = cd %>%
+  mutate(verb = fct_recode(verb,"entailing"="entailing C","non-entailing"="non-ent. C"))
+
 means = cd %>%
   group_by(verb) %>%
   summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
@@ -339,11 +342,11 @@ cols
 levels(cols$V)
 #cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, ordered = TRUE)
 
-cols$VeridicalityGroup = as.factor(
+cols$VeridicalityGroup = factor(
   ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
                 ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
-                       ifelse(cols$V %in% c("non-ent. C","entailing C"),"MC","V")))))
+                       ifelse(cols$V %in% c("non-entailing","entailing"),"MC","V")))),levels=c("F","V","VNF","NF","MC"))
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
                       ifelse(cols$VeridicalityGroup == "NF", "gray60", 
@@ -353,33 +356,35 @@ cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid",
 cols$Colors
 levels(cols$VeridicalityGroup)
 
-
 subjmeans = cd %>%
   group_by(verb,workerid) %>%
   summarize(Mean = mean(response)) 
 subjmeans$verb <- factor(subjmeans$verb, levels = unique(levels(means$verb)))
 levels(subjmeans$verb)
 
-means$VeridicalityGroup = as.factor(
+means$VeridicalityGroup = factor(
   ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
          ifelse(means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
                 ifelse(means$verb  %in% c("be_right","demonstrate"),"VNF",
-                       ifelse(means$verb  %in% c("non-ent. C","entailing C"),"control","V")))))
+                       ifelse(means$verb  %in% c("non-entailing","entailing"),"control","V")))),levels=rev(c("F","V","VNF","NF","control")))
 
-ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
-  geom_point(shape=21,fill="gray60",data=subjmeans, alpha=.1, color="gray40") +
+levels(means$VeridicalityGroup)
+levels(subjmeans$verb)
+levels(means$verb)
+
+ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup)) +
+  geom_point(shape=21,fill="gray70",data=subjmeans, alpha=.1, color="gray40") +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="black") +
-  geom_point(shape=21,stroke=.5,size=2.5,color="black") +
+  geom_point(stroke=.5,size=2.5,color="black") +
+  scale_shape_manual(values=c( 21, 22, 25, 24, 23),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
+  # guides(fill=FALSE, shape=F) +
+  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, color=cols$Colors),legend.position="bottom") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_alpha(range = c(.3,1)) +
-  scale_fill_manual(values=c("black","darkorchid","gray60","tomato1","dodgerblue")) +
-  guides(fill=FALSE) +
-  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
-                                                                 color=cols$Colors)) +
   ylab("Mean inference rating") +
-  xlab("Predicate") +
-  theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
-ggsave("../graphs/means-inference-by-predicate-variability.pdf",height=4,width=7)
+  xlab("Predicate")
+ggsave("../graphs/means-inference-by-predicate-variability.pdf",height=4.5,width=7)
 
 # plot of means with participant ratings (3-way distinction, Tuebingen talk)
 means = cd %>%

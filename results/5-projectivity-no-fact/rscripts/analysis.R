@@ -864,6 +864,7 @@ table(cd$verb)
 
 # Bayesian mixed effects regression to test whether ratings differ by predicate from good controls
 cd$workerid = as.factor(as.character(cd$workerid))
+cd$item = as.factor(paste(as.character(cd$verb),as.character(cd$content)))
 cd$content = as.factor(as.character(cd$content))
 
 # plotting slider ratings suggests we should use a zoib model
@@ -878,30 +879,30 @@ table(d$verb)
 
 # JT commented the following code, to prevent accidental re-runs
 # # zoib model without random effects
-zoib_model <- bf(
-  response ~ verb, # beta distribution???s mean
-  zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
-  phi ~ verb, # beta distribution's precision  
-  coi ~ verb, # conditional one-inflation
-  family = zero_one_inflated_beta()
-) 
+# zoib_model <- bf(
+#   response ~ verb, # beta distribution???s mean
+#   zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
+#   phi ~ verb, # beta distribution's precision  
+#   coi ~ verb, # conditional one-inflation
+#   family = zero_one_inflated_beta()
+# ) 
 
 # fit model
-m <- brm(
-  formula = zoib_model,
-  data = d,
-  cores = 4#,
-  # file = here::here("zoib-ex")
-)
+# m <- brm(
+#   formula = zoib_model,
+#   data = d,
+#   cores = 4#,
+#   # file = here::here("zoib-ex")
+# )
   # no need to run this multiple times:
-saveRDS(m,file="../data/zoib-model.rds")
+# saveRDS(m,file="../data/zoib-model.rds")
 
 # # zoib model with random effects
 zoib_model <- bf(
-  response ~ verb, # beta distribution's mean
-  zoi ~ verb + (1+verb|workerid) + (1+verb|content), # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
-  phi ~ verb, # beta distribution's precision  
-  coi ~ verb + (1+verb|workerid) + (1+verb|content), # conditional one-inflation
+  response ~ verb + (1|workerid) + (1|item), # beta distribution's mean
+  zoi ~ verb + (1|workerid) + (1|item), # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
+  phi ~ verb + (1|workerid) + (1|item), # beta distribution's precision  
+  coi ~ verb + (1|workerid) + (1|item), # conditional one-inflation
   family = zero_one_inflated_beta()
 ) 
 
@@ -909,7 +910,8 @@ zoib_model <- bf(
 m <- brm(
   formula = zoib_model,
   data = d,
-  cores = 4#,
+  cores = 4,
+  control = list(adapt_delta = .95)
   # file = here::here("zoib-ex")
 )
 # no need to run this multiple times:

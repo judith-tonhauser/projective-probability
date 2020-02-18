@@ -82,7 +82,7 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup
   geom_jitter(data=cd,aes(y=jittery),shape=1,color="gray40",alpha=.2,fill="black",height=.2,width=.3) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25,color="black") +
   geom_point(stroke=.5,size=2.5,color="black") +
-  scale_shape_manual(values=c(21,25,22,24,23),labels=c("main clause\ncontrols","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_shape_manual(values=c(21,22,25,24,23),labels=c("main clause\ncontrols","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
   scale_fill_manual(values=c("black","gray60","dodgerblue","tomato1","darkorchid"),labels=c("main clause\ncontrols","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
                                                                  color=cols$Colors)) +
