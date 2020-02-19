@@ -10,6 +10,8 @@
 papers/prior-paper/prior.pdf
 papers/factives-paper/factives-paper.pdf
 
+# potentially large zoib model files
+*.rds
 
 # SALT 2018 submission
 /salt2018
