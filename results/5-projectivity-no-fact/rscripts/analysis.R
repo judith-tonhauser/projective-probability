@@ -19,6 +19,7 @@ library(brms)
 library(knitr)
 library(emmeans)
 library(lme4)
+library(padr)
 theme_set(theme_bw())
 
 # load clean data  ----
@@ -280,36 +281,26 @@ table(cd$verb)
 cd$workerid = as.factor(as.character(cd$workerid))
 cd$item = as.factor(paste(as.character(cd$verb),as.character(cd$content)))
 cd$content = as.factor(as.character(cd$content))
+cd$isMC = cd$verb == "MC"
+cd$isZeroOne = (cd$response == 0 | cd$response == 1)
 
 # plotting slider ratings suggests we should use a zoib model
 ggplot(cd, aes(x=response)) +
   geom_histogram()
 
+p = ggplot(cd, aes(x=response,fill=isMC)) +
+  geom_histogram() +
+  facet_wrap(~workerid)
+ggsave(p, file="../graphs/subject_variability.pdf",width=25,height=25)
+
+
 # set reference level to main clause controls
 d = cd %>%
   droplevels() %>%
-  mutate(verb = fct_relevel(verb,"control"))
+  mutate(verb = fct_relevel(verb,"MC"))
 table(d$verb)
 
 # JT commented the following code, to prevent accidental re-runs
-# # zoib model without random effects
-# zoib_model <- bf(
-#   response ~ verb, # beta distribution???s mean
-#   zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
-#   phi ~ verb, # beta distribution's precision  
-#   coi ~ verb, # conditional one-inflation
-#   family = zero_one_inflated_beta()
-# ) 
-
-# fit model
-# m <- brm(
-#   formula = zoib_model,
-#   data = d,
-#   cores = 4#,
-#   # file = here::here("zoib-ex")
-# )
-  # no need to run this multiple times:
-# saveRDS(m,file="../data/zoib-model.rds")
 
 # # zoib model with random effects
 zoib_model <- bf(
@@ -320,7 +311,14 @@ zoib_model <- bf(
   family = zero_one_inflated_beta()
 ) 
 
-# fit model
+# set priors -- not sure how to pick reasonable ones
+# priors <- c(set_prior("normal(0, 200)", class = "Intercept"),
+#             set_prior("normal(0, 50)", class = "b", coef = "verb"),
+#             set_prior("normal(0, 100)", class = "sd"),
+#             set_prior("normal(0, 100)", class = "sigma"),
+#             set_prior("lkj(2)", class = "cor"))
+
+# fit zoib model
 m <- brm(
   formula = zoib_model,
   data = d,
@@ -332,10 +330,9 @@ m <- brm(
 saveRDS(m,file="../data/zoib-model-mixed.rds")
 
 # load ZOIB model ----
-m <- readRDS(file="../data/zoib-model.rds") # no random effects
 m <- readRDS(file="../data/zoib-model-mixed.rds") # random effects
 
-summary(m) # see summary printed below
+summary(m)
 
 # transform each of the posterior samples, and then re-calculate the summaries on original scale
 posterior_samples(m, pars = "b_")[,1:4] %>% 
@@ -348,29 +345,64 @@ posterior_samples(m, pars = "b_")[,1:4] %>%
 
 # |Parameter       | Estimate| Est.Error| Q2.5| Q97.5|
 #   |:---------------|--------:|---------:|----:|-----:|
-#   |b_Intercept     |     0.17|      0.01| 0.16|  0.18|
-#   |b_phi_Intercept |     3.77|      0.16| 3.46|  4.11|
-#   |b_zoi_Intercept |     0.27|      0.01| 0.25|  0.29|
+#   |b_Intercept     |     0.16|      0.01| 0.15|  0.17|
+#   |b_phi_Intercept |     5.16|      0.33| 4.54|  5.82|
+#   |b_zoi_Intercept |     0.12|      0.02| 0.08|  0.17|
 #   |b_coi_Intercept |     0.00|      0.00| 0.00|  0.01|
 
-# The .17 and 3.77 values are the mean and precision of the beta distribution that characterizes the 
+# The .16 and 5.16 values are the mean and precision of the beta distribution that characterizes the 
 # controls that are not zeroes and ones -- this is a distribution skewed towards 0
-# The .27 value is the probability that an observation will be either 0 or 1, and of these 
-# 27% endpoint values, 0% (last value) are ones. So: as expected, the MC controls are heavily 0-skewed, 
+# The .12 value is the probability that an observation will be either 0 or 1 (this is 13% less than the actual proportion of 0/1s, presumably because of the large amount of random subject variability that accounts for some of the more extreme cases), 
+# and of these 12% endpoint values, 0% (last value) are ones. So: as expected, the MC controls are heavily 0-skewed, 
 # see also this histogram:
-ggplot(d[d$verb=="control",], aes(x=response)) +
+
+ggplot(d[d$verb=="MC",], aes(x=response)) +
   geom_histogram()
+d$isZero = d$response == 0
+d %>%
+  filter(verb == "MC") %>%
+  count(isZero)
+425/(1171+425)
 
 # in principle, we can ask for each verb whether it differs from the controls, as follows:
-h <- c("pretend - control" = "plogis(Intercept + verbpretend) = plogis(Intercept)")
-hypothesis(m, h) # even the least projecty is more projecty than control
+q = c(q_pretend_MC_mean = "plogis(Intercept) + plogis(verbpretend) = plogis(Intercept)",
+      q_pretend_MC_precision = "exp(phi_Intercept) + exp(phi_verbpretend) = exp(phi_Intercept)",
+      q_pretend_MC_zoi = "plogis(zoi_Intercept) + plogis(zoi_verbpretend) = plogis(zoi_Intercept)",
+      q_pretend_MC_coi = "plogis(coi_Intercept) + plogis(coi_verbpretend) = plogis(coi_Intercept)")
 
-# plot estimated mu parameter
-plot(
-  marginal_effects(m, dpar = "mu"), 
-  points = TRUE, 
-  point_args = list(width = .05, shape = 1)
-)
+q_answer = hypothesis(m, q)
+q_answer
+plot(q_answer)
+prop.table(table(q_answer$samples$H1 > 0)) # prob (pretend > MC) = .97
+
+# undrestand subject variability in zero/one inflation:
+length(unique(cd$workerid)) #266 subjects total
+zeroone = cd %>%
+  group_by(workerid,isZeroOne) %>%
+  summarise(n = n()) %>%
+  mutate(freq = n / sum(n)) %>%
+  ungroup() %>%
+  arrange(workerid,isZeroOne) %>%
+  filter(isZeroOne == T) 
+nrow(zeroone) #168 with at least one 0/1, ie, 266-168 = 98 people never gave an endpoint judgment. hacky way of adding these people back in for plotting:
+nozoi = data.frame(workerid=as.factor(seq(500,597,by=1)),isZeroOne=rep(TRUE,98),n = rep(0,98), freq = rep(0,98))
+zeroone = zeroone %>%
+  bind_rows(nozoi) %>%
+  mutate(workerid = fct_reorder(workerid,freq))
+
+mean(zeroone$freq)
+median(zeroone$freq)
+#-- this is presumably why the overall estimate for zoi (see below) is only .12, even though the oveerall prob for zoi is .27
+ggplot(zeroone, aes(x=workerid,y=freq)) +
+  geom_point()
+
+
+# plot estimated mu parameter -- useless
+# plot(
+#   marginal_effects(m, dpar = "mu"), 
+#   points = TRUE, 
+#   point_args = list(width = .05, shape = 1)
+# )
 
 # > summary(m)
 # Family: zero_one_inflated_beta 
@@ -469,3 +501,32 @@ plot(
 # coi_verbsee               9.35      1.39     7.16    12.71        195 1.02
 # coi_verbsuggest           2.16      1.78    -1.42     5.85        348 1.01
 # coi_verbthink           -26.14     27.76  -102.44     2.14       1114 1.00
+
+
+
+
+# fit linear model -- same qualitative result (except pretend's lower bound is nnow inluded in 95% credible interval)
+summary(d %>% select(response,verb,workerid,item))
+str(d %>% select(response,verb,workerid,item))
+
+m <- brm(
+  formula = response ~ verb + (1|workerid) + (1|item),
+  data = d,
+  cores = 4,
+  control = list(adapt_delta = .95)
+  # file = here::here("zoib-ex")
+)
+# no need to run this multiple times:
+saveRDS(m,file="../data/linear-model-mixed.rds")
+
+# load linear model ----
+m <- readRDS(file="../data/linear-model-mixed.rds")
+
+summary(m) # see summary printed below
+
+# let's look at pretend in particular
+q = c(q_pretend_MC_mean = "Intercept + verbpretend = Intercept")
+q_answer = hypothesis(m, q)
+q_answer
+plot(q_answer)
+prop.table(table(q_answer$samples$H1 > 0)) # prob (pretend > MC) = .97
