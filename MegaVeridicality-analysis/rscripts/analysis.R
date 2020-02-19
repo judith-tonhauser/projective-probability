@@ -1,5 +1,5 @@
-# Comparison of White & Rawlins' data from MegaVeridicality I data set 
-# in veridicality and projection to our vericiality and projection ratings
+# Analysis of veridicality and projection ratings from 
+# White & Rawlins' MegaVeridicality I dataset 
 
 # set working directory to directory of script
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
@@ -13,9 +13,12 @@ library(dichromat)
 library(ggrepel)
 theme_set(theme_bw())
 
+## preprocessing ----
+
 # load raw data
 # MV1: judgments of "did that thing happen?" for positive and negated predicates with "that" complements
 mv1 = read.csv("../data/mega-veridicality-v1/mega-veridicality-v1.csv")
+
 # MV2: judgments of "did that thing happen?" for pos/neg predicates with non-finite complements
 # not relevant for our paper or comparison
 #mv2 = read.csv("../data/mega-veridicality-v2/mega-veridicality-v2.csv")
@@ -45,8 +48,6 @@ table(mv1$veridicality)
 #mv2 <- droplevels(subset(mv2,(mv2$veridicality != "")))
 
 # continuing to work only with mv1
-
-# analysis of their data -----
 
 # recode their responses to numerical values
 # MV has ratings on a 3-point Likert scale in response to "Did that thing happen?"
@@ -96,29 +97,45 @@ table(mv1$conditional2) #conditional, matrix
 mv1$item <- paste(mv1$verb,mv1$frame,mv1$voice,mv1$polarity,mv1$conditional2, sep = "-")
 table(mv1$item)
 
-# plot veridicality ratings (only use positive non-conditional matrix sentences) ----
+# save data
+write.csv(mv1, "../data/mv1.csv")
+nrow(mv1) #21692
 
-# create temporary subset: ratings for positive non-conditional matrix sentences
+# plot veridicality ratings ----
+
+# load data 
+mv1 = read.csv("../data/mv1.csv")
+nrow(mv1) #21692
+
+# create relevant subset: ratings for positive non-conditional matrix sentences
 mv1_tmp <- droplevels(subset(mv1, mv1$polarity == "positive" & mv1$conditional2 == "matrix"))
 t <- table(mv1_tmp$verb)
 min(t) #9
 max(t) #20
 mean(t) #10
 
+length(unique(mv1_tmp$verb)) #517 verbs
 length(unique(mv1_tmp$participant)) #159 participants gave ratings
 
-v_means = mv1_tmp %>%
+# calculate mean for all 517 predicates
+p_means = mv1_tmp %>%
   group_by(verb) %>%
   summarize(Mean = mean(veridicality_num), CILow = ci.low(veridicality_num), CIHigh = ci.high(veridicality_num)) %>%
   mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, verb = fct_reorder(as.factor(verb),Mean))
 options(tibble.print_max = Inf)
-v_means
-levels(v_means$verb)
+p_means
+levels(p_means$verb) # verbs sorted by veridicality mean (...)
 
-mv1_tmp$verb <-factor(mv1_tmp$verb, levels=levels(v_means$verb))
+# create data subsets for our 19 predicates
+p_meansOUR <- droplevels(subset(p_means,p_means$verb %in% our_preds))
+p_meansOUR
+levels(p_meansOUR$verb) #verbs sorted by projectivity mean (pretend...reveal)
+
+p_meansOUR = p_meansOUR %>%
+  mutate(verb = fct_reorder(as.factor(verb),Mean))
 
 # define colors for our predicates
-cols = data.frame(V=c(our_preds))
+cols = data.frame(V=levels(p_meansOUR$verb))
 cols
 
 cols$VeridicalityGroup = as.factor(
@@ -128,36 +145,61 @@ cols$VeridicalityGroup = as.factor(
 
 levels(cols$V)
 
-cols$V <- factor(cols$V, levels = cols[order(as.character(v_means$verb)),]$V, ordered = TRUE)
-levels(cols$V)
+cols = cols %>%
+  mutate(V = fct_reorder(as.factor(V),p_meansOUR$Mean))
+
+levels(cols$V) # sorted: 
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
                       ifelse(cols$VeridicalityGroup == "NF", "gray60", 
                              ifelse(cols$VeridicalityGroup == "VNF","dodgerblue","tomato1")))
 
 
+p_meansOUR$VeridicalityGroup = as.factor(
+  ifelse(p_meansOUR$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+         ifelse(p_meansOUR$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
+                ifelse(p_meansOUR$verb  %in% c("be_right","demonstrate"),"VNF",
+                       ifelse(p_meansOUR$verb  %in% c("MC"),"MC","V")))))
+
+p_means$VeridicalityGroup = as.factor(
+  ifelse(p_means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+         ifelse(p_means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
+                ifelse(p_means$verb  %in% c("be_right","demonstrate"),"VNF",
+                       ifelse(p_means$verb  %in% c("hear","acknowledge","confess","prove","confirm","establish","inform","announce","admit"),"V","X")))))
+
 cols$Colors
-cols
 
+p_meansOUR = p_meansOUR %>%
+  mutate(VeridicalityGroup = fct_relevel(VeridicalityGroup, "NF","VNF","V","F"))
+levels(p_meansOUR$VeridicalityGroup)
+# "NF"  "VNF" "V"   "F" 
 
-ggplot(v_means, aes(x=verb, y=Mean)) +
-  #geom_point(shape=21,fill="gray60",data=subjmeans, alpha=.1, color="gray40") +
-  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="black") +
-  #scale_fill_manual(values=c("darkorchid","gray60","tomato1","dodgerblue")) +
-  geom_point(shape=21,stroke=.5,size=2.5,color="blue") +
-  scale_y_continuous(limits = c(-1,1),breaks = c(-1,-.8,-.6,-.4,-.2,0,0.2,0.4,0.6,0.8,1.0)) +
-  scale_alpha(range = c(.3,1)) +
-  scale_x_discrete(breaks = c(our_preds)) +
-  guides(fill=FALSE) +
-  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1,
-                                                                 color=cols$Colors)) +
-  ylab("Mean entailment rating") +
+ggplot(p_means, aes(x=verb, y=Mean)) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
+  geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
+  #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
+  geom_text_repel(data=p_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.8) +
+  theme(panel.background = element_blank(), plot.background = element_blank(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
+  scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
+                     labels = c("non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive")) +
+  #scale_y_continuous(limits = c(-.7,1),breaks = c(.8,-.6,-.4,-.2,0,0.2,0.4,0.6,0.8,1.0)) +
+  #scale_alpha(range = c(.3,1)) +
+  labs(color="Predicate type") +
+  theme(legend.position="bottom") + 
+  ylab("Mean veridicality rating") +
   xlab("Predicate") 
-ggsave("../graphs/means-entailment-by-predicate.pdf",height=4,width=7)
+ggsave("../graphs/means-entailment-by-predicate.pdf",height=4,width=9)
 
 
-# plot projection ratings (embedding is negation, conditional or both) ----
+# plot projection ratings  ----
 
+# load data ----
+mv1 = read.csv("../data/mv1.csv")
+nrow(mv1) #21692
+
+# create data relevant to investigate projection (embedding is negation, conditional or both)
 mv1_tmp <- droplevels(subset(mv1, mv1$polarity == "negative" | mv1$conditional2 == "conditional"))
 t <- table(mv1_tmp$verb)
 min(t)
@@ -166,6 +208,7 @@ max(t) #29-60 ratings per predicate under negation, cond or both
 length(unique(mv1_tmp$verb)) #517 verbs
 length(unique(mv1_tmp$participant)) #290 participants gave ratings
 
+# calculate mean for all 517 predicates
 p_means = mv1_tmp %>%
   group_by(verb) %>%
   summarize(Mean = mean(veridicality_num), CILow = ci.low(veridicality_num), CIHigh = ci.high(veridicality_num)) %>%
@@ -182,17 +225,8 @@ levels(p_meansOUR$verb) #verbs sorted by projectivity mean (pretend...be_annoyed
 p_meansOUR = p_meansOUR %>%
   mutate(verb = fct_reorder(as.factor(verb),Mean))
 
-mv1_tmpOUR = mv1_tmp %>% 
-  filter(mv1_tmp$verb %in% our_preds) %>% 
-  droplevels()
-levels(mv1_tmpOUR$verb)
-
-mv1_tmpOUR$verb <- factor(mv1_tmpOUR$verb, levels = mv1_tmpOUR[order(as.character(p_meansOUR$verb)),]$verb, ordered = TRUE)
-
-levels(mv1_tmpOUR$verb)
-
 # define colors for our predicates
-cols = data.frame(V=levels(mv1_tmpOUR$verb))
+cols = data.frame(V=levels(p_meansOUR$verb))
 cols
 
 cols$VeridicalityGroup = as.factor(
@@ -204,6 +238,7 @@ levels(cols$V)
 
 cols = cols %>%
   mutate(V = fct_reorder(as.factor(V),p_meansOUR$Mean))
+
 levels(cols$V) # sorted: pretend...be_annoyed
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
@@ -232,8 +267,8 @@ levels(p_meansOUR$VeridicalityGroup)
 
 ggplot(p_means, aes(x=verb, y=Mean)) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
-  geom_point(shape=16,stroke=.5,size=2.5,color="aquamarine") +
-  #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","aquamarine")) + 
+  geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
+  #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
   geom_text_repel(data=p_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.5) +
   theme(panel.background = element_blank(), plot.background = element_blank(),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),

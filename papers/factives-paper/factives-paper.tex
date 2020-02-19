@@ -571,7 +571,7 @@ Each of the 517 predicates in the MegaVeridicality dataset received between 29 a
 \centering
 \includegraphics[width=.77\paperwidth]{../../MegaVeridicality-analysis/graphs/means-projection-by-predicate}
 
-\caption{Mean projectivity rating by predicate in light green, with 95\% bootstrapped confidence intervals, for the 517 predicates in the MegaVeridicality dataset (\citealt{white-rawlins-nels2018,white-etal2018b}), with labels for the 19 predicates featured in our experiments.}
+\caption{Mean projectivity rating by predicate in green, with 95\% bootstrapped confidence intervals, for the 517 predicates in the MegaVeridicality dataset (\citealt{white-rawlins-nels2018,white-etal2018b}), with labels for the 19 predicates featured in our experiments.}
 \label{f-white-rawlins-projectivity}
 \end{figure}
 
@@ -581,19 +581,9 @@ The experiments described in the next section were designed to explore whether t
 
 \section{Experiments 2 and 3: Entailment}\label{s3}
 
-Experiments 2 and 3 explored which of the CCs of the 20 clause-embedding predicates are entailed. We assume the standard definition of entailment, according to which entailment is a binary, categorical relation between two contents: given sentences $\phi$ and $\psi$, the content of $\phi$ entails the content of $\psi$ if and only if every world in which the content of $\phi$ is true is also a world in which the content of $\psi$ is true. Thus, if there is even one world in which $\phi$ is true but $\phi$ is false, then the content of $\phi$ does not entail the content of $\psi$. Given this definition, establishing that the contents of two natural language sentences $\phi$ and $\psi$ do not stand in an entailment relation involves identifying a world in which the content of $\phi$ is true and the content of $\psi$ is false. \jd{the following sentence is rhetorically a little weird: aren't we precisely interested in identifying when there \emph{is} an entailment relationship? the way it's framed makes it sound liike we're mostly interested in showing non-entailment. -- more generally, do we need all the detail of this paragraph or can we just move directly to the next paragraph, which introduces the standard diagnostics for entailment?} In this paper, however, we are also interested in establishing that the contents of two sentences $\phi$ and $\psi$  do stand in an entailment relation. Establishing this is straightforward if the content of some expression in $\phi$ denotes a subset of the content of some expression in $\psi$: for instance, in (\ref{ent1}a),  the content of $\phi$ entails the content of $\psi$ because the denotation of {\em black cat} in $\phi$ is a subset of the denotation of {\em cat} in $\psi$. No such structural relation exists, however, between the content of a sentence with a clause-embedding predicate and the CC, as in (\ref{ent1}b). %Furthermore, it is of course impossible to empirically verify that the content of $\phi$ entails the content of $\psi$ in (\ref{ent1}b) because it is impossible to verify that $\psi$ is true in all worlds in which $\phi$ is true. 
+Experiments 2 and 3 explored which of the CCs of the 20 clause-embedding predicates are entailed. We assume the standard definition of entailment, according to which entailment is a binary, categorical relation between two contents: given sentences $\phi$ and $\psi$, the content of $\phi$ entails the content of $\psi$ if and only if every world in which the content of $\phi$ is true is also a world in which the content of $\psi$ is true. If there is one world in which $\phi$ is true but $\phi$ is false, then the content of $\phi$ does not entail the content of $\psi$. 
 
-\begin{exe}
-\ex\label{ent1}
-\begin{xlist}
-\ex $\phi$: Sam owns a black cat. \hspace*{1.5cm} $\psi$: Sam owns a cat.
-
-\ex $\phi$: Sam knows that it's raining. \hspace*{.6cm} $\psi$: It's raining.
-
-\end{xlist}
-\end{exe}
-
-To establish whether the content of an unembedded matrix sentence with a clause-embedding predicate entails the CC, we use standard diagnostics that are taken to provide evidence for an entailment relation. Two standard diagnostics are given in (\ref{diag}). According to the `inference diagnostic' in (\ref{diag}a), the content of an unembedded matrix sentence with a clause-embedding predicate entails the CC if and only if the CC definitely follows from a true statement of the unembedded matrix sentence. According to the `contradictoriness diagnostic' in (\ref{diag}b), an entailment relationship holds if and only an utterance of the unembedded matrix sentence that is followed by a denial of the CC is contradictory. 
+To establish whether the content of an unembedded matrix sentence with a clause-embedding predicate entails the CC, we used the two standard diagnostics for entailment in (\ref{diag}). According to the `inference diagnostic' in (\ref{diag}a), the content of an unembedded matrix sentence with a clause-embedding predicate entails the CC if and only if the CC definitely follows from a true statement of the unembedded matrix sentence. According to the `contradictoriness diagnostic' in (\ref{diag}b), an entailment relationship holds if and only an utterance of the unembedded matrix sentence that is followed by a denial of the CC is contradictory. 
 
 \begin{exe}
 \ex\label{diag} Two diagnostics for entailment \hfill (see, e.g., \citealt[\S3.1]{ccmg90})
@@ -604,10 +594,23 @@ To establish whether the content of an unembedded matrix sentence with a clause-
 
 \end{xlist}
 \end{exe}
-These two diagnostics for entailment were applied to the CCs of the 20 clause-embedding predicates in Exps.~2a/2b and Exps.~3a/3b, respectively. The (a) and (b) versions of the experiments differed in whether participants provided a continuous response (a) or a categorical response (b).  Both sets of experiments included control stimuli for which the relevant contents stand in an entailment relation, that is, for which the relevant inference definitely follows (Exps.~2) and that are definitely contradictory (Exps.~3). We assume that the CC of a clause-embedding predicate is not entailed if responses to the CC are significantly different from responses to these control stimuli and that the CC of a clause-embedding predicate is entailed if responses to the CC are not significantly different from responses to these control stimuli. Thus, identifying entailed CCs  requires arguing from a null result. 
+These two diagnostics for entailment were applied to the CCs of the 20 clause-embedding predicates in Exps.~2a/2b and Exps.~3a/3b, respectively: the (a) and (b) versions of the experiments differed in whether participants provided a continuous response (a) or a categorical one (b).  Both sets of experiments included control stimuli for which the relevant contents stand in an entailment relation, that is, for which the relevant inference definitely follows (Exps.~2) and that are definitely contradictory (Exps.~3). We assume that the CC of a clause-embedding predicate is not entailed if responses to the CC are significantly different from responses to these control stimuli and that the CC of a clause-embedding predicate is entailed if responses to the CC are not significantly different from responses to these control stimuli. Thus, identifying entailed CCs  requires arguing from a null result. 
 
 We present the findings of the two experiments in sections \ref{s31} and \ref{s32}, and then discuss the findings jointly in section \ref{s33} \jd{revise after restructuring}: given the standard classification of the 20 clause-embedding predicates in (\ref{pred}), we expect the CCs of factive and veridical non-factive predicates to be entailed.
 
+%Given this definition, establishing that the contents of two natural language sentences $\phi$ and $\psi$ do not stand in an entailment relation involves identifying a world in which the content of $\phi$ is true and the content of $\psi$ is false. 
+
+%\jd{the following sentence is rhetorically a little weird: aren't we precisely interested in identifying when there \emph{is} an entailment relationship? the way it's framed makes it sound liike we're mostly interested in showing non-entailment. -- more generally, do we need all the detail of this paragraph or can we just move directly to the next paragraph, which introduces the standard diagnostics for entailment?} In this paper, however, we are also interested in establishing that the contents of two sentences $\phi$ and $\psi$  do stand in an entailment relation. Establishing this is straightforward if the content of some expression in $\phi$ denotes a subset of the content of some expression in $\psi$: for instance, in (\ref{ent1}a),  the content of $\phi$ entails the content of $\psi$ because the denotation of {\em black cat} in $\phi$ is a subset of the denotation of {\em cat} in $\psi$. No such structural relation exists, however, between the content of a sentence with a clause-embedding predicate and the CC, as in (\ref{ent1}b). %Furthermore, it is of course impossible to empirically verify that the content of $\phi$ entails the content of $\psi$ in (\ref{ent1}b) because it is impossible to verify that $\psi$ is true in all worlds in which $\phi$ is true. 
+%
+%\begin{exe}
+%\ex\label{ent1}
+%\begin{xlist}
+%\ex $\phi$: Sam owns a black cat. \hspace*{1.5cm} $\psi$: Sam owns a cat.
+%
+%\ex $\phi$: Sam knows that it's raining. \hspace*{.6cm} $\psi$: It's raining.
+%
+%\end{xlist}
+%\end{exe}
 
 %\footnote{\citealt{sudo-thesis} proposed to diagnose whether a presupposition is an entailment based on whether the presupposition obligatorily restrict the domain of the quantifier {\em exactly one}. According to this diagnostic, the pre-state content of {\em stop} is a presupposition and an entailment because (ia) means that exactly one student who used Mac stopped using Mac. On the other hand, the gender presupposition of {\em she} in (ib) is not an entailment because (ib) does not mean that exactly one female student criticized herself, but that exactly one student criticized herself (see \citealt{zehr-schwarz2016,zehr-schwarz2018} for some experimental support). According to this diagnostic, the CC of {\em know} is entailed content: (ic) means that exactly one student who got accepted by MIT knows that they got accepted by MIT. {\bf REVISE THIS: Whether the {\em exactly one} diagnostic can help settle the debate about which contents of complements of clause-embedding predicates are entailed is a question we leave for future research.}
 %
@@ -623,27 +626,30 @@ We present the findings of the two experiments in sections \ref{s31} and \ref{s3
 %\end{xlist}
 %\end{exe}}
 
-\subsection{Experiment 2a: Continuous entailment ratings using inference diagnostic}\label{s31}
+\subsection{Exp.~2a: Continuous ratings using the inference diagnostic for entailment}\label{s31}
 
-Exp.~2a was designed to investigate which of the CCs of the 20 clause-embedding predicates are entailed based on the inference diagnostic for entailment in (\ref{diag}a). In contrast to the entailment relationship, which is binary and categorical, the inference relationship between the contents of two sentences $\phi$ and $\psi$ is gradient: given a true statement $\phi$, the truth of $\psi$ follows to varying degrees. To illustrate, assume that Chris wears his pajamas when he is at home and that he doesn't wear pajamas outside of his home. Now consider the sentences $\phi_1$ to $\phi_5$ in (\ref{chris}). Given the aforementioned assumption, the truth of the content of the statement $\psi$ {\em Chris is wearing his pajamas} definitely follows from a true statement of $\phi_1$\jd{is this true? -- the way the assumption is formulated above, it's a habitual -- ie, he habitually wears pajamas at home and not outside the home; but presumably, there is a point in time at which he changes from pajamas to outside clothes, so he doesn't wear just pajamas at home, so it doesn't follow from $\phi_5$ that Chris is wearing pajamas}, it follows to increasingly lower degrees from true statements of $\phi_2$ to $\phi_4$ and it does not follow from a true statement of $\phi_5$. 
+Exp.~2a investigated which of the CCs of the 20 clause-embedding predicates are entailed based on the inference diagnostic for entailment in (\ref{diag}a). Participants were presented with true statements of indicative matrix sentences with the 20 clause-embedding predicates and assessed whether the CC follows on a gradient scale.
 
-\begin{exe}
-\ex\label{chris}
-\begin{xlist}
-\exi{$\phi_1$} Chris is at home.
-\exi{$\phi_2$} Chris is likely at home.
-\exi{$\phi_3$} Chris is possibly at home.
-\exi{$\phi_4$} There is a slight possibility that Chris is at home.
-\exi{$\phi_5$} Chris is not at home.
-\end{xlist}
-\end{exe}
-Exp.~2a investigated the strength of the inference to the CCs from true statements of unembedded matrix sentences with the 20 clause-embedding predicates by collecting gradient inference ratings. \jd{i thought this intro paragraph would tell the reader how the inference diagnostic will be applied to diagnose entailment, but i'm not sure it does that. it introduces notions of gradience but without telling us what for, eg: " In contrast to the entailment relationship, which is binary and categorical, the inference relationship between the contents of two sentences $\phi$ and $\psi$ is gradient" -- what is the purpose of this? readers are trying to figure out why we're using the inference diagnostic for entailment, but it sounds here like you're telling us that the inference diagnostic doesn't actually capture entailment, so why do this experiment? might be solved by getting rid of the gradience prose? if the purpose of introducing this gradience is to motivate the continuous response task, i think that's better handled in the methods section (or can be discussed later)}
+%In contrast to the entailment relationship, which is binary and categorical, the inference relationship is gradient: given true statements $\phi_1$ and $\phi_2$, the inference to the truth of $\psi$ may be stronger from $\phi_1$ than from $\phi_2$. To illustrate assume that $\phi_1$ is the sentence {\em Julian is from Cuba} and that $\phi_2$ is the sentence {\em Julian is from Germany}: the inference to the truth of $\psi$ {\em Julian dances salsa} is stronger from $\phi_1$ than from $\phi_2$.
+
+% To illustrate, assume that Chris wears his pajamas when he is at home and that he doesn't wear pajamas outside of his home. Now consider the sentences $\phi_1$ to $\phi_5$ in (\ref{chris}). Given the aforementioned assumption, the truth of the content of the statement $\psi$ {\em Chris is wearing his pajamas} definitely follows from a true statement of $\phi_1$\jd{is this true? -- the way the assumption is formulated above, it's a habitual -- ie, he habitually wears pajamas at home and not outside the home; but presumably, there is a point in time at which he changes from pajamas to outside clothes, so he doesn't wear just pajamas at home, so it doesn't follow from $\phi_5$ that Chris is wearing pajamas}, it follows to increasingly lower degrees from true statements of $\phi_2$ to $\phi_4$ and it does not follow from a true statement of $\phi_5$. 
+%
+%\begin{exe}
+%\ex\label{chris}
+%\begin{xlist}
+%\exi{$\phi_1$} Chris is at home.
+%\exi{$\phi_2$} Chris is likely at home.
+%\exi{$\phi_3$} Chris is possibly at home.
+%\exi{$\phi_4$} There is a slight possibility that Chris is at home.
+%\exi{$\phi_5$} Chris is not at home.
+%\end{xlist}
+%\end{exe}
 
 \subsubsection{Methods}
 
 \paragraph{Participants} 300 participants with U.S.\ IP addresses and at least 99\% of previous HITs approved were recruited on Amazon's Mechanical Turk platform (ages: 19-69, median: 36; 152 female, 148 male). They were paid \$0.75 for participating.
 
-\paragraph{Materials} The target stimuli were 400 unembedded matrix sentences that were constructed by combining the 400 predicate/clause combinations of Exps.~1 with a random proper name subject whose gender differed from the gender of the proper name subject of the embedded clause. As illustrated in the sample stimuli in (\ref{stims2}), these matrix sentences were presented to participants as true statements. For each of the 400 target stimuli, the inference that was tested was the inference to the CC: for instance, participants were asked about (\ref{stims2}a) whether it follows that Danny ate the last cupcake and about (\ref{stims2}b) whether it follows that Emma studied on Saturday morning.
+\paragraph{Materials} The target stimuli were 400 unembedded matrix sentences: they were constructed by combining the 20 clause-embedding predicates with the 20 complement clauses (for 400 predicate/clause combinations, as in Exps.~1) and a random proper name subject whose gender differed from the gender of the proper name subject of the embedded clause. As illustrated in the sample stimuli in (\ref{stims2}), these matrix sentences were presented to participants as true statements. For each of the 400 target stimuli, the inference that was tested was the inference to the CC: for instance, participants were asked about (\ref{stims2}a) whether it follows that Danny ate the last cupcake and about (\ref{stims2}b) whether it follows that Emma studied on Saturday morning.
 
 \begin{exe}
 \ex\label{stims2}
@@ -653,7 +659,7 @@ Exp.~2a investigated the strength of the inference to the CCs from true statemen
 \end{xlist}
 \end{exe}
 
-The experiment included eight control stimuli that were used to assess whether participants were attending to the task and interpreted the task correctly, as well as to identify inference ratings for entailed content. For the four entailing control stimuli in (\ref{control-good2}), the tested inferences are lexical entailment of the true statements: for instance, that Frederick solved the problem is a lexical entailment of the true statement in (\ref{control-good2}a) that Frederick managed to solve the problem. We expected the inference ratings for these four control stimuli to be at ceiling and, as discussed above, we rely on the ratings for these stimuli to identify entailments. In contrast, the inferences tested with the four non-entailing control stimuli in (\ref{control-bad2}) definitely do not follow from these true statements: for instance, in (\ref{control-bad2}a), that Dana wears a wig does not follow from Dana watching a movie last night. We expected the inference ratings for these four control stimuli to be at floor.
+The experiment included eight control stimuli that were used to assess whether participants were attending to the task and interpreted the task correctly, as well as to identify inference ratings for entailed content. For the four entailing control stimuli in (\ref{control-good2}), the tested inferences are entailments of the true statements: in (\ref{control-good2}a), for instance, that Frederick solved the problem is an entailment of the true statement that Frederick managed to solve the problem. We expected the inference ratings for these four control stimuli to be at ceiling and, as discussed above, we rely on the ratings for these stimuli to identify entailments. In contrast, the inferences tested with the four non-entailing control stimuli in (\ref{control-bad2}) definitely do not follow from these true statements: for instance, in (\ref{control-bad2}a), that Dana wears a wig does not follow from Dana watching a movie last night. We expected the inference ratings for these four control stimuli to be at floor.
 
 \begin{exe}
 \ex\label{control-good2} Entailing control stimuli
@@ -683,7 +689,7 @@ Each participant saw a random set of 28 stimuli: each set contained one target s
 \caption{A sample trial in Experiment 2a}\label{f-trial-exp3}
 \end{figure}
 
-To familiarize participants with the task, they first responded to the two familiarization stimuli in (\ref{train2}), where the inference tested was the inference to the CC. Participants who rated (\ref{train2}a) in the lower half of the sliding scale or (\ref{train2}b) in the upper half of the sliding scale were given an explanation for why their answer was wrong. Participants could only advance to the 28 stimuli if they gave a plausible rating to the two familiarization stimuli, that is, a rating in the upper half of the scale for (\ref{train2}a) and in the lower half for (\ref{train2}b).
+To familiarize participants with the task, they first responded to the two familiarization stimuli in (\ref{train2}), where the inference tested was the CC. Participants who rated (\ref{train2}a) in the lower half of the sliding scale or (\ref{train2}b) in the upper half of the sliding scale were given an explanation for why their answer was wrong. Participants could only advance to the 28 stimuli if they gave a plausible rating to the two familiarization stimuli, that is, a rating in the upper half of the scale for (\ref{train2}a) and in the lower half for (\ref{train2}b).
 
 \begin{exe}
 \ex\label{train2}
@@ -698,54 +704,31 @@ After responding to the 28 stimuli, participants filled out a short, optional su
 
 \paragraph{Data exclusion}
 
-Prior to analysis, the data from 14 participants who did not self-identify as native speakers of American English were excluded. For the remaining 286 participants, we inspected their responses to the 8 control stimuli. The group mean for the four control stimuli in (\ref{control-good2}), for which the strength of the inference was expected to be at ceiling, was .94. The group mean for the four control stimuli in (\ref{control-bad2}), for which the strength of the inference was expected to be at floor, was .05. These group means suggest that, overall, participants attended to and understood the task. Importantly, the at-ceiling mean rating for the control stimuli with indisputably entailed content shows that the diagnostic can detect entailed content. The response means of 27 participants were more than 2 standard deviations below the group mean for the control stimuli in (\ref{control-good2}) or above the group mean for the control stimuli in (\ref{control-bad2}). Closer inspection revealed that these participants' responses to the control stimuli were systematically higher or lower, respectively, suggesting that these participants did not attend to the task or interpreted the task differently. The data from these 27 participants were also excluded. In this experiment, we did not identify any participants who always selected roughly the same point on the response scale. The results presented below are based on data from 259 participants (ages 19-69; median: 36; 132 female, 128 male). %; the group means were .96 for the control stimuli in (\ref{control-good2}) and .03 for the control stimuli in (\ref{control-bad2}).
+Prior to analysis, the data from 14 participants who did not self-identify as native speakers of American English were excluded. For the remaining 286 participants, we inspected their responses to the 8 control stimuli. The group mean for the four control stimuli in (\ref{control-good2}), for which the strength of the inference was expected to be at ceiling, was .94. The group mean for the four control stimuli in (\ref{control-bad2}), for which the strength of the inference was expected to be at floor, was .05. These group means suggest that, overall, participants attended to and understood the task. The response means of 27 participants were more than 2 standard deviations below the group mean for the control stimuli in (\ref{control-good2}) or above the group mean for the control stimuli in (\ref{control-bad2}). Closer inspection revealed that these participants' responses to the control stimuli were systematically higher or lower, respectively, suggesting that these participants did not attend to the task or interpreted the task differently. The data from these 27 participants were also excluded. In this experiment, we did not identify any participants who always selected roughly the same point on the response scale. The results presented below are based on data from 259 participants (ages 19-69; median: 36; 132 female, 128 male). %; the group means were .96 for the control stimuli in (\ref{control-good2}) and .03 for the control stimuli in (\ref{control-bad2}).
 
 \subsubsection{Results}
 
-% prove is entailed, but be right is not, anything below it isn't either.
 
-Figure \ref{f-veridicality-predicate} plots the mean inference ratings for the target stimuli by predicate, in increasing order from left to right, as well as for the non-entailing controls (abbreviated `non-ent.\ C') and the entailing controls (abbreviated `entailing C'). %As before, factive predicates are given in purple, optionally factive predicates in orange, veridical non-factive predicates in blue, and non-veridical non-factive predicates in gray. Participants' individual ratings are given by light gray dots. 
-In line with impressionistic judgments reported in the literature, the mean inference ratings for most factive predicates as well as the veridical non-factive predicate {\em be right} are quite high, suggesting strong inferences to the truth of the CC. The mean inference ratings of the purportedly factive predicate {\em reveal} and of the purportedly veridical non-factive predicate {\em demonstrate} are lower, suggesting comparatively weaker inferences to the truth of the CC. 
-
-% 1 acknowledge 0.905  0.0182  0.0161 
-% 2 admit       0.907  0.0207  0.0177 
-% 3 announce    0.809  0.0296  0.0296 
-% 4 be_annoyed  0.924  0.0160  0.0151 
-% 5 be_right    0.955  0.0116  0.0106 
-% 6 confess     0.890  0.0209  0.0186 
-% 7 confirm     0.943  0.0115  0.0109 
-% 8 demonstrate 0.854  0.0266  0.0246 
-% 9 discover    0.944  0.00936 0.00932
-%10 entailing C 0.961  0.00443 0.00410
-%11 establish   0.903  0.0205  0.0191 
-%12 hear        0.498  0.0402  0.0412 
-%13 inform      0.833  0.0285  0.0266 
-%14 know        0.931  0.0155  0.0134 
-%15 non-ent. C  0.0297 0.00404 0.00429
-%16 pretend     0.116  0.0268  0.0290 
-%17 prove       0.956  0.0109  0.0102 
-%18 reveal      0.903  0.0195  0.0172 
-%19 say         0.683  0.0366  0.0390 
-%20 see         0.948  0.0114  0.0102 
-%21 suggest     0.343  0.0354  0.0363 
-%22 think       0.316  0.0342  0.0330
+Figure \ref{f-veridicality-predicate} plots the mean inference ratings for the target stimuli by predicate, in increasing order from left to right, as well as for the non-entailing controls (`non-entailing') and the entailing controls (`entailing'). In line with impressionistic judgments reported in the literature, the mean inference ratings for most factive predicates as well as the veridical non-factive predicate {\em be right} are quite high, suggesting strong inferences to the truth of the CC. The mean inference ratings of the purportedly factive predicate {\em reveal} and of the purportedly veridical non-factive predicate {\em demonstrate} are lower, suggesting comparatively weaker inferences to the truth of the CC. 
 
 \begin{figure}[h!]
 \centering
 
 \includegraphics[width=.7\paperwidth]{../../results/4-veridicality3/graphs/means-inference-by-predicate-variability}
 
-\caption{Mean inference rating by predicate in Exp.~2a, including the non-entailing controls (`non-ent.\ C') and the entailing controls (`entailing C'). Error bars indicate bootstrapped 95\% confidence intervals. Light gray dots indicate individual participants' ratings.} %Factive predicates are given in purple, veridical non-factive ones in blue, optionally factive ones in orange and non-veridical non-factive ones in gray.}
+\caption{Mean inference rating by predicate in Exp.~2a, including the non-entailing and entailing controls. Error bars indicate bootstrapped 95\% confidence intervals. Light gray dots indicate individual participants' ratings.} 
 \label{f-veridicality-predicate}
 \end{figure}
 
-\jd{JD Describe model and update the following if necessary} In other words, only the inference ratings to the CC of {\em prove} are statistically indistinguishable from those of the controls with indisputably entailed content, suggesting that the CCs of the remaining 19 predicates are not entailed.
+\jd{JD Describe model and results:} In other words, the inference ratings to the CCs of {\em xx} and {\em xx} are indistinguishable from those of the entailing controls, whereas those of the remaining predicates, including {\em xxl} and {\em xx}, are significantly lower. 
 
 \subsubsection{Discussion}
 
 \jd{move up a lot of the discussion from what's currently sec 3.5, segue to categorical inference diagnostic}
 
-\subsection{Experiment 2b: Categorical entailment ratings using inference diagnostic}
+It is possible that asking participants to assess whether the CC follows from a true statement of the indicative matrix sentence on a gradient response scale encouraged them to provide non-categorical answers and the finding is an artifact of the task. If so, the CCs of more clause-embedding predicates may be identified as entailed if participants were asked to assess whether the CC follows with a categorical response task. To assess this possibility, we conducted Exp.~2b, which was identical to Exp.~2a but employed a two-alternative forced choice task.
+
+\subsection{Exp.~2b: Categorical ratings using the inference diagnostic for entailment}
 
 \subsubsection{Methods}
 
@@ -766,28 +749,28 @@ In line with impressionistic judgments reported in the literature, the mean infe
 
 \subsubsection{Results and discussion}
 
-Figure \ref{fig:3aresults} shows the proportion of `yes' ratings on target trials by predicate, in increasing order from left to right, as well as on non-entailing control trials (abbreviated `non-ent.\ C') and entailing control trials (abbreviated `entailing C'). The findings of Exp.~2b are strikingly similar to those of Exp.~2a: the proportions of `yes' ratings are quite high for most factive predicates as well as the veridical non-factive predicate {\em be right} and the optionally factive predicate \emph{prove}, but the proportions for the purportedly factive predicate {\em reveal} and the purportedly veridical non-factive predicate {\em demonstrate} are lower. The order of predicates according to the categorical inference measure in  Exp.~2b is almost identical to that obtained via the continuous inference measure in Exp.~2a, as evidenced by the very high Spearman rank correlation of .989 (see Appendix \ref{a-binary} for a visualization).
+Figure \ref{fig:2bresults} shows the proportion of `yes' ratings on target trials by predicate, in increasing order from left to right, as well as on non-entailing control trials (abbreviated `non-ent.\ C') and entailing control trials (abbreviated `entailing C'). The findings of Exp.~2b are strikingly similar to those of Exp.~2a: the proportions of `yes' ratings are quite high for most factive predicates as well as the veridical non-factive predicate {\em be right} and the optionally factive predicate \emph{prove}, but the proportions for the purportedly factive predicate {\em reveal} and the purportedly veridical non-factive predicate {\em demonstrate} are lower. The order of predicates according to the categorical inference measure in  Exp.~2b is almost identical to that obtained via the continuous inference measure in Exp.~2a, as evidenced by the very high Spearman rank correlation of .989 (see Appendix \ref{a-binary} for a visualization).
 
-The critical findings of Exp.~2a were replicated.  \jd{JD insert model info here once issue of exclusions settled} 
+\jd{JD Describe model, finding is this:} In other words, the inference ratings to the CCs of {\em confirm, discover, see, be right} and {\em prove} are indistinguishable from those of the entailing controls, whereas those of the remaining predicates, including {\em know, be annoyed, reveal} and {\em demonstrate}, are significantly lower. 
  
 \begin{figure}[H]
 \centering
 \includegraphics[width=.7\paperwidth]{../../results/7-veridicality3-binary/graphs/proportion-by-predicate-variability-individual}
 
 \caption{Proportion of `yes' ratings by predicate in Exp.~2b. Error bars indicate 95\% bootstrapped confidence intervals. Jittered light gray dots indicate individual participants' ratings of `yes' (coded as 1) and `no' (coded as 0).}
-\label{fig:3aresults}
+\label{fig:2bresults}
 \end{figure}
 
 \jd{segue to exps 3}
 
-\subsection{Experiment 3a: Continuous entailment ratings using contradictoriness diagnostic}\label{s32}
+\subsection{Exp.~3a: Continuous ratings using the contradictoriness diagnostic for entailment}\label{s32}
 
-This experiment investigated which of the CCs of the 20 clause-embedding predicates are entailed based on the contradictoriness diagnostic for entailment in (\ref{diag}b). Participants rated the contradictoriness of utterances of English sentences of the form {\em $\phi$ but not $\psi$}, where $\phi$ is an unembedded matrix sentence with a clause-embedding predicate and $\psi$ is its clausal complement, as in (\ref{announce3}):
+Exp.~3a investigated which of the CCs of the 20 clause-embedding predicates are entailed based on the contradictoriness diagnostic for entailment in (\ref{diag}b). Participants rated the contradictoriness of utterances of English sentences of the form {\em $\phi$ but not $\psi$}, where $\phi$ is an unembedded matrix sentence with a clause-embedding predicate and $\psi$ is its clausal complement, as in (\ref{announce3}):
 
 \begin{exe}
 \ex\label{announce3} Mary announced that she is pregnant, but she's not.
 \end{exe}
-Contextual factors may influence contradictoriness ratings: for instance, how contradictory an utterance of (\ref{announce3}) is assessed to be may depend on how old or how trustworthy Mary is (see, e.g., \citealt{schlenker10,demarneffe-etal2012}). To allow participants' ratings to reflect degrees of contradictoriness, we collected gradient contradictoriness ratings. We assume that when the content of $\phi$ entails the content of $\psi$, the contradictoriness of an utterance of the form {\em $\phi$ but not $\psi$} is not mitigated by contextual factors, and participants' contradictoriness ratings are at ceiling, that is, indistinguishable from contradictory control stimuli.
+Gradient contradictoriness ratings were collected.
 
 \subsubsection{Methods}
 
@@ -855,11 +838,10 @@ After responding to the 28 stimuli, participants filled out a short, optional su
 
 \paragraph{Data exclusion}
 
-Prior to analysis, the data from 19 participants who did not self-identify as native speakers of American English were excluded. For the remaining 281 participants, we inspected their responses to the 8 control stimuli: as expected, the group mean rating for the non-contradictory control stimuli in (\ref{control-good}) was at floor (.08)\footnote{The mean contradictoriness rating of the non-contradictory control stimulus that was of the same form as the target stimuli, namely (\ref{control-good}b) {\em Zack believes that I'm married, but I'm actually single}, was higher, at .17, than the mean ratings of the remaining three non-contradictory control stimuli (means: .05 or .06) and identical to that of the target stimuli with {\em think}.}  and the group mean rating for the contradictory control stimuli in (\ref{control-bad}) was at ceiling (.94). This finding shows that, overall, participants attended to and understood the task. Importantly, the at-ceiling mean rating for the control stimuli with indisputably entailed content shows that the diagnostic can detect entailed content. The mean ratings of 18 participants were more than 2 standard deviations above the group mean for the non-contradictory control stimuli or below the group mean for the contradictory control stimuli. Closer inspection revealed that these participants' responses to the control stimuli were systematically higher or lower, suggesting that they did not attend to the task or interpreted the task differently. The data from these 18 participants were also excluded. In this experiment, we did not identify any participants who always selected roughly the same point on the response scale. The results presented below are based on data from 263 participants (ages 18-72; median: 36; 126 female, 136 male, 1 other).
+Prior to analysis, the data from 19 participants who did not self-identify as native speakers of American English were excluded. For the remaining 281 participants, we inspected their responses to the 8 control stimuli: as expected, the group mean rating for the non-contradictory control stimuli in (\ref{control-good}) was at floor (.08)\footnote{The mean contradictoriness rating of the non-contradictory control stimulus that was of the same form as the target stimuli, namely (\ref{control-good}b) {\em Zack believes that I'm married, but I'm actually single}, was higher, at .17, than the mean ratings of the remaining three non-contradictory control stimuli (means: .05 or .06) and identical to that of the target stimuli with {\em think}.}  and the group mean rating for the contradictory control stimuli in (\ref{control-bad}) was at ceiling (.94). This finding shows that, overall, participants attended to and understood the task. The mean ratings of 18 participants were more than 2 standard deviations above the group mean for the non-contradictory control stimuli or below the group mean for the contradictory control stimuli. Closer inspection revealed that these participants' responses to the control stimuli were systematically higher or lower, suggesting that they did not attend to the task or interpreted the task differently. The data from these 18 participants were also excluded. In this experiment, we did not identify any participants who always selected roughly the same point on the response scale. The results presented below are based on data from 263 participants (ages 18-72; median: 36; 126 female, 136 male, 1 other).
 
 \subsubsection{Results}
 
-% ZOIB model: be_right is significantly less contradictory than contradictory controls
 
 Figure \ref{f-veridicality-predicate2} plots the mean contradictoriness ratings for the target and control stimuli. In line with impressionistic judgments reported in the literature, the mean inference ratings for the factive and veridical non-factive predicates are among the highest, and those of the non-factive predicates are among the lowest. However, except possibly for {\em be right}, none of the mean contradictoriness ratings are at ceiling.
 
@@ -893,14 +875,16 @@ Figure \ref{f-veridicality-predicate2} plots the mean contradictoriness ratings 
 
 \includegraphics[width=.7\paperwidth]{../../results/2-veridicality2/graphs/means-contradictoriness-by-predicate-variability}
 
-\caption{Mean contradictoriness rating by predicate in Exp.~3a, including the non-contradictory controls (`non-contrd.\ C') and the contradictory controls (`contradictory C'). Error bars indicate bootstrapped 95\% confidence intervals. Light gray dots indicate individual participants' ratings. \jd{add color/shape legend to plot}} %Factive predicates are given in purple, veridical non-factive ones in blue, optionally factive ones in orange and non-veridical non-factive ones in gray.}
+\caption{Mean contradictoriness rating by predicate in Exp.~3a, including the non-contradictory and contradictory controls. Error bars indicate bootstrapped 95\% confidence intervals. Light gray dots indicate individual participants' ratings.}
 \label{f-veridicality-predicate2}
 \end{figure}
 
 \jd{JD Describe models} In other words, none of the contradictoriness ratings for the CCs are statistically indistinguishable from those of the controls with indisputably entailed content, suggesting that the CCs of all 20 predicates are not entailed.
 
-\subsection{Experiment 3b: Categorical entailment ratings using contradictoriness diagnostic}
-\label{s32}
+Contextual factors may influence contradictoriness ratings: for instance, how contradictory an utterance of (\ref{announce3}) is assessed to be may depend on how old or how trustworthy Mary is (see, e.g., \citealt{schlenker10,demarneffe-etal2012}). To allow participants' ratings to reflect degrees of contradictoriness, we collected gradient contradictoriness ratings. We assume that when the content of $\phi$ entails the content of $\psi$, the contradictoriness of an utterance of the form {\em $\phi$ but not $\psi$} is not mitigated by contextual factors, and participants' contradictoriness ratings are at ceiling, that is, indistinguishable from contradictory control stimuli.
+
+
+\subsection{Exp.~3b: Categorical ratings using the contradictoriness diagnostic for entailment}\label{s32}
 
 \subsubsection{Methods}
 
@@ -924,7 +908,7 @@ Figure \ref{f-veridicality-predicate2} plots the mean contradictoriness ratings 
 
 Figure \ref{fig:3bresults} shows the proportion of `yes' ratings on target and control trials. The findings of Exp.~3b are again very similar to those of Exp.~3a, with a Spearman rank correlation of .985 (see Appendix \ref{a-binary} for a visualization).
 
-The critical findings of Exp.~3a were replicated.  \jd{JD insert model info here once issue of exclusions settled} 
+The critical findings of Exp.~3a were replicated.  \jd{JD insert model info} FINDING: all predicates different
 
 \begin{figure}
 \centering
@@ -962,9 +946,6 @@ One might also wonder whether a different entailment diagnostic might result in 
 %\label{f-binary}
 %\end{figure}
 
-To identify predicates whose CCs are entailed on Exps.~2$'$, we ideally want to compare the ratings for the CCs to those of the controls with indisputably entailed content, as in Exps.~2. However, in contrast to the CCs of the 20 predicates, to which participants gave `no' ratings (indicating no entailment), there are no `no' ratings for the relevant controls: on the inference diagnostic (panel a) none of the 341 participants whose data are plotted responded `no' to any of the four entailing control stimuli (1,364 data points) and, on the contradictoriness diagnostic (panel b), none of the 302 participants whose data are plotted responded `no' to any of the four contradictory control stimuli (1,208 data points). This lack of variability in the ratings of the relevant control stimuli means that we cannot use the control conditions as reference levels. {\bf Explain why}
-
-Because we were not able to use the controls with indisputably entailed content to identify entailed CCs, we made do by assuming that the CCs of the predicates that received the highest proportion of `yes' ratings are entailed and used those predicates as reference levels: this was {\em prove} with 340 out of 341 `yes' ratings on the inference diagnostic and {\em be right} with 291 out of 302 `yes' ratings on the contradictoriness diagnostic. {\bf Discuss models} In other words, on the inference diagnostic, the ratings for {\em be right, discover, know} and {\em see} are indistinguishable from those of {\em prove} and, on the contradictoriness diagnostic, the ratings for none of the predicates are indistinguishable from those of {\em be right}. Given the assumption that the CCs of {\em prove} and {\em be right} are entailed content, the findings of the inference diagnostic follow-up experiment suggest that the CCs of {\em be right, discover, know} and {\em see} are entailed. In sum, we have only found partial confirmation for the hypothesis that it was due to the gradient response scale of Exps.~2 that hardly any of the 20 clause-embedding predicates were found to have entailed CCs: the CCs of more clause-embedding predicates were classified as entailed by Exp.~2a$'$ than by Exp.~2a, but not by Exp.~3a$'$ compared to Exp.~3a (recall that the CC of {\em be right} is entailed merely by assumption).\footnote{To be able to compare the findings from the two experiments, we fit a model to the Exp.~2a data with {\em prove} as the reference level. {\bf Describe model} In other words, on that model the ratings for all predicates are lower than those of {\em prove}.} 
 
 This means that we still cannot conclude with any confidence that the CC of any of the 20 predicates we investigated is entailed. The CC of {\em prove} is entailed according to Exp.~2a, but not according to Exps.~3a or 3b. (We assumed that it was entailed in Exp.~2a$'$.) And although Exp.~2a$'$ suggested that the CCs of {\em be right, discover, know} and {\em see} are entailed, we have no reason to assume that Exp.~2a$'$ is better at diagnosing entailment than Exps.~2a, 3a and 3b, all of which provided evidence that the CCs of these predicates are not entailed. It is possible, for instance, that Exp.~2a$'$ resulted in more entailed CCs because participants chose `yes' even if they would have given an inference rating below ceiling on the gradient scale of Exp.~2a. It is also not clear that the inference diagnostic is more suitable to diagnosing entailment than the contradictoriness diagnostic: it is possible that even non-entailed content receives high inference ratings and that participants find it easier to identify non-entailed CCs when judging a potentially contradictory utterance. We therefore conclude that we do not have conclusive evidence that the CC of any of the 20 predicates we investigated is entailed.
 
@@ -974,13 +955,13 @@ This conclusion, we argue, is not due to the inference or the contradictoriness 
 \ex\label{wr-stim-ent} Somebody knew that a particular thing happened.
 \end{exe}
 
-Each of the 517 predicates in the MegaVeridicality dataset received between 9 and 20 entailment ratings (mean: 10) from 159 participants. To plot the ratings, we coded a `yes' response as 1, a `maybe or maybe not' response as 0 and a `no' response as -1. Figure \ref{f-white-rawlins-ent} plots the mean entailment ratings for the 517 predicates in the MegaVeridicality dataset, with x-axis labels for 19 of the 20 predicates that we investigated.\footnote{The x-axis labels for the following predicates overlap: {\em acknowledge/announce/admit/confess/demonstrate} and {\em inform/know}.} There are 97 clause-embedding predicates that only received `yes' ratings, including 3 of the factive predicates we investigated, namely {\em reveal, know} and {\em be annoyed}; this finding is compatible with the assumption that the CCs of these predicates are entailed. 
+Each of the 517 predicates in the MegaVeridicality dataset received between 9 and 20 entailment ratings (mean: 10) from 159 participants. To plot the ratings, we coded a `yes' response as 1, a `maybe or maybe not' response as 0 and a `no' response as -1. Figure \ref{f-white-rawlins-ent} plots the mean entailment ratings for the 517 predicates in the MegaVeridicality dataset, with x-axis labels for 19 of the 20 predicates that we investigated. There are 97 clause-embedding predicates that only received `yes' ratings, including 3 of the factive predicates we investigated, namely {\em reveal, know} and {\em be annoyed}; this finding is compatible with the assumption that the CCs of these predicates are entailed. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=.75\paperwidth]{../../MegaVeridicality-analysis/graphs/means-entailment-by-predicate}
 
-\caption{Mean entailment rating in blue, by predicate, with 95\% bootstrapped confidence intervals, for the 517 predicates in MegaVeridicality dataset. OUR LABELS}
+\caption{Mean veridicality rating by predicate in green, with 95\% bootstrapped confidence intervals, for the 517 predicates in the MegaVeridicality dataset (\citealt{white-rawlins-nels2018,white-etal2018b}), with labels for the 19 predicates featured in our experiments.}
 \label{f-white-rawlins-ent}
 \end{figure}
 

@@ -25,7 +25,7 @@ summary(cd)
 
 # recode control labels to be more readable
 cd = cd %>%
-  mutate(verb = fct_recode(verb,"non-contradictory"="non-contrd. C","contradictory"="contradictory C"))
+  mutate(verb = fct_recode(verb,"non-contrad."="non-contrd. C","contradictory"="contradictory C"))
 
 # proportion of projective answers by predicate, including the main clause controls
 prop = cd %>%
@@ -41,7 +41,7 @@ cols$VeridicalityGroup = as.factor(
   ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
                 ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
-                       ifelse(cols$V %in% c("contradictory", "non-contradictory"),"MC","V")))))
+                       ifelse(cols$V %in% c("contradictory", "non-contrad."),"MC","V")))))
 
 levels(cols$V)
 cols$V <- factor(cols$V, levels = cols[order(as.character(prop$verb)),]$V, ordered = TRUE)
@@ -58,7 +58,7 @@ prop$VeridicalityGroup = as.factor(
   ifelse(prop$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
          ifelse(prop$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
                 ifelse(prop$verb  %in% c("be_right","demonstrate"),"VNF",
-                       ifelse(prop$verb  %in% c("contradictory", "non-contradictory"),"MC","V")))))
+                       ifelse(prop$verb  %in% c("contradictory", "non-contrad."),"MC","V")))))
 
 prop = prop %>%
   mutate(VeridicalityGroup = fct_relevel(VeridicalityGroup, "MC","NF","VNF","V","F"))
