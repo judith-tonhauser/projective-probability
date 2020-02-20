@@ -1,22 +1,17 @@
 # Latex files
 # .pdf .aux .toc .bbl . blg .synctex.gz
+*.bbl
+*.blg
+*.log
+*.synctex.gz
+*.aux
+*.synctex.gz
+*.toc
 papers/prior-paper/prior.pdf
-papers/prior-paper/prior.synctex.gz
-papers/prior-paper/prior.log
-papers/prior-paper/prior.aux
-papers/prior-paper/prior.toc
-papers/prior-paper/prior.out
-papers/prior-paper/prior.bbl
-papers/prior-paper/prior.blg
-./papers/factives-paper/factives-paper.pdf
-./papers/factives-paper/factives-paper.synctex.gz
-./papers/factives-paper/factives-paper.log
-./papers/factives-paper/factives-paper.aux
-./papers/factives-paper/factives-paper.toc
-./papers/factives-paper/factives-paperout
-./papers/factives-paper/factives-paper.bbl
-./papers/factives-paper/factives-paper.blg
+papers/factives-paper/factives-paper.pdf
 
+# potentially large zoib model files
+*.rds
 
 # SALT 2018 submission
 /salt2018

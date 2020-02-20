@@ -53,47 +53,7 @@ summary(model) # does not converge
 
 ## Bayesian models ----
 
-run_model <- function(expr, path, reuse = TRUE) {
-  path <- paste0(path, ".Rds")
-  if (reuse) {
-    fit <- suppressWarnings(try(readRDS(path), silent = TRUE))
-  }
-  if (is(fit, "try-error")) {
-    fit <- eval(expr)
-    saveRDS(fit, file = path)
-  }
-  fit
-}
-
-fit <- run_model(brm(response ~ verb + (1|workerid) + (1|item), data=cd, family=gaussian()), path = "../models/predict-response-from-verb-no-slopes.Rds")
-tmp <- readRDS('../models/predict-response-from-verb-no-slopes.Rds.Rds')
-summary(tmp) #converged
-summary(fit)
-fit
-View(fit)
-
-fit <- run_model(brm(response ~ verb + (verb|workerid) + (1|item), data=cd, family=gaussian()), path = "../models/predict-response-from-verb-no-slopes")
-tmp <- readRDS('../models/predict-response-from-verb-with-slope.Rds')
-summary(tmp) #did not converge
-
-# with slope
-model.brms.inf.nb2 = brm(response ~ verb + (verb|workerid) + (1|item), data=cd, family=gaussian())
-summary(model.brms.inf.nb2)
-# warning in summary of model
-# not different: be_right, confirm, discover, prove, see
-
-
-# without slope
-model.bmrs.inf.nb = brm(response ~ verb + (1|workerid) + (1|item), data=cd, family=gaussian())
-summary(model.bmrs.inf.nb) 
-# not different: be_annoyed, be_right, confirm, discover, know, prove, see
-
-
-## JT: not sure that we need pairwise comparisons
-
 ## pairwise comparison to see which predicates differ from one another
-library(lsmeans)
-library(lme4)
 str(t$response)
 str(t$verb)
 str(t$workerid)
@@ -299,9 +259,6 @@ comparison
 
 ## pairwise comparison to see which predicates differ from one another
 ## including the entailing control stimuli
-
-library(lsmeans)
-library(lme4)
 
 str(te$response)
 str(te$verb)
@@ -687,40 +644,48 @@ ggsave("../graphs/by-item-mean-inference-by-mean-contradictoriness-predictions.p
 # TL;DR: XXX
 cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
 
-# Bayesian mixed effects regression to test whether ratings differ by predicate from entailing controls
-# entailing controls are called good_controls
+# Bayesian mixed effects regression to test whether ratings differ by predicate from good controls
 cd$workerid = as.factor(as.character(cd$workerid))
+cd$item = as.factor(paste(as.character(cd$verb),as.character(cd$content)))
+cd$content = as.factor(as.character(cd$content))
+cd$isEntailing = cd$verb == "entailing C"
+cd$isZeroOne = (cd$response == 0 | cd$response == 1)
 
 # plotting slider ratings suggests we should use a zoib model
 ggplot(cd, aes(x=response)) +
   geom_histogram()
 
-# exclude bad controls from analysis -- they're not relevant, right?
-# JT: right, for those, the relevant content is not entailed
-d = cd %>%
-  filter(verb != "control_bad") %>%
-  droplevels() %>%
-  mutate(verb = fct_relevel(verb,"control_good"))
+p = ggplot(cd, aes(x=response,fill=isEntailing)) +
+  geom_histogram() +
+  facet_wrap(~workerid)
+ggsave(p, file="../graphs/subject_variability.pdf",width=25,height=25)
 
-# JT commented the following code, to prevent accidential re-runs
-# zoib model
-# zoib_model <- bf(
-#   response ~ verb, # beta distribution???s mean
-#   phi ~ verb, # beta distribution???s precision
-#   zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
-#   coi ~ verb, # conditional one-inflation
-#   family = zero_one_inflated_beta()
-# )
-# 
-# # fit model
-# m <- brm(
-#   formula = zoib_model,
-#   data = d,
-#   cores = 4#,
-#   # file = here::here("zoib-ex")
-# )
-# # no need to run this multiple times:
-# saveRDS(m,file="../data/zoib-model.rds")
+# set reference level to entailing controls
+d = cd %>%
+  droplevels() %>%
+  mutate(verb = fct_relevel(verb,"entailing C"))
+table(d$verb)
+
+# # zoib model with random effects
+zoib_model <- bf(
+  response ~ verb + (1|workerid) + (1|item), # beta distribution's mean
+  zoi ~ verb + (1|workerid) + (1|item), # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
+  phi ~ verb + (1|workerid) + (1|item), # beta distribution's precision  
+  coi ~ verb + (1|workerid) + (1|item), # conditional one-inflation
+  family = zero_one_inflated_beta()
+) 
+
+# fit model
+m <- brm(
+  formula = zoib_model,
+  data = d,
+  cores = 4,
+  control = list(adapt_delta = .95)
+  # file = here::here("zoib-ex")
+)
+# no need to run this multiple times:
+saveRDS(m,file="../data/zoib-model-mixed.rds")
+
 
 # load ZOIB model ----
 m <- readRDS(file="../data/zoib-model.rds")
@@ -765,178 +730,54 @@ plot(
   point_args = list(width = .05, shape = 1)
 )
 
-# > summary(m)
-# Family: zero_one_inflated_beta 
-# Links: mu = logit; phi = log; zoi = logit; coi = logit 
-# Formula: response ~ verb 
-# phi ~ verb
-# zoi ~ verb
-# coi ~ verb
-# Data: d (Number of observations: 6216) 
-# Samples: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
-# total post-warmup samples = 4000
-# 
-# Population-Level Effects: 
-#   Estimate Est.Error l-95% CI u-95% CI Eff.Sample Rhat
-# Intercept                 2.67      0.04     2.59     2.75        796 1.00
-# phi_Intercept             2.66      0.06     2.54     2.77        697 1.00
-# zoi_Intercept            -0.53      0.06    -0.66    -0.40       1341 1.00
-# coi_Intercept            12.93      6.54     5.73    31.08        248 1.02
-# verbacknowledge          -0.93      0.10    -1.12    -0.74       2125 1.00
-# verbadmit                -0.94      0.10    -1.14    -0.74       2295 1.00
-# verbannounce             -1.54      0.10    -1.73    -1.35       2396 1.00
-# verbannoyed              -0.54      0.10    -0.73    -0.35       2020 1.00
-# verbbe_right_that        -0.29      0.10    -0.49    -0.09       2148 1.00
-# verbconfess              -0.97      0.10    -1.15    -0.78       2340 1.00
-# verbconfirm              -0.31      0.09    -0.49    -0.13       2167 1.00
-# verbdemonstrate          -1.23      0.09    -1.42    -1.06       1818 1.00
-# verbdiscover             -0.27      0.09    -0.45    -0.09       2035 1.00
-# verbestablish            -0.73      0.09    -0.91    -0.55       2236 1.00
-# verbhear                 -2.65      0.09    -2.82    -2.48       2435 1.00
-# verbinform_Sam           -1.42      0.10    -1.62    -1.23       2109 1.00
-# verbknow                 -0.59      0.10    -0.79    -0.41       2099 1.00
-# verbpretend              -3.87      0.11    -4.08    -3.67       2639 1.00
-# verbprove                 0.03      0.09    -0.15     0.20       1801 1.00
-# verbreveal               -0.80      0.09    -0.98    -0.61       2060 1.00
-# verbsay                  -2.08      0.09    -2.26    -1.90       1823 1.00
-# verbsee                  -0.25      0.09    -0.42    -0.07       2000 1.00
-# verbsuggest              -3.17      0.08    -3.34    -3.00       2024 1.00
-# verbthink                -3.23      0.09    -3.40    -3.06       1857 1.00
-# phi_verbacknowledge      -1.13      0.13    -1.38    -0.89       1668 1.00
-# phi_verbadmit            -1.27      0.13    -1.52    -1.03       1786 1.00
-# phi_verbannounce         -1.82      0.11    -2.03    -1.60       1566 1.00
-# phi_verbannoyed          -0.73      0.13    -0.99    -0.48       1969 1.00
-# phi_verbbe_right_that    -0.61      0.14    -0.89    -0.34       1998 1.00
-# phi_verbconfess          -1.23      0.12    -1.47    -1.00       1736 1.00
-# phi_verbconfirm          -0.47      0.13    -0.72    -0.22       1909 1.00
-# phi_verbdemonstrate      -1.43      0.12    -1.67    -1.21       1540 1.00
-# phi_verbdiscover         -0.30      0.13    -0.56    -0.05       1752 1.00
-# phi_verbestablish        -0.87      0.13    -1.13    -0.63       1796 1.00
-# phi_verbhear             -2.13      0.10    -2.31    -1.93       1308 1.00
-# phi_verbinform_Sam       -1.71      0.12    -1.94    -1.48       1566 1.00
-# phi_verbknow             -0.85      0.13    -1.10    -0.60       1633 1.00
-# phi_verbpretend          -2.12      0.12    -2.35    -1.89       1497 1.00
-# phi_verbprove             0.08      0.13    -0.19     0.34       1708 1.00
-# phi_verbreveal           -0.99      0.12    -1.23    -0.75       1680 1.00
-# phi_verbsay              -2.12      0.10    -2.32    -1.92       1238 1.00
-# phi_verbsee              -0.23      0.13    -0.51     0.02       2061 1.00
-# phi_verbsuggest          -1.95      0.10    -2.14    -1.76       1332 1.00
-# phi_verbthink            -1.89      0.10    -2.09    -1.70       1439 1.00
-# zoi_verbacknowledge      -0.39      0.16    -0.70    -0.09       3334 1.00
-# zoi_verbadmit            -0.43      0.16    -0.73    -0.12       3286 1.00
-# zoi_verbannounce         -0.98      0.17    -1.33    -0.66       3555 1.00
-# zoi_verbannoyed          -0.35      0.15    -0.66    -0.05       3928 1.00
-# zoi_verbbe_right_that    -0.19      0.15    -0.47     0.10       2747 1.00
-# zoi_verbconfess          -0.74      0.17    -1.08    -0.42       3880 1.00
-# zoi_verbconfirm          -0.39      0.15    -0.68    -0.09       3241 1.00
-# zoi_verbdemonstrate      -0.63      0.16    -0.94    -0.33       2976 1.00
-# zoi_verbdiscover         -0.22      0.15    -0.52     0.07       3246 1.00
-# zoi_verbestablish        -0.49      0.16    -0.80    -0.19       3034 1.00
-# zoi_verbhear             -1.52      0.20    -1.91    -1.12       3696 1.00
-# zoi_verbinform_Sam       -0.70      0.16    -1.00    -0.39       3321 1.00
-# zoi_verbknow             -0.35      0.15    -0.64    -0.07       2691 1.00
-# zoi_verbpretend          -0.22      0.14    -0.51     0.05       3033 1.00
-# zoi_verbprove            -0.10      0.15    -0.40     0.18       3282 1.00
-# zoi_verbreveal           -0.49      0.16    -0.79    -0.20       3350 1.00
-# zoi_verbsay              -1.18      0.18    -1.53    -0.82       4665 1.00
-# zoi_verbsee              -0.12      0.15    -0.41     0.17       3361 1.00
-# zoi_verbsuggest          -1.56      0.21    -1.97    -1.15       4505 1.00
-# zoi_verbthink            -1.37      0.20    -1.78    -0.99       4246 1.00
-# coi_verbacknowledge      17.38     27.51   -15.67    89.09        848 1.00
-# coi_verbadmit            -8.18      6.67   -26.01    -0.08        256 1.01
-# coi_verbannounce        -10.08      6.56   -28.13    -2.50        251 1.01
-# coi_verbannoyed          -8.08      6.69   -26.20     0.03        259 1.01
-# coi_verbbe_right_that    15.82     24.52   -15.35    76.18        883 1.01
-# coi_verbconfess          15.52     24.72   -15.90    78.74        952 1.00
-# coi_verbconfirm          16.65     24.54   -15.11    80.19       1104 1.01
-# coi_verbdemonstrate      -9.81      6.58   -27.83    -2.37        249 1.01
-# coi_verbdiscover         16.23     26.45   -15.88    84.07        952 1.01
-# coi_verbestablish        -9.20      6.60   -27.28    -1.70        251 1.01
-# coi_verbhear            -12.80      6.55   -30.79    -5.47        248 1.01
-# coi_verbinform_Sam       -9.88      6.58   -28.14    -2.44        250 1.02
-# coi_verbknow             16.65     26.08   -15.38    86.08        884 1.00
-# coi_verbpretend         -16.91      6.59   -34.95    -9.33        248 1.02
-# coi_verbprove            -7.97      6.67   -25.84     0.01        257 1.01
-# coi_verbreveal           -8.24      6.64   -26.78    -0.24        254 1.01
-# coi_verbsay             -11.50      6.56   -29.44    -4.11        249 1.01
-# coi_verbsee              16.14     24.34   -16.02    79.83        864 1.00
-# coi_verbsuggest         -14.62      6.56   -32.72    -7.29        251 1.02
-# coi_verbthink           -15.45      6.57   -33.48    -7.97        248 1.02
+# undrestand subject variability in zero/one inflation:
+length(unique(cd$workerid)) #259 subjects total
+zeroone = cd %>%
+  group_by(workerid,isZeroOne) %>%
+  summarise(n = n()) %>%
+  mutate(freq = n / sum(n)) %>%
+  ungroup() %>%
+  arrange(workerid,isZeroOne) %>%
+  filter(isZeroOne == T) 
+nrow(zeroone) #191 with at least one 0/1, ie, 259-191 = 68 people never gave an endpoint judgment. hacky way of adding these people back in for plotting:
+nozoi = data.frame(workerid=as.factor(seq(500,567,by=1)),isZeroOne=rep(TRUE,68),n = rep(0,68), freq = rep(0,68))
+zeroone = zeroone %>%
+  bind_rows(nozoi) %>%
+  mutate(workerid = fct_reorder(workerid,freq))
 
-# JT CODE STARTS HERE ----
-# I re-ran the ZOIB model with "prove" as the reference level, for better comparison with the
-# binary version of the experiment
-cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
+mean(zeroone$freq)
+median(zeroone$freq)
+# plot prop end point judgments by worker
+ggplot(zeroone, aes(x=workerid,y=freq)) +
+  geom_point()
 
-# Bayesian mixed effects regression to test whether ratings differ by predicate from entailing controls
-# entailing controls are called good_controls
-cd$workerid = as.factor(as.character(cd$workerid))
 
-# plotting slider ratings suggests we should use a zoib model
-ggplot(cd, aes(x=response)) +
-  geom_histogram()
+# fit linear model to compare to zoib model -- same qualitative result (except pretend's lower bound is nnow inluded in 95% credible interval)
+summary(d %>% select(response,verb,workerid,item))
+str(d %>% select(response,verb,workerid,item))
 
-# exclude bad controls from analysis -- they're not relevant, right?
-# JT: right, for those, the relevant content is not entailed
-d = cd %>%
-  filter(verb != "control_bad") %>%
-  droplevels() %>%
-  mutate(verb = fct_relevel(verb,"prove"))
-
-# zoib model
-zoib_model <- bf(
-  response ~ verb, # beta distribution???s mean
-  phi ~ verb, # beta distribution???s precision
-  zoi ~ verb, # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
-  coi ~ verb, # conditional one-inflation
-  family = zero_one_inflated_beta()
-)
-
-# fit model
 m <- brm(
-  formula = zoib_model,
+  formula = response ~ verb + (1|workerid) + (1|item),
   data = d,
-  cores = 4#,
+  cores = 4,
+  control = list(adapt_delta = .95)
   # file = here::here("zoib-ex")
 )
-# no need to run this multiple times:
-saveRDS(m,file="../data/zoib-model-prove.rds")
-
-# load ZOIB model ----
-m <- readRDS(file="../data/zoib-model-prove.rds")
-
+# predicates that don't come out different from entailing controls:
+# see, prove, know, discover, confirm, be right
 summary(m) # see summary printed below
 
-# transform each of the posterior samples, and then re-calculate the summaries on original scale
-posterior_samples(m, pars = "b_")[,1:4] %>% 
-  mutate_at(c("b_phi_Intercept"), exp) %>% 
-  mutate_at(vars(-"b_phi_Intercept"), plogis) %>% 
-  posterior_summary() %>% 
-  as.data.frame() %>% 
-  rownames_to_column("Parameter") %>% 
-  kable(digits = 2) 
+# no need to run this multiple times:
+#saveRDS(m,file="../data/linear-model-mixed.rds")
 
-# |Parameter       | Estimate| Est.Error|  Q2.5| Q97.5|
-#   |:---------------|--------:|---------:|-----:|-----:|
-#   |b_Intercept     |     0.94|      0.00|  0.93|  0.94|
-#   |b_phi_Intercept |    14.30|      0.87| 12.63| 16.03|
-#   |b_zoi_Intercept |     0.37|      0.02|  0.34|  0.40|
-#   |b_coi_Intercept |     1.00|      0.00|  1.00|  1.00|
+# load linear model ----
+m <- readRDS(file="../data/linear-model-mixed.rds")
 
-# The .94 and 14.3 values are the mean and precision of the beta distribution that characterizes the bad controls that are not zeroes and ones -- this is a distribution heavily skewed towards 1
-# The .37 value is the probability that an observation will be either 0 or 1, and of these 37% endpoint values, 100% (last value) are ones. So: as expected, the bad controls are heavily 1-skewed, see also this histogram:
-ggplot(d[d$verb=="prove",], aes(x=response)) +
-  geom_histogram()
 
-# we can now ask for each verb whether it differs from prove:
-h <- c("be_right_that - prove" = "plogis(Intercept + verbbe_right_that) = plogis(Intercept)")
-hypothesis(m, h) # be right is different from prove
-h <- c("see - prove" = "plogis(Intercept + verbsee) = plogis(Intercept)")
-hypothesis(m, h) # see is different from prove
 
-# plot estimated mu parameter
-plot(
-  marginal_effects(m, dpar = "mu"), 
-  points = TRUE, 
-  point_args = list(width = .05, shape = 1)
-)
+# let's look at pretend in particular
+q = c(q_pretend_MC_mean = "Intercept + verbpretend = Intercept")
+q_answer = hypothesis(m, q)
+q_answer
+plot(q_answer)
+prop.table(table(q_answer$samples$H1 > 0)) # prob (pretend > MC) = .97
