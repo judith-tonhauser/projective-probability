@@ -33,6 +33,7 @@ means = cd %>%
   select(verb,Mean,YMin,YMax)
 means = as.data.frame(means)
 names(means)
+means
 
 write.csv(means, file="../data/inference_means.csv",row.names=F,quote=F)
 

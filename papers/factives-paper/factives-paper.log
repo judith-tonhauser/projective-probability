@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 FEB 2020 09:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 FEB 2020 10:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1342,162 +1342,149 @@ Package pdftex.def Info: ../../results/4-veridicality3/graphs/means-inference-b
 y-predicate-variability.pdf used on input line 717.
 (pdftex.def)             Requested size: 430.00462pt x 276.43901pt.
  [19 <../../results/4-veridicality3/graphs/means-inference-by-predicate-variabi
-lity.pdf>] <figures/Exp2b-trial.pdf, id=969, 521.8167pt x 173.15862pt>
+lity.pdf>] <figures/Exp2b-trial.pdf, id=973, 521.8167pt x 173.15862pt>
 File: figures/Exp2b-trial.pdf Graphic file (type pdf)
 
 <use figures/Exp2b-trial.pdf>
-Package pdftex.def Info: figures/Exp2b-trial.pdf used on input line 741.
+Package pdftex.def Info: figures/Exp2b-trial.pdf used on input line 767.
 (pdftex.def)             Requested size: 284.52756pt x 94.4158pt.
-
+ [20 <./figures/Exp2b-trial.pdf>]
 <../../results/7-veridicality3-binary/graphs/proportion-by-predicate-variabilit
-y-individual.pdf, id=972, 505.89pt x 325.215pt>
+y-individual.pdf, id=995, 505.89pt x 325.215pt>
 File: ../../results/7-veridicality3-binary/graphs/proportion-by-predicate-varia
 bility-individual.pdf Graphic file (type pdf)
 
 <use ../../results/7-veridicality3-binary/graphs/proportion-by-predicate-variab
 ility-individual.pdf>
 Package pdftex.def Info: ../../results/7-veridicality3-binary/graphs/proportion
--by-predicate-variability-individual.pdf used on input line 758.
+-by-predicate-variability-individual.pdf used on input line 784.
 (pdftex.def)             Requested size: 430.00462pt x 276.43901pt.
- [20 <./figures/Exp2b-trial.pdf>] [21 <../../results/7-veridicality3-binary/gra
-phs/proportion-by-predicate-variability-individual.pdf>]
-<figures/contradictory-trial.pdf, id=1018, 685.60236pt x 301.75826pt>
+ [21 <../../results/7-veridicality3-binary/graphs/proportion-by-predicate-varia
+bility-individual.pdf>] [22]
+<figures/contradictory-trial.pdf, id=1036, 685.60236pt x 301.75826pt>
 File: figures/contradictory-trial.pdf Graphic file (type pdf)
 
 <use figures/contradictory-trial.pdf>
-Package pdftex.def Info: figures/contradictory-trial.pdf used on input line 821
+Package pdftex.def Info: figures/contradictory-trial.pdf used on input line 850
 .
 (pdftex.def)             Requested size: 369.88582pt x 162.79968pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[22]
+ [23 <./figures/contradictory-trial.pdf, page is rotated 90 degrees>]
 <../../results/2-veridicality2/graphs/means-contradictoriness-by-predicate-vari
-ability.pdf, id=1050, 505.89pt x 325.215pt>
+ability.pdf, id=1073, 505.89pt x 325.215pt>
 File: ../../results/2-veridicality2/graphs/means-contradictoriness-by-predicate
 -variability.pdf Graphic file (type pdf)
 
 <use ../../results/2-veridicality2/graphs/means-contradictoriness-by-predicate-
 variability.pdf>
 Package pdftex.def Info: ../../results/2-veridicality2/graphs/means-contradicto
-riness-by-predicate-variability.pdf used on input line 876.
+riness-by-predicate-variability.pdf used on input line 905.
 (pdftex.def)             Requested size: 430.00462pt x 276.43901pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[23 <./figures/contradictory-trial.pdf, page is rotated 90 degrees>]
-<figures/Exp3b-trial.pdf, id=1076, 625.6182pt x 214.14264pt>
+ [24 <../../results/2-veridicality2/graphs/means-contradictoriness-by-predicate
+-variability.pdf>]
+<figures/Exp3b-trial.pdf, id=1097, 625.6182pt x 214.14264pt>
 File: figures/Exp3b-trial.pdf Graphic file (type pdf)
 
 <use figures/Exp3b-trial.pdf>
-Package pdftex.def Info: figures/Exp3b-trial.pdf used on input line 897.
+Package pdftex.def Info: figures/Exp3b-trial.pdf used on input line 926.
 (pdftex.def)             Requested size: 284.52756pt x 97.39256pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[24 <../../results/2-veridicality2/graphs/means-contradictoriness-by-predicate-
-variability.pdf>]
 <../../results/6-veridicality2-binary/graphs/proportion-by-predicate-variabilit
-y-individual.pdf, id=1098, 505.89pt x 325.215pt>
+y-individual.pdf, id=1100, 505.89pt x 325.215pt>
 File: ../../results/6-veridicality2-binary/graphs/proportion-by-predicate-varia
 bility-individual.pdf Graphic file (type pdf)
 
 <use ../../results/6-veridicality2-binary/graphs/proportion-by-predicate-variab
 ility-individual.pdf>
 Package pdftex.def Info: ../../results/6-veridicality2-binary/graphs/proportion
--by-predicate-variability-individual.pdf used on input line 915.
+-by-predicate-variability-individual.pdf used on input line 944.
 (pdftex.def)             Requested size: 430.00462pt x 276.43901pt.
  [25 <./figures/Exp3b-trial.pdf, page is rotated 90 degrees>] [26 <../../result
 s/6-veridicality2-binary/graphs/proportion-by-predicate-variability-individual.
 pdf>]
-
-LaTeX Warning: Reference `f-binary' on page 27 undefined on input line 928.
-
-[27]
 <../../MegaVeridicality-analysis/graphs/means-entailment-by-predicate.pdf, id=1
-144, 650.43pt x 289.08pt>
+142, 650.43pt x 289.08pt>
 File: ../../MegaVeridicality-analysis/graphs/means-entailment-by-predicate.pdf 
 Graphic file (type pdf)
 
 <use ../../MegaVeridicality-analysis/graphs/means-entailment-by-predicate.pdf>
 Package pdftex.def Info: ../../MegaVeridicality-analysis/graphs/means-entailmen
-t-by-predicate.pdf used on input line 962.
+t-by-predicate.pdf used on input line 967.
 (pdftex.def)             Requested size: 460.72124pt x 204.77184pt.
 
-[28 <../../MegaVeridicality-analysis/graphs/means-entailment-by-predicate.pdf>]
-[29] [30] [31]
+[27] [28 <../../MegaVeridicality-analysis/graphs/means-entailment-by-predicate.
+pdf>] [29] [30] [31]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1077.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1077.
+(hyperref)                removing `math shift' on input line 1082.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1077.
+(hyperref)                removing `math shift' on input line 1082.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1077.
+(hyperref)                removing `math shift' on input line 1082.
 
 
-LaTeX Warning: Reference `f-binary' on page 32 undefined on input line 1085.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1082.
+
+
+LaTeX Warning: Reference `f-binary' on page 32 undefined on input line 1090.
 
 
 <../../results/compare-binary-nonbinary/graphs/joint-comparison-plot.pdf, id=12
-68, 650.43pt x 289.08pt>
+73, 650.43pt x 289.08pt>
 File: ../../results/compare-binary-nonbinary/graphs/joint-comparison-plot.pdf G
 raphic file (type pdf)
 
 <use ../../results/compare-binary-nonbinary/graphs/joint-comparison-plot.pdf>
 Package pdftex.def Info: ../../results/compare-binary-nonbinary/graphs/joint-co
-mparison-plot.pdf used on input line 1091.
+mparison-plot.pdf used on input line 1096.
 (pdftex.def)             Requested size: 460.72124pt x 204.77184pt.
 
-[32]
-Overfull \hbox (17.44942pt too wide) in paragraph at lines 1105--1106
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (17.44942pt too wide) in paragraph at lines 1110--1111
 \OT1/txr/m/n/10.95 Formula: []\OT1/txtt/m/n/6 model.brms.proj.b = brm(nResponse
  ~ verb + (1/workerid) + (1/item), data=cd, family=bernoulli(), cores = 4, cont
 rol=list(max_treedepth = 15)) 
  []
 
 
-Overfull \hbox (67.84932pt too wide) in paragraph at lines 1165--1166
+Overfull \hbox (67.84932pt too wide) in paragraph at lines 1170--1171
 \OT1/txr/m/n/10.95 Formula: []\OT1/txtt/m/n/6 model.brms.proj.b = brm(nResponse
  ~ verb + (1/workerid) + (1/item), data=cd, family=bernoulli(), cores = 4, cont
 rol=list(max_treedepth = 15,adapt_delta=.95)) 
  []
 
 
-LaTeX Warning: Float too large for page by 11.96954pt on input line 1223.
+LaTeX Warning: Float too large for page by 11.96954pt on input line 1228.
 
-
-Overfull \hbox (67.84932pt too wide) in paragraph at lines 1227--1228
+[32] [33]
+Overfull \hbox (67.84932pt too wide) in paragraph at lines 1232--1233
 \OT1/txr/m/n/10.95 Formula: []\OT1/txtt/m/n/6 model.brms.proj.b = brm(nResponse
  ~ verb + (1/workerid) + (1/item), data=cd, family=bernoulli(), cores = 4, cont
 rol=list(max_treedepth = 15,adapt_delta=.95)) 
  []
 
 
-LaTeX Warning: Float too large for page by 11.96954pt on input line 1286.
+LaTeX Warning: Float too large for page by 11.96954pt on input line 1291.
 
-(./factives-paper.bbl [33 <../../results/compare-binary-nonbinary/graphs/joint-
-comparison-plot.pdf>] [34] [35] [36] [37]
+(./factives-paper.bbl [34 <../../results/compare-binary-nonbinary/graphs/joint-
+comparison-plot.pdf>] [35] [36] [37]
 Missing character: There is no Ð in font txr!
  [38]) [39]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1295.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1295.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1300.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1300.
  (./factives-paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1295.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1295.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1300.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1300.
 
 Package rerunfilecheck Info: File `factives-paper.out' has not changed.
-(rerunfilecheck)             Checksum: 6EAFB420F4F3632BAEAA0B902CAC4AA7;2933.
+(rerunfilecheck)             Checksum: E4615E17D8DC5B954AFE8ECEC0DF6FC8;2948.
 
 
 LaTeX Warning: There were undefined references.
@@ -1505,20 +1492,20 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1295.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1300.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 779 ({)
+### simple group (level 1) entered at line 808 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  25004 strings out of 493014
  430285 string characters out of 6133351
- 557518 words of memory out of 5000000
+ 555518 words of memory out of 5000000
  27641 multiletter control sequences out of 15000+600000
  61073 words of font info for 155 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 55i,11n,77p,3246b,640s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,77p,3246b,656s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/
 local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/t
@@ -1530,10 +1517,10 @@ s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/ur
 w/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on factives-paper.pdf (39 pages, 2601120 bytes).
+Output written on factives-paper.pdf (39 pages, 2601857 bytes).
 PDF statistics:
- 1448 PDF objects out of 1728 (max. 8388607)
- 1332 compressed objects within 14 object streams
+ 1453 PDF objects out of 1728 (max. 8388607)
+ 1337 compressed objects within 14 object streams
  337 named destinations out of 1000 (max. 500000)
  381 words of extra memory for PDF output out of 10000 (max. 10000000)
 
