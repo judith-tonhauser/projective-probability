@@ -235,7 +235,8 @@ Kastner, Itamar. 2015.
 \bibitem[Kiparsky and Kiparsky(1970)]{kiparsky-kiparsky70}
 Kiparsky, Paul and Carol Kiparsky. 1970.
 \newblock Fact.
-\newblock {\em Progress in Linguistics\/} pages 143--173.
+\newblock In M.~Bierwisch and K.~Heidolph, eds., {\em Progress in
+  Linguistics\/}, pages 143--173. The Hague: Mouton.
 
 \bibitem[Klein(1975)]{klein1975}
 Klein, Ewan. 1975.
@@ -253,12 +254,6 @@ Lasersohn, Peter. 2009.
 \newblock Relative truth, speaker commitment, and control of implicit
   arguments.
 \newblock {\em Synthese\/} 166:359--374.
-
-\bibitem[Liu and Kong(2015)]{liu2015}
-Liu, Fang and Yunchuan Kong. 2015.
-\newblock Zoib: an r package for bayesian inference for beta regression and
-  zero/one inflated beta regression.
-\newblock {\em The R Journal\/} 7(2):34--51.
 
 \bibitem[Mahler(2019)]{mahler-nels}
 Mahler, Taylor. 2019.
@@ -299,6 +294,14 @@ Romoli, Jacopo. 2015.
 Rooryck, Johan. 2000.
 \newblock {\em Configurations of sentential complementation\/}.
 \newblock London: Routledge.
+
+\bibitem[Ross and Pavlick(2019)]{ross-pavlick2019}
+Ross, Alexis and Ellie Pavlick. 2019.
+\newblock How well do nli models capture verb veridicality?
+\newblock In {\em Proceedings of the 2019 Conference on Empirical Methods in
+  Natural Language Processing and the 9th International Joint Conference on
+  Natural Language Processing\/}, pages 2230--2240. Association for
+  Computational Linguistic.
 
 \bibitem[Schlenker(2003{\natexlab{a}})]{schlenker2003}
 Schlenker, Phillipe. 2003{\natexlab{a}}.

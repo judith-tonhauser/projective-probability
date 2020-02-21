@@ -538,7 +538,7 @@ The critical findings of Exp.~1a were replicated. First, the CCs of the factive 
 
 \subsection{Converging evidence for failure of projection-based definition of factive predicates}
 
-The findings of our Exps.~1a and 1b suggest that the definition of factive predicates in (\ref{def}a), according to which a predicate is factive if and only if its CC is presupposed, fails to identify a class of factive predicates. Converging evidence comes from two additional datasets: the CommitmentBank (\citealt*{demarneffe-etal-sub23}) and the MegaVeridicality dataset (\citealt{white-rawlins-nels2018,white-etal2018b}).\footnote{We re-plotted the data, obtained at \url{https://github.com/mcdm/CommitmentBank} and \url{http://megaattitude.io}, respectively. For the analysis files, see the aforementioned GitHub repository.}
+The findings of our Exps.~1a and 1b suggest that the definition of factive predicates in (\ref{def}a), according to which a predicate is factive if and only if its CC is presupposed, fails to identify a class of factive predicates. Converging evidence comes from three additional datasets: the CommitmentBank (\citealt*{demarneffe-etal-sub23}), the MegaVeridicality dataset (\citealt{white-rawlins-nels2018,white-etal2018b}) and the VerbVeridicality dataset (\citealt{ross-pavlick2019}).\footnote{We re-plotted the data, obtained at \url{https://github.com/mcdm/CommitmentBank}, \url{http://megaattitude.io} and \url{https://github.com/alexisjihyeross/verb_veridicality}, respectively. For the analysis files, see the aforementioned GitHub repository.}
 
 The CommitmentBank is a collection of 1,200 naturally occurring English discourses from the Wall Street Journal, the British National Corpus and the Switchboard corpus: each discourse consists of a target sentence with a clause-embedding predicate embedded an entailment-canceling operator and up to two preceding context sentences, as illustrated in (\ref{cb}), with {\em know} in the target sentence embedded under negation:
 
@@ -575,7 +575,28 @@ Each of the 517 predicates in the MegaVeridicality dataset received between 29 a
 \label{f-white-rawlins-projectivity}
 \end{figure}
 
-In sum, contrary to what is expected under the definition of factive predicates in (\ref{def}a), the findings of our Exps.~1a and 1b as well as those of the CommitmentBank and the MegaVeridicality datasets suggest that projection of the CC does not categorically distinguish factive predicates from optionally factive and non-factive ones. The challenge to the definition in (\ref{def}a) is compounded by the diversity of the empirical evidence: the evidence comes from constructed and naturally occurring examples, from examples presented in a minimal context to ones presented in context, from examples with diverse and minimal lexical content, and from projection ratings collected through different response tasks. We therefore conclude that the definition of factive predicates in (\ref{def}a), according to which a predicate is factive if and only if the content of the complement is presupposed, fails to identify a class of factive predicates. 
+A third piece of converging evidence comes from the VerbVeridicality dataset, which contains projection ratings for the CCs of \jt{xx} English clause-embedding predicates. \jt{stimuli, response task, response options, coding}
+
+\begin{exe}
+\ex\label{vv-stim-proj}
+\begin{xlist}
+\ex xxx
+\end{xlist}
+\end{exe}
+
+Each of the \jt{xx} predicates in the VerbVeridicality dataset received 3 judgments. Figure \ref{f-vv-projectivity} plots the mean projectivity ratings for the 517 predicates in the MegaVeridicality dataset, with labels for the 19 predicates from our experiments that are included in the MegaVeridicality dataset ({\em be right} is not included). As shown, projection of the CC does not categorically distinguish factive predicates from optionally factive and non-factive ones: for instance, the CCs of the optionally factive predicates {\em confess, acknowledge, admit, announce, hear} and {\em inform} are at least as projective as those of some factive predicates. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.77\paperwidth]{../../VerbVeridicality-analysis/graphs/means-projection-by-predicate}
+
+\caption{Mean projectivity rating by predicate in green, with 95\% bootstrapped confidence intervals, for the \jt{xx} predicates in the VerbVeridicality dataset (\citealt{ross-pavlick2019}), with labels for the \jt{} predicates featured in our experiments.}
+\label{f-vv-projectivity}
+\end{figure}
+
+
+
+In sum, contrary to what is expected under the definition of factive predicates in (\ref{def}a), the findings of our Exps.~1a and 1b as well as those of the CommitmentBank, the MegaVeridicality and the VerbVeridicality datasets suggest that projection of the CC does not categorically distinguish factive predicates from optionally factive and non-factive ones. The challenge to the definition in (\ref{def}a) is compounded by the diversity of the empirical evidence: the evidence comes from constructed and naturally occurring examples, from examples presented in a minimal context to ones presented in context, from examples with diverse and minimal lexical content, from clause-embedding predicates embedded under a variety of entailment-canceling operators, and from projection ratings collected through different response tasks. We therefore conclude that the definition of factive predicates in (\ref{def}a), according to which a predicate is factive if and only if the content of the complement is presupposed, fails to identify a class of factive predicates. 
 
 The experiments described in the next section were designed to explore whether the definition of factive predicates in (\ref{def}b), according to which entailment and projectivity jointly categorize clause-embedding predicates, is empirically supported. To this end, we collected entailment judgments for CCs of the same 20 predicates studied in Exps.~1.
 
@@ -1298,12 +1319,8 @@ b\_verbthink        & $-9.81^{*}$         \\
 \end{center}
 \end{table}
 
-
-%\bibliographystyle{/Users/tonhauser.1/Library/Latex/cslipubs-natbib}
-%\bibliography{/Users/tonhauser.1/Documents/bibliography}
-
 \bibliographystyle{../cslipubs-natbib}
-\bibliography{../bibliography}
+\bibliography{../../bibliography}
 
 \end{document}
 

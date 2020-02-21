@@ -2,45 +2,47 @@ This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: factives-paper.aux
 The style file: ../cslipubs-natbib.bst
-Database file #1: ../bibliography.bib
+Database file #1: ../../bibliography.bib
+Warning--I didn't find a database entry for "liu2015"
 You've used 73 entries,
             2811 wiz_defined-function locations,
-            1041 strings with 15417 characters,
-and the built_in function-call counts, 35766 in all, are:
-= -- 3428
-> -- 1436
-< -- 91
-+ -- 499
-- -- 401
-* -- 2601
-:= -- 6181
-add.period$ -- 312
+            1044 strings with 15633 characters,
+and the built_in function-call counts, 36063 in all, are:
+= -- 3451
+> -- 1444
+< -- 92
++ -- 501
+- -- 403
+* -- 2617
+:= -- 6203
+add.period$ -- 314
 call.type$ -- 73
-change.case$ -- 540
+change.case$ -- 544
 chr.to.int$ -- 70
 cite$ -- 73
-duplicate$ -- 1664
-empty$ -- 2836
-format.name$ -- 512
-if$ -- 7561
+duplicate$ -- 1683
+empty$ -- 2879
+format.name$ -- 514
+if$ -- 7649
 int.to.chr$ -- 4
 int.to.str$ -- 1
 missing$ -- 79
 newline$ -- 370
-num.names$ -- 320
-pop$ -- 518
+num.names$ -- 322
+pop$ -- 528
 preamble$ -- 2
 purify$ -- 416
 quote$ -- 0
-skip$ -- 1298
+skip$ -- 1318
 stack$ -- 0
-substring$ -- 2130
-swap$ -- 408
-text.length$ -- 30
+substring$ -- 2147
+swap$ -- 420
+text.length$ -- 31
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 630
 warning$ -- 0
-while$ -- 321
+while$ -- 322
 width$ -- 0
-write$ -- 961
+write$ -- 963
+(There was 1 warning)
