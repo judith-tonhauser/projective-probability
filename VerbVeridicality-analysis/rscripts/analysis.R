@@ -80,6 +80,10 @@ length(our_preds) #16 (15 of our preds + "saw)
 table(d$task)
 d <- droplevels(subset(d, d$task == "that"))
 
+names(d)
+length(unique(d$verb)) #78 verbs
+length(unique(d$index)) #859 total items: each has sentence and its negated variant
+
 # plot veridicality ratings ----
 str(d$pos_rating)
 d$pos_rating <- as.numeric(d$pos_rating)
@@ -93,6 +97,14 @@ v_means = d %>%
 options(tibble.print_max = Inf)
 v_means
 levels(v_means$verb) # verbs sorted by veridicality mean (...)
+
+# predicates with mean ratings of 2 (indicating consistent 3 'definitely true' judgments), i.e., entailed CCs
+v_means[v_means$Mean == 2,]$index #0
+
+v_means[v_means$Mean > 1.6,]$verb
+# confirm explain give learn   notice reveal  saw
+table(v_means[v_means$Mean > 1.6,]$verb,v_means[v_means$Mean > 1.6,]$Mean) # these 7 preds have means between 1.6 and 1.7
+
 
 # create data subsets for our predicates
 v_meansOUR <- droplevels(subset(v_means,v_means$verb %in% our_preds))
@@ -152,7 +164,7 @@ ggplot(v_means, aes(x=verb, y=Mean)) +
         axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
   scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
                      labels = c("non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive")) +
-  #scale_y_continuous(limits = c(-.7,1),breaks = c(.8,-.6,-.4,-.2,0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_y_continuous(limits = c(-1,2),breaks = c(-1,0,1,2)) +
   #scale_alpha(range = c(.3,1)) +
   labs(color="Predicate type") +
   theme(legend.position="bottom") + 
@@ -229,7 +241,7 @@ ggplot(p_means, aes(x=verb, y=Mean)) +
         axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
   scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
                      labels = c("non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive")) +
-  #scale_y_continuous(limits = c(-.7,1),breaks = c(.8,-.6,-.4,-.2,0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_y_continuous(limits = c(-1.3,2),breaks = c(-1,0,1,2)) +
   #scale_alpha(range = c(.3,1)) +
   labs(color="Predicate type") +
   theme(legend.position="bottom") + 

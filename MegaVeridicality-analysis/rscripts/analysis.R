@@ -184,7 +184,7 @@ ggplot(p_means, aes(x=verb, y=Mean)) +
         axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
   scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
                      labels = c("non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive")) +
-  #scale_y_continuous(limits = c(-.7,1),breaks = c(.8,-.6,-.4,-.2,0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_y_continuous(limits = c(-1.1,1.1),breaks = c(-1,0,1)) +
   #scale_alpha(range = c(.3,1)) +
   labs(color="Predicate type") +
   theme(legend.position="bottom") + 
@@ -275,7 +275,7 @@ ggplot(p_means, aes(x=verb, y=Mean)) +
         axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
   scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
                      labels = c("non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive")) +
-  #scale_y_continuous(limits = c(-.7,1),breaks = c(.8,-.6,-.4,-.2,0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_y_continuous(limits = c(-.7,1.1),breaks = c(-.5,0,1)) +
   #scale_alpha(range = c(.3,1)) +
   labs(color="Predicate type") +
   theme(legend.position="bottom") + 

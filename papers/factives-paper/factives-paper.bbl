@@ -1,5 +1,5 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{73}
+\begin{thebibliography}{74}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abbott(2006)]{abbott06}
@@ -419,6 +419,14 @@ White, Aaron~Steven, Rachel Rudinger, Kyle Rawlins, and Benjamin Van~Durme.
 \newblock In {\em Proceedings of the 2018 Conference on Empirical Methods in
   Natural Language Processing\/}, pages 4717--4724. Brussels, Belgium:
   Association for Computational Linguistics.
+
+\bibitem[Williams et~al.(2018)Williams, Nangia, and Bowman]{williams-etal2018}
+Williams, Adina, Nikita Nangia, and Samuel Bowman. 2018.
+\newblock A broad-coverage challenge corpus for sentence understanding through
+  inference.
+\newblock In {\em Proceedings of the 2018 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies\/}, pages 1112--1122. Association for Computational Linguistic.
 
 \bibitem[Wyse(2010)]{wyse}
 Wyse, Brendan. 2010.
