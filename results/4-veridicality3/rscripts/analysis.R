@@ -679,7 +679,7 @@ betamodel = bf(betaresponse ~ verb + (1|workerid) + (1|item),
                phi ~ verb + (1|workerid) + (1|item), # beta distribution's precision  )
                family = Beta())
 
-m.b = brm(betaresponse ~ verb + (1|workerid) + (1|item),
+m.b = brm(formula = betamodel,
         family=Beta(),
         data=d, 
         cores = 4,
