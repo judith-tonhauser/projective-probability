@@ -17,6 +17,7 @@ library(tidybayes)
 library(dichromat)
 library(brms)
 library(knitr)
+library(extraDistr)
 theme_set(theme_bw())
 
 # load clean data  ----
@@ -652,7 +653,7 @@ cd$isEntailing = cd$verb == "entailing C"
 cd$isZeroOne = (cd$response == 0 | cd$response == 1)
 
 # plotting slider ratings suggests we should use a zoib model
-ggplot(cd, aes(x=response)) +
+ggplot(cd, aes(x=response,fill=isEntailing)) +
   geom_histogram()
 
 p = ggplot(cd, aes(x=response,fill=isEntailing)) +
@@ -666,93 +667,196 @@ d = cd %>%
   mutate(verb = fct_relevel(verb,"entailing C"))
 table(d$verb)
 
+# run beta regression instead of zoib
+
+# first, because response assumes values of 0 and 1, which beta regression cannot handle, transform: (Smithson & Verkuilen 2006)
+# y' = (y · (n − 1) + 0.5)/n
+d$betaresponse = (d$response*(nrow(d)-1) + .5)/nrow(d)
+
+prior = get_prior(betaresponse ~ verb + (1|workerid) + (1|item),family = Beta(),data=d)
+
+betamodel = bf(betaresponse ~ verb + (1|workerid) + (1|item),
+               phi ~ verb + (1|workerid) + (1|item), # beta distribution's precision  )
+               family = Beta())
+
+m.b = brm(betaresponse ~ verb + (1|workerid) + (1|item),
+        family=Beta(),
+        data=d, 
+        cores = 4,
+        control = list(adapt_delta = .95,max_treedepth=15))
+
+summary(m.b)
+
+# intercept (entailing control) values
+plogis(3)
+exp(2.24)
+
+# "prove" values
+plogis(3 - .08)
+exp(2.24 - .13)
+
+# "confirm" values
+plogis(3 - .22)
+exp(2.24)
+
+# "hear" values
+plogis(3 - 2.92)
+exp(2.24 - 2.05)
+
+# "announce" values
+plogis(3 - 1.51)
+exp(2.24 - 1.35)
+
+# "suggest" values
+plogis(3 - 3.47)
+exp(2.24 - 1.90)
+
+# "pretend" values
+plogis(3 - 4.47)
+exp(2.24 - 2.13)
+
+# visualize some of the inferred beta distributions
+betadist = data.frame(x=rep(seq(0,1,by=.01),7),y=c(dprop(x=seq(0,1,by=.01),9.39,.953),dprop(x=seq(0,1,by=.01),8.25,.949),dprop(x=seq(0,1,by=.01),9.39,.941),dprop(x=seq(0,1,by=.01),1.21,.52),dprop(x=seq(0,1,by=.01),2.44,.816),dprop(x=seq(0,1,by=.01),1.4,.385),dprop(x=seq(0,1,by=.01),1.12,.187)),verb=c(rep("entailing",101),rep("prove",101),rep("confirm",101),rep("hear",101),rep("announce",101),rep("suggest",101), rep("pretend",101)))
+
+ggplot(betadist, aes(x=x,y=y,color=verb)) +
+  geom_line()
+
+saveRDS(m.b,file="../data/beta-model-mixed.rds")
+
+# to load model
+m.b = readRDS(file="../data/beta-model-mixed.rds")
+
+# to get stan code
+stancode(m.b)
+
+# hypothesis-testing, probing posterior model
+h <- c("entailing - know" = "plogis(Intercept - verbknow) = plogis(Intercept)")
+hypothesis(m.b, h) 
+
+# hypothesis-testing, probing posterior model
+q = c(q_entailing_know = "plogis(Intercept - verbknow) = plogis(Intercept)")
+q_answer = hypothesis(m.b, q)
+q_answer
+plot(q_answer)
+prop.table(table(q_answer$samples$H1 > 0)) # prob (know < entailing) = 1
+
+
+# THE FOLLOWING MODEL SIMPLY WILL NOT CONVERGE, CAN IGNORE ALL COMMENTED OUT CODE, BUT LEAVING IN FOR THE TIME BEING
 # # zoib model with random effects
-zoib_model <- bf(
-  response ~ verb + (1|workerid) + (1|item), # beta distribution's mean
-  zoi ~ verb + (1|workerid) + (1|item), # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
-  phi ~ verb + (1|workerid) + (1|item), # beta distribution's precision  
-  coi ~ verb + (1|workerid) + (1|item), # conditional one-inflation
-  family = zero_one_inflated_beta()
-) 
+# zoib_model <- bf(
+#   response ~ verb + (1|workerid) + (1|item), # beta distribution's mean
+#   zoi ~ verb + (1|workerid) + (1|item), # zero-one inflation (alpha); ie, probability of a binary rating as a function of verb
+#   phi ~ verb + (1|workerid) + (1|item), # beta distribution's precision  
+#   coi ~ verb + (1|workerid) + (1|item), # conditional one-inflation
+#   family = zero_one_inflated_beta()
+# ) 
+# 
+# # inspect default priors
+# prior = get_prior(response ~ verb + (1|workerid) + (1|item),family = zero_one_inflated_beta(),data=d)
+# 
+# # default priors:
+# # Intercept: student_t(3, 0, 10)                              
+# # phi: gamma(0.01, 0.01)         
+# # zoi: beta(1, 1)       
+# # coi: beta(1, 1)                                          
+# # sd: student_t(3, 0, 10)         
+# 
+# # fit model
+# m <- brm(
+#   formula = zoib_model,
+#   prior = c(
+#     set_prior("normal(0, 10)", class = "b")#,
+#     # set_prior("normal(0, 10)", class = "b_phi")# continue here
+#   ),
+#   data = d,
+#   cores = 4,
+#   control = list(adapt_delta = .95,max_treedepth=15)#,
+#   # sample_prior="only"
+#   # file = here::here("zoib-ex")
+# )
+# # no need to run this multiple times:
+# saveRDS(m,file="../data/zoib-model-mixed.rds")
+# 
+# 
+# # load ZOIB model ----
+# m <- readRDS(file="../data/zoib-model-mixed.rds")
+# 
+# summary(m) # see summary printed below
+# stancode(m)
+# plot(m)
+# 
+# # transform each of the posterior samples, and then re-calculate the summaries on original scale
+# posterior_samples(m, pars = "b_")[,1:4] %>% 
+#   mutate_at(c("b_phi_Intercept"), exp) %>% 
+#   mutate_at(vars(-"b_phi_Intercept"), plogis) %>% 
+#   posterior_summary() %>% 
+#   as.data.frame() %>% 
+#   rownames_to_column("Parameter") %>% 
+#   kable(digits = 2) 
+# 
+# 
+# # mean, zoi, and coi parameters are modeled through a logit link function; phi is modeled through a log link function
+# # zoi & coi & b_intercept: [-15,15]
+# # 
+# 
+# # |Parameter       | Estimate| Est.Error|  Q2.5| Q97.5|
+# #   |:---------------|--------:|---------:|-----:|-----:|
+# #   |b_Intercept     |     0.94|      0.00|  0.93|  0.94|
+# #   |b_phi_Intercept |    14.30|      0.87| 12.63| 16.03|
+# #   |b_zoi_Intercept |     0.37|      0.02|  0.34|  0.40|
+# #   |b_coi_Intercept |     1.00|      0.00|  1.00|  1.00|
+# 
+# # Intercept                2.76      0.07       2.65      2.90
+# # phi_Intercept            3.19      0.10       2.99      3.38
+# # zoi_Intercept           -1.16      0.25      -1.61     -0.67
+# # coi_Intercept         5757.12   2203.45    2822.64  11254.22
+# 
+# 
+# # The .94 and 14.3 values are the mean and precision of the beta distribution that characterizes the bad controls that are not zeroes and ones -- this is a distribution heavily skewed towards 1
+# # The .37 value is the probability that an observation will be either 0 or 1, and of these 37% endpoint values, 100% (last value) are ones. So: as expected, the bad controls are heavily 1-skewed, see also this histogram:
+# ggplot(d[d$verb=="control_good",], aes(x=response)) +
+#   geom_histogram()
+# 
+# # in principle, we can ask for each verb whether it differs from the bad controls, as follows:
+# h <- c("prove - control_good" = "plogis(Intercept + verbprove) = plogis(Intercept)")
+# hypothesis(m, h) # no diff for "prove"
+# h <- c("be_right_that - control_good" = "plogis(Intercept + verbbe_right_that) = plogis(Intercept)")
+# hypothesis(m, h) # diff for "be right"
+# h <- c("see - control_good" = "plogis(Intercept + verbsee) = plogis(Intercept)")
+# hypothesis(m, h) # diff for "see"
+# h <- c("acknowledge - control_good" = "plogis(Intercept + verbacknowledge) = plogis(Intercept)")
+# hypothesis(m, h) # diff for "acknowledge"
+# 
+# # plot estimated mu parameter
+# plot(
+#   marginal_effects(m, dpar = "mu"), 
+#   points = TRUE, 
+#   point_args = list(width = .05, shape = 1)
+# )
+# 
+# # undrestand subject variability in zero/one inflation:
+# length(unique(cd$workerid)) #259 subjects total
+# zeroone = cd %>%
+#   group_by(workerid,isZeroOne) %>%
+#   summarise(n = n()) %>%
+#   mutate(freq = n / sum(n)) %>%
+#   ungroup() %>%
+#   arrange(workerid,isZeroOne) %>%
+#   filter(isZeroOne == T) 
+# nrow(zeroone) #191 with at least one 0/1, ie, 259-191 = 68 people never gave an endpoint judgment. hacky way of adding these people back in for plotting:
+# nozoi = data.frame(workerid=as.factor(seq(500,567,by=1)),isZeroOne=rep(TRUE,68),n = rep(0,68), freq = rep(0,68))
+# zeroone = zeroone %>%
+#   bind_rows(nozoi) %>%
+#   mutate(workerid = fct_reorder(workerid,freq))
+# 
+# mean(zeroone$freq)
+# median(zeroone$freq)
+# # plot prop end point judgments by worker
+# ggplot(zeroone, aes(x=workerid,y=freq)) +
+#   geom_point()
+# 
 
-# fit model
-m <- brm(
-  formula = zoib_model,
-  data = d,
-  cores = 4,
-  control = list(adapt_delta = .95)
-  # file = here::here("zoib-ex")
-)
-# no need to run this multiple times:
-saveRDS(m,file="../data/zoib-model-mixed.rds")
-
-
-# load ZOIB model ----
-m <- readRDS(file="../data/zoib-model.rds")
-
-summary(m) # see summary printed below
-
-# transform each of the posterior samples, and then re-calculate the summaries on original scale
-posterior_samples(m, pars = "b_")[,1:4] %>% 
-  mutate_at(c("b_phi_Intercept"), exp) %>% 
-  mutate_at(vars(-"b_phi_Intercept"), plogis) %>% 
-  posterior_summary() %>% 
-  as.data.frame() %>% 
-  rownames_to_column("Parameter") %>% 
-  kable(digits = 2) 
-
-# |Parameter       | Estimate| Est.Error|  Q2.5| Q97.5|
-#   |:---------------|--------:|---------:|-----:|-----:|
-#   |b_Intercept     |     0.94|      0.00|  0.93|  0.94|
-#   |b_phi_Intercept |    14.30|      0.87| 12.63| 16.03|
-#   |b_zoi_Intercept |     0.37|      0.02|  0.34|  0.40|
-#   |b_coi_Intercept |     1.00|      0.00|  1.00|  1.00|
-
-# The .94 and 14.3 values are the mean and precision of the beta distribution that characterizes the bad controls that are not zeroes and ones -- this is a distribution heavily skewed towards 1
-# The .37 value is the probability that an observation will be either 0 or 1, and of these 37% endpoint values, 100% (last value) are ones. So: as expected, the bad controls are heavily 1-skewed, see also this histogram:
-ggplot(d[d$verb=="control_good",], aes(x=response)) +
-  geom_histogram()
-
-# in principle, we can ask for each verb whether it differs from the bad controls, as follows:
-h <- c("prove - control_good" = "plogis(Intercept + verbprove) = plogis(Intercept)")
-hypothesis(m, h) # no diff for "prove"
-h <- c("be_right_that - control_good" = "plogis(Intercept + verbbe_right_that) = plogis(Intercept)")
-hypothesis(m, h) # diff for "be right"
-h <- c("see - control_good" = "plogis(Intercept + verbsee) = plogis(Intercept)")
-hypothesis(m, h) # diff for "see"
-h <- c("acknowledge - control_good" = "plogis(Intercept + verbacknowledge) = plogis(Intercept)")
-hypothesis(m, h) # diff for "acknowledge"
-
-# plot estimated mu parameter
-plot(
-  marginal_effects(m, dpar = "mu"), 
-  points = TRUE, 
-  point_args = list(width = .05, shape = 1)
-)
-
-# undrestand subject variability in zero/one inflation:
-length(unique(cd$workerid)) #259 subjects total
-zeroone = cd %>%
-  group_by(workerid,isZeroOne) %>%
-  summarise(n = n()) %>%
-  mutate(freq = n / sum(n)) %>%
-  ungroup() %>%
-  arrange(workerid,isZeroOne) %>%
-  filter(isZeroOne == T) 
-nrow(zeroone) #191 with at least one 0/1, ie, 259-191 = 68 people never gave an endpoint judgment. hacky way of adding these people back in for plotting:
-nozoi = data.frame(workerid=as.factor(seq(500,567,by=1)),isZeroOne=rep(TRUE,68),n = rep(0,68), freq = rep(0,68))
-zeroone = zeroone %>%
-  bind_rows(nozoi) %>%
-  mutate(workerid = fct_reorder(workerid,freq))
-
-mean(zeroone$freq)
-median(zeroone$freq)
-# plot prop end point judgments by worker
-ggplot(zeroone, aes(x=workerid,y=freq)) +
-  geom_point()
-
-
-# fit linear model to compare to zoib model -- same qualitative result (except pretend's lower bound is nnow inluded in 95% credible interval)
+# fit linear model to compare to zoib/beta model -- same qualitative result (except for "know", which it also thinks is not different from entailing control)
 summary(d %>% select(response,verb,workerid,item))
 str(d %>% select(response,verb,workerid,item))
 
