@@ -195,7 +195,7 @@ ggsave("../graphs/means-entailment-by-predicate.pdf",height=4,width=9)
 
 # plot projection ratings  ----
 
-# load data ----
+# load data
 mv1 = read.csv("../data/mv1.csv")
 nrow(mv1) #21692
 
@@ -283,40 +283,177 @@ ggplot(p_means, aes(x=verb, y=Mean)) +
   xlab("Predicate") 
 ggsave("../graphs/means-projection-by-predicate.pdf",height=4,width=9)
 
+# which predicates are veridical or factive according to definition (10b)? ----
+
+# load data
+mv1 = read.csv("../data/mv1.csv")
+nrow(mv1) #21692
+
+# entailment ratings
+# predicates with only "yes" ratings have entailed CCs
+
+mv1_ent <- droplevels(subset(mv1, mv1$polarity == "positive" & mv1$conditional2 == "matrix"))
+head(mv1_ent)
+
+t <- table(mv1_ent$verb,mv1_ent$veridicality)
+t <- as.data.frame.matrix(t) 
+t <- t %>% 
+  rownames_to_column(var = "verb")
+t$total <- t$maybe + t$no + t$yes
+head(t)
+
+ent <- droplevels(subset(t,t$yes == t$total))
+head(ent)
+names(ent)
+nrow(ent) #97 predicates only have "yes" ratings
+
+# projection ratings for these 97 predicates
+
+mv1_proj <- droplevels(subset(mv1, mv1$polarity == "negative" | mv1$conditional2 == "conditional"))
+
+proj <- droplevels(subset(mv1_proj, mv1_proj$verb %in% ent$verb))
+length(unique(proj$verb)) #97
+
+# look at projectivity ratings for these 97 veridical predicates
+
+p_means = proj %>%
+  group_by(verb) %>%
+  summarize(Mean = mean(veridicality_num), CILow = ci.low(veridicality_num), CIHigh = ci.high(veridicality_num)) %>%
+  mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, verb = fct_reorder(as.factor(verb),Mean))
+options(tibble.print_max = Inf)
+p_means
+levels(p_means$verb) # verbs sorted by projectivity mean (pretend...be_annoyed...resent)
+
+str(p_means$verb)
+p_means$verb <- as.character(p_means$verb)
+
+mean(p_means$Mean) #0.6538571
+min(p_means$Mean) #0.1333333
+max(p_means$Mean) #0.9666667
+sd(p_means$Mean) #0.1995803
+
+View(p_means)
+
+ggplot(p_means, aes(x=verb, y=Mean)) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
+  geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
+  #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
+  #geom_text_repel(data=p_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.5) +
+  theme(panel.background = element_blank(), plot.background = element_blank(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
+  #scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
+                     #labels = c("non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive")) +
+  scale_y_continuous(limits = c(-.7,1.1),breaks = c(-.5,0,1)) +
+  #scale_alpha(range = c(.3,1)) +
+  labs(color="Predicate type") +
+  theme(legend.position="bottom") + 
+  ylab("Mean projectivity rating") +
+  xlab("Predicate") 
+#ggsave("../graphs/means-projection-by-predicate.pdf",height=4,width=9)
+
+
+
 # which predicates are veridical or factive according to their linking function? ----
 # their linking function: majority rule
+
+# load data
+mv1 = read.csv("../data/mv1.csv")
+nrow(mv1) #21692
 
 # entailment ratings
 mv1_ent <- droplevels(subset(mv1, mv1$polarity == "positive" & mv1$conditional2 == "matrix"))
 
 t <- table(mv1_ent$verb,mv1_ent$veridicality)
 t <- as.data.frame.matrix(t) 
-head(t)
-str(t$no)
+t <- t %>% 
+  rownames_to_column(var = "verb")
 t$total <- t$maybe + t$no + t$yes
 head(t)
-t$not.yes <- t$maybe + t$no
-t$veridical <- ifelse(t$yes > t$not.yes,TRUE,FALSE)
-t$prop.yes <- t$yes/t$total
-View(t)
-str(t$prop.yes)
-length(t$prop.yes == 1)
 
+# Taking the majority response boundaries as a guide, the vast majority of verb-frame pairs 
+# are nonveridical (115 verbs), non-factive veridical (177 verbs), or factive (199 verbs), 
+# with far fewer being antiveridical in either positive or negative frames.
+
+# majority response: majority "yes" means "veridical"?
+t$veridical <- ifelse(t$yes > t$maybe & t$yes > t$no,"yes","no")
+head(t)
+table(t$veridical)
+#no yes 
+#157 360
+
+# or stricter: majority response means more "yes" than "maybe" and "no" combined?
+t$not.yes <- t$maybe + t$no
+t$veridical_s <- ifelse(t$yes > t$not.yes,"yes","no")
+table(t$veridical_s)
+#no yes 
+#168 349
 
 # projection ratings ratings
 mv1_proj <- droplevels(subset(mv1, mv1$polarity == "negative" | mv1$conditional2 == "conditional"))
 
-t <- table(mv1_proj$verb,mv1_proj$veridicality)
-t <- as.data.frame.matrix(t) 
-head(t)
-str(t$no)
-t$total <- t$maybe + t$no + t$yes
-head(t)
-t$not.yes <- t$maybe + t$no
-t$veridical <- ifelse(t$yes > t$not.yes,TRUE,FALSE)
-t$prop.yes <- t$yes/t$total
-View(t)
+t2 <- table(mv1_proj$verb,mv1_proj$veridicality)
+t2 <- as.data.frame.matrix(t2) 
+t2 <- t2 %>% 
+  rownames_to_column(var = "verb")
+t2$total <- t2$maybe + t2$no + t2$yes
+head(t2)
 
+# majority response: majority "yes" means "veridical"?
+t2$projective <- ifelse(t2$yes > t2$maybe & t2$yes > t2$no,"yes","no")
+head(t2)
+table(t2$projective)
+#no yes 
+#299 218
+
+# or stricter: majority response means more "yes" than "maybe" and "no" combined?
+t2$not.yes <- t2$maybe + t2$no
+t2$projective_s <- ifelse(t2$yes > t2$not.yes,"yes","no")
+table(t2$projective_s)
+#no yes 
+#317 200
+
+# combine the two dataframes
+head(t)
+head(t2)
+
+t = t %>%
+  select(verb,veridical,veridical_s)
+t2 = t2 %>%
+  select(verb,projective,projective_s)
+
+d = t %>% 
+  left_join(t2)
+
+head(d)
+
+# Taking the majority response boundaries as a guide, the vast majority of verb-frame pairs 
+# are nonveridical (115 verbs), non-factive veridical (177 verbs), or factive (199 verbs), 
+# with far fewer being antiveridical in either positive or negative frames.
+
+
+# which predicates are veridical non-factive and which are factive?
+# can't figure out how they got their numbers...
+
+d$vnf <- ifelse(d$veridical == "yes" & d$projective == "no","yes","no")
+table(d$vnf)
+#no yes 
+#368 149
+
+d$vnf_s <- ifelse(d$veridical_s == "yes" & d$projective_s == "no","yes","no")
+table(d$vnf_s)
+#no yes 
+#360 157
+
+d$factive <- ifelse(d$veridical == "yes" & d$projective == "yes","yes","no")
+table(d$factive)
+#no yes 
+#306 211
+
+d$factive_s <- ifelse(d$veridical_s == "yes" & d$projective_s == "yes","yes","no")
+table(d$factive_s)
+#no yes 
+#325 192
 
 ## comparison between our ratings and MegaVeridicality ratings ----
 

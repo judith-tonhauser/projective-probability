@@ -105,6 +105,9 @@ v_means[v_means$Mean > 1.6,]$verb
 # confirm explain give learn   notice reveal  saw
 table(v_means[v_means$Mean > 1.6,]$verb,v_means[v_means$Mean > 1.6,]$Mean) # these 7 preds have means between 1.6 and 1.7
 
+d[d$verb == "give",]$sentence
+d[d$verb == "explain",]$sentence
+
 
 # create data subsets for our predicates
 v_meansOUR <- droplevels(subset(v_means,v_means$verb %in% our_preds))
