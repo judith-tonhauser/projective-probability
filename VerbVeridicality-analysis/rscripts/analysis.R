@@ -101,9 +101,15 @@ levels(v_means$verb) # verbs sorted by veridicality mean (...)
 # predicates with mean ratings of 2 (indicating consistent 3 'definitely true' judgments), i.e., entailed CCs
 v_means[v_means$Mean == 2,]$index #0
 
-v_means[v_means$Mean > 1.6,]$verb
-# confirm explain give learn   notice reveal  saw
-table(v_means[v_means$Mean > 1.6,]$verb,v_means[v_means$Mean > 1.6,]$Mean) # these 7 preds have means between 1.6 and 1.7
+# at least two raters said 2, one only said 1
+v_means[v_means$Mean > 1.66,]$verb
+# explain give notice
+table(v_means[v_means$Mean > 1.66,]$verb,v_means[v_means$Mean > 1.66,]$Mean) 
+# these 3 preds have means between 1.66 and 1.7
+
+# at least one rater said 2, the other two only 1
+v_means[v_means$Mean > 1.33,]$verb
+# 25 predicates, including "announce", "mention", "add", "note" (not obviously veridical)
 
 d[d$verb == "give",]$sentence
 d[d$verb == "explain",]$sentence
