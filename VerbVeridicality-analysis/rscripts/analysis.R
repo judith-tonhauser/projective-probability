@@ -114,6 +114,34 @@ v_means[v_means$Mean > 1.33,]$verb
 d[d$verb == "give",]$sentence
 d[d$verb == "explain",]$sentence
 
+# at least as high as "know", i.e., 1.5
+v_means[v_means$Mean >= 1.5,]$verb
+#15 predicates 
+# [1] admit       confirm     demonstrate
+# [4] explain     give        know       
+# [7] learn       note        notice     
+# [10] prove       provide     realize    
+# [13] remember    reveal      saw
+
+# heterogeneous projection ratings of these predicates:
+# verb           Mean  CILow CIHigh    YMin    YMax
+# <fct>         <dbl>  <dbl>  <dbl>   <dbl>   <dbl>
+#   1 acknowledge  0.455  0.172  0.162   0.283   0.616 
+# 3 admit        0.292  0.167  0.188   0.125   0.479 
+# 18 confirm     -0.121  0.132  0.141  -0.253   0.0202
+# 24 demonstrate -0.667  0.122  0.122  -0.789  -0.544 
+# 31 explain      0.9    0.222  0.2     0.678   1.1   
+# 36 give         1.14   0.222  0.190   0.921   1.33  
+# 43 know         0.781  0.108  0.0973  0.673   0.879 
+# 44 learn        0.364  0.162  0.162   0.202   0.525 
+# 47 note         0      0.234  0.233  -0.234   0.233 
+# 48 notice       1.06   0.148  0.148   0.907   1.20  
+# 52 prove       -0.267  0.167  0.178  -0.433  -0.0889
+# 53 provide     -0.2    0.245  0.233  -0.445   0.0333
+# 54 realize      1.05   0.0948 0.105   0.954   1.15  
+# 57 remember     0.784  0.124  0.131   0.660   0.915 
+# 62 reveal      -0.194  0.222  0.222  -0.417   0.0278
+# 63 saw          0.424  0.212  0.242   0.212   0.667 
 
 # create data subsets for our predicates
 v_meansOUR <- droplevels(subset(v_means,v_means$verb %in% our_preds))

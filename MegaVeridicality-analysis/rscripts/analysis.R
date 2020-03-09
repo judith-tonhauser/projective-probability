@@ -332,6 +332,10 @@ min(p_means$Mean) #0.1333333
 max(p_means$Mean) #0.9666667
 sd(p_means$Mean) #0.1995803
 
+# projection rating of at least .3
+p_means[p_means$Mean >= .3,]$verb #92
+
+
 View(p_means)
 
 ggplot(p_means, aes(x=verb, y=Mean)) +
