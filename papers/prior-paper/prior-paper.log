@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  11 FEB 2020 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  16 MAR 2020 11:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1074,14 +1074,20 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip67
 \backup@length=\skip68
 )
-(./prior-paper.aux)
+(./prior-paper.aux
+
+LaTeX Warning: Label `s3' multiply defined.
+
+
+LaTeX Warning: Label `stim' multiply defined.
+
+)
 \openout1 = `prior-paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 96.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 96.
 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 96.
@@ -1235,99 +1241,107 @@ Package xypdf Info: Line width: 0.61319pt on input line 96.
  [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<figures/trial-exp1.pdf, id=176, 614.295pt x 292.05594pt>
+<figures/trial-exp1.pdf, id=177, 614.295pt x 292.05594pt>
 File: figures/trial-exp1.pdf Graphic file (type pdf)
 
 <use figures/trial-exp1.pdf>
-Package pdftex.def Info: figures/trial-exp1.pdf used on input line 230.
+Package pdftex.def Info: figures/trial-exp1.pdf used on input line 207.
 (pdftex.def)             Requested size: 284.52756pt x 135.27429pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3]
-<../../results/5-projectivity-no-fact/graphs/means-projectivity-by-predicate-va
-riability.pdf, id=197, 505.89pt x 289.08pt>
-File: ../../results/5-projectivity-no-fact/graphs/means-projectivity-by-predica
-te-variability.pdf Graphic file (type pdf)
+<../../results/1-prior/graphs/meanprobratings.pdf, id=196, 325.215pt x 201.7537
+5pt>
+File: ../../results/1-prior/graphs/meanprobratings.pdf Graphic file (type pdf)
+ <use ../../results/1-prior/graphs/meanprobratings.pdf>
+Package pdftex.def Info: ../../results/1-prior/graphs/meanprobratings.pdf used 
+on input line 222.
+(pdftex.def)             Requested size: 196.57889pt x 121.95518pt.
 
-<use ../../results/5-projectivity-no-fact/graphs/means-projectivity-by-predicat
-e-variability.pdf>
-Package pdftex.def Info: ../../results/5-projectivity-no-fact/graphs/means-proj
-ectivity-by-predicate-variability.pdf used on input line 247.
-(pdftex.def)             Requested size: 430.00462pt x 245.72356pt.
- [4 <./figures/trial-exp1.pdf>] [5 <../../results/5-projectivity-no-fact/graphs
-/means-projectivity-by-predicate-variability.pdf>]
+<../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-factty
+pe.pdf, id=208, 433.62pt x 289.08pt>
+File: ../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-f
+acttype.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `a-binary' on page 6 undefined on input line 283.
-
-
-LaTeX Warning: Reference `a-binary' on page 6 undefined on input line 283.
+<use ../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-fa
+cttype.pdf>
+Package pdftex.def Info: ../../results/3-projectivity/graphs/means-projectivity
+-by-predicate-and-facttype.pdf used on input line 241.
+(pdftex.def)             Requested size: 276.43086pt x 184.29597pt.
 
 
-<../../results/8-projectivity-no-fact-binary/graphs/proportion-by-predicate-var
-iability.pdf, id=246, 505.89pt x 289.08pt>
-File: ../../results/8-projectivity-no-fact-binary/graphs/proportion-by-predicat
-e-variability.pdf Graphic file (type pdf)
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<use ../../results/8-projectivity-no-fact-binary/graphs/proportion-by-predicate
--variability.pdf>
-Package pdftex.def Info: ../../results/8-projectivity-no-fact-binary/graphs/pro
-portion-by-predicate-variability.pdf used on input line 288.
-(pdftex.def)             Requested size: 430.00462pt x 245.72356pt.
- [6]
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 293
+[4 <./figures/trial-exp1.pdf> <../../results/1-prior/graphs/meanprobratings.pdf
+>]
+
+Package natbib Warning: Citation `heim83' on page 5 undefined on input line 255
 .
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/ot1txtt.fd
-File: ot1txtt.fd 2000/12/15 v3.1
-) [7 <../../results/8-projectivity-no-fact-binary/graphs/proportion-by-predicat
-e-variability.pdf>]
-<../../white-rawlins-data/graphs/means-projection-by-predicate.pdf, id=299, 505
-.89pt x 289.08pt>
-File: ../../white-rawlins-data/graphs/means-projection-by-predicate.pdf Graphic
- file (type pdf)
 
-<use ../../white-rawlins-data/graphs/means-projection-by-predicate.pdf>
-Package pdftex.def Info: ../../white-rawlins-data/graphs/means-projection-by-pr
-edicate.pdf used on input line 309.
-(pdftex.def)             Requested size: 460.72124pt x 263.27493pt.
+Package natbib Warning: Citation `vds92' on page 5 undefined on input line 255.
 
-[8 <../../white-rawlins-data/graphs/means-projection-by-predicate.pdf>]
-(./prior-paper.bbl [9]) [10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 371.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 371.
+
+
+Package natbib Warning: Citation `abrusan2011' on page 5 undefined on input lin
+e 255.
+
+
+Package natbib Warning: Citation `brst-salt10' on page 5 undefined on input lin
+e 255.
+
+
+Package natbib Warning: Citation `brst-ar' on page 5 undefined on input line 25
+5.
+
+
+Package natbib Warning: Citation `heim83' on page 5 undefined on input line 255
+.
+
+
+Package natbib Warning: Citation `heim83' on page 5 undefined on input line 255
+.
+
+[5 <../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-fac
+ttype.pdf>] [6] (./prior-paper.bbl [7])
+
+Package natbib Warning: There were undefined citations.
+
+[8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 337.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 337.
  (./prior-paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 371.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 371.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 337.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 337.
 Package rerunfilecheck Info: File `prior-paper.out' has not changed.
-(rerunfilecheck)             Checksum: DFC2EC35546E6ADD0F5C0AADB6C43351;527.
+(rerunfilecheck)             Checksum: D9CFD25EB009F0C64E7BFFCF77061730;687.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 371.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 337.
  ) 
 Here is how much of TeX's memory you used:
- 24408 strings out of 493014
- 418741 string characters out of 6133351
- 539877 words of memory out of 5000000
- 27303 multiletter control sequences out of 15000+600000
- 48284 words of font info for 119 fonts, out of 8000000 for 9000
+ 24371 strings out of 493014
+ 417666 string characters out of 6133351
+ 539026 words of memory out of 5000000
+ 27277 multiletter control sequences out of 15000+600000
+ 46069 words of font info for 115 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  55i,8n,77p,3243b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/public/txfonts/txtt.pfb></usr/local/texlive/2016/texmf-dist/fonts
-/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utm
-ri8a.pfb>
-Output written on prior-paper.pdf (10 pages, 572600 bytes).
+2016/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on prior-paper.pdf (8 pages, 119388 bytes).
 PDF statistics:
- 391 PDF objects out of 1000 (max. 8388607)
- 358 compressed objects within 4 object streams
- 104 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 363 PDF objects out of 1000 (max. 8388607)
+ 335 compressed objects within 4 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 132 words of extra memory for PDF output out of 10000 (max. 10000000)
 
