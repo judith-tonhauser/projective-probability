@@ -1,5 +1,6 @@
 # Prior probability work
-# 3-projectivity: analysis of experiment that tested projectivity with sensitivity to fact
+# projection experiment with sensitivity to fact
+# analysis.R
 
 # set working directory to directory of script
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)

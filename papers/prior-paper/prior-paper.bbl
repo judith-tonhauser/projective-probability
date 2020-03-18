@@ -1,6 +1,11 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{23}
+\begin{thebibliography}{21}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[Abrus{\'a}n(2011)]{abrusan2011}
+Abrus{\'a}n, M{\'a}rta. 2011.
+\newblock Predicting the presuppositions of soft triggers.
+\newblock {\em Linguistics \& Philosophy\/} 34:491--535.
 
 \bibitem[Anand et~al.(ms)Anand, Grimshaw, and Hacquard]{anand-etal2019}
 Anand, Pranav, Jane Grimshaw, and Valentine Hacquard. ms.
@@ -30,24 +35,28 @@ Beaver, David. 2010.
   Presuppositions and Discourse: {Essays Offered to Hans Kamp}\/}, pages
   65--99. Oxford: Elsevier.
 
-\bibitem[{de Marneffe} et~al.(2019){de Marneffe}, Simons, and
-  Tonhauser]{demarneffe-etal-sub23}
-{de Marneffe}, Marie, Mandy Simons, and Judith Tonhauser. 2019.
-\newblock The {C}ommitment{B}ank: {I}nvestigating projection in naturally
-  occurring discourse.
-\newblock In {\em Sinn und Bedeutung 23\/}, pages 107--124.
-
-\bibitem[Dj\"arv and Bacovcin(2017)]{djaerv-bacovcin-salt27}
-Dj\"arv, Kajsa and {Hezekiah Akiva} Bacovcin. 2017.
-\newblock Prosodic effects on factive presupposition projection.
-\newblock In {\em Semantics and Linguistic Theory (SALT) XXVII\/}, pages
-  116--133. Ithaca, NY: CLC Publications.
+\bibitem[Beaver et~al.(2017)Beaver, Roberts, Simons, and Tonhauser]{brst-ar}
+Beaver, David, Craige Roberts, Mandy Simons, and Judith Tonhauser. 2017.
+\newblock Questions {U}nder {D}iscussion: Where information structure meets
+  projective content.
+\newblock {\em Annual Review of Linguistics\/} 3:265--284.
 
 \bibitem[Egr\'e(2008)]{egre2008}
 Egr\'e, Paul. 2008.
 \newblock Question-embedding and factivity.
 \newblock In L.~Lihoreau, ed., {\em Grazer Philosophische Studien\/}, pages
   85--125. Amsterdam: Rodopi.
+
+\bibitem[Heim(1983)]{heim83}
+Heim, Irene. 1983.
+\newblock On the projection problem for presuppositions.
+\newblock In M.~Barlow, D.~Flickinger, and M.~Westcoat, eds., {\em {West Coast
+  Conference on Formal Linguistics (WCCFL)} 2\/}, pages 114--125.
+
+\bibitem[Karttunen(1971)]{karttunen71b}
+Karttunen, Lauri. 1971.
+\newblock Some observations on factivity.
+\newblock {\em Papers in Linguistics\/} 4:55--69.
 
 \bibitem[Karttunen(2016)]{karttunen2016}
 Karttunen, Lauri. 2016.
@@ -61,11 +70,6 @@ Kiparsky, Paul and Carol Kiparsky. 1970.
 \newblock In M.~Bierwisch and K.~Heidolph, eds., {\em Progress in
   Linguistics\/}, pages 143--173. The Hague: Mouton.
 
-\bibitem[Mahler(2019)]{mahler-nels}
-Mahler, Taylor. 2019.
-\newblock Does at-issueness predict projection? {I}t's complicated!
-\newblock In {\em 49th Annual Meeting of the North East Linguistic Society\/}.
-
 \bibitem[Schlenker(2010)]{schlenker10}
 Schlenker, Philippe. 2010.
 \newblock Local contexts and local meanings.
@@ -76,26 +80,18 @@ Simons, Mandy. 2007.
 \newblock Observations on embedding verbs, evidentiality, and presupposition.
 \newblock {\em Lingua\/} 117:1034--1056.
 
-\bibitem[Smith and Hall(2011)]{smith-hall11}
-Smith, {E.\ Allyn} and Kathleen~Currie Hall. 2011.
-\newblock Projection diversity: {E}xperimental evidence.
-\newblock In {\em Proceedings of the 2011 {ESSLLI} Workshop on Projective
-  Content\/}, pages 156--170.
+\bibitem[Simons et~al.(2010)Simons, Tonhauser, Beaver, and
+  Roberts]{brst-salt10}
+Simons, Mandy, Judith Tonhauser, David Beaver, and Craige Roberts. 2010.
+\newblock What projects and why.
+\newblock In {\em Semantics and Linguistic Theory (SALT) XXI\/}, pages
+  309--327. Ithaca, NY: CLC Publications.
 
 \bibitem[Spector and Egr\'e(2015)]{spector-egre2015}
 Spector, Benjamin and Paul Egr\'e. 2015.
 \newblock A uniform semantics for embedding interrogatives: {\em {A}n} answer,
   not necessarily {\em the} answer.
 \newblock {\em Synthese\/} 192:1729--1784.
-
-\bibitem[Stevens et~al.(2017)Stevens, {de Marneffe}, Speer, and
-  Tonhauser]{stevens-etal2017}
-Stevens, {Jon Scott}, Marie-Catherine {de Marneffe}, {Shari R.} Speer, and
-  Judith Tonhauser. 2017.
-\newblock Rational use of prosody predicts projectivity in manner adverb
-  utterances.
-\newblock In {\em 39th Annual Meeting of the Cognitive Science Society\/},
-  pages 1144--1149.
 
 \bibitem[Swanson(2012)]{swanson2012}
 Swanson, Eric. 2012.
@@ -116,37 +112,20 @@ Tonhauser, Judith, David Beaver, and Judith Degen. 2018.
   at-issueness.
 \newblock {\em Journal of Semantics\/} 35:495--542.
 
-\bibitem[Tonhauser et~al.(2013)Tonhauser, Beaver, Roberts, and
-  Simons]{brst-lang11}
-Tonhauser, Judith, David Beaver, Craige Roberts, and Mandy Simons. 2013.
-\newblock Toward a taxonomy of projective content.
-\newblock {\em Language\/} 89:66--109.
+\bibitem[van~der Sandt(1992)]{vds92}
+van~der Sandt, Rob. 1992.
+\newblock Presupposition projection as anaphora resolution.
+\newblock {\em Journal of Semantics\/} 9:333--377.
 
 \bibitem[White and Rawlins(2018)]{white-rawlins-nels2018}
 White, Aaron~S. and Kyle Rawlins. 2018.
 \newblock The role of veridicality and factivity in clause selection.
 \newblock In {\em 48th Meeting of the North East Linguistic Society\/}, page~??
 
-\bibitem[White et~al.(2018)White, Rudinger, Rawlins, and
-  Van~Durme]{white-etal2018b}
-White, Aaron~Steven, Rachel Rudinger, Kyle Rawlins, and Benjamin Van~Durme.
-  2018.
-\newblock Lexicosyntactic inference in neural models.
-\newblock In {\em Proceedings of the 2018 Conference on Empirical Methods in
-  Natural Language Processing\/}, pages 4717--4724. Brussels, Belgium:
-  Association for Computational Linguistics.
-
 \bibitem[Wyse(2010)]{wyse}
 Wyse, Brendan. 2010.
 \newblock {\em Factive/non-factive predicate recognition within Question
   Generation systems\/}.
 \newblock Master's thesis, Open University.
-
-\bibitem[Xue and Onea(2011)]{xue-onea11}
-Xue, Jingyang and Edgar Onea. 2011.
-\newblock Correlation between projective meaning and at-issueness: {A}n
-  empirical study.
-\newblock In {\em Proceedings of the 2011 {ESSLLI} Workshop on Projective
-  Content\/}, pages 171--184.
 
 \end{thebibliography}
