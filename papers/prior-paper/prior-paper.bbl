@@ -1,5 +1,5 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{21}
+\begin{thebibliography}{24}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrus{\'a}n(2011)]{abrusan2011}
@@ -70,6 +70,16 @@ Kiparsky, Paul and Carol Kiparsky. 1970.
 \newblock In M.~Bierwisch and K.~Heidolph, eds., {\em Progress in
   Linguistics\/}, pages 143--173. The Hague: Mouton.
 
+\bibitem[Lorson(2018)]{lorson2018}
+Lorson, Alexandra. 2018.
+\newblock The influence of world knowledge on projectivity.
+\newblock M.A.\ thesis, University of Potsdam.
+
+\bibitem[Mahler(2019)]{mahler-qp2}
+Mahler, Taylor. 2019.
+\newblock The social component of projection behavior of clausal complements.
+\newblock Qualifying Paper, The Ohio State University.
+
 \bibitem[Schlenker(2010)]{schlenker10}
 Schlenker, Philippe. 2010.
 \newblock Local contexts and local meanings.
@@ -92,6 +102,15 @@ Spector, Benjamin and Paul Egr\'e. 2015.
 \newblock A uniform semantics for embedding interrogatives: {\em {A}n} answer,
   not necessarily {\em the} answer.
 \newblock {\em Synthese\/} 192:1729--1784.
+
+\bibitem[Stevens et~al.(2017)Stevens, {de Marneffe}, Speer, and
+  Tonhauser]{stevens-etal2017}
+Stevens, {Jon Scott}, Marie-Catherine {de Marneffe}, {Shari R.} Speer, and
+  Judith Tonhauser. 2017.
+\newblock Rational use of prosody predicts projectivity in manner adverb
+  utterances.
+\newblock In {\em 39th Annual Meeting of the Cognitive Science Society\/},
+  pages 1144--1149.
 
 \bibitem[Swanson(2012)]{swanson2012}
 Swanson, Eric. 2012.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 MAR 2020 13:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 MAR 2020 11:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1076,6 +1076,9 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 )
 (./prior-paper.aux
 
+LaTeX Warning: Label `target' multiply defined.
+
+
 LaTeX Warning: Label `control' multiply defined.
 
 )
@@ -1237,60 +1240,73 @@ File: utxsyc.fd 2000/12/15 v3.1
 Package xypdf Info: Line width: 0.61319pt on input line 96.
  [1
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<figures/trial-exp.pdf, id=145, 619.41852pt x 378.04907pt>
-File: figures/trial-exp.pdf Graphic file (type pdf)
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+ [4]
+[5] <figures/exp1-projection-trial.pdf, id=193, 525.5886pt x 358.98969pt>
+File: figures/exp1-projection-trial.pdf Graphic file (type pdf)
 
-<use figures/trial-exp.pdf>
-Package pdftex.def Info: figures/trial-exp.pdf used on input line 179.
-(pdftex.def)             Requested size: 284.52756pt x 173.65663pt.
- [3 <./figures/trial-exp.pdf, page is rotated 90 degrees>]
+<use figures/exp1-projection-trial.pdf>
+Package pdftex.def Info: figures/exp1-projection-trial.pdf used on input line 2
+62.
+(pdftex.def)             Requested size: 199.16928pt x 136.03952pt.
+
+<figures/exp1-prior-trial.pdf, id=194, 445.59445pt x 317.86723pt>
+File: figures/exp1-prior-trial.pdf Graphic file (type pdf)
+
+<use figures/exp1-prior-trial.pdf>
+Package pdftex.def Info: figures/exp1-prior-trial.pdf used on input line 267.
+(pdftex.def)             Requested size: 190.63338pt x 135.9915pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6] [7 <./figures/exp1-projection-trial.pdf> <./figures/exp1-prior-trial.pdf>]
 <../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-factty
-pe.pdf, id=170, 505.89pt x 289.08pt>
+pe.pdf, id=243, 505.89pt x 289.08pt>
 File: ../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-f
 acttype.pdf Graphic file (type pdf)
 
 <use ../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-fa
 cttype.pdf>
 Package pdftex.def Info: ../../results/3-projectivity/graphs/means-projectivity
--by-predicate-and-facttype.pdf used on input line 196.
+-by-predicate-and-facttype.pdf used on input line 303.
 (pdftex.def)             Requested size: 460.72124pt x 263.27493pt.
 
 
-LaTeX Warning: Reference `f-projectivity' on page 4 undefined on input line 207
+LaTeX Warning: Reference `f-projectivity' on page 8 undefined on input line 314
 .
 
-[4 <../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-fac
+[8 <../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-fac
 ttype.pdf>]
 
-LaTeX Warning: Reference `f-proj' on page 5 undefined on input line 214.
+LaTeX Warning: Reference `f-proj' on page 9 undefined on input line 321.
 
-[5] [6] <figures/trial-norming.pdf, id=265, 494.98209pt x 204.91786pt>
+[9] [10] <figures/trial-norming.pdf, id=336, 494.98209pt x 204.91786pt>
 File: figures/trial-norming.pdf Graphic file (type pdf)
 
 <use figures/trial-norming.pdf>
-Package pdftex.def Info: figures/trial-norming.pdf used on input line 306.
+Package pdftex.def Info: figures/trial-norming.pdf used on input line 415.
 (pdftex.def)             Requested size: 284.52756pt x 117.79245pt.
 
-<../../results/1-prior/graphs/ratings-for-CCs-identified-by-clause.pdf, id=269,
+<../../results/1-prior/graphs/ratings-for-CCs-identified-by-clause.pdf, id=340,
  650.43pt x 505.89pt>
 File: ../../results/1-prior/graphs/ratings-for-CCs-identified-by-clause.pdf Gra
 phic file (type pdf)
 
 <use ../../results/1-prior/graphs/ratings-for-CCs-identified-by-clause.pdf>
 Package pdftex.def Info: ../../results/1-prior/graphs/ratings-for-CCs-identifie
-d-by-clause.pdf used on input line 320.
+d-by-clause.pdf used on input line 429.
 (pdftex.def)             Requested size: 460.72124pt x 358.35072pt.
 
-[7 <./figures/trial-norming.pdf>] (./prior-paper.bbl [8 <../../results/1-prior/
-graphs/ratings-for-CCs-identified-by-clause.pdf>]) [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 329.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 329.
+[11 <./figures/trial-norming.pdf>] (./prior-paper.bbl [12 <../../results/1-prio
+r/graphs/ratings-for-CCs-identified-by-clause.pdf>]) [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
  (./prior-paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 329.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 329.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
 Package rerunfilecheck Info: File `prior-paper.out' has not changed.
-(rerunfilecheck)             Checksum: 9BE8DD1174130489ACBBBBFAC98A5710;333.
+(rerunfilecheck)             Checksum: 8FDE5D7F19C782E3D81C5513E23509E3;689.
 
 
 LaTeX Warning: There were undefined references.
@@ -1298,26 +1314,27 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 329.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
  ) 
 Here is how much of TeX's memory you used:
- 24365 strings out of 493014
- 417486 string characters out of 6133351
- 535078 words of memory out of 5000000
- 27273 multiletter control sequences out of 15000+600000
+ 24412 strings out of 493014
+ 418337 string characters out of 6133351
+ 536281 words of memory out of 5000000
+ 27297 multiletter control sequences out of 15000+600000
  45829 words of font info for 114 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 55i,8n,77p,3243b,540s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,10n,77p,3243b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/f
-onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
-/urw/times/utmri8a.pfb>
-Output written on prior-paper.pdf (9 pages, 238816 bytes).
+exlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
+mes/utmri8a.pfb>
+Output written on prior-paper.pdf (13 pages, 282610 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 324 compressed objects within 4 object streams
- 99 named destinations out of 1000 (max. 500000)
- 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 433 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 121 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

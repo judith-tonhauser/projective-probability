@@ -20,6 +20,10 @@ nrow(d) #2090 (95 participants x 22 items)
 names(d)
 length(unique(d$workerid)) #95 participants
 
+mean(d$Answer.time_in_minutes) #3.9
+median(d$Answer.time_in_minutes) #3.3
+
+
 d = d %>%
   dplyr::select(workerid,rt,prompt,itemType,itemNr,list,item,response,fact,slide_number_in_experiment,gender,american,age,language,comments,Answer.time_in_minutes)
 nrow(d) #2090

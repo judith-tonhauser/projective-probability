@@ -136,15 +136,15 @@ ggplot(means, aes(x=event, y=Mean, color=itemType,shape=itemType,fill=itemType))
   geom_point(data=subjmeans,aes(fill=itemType,color=itemType),shape=21,alpha=.1) +
   geom_point(stroke=.5,size=3,color="black") +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25) +
-  scale_shape_manual(values=rev(c(25, 24)),labels=rev(c("low","high")),name="Fact") +
-  scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("low","high")),name="Fact") +
+  scale_shape_manual(values=rev(c(25, 24)),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
-  scale_color_manual(name="Fact", breaks=c("high","low"),labels=c("high", "low"), 
+  scale_color_manual(name="Fact", breaks=c("higher probability","lower probability"),labels=c("higher probability", "lower probability"), 
                      values=cbPalette) +
   theme(legend.position = "top") +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 75, hjust = 1)) +
   ylab("Mean likelihood rating") +
-  xlab("Content of complement") 
+  xlab("Content") 
 ggsave(f="../graphs/ratings-for-CCs-identified-by-clause.pdf",height=7,width=9)
 
 
