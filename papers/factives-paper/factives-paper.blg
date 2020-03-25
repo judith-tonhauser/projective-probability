@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: factives-paper.aux
 The style file: ../cslipubs-natbib.bst
 Database file #1: ../../bibliography.bib
-Warning--I didn't find a database entry for "liu2015"
-You've used 74 entries,
+You've used 76 entries,
             2811 wiz_defined-function locations,
-            1049 strings with 15930 characters,
-and the built_in function-call counts, 36769 in all, are:
-= -- 3519
-> -- 1475
-< -- 93
-+ -- 513
-- -- 412
-* -- 2670
-:= -- 6308
-add.period$ -- 319
-call.type$ -- 74
-change.case$ -- 554
-chr.to.int$ -- 71
-cite$ -- 74
-duplicate$ -- 1716
-empty$ -- 2936
-format.name$ -- 524
-if$ -- 7809
+            1058 strings with 16285 characters,
+and the built_in function-call counts, 37633 in all, are:
+= -- 3598
+> -- 1519
+< -- 95
++ -- 529
+- -- 424
+* -- 2742
+:= -- 6465
+add.period$ -- 327
+call.type$ -- 76
+change.case$ -- 570
+chr.to.int$ -- 73
+cite$ -- 76
+duplicate$ -- 1756
+empty$ -- 2998
+format.name$ -- 542
+if$ -- 7980
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 80
-newline$ -- 375
-num.names$ -- 326
-pop$ -- 539
+missing$ -- 82
+newline$ -- 385
+num.names$ -- 334
+pop$ -- 554
 preamble$ -- 2
-purify$ -- 423
+purify$ -- 435
 quote$ -- 0
-skip$ -- 1347
+skip$ -- 1373
 stack$ -- 0
-substring$ -- 2196
-swap$ -- 434
+substring$ -- 2226
+swap$ -- 442
 text.length$ -- 32
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 639
+type$ -- 657
 warning$ -- 0
-while$ -- 327
+while$ -- 334
 width$ -- 0
-write$ -- 977
-(There was 1 warning)
+write$ -- 1002

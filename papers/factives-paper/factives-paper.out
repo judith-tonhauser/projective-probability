@@ -28,8 +28,11 @@
 \BOOKMARK [1][-]{section.4}{Discussion}{}% 28
 \BOOKMARK [1][-]{section.5}{Conclusions}{}% 29
 \BOOKMARK [1][-]{appendix.A}{20 complement clauses}{}% 30
-\BOOKMARK [1][-]{appendix.B}{Details on the Bayesian models for Experiments 1 and 2}{}% 31
-\BOOKMARK [1][-]{appendix.C}{Experiments 1', 2a' and 3b}{}% 32
-\BOOKMARK [1][-]{appendix.D}{Model output of Exp. 1b}{}% 33
-\BOOKMARK [1][-]{appendix.E}{Model output of Exp. 2b}{}% 34
-\BOOKMARK [1][-]{appendix.F}{Model output of Exp. 3b}{}% 35
+\BOOKMARK [1][-]{appendix.B}{Details on the Bayesian models for Experiments 1a, 2a, and 3a}{}% 31
+\BOOKMARK [2][-]{subsection.B.1}{Motivation for using Bayesian mixed effects Beta regression}{appendix.B}% 32
+\BOOKMARK [2][-]{subsection.B.2}{Coding choices and interpreting model output}{appendix.B}% 33
+\BOOKMARK [1][-]{appendix.C}{Details on the Bayesian models for Experiments 1b, 2b, and 3b}{}% 34
+\BOOKMARK [2][-]{subsection.C.1}{Model output of Exp. 1b}{appendix.C}% 35
+\BOOKMARK [2][-]{subsection.C.2}{Model output of Exp. 2b}{appendix.C}% 36
+\BOOKMARK [2][-]{subsection.C.3}{Model output of Exp. 3b}{appendix.C}% 37
+\BOOKMARK [1][-]{appendix.D}{Comparisons of gradient and categorical ratings}{}% 38

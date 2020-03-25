@@ -1,5 +1,5 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{74}
+\begin{thebibliography}{76}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abbott(2006)]{abbott06}
@@ -144,6 +144,11 @@ Giannakidou, Anastasia. 1998.
 Giannakidou, Anastasia. 2001.
 \newblock The meaning of free choice.
 \newblock {\em Linguistics and Philosophy\/} 24:659--735.
+
+\bibitem[Giannakidou and Mari(2015)]{giannakidou-mari2015}
+Giannakidou, Anastasia and Alda Mari. 2015.
+\newblock Mixed (non)veridicality and mood choice with emotive verbs.
+\newblock In {\em 51st Meeting of the Chicago Linguistic Society\/}.
 
 \bibitem[Giv\'on(1995)]{givon95}
 Giv\'on, Talmy. 1995.
@@ -343,6 +348,12 @@ Smith, {E.\ Allyn} and Kathleen~Currie Hall. 2011.
 \newblock Projection diversity: {E}xperimental evidence.
 \newblock In {\em Proceedings of the 2011 {ESSLLI} Workshop on Projective
   Content\/}, pages 156--170.
+
+\bibitem[Smithson and Verkuilen(2006)]{smithson2006}
+Smithson, Michael and Jay Verkuilen. 2006.
+\newblock A better lemon squeezer? maximum-likelihood regression with
+  beta-distributed dependent variables.
+\newblock {\em Psychological methods\/} 11(1):54.
 
 \bibitem[Spector and Egr\'e(2015)]{spector-egre2015}
 Spector, Benjamin and Paul Egr\'e. 2015.
