@@ -6,7 +6,7 @@
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(this.dir)
 
-source('helpers.R')
+source('../../helpers.R')
 
 # load required packages
 library(tidyverse)
@@ -20,7 +20,9 @@ library(knitr)
 library(emmeans)
 library(lme4)
 library(padr)
+library(performance)
 theme_set(theme_bw())
+
 
 # load clean data  ----
 cd = read.csv("../data/cd.csv")
@@ -303,7 +305,8 @@ table(d$verb)
 # run beta regression instead of zoib
 
 # first, because response assumes values of 0 and 1, which beta regression cannot handle, transform: (Smithson & Verkuilen 2006)
-# y' = (y · (n − 1) + 0.5)/n
+# y'' = (y' · (n − 1) + 0.5)/n
+# note: first rescaling of y'=(y-a)/(b-a) not necessary because highest and lowest value are 0 and 1 already
 d$betaresponse = (d$response*(nrow(d)-1) + .5)/nrow(d)
 
 prior = get_prior(betaresponse ~ verb + (1|workerid) + (1|item),family = Beta(),data=d)
@@ -329,6 +332,12 @@ m.b = readRDS(file="../data/beta-model-mixed.rds")
 # to get stan code
 stancode(m.b)
 
+summary(m.b)
+fixef(m.b) # does the same thing
+
+# create LaTeX table
+mcmcReg(m.b, pars = "b_", file="../models/brm_output.tex")
+
 # hypothesis-testing, probing posterior model
 q = c(q_pretend_MC = "plogis(verbpretend-Intercept) = plogis(Intercept)")
 q_answer = hypothesis(m.b, q)
@@ -336,6 +345,49 @@ q_answer
 plot(q_answer)
 prop.table(table(q_answer$samples$H1 > 0)) 
 
+# posterior_samples(m.b, pars = "b_") %>%
+#   mutate_at(c("b_phi_Intercept",paste("b_",c(dimnames(fixef(m.b))[[1]])[23:42],sep="")), exp) %>%
+#   mutate_at(c("b_Intercept",paste("b_",c(dimnames(fixef(m.b))[[1]])[3:22],sep="")), plogis) %>%
+#   posterior_summary() %>%
+#   as.data.frame() %>%
+#   rownames_to_column("Parameter") %>%
+#   kable(digits = 2)
+
+
+
+##################################
+# fit linear model, first Bayesian then frequentist -- same qualitative result (except pretend's lower bound is nnow inluded in 95% credible interval)
+summary(d %>% select(response,verb,workerid,item))
+str(d %>% select(response,verb,workerid,item))
+
+m <- brm(
+  formula = response ~ verb + (1|workerid) + (1|item),
+  data = d,
+  cores = 4,
+  control = list(adapt_delta = .95)
+  # file = here::here("zoib-ex")
+)
+# no need to run this multiple times:
+saveRDS(m,file="../data/linear-model-mixed.rds")
+
+# load linear model ----
+m <- readRDS(file="../data/linear-model-mixed.rds")
+
+summary(m) # see summary printed below
+
+# let's look at pretend in particular
+q = c(q_pretend_MC_mean = "Intercept + verbpretend = Intercept")
+q_answer = hypothesis(m, q)
+q_answer
+plot(q_answer)
+prop.table(table(q_answer$samples$H1 > 0)) # prob (pretend > MC) = .97
+
+# fit frequentist linear model for comparison
+m = lmer(response ~ verb + (1|workerid) + (1|item), data = d)
+summary(m)
+check_model(m) # shows some non-normality of residuals as well as violation of homoscedasticity assumption
+m = lmerTest::lmer(response ~ verb + (1|workerid) + (1|item), data = d)
+summary(m)
 
 
 # THE FOLLOWING IS NOW SUPERSEDED BY THE SIMPLE BETA MODEL ABOVE, COMMENTING OUT FOR THE TIME BEING
@@ -542,29 +594,3 @@ prop.table(table(q_answer$samples$H1 > 0))
 # 
 # 
 
-
-# fit linear model -- same qualitative result (except pretend's lower bound is nnow inluded in 95% credible interval)
-summary(d %>% select(response,verb,workerid,item))
-str(d %>% select(response,verb,workerid,item))
-
-m <- brm(
-  formula = response ~ verb + (1|workerid) + (1|item),
-  data = d,
-  cores = 4,
-  control = list(adapt_delta = .95)
-  # file = here::here("zoib-ex")
-)
-# no need to run this multiple times:
-saveRDS(m,file="../data/linear-model-mixed.rds")
-
-# load linear model ----
-m <- readRDS(file="../data/linear-model-mixed.rds")
-
-summary(m) # see summary printed below
-
-# let's look at pretend in particular
-q = c(q_pretend_MC_mean = "Intercept + verbpretend = Intercept")
-q_answer = hypothesis(m, q)
-q_answer
-plot(q_answer)
-prop.table(table(q_answer$samples$H1 > 0)) # prob (pretend > MC) = .97

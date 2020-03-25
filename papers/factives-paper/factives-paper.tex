@@ -479,9 +479,9 @@ Figure \ref{f-projectivity} shows the mean certainty ratings for the target stim
 
 In view of this finding, one might ask whether the categorization of clause-embedding predicates assumed in (\ref{pred}) is correct: perhaps there is a different place in which a line can be drawn between factive and optionally factive predicates based on the projectivity of the CCs? The mean certainty ratings plotted in Figure \ref{f-projectivity} suggest that this cannot be done in a non-arbitrary way. For instance, one might consider all predicates factive whose CC is at least as projective as that of {\em reveal}: this would mean that the predicates typically taken to be factive are factive, as well as {\em acknowledge, hear} and {\em inform}. There is, however, no principled reason why the projectivity of the CC of {\em reveal} should be the cut-off for factivity. A different approach would be to pick an arbitrary mean certainty rating, say .8, and to categorize predicates whose CC has a mean certainty rating of at least .8 as factive and predicates whose CC has a mean certainty rating below .8 as optionally factive. However, this is as unprincipled an approach as the previous one -- one could just as well pick a threshold of .85 or .75, with the result that different predicates would be considered factive: for instance, {\em discover} (mean: .78) would not count as factive with a threshold of .8, but would with a threshold of .75, and {\em see} (mean: .81) would count as factive with a threshold of .8, but not with a threshold of .85.\footnote{Choosing an arbitrary numeric threshold for factivity is also complicated by the fact that there is by-experiment variation in mean certainty ratings. For instance, the mean certainty ratings in Exp.~1a were lower, overall, than the mean certainty ratings in \citetpos{tbd-variability} Exps.~1. For example, the CC of {\em be annoyed}, which was the most projective in both sets of experiments, received mean certainty ratings of .96  and .92 in \citetpos{tbd-variability} Exps.~1a and 1b, respectively, but only a .86 in our Exp.~1a. This difference may be due to the fact that \citet{tbd-variability} primarily investigated highly projective content whereas our Exp.~1a included a wide range of less projective content: it is possible that participants' certainty ratings were influenced by the overall projectivity of the contents investigated. We leave this matter to future research.}
 
-The possibility of categorizing clause-embedding predicates by the projectivity of the CC is further called into question by the fact that the CC of all of the 20 predicates investigated is projective, albeit to varying degrees, compared to the non-projective main clause controls. This was established by fitting a Bayesian mixed effects Beta regression model  with weakly informative priors using the \verb|brms| \citep{buerkner2017}  package in R \citep{R}.\footnote{We conducted a Beta regression instead of a linear regression because linear regression assumes normally-distributed residuals, an assumption that was violated by this dataset. Beta regression is useful because it allows for modeling an arbitrarily distributed outcome variable in the $[$0,1$]$ interval. Because the outcome variable contained the values 0 and 1, which Beta regression is undefined for, we applied a common transformation to ratings before the main analysis that rescales values to fall between 0 and 1  \citep{smithson2006}.} The model predicted the certainty ratings from a fixed effect of predicate (with treatment coding and `main clause' as  reference level) and included the maximal random effects structure justified by the design: random by-participant and by-content intercepts and random by-participant and by-content slopes for the fixed effect of predicate (capturing random variability in overall projectivity by content and participant as well as random variability in the effect of predicate, which may vary by participant and content). In contrast to linear regression, which assumes the outcome variable is normally distributed and only models means, Beta regression models both mean and precision (a measure of dispersion) of the outcome distribution, and thus returns a mean and precision coefficient for each fixed effect contrast.  For model details, see Appendix \ref{modeldetails}.
+The possibility of categorizing clause-embedding predicates by the projectivity of the CC is further called into question by the fact that the CC of all of the 20 predicates investigated is projective, albeit to varying degrees, compared to the non-projective main clause controls. This was established by fitting a Bayesian mixed effects Beta regression model  with weakly informative priors using the \verb|brms| \citep{buerkner2017}  package in R \citep{R}.\footnote{We conducted a Beta regression instead of a linear regression because linear regression assumes normally-distributed residuals and homoscedasticity, assumptions that were violated by this dataset. Beta regression is useful because it allows for modeling an arbitrarily distributed outcome variable in the $[$0,1$]$ interval  \citep{smithson2006}.} The model predicted the certainty ratings from a fixed effect of predicate (with treatment coding and `main clause' as  reference level) and included the maximal random effects structure justified by the design: random by-participant and by-content intercepts and random by-participant and by-content slopes for the fixed effect of predicate (capturing random variability in overall projectivity by content and participant as well as random variability in the effect of predicate, which may vary by participant and content). In contrast to linear regression, which assumes the outcome variable is normally distributed and only models means, Beta regression models both mean and precision (a measure of dispersion) of the outcome distribution, and thus returns a mean and precision coefficient for each fixed effect contrast.  For model details, see Appendix \ref{modeldetails}.
 
-Mean certainty ratings for all predicates were higher than for the main clause controls, as established in two ways. First, the  estimated mean $\mu$ for each predicate was higher than that of the main clause controls (i.e., the 95\% credible intervals for the mean estimate did not contain 0 for any predicate). Second, with the exception of the predicates \emph{pretend},  \emph{think}, \emph{suggest}, and \emph{say}, the estimated value of the precision parameter $\phi$ for each predicate was lower than that of the main clause controls (i.e., the 95\% credible intervals for the precision estimate did not contain 0 for any predicate), indicating greater variance in certainty ratings than the main clause controls for all predicates except the above mentioned.  See Appendix \ref{modeldetails}   for the full table of model estimates.  {\bf DESCRIBE FINDINGS FOR LEAST PROJECTIVE PREDICATES?} \jd{not sure what you have in mind here}
+Mean certainty ratings for all predicates were higher than for the main clause controls, as established in two ways. First, the  estimated mean $\mu$ for each predicate was higher than that of the main clause controls (i.e., the 95\% credible intervals for the mean estimate did not contain 0 for any predicate). Second, with the exception of the predicates \emph{pretend},  \emph{think}, \emph{suggest}, and \emph{say}, the estimated value of the precision parameter $\phi$ for each predicate was lower than that of the main clause controls (i.e., the 95\% credible intervals for the precision estimate did not contain 0 for any predicate), indicating greater variance in certainty ratings than the main clause controls for all predicates except the above mentioned.  See Appendix \ref{modeldetails}   for the full table of model estimates.\footnote{A mixed effects linear regression yielded qualitatively identical results, with the exception that the contrast between \emph{pretend} and the main clause controls was only marginally significant.}  {\bf DESCRIBE FINDINGS FOR LEAST PROJECTIVE PREDICATES?} \jd{not sure what you have in mind here}
 
 In sum, speakers who utter an interrogative with one of the 20 clause-embedding predicates are taken to be more committed to the CC than to the main clause control content.\footnote{According to \citet[1739]{spector-egre2015}, it is not clear whether the CC of {\em say} is projective. Our Exp.~1a findings suggest that it is weakly projective.}    Thus, to distinguish factive predicates from optionally factive and non-factive ones in this set of 20 predicates, one would need to distinguish one group of projective CCs from another group of projective CCs. The results suggest that there is no principled way of doing so.
 
@@ -491,7 +491,7 @@ It is possible that asking participants to assess projection with a gradient res
 
 \subsubsection{Methods}
 
-\paragraph{Participants} 600 participants with U.S.\ IP addresses and at least 99\% of previous HITs approved were recruited on Amazon's Mechanical Turk platform. They were paid \$1.00 for participating.\footnote{Exps.~1a, 2a and 3a (gradient response task) were run in 2017 and 2018, whereas  Exps.~1b, 3a and 3b (categorical response task) were run in 2019. Participants in the later experiments were paid more to reflect an increased minimum wage in California.}
+\paragraph{Participants} 600 participants with U.S.\ IP addresses and at least 99\% of previous HITs approved were recruited on Amazon's Mechanical Turk platform. They were paid \$1.00 for participating.\footnote{\jd{i think this is the sort of thing that can also go in the appendix} Exps.~1a, 2a and 3a (gradient response task) were run in 2017 and 2018, whereas  Exps.~1b, 3a and 3b (categorical response task) were run in 2019. Participants in the later experiments were paid more to reflect an increased minimum wage in California.}
 
 
 \paragraph{Materials and procedure} The materials and procedure were identical to those of Exp.~1a, with the exception of the task: participants responded `yes' or `no' to the question of whether the speaker is certain of the relevant content, as shown in Figure \ref{fig-trial-exp1b}.
@@ -1114,7 +1114,7 @@ There are three separate pieces to motivate: the use of \emph{mixed effects}, th
 
 \textbf{Using Bayesian models} rather than frequentist models is increasingly becoming the norm in psycholinguistic studies as computational power has increased and running Bayesian models has become more accessible with the introduction of R packages such as \verb|brms| \citep{buerkner2017}. The presence of an effect in frequentist models is evaluated by checking whether the p-value is $<.05$, where the p-value is defined as the probability of obtaining data as skewed or more skewed than the observed data if the null-hypothesis was true, i.e., if the hypothesized effect was absent. Parameter estimates in frequentist models are obtained via maximum-likelihood techniques, i.e., by estimating the parameter values that maximize the probability of observing the data. Bayesian models, by contrast return a full posterior distribution over parameter values that take into account not just the probability of the data under the parameter values, but also the prior probability of parameter values. In order to evaluate the evidence for an effect of a predictor of interest, one can report 95\% credible intervals and the posterior probability $P(\beta < 0)$ or $P(\beta > 0)$ that the predictor coefficient $\beta$ is either lower or greater than zero, depending on the direction of the expected effect. A 95\% credible interval (CI) demarcates the range of values that comprise 95\% of probability mass of the posterior beliefs such that no value inside the CI has a lower probability than any point outside it \citep{Jaynes1976, Morey2016}. There is substantial evidence for an effect if zero is (by a reasonably clear margin) not included in the 95\% CI and $P(\beta > 0)$ or $P(\beta < 0)$ is close to zero or one. Posterior probabilities indicate the probability that the parameter has a certain value, given the data and model -- these probabilities are thus \emph{not} frequentist p-values. In order to present statistics as close to widely used frequentist practices, and following \citealt{Nicenboim2016}, we defined an inferential criterion that seems familiar (95\%), but the strength of evidence should not be taken as having clear cut-off points (such as in a null-hypothesis significance testing framework).
 
-\textbf{Using Beta regression} rather than linear regression was motivated by the violation of one of the important assumptions of linear regression that residuals be normally distributed, where ``residuals'' refers to the residual error for each data point after fitting the model. Slider ratings data, while being continuous, has the property of being bounded by its endpoints (which we code as 0 and 1, respectively). This often leads to ``bunching'' behavior at the endpoints (see Figure \ref{app:bunch} \jd{insert} for the distribution of raw ratings in Exp.~1a). This, in turn, leads to the violation of the assumption of normally-distributed residuals (see Figure \ref{app:residuals} for a visual representation)\jd{insert}. Beta regression is useful because it allows for modeling an arbitrarily distributed outcome variable in the $[$0,1$]$ interval. The Beta distribution is characterized by two parameters, one capturing the mean $\mu$ of the distribution and one capturing its precision $\phi$, a measure of dispersion. The greater the precision, the more concentrated the values are around the mean, i.e., the lower the variance of the distribution.  We follow \citet{smithson2006} in modeling $\mu$ and $\phi$ separately for each predictor. That is, we allow each predictor to affect both the mean and the precision of the outcome variable's distribution. 
+\textbf{Using Beta regression} rather than linear regression was motivated by the violation of two of the  assumptions of linear regression: first, that residuals be normally distributed (where ``residuals'' refers to the residual error for each data point after fitting the model), and second, that the error term exhibit homoscedasticity (that it be roughly the same across different conditions). Slider ratings data has the property of being bounded by its endpoints (which we code as 0 and 1, respectively). This often leads to ``bunching'' behavior at the endpoints (see Figure \ref{app:bunch} \jd{insert} for the distribution of raw ratings in Exp.~1a). This, in turn, can lead to the violation of both of the above assumptions. Intuitively, this is because conditions that elicit ratings closer to endpoints necessarily have a compressed variance; consequently, a condition's mean and its variance are not independent. Beta regression is useful here because it allows for modeling an arbitrarily distributed outcome variable in the $[$0,1$]$ interval. The Beta distribution is characterized by two parameters, one capturing the mean $\mu$ of the distribution and one capturing its precision $\phi$, a measure of dispersion. The greater the precision, the more concentrated the values are around the mean, i.e., the lower the variance of the distribution.  We follow \citet{smithson2006} in modeling $\mu$ and $\phi$ separately for each predictor. That is, we allow each predictor to affect both the mean and the precision of the outcome variable's distribution. 
 
 \subsection{Coding choices and interpreting model output}
 
@@ -1130,7 +1130,101 @@ Table \ref{tab:exp1amodelresults} shows the posterior estimates of $\mu$ and $\p
 
 %\item The model provided evidence for the predicted effect of the at-issueness of the generalization on the at-issueness of the prejacent: the prejacent of EASs for which the truth of the generalizations was more likely to follow from the common ground were more likely to receive a `yes' (at-issue) rating than the prejacent of EAS for which the truth of the generalization was less likely to follow from the common ground  (posterior mean $\beta$ = 1.29, 95\% CI={[}0.69,1.87{]}, $P(\beta > 0)$ = 1). This finding suggests that the prejacent of EASs is more at-issue when the generalization is less at-issue than when the generalization is more at-issue, as predicted by the analysis in section \ref{s2}.
 
-
+\begin{table}
+\caption{Posterior estimates of mean $\mu$ (left column) and precision $\phi$ (right column) with 95\% credible intervals  for projection ratings from Exp.~1a Bayesian mixed effects Beta regression (contrast of each predicate with main clause control reference level).}
+\begin{center}
+\begin{tabular}{l c l c}
+\toprule
+\multicolumn{2}{c}{Estimated $\mu$} & \multicolumn{2}{c}{Estimated $\phi$}\\
+\midrule
+Intercept & $-1.88^{*}$  &	Intercept  & $1.16^{*}$ \\
+		
+& $[-1.98;\ -1.78]$ &	& $[1.02;\ 1.29]$  \\
+		
+acknowledge & $2.62^{*}$ &	 acknowledge & $-0.67^{*}$  \\
+		
+& $[2.45;\ 2.80]$  &	& $[-0.86;\ -0.49]$ \\
+		
+admit & $2.45^{*}$ &	 admit  & $-0.65^{*}$  \\
+		
+& $[2.29;\ 2.61]$  &	& $[-0.83;\ -0.48]$ \\
+		
+announce  & $2.14^{*}$ &	 announce & $-0.74^{*}$  \\
+		
+& $[1.98;\ 2.30]$  &	& $[-0.92;\ -0.57]$ \\
+		
+be\_annoyed & $3.56^{*}$ &	 be\_annoyed & $-0.30^{*}$  \\
+		
+& $[3.37;\ 3.75]$  &	& $[-0.51;\ -0.10]$ \\
+		
+be\_right & $0.52^{*}$ &	 be\_right  & $-0.21^{*}$  \\
+		
+& $[0.36;\ 0.68]$  &	& $[-0.40;\ -0.01]$ \\
+		
+confess & $2.29^{*}$ &	 confess  & $-0.71^{*}$  \\
+		
+& $[2.13;\ 2.45]$  &	& $[-0.88;\ -0.54]$ \\
+		
+confirm & $1.31^{*}$ &	 confirm  & $-0.46^{*}$  \\
+		
+& $[1.15;\ 1.46]$  &	& $[-0.64;\ -0.28]$ \\
+		
+demonstrate & $1.78^{*}$ &	 demonstrate & $-0.59^{*}$  \\
+		
+& $[1.63;\ 1.93]$  &	& $[-0.76;\ -0.41]$ \\
+		
+discover  & $2.90^{*}$ &	 discover & $-0.67^{*}$  \\
+		
+& $[2.72;\ 3.07]$  &	& $[-0.85;\ -0.48]$ \\
+		
+establish & $1.42^{*}$ &	 establish  & $-0.55^{*}$  \\
+		
+& $[1.26;\ 1.58]$  &	& $[-0.73;\ -0.38]$ \\
+		
+hear  & $2.71^{*}$ &	 hear & $-0.79^{*}$  \\
+		
+& $[2.53;\ 2.88]$  &	& $[-0.98;\ -0.61]$ \\
+		
+inform  & $3.00^{*}$ &	 inform & $-0.60^{*}$  \\
+		
+& $[2.82;\ 3.18]$  &	& $[-0.79;\ -0.41]$ \\
+		
+know  & $3.37^{*}$ &	 know & $-0.49^{*}$  \\
+		
+& $[3.18;\ 3.56]$  &	& $[-0.70;\ -0.29]$ \\
+		
+pretend & $0.32^{*}$ &	 pretend  & $-0.19^{*}$  \\
+		
+& $[0.15;\ 0.49]$  &	& $[-0.38;\ -0.00]$ \\
+		
+prove & $1.16^{*}$ &	 prove  & $-0.21^{*}$  \\
+		
+& $[1.01;\ 1.31]$  &	& $[-0.40;\ -0.03]$ \\
+		
+reveal  & $2.59^{*}$ &	 reveal & $-0.72^{*}$  \\
+		
+& $[2.42;\ 2.76]$  &	& $[-0.90;\ -0.55]$ \\
+		
+say & $0.78^{*}$ &	 say  & $-0.12$  \\
+		
+& $[0.63;\ 0.93]$  &	& $[-0.30;\ 0.06]$ \\
+		
+see & $3.01^{*}$ &	 see  & $-0.70^{*}$  \\
+		
+& $[2.83;\ 3.19]$  &	& $[-0.90;\ -0.51]$ \\
+		
+suggest & $0.79^{*}$ &	 suggest  & $-0.17$  \\
+		
+& $[0.63;\ 0.94]$  &	& $[-0.36;\ 0.02]$ \\
+		
+think & $0.62^{*}$ &	 think  & $0.01$ \\
+		
+& $[0.47;\ 0.78]$  &	& $[-0.17;\ 0.20]$ \\\hline
+\multicolumn{2}{l}{\scriptsize{$^*$ 0 outside 95\% credible interval}}
+\end{tabular}
+\label{tab:exp1amodelresults}
+\end{center}
+\end{table}
 
 
 
@@ -1172,45 +1266,45 @@ Formula: \tiny \verb|model.brms.proj.b = brm(nResponse ~ verb + (1/workerid) + (
 \hline
 b\_Intercept       & $-6.37^{*}$       \\
                    & $[-7.10;\ -5.72]$ \\
-b\_verbbe\_right   & $2.33^{*}$        \\
+be\_right   & $2.33^{*}$        \\
                    & $[1.50;\ 3.21]$   \\
-b\_verbthink       & $2.54^{*}$        \\
+think       & $2.54^{*}$        \\
                    & $[1.75;\ 3.40]$   \\
-b\_verbsay         & $3.10^{*}$        \\
+say         & $3.10^{*}$        \\
                    & $[2.35;\ 3.93]$   \\
-b\_verbpretend     & $3.22^{*}$        \\
+pretend     & $3.22^{*}$        \\
                    & $[2.50;\ 4.03]$   \\
-b\_verbsuggest     & $3.22^{*}$        \\
+suggest     & $3.22^{*}$        \\
                    & $[2.49;\ 3.99]$   \\
-b\_verbprove       & $3.92^{*}$        \\
+prove       & $3.92^{*}$        \\
                    & $[3.21;\ 4.67]$   \\
-b\_verbconfirm     & $4.27^{*}$        \\
+confirm     & $4.27^{*}$        \\
                    & $[3.60;\ 5.01]$   \\
-b\_verbestablish   & $4.51^{*}$        \\
+establish   & $4.51^{*}$        \\
                    & $[3.83;\ 5.26]$   \\
-b\_verbdemonstrate & $5.31^{*}$        \\
+demonstrate & $5.31^{*}$        \\
                    & $[4.64;\ 6.06]$   \\
-b\_verbannounce    & $6.70^{*}$        \\
+announce    & $6.70^{*}$        \\
                    & $[6.04;\ 7.45]$   \\
-b\_verbconfess     & $6.75^{*}$        \\
+confess     & $6.75^{*}$        \\
                    & $[6.07;\ 7.50]$   \\
-b\_verbadmit       & $7.29^{*}$        \\
+admit       & $7.29^{*}$        \\
                    & $[6.60;\ 8.04]$   \\
-b\_verbreveal      & $7.41^{*}$        \\
+reveal      & $7.41^{*}$        \\
                    & $[6.72;\ 8.16]$   \\
-b\_verbacknowledge & $8.00^{*}$        \\
+acknowledge & $8.00^{*}$        \\
                    & $[7.31;\ 8.78]$   \\
-b\_verbhear        & $8.22^{*}$        \\
+hear        & $8.22^{*}$        \\
                    & $[7.50;\ 9.01]$   \\
-b\_verbdiscover    & $8.46^{*}$        \\
+discover    & $8.46^{*}$        \\
                    & $[7.75;\ 9.25]$   \\
-b\_verbsee         & $8.74^{*}$        \\
+see         & $8.74^{*}$        \\
                    & $[8.03;\ 9.55]$   \\
-b\_verbinform      & $9.13^{*}$        \\
+inform      & $9.13^{*}$        \\
                    & $[8.38;\ 9.94]$   \\
-b\_verbbe\_annoyed & $9.41^{*}$        \\
+be\_annoyed & $9.41^{*}$        \\
                    & $[8.64;\ 10.22]$  \\
-b\_verbknow        & $9.72^{*}$        \\
+know        & $9.72^{*}$        \\
                    & $[8.94;\ 10.57]$  \\
 \hline
 \multicolumn{2}{l}{\scriptsize{$^*$ 0 outside 95\% credible interval}}
@@ -1232,47 +1326,47 @@ Formula: \tiny \verb|model.brms.proj.b = brm(nResponse ~ verb + (1/workerid) + (
 \hline
 b\_Intercept       & $6.20^{*}$          \\
                    & $[5.52;\ 6.98]$     \\
-b\_verbacknowledge & $-1.58^{*}$         \\
+acknowledge & $-1.58^{*}$         \\
                    & $[-2.47;\ -0.70]$   \\
-b\_verbadmit       & $-1.83^{*}$         \\
+admit       & $-1.83^{*}$         \\
                    & $[-2.72;\ -0.97]$   \\
-b\_verbannounce    & $-4.39^{*}$         \\
+announce    & $-4.39^{*}$         \\
                    & $[-5.17;\ -3.68]$   \\
-b\_verbbe\_annoyed & $-1.36^{*}$         \\
+be\_annoyed & $-1.36^{*}$         \\
                    & $[-2.31;\ -0.46]$   \\
-b\_verbbe\_right   & $0.36$              \\
+be\_right   & $0.36$              \\
                    & $[-0.93;\ 1.89]$    \\
-b\_verbconfess     & $-2.79^{*}$         \\
+confess     & $-2.79^{*}$         \\
                    & $[-3.60;\ -2.04]$   \\
-b\_verbconfirm     & $-0.85$             \\
+confirm     & $-0.85$             \\
                    & $[-1.84;\ 0.14]$    \\
-b\_verbdemonstrate & $-3.35^{*}$         \\
+demonstrate & $-3.35^{*}$         \\
                    & $[-4.15;\ -2.63]$   \\
-b\_verbdiscover    & $-0.50$             \\
+discover    & $-0.50$             \\
                    & $[-1.57;\ 0.64]$    \\
-b\_verbestablish   & $-1.92^{*}$         \\
+establish   & $-1.92^{*}$         \\
                    & $[-2.76;\ -1.12]$   \\
-b\_verbhear        & $-7.57^{*}$         \\
+hear        & $-7.57^{*}$         \\
                    & $[-8.41;\ -6.84]$   \\
-b\_verbinform      & $-3.93^{*}$         \\
+inform      & $-3.93^{*}$         \\
                    & $[-4.71;\ -3.22]$   \\
-b\_verbknow        & $-0.27$             \\
+know        & $-0.27$             \\
                    & $[-1.39;\ 0.96]$    \\
-b\_verbnonMent.C   & $-11.92^{*}$        \\
+nonMent.C   & $-11.92^{*}$        \\
                    & $[-12.94;\ -11.01]$ \\
-b\_verbpretend     & $-10.78^{*}$        \\
+pretend     & $-10.78^{*}$        \\
                    & $[-11.83;\ -9.85]$  \\
-b\_verbprove       & $0.92$              \\
+prove       & $0.92$              \\
                    & $[-0.57;\ 2.91]$    \\
-b\_verbreveal      & $-2.37^{*}$         \\
+reveal      & $-2.37^{*}$         \\
                    & $[-3.21;\ -1.54]$   \\
-b\_verbsay         & $-5.79^{*}$         \\
+say         & $-5.79^{*}$         \\
                    & $[-6.59;\ -5.09]$   \\
-b\_verbsee         & $-0.49$             \\
+see         & $-0.49$             \\
                    & $[-1.51;\ 0.62]$    \\
-b\_verbsuggest     & $-8.75^{*}$         \\
+suggest     & $-8.75^{*}$         \\
                    & $[-9.62;\ -7.95]$   \\
-b\_verbthink       & $-9.71^{*}$         \\
+think       & $-9.71^{*}$         \\
                    & $[-10.65;\ -8.87]$  \\
 \hline
 \multicolumn{2}{l}{\scriptsize{$^*$ 0 outside 95\% credible interval}}
@@ -1295,47 +1389,47 @@ Formula: \tiny \verb|model.brms.proj.b = brm(nResponse ~ verb + (1/workerid) + (
 \hline
 b\_Intercept        & $6.17^{*}$          \\
                     & $[5.55;\ 6.88]$     \\
-b\_verbacknowledge  & $-4.89^{*}$         \\
+acknowledge  & $-4.89^{*}$         \\
                     & $[-5.65;\ -4.21]$   \\
-b\_verbadmit        & $-4.86^{*}$         \\
+admit        & $-4.86^{*}$         \\
                     & $[-5.59;\ -4.19]$   \\
-b\_verbannounce     & $-6.46^{*}$         \\
+announce     & $-6.46^{*}$         \\
                     & $[-7.20;\ -5.80]$   \\
-b\_verbbe\_annoyed  & $-5.18^{*}$         \\
+be\_annoyed  & $-5.18^{*}$         \\
                     & $[-5.91;\ -4.51]$   \\
-b\_verbbe\_right    & $-1.90^{*}$         \\
+be\_right    & $-1.90^{*}$         \\
                     & $[-2.70;\ -1.12]$   \\
-b\_verbconfess      & $-4.85^{*}$         \\
+confess      & $-4.85^{*}$         \\
                     & $[-5.59;\ -4.18]$   \\
-b\_verbconfirm      & $-4.25^{*}$         \\
+confirm      & $-4.25^{*}$         \\
                     & $[-4.99;\ -3.57]$   \\
-b\_verbdemonstrate  & $-4.53^{*}$         \\
+demonstrate  & $-4.53^{*}$         \\
                     & $[-5.25;\ -3.84]$   \\
-b\_verbdiscover     & $-3.30^{*}$         \\
+discover     & $-3.30^{*}$         \\
                     & $[-4.06;\ -2.61]$   \\
-b\_verbestablish    & $-4.29^{*}$         \\
+establish    & $-4.29^{*}$         \\
                     & $[-5.06;\ -3.62]$   \\
-b\_verbhear         & $-8.98^{*}$         \\
+hear         & $-8.98^{*}$         \\
                     & $[-9.79;\ -8.27]$   \\
-b\_verbinform       & $-6.46^{*}$         \\
+inform       & $-6.46^{*}$         \\
                     & $[-7.20;\ -5.81]$   \\
-b\_verbknow         & $-3.64^{*}$         \\
+know         & $-3.64^{*}$         \\
                     & $[-4.39;\ -2.95]$   \\
-b\_verbnonMcontrd.C & $-11.51^{*}$        \\
+nonMcontrd.C & $-11.51^{*}$        \\
                     & $[-12.43;\ -10.71]$ \\
-b\_verbpretend      & $-8.97^{*}$         \\
+pretend      & $-8.97^{*}$         \\
                     & $[-9.78;\ -8.26]$   \\
-b\_verbprove        & $-3.36^{*}$         \\
+prove        & $-3.36^{*}$         \\
                     & $[-4.10;\ -2.65]$   \\
-b\_verbreveal       & $-4.99^{*}$         \\
+reveal       & $-4.99^{*}$         \\
                     & $[-5.73;\ -4.32]$   \\
-b\_verbsay          & $-7.11^{*}$         \\
+say          & $-7.11^{*}$         \\
                     & $[-7.87;\ -6.42]$   \\
-b\_verbsee          & $-3.48^{*}$         \\
+see          & $-3.48^{*}$         \\
                     & $[-4.21;\ -2.78]$   \\
-b\_verbsuggest      & $-8.92^{*}$         \\
+suggest      & $-8.92^{*}$         \\
                     & $[-9.71;\ -8.21]$   \\
-b\_verbthink        & $-9.81^{*}$         \\
+think        & $-9.81^{*}$         \\
                     & $[-10.67;\ -9.06]$  \\
 \hline
 \multicolumn{2}{l}{\scriptsize{$^*$ 0 outside 95\% credible interval}}
