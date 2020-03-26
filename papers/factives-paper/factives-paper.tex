@@ -480,7 +480,6 @@ Figure \ref{f-projectivity} shows the mean certainty ratings for the target stim
 In view of this finding, one might ask whether the categorization of clause-embedding predicates assumed in (\ref{pred}) is correct: perhaps there is a different place in which a line can be drawn between factive and optionally factive predicates based on the projectivity of the CCs? The mean certainty ratings plotted in Figure \ref{f-projectivity} suggest that this cannot be done in a non-arbitrary way. For instance, one might consider all predicates factive whose CC is at least as projective as that of {\em reveal}: this would mean that the predicates typically taken to be factive are factive, as well as {\em acknowledge, hear} and {\em inform}. There is, however, no principled reason why the projectivity of the CC of {\em reveal} should be the cut-off for factivity. A different approach would be to pick an arbitrary mean certainty rating, say .8, and to categorize predicates whose CC has a mean certainty rating of at least .8 as factive and predicates whose CC has a mean certainty rating below .8 as optionally factive. However, this is as unprincipled an approach as the previous one -- one could just as well pick a threshold of .85 or .75, with the result that different predicates would be considered factive: for instance, {\em discover} (mean: .78) would not count as factive with a threshold of .8, but would with a threshold of .75, and {\em see} (mean: .81) would count as factive with a threshold of .8, but not with a threshold of .85.\footnote{Choosing an arbitrary numeric threshold for factivity is also complicated by the fact that there is by-experiment variation in mean certainty ratings. For instance, the mean certainty ratings in Exp.~1a were lower, overall, than the mean certainty ratings in \citetpos{tbd-variability} Exps.~1. For example, the CC of {\em be annoyed}, which was the most projective in both sets of experiments, received mean certainty ratings of .96  and .92 in \citetpos{tbd-variability} Exps.~1a and 1b, respectively, but only a .86 in our Exp.~1a. This difference may be due to the fact that \citet{tbd-variability} primarily investigated highly projective content whereas our Exp.~1a included a wide range of less projective content: it is possible that participants' certainty ratings were influenced by the overall projectivity of the contents investigated. We leave this matter to future research.}
 
 The possibility of categorizing clause-embedding predicates by the projectivity of the CC is further called into question by the fact that the CC of all of the 20 predicates investigated is projective, albeit to varying degrees, compared to the non-projective main clause controls. This was established by fitting a Bayesian mixed effects Beta regression model  with weakly informative priors using the \verb|brms| \citep{buerkner2017}  package in R \citep{R}.
-%\footnote{We conducted a Beta regression instead of a linear regression because linear regression assumes normally-distributed residuals and homoscedasticity, and these assumptions were violated by this dataset. Beta regression is useful because it allows for modeling an arbitrarily distributed outcome variable in the $[$0,1$]$ interval  \citep{smithson2006}.} 
 The model predicted the certainty ratings from a fixed effect of predicate (with treatment coding and `main clause' as  reference level) and included the maximal random effects structure justified by the design: random by-participant and by-item intercepts (capturing random variability in projectivity between participants and between items, where an item is a unique combination of a predicate and a complement clause). \jt{A Beta regression model estimates two parameters of the outcome distribution: the mean  (like a linear regression model) as well as the precision. The precision is a measure of dispersion: the greater the precision, the more concentrated the ratings are around the mean. From the model we fitted, we obtain for each predicate a 95\% credible interval for the mean rating for that predicate: this allows us to identify whether the mean ratings of the predicate and of the main clause controls differ. We also obtain a 95\% credible interval for the precision coefficient: this allows us to identify whether the dispersion of ratings around the mean for the predicate and for the main clause controls differ.} Appendix \ref{modeldetails} motivates the use of Beta regression over linear regression, provides a brief primer on how to interpret Bayesian mixed effects Beta regression models and reports the full model output.
 
 \jt{According to the Beta regression model, the estimated mean for each predicate was higher than that of the main clause controls, i.e., the 95\% credible intervals for the estimated mean did not contain 0 for any predicate. This finding suggests that the content of the complement of each of the 20 predicates is projective compared to non-projective main clause content. This finding is strengthened by the estimated precision coefficients:} with the exception of the predicates \emph{pretend},  \emph{think}, \emph{suggest} and \emph{say}, the estimated precision coefficient for each predicate was lower than that of the main clause controls (i.e., the 95\% credible intervals for the precision coefficient did not contain 0 for any predicate). This means that there was greater dispersion in certainty ratings these predicate than for the main clause controls; 
@@ -515,7 +514,7 @@ It is possible that asking participants to assess projection with a gradient res
 
 Figure \ref{f-projectivity2} shows the proportion of `yes' ratings (indicating projection) for the predicates and the main clause stimuli, in increasing order from left to right. Jittered gray dots indicate the 436 individual participants' ratings. The order of predicates according to the projectivity of their CC in Exp.~1b is strikingly similar to that of Exp.~1a, as evidenced by the very high Spearman rank correlation of .983 (see Appendix \ref{a-comparison} for a visualization).\footnote{The Spearman rank correlation coefficient, a value between -1 and 1, is a nonparametric measure of rank correlation: the higher the coefficient, the more the relation between the the two variables can be described using a monotonic function; if the coefficient is positive, the value of one variable tends to increase with an increase in the other. In the case of our experiments, a coefficient of 1 would mean that there is a perfectly monotone increasing relation between the ranking of the predicates in Exp.~1a and Exp.~1b: for any two predicates $p_1$ and $p_2$, if $p_1$ ranks below $p_2$ in Exp.~1a (that is, the mean certainty rating of $p_1$ is lower than that of $p_2$), then that ranking is preserved in Exp.~1b.} 
 
-The critical findings of Exp.~1a were replicated. First, the CCs of the factive predicates were not categorically more projective than the CCs of the optionally factive predicates:  the CCs of {\em acknowledge, hear} and {\em inform} were again at least as projective as the CCs of {\em reveal} or {\em discover}. Second, a non-arbitrary line between factive and optionally factive predicates cannot be drawn: the CCs of all 20 predicates were projective compared to the non-projective main clause controls \jd{insert model info here} (for details on the model that was fitted, see Appendix \ref{a-comparison}). Thus, like Exp.~1a, the results of Exp.~1b do not support the assumption of the definition of factive predicates in (\ref{def}a) that factive predicates are categorically distinguished from optionally factive and non-factive ones by the projectivity of the CC.
+The critical findings of Exp.~1a were replicated. First, the CCs of the factive predicates were not categorically more projective than the CCs of the optionally factive predicates:  the CCs of {\em acknowledge, hear} and {\em inform} were again at least as projective as the CCs of {\em reveal} or {\em discover}. Second, a non-arbitrary line between factive and optionally factive predicates cannot be drawn: the CCs of all 20 predicates were projective compared to the non-projective main clause controls. This was established by fitting a Bayesian mixed effects logistic regression model  with weakly informative priors using the \verb|brms| package in R. The model predicted the log odds of a `yes' over a `no' response from a fixed effect of predicate (with treatment coding and `main clause' as  reference level) and included the maximal random effects structure justified by the design, random by-participant and by-item intercepts. The estimated log odds of a `yes' response was greater for each predicate than that of the main clause controls, i.e., the 95\% credible intervals for the estimated coefficients did not contain 0 for any predicate. See Appendix \ref{a-comparison} \jd{insert correct ref} for model details. Thus, like Exp.~1a, the results of Exp.~1b do not support the assumption of the definition of factive predicates in (\ref{def}a) that factive predicates are categorically distinguished from optionally factive and non-factive ones by the projectivity of the CC.
 
 \begin{figure}[H]
 
@@ -1139,101 +1138,83 @@ Table \ref{tab:exp1amodelresults} shows the posterior estimates of $\mu$ and $\p
 %\item The model provided evidence for the predicted effect of the at-issueness of the generalization on the at-issueness of the prejacent: the prejacent of EASs for which the truth of the generalizations was more likely to follow from the common ground were more likely to receive a `yes' (at-issue) rating than the prejacent of EAS for which the truth of the generalization was less likely to follow from the common ground  (posterior mean $\beta$ = 1.29, 95\% CI={[}0.69,1.87{]}, $P(\beta > 0)$ = 1). This finding suggests that the prejacent of EASs is more at-issue when the generalization is less at-issue than when the generalization is more at-issue, as predicted by the analysis in section \ref{s2}.
 
 \begin{table}
-\caption{Posterior estimates of mean $\mu$ (left column) and precision $\phi$ (right column) with 95\% credible intervals  for projection ratings from Exp.~1a Bayesian mixed effects Beta regression (contrast of each predicate with main clause control reference level).}
+\caption{Maximum a posteriori (MAP) model estimates for projection ratings from Exp.~1a (left and middle column, mean $\mu$ and precision $\phi$) and Exp.~1b (right column, $\beta$)  with 95\% credible intervals. Contrast of each predicate is with main clause control reference level. MAP estimates for which there is no evidence that they are different from 0 are italicized.}
+\small
 \begin{center}
-\begin{tabular}{l c l c}
+\begin{tabular}{l c c c}
 \toprule
-\multicolumn{2}{c}{Estimated $\mu$} & \multicolumn{2}{c}{Estimated $\phi$}\\
+& \multicolumn{2}{c}{Exp.~1a: Beta regression} & Exp.~1b: logistic regression \\
+Predictor & Estimated $\mu$ & Estimated $\phi$ & Estimated $\beta$\\
 \midrule
-Intercept & $-1.88^{*}$  &	Intercept  & $1.16^{*}$ \\
-		
-& $[-1.98;\ -1.78]$ &	& $[1.02;\ 1.29]$  \\
-		
-acknowledge & $2.62^{*}$ &	 acknowledge & $-0.67^{*}$  \\
-		
-& $[2.45;\ 2.80]$  &	& $[-0.86;\ -0.49]$ \\
-		
-admit & $2.45^{*}$ &	 admit  & $-0.65^{*}$  \\
-		
-& $[2.29;\ 2.61]$  &	& $[-0.83;\ -0.48]$ \\
-		
-announce  & $2.14^{*}$ &	 announce & $-0.74^{*}$  \\
-		
-& $[1.98;\ 2.30]$  &	& $[-0.92;\ -0.57]$ \\
-		
-be\_annoyed & $3.56^{*}$ &	 be\_annoyed & $-0.30^{*}$  \\
-		
-& $[3.37;\ 3.75]$  &	& $[-0.51;\ -0.10]$ \\
-		
-be\_right & $0.52^{*}$ &	 be\_right  & $-0.21^{*}$  \\
-		
-& $[0.36;\ 0.68]$  &	& $[-0.40;\ -0.01]$ \\
-		
-confess & $2.29^{*}$ &	 confess  & $-0.71^{*}$  \\
-		
-& $[2.13;\ 2.45]$  &	& $[-0.88;\ -0.54]$ \\
-		
-confirm & $1.31^{*}$ &	 confirm  & $-0.46^{*}$  \\
-		
-& $[1.15;\ 1.46]$  &	& $[-0.64;\ -0.28]$ \\
-		
-demonstrate & $1.78^{*}$ &	 demonstrate & $-0.59^{*}$  \\
-		
-& $[1.63;\ 1.93]$  &	& $[-0.76;\ -0.41]$ \\
-		
-discover  & $2.90^{*}$ &	 discover & $-0.67^{*}$  \\
-		
-& $[2.72;\ 3.07]$  &	& $[-0.85;\ -0.48]$ \\
-		
-establish & $1.42^{*}$ &	 establish  & $-0.55^{*}$  \\
-		
-& $[1.26;\ 1.58]$  &	& $[-0.73;\ -0.38]$ \\
-		
-hear  & $2.71^{*}$ &	 hear & $-0.79^{*}$  \\
-		
-& $[2.53;\ 2.88]$  &	& $[-0.98;\ -0.61]$ \\
-		
-inform  & $3.00^{*}$ &	 inform & $-0.60^{*}$  \\
-		
-& $[2.82;\ 3.18]$  &	& $[-0.79;\ -0.41]$ \\
-		
-know  & $3.37^{*}$ &	 know & $-0.49^{*}$  \\
-		
-& $[3.18;\ 3.56]$  &	& $[-0.70;\ -0.29]$ \\
-		
-pretend & $0.32^{*}$ &	 pretend  & $-0.19^{*}$  \\
-		
-& $[0.15;\ 0.49]$  &	& $[-0.38;\ -0.00]$ \\
-		
-prove & $1.16^{*}$ &	 prove  & $-0.21^{*}$  \\
-		
-& $[1.01;\ 1.31]$  &	& $[-0.40;\ -0.03]$ \\
-		
-reveal  & $2.59^{*}$ &	 reveal & $-0.72^{*}$  \\
-		
-& $[2.42;\ 2.76]$  &	& $[-0.90;\ -0.55]$ \\
-		
-say & $0.78^{*}$ &	 say  & $-0.12$  \\
-		
-& $[0.63;\ 0.93]$  &	& $[-0.30;\ 0.06]$ \\
-		
-see & $3.01^{*}$ &	 see  & $-0.70^{*}$  \\
-		
-& $[2.83;\ 3.19]$  &	& $[-0.90;\ -0.51]$ \\
-		
-suggest & $0.79^{*}$ &	 suggest  & $-0.17$  \\
-		
-& $[0.63;\ 0.94]$  &	& $[-0.36;\ 0.02]$ \\
-		
-think & $0.62^{*}$ &	 think  & $0.01$ \\
-		
-& $[0.47;\ 0.78]$  &	& $[-0.17;\ 0.20]$ \\\hline
-\multicolumn{2}{l}{\scriptsize{$^*$ 0 outside 95\% credible interval}}
+\multirow{2}{*}{Intercept} & $-1.88 $  & $1.16 $ & $-6.37 $       \\
+& $[-1.98;\ -1.78]$ & $[1.02;\ 1.29]$  & $[-7.10;\ -5.72]$ \\
+[.25em]
+\multirow{2}{*}{acknowledge} & $2.62 $ & $-0.67 $  & $8.00 $        \\
+& $[2.45;\ 2.80]$  & $[-0.86;\ -0.49]$ & $[7.31;\ 8.78]$   \\
+[.25em]
+\multirow{2}{*}{admit} & $2.45 $ & $-0.65 $  & $7.29 $        \\
+& $[2.29;\ 2.61]$  & $[-0.83;\ -0.48]$ & $[6.60;\ 8.04]$   \\
+[.25em]
+\multirow{2}{*}{announce}  & $2.14 $ & $-0.74 $  & $6.70 $        \\
+& $[1.98;\ 2.30]$  & $[-0.92;\ -0.57]$ & $[6.04;\ 7.45]$   \\
+[.25em]
+\multirow{2}{*}{be annoyed} & $3.56 $ & $-0.30 $  & $9.41 $        \\
+& $[3.37;\ 3.75]$  & $[-0.51;\ -0.10]$ & $[8.64;\ 10.22]$  \\
+[.25em]
+\multirow{2}{*}{be right} & $0.52 $ & $-0.21 $  & $2.33 $        \\
+& $[0.36;\ 0.68]$  & $[-0.40;\ -0.01]$ & $[1.50;\ 3.21]$   \\
+[.25em]
+\multirow{2}{*}{confess} & $2.29 $ & $-0.71 $  & $6.75 $        \\
+& $[2.13;\ 2.45]$  & $[-0.88;\ -0.54]$ & $[6.07;\ 7.50]$   \\
+[.25em]
+\multirow{2}{*}{confirm} & $1.31 $ & $-0.46 $  & $4.27 $        \\
+& $[1.15;\ 1.46]$  & $[-0.64;\ -0.28]$ & $[3.60;\ 5.01]$   \\
+[.25em]
+\multirow{2}{*}{demonstrate} & $1.78 $ & $-0.59 $  & $5.31 $        \\
+& $[1.63;\ 1.93]$  & $[-0.76;\ -0.41]$ & $[4.64;\ 6.06]$   \\
+[.25em]
+\multirow{2}{*}{discover}  & $2.90 $ & $-0.67 $  & $8.46 $        \\
+& $[2.72;\ 3.07]$  & $[-0.85;\ -0.48]$ & $[7.75;\ 9.25]$   \\
+[.25em]
+\multirow{2}{*}{establish} & $1.42 $ & $-0.55 $  & $4.51 $        \\
+& $[1.26;\ 1.58]$  & $[-0.73;\ -0.38]$ & $[3.83;\ 5.26]$   \\
+[.25em]
+\multirow{2}{*}{hear}  & $2.71 $ & $-0.79 $  & $8.22 $        \\
+& $[2.53;\ 2.88]$  & $[-0.98;\ -0.61]$ & $[7.50;\ 9.01]$   \\
+[.25em]
+\multirow{2}{*}{inform}  & $3.00 $ & $-0.60 $  & $9.13 $        \\
+& $[2.82;\ 3.18]$  & $[-0.79;\ -0.41]$ & $[8.38;\ 9.94]$   \\
+[.25em]
+\multirow{2}{*}{know}  & $3.37 $ & $-0.49 $  & $9.72 $        \\
+& $[3.18;\ 3.56]$  & $[-0.70;\ -0.29]$ & $[8.94;\ 10.57]$  \\
+[.25em]
+\multirow{2}{*}{pretend} & $0.32 $ & $-0.19 $  & $3.22 $        \\
+& $[0.15;\ 0.49]$  & $[-0.38;\ -0.00]$ & $[2.50;\ 4.03]$   \\
+[.25em]
+\multirow{2}{*}{prove} & $1.16 $ & $-0.21 $  & $3.92 $        \\
+& $[1.01;\ 1.31]$  & $[-0.40;\ -0.03]$ & $[3.21;\ 4.67]$   \\
+[.25em]
+\multirow{2}{*}{reveal}  & $2.59 $ & $-0.72 $  & $7.41 $        \\
+& $[2.42;\ 2.76]$  & $[-0.90;\ -0.55]$ & $[6.72;\ 8.16]$   \\
+[.25em]
+\multirow{2}{*}{say} & $0.78 $ & \emph{-0.12}  & $3.10 $        \\
+& $[0.63;\ 0.93]$  & $[-0.30;\ 0.06]$ & $[2.35;\ 3.93]$   \\
+[.25em]
+\multirow{2}{*}{see} & $3.01 $ & $-0.70 $  & $8.74 $        \\
+& $[2.83;\ 3.19]$  & $[-0.90;\ -0.51]$ & $[8.03;\ 9.55]$   \\
+[.25em]
+\multirow{2}{*}{suggest} & $0.79 $ & \emph{-0.17}  & $3.22 $        \\
+& $[0.63;\ 0.94]$  & $[-0.36;\ 0.02]$ & $[2.49;\ 3.99]$   \\
+[.25em]
+\multirow{2}{*}{think} & $0.62 $ & \emph{0.01} & $2.54 $        \\
+& $[0.47;\ 0.78]$  & $[-0.17;\ 0.20]$ & $[1.75;\ 3.40]$   \\
+\bottomrule
 \end{tabular}
 \label{tab:exp1amodelresults}
 \end{center}
 \end{table}
 
+\normalsize
 
 \section{Details on the Bayesian models for Experiments 1b, 2b, and 3b}\label{modeldetails-b}
 

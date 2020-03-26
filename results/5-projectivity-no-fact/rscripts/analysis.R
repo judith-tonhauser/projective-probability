@@ -288,7 +288,11 @@ cd$isZeroOne = (cd$response == 0 | cd$response == 1)
 
 # plotting slider ratings suggests we should use a zoib model
 ggplot(cd, aes(x=response)) +
-  geom_histogram()
+  geom_histogram(bins=50) +
+  xlab("Rating") +
+  ylab("Number of ratings") +
+  scale_x_continuous(breaks=seq(0,1,by=0.1))
+ggsave("../graphs/bunching.pdf",width=5,height=3)
 
 p = ggplot(cd, aes(x=response,fill=isMC)) +
   geom_histogram() +
