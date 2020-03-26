@@ -1,5 +1,5 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{24}
+\begin{thebibliography}{25}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrus{\'a}n(2011)]{abrusan2011}
@@ -41,6 +41,14 @@ Beaver, David, Craige Roberts, Mandy Simons, and Judith Tonhauser. 2017.
   projective content.
 \newblock {\em Annual Review of Linguistics\/} 3:265--284.
 
+\bibitem[Boyce et~al.(2018)Boyce, {von der Malsburg}, Poppels, and
+  Levy]{boyce-etal2018}
+Boyce, V, Titus {von der Malsburg}, Tim Poppels, and Roger Levy. 2018.
+\newblock Implicit gender in the production and comprehension of pronominal
+  references.
+\newblock In {\em Proceedings of the 31th Annual CUNY Conference on Human
+  Sentence Processing\/}.
+
 \bibitem[Egr\'e(2008)]{egre2008}
 Egr\'e, Paul. 2008.
 \newblock Question-embedding and factivity.
@@ -75,10 +83,10 @@ Lorson, Alexandra. 2018.
 \newblock The influence of world knowledge on projectivity.
 \newblock M.A.\ thesis, University of Potsdam.
 
-\bibitem[Mahler(2019)]{mahler-qp2}
-Mahler, Taylor. 2019.
+\bibitem[Mahler(2020)]{mahler2020}
+Mahler, Taylor. 2020.
 \newblock The social component of projection behavior of clausal complements.
-\newblock Qualifying Paper, The Ohio State University.
+\newblock In {\em LSA 2020 XXX\/}.
 
 \bibitem[Schlenker(2010)]{schlenker10}
 Schlenker, Philippe. 2010.
