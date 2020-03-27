@@ -45,14 +45,15 @@ p_prop = d_proj_b %>%
   summarize(Prop = mean(nResponse), CILow = ci.low(nResponse), CIHigh = ci.high(nResponse)) %>%
   mutate(YMinP = Prop - CILow, YMaxP = Prop + CIHigh, verb = fct_reorder(as.factor(verb),Prop))
 #View(p_prop)
+levels(p_prop$verb)
 
 p_means = d_proj_nb %>%
   group_by(verb) %>%
   summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-  mutate(YMinM = Mean - CILow, YMaxM = Mean + CIHigh) %>%
+  mutate(YMinM = Mean - CILow, YMaxM = Mean + CIHigh, verb = fct_reorder(as.factor(verb),p_prop$Prop)) %>%
   select(-CILow,-CIHigh)
-levels(p_means$verb)
 #View(p_means)
+levels(p_means$verb)
 
 pd = p_prop %>%
   left_join(p_means) %>%
@@ -63,8 +64,10 @@ pd = p_prop %>%
     verb %in% c("MC") ~ "MC",
     TRUE ~ "V")))
 #View(pd)
-
 levels(pd$VeridicalityGroup)
+
+
+pd$VeridicalityGroup <- factor(pd$VeridicalityGroup, levels =rev(c("F","V","VNF","NF","MC")))
 
 pp <- ggplot(pd, aes(x=Mean, y=Prop, fill=VeridicalityGroup,shape=VeridicalityGroup)) +
   geom_errorbar(aes(ymin=YMinP,ymax=YMaxP),width=0) +
