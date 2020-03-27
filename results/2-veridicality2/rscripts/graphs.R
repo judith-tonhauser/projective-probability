@@ -24,6 +24,15 @@ theme_set(theme_bw())
 cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
 nrow(cd) #7364 / 28 items = 263 participants
 
+# plotting slider ratings suggests we should not use a linear regression model because of the slier endpoint bunching
+ggplot(cd, aes(x=response)) +
+  geom_histogram(bins=50) +
+  xlab("Rating") +
+  ylab("Number of ratings") +
+  scale_x_continuous(breaks=seq(0,1,by=.1))
+ggsave("../graphs/bunching.pdf",width=3.4,height=2)
+
+
 # target data (20 items per Turker)
 names(cd)
 table(cd$verb)

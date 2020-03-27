@@ -25,6 +25,14 @@ cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
 nrow(cd) #7252
 summary(cd)
 
+# plotting slider ratings suggests we should not use a linear regression model because of the slier endpoint bunching
+ggplot(cd, aes(x=response)) +
+  geom_histogram(bins=50) +
+  xlab("Rating") +
+  ylab("Number of ratings") +
+  scale_x_continuous(breaks=seq(0,1,by=.1))
+ggsave("../graphs/bunching.pdf",width=3.4,height=2)
+
 # write means and sd to separate file 
 means = cd %>%
   group_by(verb) %>%

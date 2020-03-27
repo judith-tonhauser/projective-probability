@@ -526,10 +526,6 @@ cd$content = as.factor(as.character(cd$content))
 cd$isEntailing = cd$verb == "contradictory C"
 cd$isZeroOne = (cd$response == 0 | cd$response == 1)
 
-# plotting slider ratings suggests we should use a zoib model
-ggplot(cd, aes(x=response,fill=isEntailing)) +
-  geom_histogram()
-
 p = ggplot(cd, aes(x=response,fill=isEntailing)) +
   geom_histogram() +
   facet_wrap(~workerid)
@@ -581,6 +577,21 @@ plot(q_answer)
 prop.table(table(q_answer$samples$H1 > 0)) # prob (know < entailing) = 1
 
 
+##############################
+# linear models (Bayesian and frequentist)
+
+m.lin = brm(response ~ verb + (1|workerid) + (1|item),
+            data=d, 
+            cores = 4,
+            family = gaussian(),
+            control = list(adapt_delta = .95,max_treedepth=15))
+
+summary(m.lin)
+
+saveRDS(m.lin,file="../data/linear-model-mixed.rds")
+
+# to load model
+m.lin = readRDS(file="../data/linear-model-mixed.rds")
 
 # THE FOLLOWING IS DEPRECATED SINCE WE'RE NOT DOING ZOIB MODELS ANYMORE
 # zoib model
