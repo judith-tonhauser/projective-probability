@@ -286,14 +286,6 @@ cd$content = as.factor(as.character(cd$content))
 cd$isMC = cd$verb == "MC"
 cd$isZeroOne = (cd$response == 0 | cd$response == 1)
 
-# plotting slider ratings suggests we should use a zoib model
-ggplot(cd, aes(x=response)) +
-  geom_histogram(bins=50) +
-  xlab("Rating") +
-  ylab("Number of ratings") +
-  scale_x_continuous(breaks=seq(0,1,by=0.1))
-ggsave("../graphs/bunching.pdf",width=5,height=3)
-
 p = ggplot(cd, aes(x=response,fill=isMC)) +
   geom_histogram() +
   facet_wrap(~workerid)
@@ -309,7 +301,7 @@ table(d$verb)
 # run beta regression instead of zoib
 
 # first, because response assumes values of 0 and 1, which beta regression cannot handle, transform: (Smithson & Verkuilen 2006)
-# y'' = (y' · (n − 1) + 0.5)/n
+# y'' = (y' ?? (n ??? 1) + 0.5)/n
 # note: first rescaling of y'=(y-a)/(b-a) not necessary because highest and lowest value are 0 and 1 already
 d$betaresponse = (d$response*(nrow(d)-1) + .5)/nrow(d)
 

@@ -66,8 +66,14 @@ pd = p_prop %>%
 #View(pd)
 levels(pd$VeridicalityGroup)
 
-
 pd$VeridicalityGroup <- factor(pd$VeridicalityGroup, levels =rev(c("F","V","VNF","NF","MC")))
+
+# shape-predicate mapping
+# 21: mc
+# 22: non-veridical non-factive NF
+# 23: factive F
+# 24: optionally factive V
+# 25: veridical non-factive VNF
 
 pp <- ggplot(pd, aes(x=Mean, y=Prop, fill=VeridicalityGroup,shape=VeridicalityGroup)) +
   geom_errorbar(aes(ymin=YMinP,ymax=YMaxP),width=0) +
@@ -76,10 +82,10 @@ pp <- ggplot(pd, aes(x=Mean, y=Prop, fill=VeridicalityGroup,shape=VeridicalityGr
   # scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   # scale_alpha(range = c(.3,1)) +
   #scale_fill_manual(values=c("darkorchid","black","gray60","tomato1","dodgerblue")) +
-  scale_shape_manual(values=rev(c(25, 24, 22, 21, 23)),
-                     labels=rev(c("veridical\nnon-factive","optionally\nfactive","non-veridical\nnon-factive","controls","factive")),name="Predicate type") +
-  scale_fill_manual(values=rev(c("dodgerblue","tomato1","gray60","black","darkorchid")),
-                    labels=rev(c("veridical\nnon-factive","optionally\nfactive","non-veridical\nnon-factive","controls","factive")),name="Predicate type") +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),
+                     labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),
+                    labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
   ylab("Proportion of 'yes (certain)' ratings") +
   xlab("Mean certainty rating") +
@@ -118,16 +124,12 @@ einfd = einf_prop %>%
     verb %in% c("know", "discover", "reveal", "see", "be_annoyed") ~ "F", 
     verb %in% c("pretend", "think", "suggest", "say") ~ "NF", 
     verb %in% c("be_right","demonstrate") ~ "VNF",
-    verb %in% c("entailing C","non-ent. C") ~ "control",
+    verb %in% c("entailing C","non-ent. C") ~ "MC",
     TRUE ~ "V")))
 einfd
 levels(einfd$VeridicalityGroup)
 
-# factive: 23 (raute)
-# optionally factive (V): 24 (triangle up)
-# veridical non-factive: 25 (triangle down)
-# non-veridical non-factive: 22 (square)
-# MC: 21 (circle)
+einfd$VeridicalityGroup <- factor(einfd$VeridicalityGroup, levels =rev(c("F","V","VNF","NF","MC")))
 
 pe <- ggplot(einfd, aes(x=Mean, y=Prop, fill=VeridicalityGroup,shape=VeridicalityGroup)) +
   geom_errorbar(aes(ymin=YMinP,ymax=YMaxP),width=0) +
@@ -135,8 +137,8 @@ pe <- ggplot(einfd, aes(x=Mean, y=Prop, fill=VeridicalityGroup,shape=Veridicalit
   geom_point(stroke=.5,size=2.5,color="black") +
   # scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   # scale_alpha(range = c(.3,1)) +
-  scale_shape_manual(values=rev(c(21, 25, 24, 22, 23))) +
-  scale_fill_manual(values=rev(c("black","dodgerblue","tomato1","gray60","darkorchid"))) +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21))) +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black"))) +
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
   # guides(fill=FALSE) +
   # theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
@@ -148,11 +150,12 @@ pe <- ggplot(einfd, aes(x=Mean, y=Prop, fill=VeridicalityGroup,shape=Veridicalit
   coord_fixed(ratio = 1) +
   xlim(c(0,1)) +
   ylim(c(0,1))
+pe
 ggsave("../graphs/entailment-inference.pdf",height=3,width=3)
 
 
 corr_inference = einfd %>%
-  filter(VeridicalityGroup != "control") %>%
+  filter(VeridicalityGroup != "MC") %>%
   summarize(Cor=cor(Prop,Mean,method="spearman"))
 corr_inference #.989
 
@@ -184,10 +187,13 @@ econtrd = econtr_prop %>%
     verb %in% c("know", "discover", "reveal", "see", "be_annoyed") ~ "F", 
     verb %in% c("pretend", "think", "suggest", "say") ~ "NF", 
     verb %in% c("be_right","demonstrate") ~ "VNF",
-    verb %in% c("contradictory C","non-contrd. C") ~ "control",
+    verb %in% c("contradictory C","non-contrd. C") ~ "MC",
     TRUE ~ "V")))
 econtrd
 levels(econtrd$VeridicalityGroup)
+
+econtrd$VeridicalityGroup <- factor(econtrd$VeridicalityGroup, levels =rev(c("F","V","VNF","NF","MC")))
+
 
 # factive: 23 (raute)
 # optionally factive (V): 24 (triangle up)
@@ -201,8 +207,8 @@ pc <- ggplot(econtrd, aes(x=Mean, y=Prop, fill=VeridicalityGroup,shape=Veridical
   geom_point(stroke=.5,size=2.5,color="black") +
   # scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   # scale_alpha(range = c(.3,1)) +
-  scale_shape_manual(values=rev(c(21, 25, 24, 22, 23))) +
-  scale_fill_manual(values=rev(c("black","dodgerblue","tomato1","gray60","darkorchid"))) +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21))) +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black"))) +
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
   # guides(fill=FALSE) +
   # theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
@@ -214,6 +220,7 @@ pc <- ggplot(econtrd, aes(x=Mean, y=Prop, fill=VeridicalityGroup,shape=Veridical
   coord_fixed(ratio = 1) +
   xlim(c(0,1)) +
   ylim(c(0,1))
+pc
 ggsave("../graphs/entailment-contradictory.pdf",height=3,width=3)
 
   
