@@ -6,7 +6,7 @@
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(this.dir)
 
-source('helpers.R')
+source('../../helpers.R')
 
 # load required packages
 library(tidyverse)

@@ -9,7 +9,7 @@
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(this.dir)
 
-source('helpers.R')
+source('../../helpers.R')
 
 # load required packages
 library(tidyverse)
@@ -725,6 +725,12 @@ saveRDS(m.b,file="../data/beta-model-mixed.rds")
 
 # to load model
 m.b = readRDS(file="../data/beta-model-mixed.rds")
+
+summary(m.b)
+fixef(m.b) # does the same thing
+
+# create LaTeX table
+mcmcReg(m.b, pars = "b_", file="../models/brm_output.tex")
 
 # to get stan code
 stancode(m.b)
