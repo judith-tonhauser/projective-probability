@@ -1097,9 +1097,9 @@ The following clauses realized the complements of the predicates in the three ex
 
 \end{enumerate}
 
-\section{Details on the models for Experiments 1, 2 and 3}\label{modeldetails}
+\section{Model details for Experiments 1, 2 and 3}\label{modeldetails}
 
-This appendix provides details on the data analysis conducted for Exps.~1, 2, and 3. We first motivate the use of Beta regression rather than linear regression in Exps.~1a, 2a, and 3a (section \ref{a-motivation}) and then provide a brief primer on how to interpret Bayesian mixed effects Beta regression models (section \ref{a-primer}). We then report the model outputs for Exps.~1, 2, and 3 (section \ref{a-mo}).
+This appendix provides details on the data analysis conducted for Exps.~1, 2, and 3. We first motivate the use of Beta regression rather than linear regression in Exps.~1a, 2a, and 3a (section \ref{a-motivation}) and then provide a brief primer on how to interpret Bayesian mixed effects Beta regression models (section \ref{a-primer}). We then report the model outputs for Exps.~1, 2, and 3 (section \ref{a-mo}).\jd{provide primer}
 
 \subsection{Motivation for using Bayesian mixed effects Beta regression}\label{a-motivation}
 
@@ -1147,7 +1147,7 @@ We allowed both $\mu$ and $\phi$ to vary as a function of predicate, with refere
 
 The three tables in this section show the model outputs for Exps.~1, 2 and 3, respectively. 
 
-Each table -- Table \ref{tab:exp1modelresults} (Exps.~1a and 1b), Table \ref{tab:exp2modelresults} (Exps.~2a and 2b), and Table \ref{tab:exp1modelresults} (Exps.~3a and 3b) --  shows maximum a posteriori (MAP) model estimates for projection ratings from the Beta regression model (left and middle column, mean $\mu$ and precision $\phi$) and the logistic regression model (right column, $\beta$)  with 95\% credible intervals.
+Each table -- Table \ref{tab:exp1modelresults} (Exps.~1a and 1b), Table \ref{tab:exp2modelresults} (Exps.~2a and 2b), and Table \ref{tab:exp3modelresults} (Exps.~3a and 3b) --  shows maximum a posteriori (MAP) model estimates for projection ratings from the Beta regression model (left and middle column, mean $\mu$ and precision $\phi$) and the logistic regression model (right column, $\beta$)  with 95\% credible intervals.
 
 \begin{table}
 \caption{Maximum a posteriori (MAP) model estimates for projection ratings from Exp.~1a (left and middle column, mean $\mu$ and precision $\phi$) and Exp.~1b (right column, $\beta$)  with 95\% credible intervals. Contrast of each predicate is with main clause control reference level. MAP estimates for which there is no evidence that they are different from 0 are italicized.}
@@ -1354,13 +1354,13 @@ Predictor & Estimated $\mu$ & Estimated $\phi$ & Estimated $\beta$\\
 
 \section{Comparisons of gradient and categorical ratings}\label{a-comparison}
 
-The three panels of Figure \ref{f-comparison} plot the mean ratings of Exps.~1, 2a and 3a against the proportion of `yes' ratings of Exps.~1$'$, 2a$'$ and 3b, respectively.
+The three panels of Figure \ref{f-comparison} visualize the strong correlation between by-predicate mean ratings in Exps.~1a, 2a and 3a and by-predicate proportion of `yes' responses in Exps.~1b, 2b, and 3b, respectively.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=.75\paperwidth]{../../results/compare-diagnostics-and-response-tasks/graphs/joint-comparison-plot}
    
-\caption{Proportion of `yes' ratings in two-alternative forced choice task by mean ratings on gradient scale, with 95\% bootstrapped confidence intervals, collapsing over complement clauses.}
+\caption{By-predicate proportion of `yes' responses in two-alternative forced choice task against mean slider ratings in Exps.~1 (left, $r=.98$), Exps.~2 (middle, $r=.99$), and Exps.~3 (right, $r=.99$). Error bars indicate 95\% bootstrapped confidence intervals.}
 \label{f-comparison}
 \end{figure}
 
