@@ -27,6 +27,7 @@ nrow(cd) #7364 / 28 items = 263 participants
 # plotting slider ratings suggests we should not use a linear regression model because of the slier endpoint bunching
 ggplot(cd, aes(x=response)) +
   geom_histogram(bins=50) +
+  ylim(c(0,2000)) +
   xlab("Rating") +
   ylab("Number of ratings") +
   scale_x_continuous(breaks=seq(0,1,by=.1))

@@ -56,6 +56,15 @@ mean(tmp$Freq) #13.3
 
 # plots ----
 
+# plotting slider ratings suggests we should not use a linear regression model because of the slier endpoint bunching
+ggplot(cd, aes(x=response)) +
+  geom_histogram(bins=50) +
+  ylim(c(0,2000)) +
+  xlab("Rating") +
+  ylab("Number of ratings") +
+  scale_x_continuous(breaks=seq(0,1,by=0.1))
+ggsave("../graphs/bunching.pdf",width=3.4,height=2)
+
 # mean projectivity by predicate, including the main clause controls
 means = cd %>%
   group_by(verb) %>%
