@@ -23,6 +23,14 @@ theme_set(theme_bw())
 cd = read.csv("../data/cd.csv")
 nrow(cd) #6916
 
+# plotting slider ratings suggests we should not use a linear regression model because of the slier endpoint bunching
+ggplot(cd, aes(x=response)) +
+  geom_histogram(bins=50) +
+  xlab("Rating") +
+  ylab("Number of ratings") +
+  scale_x_continuous(breaks=seq(0,1,by=.1))
+ggsave("../graphs/bunching.pdf",width=3.4,height=2)
+
 # how many ratings per predicate and per predicate-clause combination?
 
 # target data (20 items per Turker) 
