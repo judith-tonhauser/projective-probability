@@ -174,13 +174,52 @@ One cue that listeners rely on in identifying which content speakers present the
 \end{exe}
 The inference to the truth of the content of the complement has long been taken to categorize clause-embedding predicates: the inference is typically taken to arise with factive predicates, like {\em know}, but not with non-factive predicates, like {\em think} (\citealt{kiparsky-kiparsky70,karttunen71b}, i.a.). However, \citealt*{tbd-variability} recently showed that there is variability among factive predicates in the inference to the truth of the content of the complement. One source of variability was the factive predicate: for instance, the inference was less likely to arise with {\em reveal} than with {\em discover}; for both of these predicates it was less likely than with {\em know}. Another source of variability was the lexical content of the clausal complement, that is, whether content of the complement was `Sam has a new hat', as in (\ref{proj}), or `Sam has a new BMW'. The authors hypothesized that the inference to the truth of the content of the complement may depend on its prior subjective probability, such that the inference to the truth of the content of the complement is more likely to arise the higher its prior probability. This paper provides support for this hypothesis in an experimental investigation of the contents of the complements of 20 English clause-embedding predicates for which the prior probability was systematically manipulated. 
 
-\newpage
-
-We argue that this finding provides support for constraint-based projection analyses that derive the projectivity of utterance content from the integration of multiple cues, including prior CC probability and the meanings of clause-embedding predicates.
-
 \footnote{\label{f-github}The experiments, data and R code for generating the figures and analyses of the experiments reported on in this paper are available at [redacted for review].}
 %\url{https://github.com/judith-tonhauser/factivity}.}  
 
+\citealt{stevens-etal2017}: ``We also observed that the influence of prosody on the projectivity of the prejacent was heterogeneous across items. This observation suggests enriching the model with information about listeners? prior expectations about the prejacent, e.g., about how likely some- body is to smile given that they didn?t smile cheerfully.'' (p.1149)
+
+\newpage
+
+\paragraph{Previous work} The influence of prior probability on projection was previously investigated in \citealt{lorson2018} and \citealt{mahler2020}. \citet{lorson2018} investigated the influence of prior probability on the projectivity of the pre-state content of the English change of state verb {\em stop}: in the polar questions in (\ref{lorson-stim}), the pre-state contents are that James has worked as a plumber, in (\ref{lorson-stim}a), and that Linda has worked as a plumber, in (\ref{lorson-stim}b).
+
+\begin{exe}
+\ex\label{lorson-stim} 
+\begin{xlist}
+\ex Did James stop working as a plumber?
+\ex Did Linda stop working as a plumber? \hfill (\citealt[38]{lorson2018})
+\end{xlist}
+\end{exe}
+On each trial of \citepos{lorson2018} experiment, a speaker uttered a sentence like those in (\ref{lorson-stim}) to a listener. Gender stereotypes reported in \citealt{boyce-etal2018} were used to manipulate the prior probability of the pre-state content, that is, the prior beliefs of the interlocutors about the pre-state content: it is, for instance, more likely for a man (like James) to be a plumber than for a woman (like Linda) to be a plumber. The hypothesis was that higher probability pre-state contents, as in (\ref{lorson-stim}a), were more projective than lower probability pre-state contents, as in (\ref{lorson-stim}b). \citet{lorson2018} did not find empirical support for this hypothesis.
+
+\citet{mahler2020} investigated the influence of prior probability on the projectivity of the content of the complement of clause-embedding predicates. The examples in (\ref{mahler-stim}) feature the clause-embedding predicate {\em know} which is embedded under negation, together with its clausal complements: the content of the clausal complement in (\ref{mahler-stim}a) is that Obama improved the American economy and in (\ref{mahler-stim}b) that Obama damaged the American economy.
+
+\begin{exe}
+\ex\label{mahler-stim} Cindy doesn't know that\ldots
+\begin{xlist}
+\ex \ldots Obama improved the American economy.
+\ex \ldots Obama damaged the American economy. \hfill (\citealt[\jt{XX}]{mahler2020})
+\end{xlist}
+\end{exe}
+On each trial of \citepos{mahler2020} experiment, the speaker who uttered a sentence like those in (\ref{mahler-stim}) was attending a meeting of the Democrat or the Republican party. The combination of the political party affiliation of the interlocutors and the content of the complement was used to manipulate the prior probability of the content: when the content of the complement was consistent with a liberal political perspective, as in (\ref{mahler-stim}a), it had a higher prior probability with Democrat interlocutors than with Republican interlocutors, and when the content of the complement was consistent with a conservative political perspective, as in (\ref{mahler-stim}b), it had a higher prior probability with Republican interlocutors than with Democrat interlocutors. \citet{mahler2020} found that prior probability influenced projection: the content of the complement was more projective when it had a higher prior probability than when it had a lower prior probability. 
+
+\begin{itemize}
+
+\item Both \citealt{lorson2018} and \citealt{mahler2020} used the `certain that' diagnostic for projection (\citealt{tbd-variability}).
+
+\item Neither Lorson nor Mahler collected prior probability ratings from the participants: Lorson relied on \citealt{boyce-etal2018} and Mahler did a norming study.
+
+\item Prior probability entered Lorson's model in a non-categorical fashion in Lorson 2018 (consistency measure) and in a categorical fashion in Mahler 2020 (political party (2 levels) and political orientation of CC (liberal vs.\ conservative). 
+
+Lorson, p.36: ``The consistency measure is a value that ranges from 0 to 1, where a value close to 0 means that the gender of an individual is inconsistent with a certain occupation, according to the collected gender-bias that was found to be associated with that occupation. A value close to 1 means that the gender of an individual is consistent with an occupation.''
+
+\end{itemize}
+
+Mahler also manipulated clause-embedding predicate: two categories (factive: {\em know, realize, see, discover} and non-factive: {\em believe, think, feel}). CCs of factive predicates more projective than CCs of non-factive predicates. \jt{what does mahler say about why she included non-factives?}
+
+\newpage
+
+\paragraph{Predicates we used}
 
 The 20 predicates we investigated are listed in (\ref{pred}) with the categories they are typically taken to fall into: factive predicates in (\ref{pred}a), non-factive predicates in (\ref{pred}b) and optionally factive predicates in (\ref{pred}c). Specifically, the 5 factive predicates in (\ref{pred}a) include the cognitive predicate {\em know}, the change-of-states predicates {\em discover} and {\em reveal}, the sensory predicate {\em see}, and the emotive predicate {\em be annoyed}. The 6 non-factive predicates in (\ref{pred}b) include 4 `non-veridical non-factive' predicates {\em pretend, suggest, say} and {\em think}, whose CC is typically taken to be neither presupposed nor entailed, as well as  2 `veridical non-factive' predicates {\em be right} and {\em demonstrate}, whose CC is typically taken to be entailed but not presupposed.\footnote{\citet{anand-hacquard2014} assumed that {\em demonstrate} is veridical, in contrast to \citealt{anand-etal2019}. This latter work also takes {\em reveal} to be non-factive, in contrast to, for instance, \citealt{egre2008,wyse} or \citealt{tbd-variability}.}  The 9 optionally factive predicates in (\ref{pred}c) include {\em acknowledge, admit} and {\em announce}, which \citealt{kiparsky-kiparsky70} listed as optionally factive, as well as {\em confirm, inform, confess, establish, hear} and {\em prove}.\footnote{Different categories have been assumed for these 6 predicates. For {\em confirm} and {\em inform}, \citet{anand-hacquard2014} took them to be optionally factive, but recall from above that \citet{schlenker10} took {\em inform} to be factive. For {\em prove}, \citet{white-rawlins-nels2018} suggested that it is optionally factive, but \citet{anand-hacquard2014} took it to be non-veridical and non-factive. For {\em confess}, \citet{swanson2012} took it to be factive, \citet{karttunen2016} only took it to commit the speaker to the subject of the attitude being committed to the CC, and \citet{wyse} listed it under the non-factive predicates. For {\em establish}, \citet{swanson2012} took it to be non-factive, but \citet{wyse} listed it under the factive predicates. Finally, we also included {\em hear} in this class: even though it is often considered a factive sensory predicate (e.g., \citealt{beaver-belly,anand-hacquard2014}), it has been observed that {\em hear} also has a non-factive reportative evidential sense (see, e.g., \citealt{anderson86,simons07}), especially when it is combined with complements that describe events that cannot be auditorily perceived, as is the case in our experiments.}
 
@@ -202,25 +241,6 @@ The 20 predicates we investigated are listed in (\ref{pred}) with the categories
 Prior probability was manipulated by presenting a content with two facts: one that makes content have higher probability and one that makes the content have a lower probability.
 
 We hypothesized that the prior probability of the content of the clause would be relatively high (though not at ceiling) with one fact (referred to as the content's `higher probability fact') and relatively low (though not at floor) with the other (referred to as the content's `lower probability fact'): for instance, in (\ref{target}a), we hypothesized that the prior probability of Julian dancing salsa is higher if Julian is Cuban than if Julian is German.
-
-\newpage
-
-The influence of prior probability on projection has been investigated in \citealt{lorson2018} and \citealt{mahler2020}. \citet{lorson2018} investigated the influence of listeners' prior beliefs on the projection of the pre-state content of English {\em stop}: for instance, the pre-state content of the stimuli in (\ref{lorson-stim}) is that James has worked as a plumber, in (\ref{lorson-stim}a), and that Linda has worked as a plumber, in (\ref{lorson-stim}b). 
-
-\begin{exe}
-\ex\label{lorson-stim} 
-\begin{xlist}
-\ex Did James stop working as a plumber?
-\ex Did Linda stop working as a plumber?
-\end{xlist}
-\end{exe}
-Building on \citealt{boyce-etal2018}, gender stereotypes were used to manipulate listeners' prior beliefs: for instance, because listeners assign a higher prior probability to a man being a plumber than to a woman being a plumber, the hypothesis was that the pre-state content of (\ref{lorson-stim}a) was more projective than that of (\ref{lorson-stim}b). \citet{lorson2018} did not find empirical support for this hypothesis.
-
-\citet{mahler2020}
-
-====
-
-\citealt{stevens-etal2017}: ``We also observed that the influence of prosody on the projectivity of the prejacent was heterogeneous across items. This observation suggests enriching the model with information about listeners? prior expectations about the prejacent, e.g., about how likely some- body is to smile given that they didn?t smile cheerfully.'' (p.1149)
 
 \newpage
 
