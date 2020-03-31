@@ -687,6 +687,20 @@ m.b = brm(formula = betamodel,
 
 summary(m.b)
 
+saveRDS(m.b,file="../data/beta-model-mixed.rds")
+
+# to load model
+m.b = readRDS(file="../data/beta-model-mixed.rds")
+
+summary(m.b)
+fixef(m.b) # does the same thing
+
+# create LaTeX table
+mcmcReg(m.b, pars = "b_", file="../models/brm_output.tex")
+
+# to get stan code
+stancode(m.b)
+
 # intercept (entailing control) values
 plogis(3)
 exp(2.24)
@@ -715,25 +729,20 @@ exp(2.24 - 1.90)
 plogis(3 - 4.47)
 exp(2.24 - 2.13)
 
+
+# to play around:
+entailingphi=9.39
+entailingmu=.95
+
+# entailingphi=10
+# entailingmu=.5
+
 # visualize some of the inferred beta distributions
-betadist = data.frame(x=rep(seq(0,1,by=.01),7),y=c(dprop(x=seq(0,1,by=.01),9.39,.953),dprop(x=seq(0,1,by=.01),8.25,.949),dprop(x=seq(0,1,by=.01),9.39,.941),dprop(x=seq(0,1,by=.01),1.21,.52),dprop(x=seq(0,1,by=.01),2.44,.816),dprop(x=seq(0,1,by=.01),1.4,.385),dprop(x=seq(0,1,by=.01),1.12,.187)),verb=c(rep("entailing",101),rep("prove",101),rep("confirm",101),rep("hear",101),rep("announce",101),rep("suggest",101), rep("pretend",101)))
+betadist = data.frame(x=rep(seq(0,1,by=.01),8),y=c(dprop(x=seq(0,1,by=.01),9.39,.953),dprop(x=seq(0,1,by=.01),8.25,.949),dprop(x=seq(0,1,by=.01),9.39,.941),dprop(x=seq(0,1,by=.01),1.21,.52),dprop(x=seq(0,1,by=.01),2.44,.816),dprop(x=seq(0,1,by=.01),1.4,.385),dprop(x=seq(0,1,by=.01),1.12,.187),dprop(x=seq(0,1,by=.01),entailingphi,entailingmu)),verb=c(rep("entailing",101),rep("prove",101),rep("confirm",101),rep("hear",101),rep("announce",101),rep("suggest",101), rep("pretend",101), rep("INTERCEPT (entailing)",101)))
 
 ggplot(betadist, aes(x=x,y=y,color=verb)) +
-  geom_line()
-
-saveRDS(m.b,file="../data/beta-model-mixed.rds")
-
-# to load model
-m.b = readRDS(file="../data/beta-model-mixed.rds")
-
-summary(m.b)
-fixef(m.b) # does the same thing
-
-# create LaTeX table
-mcmcReg(m.b, pars = "b_", file="../models/brm_output.tex")
-
-# to get stan code
-stancode(m.b)
+  geom_line() +
+  facet_wrap(~verb)
 
 # hypothesis-testing, probing posterior model
 h <- c("entailing - know" = "plogis(Intercept - verbknow) = plogis(Intercept)")
