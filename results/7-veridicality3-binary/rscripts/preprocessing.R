@@ -57,6 +57,7 @@ d %>%
   group_by(gender) %>% 
   summarize(count=n())
 #218 female, 212 male, 1 non-declared
+length(unique(d$workerid))
 
 ### exclude non-American English speakers
 length(unique(d$workerid)) #431
@@ -173,7 +174,7 @@ nrow(outliers_bad.1) #21 (participants who got exactly one wrong)
 # remove participants who are in either outliers_bad.2plus or outliers_good.2plus, because they definitely have more than 
 # 1 wrong across the 8 controls
 d <- droplevels(subset(d, !(d$workerid %in% outliers_bad.2plus$workerid) & !(d$workerid %in% outliers_good.2plus$workerid)))
-length(unique(d$workerid)) #376 Turkers (400-376 = 24 excluded)
+length(unique(d$workerid)) #376 Turkers (396 - 376 = 20 Turkers excluded)
 
 # now remove participants who are in both outliers_bad.1 and outliers_good.1, because they also have more than one wrong
 # across the 8 controls
@@ -182,9 +183,9 @@ outliers_bad.1$workerid
 outliers_good.1$workerid
 
 d <- droplevels(subset(d, !(d$workerid %in% outliers_bad.1$workerid & d$workerid %in% outliers_good.1$workerid)))
-length(unique(d$workerid)) #375 Turkers (1 excluded who is in both sets)
+length(unique(d$workerid)) #375 Turkers (376 - 375 = 1 excluded)
 
-# 25 excluded based on controls
+# 21 excluded based on controls
 
 # clean data
 cd = d
@@ -200,5 +201,5 @@ cd %>%
   unique() %>% 
   group_by(gender) %>% 
   summarize(count=n())
-#187 female, 187 male
+#187 female, 187 male, 1 undeclared
 
