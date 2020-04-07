@@ -37,7 +37,7 @@ ds = read_csv("../data/experiment-subject_information.csv")
 length(unique(ds$workerid)) #300
 nrow(ds) #300
 head(ds)
-summary(d) # experiment took 8 minutes (median), 8 minutes (mean)
+summary(d) # experiment took 8.5 minutes (median), 9.2 minutes (mean)
 
 # look at Turkers' comments
 unique(ds$comments)
@@ -82,7 +82,7 @@ table(d$language)
 d <- d %>%
   filter(language != "United States") %>%
   droplevels()
-length(unique(d$workerid))
+length(unique(d$workerid)) #299 (1 Turker excluded)
 
 # exclude non-American English speakers
 length(unique(d$workerid))# 200
@@ -149,6 +149,34 @@ d <- d %>%
   droplevels()
 length(unique(d$workerid)) # 286 remaining Turkers (11 Turkers excluded)
 
+# remove data from Turkers with low variance (as in factives paper)
+
+# exclude turkers who always clicked on roughly the same point on the scale 
+# ie turkers whose variance in overall response distribution is more 
+# than 2 sd below mean by-participant variance
+
+variances = d.MC.Proj %>%
+  group_by(workerid) %>%
+  summarize(Variance = var(response)) %>%
+  mutate(TooSmall = Variance < mean(Variance) - 2*sd(Variance))
+variances
+
+lowvarworkers = as.character(variances[variances$TooSmall,]$workerid)
+summary(variances)
+lowvarworkers # 0 turkers consistently clicked on roughly the same point on the scale
+
+# lvw = d %>%
+#   filter(as.character(workerid) %in% lowvarworkers) %>%
+#   droplevels() %>%
+#   mutate(Participant = as.factor(as.character(workerid)))
+# 
+# ggplot(lvw,aes(x=Participant,y=response)) +
+#   geom_point()
+# 
+# # no turkers excluded based on variance
+# d <- droplevels(subset(d, !(d$workerid %in% lowvarworkers)))
+length(unique(d$workerid)) #286 Turkers remain
+
 # age and gender info of remaining Turkers
 length(which(is.na(d$age))) #0
 table(d$age) #18-82
@@ -162,3 +190,4 @@ d %>%
 
 # write cleaned dataset to file
 write_csv(d, path="../data/data_preprocessed.csv")
+
