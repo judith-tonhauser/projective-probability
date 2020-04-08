@@ -59,8 +59,8 @@ means = target %>%
   mutate(YMin=Mean-CILow,YMax=Mean+CIHigh) %>%
   mutate(itemType = fct_recode(itemType,high="H",low="L"))
 
-high = means %>%
-  filter(itemType == "high") %>%
+low = means %>%
+  filter(itemType == "low") %>%
   mutate(itemNr = fct_reorder(itemNr,Mean))
 
 means = means %>%
@@ -116,12 +116,12 @@ means
 #   mutate(event = fct_relevel(event,levels(tmp$event)))
 # means
 
-high = means %>%
-  filter(itemType == "high") %>%
+low = means %>%
+  filter(itemType == "low") %>%
   mutate(event = fct_reorder(event,Mean))
 
 means = means %>%
-  mutate(event = fct_relevel(event,levels(high$event)))
+  mutate(event = fct_relevel(event,levels(low$event)))
 means
 
 subjmeans = target %>%

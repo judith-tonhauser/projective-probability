@@ -234,53 +234,17 @@ nrow(target)
 target$verb <- factor(target$verb, levels = cols[order(as.character(proj.means$verb)),]$V, ordered = TRUE)
 target$verb
 
-# no facet wrap, veridicality colors
-ggplot(target, aes(x=prior, y=projective, color=verb)) +
-  # geom_abline(intercept=0, slope=1, linetype="dashed", color="gray50") +
-  geom_smooth(method="lm", color="black") +
-  geom_point(pch=20, size=3, show.legend = FALSE) +
-  scale_color_manual(breaks=c("F","NF","V","VNF"), labels=c("factive","non-factive","V","VNF"), values=cols$Colors) +
-  xlab("Prior probability rating") +
-  ylab("Certainty rating") +
-  xlim(0,1) +
-  ylim(0,1) 
-ggsave(f="../graphs/projectivity-by-prior_color-veridicality.pdf",height=8,width=8)
-
-# no facet wrap, individual color for each verb
-ggplot(target, aes(x=prior, y=projective, color=verb)) +
-  # geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
-  geom_smooth(method="lm",color="black") +
-  geom_point(pch=20, size=3) +
-  theme(legend.position = "right") +
-  xlab("Prior probability rating") +
-  ylab("Certainty rating") +
-  xlim(0,1) +
-  ylim(0,1) 
-ggsave(f="../graphs/projectivity-by-prior_color.pdf",height=8,width=11)
-
-# facet wrap: CC
-ggplot(target, aes(x=prior,y=projective)) +
-  # geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
-  geom_smooth(method="lm",colour="black") +
-  geom_point(size=1) +
-  xlab("Prior probability rating") +
-  ylab("Certainty rating") +
-  xlim(0,1) +
-  ylim(0,1) +
-  facet_wrap(~eventItemNr)
-ggsave(f="../graphs/projectivity-by-prior_facet-wrap-CC.pdf",height=8,width=10)
-
-# facet wrap: verb
+# facet wrap: predicate
 ggplot(target, aes(x=prior, y=projective, fill=verb)) +
   # geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
   geom_smooth(method="lm",colour="black",show.legend = FALSE) +
   geom_point(pch=21, size=2, show.legend = FALSE) +
   scale_fill_manual(breaks=c("F","NF","V","VNF"), values=cols$Colors) +
   #scale_color_manual(breaks=c("F","MC","NF","V","VNF"), values=cols$Colors) +  
-  xlab("Prior probability rating") +
+  xlab("Likelihood rating") +
   ylab("Certainty rating") +
   xlim(0,1) +
   ylim(0,1) +
   facet_wrap(~verb)
-ggsave(f="../graphs/projectivity-by-prior_facet-wrap-verb.pdf",height=8,width=10)
+ggsave(f="../graphs/projectivity-by-prior-and-predicate.pdf",height=8,width=10)
 
