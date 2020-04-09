@@ -128,6 +128,9 @@ means = t %>%
   mutate(YMin=Mean-CILow,YMax=Mean+CIHigh)
 means
 
+# save for comparison with Exp2 findings
+write.csv(means,file="../data/prior_means.csv",row.names=F,quote=F)
+
 names(means)
 table(means$prior_type)
 
@@ -147,7 +150,7 @@ levels(subjmeans$eventItem)
 names(subjmeans)
 
 ggplot(means, aes(x=eventItem, y=Mean, color=prior_type,shape=prior_type,fill=prior_type)) + 
-  geom_point(data=subjmeans,aes(fill=prior_type,color=prior_type),shape=21,alpha=.1) +
+  geom_point(data=subjmeans,aes(fill=prior_type,color=prior_type),shape=21,alpha=.08) +
   geom_point(stroke=.5,size=3,color="black") +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25) +
   scale_shape_manual(values=rev(c(25, 24)),labels=rev(c("lower probability","higher probability")),name="Fact") +
@@ -155,11 +158,11 @@ ggplot(means, aes(x=eventItem, y=Mean, color=prior_type,shape=prior_type,fill=pr
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_color_manual(name="Fact", breaks=c("higher probability","lower probability"),labels=c("higher probability", "lower probability"), 
                      values=cbPalette) +
-  theme(legend.position = "top") +
+  theme(legend.position = "top", legend.text=element_text(size=12)) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 75, hjust = 1)) +
-  ylab("Mean likelihood rating") +
-  xlab("Clause") 
-ggsave(f="../graphs/prior-ratings.pdf",height=7,width=9)
+  ylab("Mean prior probability") +
+  xlab("Content") 
+ggsave(f="../graphs/prior-ratings.pdf",height=7,width=8)
 
 
 # plot projection by predicate and prior_type 

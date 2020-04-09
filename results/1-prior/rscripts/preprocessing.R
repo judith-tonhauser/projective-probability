@@ -171,7 +171,7 @@ ggplot(filler, aes(x=workerid,y=response)) +
   geom_point(aes(colour = item)) +
   geom_text(aes(label=workerid), vjust = 1, cex= 5)+
   scale_y_continuous(breaks = pretty(filler$response, n = 10)) +
-  ylab("Responses to fillers") +
+  ylab("Responses to controls") +
   xlab("'Good' Participant")
 ggsave(f="../graphs/filler-ratings-good-participants.pdf",height=4,width=20)
 
@@ -221,3 +221,4 @@ write.csv(cd, file = "../data/cd.csv")
 head(cd)
 nrow(cd) #1650 / 22 items = 75 participants
 table(cd$fact,cd$itemNr)
+
