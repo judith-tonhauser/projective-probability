@@ -120,7 +120,7 @@ table(t$prior_fact) #40 facts
 table(t$eventItem) #20 clauses
 str(t$prior)
 
-# plot prior ratings by content
+# plot prior ratings by content (no main clause content) ----
 means = t %>%
   group_by(prior_type,eventItem) %>%
   summarise(Mean=mean(prior),CILow=ci.low(prior),CIHigh=ci.high(prior)) %>%
@@ -164,8 +164,8 @@ ggplot(means, aes(x=eventItem, y=Mean, color=prior_type,shape=prior_type,fill=pr
   xlab("Content") 
 ggsave(f="../graphs/prior-ratings.pdf",height=7,width=8)
 
-
-# plot projection by predicate and prior_type 
+# plot projection by prior type collapsing over predicate (with main clause content) ----
+nrow(cd)
 
 # mean projectivity by predicate, with main clause controls
 proj.means = cd %>%
@@ -202,8 +202,18 @@ proj.means$VeridicalityGroup = as.factor(
                 ifelse(proj.means$verb  %in% c("be_right","demonstrate"),"VNF",
                        ifelse(proj.means$verb  %in% c("MC"),"MC","V")))))
 
-# plot of means, 95% bootstrapped CIs and participants' ratings
-ggplot(proj.means, aes(x=verb, y=Mean, fill=prior_type,shape=prior_type)) + 
+
+# to plot MC in different color and shape, copy MC data to new data frame and 
+# remove MC data, but not factor level, from proj.means
+mc.data = droplevels(subset(proj.means, proj.means$verb == "MC"))
+mc.data
+  
+proj.means[proj.means$short_trigger == "MC",]$Mean <- NA
+proj.means[proj.means$short_trigger == "MC",]$YMin <- NA
+proj.means[proj.means$short_trigger == "MC",]$YMax <- NA
+
+
+ggplot(proj.means, aes(x=verb, y=Mean, color=prior_type,fill=prior_type,shape=prior_type)) + 
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0) +
   geom_point(colour = "black", size = 3) +
   scale_shape_manual(values=rev(c(25, 24)),labels=rev(c("lower probability","higher probability")),name="Fact") +
@@ -216,38 +226,95 @@ ggplot(proj.means, aes(x=verb, y=Mean, fill=prior_type,shape=prior_type)) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
                                                                  color=cols$Colors)) +
   theme(legend.position = "top") +
-  #geom_errorbar(aes(x=4,ymin=proj.means[proj.means$verb == "MC",]$YMin,ymax=proj.means[proj.means$verb == "MC",]$YMax,width=.25),color="black",width=0) +  # set x to the position of MC
-  #geom_point(aes(x=4,y=proj.means[proj.means$verb == "MC",]$Mean), color="black",show.legend = FALSE ) +  # set x to the position of MC
+  geom_errorbar(aes(x=1,ymin=mc.data$YMin,ymax=mc.data$YMax,width=.25),color="black",width=0) +  # set x to the position of MC
+  geom_point(shape=20,size=4,aes(x=1,y=mc.data$Mean),color="black",show.legend = FALSE ) +  # set x to the position of MC
   ylab("Mean certainty rating") +
   xlab("Predicate") +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1))
 ggsave("../graphs/means-projectivity-by-predicate-and-prior.pdf",height=4,width=7)
 
 
-#### plot projectivity by prior probability on a by-participant level ----
+#### plot projectivity by prior probability on a by-participant level (no MC content) ----
+nrow(cd) #7436 (all data, i.e., with main clause content)
+nrow(t)  #5720 (target, i.e., without main clause content)
 
-cd$verb <- factor(cd$verb, levels = cols[order(as.character(proj.means$verb)),]$V, ordered = TRUE)
-cd$verb
+names(t)
+table(t$short_trigger)
 
-# remove main clauses since they are not relevant here
-target <- droplevels(subset(cd,cd$verb != "MC"))
-nrow(target)
+proj.means = t %>%
+  group_by(short_trigger,prior_type) %>%
+  summarize(Mean = mean(projective), CILow = ci.low(projective), CIHigh = ci.high(projective)) %>%
+  ungroup() %>%
+  mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, short_trigger = fct_reorder(as.factor(short_trigger),Mean))  
+proj.means
+
+nrow(proj.means) #40 (high_prior and low_prior for each of the 20 predicates)
+table(proj.means$verb)
+
+#t$short_trigger <- factor(t$short_trigger, levels = cols[order(as.character(proj.means$verb)),]$V, ordered = TRUE)
+#t$verb #5720 (286 turkers x 20 rows)
 
 # relevel for color coding
-target$verb <- factor(target$verb, levels = cols[order(as.character(proj.means$verb)),]$V, ordered = TRUE)
-target$verb
+#target$verb <- factor(target$verb, levels = cols[order(as.character(proj.means$verb)),]$V, ordered = TRUE)
+#target$verb
 
-# facet wrap: predicate
-ggplot(target, aes(x=prior, y=projective, fill=verb)) +
-  # geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
-  geom_smooth(method="lm",colour="black",show.legend = FALSE) +
-  geom_point(pch=21, size=2, show.legend = FALSE) +
-  scale_fill_manual(breaks=c("F","NF","V","VNF"), values=cols$Colors) +
-  #scale_color_manual(breaks=c("F","MC","NF","V","VNF"), values=cols$Colors) +  
-  xlab("Likelihood rating") +
-  ylab("Certainty rating") +
+ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
+  geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
+  geom_smooth(span = 1) +
+  geom_point(shape=20, size=1, alpha=.3) +
+  scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  #scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  xlab("Prior probability rating") +
+  ylab("Projection rating") +
+  theme(legend.position = "top", legend.text=element_text(size=12)) +
   xlim(0,1) +
   ylim(0,1) +
-  facet_wrap(~verb)
-ggsave(f="../graphs/projectivity-by-prior-and-predicate.pdf",height=8,width=10)
+  coord_fixed(ratio = 1) +
+  facet_wrap(~short_trigger)
+ggsave(f="../graphs/projection-by-prior-non-linear-smooth-by-prior.pdf",height=8,width=10)
+
+ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
+  geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
+  geom_smooth(span = 1,color="black") +
+  geom_point(shape=20, size=1, alpha=.3) +
+  scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  #scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  xlab("Prior probability rating") +
+  ylab("Projection rating") +
+  theme(legend.position = "top", legend.text=element_text(size=12)) +
+  xlim(0,1) +
+  ylim(0,1) +
+  coord_fixed(ratio = 1) +
+  facet_wrap(~short_trigger)
+ggsave(f="../graphs/projection-by-prior-non-linear-smooth-overall.pdf",height=8,width=10)
+
+ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
+  geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
+  geom_smooth(method="lm",colour="black") +
+  geom_point(shape=20, size=1, alpha=.3) +
+  scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  #scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  xlab("Prior probability rating") +
+  ylab("Projection rating") +
+  theme(legend.position = "top", legend.text=element_text(size=12)) +
+  xlim(0,1) +
+  ylim(0,1) +
+  coord_fixed(ratio = 1) +
+  facet_wrap(~short_trigger)
+ggsave(f="../graphs/projection-by-prior-linear-smooth-overall.pdf",height=8,width=10)
+
+ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
+  geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
+  geom_smooth(se = FALSE,method="lm") +
+  geom_point(shape=20, size=1, alpha=.3) +
+  scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  #scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  xlab("Prior probability rating") +
+  ylab("Projection rating") +
+  theme(legend.position = "top", legend.text=element_text(size=12)) +
+  xlim(0,1) +
+  ylim(0,1) +
+  coord_fixed(ratio = 1) +
+  facet_wrap(~short_trigger)
+ggsave(f="../graphs/projection-by-prior-linear-smooth-by-prior.pdf",height=8,width=10)
 

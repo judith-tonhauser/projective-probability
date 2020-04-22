@@ -14,7 +14,7 @@ library(forcats)
 library(dichromat)
 theme_set(theme_bw())
 
-# load clean data for analysis ----
+# load clean data for analysis 
 cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
 nrow(cd) #1650
 
@@ -71,7 +71,7 @@ target$eventItemNr  = factor(target$eventItemNr,
                                       "19:  Jon walks to work",                    
                                       "20:  Charley speaks Spanish"))
 
-# plot for XPRAG abstract (content identified only by number)
+# plot for XPRAG abstract (content identified only by number) ----
 # color-blind-friendly palette
 cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7") # c("#999999", 
                 
@@ -105,7 +105,7 @@ ggplot(means, aes(x=item, y=Mean, color=itemType)) +
   xlab("Content of complement") 
 ggsave(f="../graphs/ratings-for-CCs.pdf",height=3.2,width=6)
 
-# mean prior probability ratings, content identified by clause
+# mean prior probability ratings, content identified by clause ----
 # color-blind-friendly palette
 cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7") # c("#999999", 
 
@@ -176,7 +176,7 @@ ggplot(means, aes(x=event, y=Mean, color=itemType,shape=itemType,fill=itemType))
   xlab("Content") 
 ggsave(f="../graphs/prior-ratings.pdf",height=7,width=8)
 
-# comparison of prior probability means from Exp1 and Exp2
+# comparison of prior probability means from Exp1 and Exp2 ----
 
 # load data from Exp1 (called exp4 in repo)
 means1 <- read.csv(file="../../exp4/data/prior_means.csv")
@@ -218,8 +218,8 @@ ggplot(means, aes(x=Mean1, y=Mean2, color=prior_type,shape=prior_type,fill=prior
   scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
   scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
-  ylab("Exp.~2 mean prior probability") +
-  xlab("Exp.~1 mean prior probability") +
+  ylab("Exp. 2 mean prior probability") +
+  xlab("Exp. 1 mean prior probability") +
   theme(legend.position = "top",legend.text=element_text(size=12)) +
   coord_fixed(ratio = 1) +
   xlim(c(0,1)) +
