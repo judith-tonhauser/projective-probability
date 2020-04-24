@@ -249,72 +249,29 @@ proj.means = t %>%
 proj.means
 
 nrow(proj.means) #40 (high_prior and low_prior for each of the 20 predicates)
-table(proj.means$verb)
 
-#t$short_trigger <- factor(t$short_trigger, levels = cols[order(as.character(proj.means$verb)),]$V, ordered = TRUE)
-#t$verb #5720 (286 turkers x 20 rows)
+low = proj.means %>%
+  filter(prior_type == "low_prior") %>%
+  mutate(short_trigger = fct_reorder(short_trigger,Mean))
 
-# relevel for color coding
-#target$verb <- factor(target$verb, levels = cols[order(as.character(proj.means$verb)),]$V, ordered = TRUE)
-#target$verb
-
-ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
-  geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
-  geom_smooth(span = 1) +
-  geom_point(shape=20, size=1, alpha=.3) +
-  scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  #scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  xlab("Prior probability rating") +
-  ylab("Projection rating") +
-  theme(legend.position = "top", legend.text=element_text(size=12)) +
-  xlim(0,1) +
-  ylim(0,1) +
-  coord_fixed(ratio = 1) +
-  facet_wrap(~short_trigger)
-ggsave(f="../graphs/projection-by-prior-non-linear-smooth-by-prior.pdf",height=8,width=10)
+t = t %>%
+  mutate(short_trigger = fct_relevel(short_trigger,levels(low$short_trigger)))
 
 ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
-  geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
-  geom_smooth(span = 1,color="black") +
+  #geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
+  geom_smooth(method="lm",colour="grey50") +
   geom_point(shape=20, size=1, alpha=.3) +
   scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  #scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  xlab("Prior probability rating") +
-  ylab("Projection rating") +
+  xlab("Prior probability ratings") +
+  ylab("Certainty ratings") +
   theme(legend.position = "top", legend.text=element_text(size=12)) +
-  xlim(0,1) +
-  ylim(0,1) +
+  guides(colour = guide_legend(override.aes = list(alpha = 1,size=3))) +
+  #xlim(0,1) +
+  #ylim(0,1) +
+  scale_x_continuous(breaks=c(0,.5,1),labels=c(0,.5,1)) +
+  scale_y_continuous(breaks=c(0,.5,1),labels=c(0,.5,1)) +
+  theme(panel.spacing.x = unit(4, "mm")) +
   coord_fixed(ratio = 1) +
   facet_wrap(~short_trigger)
-ggsave(f="../graphs/projection-by-prior-non-linear-smooth-overall.pdf",height=8,width=10)
-
-ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
-  geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
-  geom_smooth(method="lm",colour="black") +
-  geom_point(shape=20, size=1, alpha=.3) +
-  scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  #scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  xlab("Prior probability rating") +
-  ylab("Projection rating") +
-  theme(legend.position = "top", legend.text=element_text(size=12)) +
-  xlim(0,1) +
-  ylim(0,1) +
-  coord_fixed(ratio = 1) +
-  facet_wrap(~short_trigger)
-ggsave(f="../graphs/projection-by-prior-linear-smooth-overall.pdf",height=8,width=10)
-
-ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
-  geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
-  geom_smooth(se = FALSE,method="lm") +
-  geom_point(shape=20, size=1, alpha=.3) +
-  scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  #scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  xlab("Prior probability rating") +
-  ylab("Projection rating") +
-  theme(legend.position = "top", legend.text=element_text(size=12)) +
-  xlim(0,1) +
-  ylim(0,1) +
-  coord_fixed(ratio = 1) +
-  facet_wrap(~short_trigger)
-ggsave(f="../graphs/projection-by-prior-linear-smooth-by-prior.pdf",height=8,width=10)
+ggsave(f="../graphs/projection-by-prior.pdf",height=7,width=7)
 

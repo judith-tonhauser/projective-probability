@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 APR 2020 08:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  24 APR 2020 08:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1250,7 +1250,7 @@ File: omstxr.fd 2000/12/15 v3.1
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 212.
  [4] [5]
-[6] <figures/exp1-projection-trial.pdf, id=257, 525.5886pt x 358.98969pt>
+[6] [7] <figures/exp1-projection-trial.pdf, id=262, 525.5886pt x 358.98969pt>
 File: figures/exp1-projection-trial.pdf Graphic file (type pdf)
 
 <use figures/exp1-projection-trial.pdf>
@@ -1258,14 +1258,14 @@ Package pdftex.def Info: figures/exp1-projection-trial.pdf used on input line 3
 00.
 (pdftex.def)             Requested size: 224.7766pt x 153.52994pt.
 
-<figures/exp1-prior-trial.pdf, id=258, 445.59445pt x 317.86723pt>
+<figures/exp1-prior-trial.pdf, id=263, 445.59445pt x 317.86723pt>
 File: figures/exp1-prior-trial.pdf Graphic file (type pdf)
 
 <use figures/exp1-prior-trial.pdf>
 Package pdftex.def Info: figures/exp1-prior-trial.pdf used on input line 305.
 (pdftex.def)             Requested size: 214.81839pt x 153.24387pt.
 
-<../../results/exp4/graphs/prior-ratings.pdf, id=259, 578.16pt x 505.89pt>
+<../../results/exp4/graphs/prior-ratings.pdf, id=264, 578.16pt x 505.89pt>
 File: ../../results/exp4/graphs/prior-ratings.pdf Graphic file (type pdf)
 
 <use ../../results/exp4/graphs/prior-ratings.pdf>
@@ -1276,9 +1276,9 @@ put line 319.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <./figures/exp1-projection-trial.pdf> <./figures/exp1-prior-trial.pdf>]
+[8 <./figures/exp1-projection-trial.pdf> <./figures/exp1-prior-trial.pdf>]
 <../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf, id=29
-2, 505.89pt x 289.08pt>
+6, 505.89pt x 289.08pt>
 File: ../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf G
 raphic file (type pdf)
 
@@ -1287,23 +1287,23 @@ Package pdftex.def Info: ../../results/exp4/graphs/means-projectivity-by-predic
 ate-and-prior.pdf used on input line 331.
 (pdftex.def)             Requested size: 460.72124pt x 263.27493pt.
 
-[8 <../../results/exp4/graphs/prior-ratings.pdf>]
-<../../results/exp4/graphs/projection-by-prior.pdf, id=308, 722.7pt x 578.16pt>
+[9 <../../results/exp4/graphs/prior-ratings.pdf>]
+<../../results/exp4/graphs/projection-by-prior.pdf, id=312, 505.89pt x 505.89pt
+>
 File: ../../results/exp4/graphs/projection-by-prior.pdf Graphic file (type pdf)
 
-<use ../../results/exp4/graphs/projection-by-prior.pdf>
+ <use ../../results/exp4/graphs/projection-by-prior.pdf>
 Package pdftex.def Info: ../../results/exp4/graphs/projection-by-prior.pdf used
  on input line 340.
-(pdftex.def)             Requested size: 552.86174pt x 442.29095pt.
+(pdftex.def)             Requested size: 430.00462pt x 430.01624pt.
 
-Overfull \hbox (83.10672pt too wide) in paragraph at lines 340--341
- [][] 
- []
 
-[9 <../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf>]
-[10 <../../results/exp4/graphs/projection-by-prior.pdf>]
-<../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf, id=34
-0, 289.08pt x 289.08pt>
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf>]
+[11 <../../results/exp4/graphs/projection-by-prior.pdf>]
+<../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf, id=35
+2, 289.08pt x 289.08pt>
 File: ../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf G
 raphic file (type pdf)
 
@@ -1312,7 +1312,6 @@ Package pdftex.def Info: ../../results/1-prior/graphs/prior-probability-compari
 son-exp1-exp2.pdf used on input line 383.
 (pdftex.def)             Requested size: 307.14749pt x 307.16438pt.
 
-[11]
 
 LaTeX Warning: Reference `f-projectivity' on page 12 undefined on input line 39
 5.
@@ -1323,7 +1322,7 @@ LaTeX Warning: Reference `f-proj' on page 13 undefined on input line 402.
 
 (./prior-paper.bbl [13]) [14] [15]
 <../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-factty
-pe.pdf, id=445, 505.89pt x 289.08pt>
+pe.pdf, id=446, 505.89pt x 289.08pt>
 File: ../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-f
 acttype.pdf Graphic file (type pdf)
 
@@ -1353,7 +1352,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 498.
 Here is how much of TeX's memory you used:
  24473 strings out of 493014
  419755 string characters out of 6133351
- 536521 words of memory out of 5000000
+ 536561 words of memory out of 5000000
  27335 multiletter control sequences out of 15000+600000
  47772 words of font info for 117 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
@@ -1366,11 +1365,10 @@ t/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw
 /times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-
-Output written on prior-paper.pdf (17 pages, 699604 bytes).
+Output written on prior-paper.pdf (17 pages, 674395 bytes).
 PDF statistics:
- 523 PDF objects out of 1000 (max. 8388607)
- 475 compressed objects within 5 object streams
+ 524 PDF objects out of 1000 (max. 8388607)
+ 476 compressed objects within 5 object streams
  135 named destinations out of 1000 (max. 500000)
  152 words of extra memory for PDF output out of 10000 (max. 10000000)
 
