@@ -248,9 +248,9 @@ We hypothesized that the prior probability of the content of the clause would be
 
 \newpage
 
-\section{Experiment 1: Projection and within-participant prior probability}
+\section{Experiment 1: Prior probability influences projection}
 
-This experiment investigated the hypothesis that the prior probability of the 20 contents influences their projection. Prior probability and projection ratings were collected. 
+This experiment investigated the hypothesis that the prior probability of content influences its projection, specifically, that the higher the prior probability of content is, the more projective it is. Prior probability and projection ratings were collected for the contents of the 20 clauses, which realized the complements of the 20 clause-embedding predicates. 
 
 \paragraph{Participants} 300 participants with U.S.\ IP addresses and at least 99\% of previous HITs approved were recruited on Amazon's Mechanical Turk platform (ages: 18-82, median: 35.5; 119 female, 179 male, 1 other, 1 undeclared). They were paid \$1.80 for participating.
 
@@ -314,34 +314,49 @@ After completing the experiment, participants filled out a short, optional surve
 
 \subsection{Results}
 
+Before addressing the research question of whether prior probability influences projection, we inspect the prior probability ratings obtained for the content of each of the 20 clauses. Figure \ref{f-prior} plots the mean prior probability of the content of each of the 20 clauses by fact. The light dots indicate participants' ratings. As shown, participants on average rated the prior probability of a content to be higher when the content was presented with the higher probability fact than when the content was presented with the lower probability fact. There is both by-participant and by-content variability in prior probability ratings, suggesting that participants' beliefs influences prior probability ratings.
+
+
 \begin{figure}[h!]
 \centering
 \includegraphics[width=.75\paperwidth]{../../results/exp4/graphs/prior-ratings}
 
 \caption{Mean prior probability by content and fact in Exp.~1. Error bars indicate 95\% bootstrapped confidence intervals. Light dots indicate participants' ratings.} 
-\label{f-projection}
+\label{f-prior}
 \end{figure}
 
+We now turn to the research question of whether prior probability influences projection. Figure \ref{f-projection} shows, for each of the 20 clause-embedding predicates, the participants' certainty ratings of the content of the clausal complement by their prior probability rating. Linear smoothers with 95\% confidence intervals are overlaid. As shown, there is a positive correlation between prior probability ratings and certainty ratings for the contents of the complements of all 20 clause-embedding predicates such that contents with higher prior probability ratings receive higher certainty ratings. This finding suggests that prior probability influences projection.
 
-Figure \ref{f-projection} shows the mean certainty ratings for the target stimuli by predicate and by the prior probability of the content of the complement; the mean certainty rating for the non-projective main clause controls are also included. As shown, mean certainty ratings were higher when the content had a higher prior probability than when it had a lower prior probability, as hypothesized by \citet{tbd-variability}. This finding suggests that prior content probability influences projection. Furthermore, the effect of prior content probability on projectivity was present across all 20 clause-embedding predicates.
-
-\begin{figure}[H]
-\centering
-
-\includegraphics[width=.75\paperwidth]{../../results/exp4/graphs/means-projectivity-by-predicate-and-prior}
-
-\caption{Mean certainty ratings by predicate and prior probability of the content of the complement. Error bars indicate 95\% bootstrapped confidence intervals.} 
-\label{f-projection}
-\end{figure}
 
 \begin{figure}[h!]
 \centering
 
 \includegraphics[width=.7\paperwidth]{../../results/exp4/graphs/projection-by-prior}
 
-\caption{Certainty ratings by prior probability ratings in Exp.~1 and linear regression lines with 95\% confidence intervals, by predicate.}
+\caption{Certainty ratings by prior probability ratings by predicate in Exp.~1. Linear smoothers with 95\% confidence intervals are overlaid.}
 \label{f-projection}
 \end{figure}
+
+The qualitative observation about the relation between prior probability and projection was borne out statistically. We fitted a Bayesian mixed effects Beta regression model  with weakly informative priors using the \verb|brms| \citep{buerkner2017}  package in R \citep{R}. The model predicted the certainty ratings from a fixed effect of prior probability \jt{what's the fixed effects structure? predicate (with treatment coding and `main clause control' as  reference level)} and included the maximal random effects structure justified by the design, namely random by-participant and by-item intercepts. This random effects structure captures random variability in projection between participants and between items, where an item is a unique combination of a predicate and a complement clause. A Beta regression model estimates the mean of the outcome distribution (like a linear regression model).\footnote{Beta regression models also estimate a second parameter, namely the precision, which is a measure of dispersion: the greater the precision, the more concentrated the ratings are around the mean. In this paper, we rely on the estimated means to identify whether the CCs of the clause-embedding predicates differ from the relevant controls. Both the estimated mean and precision for each predicate are reported in the full model output tables in Supplement \ref{a-mo}.} We thus obtain, for each predicate, a 95\% credible interval for the mean rating for that predicate: this allows us to identify whether the mean ratings of the predicate and of the main clause controls differ. Supplement \ref{modeldetails} motivates the use of Beta regression over linear regression, provides a brief primer on how to interpret Bayesian mixed effects Beta regression models, and reports the full model output.
+
+\jt{questions about the model: fixed effects? random effects? do we look at mean? precision? which supplements to include for this audience? which footnotes? Bayesian mixed effects linear regression too?}
+
+\jt{According to the Beta regression model, the estimated mean for each predicate was higher than that of the main clause controls, i.e., the 95\% credible intervals for the estimated adjustment to the main clause control mean did not contain 0 for any predicate. This suggests that the content of the complement of each of the 20 predicates is projective compared to non-projective main clause content.\footnote{A Bayesian mixed effects linear regression with the same fixed and random effects structure yielded qualitatively identical results, except that the contrast between \emph{pretend} and the main clause controls was only marginally significant. See the Github repository mentioned in footnote \ref{f-github} for the model code.} Thus, to distinguish factive predicates from optionally factive and non-factive ones in this set of 20 predicates, one would need to arbitrarily distinguish one group of projective CCs from another group of projective CCs.} 
+
+\newpage
+
+Figure \ref{f-projection-mean} shows the mean certainty ratings for the target stimuli by predicate and by the prior probability of the content of the complement; the mean certainty rating for the non-projective main clause controls are also included. As shown, mean certainty ratings were higher when the content had a higher prior probability than when it had a lower prior probability, as hypothesized by \citet{tbd-variability}. This finding suggests that prior content probability influences projection. Furthermore, the effect of prior content probability on projectivity was present across all 20 clause-embedding predicates.
+
+\begin{figure}[h!]
+\centering
+
+\includegraphics[width=.75\paperwidth]{../../results/exp4/graphs/means-projectivity-by-predicate-and-prior}
+
+\caption{Mean certainty ratings by predicate and prior probability of the content of the complement. Error bars indicate 95\% bootstrapped confidence intervals.} 
+\label{f-projection-mean}
+\end{figure}
+
+
 
 \subsection{Discussion}
 

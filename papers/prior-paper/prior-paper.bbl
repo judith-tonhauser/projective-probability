@@ -1,5 +1,5 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{25}
+\begin{thebibliography}{27}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrus{\'a}n(2011)]{abrusan2011}
@@ -49,6 +49,11 @@ Boyce, V, Titus {von der Malsburg}, Tim Poppels, and Roger Levy. 2018.
 \newblock In {\em Proceedings of the 31th Annual CUNY Conference on Human
   Sentence Processing\/}.
 
+\bibitem[B\"urkner(2017)]{buerkner2017}
+B\"urkner, Paul-Christian. 2017.
+\newblock {brms}: An {R} package for bayesian multilevel models using {Stan}.
+\newblock {\em Journal of Statistical Software\/} 80(1):1--28.
+
 \bibitem[Egr\'e(2008)]{egre2008}
 Egr\'e, Paul. 2008.
 \newblock Question-embedding and factivity.
@@ -87,6 +92,11 @@ Lorson, Alexandra. 2018.
 Mahler, Taylor. 2020.
 \newblock The social component of projection behavior of clausal complements.
 \newblock In {\em LSA 2020 XXX\/}.
+
+\bibitem[{R Core Team}(2016)]{R}
+{R Core Team}. 2016.
+\newblock {\em R: A Language and Environment for Statistical Computing\/}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria.
 
 \bibitem[Schlenker(2010)]{schlenker10}
 Schlenker, Philippe. 2010.
