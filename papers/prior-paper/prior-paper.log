@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 APR 2020 08:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 APR 2020 10:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1264,44 +1264,53 @@ File: ../../results/exp4/graphs/prior-ratings.pdf Graphic file (type pdf)
 
 <use ../../results/exp4/graphs/prior-ratings.pdf>
 Package pdftex.def Info: ../../results/exp4/graphs/prior-ratings.pdf used on in
-put line 322.
+put line 321.
 (pdftex.def)             Requested size: 460.72124pt x 403.13008pt.
- [9 <../../results/exp4/graphs/prior-ratings.pdf>]
-<../../results/exp4/graphs/projection-by-prior.pdf, id=310, 505.89pt x 505.89pt
+
+<../../results/exp4/graphs/projection-by-prior.pdf, id=295, 505.89pt x 505.89pt
 >
 File: ../../results/exp4/graphs/projection-by-prior.pdf Graphic file (type pdf)
 
  <use ../../results/exp4/graphs/projection-by-prior.pdf>
 Package pdftex.def Info: ../../results/exp4/graphs/projection-by-prior.pdf used
- on input line 334.
+ on input line 332.
 (pdftex.def)             Requested size: 430.00462pt x 430.01624pt.
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 340
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <../../results/exp4/graphs/prior-ratings.pdf>]
+<../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf, id=31
+6, 505.89pt x 289.08pt>
+File: ../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf G
+raphic file (type pdf)
+
+<use ../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf>
+Package pdftex.def Info: ../../results/exp4/graphs/means-projectivity-by-predic
+ate-and-prior.pdf used on input line 343.
+(pdftex.def)             Requested size: 460.72124pt x 263.27493pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <../../results/exp4/graphs/projection-by-prior.pdf>]
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 352
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
 
-LaTeX Warning: Reference `a-mo' on page 10 undefined on input line 340.
+LaTeX Warning: Reference `a-mo' on page 11 undefined on input line 352.
 
 
-LaTeX Warning: Reference `modeldetails' on page 10 undefined on input line 340.
+LaTeX Warning: Reference `modeldetails' on page 11 undefined on input line 352.
 
 
-[10 <../../results/exp4/graphs/projection-by-prior.pdf>] [11]
-<../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf, id=34
-7, 505.89pt x 289.08pt>
-File: ../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf G
-raphic file (type pdf)
-
-<use ../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf>
-Package pdftex.def Info: ../../results/exp4/graphs/means-projectivity-by-predic
-ate-and-prior.pdf used on input line 353.
-(pdftex.def)             Requested size: 460.72124pt x 263.27493pt.
-
-[12 <../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf>]
-<../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf, id=36
-7, 289.08pt x 289.08pt>
+[11 <../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf>]
+[12]
+<../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf, id=37
+0, 289.08pt x 289.08pt>
 File: ../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf G
 raphic file (type pdf)
 
@@ -1321,7 +1330,7 @@ LaTeX Warning: Reference `f-proj' on page 15 undefined on input line 417.
 
 (./prior-paper.bbl [15]) [16] [17]
 <../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-factty
-pe.pdf, id=468, 505.89pt x 289.08pt>
+pe.pdf, id=474, 505.89pt x 289.08pt>
 File: ../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-f
 acttype.pdf Graphic file (type pdf)
 
@@ -1348,7 +1357,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 513.
 Here is how much of TeX's memory you used:
  24526 strings out of 493014
  420480 string characters out of 6133351
- 536950 words of memory out of 5000000
+ 536951 words of memory out of 5000000
  27374 multiletter control sequences out of 15000+600000
  51930 words of font info for 124 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
@@ -1362,10 +1371,10 @@ t/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts
 urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
 utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on prior-paper.pdf (19 pages, 683829 bytes).
+Output written on prior-paper.pdf (19 pages, 960874 bytes).
 PDF statistics:
- 551 PDF objects out of 1000 (max. 8388607)
- 500 compressed objects within 5 object streams
+ 557 PDF objects out of 1000 (max. 8388607)
+ 505 compressed objects within 6 object streams
  141 named destinations out of 1000 (max. 500000)
  152 words of extra memory for PDF output out of 10000 (max. 10000000)
 
