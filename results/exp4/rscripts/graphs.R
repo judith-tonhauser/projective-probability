@@ -1,4 +1,4 @@
-# experiment investigating prior and presupposition
+# experiment investigating prior and projection
 # contents of complements of 20 predicates
 # graphs.R
 
@@ -160,7 +160,7 @@ ggplot(means, aes(x=eventItem, y=Mean, color=prior_type,shape=prior_type,fill=pr
                      values=cbPalette) +
   theme(legend.position = "top", legend.text=element_text(size=12)) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 75, hjust = 1)) +
-  ylab("Mean prior probability") +
+  ylab("Mean prior probability rating") +
   xlab("Content") 
 ggsave(f="../graphs/prior-ratings.pdf",height=7,width=8)
 
@@ -280,8 +280,8 @@ ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
   geom_smooth(method="lm",colour="grey50") +
   geom_point(shape=20, size=1, alpha=.3) +
   scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  xlab("Prior probability ratings") +
-  ylab("Certainty ratings") +
+  xlab("Prior probability rating") +
+  ylab("Certainty rating") +
   theme(legend.position = "top", legend.text=element_text(size=12)) +
   guides(colour = guide_legend(override.aes = list(alpha = 1,size=3))) +
   #xlim(0,1) +
@@ -292,3 +292,86 @@ ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
   coord_fixed(ratio = 1) +
   facet_wrap(~short_trigger)
 ggsave(f="../graphs/projection-by-prior.pdf",height=7,width=7)
+
+## plot comparison and calculate Spearman rank correlation with Exp1a from factives paper ----
+## with main clauses
+
+# data from this experiment
+summary(cd)
+table(cd$short_trigger)
+
+# load data from Exp1a 
+exp1a = read.csv("../../5-projectivity-no-fact/data/cd.csv") %>%
+  mutate(short_trigger=recode(verb, control = "MC", annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform")) 
+#%>%
+#  filter(short_trigger != "MC") %>%
+#  droplevels()
+summary(exp1a)
+table(exp1a$short_trigger)
+
+# for projectivity data, plot proportions against mean slider ratings
+p_thisExp = cd %>%
+  group_by(short_trigger) %>%
+  summarize(Mean = mean(projective), CILow = ci.low(projective), CIHigh = ci.high(projective)) %>%
+  mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, short_trigger = fct_reorder(as.factor(short_trigger),Mean)) %>%
+  select(-CILow,-CIHigh)
+View(p_thisExp)
+levels(p_thisExp$short_trigger)
+
+p_Exp1a = exp1a %>%
+  group_by(short_trigger) %>%
+  summarize(Mean2 = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+  mutate(YMin2 = Mean2 - CILow, YMax2 = Mean2 + CIHigh, short_trigger = fct_reorder(as.factor(short_trigger),p_thisExp$Mean)) %>%
+  select(-CILow,-CIHigh)
+View(p_Exp1a)
+levels(p_Exp1a$short_trigger)
+
+p = p_thisExp %>%
+  left_join(p_Exp1a) %>%
+  mutate(VeridicalityGroup = factor(case_when(
+    short_trigger %in% c("know", "discover", "reveal", "see", "be_annoyed") ~ "F", 
+    short_trigger %in% c("pretend", "think", "suggest", "say") ~ "NF", 
+    short_trigger %in% c("be_right","demonstrate") ~ "VNF",
+    short_trigger %in% c("MC") ~ "MC",
+    TRUE ~ "V")))
+View(p)
+levels(p$VeridicalityGroup)
+
+p$VeridicalityGroup <- factor(p$VeridicalityGroup, levels =rev(c("F","V","VNF","NF","MC")))
+
+# shape-predicate mapping
+# 21: mc
+# 22: non-veridical non-factive NF
+# 23: factive F
+# 24: optionally factive V
+# 25: veridical non-factive VNF
+
+# plot this experiment findings (Mean, Ymin, YMax) against Exp1a (Mean2, YMin2, YMax2)
+
+ggplot(p, aes(x=Mean2, y=Mean, fill=VeridicalityGroup,shape=VeridicalityGroup)) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0) +
+  geom_errorbarh(aes(xmin=YMin2,xmax=YMax2),width=0) +
+  geom_point(stroke=.5,size=2.5,color="black") +
+  # scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  # scale_alpha(range = c(.3,1)) +
+  #scale_fill_manual(values=c("darkorchid","black","gray60","tomato1","dodgerblue")) +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),
+                     labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),
+                    labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
+  geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
+  ylab("Mean certainty rating in Exp 1") +
+  xlab("Mean certainty rating in Tonhauser & Degen's Exp 1a") +
+  theme(legend.position = "top",legend.text=element_text(size=12)) +
+  theme(text = element_text(size=12)) +
+  coord_fixed(ratio = 1) +
+  xlim(c(0,1)) +
+  ylim(c(0,1))
+ggsave("../graphs/projection-comparison.pdf",height=5,width=5)
+
+corr_projectivity = p %>%
+  #filter(verb != "MC") %>%
+  summarize(Cor=cor(Mean,Mean2,method="spearman"))
+corr_projectivity #.991
+
+

@@ -111,6 +111,8 @@ abstract
 			
 \section{Introduction}\label{s1}
 
+people?s individual beliefs are indicative of their prior probability
+
 H: people?s prior beliefs about content affect project
 Way 1: we measured the belief on one group of people, test how the average belief of that group, predict something about projection of the second ground
 Way 2: assess within each participant?
@@ -314,7 +316,7 @@ After completing the experiment, participants filled out a short, optional surve
 
 \subsection{Results}
 
-Before addressing the research question of whether prior probability influences projection, we show that the contents of the 20 clauses differ in how a priori likely they are. To this effect, Figure \ref{f-prior} plots the mean prior probabilities of the contents of the 20 clauses by fact, together with the participants' ratings as light dots. As shown, the mean prior probability of the contents is higher when presented with a higher prior probability fact than when presented with a lower prior probability fact. Furthermore, there is both by-participant and by-content variability in prior probability ratings.
+We begin by showing that the manipulation of the prior probability of the contents of the 20 clauses was successful, i.e., that the two facts that each of the 20 clauses were presented with indeed influenced the prior probability of the contents of these clauses. To this effect, Figure \ref{f-prior} plots the mean prior probabilities of the contents of the 20 clauses by fact, together with the participants' ratings as light dots. As shown, the mean prior probability of the contents is higher when presented with a higher prior probability fact than when presented with a lower prior probability fact. Further, there is both by-participant and by-content variability in prior probability ratings.
 
 \begin{figure}[h!]
 \centering
@@ -324,7 +326,7 @@ Before addressing the research question of whether prior probability influences 
 \label{f-prior}
 \end{figure}
 
-We now address the research question of whether prior probability influences projection. Figure \ref{f-projection-mean} plots the mean certainty ratings by prior probability of the content of the complement and by predicate, as well as the mean certainty rating for the main clause content. Light dots indicate participants' ratings. As shown, mean certainty ratings were higher the content of the complement of all 20 clause-embedding predicates when the content had a higher prior probability than when it had a lower prior probability. This finding suggests that prior probability influences projection. \jt{ALSO: content of complements differ by predicate in how projective they are; compare findings to those of our factivity paper; spearman rank correlation}
+We now address the research question of whether prior probability influences projection. Figure \ref{f-projection-mean} plots the mean certainty ratings for the contents of the clausal complements by clause-embedding predicate and by fact, as well as the mean certainty rating for the main clause content (abbreviated `MC'). Light dots indicate participants' ratings. As shown, the mean certainty ratings were higher for contents  presented with the higher prior probability facts than for contents presented with the lower prior probability fact. This finding, which holds for all 20 clause-embedding predicates, suggests that prior probability influences projection. We also replicate \citepos{tonhauser-degen-factive} finding that there is systematic by-predicate variation in the projection of the content of the complement: for instance, the content of the complement of {\em be annoyed} is more projective than that of {\em discover}. Our experiment provides further evidence for the systematic influence of the predicate on projection: The Spearman rank correlation between the mean certainty ratings for the 20 clause-embedding predicates and the main clause content in our experiment and \citepos{tonhauser-degen-factive} Exp.~1a is .991 (collapsing over facts; see Supplement \ref{a-comparison} for a visualization).
 
 \begin{figure}[h!]
 \centering
@@ -335,7 +337,7 @@ We now address the research question of whether prior probability influences pro
 \label{f-projection-mean}
 \end{figure}
 
-\jt{Fig 3 imposes what counts as higher and what counts as lower, but participants may not agree with this: somebody might have given a lower prior probability rating to a content presented with a high prior fact than a participant who gave rating to same content presented with low prior probability fact.}  As shown in Figure \ref{f-prior}, there is by-participant variability in the prior probability of a content given a fact. We are therefore not merely interested in whether, on average, content with a higher prior probability is more projective than content with a lower prior probability, but also in whether each participant's prior probability rating influences their certainty rating. To assess this, Figure \ref{f-projection} plots the participants' certainty ratings (indicating projection) by their prior probability ratings for the contents of the complements of the 20 clause-embedding predicates. The linear smoothers suggest a positive correlation, for each predicate, between prior probability and certainty ratings such that contents with higher prior probability ratings receive higher certainty ratings. 
+Figure \ref{f-projection-mean} plots the certainty ratings according to whether the fact that was presented to the participant was a higher probability fact or a lower probability fact. And although Figure \ref{f-prior} shows that higher and lower probability facts resulted in the expected differences in the mean prior probability ratings for the contents of the 20 clauses, this figure also revealed by-participant variation in prior probability ratings. As a consequence, individual participants' prior probability ratings need not align with the assumed classification: for example, given a particular content, it is possible that one participant's prior probability rating was lower than that of another participant, even though the first participant was presented with the higher probability fact and the second one with the lower probability fact. To investigate whether prior content probability influences projection at the by-participant level, Figure \ref{f-projection} plots the participants' certainty ratings (indicating projection) by their prior probability ratings for the contents of the complements of the 20 clause-embedding predicates. (The color coding here merely presents which type of fact the participant was presented with; no classification is imposed.) The linear smoothers suggest a positive correlation for each predicate between prior probability and certainty ratings such that contents with higher prior probability ratings receive higher certainty ratings. 
 
 \begin{figure}[h!]
 \centering
@@ -347,6 +349,11 @@ We now address the research question of whether prior probability influences pro
 \end{figure}
 
 \newpage
+
+item = unique predicate + complement clause; random effect
+\\
+make plots to show that Beta regression model is appropriate
+
 
 The qualitative observations about the relations between prior probability, clause-embedding predicate and projection were borne out statistically. We fitted a Bayesian mixed effects Beta regression model  with weakly informative priors using the \verb|brms| \citep{buerkner2017}  package in R \citep{R}. The model predicted the certainty ratings from a fixed effect of prior probability \jt{what's the fixed effects structure? predicate (with treatment coding and `main clause control' as  reference level)} and included the maximal random effects structure justified by the design, namely random by-participant and by-item intercepts. This random effects structure captures random variability in projection between participants and between items, where an item is a unique combination of a predicate and a complement clause. A Beta regression model estimates the mean of the outcome distribution (like a linear regression model).\footnote{Beta regression models also estimate a second parameter, namely the precision, which is a measure of dispersion: the greater the precision, the more concentrated the ratings are around the mean. In this paper, we rely on the estimated means to identify whether the CCs of the clause-embedding predicates differ from the relevant controls. Both the estimated mean and precision for each predicate are reported in the full model output tables in Supplement \ref{a-mo}.} We thus obtain, for each predicate, a 95\% credible interval for the mean rating for that predicate: this allows us to identify whether the mean ratings of the predicate and of the main clause controls differ. Supplement \ref{modeldetails} motivates the use of Beta regression over linear regression, provides a brief primer on how to interpret Bayesian mixed effects Beta regression models, and reports the full model output.
 
@@ -482,6 +489,19 @@ The following list gives the six control stimuli of the projection block of Exp.
 
 \ex  {\bf Fact:} Hendrick just bought a car. Was Hendrick's car expensive?
 \end{enumerate}
+
+\section{Projection comparison}\label{a-comparison}
+
+Projection: Comparison of findings of Exp.~1 and \citepos{tonhauser-degen-factive} Exp.~1a
+
+\begin{figure}[H]
+\centering
+
+\includegraphics[width=.4\paperwidth]{../../results/exp4/graphs/projection-comparison}
+
+\caption{Mean by-predicate certainty ratings in Exp.~1 and \citepos{tonhauser-degen-factive} Exp.~1a. Error bars indicate 95\% bootstrapped confidence intervals.} 
+\label{f-projection-comparison}
+\end{figure}
 
 \section{Projection experiment}\label{a-proj}
 

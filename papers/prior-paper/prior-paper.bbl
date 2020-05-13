@@ -1,5 +1,5 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{27}
+\begin{thebibliography}{28}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrus{\'a}n(2011)]{abrusan2011}
@@ -7,11 +7,12 @@ Abrus{\'a}n, M{\'a}rta. 2011.
 \newblock Predicting the presuppositions of soft triggers.
 \newblock {\em Linguistics \& Philosophy\/} 34:491--535.
 
-\bibitem[Anand et~al.(ms)Anand, Grimshaw, and Hacquard]{anand-etal2019}
-Anand, Pranav, Jane Grimshaw, and Valentine Hacquard. ms.
+\bibitem[Anand et~al.(2019)Anand, Grimshaw, and Hacquard]{anand-etal2019}
+Anand, Pranav, Jane Grimshaw, and Valentine Hacquard. 2019.
 \newblock Sentence embedding predicates, factivity and subjects.
-\newblock In C.~Condoravdi, ed., {\em A Festschrift for Lauri Karttunen\/}.
-  Stanford: CSLI Publications.
+\newblock In C.~Condoravdi and T.~{Holloway King}, eds., {\em Tokens of
+  meaning: {P}apers in honor of Lauri Karttunen\/}. Stanford: CSLI
+  Publications.
 
 \bibitem[Anand and Hacquard(2014)]{anand-hacquard2014}
 Anand, Pranav and Valentine Hacquard. 2014.
@@ -148,6 +149,11 @@ Tonhauser, Judith, David Beaver, and Judith Degen. 2018.
 \newblock How projective is projective content? {G}radience in projectivity and
   at-issueness.
 \newblock {\em Journal of Semantics\/} 35:495--542.
+
+\bibitem[Tonhauser and Degen(ms)]{tonhauser-degen-factive}
+Tonhauser, Judith and Judith Degen. ms.
+\newblock Which predicates are factive? {A}n empirical investigation.
+\newblock Manuscript, The Ohio State U and Stanford U.
 
 \bibitem[van~der Sandt(1992)]{vds92}
 van~der Sandt, Rob. 1992.

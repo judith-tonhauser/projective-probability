@@ -1,4 +1,4 @@
-# experiment investigating prior and presupposition
+# experiment investigating prior and projection
 # contents of complements of 20 predicates
 # preprocessing.R
 
