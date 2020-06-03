@@ -8,7 +8,11 @@
 \BOOKMARK [1][-]{section.4}{Discussion}{}% 8
 \BOOKMARK [1][-]{section.5}{Conclusions}{}% 9
 \BOOKMARK [1][-]{appendix.A}{Experiment 1 target and control stimuli}{}% 10
-\BOOKMARK [1][-]{appendix.B}{Projection comparison}{}% 11
-\BOOKMARK [1][-]{appendix.C}{Projection experiment}{}% 12
-\BOOKMARK [2][-]{subsection.C.1}{Methods}{appendix.C}% 13
-\BOOKMARK [2][-]{subsection.C.2}{Results}{appendix.C}% 14
+\BOOKMARK [1][-]{appendix.B}{Model details for Experiments 1, 2 and 3}{}% 11
+\BOOKMARK [2][-]{subsection.B.1}{Motivation for using Bayesian mixed effects Beta regression}{appendix.B}% 12
+\BOOKMARK [2][-]{subsection.B.2}{Coding choices and interpreting model output}{appendix.B}% 13
+\BOOKMARK [2][-]{subsection.B.3}{Model outputs for Experiments 1, 2 and 3}{appendix.B}% 14
+\BOOKMARK [1][-]{appendix.C}{Projection comparison}{}% 15
+\BOOKMARK [1][-]{appendix.D}{Projection experiment}{}% 16
+\BOOKMARK [2][-]{subsection.D.1}{Methods}{appendix.D}% 17
+\BOOKMARK [2][-]{subsection.D.2}{Results}{appendix.D}% 18

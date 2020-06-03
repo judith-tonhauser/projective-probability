@@ -1,5 +1,5 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{28}
+\begin{thebibliography}{31}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrus{\'a}n(2011)]{abrusan2011}
@@ -17,8 +17,9 @@ Anand, Pranav, Jane Grimshaw, and Valentine Hacquard. 2019.
 \bibitem[Anand and Hacquard(2014)]{anand-hacquard2014}
 Anand, Pranav and Valentine Hacquard. 2014.
 \newblock Factivity, belief and discourse.
-\newblock In {\em The Art and Craft of Semantics: A Festschrift for Irene
-  Heim\/}, pages 69--90. MIT Working Papers in Linguistics.
+\newblock In L.~Crni\v{c} and U.~Sauerland, eds., {\em The Art and Craft of
+  Semantics: A Festschrift for {I}rene {H}eim\/}, pages 69--90. MIT Working
+  Papers in Linguistics.
 
 \bibitem[Anderson(1986)]{anderson86}
 Anderson, Lloyd~B. 1986.
@@ -33,7 +34,7 @@ Beaver, David. 2010.
 \newblock Have you noticed that your belly button lint colour is related to the
   colour of your clothing?
 \newblock In R.~B\"auerle, U.~Reyle, and E.~Zimmermann, eds., {\em
-  Presuppositions and Discourse: {Essays Offered to Hans Kamp}\/}, pages
+  Presuppositions and Discourse: {E}ssays offered to {H}ans {K}amp\/}, pages
   65--99. Oxford: Elsevier.
 
 \bibitem[Beaver et~al.(2017)Beaver, Roberts, Simons, and Tonhauser]{brst-ar}
@@ -64,8 +65,14 @@ Egr\'e, Paul. 2008.
 \bibitem[Heim(1983)]{heim83}
 Heim, Irene. 1983.
 \newblock On the projection problem for presuppositions.
-\newblock In M.~Barlow, D.~Flickinger, and M.~Westcoat, eds., {\em {West Coast
-  Conference on Formal Linguistics (WCCFL)} 2\/}, pages 114--125.
+\newblock {\em West Coast Conference on Formal Linguistics\/} 2:114--125.
+
+\bibitem[Jaynes and Kempthorne(1976)]{Jaynes1976}
+Jaynes, Edwin and Oscar Kempthorne. 1976.
+\newblock {Confidence intervals vs. Bayesian intervals}.
+\newblock In W.~L. Harper and C.~A. Hooker, eds., {\em Foundations of
+  probability theory, statistical inference, and statistical theories of
+  science\/}, pages 175--257. Dordrecht: Springer Netherlands.
 
 \bibitem[Karttunen(1971)]{karttunen71b}
 Karttunen, Lauri. 1971.
@@ -94,6 +101,19 @@ Mahler, Taylor. 2020.
 \newblock The social component of projection behavior of clausal complements.
 \newblock In {\em LSA 2020 XXX\/}.
 
+\bibitem[Morey et~al.(2016)Morey, Hoekstra, Rouder, Lee, and
+  Wagenmakers]{Morey2016}
+Morey, Richard~D., Rink Hoekstra, Jeffrey~N. Rouder, Michael~D. Lee, and
+  Eric~J. Wagenmakers. 2016.
+\newblock {The fallacy of placing confidence in confidence intervals}.
+\newblock {\em Psychonomic Bulletin and Review\/} 23(1):103--123.
+
+\bibitem[Nicenboim and Vasishth(2016)]{Nicenboim2016}
+Nicenboim, Bruno and Shravan Vasishth. 2016.
+\newblock {Statistical methods for linguistic research: Foundational Ideas,
+  Part II}.
+\newblock {\em Linguistics and Language Compass\/} 10(11):591--613.
+
 \bibitem[{R Core Team}(2016)]{R}
 {R Core Team}. 2016.
 \newblock {\em R: A Language and Environment for Statistical Computing\/}.
@@ -113,8 +133,7 @@ Simons, Mandy. 2007.
   Roberts]{brst-salt10}
 Simons, Mandy, Judith Tonhauser, David Beaver, and Craige Roberts. 2010.
 \newblock What projects and why.
-\newblock In {\em Semantics and Linguistic Theory (SALT) XXI\/}, pages
-  309--327. Ithaca, NY: CLC Publications.
+\newblock {\em Semantics and Linguistic Theory\/} 11:309--327.
 
 \bibitem[Spector and Egr\'e(2015)]{spector-egre2015}
 Spector, Benjamin and Paul Egr\'e. 2015.
@@ -128,8 +147,8 @@ Stevens, {Jon Scott}, Marie-Catherine {de Marneffe}, {Shari R.} Speer, and
   Judith Tonhauser. 2017.
 \newblock Rational use of prosody predicts projectivity in manner adverb
   utterances.
-\newblock In {\em 39th Annual Meeting of the Cognitive Science Society\/},
-  pages 1144--1149.
+\newblock {\em Annual Meeting of the Cognitive Science Society\/}
+  39:1144--1149.
 
 \bibitem[Swanson(2012)]{swanson2012}
 Swanson, Eric. 2012.
@@ -141,8 +160,7 @@ Swanson, Eric. 2012.
 \bibitem[Tonhauser(2016)]{tonhauser-salt26}
 Tonhauser, Judith. 2016.
 \newblock Prosodic cues to speaker commitment.
-\newblock In {\em Semantics and Linguistic Theory (SALT) XXVI\/}, pages
-  934--960. Ithaca, NY: CLC Publications.
+\newblock {\em Semantics and Linguistic Theory\/} 26:934--960.
 
 \bibitem[Tonhauser et~al.(2018)Tonhauser, Beaver, and Degen]{tbd-variability}
 Tonhauser, Judith, David Beaver, and Judith Degen. 2018.

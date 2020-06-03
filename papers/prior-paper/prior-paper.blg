@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: prior-paper.aux
 The style file: /Users/tonhauser.1/Library/Latex/cslipubs-natbib.bst
 Database file #1: /Users/tonhauser.1/Documents/bibliography.bib
-You've used 28 entries,
+Warning--I didn't find a database entry for "smithson2006"
+You've used 31 entries,
             2811 wiz_defined-function locations,
-            795 strings with 9226 characters,
-and the built_in function-call counts, 13993 in all, are:
-= -- 1342
-> -- 580
-< -- 35
-+ -- 199
-- -- 163
-* -- 1010
-:= -- 2423
-add.period$ -- 122
-call.type$ -- 28
-change.case$ -- 217
-chr.to.int$ -- 28
-cite$ -- 28
-duplicate$ -- 653
-empty$ -- 1094
-format.name$ -- 201
-if$ -- 2961
+            823 strings with 9857 characters,
+and the built_in function-call counts, 15200 in all, are:
+= -- 1456
+> -- 678
+< -- 34
++ -- 230
+- -- 191
+* -- 1159
+:= -- 2700
+add.period$ -- 133
+call.type$ -- 31
+change.case$ -- 235
+chr.to.int$ -- 31
+cite$ -- 31
+duplicate$ -- 666
+empty$ -- 1142
+format.name$ -- 236
+if$ -- 3144
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 24
-newline$ -- 145
-num.names$ -- 126
-pop$ -- 199
+missing$ -- 27
+newline$ -- 160
+num.names$ -- 140
+pop$ -- 196
 preamble$ -- 2
-purify$ -- 161
+purify$ -- 182
 quote$ -- 0
-skip$ -- 506
+skip$ -- 507
 stack$ -- 0
-substring$ -- 817
-swap$ -- 163
-text.length$ -- 13
+substring$ -- 902
+swap$ -- 146
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 252
+type$ -- 279
 warning$ -- 0
-while$ -- 125
+while$ -- 138
 width$ -- 0
-write$ -- 374
+write$ -- 412
+(There was 1 warning)
