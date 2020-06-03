@@ -113,20 +113,20 @@ function make_slides(f) {
         $(".err").hide();    	
 	  this.init_sliders();
       exp.sliderPost = null;	 
-      console.log(this.stim);   
+      //console.log(this.stim);   
       var utterance = "<strong> Fact:</strong> "+this.stim.prior_fact+".<br>";  
       //var utterance = this.stim.name + " asks: \"<strong><i>"+this.stim.utterance+"</i></strong>\""
 	  $(".sentence").html(utterance);
 	  $(".leftLabel").html("impossible")
 	  $(".rightLabel").html("definitely")
 	  var question = "";
-	  console.log(this.stim.block);
+	  //console.log(this.stim.block);
 	  question = "How likely is it that "+this.stim.question+"?";
 	  $(".question").html(question);	  
     },
 
     button : function() {
-    	console.log(exp.sliderPost);
+    	//console.log(exp.sliderPost);
       if (exp.sliderPost != null) {
         this.log_responses();
         _stream.apply(this); //use exp.go() if and only if there is no "present" data.
@@ -192,7 +192,7 @@ function make_slides(f) {
         $(".err").hide();   	
 	  this.init_sliders();
       exp.sliderPost = null;	 
-      console.log(this.stim);  
+      //console.log(this.stim);  
       /// 
       var utterance = "";
       if (this.stim.block == "prior") {
@@ -216,7 +216,7 @@ function make_slides(f) {
 	  $(".rightLabel").html(rightLabel);
 	  ///
 	  var question = "";
-	  console.log(this.stim.block);
+	  //console.log(this.stim.block);
 	  if (this.stim.block == "prior") {
 	  		question = question = "How likely is it that "+this.stim.question+"?";
 	  } else {
@@ -226,7 +226,7 @@ function make_slides(f) {
     },
 
     button : function() {
-    	console.log(exp.sliderPost);
+    	//console.log(exp.sliderPost);
       if (exp.sliderPost != null) {
         this.log_responses();
         _stream.apply(this); //use exp.go() if and only if there is no "present" data.
@@ -309,7 +309,7 @@ function make_slides(f) {
 	  $(".rightLabel").html(rightLabel);
 	  ///
 	  var question = "";
-	  console.log(this.stim.block);
+	  //console.log(this.stim.block);
 	  if (this.stim.block == "prior") {
 	  		question = question = "How likely is it that "+this.stim.question+"?";
 	  } else {
@@ -319,7 +319,7 @@ function make_slides(f) {
     },	      
 
     button : function() {
-    	console.log(exp.sliderPost);
+    	//console.log(exp.sliderPost);
       if (exp.sliderPost != null) {
         this.log_responses();
         _stream.apply(this); //use exp.go() if and only if there is no "present" data.
@@ -386,6 +386,8 @@ function make_slides(f) {
 
   return slides;
 }
+
+///// everything above this line is the function make_slides 
 
 /// init ///
 function init() {
@@ -1499,6 +1501,12 @@ var mcitems = {
 };
 
 // get trigger contents
+// getContent is called for a particular trigger (e.g., "stop")
+// it then gets an array of contents for that trigger and removes the first element and
+// returns that first element (shift)
+// then it loops through all arrays in items_content_mapping, finds the index of the
+// content that the trigger was just paired with and removes it from that array
+// so that no other trigger can be paired with it
   function getContent(trigger) {
 //  		console.log("items_content_mapping before throwing out "+trigger);
 //  		console.log(items_content_mapping);
@@ -1568,7 +1576,11 @@ var mcitems = {
 //   	"MC4": getContent("MC"),
 //   	"MC5": getContent("MC")
   	};
-       
+
+// makeStim gets a trigger from items, gets a name to create the item
+// then it calls the getContent function for that trigger, which returns a unique content
+// then it gets the utterance and question for that trigger/content combination
+// and returns: name, gender, trigger, content, utterance, question for that trigger
   function makeStim(i) {
     //get item
     var item = items[i];
@@ -1681,12 +1693,16 @@ var mcitems = {
 exp.stims_block1 = [];
 exp.stims_block2 = [];
 
+// items is a shuffled array, with each trigger once
+// this for loop runs calls makeStim as often as their are triggers
+// and adds the newly created stim to the the set of stims for block 1
+
   for (var i=0; i<items.length; i++) {
   	var stim = makeStim(i);
   	exp.stims_block1.push(jQuery.extend(true, {}, stim));	
   }
 
-// console.log(exp.stims_block1);
+console.log(exp.stims_block1);
 
 	exp.stims_block1 = _.shuffle(exp.stims_block1); 
 
@@ -1717,9 +1733,9 @@ exp.stims_block2 = [];
   
 // here things are bad already because some stim ai, some projective
 
-console.log(exp.stims_block1);
-console.log(exp.stims_block2);
-console.log(exp.stims_block0);
+//console.log(exp.stims_block1);
+//console.log(exp.stims_block2);
+//console.log(exp.stims_block0);
 
 	exp.stims_block1 = _.shuffle(exp.stims_block1);  
 	exp.stims_block2 = _.shuffle(exp.stims_block2); 
@@ -1746,9 +1762,9 @@ console.log(exp.stims_block0);
       exp.stims_block0[k].block = "prior";
    	}
 
-console.log(exp.stims_block1);
-console.log(exp.stims_block2);   
-console.log(exp.stims_block0);	
+//console.log(exp.stims_block1);
+//console.log(exp.stims_block2);   
+//console.log(exp.stims_block0);	
 
 //  exp.all_stims = [];
 //  for (var i=0; i<items.length; i++) {

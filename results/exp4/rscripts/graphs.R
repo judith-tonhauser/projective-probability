@@ -106,11 +106,31 @@ cd = cd %>%
                                                                                                                                               ifelse(prior_fact == "Sophia is a high end fashion model" | prior_fact == "Sophia is a hipster", "Sophia got a tattoo",
                                                                                                                                                      ifelse(prior_fact == "Tony has been sober for 20 years" | prior_fact == "Tony really likes to party with his friends", "Tony had a drink last night",
                                                                                                                                                             ifelse(prior_fact == "Zoe is 5 years old" | prior_fact == "Zoe is a math major", "Zoe calculated the tip",
-                                                                                                                                                                   NA)))))))))))))))))))))
-
+ 
+                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                     NA)))))))))))))))))))))
 # target data (no main clause content)
 t <- droplevels(subset(cd,cd$short_trigger != "MC"))
 nrow(t) #5720 / 286 = 20 rows per participant
+
+# plot of slider ratings to see if linear regression model is justified or whether we need Beta regression
+# do this on the target ratings only because that is what the model will be fitted to
+
+# projection 
+ggplot(t, aes(x=projective)) +
+  geom_histogram(bins=50) +
+  xlab("Certainty rating") +
+  ylab("Number of ratings") +
+  scale_x_continuous(breaks=seq(0,1,by=.1))
+ggsave("../graphs/bunching-projection.pdf",width=3.4,height=2)
+
+# prior 
+ggplot(t, aes(x=prior)) +
+  geom_histogram(bins=50) +
+  xlab("Prior probability rating") +
+  ylab("Number of ratings") +
+  scale_x_continuous(breaks=seq(0,1,by=.1))
+ggsave("../graphs/bunching-prior.pdf",width=3.4,height=2)
 
 # color-blind-friendly palette
 cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7") # c("#999999",
@@ -292,6 +312,44 @@ ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
   coord_fixed(ratio = 1) +
   facet_wrap(~short_trigger)
 ggsave(f="../graphs/projection-by-prior.pdf",height=7,width=7)
+
+#### For discussion: plot projectivity by prior probability on a by-content level ----
+summary(t)
+
+proj.means = t %>%
+  group_by(prior_type,content) %>%
+  summarize(Mean = mean(projective), CILow = ci.low(projective), CIHigh = ci.high(projective)) %>%
+  ungroup() %>%
+  mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, content = fct_reorder(as.factor(content),Mean))  
+proj.means
+
+nrow(proj.means) #40 (high_prior and low_prior for each of the 20 predicates)
+
+low = proj.means %>%
+  filter(prior_type == "low_prior") %>%
+  mutate(content = fct_reorder(content,Mean))
+
+t = t %>%
+  mutate(content = fct_relevel(content,levels(low$content)))
+
+ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
+  #geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
+  geom_smooth(method="lm",colour="grey50") +
+  geom_point(shape=20, size=1, alpha=.3) +
+  scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  xlab("Prior probability rating") +
+  ylab("Certainty rating") +
+  theme(legend.position = "top", legend.text=element_text(size=12)) +
+  guides(colour = guide_legend(override.aes = list(alpha = 1,size=3))) +
+  #xlim(0,1) +
+  #ylim(0,1) +
+  scale_x_continuous(breaks=c(0,.5,1),labels=c(0,.5,1)) +
+  scale_y_continuous(breaks=c(0,.5,1),labels=c(0,.5,1)) +
+  theme(panel.spacing.x = unit(4, "mm")) +
+  coord_fixed(ratio = 1) +
+  facet_wrap(~content)
+ggsave(f="../graphs/projection-by-prior-by-content.pdf",height=7,width=7)
+
 
 ## plot comparison and calculate Spearman rank correlation with Exp1a from factives paper ----
 ## with main clauses
