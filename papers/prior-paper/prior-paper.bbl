@@ -1,5 +1,5 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{31}
+\begin{thebibliography}{30}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrus{\'a}n(2011)]{abrusan2011}
@@ -73,11 +73,6 @@ Jaynes, Edwin and Oscar Kempthorne. 1976.
 \newblock In W.~L. Harper and C.~A. Hooker, eds., {\em Foundations of
   probability theory, statistical inference, and statistical theories of
   science\/}, pages 175--257. Dordrecht: Springer Netherlands.
-
-\bibitem[Karttunen(1971)]{karttunen71b}
-Karttunen, Lauri. 1971.
-\newblock Some observations on factivity.
-\newblock {\em Papers in Linguistics\/} 4:55--69.
 
 \bibitem[Karttunen(2016)]{karttunen2016}
 Karttunen, Lauri. 2016.
