@@ -1,11 +1,27 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{30}
+\begin{thebibliography}{35}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrus{\'a}n(2011)]{abrusan2011}
 Abrus{\'a}n, M{\'a}rta. 2011.
 \newblock Predicting the presuppositions of soft triggers.
 \newblock {\em Linguistics \& Philosophy\/} 34:491--535.
+
+\bibitem[Abrus{\'a}n(2016)]{abrusan2016}
+Abrus{\'a}n, M{\'a}rta. 2016.
+\newblock Presupposition cancellation: {E}xplaining the `soft-hard' trigger
+  distinction.
+\newblock {\em Natural Language Semantics\/} 24:165--202.
+
+\bibitem[Abusch(2002)]{abusch02}
+Abusch, Dorit. 2002.
+\newblock Lexical alternatives as a source of pragmatic presupposition.
+\newblock {\em {S}emantics and {L}inguistic {T}heory\/} 12:1--19.
+
+\bibitem[Abusch(2010)]{abusch10}
+Abusch, Dorit. 2010.
+\newblock Presupposition triggering from alternatives.
+\newblock {\em Journal of Semantics\/} 27:37--80.
 
 \bibitem[Anand et~al.(2019)Anand, Grimshaw, and Hacquard]{anand-etal2019}
 Anand, Pranav, Jane Grimshaw, and Valentine Hacquard. 2019.
@@ -114,6 +130,12 @@ Nicenboim, Bruno and Shravan Vasishth. 2016.
 \newblock {\em R: A Language and Environment for Statistical Computing\/}.
 \newblock R Foundation for Statistical Computing, Vienna, Austria.
 
+\bibitem[Romoli(2015)]{romoli2015}
+Romoli, Jacopo. 2015.
+\newblock The presuppositions of soft triggers are obligatory scalar
+  implicatures.
+\newblock {\em Journal of Semantics\/} 32:173--291.
+
 \bibitem[Schlenker(2010)]{schlenker10}
 Schlenker, Philippe. 2010.
 \newblock Local contexts and local meanings.
@@ -123,6 +145,13 @@ Schlenker, Philippe. 2010.
 Simons, Mandy. 2007.
 \newblock Observations on embedding verbs, evidentiality, and presupposition.
 \newblock {\em Lingua\/} 117:1034--1056.
+
+\bibitem[Simons et~al.(2017)Simons, Beaver, Roberts, and
+  Tonhauser]{best-question}
+Simons, Mandy, David Beaver, Craige Roberts, and Judith Tonhauser. 2017.
+\newblock The {B}est {Q}uestion: Explaining the projection behavior of factive
+  verbs.
+\newblock {\em Discourse Processes\/} 3:187--206.
 
 \bibitem[Simons et~al.(2010)Simons, Tonhauser, Beaver, and
   Roberts]{brst-salt10}
