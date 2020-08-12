@@ -1,0 +1,108 @@
+\documentclass[12pt,fleqn]{article}
+\usepackage[margin=1in,top=1in,bottom=1in]{geometry}
+\usepackage{mathtools}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[dvips]{graphics}
+\usepackage[table]{xcolor}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+\usepackage[normalem]{ulem}
+
+\usepackage{multicol}
+\usepackage{txfonts}
+%\usepackage{amsfonts}
+
+
+
+%%%%%%%%%% bibliography stuff %%%%%%%%%%%%%
+%\usepackage[numbers]{natbib}
+%\bibliographystyle{abbrvnat}
+\usepackage{natbib}
+\bibliographystyle{/Users/tonhauser.1/Library/Latex/cslipubs-natbib}
+
+\setlength{\bibhang}{0.5in}
+\setlength{\bibsep}{0mm}
+\bibpunct[:]{(}{)}{;}{a}{,}{,}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{wrapfig}
+%\setlength{\intextsep}{8pt}%
+\setlength{\columnsep}{8pt}%
+
+\usepackage{gb4e}
+%\usepackage{/Users/judith/Library/Latex/drs}
+%\usepackage{/Users/judith/Library/Latex/avm}
+\usepackage[all]{xy}
+\usepackage{rotating}
+\usepackage{tipa}
+\usepackage{multirow}
+\usepackage{authblk}
+\usepackage{adjustbox}
+\usepackage{array}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\bfseries\footnotesize}
+ 
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{2ex}
+
+\renewcommand\figurename{Fig.}
+
+\newcommand{\yi}{\'{\symbol{16}}}
+\newcommand{\nasi}{\~{\symbol{16}}}
+\newcommand{\hina}{h\nasi na}
+\newcommand{\ina}{\nasi na}
+
+\exewidth{(\thexnumi)}
+
+\newcommand{\citepos}[1]{\citeauthor{#1}'s \citeyear{#1}}
+\newcommand{\citetpos}[1]{\citeauthor{#1}'s (\citeyear{#1})}
+
+\newcommand{\6}{\mbox{$[\hspace*{-.6mm}[$}} 
+\newcommand{\9}{\mbox{$]\hspace*{-.6mm}]$}}
+\newcommand{\sem}[2]{\6#1\9$^{#2}$}
+\renewcommand{\ni}{\~{\i}}
+
+\newcommand{\jt}[1]{\textbf{\color{blue}JT: #1}}
+
+
+\setlength{\belowcaptionskip}{-10pt}
+
+
+ \begin{document}
+ 
+SALT 30 \hfill August 17-20, 2020
+  
+\begin{center}
+{\bf Constraint-based projection}
+\\ Judith Tonhauser, University of Stuttgart
+\end{center}
+
+\vspace*{.5cm}
+
+\noindent
+Based on joint work with Judith Degen, Stanford University
+
+\vspace*{.5cm}
+\noindent
+The constraint-based approach to pragmatics assumes that listeners integrate information from multiple probabilistic sources in a weighted manner to identify speaker meaning (e.g., \citealt{degen-tanenhaus2019}). This talk motivates a constraint-based approach to projection, the phenomenon whereby listeners can infer that speakers are committed to utterance content even when that content is realized in the scope of an entailment-canceling operator. For instance, to identify whether Cam, who utters the question in (\ref{1}), is committed to the content of the clausal complement, listeners integrate information from multiple sources, including the expressions uttered, the common ground, the information structure of the utterance, what they know about Cam, and the Question Under Discussion (see, e.g., \citealt{beaver-belly,brst-ar,cummins-rohde2015,djaerv-bacovcin-salt27,mahler2020,brst-salt10,best-question,tonhauser-salt26,tonhauser-guarani-variability,tbd-variability,tonhauser-etal-sub23}).
+
+\begin{exe}
+\ex\label{1} Cam: {\em ``Did Kim discover that Sandy's work is plagiarized?''}
+\end{exe}
+
+From the constraint-based perspective, the overarching research question then is: which information sources do listeners rely on in drawing projection inferences in the domain under investigation and what is the relative weight of each information source in that domain?
+
+\noindent
+In this talk, the constraint-based approach is illustrated on the basis of the projection of the content of the complement of a broad range of (factive and non-factive) clause-embedding predicates, such as {\em discover} in (\ref{1}), as well as {\em  know, think} or {\em confirm}. The findings of two comprehension experiments reveal two novel information sources that influence listeners' projection inferences in this empirical domain: fine-grained lexical content and listeners' beliefs. Although projection analyses currently on the market (e.g., \citealt{abusch10,abrusan2011,heim83,best-question,schlenker-ms}) already consider the first of these information sources, a constraint-based recasting of these analyses highlights the danger of assigning too much privilege to binary categories derived from lexical content, such as `factive predicate', `presupposition trigger' or `entailment'. These analyses also differ in whether they are able to account for the second information source, listeners' beliefs. By forcing us to confront the multiple sources of information that listeners rely on in drawing projecting inferences, the constraint-based approach brings out a multitude of new research questions about projection cross-linguistically.
+
+\bibliography{../../bibliography}
+
+\end{document}
