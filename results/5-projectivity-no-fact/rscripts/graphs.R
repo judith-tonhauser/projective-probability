@@ -56,7 +56,7 @@ mean(tmp$Freq) #13.3
 
 # plots ----
 
-# plotting slider ratings suggests we should not use a linear regression model because of the slier endpoint bunching
+# plotting slider ratings suggests we should not use a linear regression model because of the slider endpoint bunching
 ggplot(cd, aes(x=response)) +
   geom_histogram(bins=50) +
   ylim(c(0,2000)) +
