@@ -595,7 +595,7 @@ ggplot(proj.means, aes(x=short_trigger, y=Mean, color=prior_type,fill=prior_type
   scale_alpha(range = c(.3,1)) +
   # guides(fill=FALSE, shape=F) +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
-  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, color=cols$Colors)) +
+  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, color=as.character(cols$Colors))) +
   theme(legend.position = "top", legend.text=element_text(size=12)) +
   geom_errorbar(aes(x=1,ymin=mc.data$YMin,ymax=mc.data$YMax,width=.25),color="black",width=0) +  # set x to the position of MC
   geom_point(shape=20,size=4,aes(x=1,y=mc.data$Mean),color="black",show.legend = FALSE ) +  # set x to the position of MC
