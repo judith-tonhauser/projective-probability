@@ -378,7 +378,7 @@ m.b.fact = readRDS(file="../data/beta-model-fact-mixed.rds")
 
 
 ##################################
-# fit linear model, first Bayesian then frequentist -- same qualitative result (except pretend's lower bound is nnow inluded in 95% credible interval)
+# fit linear model, first Bayesian then frequentist -- same qualitative result (except pretend's lower bound is now inluded in 95% credible interval)
 summary(d %>% select(response,verb,workerid,item))
 str(d %>% select(response,verb,workerid,item))
 
