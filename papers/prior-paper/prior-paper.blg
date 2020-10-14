@@ -1,48 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: prior-paper.aux
-The style file: /Users/tonhauser.1/Library/Latex/cslipubs-natbib.bst
-Database file #1: /Users/tonhauser.1/Documents/bibliography.bib
-Warning--I didn't find a database entry for "smithson2006"
-You've used 35 entries,
+The style file: ../cslipubs-natbib.bst
+Database file #1: ../../bibliography.bib
+You've used 39 entries,
             2811 wiz_defined-function locations,
-            844 strings with 10381 characters,
-and the built_in function-call counts, 16950 in all, are:
-= -- 1629
-> -- 751
-< -- 37
-+ -- 259
-- -- 212
-* -- 1290
-:= -- 3032
-add.period$ -- 149
-call.type$ -- 35
-change.case$ -- 262
-chr.to.int$ -- 35
-cite$ -- 35
-duplicate$ -- 738
-empty$ -- 1267
-format.name$ -- 261
-if$ -- 3493
+            872 strings with 11566 characters,
+and the built_in function-call counts, 19625 in all, are:
+= -- 1869
+> -- 937
+< -- 39
++ -- 319
+- -- 266
+* -- 1550
+:= -- 3473
+add.period$ -- 167
+call.type$ -- 39
+change.case$ -- 304
+chr.to.int$ -- 39
+cite$ -- 39
+duplicate$ -- 838
+empty$ -- 1431
+format.name$ -- 327
+if$ -- 4049
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 31
-newline$ -- 180
-num.names$ -- 156
-pop$ -- 211
+missing$ -- 35
+newline$ -- 200
+num.names$ -- 172
+pop$ -- 250
 preamble$ -- 2
-purify$ -- 205
+purify$ -- 239
 quote$ -- 0
-skip$ -- 558
+skip$ -- 640
 stack$ -- 0
-substring$ -- 1025
-swap$ -- 152
-text.length$ -- 10
+substring$ -- 1151
+swap$ -- 196
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 315
+type$ -- 351
 warning$ -- 0
-while$ -- 154
+while$ -- 171
 width$ -- 0
-write$ -- 464
-(There was 1 warning)
+write$ -- 518

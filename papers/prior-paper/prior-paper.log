@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  13 AUG 2020 09:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  14 OCT 2020 10:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1232,291 +1232,156 @@ LaTeX Font Info:    Try loading font information for U+txsyc on input line 96.
 File: utxsyc.fd 2000/12/15 v3.1
 )
 Package xypdf Info: Line width: 0.61319pt on input line 96.
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 119.
+ [1
 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/omstxr.fd
-File: omstxr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 119.
-
-Overfull \hbox (1.59784pt too wide) in paragraph at lines 127--128
-\OT1/txr/m/n/10.95 tence pro-cess-ing by com-bin-ing ex-pec-ta-tions about up-c
-om-ing dis-course con-tin-u-a-tions with their knowl-
- []
-
-[1
-
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 191.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 191.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 191.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\NAT@ctype' on input line 191.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 191.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 191.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 191.
-
-[2]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\NAT@ctype' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\NAT@ctype' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 245.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 245.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 245.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\NAT@ctype' on input line 245.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 245.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 245.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 245.
-
-[3] [4] [5] [6] [7] [8] [9] [10] [11] [12]
-<figures/exp1-projection-trial.pdf, id=401, 525.5886pt x 358.98969pt>
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+ [4]
+[5] [6] <figures/exp1-projection-trial.pdf, id=337, 525.5886pt x 358.98969pt>
 File: figures/exp1-projection-trial.pdf Graphic file (type pdf)
 
 <use figures/exp1-projection-trial.pdf>
-Package pdftex.def Info: figures/exp1-projection-trial.pdf used on input line 5
-82.
+Package pdftex.def Info: figures/exp1-projection-trial.pdf used on input line 3
+21.
 (pdftex.def)             Requested size: 224.7766pt x 153.52994pt.
 
-<figures/exp1-prior-trial.pdf, id=402, 445.59445pt x 317.86723pt>
+<figures/exp1-prior-trial.pdf, id=338, 445.59445pt x 317.86723pt>
 File: figures/exp1-prior-trial.pdf Graphic file (type pdf)
 
 <use figures/exp1-prior-trial.pdf>
-Package pdftex.def Info: figures/exp1-prior-trial.pdf used on input line 587.
+Package pdftex.def Info: figures/exp1-prior-trial.pdf used on input line 326.
 (pdftex.def)             Requested size: 214.81839pt x 153.24387pt.
- [13 <./figures/exp1-projection-trial.pdf> <./figures/exp1-prior-trial.pdf>]
-<../../results/exp4/graphs/prior-ratings.pdf, id=435, 578.16pt x 505.89pt>
+ [7 <./figures/exp1-projection-trial.pdf> <./figures/exp1-prior-trial.pdf>]
+<../../results/exp4/graphs/prior-ratings.pdf, id=370, 578.16pt x 505.89pt>
 File: ../../results/exp4/graphs/prior-ratings.pdf Graphic file (type pdf)
 
 <use ../../results/exp4/graphs/prior-ratings.pdf>
 Package pdftex.def Info: ../../results/exp4/graphs/prior-ratings.pdf used on in
-put line 603.
+put line 342.
 (pdftex.def)             Requested size: 460.72124pt x 403.13008pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf, id=44
-2, 505.89pt x 361.35pt>
+<../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf, id=37
+7, 505.89pt x 361.35pt>
 File: ../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf G
 raphic file (type pdf)
 
 <use ../../results/exp4/graphs/means-projectivity-by-predicate-and-prior.pdf>
 Package pdftex.def Info: ../../results/exp4/graphs/means-projectivity-by-predic
-ate-and-prior.pdf used on input line 614.
+ate-and-prior.pdf used on input line 353.
 (pdftex.def)             Requested size: 460.72124pt x 329.09367pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<../../results/exp4/graphs/projection-by-prior.pdf, id=446, 505.89pt x 505.89pt
+<../../results/exp4/graphs/projection-by-prior.pdf, id=381, 505.89pt x 505.89pt
 >
 File: ../../results/exp4/graphs/projection-by-prior.pdf Graphic file (type pdf)
 
  <use ../../results/exp4/graphs/projection-by-prior.pdf>
 Package pdftex.def Info: ../../results/exp4/graphs/projection-by-prior.pdf used
- on input line 625.
+ on input line 364.
 (pdftex.def)             Requested size: 430.00462pt x 430.01624pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14]
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 633
+[8]
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 372
 .
  (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
-) [15 <../../results/exp4/graphs/prior-ratings.pdf>] [16 <../../results/exp4/gr
-aphs/means-projectivity-by-predicate-and-prior.pdf>]
-Overfull \hbox (8.17886pt too wide) in paragraph at lines 651--652
+) [9 <../../results/exp4/graphs/prior-ratings.pdf>] [10 <../../results/exp4/gra
+phs/means-projectivity-by-predicate-and-prior.pdf>]
+Overfull \hbox (8.17886pt too wide) in paragraph at lines 390--391
 []\OT1/txr/m/n/10.95 Difference: we in-ves-ti-gated the pro-jec-tion of the con
 -tent of the clausal com-ple-ment of clause-embedding
  []
 
-[17 <../../results/exp4/graphs/projection-by-prior.pdf>] [18]
-<../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf, id=54
-7, 289.08pt x 289.08pt>
+[11 <../../results/exp4/graphs/projection-by-prior.pdf>] [12]
+<../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf, id=48
+2, 289.08pt x 289.08pt>
 File: ../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf G
 raphic file (type pdf)
 
 <use ../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf>
 Package pdftex.def Info: ../../results/1-prior/graphs/prior-probability-compari
-son-exp1-exp2.pdf used on input line 704.
+son-exp1-exp2.pdf used on input line 443.
 (pdftex.def)             Requested size: 307.14749pt x 307.16438pt.
 
 
-LaTeX Warning: Reference `f-projectivity' on page 19 undefined on input line 71
-6.
+LaTeX Warning: Reference `f-projectivity' on page 13 undefined on input line 45
+5.
 
-[19 <../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf>]
+[13 <../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf>]
 
-LaTeX Warning: Reference `f-proj' on page 20 undefined on input line 723.
+LaTeX Warning: Reference `f-proj' on page 14 undefined on input line 462.
 
-(./prior-paper.bbl [20] [21]) [22] [23]
-<../../results/exp4/graphs/bunching-projection.pdf, id=655, 244.915pt x 144.54p
+(./prior-paper.bbl [14] [15]) [16] [17]
+<../../results/exp4/graphs/bunching-projection.pdf, id=594, 244.915pt x 144.54p
 t>
 File: ../../results/exp4/graphs/bunching-projection.pdf Graphic file (type pdf)
 
  <use ../../results/exp4/graphs/bunching-projection.pdf>
 Package pdftex.def Info: ../../results/exp4/graphs/bunching-projection.pdf used
- on input line 810.
+ on input line 548.
 (pdftex.def)             Requested size: 155.02pt x 91.48853pt.
 
-<../../results/exp4/graphs/bunching-prior.pdf, id=656, 244.915pt x 144.54pt>
+<../../results/exp4/graphs/bunching-prior.pdf, id=595, 244.915pt x 144.54pt>
 File: ../../results/exp4/graphs/bunching-prior.pdf Graphic file (type pdf)
 
 <use ../../results/exp4/graphs/bunching-prior.pdf>
 Package pdftex.def Info: ../../results/exp4/graphs/bunching-prior.pdf used on i
-nput line 815.
+nput line 553.
 (pdftex.def)             Requested size: 155.02pt x 91.48853pt.
 
-<../../results/2-veridicality2/graphs/bunching.pdf, id=657, 244.915pt x 144.54p
+<../../results/2-veridicality2/graphs/bunching.pdf, id=596, 244.915pt x 144.54p
 t>
 File: ../../results/2-veridicality2/graphs/bunching.pdf Graphic file (type pdf)
 
  <use ../../results/2-veridicality2/graphs/bunching.pdf>
 Package pdftex.def Info: ../../results/2-veridicality2/graphs/bunching.pdf used
- on input line 820.
+ on input line 558.
 (pdftex.def)             Requested size: 155.02pt x 91.48853pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[18]
 
-Package natbib Warning: Citation `smithson2006' on page 24 undefined on input l
-ine 829.
-
-[24]
-
-Package natbib Warning: Citation `smithson2006' on page 25 undefined on input l
-ine 833.
+LaTeX Warning: Reference `tab:exp1modelresults' on page 19 undefined on input l
+ine 579.
 
 
-LaTeX Warning: Reference `tab:exp1modelresults' on page 25 undefined on input l
-ine 841.
+LaTeX Warning: Reference `tab:exp2modelresults' on page 19 undefined on input l
+ine 579.
 
 
-LaTeX Warning: Reference `tab:exp2modelresults' on page 25 undefined on input l
-ine 841.
+LaTeX Warning: Reference `tab:exp3modelresults' on page 19 undefined on input l
+ine 579.
 
 
-LaTeX Warning: Reference `tab:exp3modelresults' on page 25 undefined on input l
-ine 841.
-
-
-<../../results/exp4/graphs/projection-comparison.pdf, id=666, 361.35pt x 361.35
+<../../results/exp4/graphs/projection-comparison.pdf, id=609, 361.35pt x 361.35
 pt>
 File: ../../results/exp4/graphs/projection-comparison.pdf Graphic file (type pd
 f)
  <use ../../results/exp4/graphs/projection-comparison.pdf>
 Package pdftex.def Info: ../../results/exp4/graphs/projection-comparison.pdf us
-ed on input line 850.
+ed on input line 588.
 (pdftex.def)             Requested size: 245.71425pt x 245.71475pt.
- [25 <../../results/exp4/graphs/bunching-projection.pdf> <../../results/exp4/gr
+ [19 <../../results/exp4/graphs/bunching-projection.pdf> <../../results/exp4/gr
 aphs/bunching-prior.pdf> <../../results/2-veridicality2/graphs/bunching.pdf>]
-<../../results/exp4/graphs/projection-by-prior-by-content.pdf, id=691, 505.89pt
+<../../results/exp4/graphs/projection-by-prior-by-content.pdf, id=635, 505.89pt
  x 505.89pt>
 File: ../../results/exp4/graphs/projection-by-prior-by-content.pdf Graphic file
  (type pdf)
 
 <use ../../results/exp4/graphs/projection-by-prior-by-content.pdf>
 Package pdftex.def Info: ../../results/exp4/graphs/projection-by-prior-by-conte
-nt.pdf used on input line 861.
+nt.pdf used on input line 599.
 (pdftex.def)             Requested size: 430.00462pt x 430.01624pt.
 
 
@@ -1524,43 +1389,40 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 <../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-factty
-pe.pdf, id=695, 505.89pt x 289.08pt>
+pe.pdf, id=639, 505.89pt x 289.08pt>
 File: ../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-f
 acttype.pdf Graphic file (type pdf)
 
 <use ../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-fa
 cttype.pdf>
 Package pdftex.def Info: ../../results/3-projectivity/graphs/means-projectivity
--by-predicate-and-facttype.pdf used on input line 885.
+-by-predicate-and-facttype.pdf used on input line 623.
 (pdftex.def)             Requested size: 460.72124pt x 263.27493pt.
- [26 <../../results/exp4/graphs/projection-comparison.pdf>] [27 <../../results/
-exp4/graphs/projection-by-prior-by-content.pdf>]
+ [20 <../../results/exp4/graphs/projection-comparison.pdf>] [21 <../../results/
+exp4/graphs/projection-by-prior-by-content.pdf>] [22 <../../results/3-projectiv
+ity/graphs/means-projectivity-by-predicate-and-facttype.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 631.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 631.
 
-Package natbib Warning: There were undefined citations.
-
-[28 <../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-fa
-cttype.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 893.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 893.
- (./prior-paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 893.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 893.
+(./prior-paper.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 631.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 631.
 Package rerunfilecheck Info: File `prior-paper.out' has not changed.
-(rerunfilecheck)             Checksum: AFB1C966A846B279C43F268E400B9840;1978.
+(rerunfilecheck)             Checksum: F1B6A3F38F5AE20D93DDFFDF014CEC80;1325.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 893.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 631.
  ) 
 Here is how much of TeX's memory you used:
- 24684 strings out of 493014
- 423495 string characters out of 6133351
- 538578 words of memory out of 5000000
- 27458 multiletter control sequences out of 15000+600000
+ 24641 strings out of 493014
+ 423137 string characters out of 6133351
+ 538866 words of memory out of 5000000
+ 27437 multiletter control sequences out of 15000+600000
  52170 words of font info for 125 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 55i,10n,77p,3243b,730s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,10n,77p,3243b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/local/texlive/
 2016/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/2016/te
@@ -1571,10 +1433,10 @@ s/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
 mes/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmbi8
 a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on prior-paper.pdf (28 pages, 1348083 bytes).
+Output written on prior-paper.pdf (22 pages, 1334142 bytes).
 PDF statistics:
- 816 PDF objects out of 1000 (max. 8388607)
- 740 compressed objects within 8 object streams
- 208 named destinations out of 1000 (max. 500000)
- 289 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 756 PDF objects out of 1000 (max. 8388607)
+ 687 compressed objects within 7 object streams
+ 189 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 
