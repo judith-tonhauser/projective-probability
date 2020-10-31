@@ -432,7 +432,7 @@ Following \citealt{tbd-variability}, Exp.~1a implemented the `certain that' diag
 
 Exp.~1b was identical to Exp.~1a but employed a two-alternative forced choice task where participants categorically responded `yes' or `no'.
  
-\subsection{Experiment 1a: Gradient projection ratings}
+\subsection{Experiment 1a: Gradient projection ratings}\label{s-exp1a}
 
 \subsubsection{Methods}
 
@@ -516,14 +516,10 @@ The possibility of categorizing clause-embedding predicates by the projection of
 
 According to the Beta regression model, the estimated mean for each predicate was higher than that of the main clause controls, i.e., the 95\% credible intervals for the estimated adjustment to the main clause control mean did not contain 0 for any predicate. This suggests that the CC of each of the 20 predicates is projective compared to non-projective main clause content. In other words, the CC of all 20 predicates is presupposed.\footnote{A Bayesian mixed effects linear regression with the same fixed and random effects structure yielded qualitatively identical results, except that the contrast between \emph{pretend} and the main clause controls was only marginally significant. See the Github repository mentioned in footnote \ref{f-github} for the model code.} Thus, to distinguish factive predicates from others in this set of 20 predicates, one would need to distinguish one group of presupposed CCs from another group of presupposed CCs. 
 
-\jt{this is where we want to include outcome of factivity analysis, also in Exp 1b. But does it fit here?} 
-
-\jt{NEW TEXT:} The results of Exp.~1a show that projection does not categorically distinguish the 5 factive predicates from the other 15 predicates and that there is no non-arbitrary projection threshold to distinguish a class of factive predicates from other predicates. The conclusion we are led to is that there is no empirical support from Exp.~1a for a factivity classification of these 20 clause-embedding predicates. This conclusion is also supported by comparing a model that predicts the certainty ratings of Exp.~1a from the factivity classification in (\ref{pred}) to one that predicts the certainty ratings from the predicates themselves. \jt{CONTINUE HERE}
-
 In sum, the findings of Exp.~1a suggest that projection does not identify a coherent class of factive predicates. It is possible, however, that asking participants to assess projection with a gradient response scale encouraged them to provide non-categorical answers and that the observed projection variability is an artifact of the task. If so, categorically distinguishing factive predicates from others may be possible if participants were asked to assess projection with a categorical response task. To assess this possibility, we conducted Exp.~1b, which was identical to Exp.~1a but employed a two-alternative forced choice task.
 
 
-\subsection{Experiment 1b: Categorical projection ratings}
+\subsection{Experiment 1b: Categorical projection ratings}\label{s-exp1b}
 
 \subsubsection{Methods}
 
@@ -543,7 +539,7 @@ In sum, the findings of Exp.~1a suggest that projection does not identify a cohe
 
 \subsubsection{Results and discussion}
 
-Figure \ref{f-projectivity2} shows the proportion of `yes' ratings (indicating projection) for the predicates and the main clause stimuli, in increasing order from left to right. Jittered gray dots indicate the individual participants' ratings. The order of predicates according to the projection of their CC in Exp.~1b is strikingly similar to that of Exp.~1a, as evidenced by the very high Spearman rank correlation of .983 (see Supplement \ref{a-comparison} for a visualization and details on this correlation). The critical findings of Exp.~1a were replicated. First, the CCs of the factive predicates were not categorically more projective than the CCs of the optionally factive predicates:  the CCs of {\em acknowledge, hear} and {\em inform} were again at least as projective as the CCs of {\em reveal} or {\em discover}. Second, a non-arbitrary line between factive and optionally factive predicates cannot be drawn: the CCs of all 20 predicates were projective compared to the non-projective main clause controls.\footnote{According to \citet[1739]{spector-egre2015}, it is not clear whether the CC of {\em say} is projective. The findings of our Exps.~1 suggest that it is weakly projective.}  This was established by fitting a Bayesian mixed effects logistic regression model  with weakly informative priors using the \verb|brms| package in R. The model predicted the log odds of a `yes' over a `no' response from a fixed effect of predicate (with treatment coding and `main clause' as  reference level) and included the maximal random effects structure justified by the design, namely random by-participant and by-item intercepts. The estimated log odds of a `yes' response was greater for each predicate than that of the main clause controls, i.e., the 95\% credible intervals for the estimated coefficients did not contain 0 for any predicate. See Supplement \ref{a-mo} for model details. Thus, like Exp.~1a, the results of Exp.~1b do not support the assumption of the definition of factive predicates in (\ref{def}a) that factive predicates are categorically distinguished from optionally factive and non-factive ones by the projection of the CC. \jt{Do we report the factivity model versus predicate model comparison here?}
+Figure \ref{f-projectivity2} shows the proportion of `yes' ratings (indicating projection) for the predicates and the main clause stimuli, in increasing order from left to right. Jittered gray dots indicate the individual participants' ratings. The order of predicates according to the projection of their CC in Exp.~1b is strikingly similar to that of Exp.~1a, as evidenced by the very high Spearman rank correlation of .983 (see Supplement \ref{a-comparison} for a visualization and details on this correlation). The critical findings of Exp.~1a were replicated. First, the CCs of the factive predicates were not categorically more projective than the CCs of the optionally factive predicates:  the CCs of {\em acknowledge, hear} and {\em inform} were again at least as projective as the CCs of {\em reveal} or {\em discover}. Second, a non-arbitrary line between factive and optionally factive predicates cannot be drawn: the CCs of all 20 predicates were projective compared to the non-projective main clause controls.\footnote{According to \citet[1739]{spector-egre2015}, it is not clear whether the CC of {\em say} is projective. The findings of our Exps.~1 suggest that it is weakly projective.}  This was established by fitting a Bayesian mixed effects logistic regression model  with weakly informative priors using the \verb|brms| package in R. The model predicted the log odds of a `yes' over a `no' response from a fixed effect of predicate (with treatment coding and `main clause' as  reference level) and included the maximal random effects structure justified by the design, namely random by-participant and by-item intercepts. The estimated log odds of a `yes' response was greater for each predicate than that of the main clause controls, i.e., the 95\% credible intervals for the estimated coefficients did not contain 0 for any predicate. See Supplement \ref{a-mo} for model details. Thus, like Exp.~1a, the results of Exp.~1b do not support the assumption of the definition of factive predicates in (\ref{def}a) that factive predicates are categorically distinguished from optionally factive and non-factive ones by the projection of the CC.
 
 \begin{figure}[H]
 
@@ -553,6 +549,14 @@ Figure \ref{f-projectivity2} shows the proportion of `yes' ratings (indicating p
 \label{f-projectivity2}
 
 \end{figure}
+
+\subsection{Interim summary and alternative analyses}
+
+The findings of Exps.~1 suggest that projection does not categorically distinguish factive predicates from others. We observed, contrary to what is expected on definition (\ref{def}b), that the CCs of predicates standardly classified as factive are not categorically more projective than the CCs of all other predicates. 
+
+One might object to this conclusion and argue that this expectation -- that the CCs of factive predicates are more projective than those of all other predicates -- is too strong. Specifically, given that the CCs of factive predicates are among the most projective in both Exps.~1a and 1b, one might argue that it suffices to show that assuming a class of factive predicates explains some of the variability observed in the projection of the CCs of clause-embedding predicates. To engage with this possibility, we fitted models to the certainty ratings of Exps.~1a and 1b that predict projection from a binary factivity classification of the 20 predicates (for this analysis, the factive predicates are the five predicates in (\ref{pred}a) and the non-factive predicates are the other 15). \jt{details on the models and where they can be found. say that these models show that factivity is a significant predictor. but how much variance is explained? less than in the models reported on in sections \ref{s-exp1a} and \ref{s-exp1b}, which predicted the ratings from the individual predicates}.
+
+\jt{say something about the possibility of fuzzy factivity, which we engage with more fully in section \ref{s4}} Instead, we now provide converging evidence from other datasets for our conclusion that projection does not categorically distinguish factive predicates from others.
 
 
 \subsection{Converging evidence for failure of projection-based definition of factive predicates}\label{s-converging1}
