@@ -352,21 +352,25 @@ prop.table(table(q_answer$samples$H1 > 0))
 
 
 # run alternate beta model with factivity fixed effect
-# create factivity variable
+# create factivity variable -- classify MC controls as "non-factive" to stack deck against yourself
 d = d %>% 
   mutate(predicate_type = as.factor(case_when(verb %in% c("know", "reveal","see","discover","be_annoyed") ~ "factive",
-                                     verb == "MC" ~ "control",
+                                     # verb == "MC" ~ "control",
                                      TRUE ~ "non-factive")))
 
-betamodel.fact = bf(betaresponse ~ verb + predicate_type + (1|workerid) + (1|item),
-               phi ~ verb + (1|workerid) + (1|item), # beta distribution's precision  )
-               family = Beta())
+d = d %>% 
+  mutate(predicate_type = fct_relevel(predicate_type,"non-factive")) %>% 
+  droplevels()
+
+betamodel.fact = bf(betaresponse ~ predicate_type + (1|workerid) + (1|item),
+                    phi ~ predicate_type + (1|workerid) + (1|item), # beta distribution's precision  )
+                    family = Beta())
 
 m.b.fact = brm(formula = betamodel.fact,
-          family=Beta(),
-          data=d, 
-          cores = 4,
-          control = list(adapt_delta = .95,max_treedepth=15))
+               family=Beta(),
+               data=d, 
+               cores = 4,
+               control = list(adapt_delta = .95,max_treedepth=15))
 
 summary(m.b.fact)
 
@@ -374,6 +378,29 @@ saveRDS(m.b.fact,file="../data/beta-model-fact-mixed.rds")
 
 # to load model
 m.b.fact = readRDS(file="../data/beta-model-fact-mixed.rds")
+
+
+# model comparison between binary factivity and predicate-specific predictor model. 
+m.b.fact = add_criterion(m.b.fact, "waic")
+m.b = add_criterion(m.b, "waic")
+
+# look at absolute waic
+waic(m.b.fact) # -18643.9, higher -> worse
+waic(m.b) #  -18971, lower -> better
+
+loo_compare(m.b.fact, m.b, criterion = "waic")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

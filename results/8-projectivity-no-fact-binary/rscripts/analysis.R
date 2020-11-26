@@ -14,6 +14,7 @@ library(dplyr)
 library(dichromat)
 library(forcats)
 library(ggrepel)
+library(brms)
 theme_set(theme_bw())
 
 # load clean data for analysis ----
@@ -125,10 +126,57 @@ prop.table(table(q_answer$samples$H4 > 0)) # p(know > be_right = 1, very high)
 prop.table(table(q_answer$samples$H5 > 0))
 
 # to load saved model:
-model.brms.proj.b = readRDS(model.brms.proj.b, "../models/brm_model.rds")
+model.brms.proj.b = readRDS(file="../models/brm_model.rds")
 
-model.proj.b = glmer(nResponse ~ verb + (1+verb|workerid) + (1|item), nAGQ=0, data=cd,family = binomial)
-summary(model.proj.b) # did not converge without nAGQ=0
+# model comparison between binary factivity and predicate-specific predictor model. to this end, classify MC controls as "non-factive"
 
-model.proj.b = glmer(response ~ verb + (1|workerid) + (1|item), data=cd, family = binomial)
-summary(model.proj.b) # did not converge
+# create factivity variable (collapse MC controls into non-factive category, to stack deck against yourself)
+cd = cd %>% 
+  mutate(predicate_type = as.factor(case_when(verb %in% c("know", "reveal","see","discover","be_annoyed") ~ "factive",
+                                              # verb == "MC" ~ "control",
+                                              TRUE ~ "non-factive")))
+cd = cd %>% 
+  mutate(predicate_type = fct_relevel(predicate_type,"non-factive")) %>% 
+  droplevels()
+
+model.brms.proj.binary.b = brm(nResponse ~ predicate_type + (1|workerid) + (1|item), data=cd, family=bernoulli(), cores = 4, control=list(max_treedepth = 15))
+summary(model.brms.proj.binary.b) 
+saveRDS(model.brms.proj.binary.b, "../models/brm_model_binary.rds")
+
+mcmcReg(model.brms.proj.binary.b, pars = "b_", file="../models/brm_output_binary.tex")
+
+# model comparison
+model.brms.proj.binary.b = add_criterion(model.brms.proj.binary.b, "waic")
+model.brms.proj.b = add_criterion(model.brms.proj.b, "waic")
+
+# look at absolute waic
+waic(model.brms.proj.b) # 6719.0, higher -> worse
+waic(model.brms.proj.binary.b) # 6444.5, lower -> better
+
+loo_compare(model.brms.proj.binary.b, model.brms.proj.b, criterion = "waic")
+
+# to do waic calculations by hand:
+# ll = model.brms.proj.b %>% 
+#   log_lik() %>% 
+#   as_tibble()
+# 
+# dfmean = ll %>% 
+#   exp() %>% 
+#   summarise_all(mean) %>% 
+#   gather(key,means) %>% 
+#   select(means) %>% 
+#   log()
+# 
+# lppd = dfmean %>% 
+#   sum()
+# 
+# dfvar = ll %>% 
+#   summarise_all(var) %>% 
+#   gather(key, vars) %>% 
+#   select(vars)
+# 
+# pwaic = dfvar %>% 
+#   sum()
+# 
+# pwaic
+# -2 * (lppd -pwaic)
