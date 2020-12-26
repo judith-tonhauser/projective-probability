@@ -1,0 +1,257 @@
+
+\documentclass[11pt,fleqn]{article}
+\usepackage[margin=1in,top=1in,bottom=1in]{geometry}
+\usepackage{mathtools}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[dvips]{graphics}
+\usepackage[table]{xcolor}
+\usepackage{amssymb}
+\usepackage{subfig}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pdflscape}
+
+\usepackage[normalem]{ulem}
+
+\usepackage{multicol}
+\usepackage{txfonts}
+%\usepackage{amsfonts}
+\usepackage{natbib}
+
+\usepackage{gb4e}
+%\usepackage{/Users/judith/Library/Latex/drs}
+%\usepackage{/Users/judith/Library/Latex/avm}
+\usepackage[all]{xy}
+\usepackage{rotating}
+\usepackage{tipa}
+\usepackage{multirow}
+\usepackage{authblk}
+\usepackage{adjustbox}
+\usepackage{array}
+
+
+\newcolumntype{R}[2]{%
+    >{\adjustbox{angle=#1,lap=\width-(#2)}\bgroup}%
+    l%
+    <{\egroup}%
+}
+\newcommand*\rot{\multicolumn{1}{R{90}{1em}}}% no optional argument here, please!
+
+\newcommand{\foc}{$_{\mbox{\small F}}$}
+\newcommand{\lp}{<_{\hspace*{-.1cm}p}}
+\newcommand{\lnai}{<_{\hspace*{-.1cm}nai}}
+
+\setlength{\parindent}{.8cm}
+\setlength{\parskip}{0ex}
+\setlength{\headsep}{0in}
+
+\setlength{\bibsep}{0mm}
+\bibpunct[:]{(}{)}{;}{a}{,}{,}
+
+\newcommand{\yi}{\'{\symbol{16}}}
+\newcommand{\nasi}{\~{\symbol{16}}}
+\newcommand{\hina}{h\nasi na}
+\newcommand{\ina}{\nasi na}
+%\renewcommand{\abut}{$\supset$\hspace*{-0.07cm}$\subset$}
+\newcommand{\tto}{t$_{top}$}
+\newcommand{\wtop}{w$_{top}$}
+\newcommand{\tc}{t$_c$}
+\newcommand{\schwa}{\begin{sideways}e\end{sideways}}
+
+% Semantic brackets
+%\newcommand{\iss}[1]{\mbox{\protect\tiny \mbox{#1}}}
+%\newcommand{\sem}[2]{\6#1\9$_\iss{#2}$} David's original
+\newcommand{\6}{\mbox{$[\hspace*{-.6mm}[$}} 
+\newcommand{\9}{\mbox{$]\hspace*{-.6mm}]$}}
+\newcommand{\sem}[2]{\6#1\9$^{#2}$}
+
+\newcommand{\semt}[2]{$\left[\hspace*{-.6mm}\left[\begin{tabular}[c]{@{}l@{}}#1\vspace*{-.5em}\end{tabular}\right]\hspace*{-.6mm}\right]\hspace*{-.6mm}^{#2}$}
+
+\renewcommand{\baselinestretch}{1}
+
+\def\bad{{\leavevmode\llap{*}}}
+\def\marginal{{\leavevmode\llap{?}}}
+\def\verymarginal{{\leavevmode\llap{??}}}
+\def\infelic{{\leavevmode\llap{\#}}}
+
+\definecolor{Lighter}{gray}{.92}
+\definecolor{Blue}{RGB}{0,0,255}
+\definecolor{Green}{RGB}{10,200,100}
+\definecolor{Red}{RGB}{255,0,0}
+
+
+\newcommand{\citepos}[1]{\citeauthor{#1}'s \citeyear{#1}}
+\newcommand{\citeposs}[1]{\citeauthor{#1}'s}
+\newcommand{\citetpos}[1]{\citeauthor{#1}'s (\citeyear{#1})}
+
+\newcommand{\eref}[1]{(\ref{#1})}
+\newcommand{\tableref}[1]{Table \ref{#1}}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\appref}[1]{Appendix \ref{#1}}
+\newcommand{\sectionref}[1]{section \ref{#1}}
+
+
+\title{The influence of lexical meaning and prior belief on projectivity\thanks{David, Mandy, SALT 2018 reviewers, This work was partially supported by NSF grant BCS-1452674 (JT).}}
+
+\author[$\bullet$]{Judith Tonhauser}
+\author[$\triangleright$]{Judith Degen}
+
+\affil[$\bullet$]{The Ohio State University}
+\affil[$\triangleright$]{Stanford University}
+
+\renewcommand\Authands{ and }
+
+%\newcommand{\jt}[1]{\textbf{\color{blue}JT: #1}}
+%\newcommand{\jd}[1]{\textbf{\color{Green}[jd: #1]}}  
+
+\begin{document}
+
+\noindent
+\center{\bf \Large Outline of MIT talk: Speaker presuppositions with attitude predicates}
+
+\begin{itemize}[leftmargin=3ex,topsep=0pt,itemsep=-2pt]
+
+\item Identifying what speakers and authors are committed to is something we do all the time, critical to understanding the meaning of the speaker's utterance and to updating our own belief state. 
+
+\begin{exe}
+\ex 
+\begin{xlist}
+\ex Sam: Kim skipped class.
+\ex Sam: Kim announced that she skipped class.
+\ex Sam: Did Kim announce that she skipped class?
+\end{xlist}
+\end{exe}
+
+\item A speaker {\bf presupposes} that $P$ at a given moment in a conversation just in case they
+are disposed to act, in their linguistic behavior, as if they take the truth of $P$ for granted, and as if they assume that their audience recognizes that they are doing so. \hfill \begin{footnotesize}(adapted from \citealt[448]{stalnaker73})\end{footnotesize}
+
+
+\item {\bf Long-standing research questions:} Which linguistic behavior indicates speaker/author commitment and how can we formally model such commitment?
+
+\item {\bf Upshot of this talk:} 
+
+\begin{itemize}[leftmargin=3ex,topsep=0pt,itemsep=-2pt]
+
+\item {\bf Empirical:} Currently available evidence about linguistic behavior that is relevant for speaker/author commitment with attitude predicates
+
+\item {\bf Theoretical:} Assessment of theories of speaker commitment (conventionalist+ vs.\ question-based) partially depends on the level at which we analyze
+
+\item {\bf Methodological:} Experimental and corpus-based research suggests lots of variability that theories of meaning need to confront
+
+\end{itemize}
+
+\item {\bf Talk outline}
+
+\begin{itemize}[leftmargin=3ex,topsep=0pt,itemsep=-2pt]
+
+\item Linguistic behavior I: attitude predicate 
+
+Textbook: 3-way, categorical division among predicates based on generalizations over judgments
+
+Empirical motivation for conventionalist analysis of speaker commitment
+
+\item Problems:
+
+1. Crosslinguistic parallels suggest missed generalization
+
+2. Veridicality and projectivity ratings do not support textbook distinctions
+
+3. Local accommodation not understood well-enough to capture non-projecting interpretations
+
+\item Alternative proposal: conventional specification for some expressions, but not for attitude predicates; utterance content projects to the extent that it is not at-issue
+
+\item Linguistic behavior II: at-issueness
+
+\item Linguistic behavior III: information structure
+
+\item Linguistic behavior IV: prior event probability
+
+
+\end{itemize}
+
+
+- What's the right level to work on? Difference between what speaker is committed to in any given utterance, versus generalizations across utterances that share particular linguistic properties
+
+- Projective content can be characterized at utterance level, or content that tends to projective from embeddings: content does not tend to project from e.g., {\em think}, but it is possible.
+
+- normally a binary categorical division is made: content projects or not, presupposition is triggered or not; finer distinctions have been made (Abusch, Simons)
+
+- in non-experimental work, projection judgments are usually presented as crisp, but we found considerable by-expression and by-participant variation; by-expression variation does not align with commonly made distinctions
+
+\newpage
+
+\item[{\bf 1.}] {\bf Attitude predicate}
+
+\item Textbook division between attitude predicates:
+
+\begin{exe}
+\ex
+\begin{xlist}
+\ex Unembedded: Kim knows / is right that / thinks that it's raining.
+
+\ex Embedded: Does Kim know / Is Kim right / Does Kim think that it's raining? 
+
+\end{xlist}
+\end{exe}
+
+\begin{tabular}{l|cc}
+Predicate analyzed as... & entailed from unembedded & speaker commitment in embedded \\ \hline
+presupposing $p$ & yes & yes \\
+entailing $p$  & yes & no \\
+neither entailing nor presupposing $p$ & no & no \\
+\end{tabular}
+
+\item Conventionalist analyses: 3-way lexical distinction between factive, veridical and other predicates
+
+\item Problems with this simple picture:
+
+\begin{enumerate}
+
+\item \citealt{schlenker10,anand-hacquard2014}: some predicates, like {\em announce}, do not entail the content of the complement but sometimes appear to, and the content of the complement may be a commitment of the speaker in embedded sentences
+
+\item \citealt{tonhauser-guarani-variability}: conventionalist analyses do not lead us to expect strong cross-linguistic parallels 
+
+\end{enumerate}
+
+\item Unembedded attitude predicates and entailment:
+
+\begin{enumerate}
+
+\item `NP V S and not S' is contradictory (gradient contradictoriness rating)
+
+distinguishes non-entailing from entailing predicates, but does not distinguish apparently-entailing from non-entailing predicates; instead, an utterance of `NP V S' commits the speaker to S to varying degrees
+
+\item Inference from `NP V S' to S (gradient inference rating)
+
+\end{enumerate}
+
+\item Embedded attitude predicates and speaker commitment
+
+Speaker commitment in embedded sentences is a gradient property that does not align with the factive / semi-factive / non-factive distinction that is typically assumed: \citealt{tbd-variability}, database, new experiment
+
+compare to Rawlins \& White
+
+\item Conclusion: attitude predicate matters but cannot be assumed to determine speaker commitment. How do three prevalent theories deal:
+
+Conventionalist: nicely predict projection, but too robust and not for enough expressions
+
+Conventionalist+: unclear how meaning of attitude predicate comes into play
+
+Question-based: meaning of attitude predicate needs to come into play by constraining what question is about, unclear how that is done to date
+
+\item[{\bf 2.}] {\bf Information structure -- focus marking}
+
+\item[{\bf 3.}] {\bf At-issueness}
+
+\item At-issueness: holds not just at the level of the expression, but at the level of the items and participant
+
+\item[{\bf 4.}] {\bf Prior event probabilities}
+
+\end{itemize}
+
+\bibliographystyle{cslipubs-natbib}
+\bibliography{/Users/tonhauser.1/Documents/bibliography}
+
+\end{document}

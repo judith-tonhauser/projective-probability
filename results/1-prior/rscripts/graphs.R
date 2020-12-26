@@ -1,5 +1,6 @@
-# Prior probability work
-# norming study to establish prior probabilities for contents given one of two facts
+# Prior paper
+# Exp 2a (prior measured separately)
+# establish prior probabilities for contents given one of two facts
 # graphs.R
 
 # set working directory to directory of script
@@ -17,6 +18,8 @@ theme_set(theme_bw())
 # load clean data for analysis 
 cd <- read.csv(file="../data/cd.csv", header=TRUE, sep=",")
 nrow(cd) #1650
+
+summary(cd)
 
 # target data
 target <- subset(cd, cd$item != "F1" & cd$item != "F2")
@@ -70,6 +73,53 @@ target$eventItemNr  = factor(target$eventItemNr,
                                       "18:  Julian dances salsa",
                                       "19:  Jon walks to work",                    
                                       "20:  Charley speaks Spanish"))
+
+# color-blind-friendly palette
+cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7") # c("#999999",
+
+# Figure for Supplement (like Exp 1 Fig 2): prior ratings by content (no main clause content) ----
+means = target %>%
+  group_by(itemType,event) %>%
+  summarise(Mean=mean(response),CILow=ci.low(response),CIHigh=ci.high(response)) %>%
+  ungroup() %>%
+  mutate(YMin=Mean-CILow,YMax=Mean+CIHigh)
+means
+
+# save for comparison with results of Exp 1 and to predict projection (Exp 1, Exp 2b)
+write.csv(means,file="../data/prior_means.csv",row.names=F,quote=F)
+
+names(means)
+table(means$itemType)
+
+high = means %>%
+  filter(itemType == "H") %>%
+  mutate(event = fct_reorder(event,Mean))
+
+means = means %>%
+  mutate(event = fct_relevel(event,levels(high$event)))
+means
+
+subjmeans = target %>%
+  group_by(event,workerid,itemType) %>%
+  summarize(Mean = mean(response))
+subjmeans$event <- factor(subjmeans$event, levels = unique(levels(means$event)))
+levels(subjmeans$event)
+names(subjmeans)
+
+ggplot(means, aes(x=event, y=Mean, color=itemType, shape=itemType, fill=itemType)) + 
+  geom_point(data=subjmeans,aes(fill=itemType,color=itemType),shape=21,alpha=.05) +
+  geom_point(stroke=.5,size=3,color="black") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25) +
+  scale_shape_manual(values=rev(c(25, 24)),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_color_manual(name="Fact", breaks=c("higher probability","lower probability"),labels=c("higher probability", "lower probability"), 
+                     values=cbPalette) +
+  theme(legend.position = "top", legend.text=element_text(size=12)) +
+  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 75, hjust = 1)) +
+  ylab("Mean prior probability rating") +
+  xlab("Content") 
+ggsave(f="../graphs/prior-ratings.pdf",height=7,width=8)
 
 # plot for XPRAG abstract (content identified only by number) ----
 # color-blind-friendly palette
@@ -176,7 +226,7 @@ ggplot(means, aes(x=event, y=Mean, color=itemType,shape=itemType,fill=itemType))
   xlab("Content") 
 ggsave(f="../graphs/prior-ratings.pdf",height=7,width=8)
 
-# comparison of prior probability means from Exp1 and Exp2 ----
+# comparison of prior probability means from Exp 1 and Exp 2a ----
 
 # load data from Exp1 (called exp4 in repo)
 means1 <- read.csv(file="../../exp4/data/prior_means.csv")

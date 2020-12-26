@@ -1,3 +1,4 @@
+# Prior paper Exp 1 (prior and projection, within-participant design)
 # experiment investigating prior and projection
 # contents of complements of 20 predicates
 # graphs.R
@@ -29,6 +30,7 @@ table(d$prior) # half is high_prior, half is low_prior
 colnames(d)[colnames(d)=="prior"] = "prior_type"
 # (2) fill in (arbitrarily) 'high_prior' for the "prior_type" of main clauses (MC)
 d[d$short_trigger == "MC",]$prior_type <- "main clause"
+str(d$prior_type)
 
 # spread responses over separate columns for prior probability and projectivity
 head(d)

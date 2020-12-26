@@ -1,5 +1,5 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{39}
+\begin{thebibliography}{29}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrus{\'a}n(2011)]{abrusan2011}
@@ -7,35 +7,12 @@ Abrus{\'a}n, M{\'a}rta. 2011.
 \newblock Predicting the presuppositions of soft triggers.
 \newblock {\em Linguistics \& Philosophy\/} 34:491--535.
 
-\bibitem[Anand et~al.(2019)Anand, Grimshaw, and Hacquard]{anand-etal2019}
-Anand, Pranav, Jane Grimshaw, and Valentine Hacquard. 2019.
-\newblock Sentence embedding predicates, factivity and subjects.
-\newblock In C.~Condoravdi and T.~{Holloway King}, eds., {\em Tokens of
-  meaning: {P}apers in honor of Lauri Karttunen\/}. Stanford: CSLI
-  Publications.
-
 \bibitem[Anand and Hacquard(2014)]{anand-hacquard2014}
 Anand, Pranav and Valentine Hacquard. 2014.
 \newblock Factivity, belief and discourse.
 \newblock In L.~Crni\v{c} and U.~Sauerland, eds., {\em The Art and Craft of
   Semantics: A Festschrift for {I}rene {H}eim\/}, pages 69--90. MIT Working
   Papers in Linguistics.
-
-\bibitem[Anderson(1986)]{anderson86}
-Anderson, Lloyd~B. 1986.
-\newblock Evidentials, paths of change, and mental maps: {T}ypologically
-  regular asymmetries.
-\newblock In W.~Chafe and J.~Nichols, eds., {\em Evidentiality: {T}he
-  Linguistic Coding of Epistemology\/}, pages 273--312. New Jersey: Ablex
-  Publishing Corporation.
-
-\bibitem[Beaver(2010)]{beaver-belly}
-Beaver, David. 2010.
-\newblock Have you noticed that your belly button lint colour is related to the
-  colour of your clothing?
-\newblock In R.~B\"auerle, U.~Reyle, and E.~Zimmermann, eds., {\em
-  Presuppositions and Discourse: {E}ssays offered to {H}ans {K}amp\/}, pages
-  65--99. Oxford: Elsevier.
 
 \bibitem[Beaver et~al.(2017)Beaver, Roberts, Simons, and Tonhauser]{brst-ar}
 Beaver, David, Craige Roberts, Mandy Simons, and Judith Tonhauser. 2017.
@@ -84,12 +61,6 @@ Degen, Judith, {Michael Henry} Tessier, and {Noah D.} Goodman. 2015.
 \newblock In {\em Proceedings of the 37th Annual Conference of the Cognitive
   Science Society\/}, page ???? Austin, TX: Cognitive Science Society.
 
-\bibitem[Egr\'e(2008)]{egre2008}
-Egr\'e, Paul. 2008.
-\newblock Question-embedding and factivity.
-\newblock In L.~Lihoreau, ed., {\em Grazer Philosophische Studien\/}, pages
-  85--125. Amsterdam: Rodopi.
-
 \bibitem[Hagoort et~al.(2004)Hagoort, Hald, Mastiaansen, and
   Petersson]{hagoort-etal2004}
 Hagoort, Peter, Lea Hald, Marcel Mastiaansen, and {Karl Magnus} Petersson.
@@ -122,18 +93,6 @@ Jaynes, Edwin and Oscar Kempthorne. 1976.
   probability theory, statistical inference, and statistical theories of
   science\/}, pages 175--257. Dordrecht: Springer Netherlands.
 
-\bibitem[Karttunen(2016)]{karttunen2016}
-Karttunen, Lauri. 2016.
-\newblock Presupposition: {W}hat went wrong?
-\newblock In {\em Proceedings of {Semantics and Linguistic Theory (SALT)
-  XXVI}\/}, pages 705--731. Ithaca, NY: CLC Publications.
-
-\bibitem[Kiparsky and Kiparsky(1970)]{kiparsky-kiparsky70}
-Kiparsky, Paul and Carol Kiparsky. 1970.
-\newblock Fact.
-\newblock In M.~Bierwisch and K.~Heidolph, eds., {\em Progress in
-  Linguistics\/}, pages 143--173. The Hague: Mouton.
-
 \bibitem[Lorson(2018)]{lorson2018}
 Lorson, Alexandra. 2018.
 \newblock The influence of world knowledge on projectivity.
@@ -142,7 +101,7 @@ Lorson, Alexandra. 2018.
 \bibitem[Mahler(2020)]{mahler2020}
 Mahler, Taylor. 2020.
 \newblock The social component of projection behavior of clausal complements.
-\newblock In {\em LSA 2020 XXX\/}.
+\newblock {\em Linguistic Society of America\/} 5:777--791.
 
 \bibitem[Morey et~al.(2016)Morey, Hoekstra, Rouder, Lee, and
   Wagenmakers]{Morey2016}
@@ -167,11 +126,6 @@ Schlenker, Philippe. 2010.
 \newblock Local contexts and local meanings.
 \newblock {\em Philosophical Studies\/} 151:115--142.
 
-\bibitem[Simons(2007)]{simons07}
-Simons, Mandy. 2007.
-\newblock Observations on embedding verbs, evidentiality, and presupposition.
-\newblock {\em Lingua\/} 117:1034--1056.
-
 \bibitem[Simons et~al.(2010)Simons, Tonhauser, Beaver, and
   Roberts]{brst-salt10}
 Simons, Mandy, Judith Tonhauser, David Beaver, and Craige Roberts. 2010.
@@ -180,9 +134,9 @@ Simons, Mandy, Judith Tonhauser, David Beaver, and Craige Roberts. 2010.
 
 \bibitem[Smithson and Verkuilen(2006)]{smithson2006}
 Smithson, Michael and Jay Verkuilen. 2006.
-\newblock A better lemon squeezer? maximum-likelihood regression with
+\newblock A better lemon squeezer? {M}aximum-likelihood regression with
   beta-distributed dependent variables.
-\newblock {\em Psychological methods\/} 11(1):54.
+\newblock {\em Psychological Methods\/} 11(1):54.
 
 \bibitem[Spector and Egr\'e(2015)]{spector-egre2015}
 Spector, Benjamin and Paul Egr\'e. 2015.
@@ -198,13 +152,6 @@ Stevens, {Jon Scott}, Marie-Catherine {de Marneffe}, {Shari R.} Speer, and
   utterances.
 \newblock {\em Annual Meeting of the Cognitive Science Society\/}
   39:1144--1149.
-
-\bibitem[Swanson(2012)]{swanson2012}
-Swanson, Eric. 2012.
-\newblock Propositional attitudes.
-\newblock In K.~von Heusinger, C.~Maienborn, and P.~Portner, eds., {\em
-  Semantics: An International Handbook of Natural Language Meaning\/}, vol.~2,
-  pages 1538--1561. Berlin: Mouton de Gruyter.
 
 \bibitem[Tessler and Goodman(2019)]{tessler-goodman2019}
 Tessler, Michael~Henry and {Noah D.} Goodman. 2019.
@@ -231,16 +178,5 @@ Tonhauser, Judith and Judith Degen. ms.
 van~der Sandt, Rob. 1992.
 \newblock Presupposition projection as anaphora resolution.
 \newblock {\em Journal of Semantics\/} 9:333--377.
-
-\bibitem[White and Rawlins(2018)]{white-rawlins-nels2018}
-White, Aaron~S. and Kyle Rawlins. 2018.
-\newblock The role of veridicality and factivity in clause selection.
-\newblock In {\em 48th Meeting of the North East Linguistic Society\/}, page~??
-
-\bibitem[Wyse(2010)]{wyse}
-Wyse, Brendan. 2010.
-\newblock {\em Factive/non-factive predicate recognition within Question
-  Generation systems\/}.
-\newblock Master's thesis, Open University.
 
 \end{thebibliography}

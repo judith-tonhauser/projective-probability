@@ -1,5 +1,6 @@
-# Prior probability work
-# norming study to establish prior probabilities for contents given one of two facts
+# Prior paper
+# Exp 2a (prior measured separately)
+# establish prior probabilities for contents given one of two facts
 # preprocessing.R
 
 # set working directory to directory of script

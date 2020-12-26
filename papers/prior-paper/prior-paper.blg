@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: prior-paper.aux
 The style file: ../cslipubs-natbib.bst
 Database file #1: ../../bibliography.bib
-You've used 39 entries,
+You've used 29 entries,
             2811 wiz_defined-function locations,
-            872 strings with 11566 characters,
-and the built_in function-call counts, 19625 in all, are:
-= -- 1869
-> -- 937
-< -- 39
-+ -- 319
-- -- 266
-* -- 1550
-:= -- 3473
-add.period$ -- 167
-call.type$ -- 39
-change.case$ -- 304
-chr.to.int$ -- 39
-cite$ -- 39
-duplicate$ -- 838
-empty$ -- 1431
-format.name$ -- 327
-if$ -- 4049
+            808 strings with 9870 characters,
+and the built_in function-call counts, 14274 in all, are:
+= -- 1366
+> -- 735
+< -- 22
++ -- 252
+- -- 211
+* -- 1182
+:= -- 2594
+add.period$ -- 120
+call.type$ -- 29
+change.case$ -- 223
+chr.to.int$ -- 29
+cite$ -- 29
+duplicate$ -- 567
+empty$ -- 970
+format.name$ -- 258
+if$ -- 2871
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 35
-newline$ -- 200
-num.names$ -- 172
-pop$ -- 250
+missing$ -- 26
+newline$ -- 150
+num.names$ -- 120
+pop$ -- 159
 preamble$ -- 2
-purify$ -- 239
+purify$ -- 185
 quote$ -- 0
-skip$ -- 640
+skip$ -- 422
 stack$ -- 0
-substring$ -- 1151
-swap$ -- 196
-text.length$ -- 12
+substring$ -- 866
+swap$ -- 115
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 351
+type$ -- 261
 warning$ -- 0
-while$ -- 171
+while$ -- 122
 width$ -- 0
-write$ -- 518
+write$ -- 382

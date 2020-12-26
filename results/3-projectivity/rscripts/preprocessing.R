@@ -1,5 +1,5 @@
-# Prior probability work
-# projection experiment with sensitivity to fact
+# Prior paper Exp 2b
+# Projection experiment with sensitivity to fact
 # preprocessing.R
 
 # set working directory to directory of script

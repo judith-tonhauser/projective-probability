@@ -1,5 +1,5 @@
-# Prior probability work
-# projection experiment with sensitivity to fact
+# Prior paper Exp 2b
+# Projection experiment with sensitivity to fact
 # analysis.R
 
 # set working directory to directory of script
@@ -145,6 +145,30 @@ head(pmeans)
 cd = cd %>%
   mutate(verb=recode(verb, annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform"))
 
+# load prior means from (what is reported as) Exp 1
+pmeans_1 = read.csv("../../exp4/data/prior_means.csv")
+pmeans_1
+#pmeans$fact = gsub(".","",as.character(pmeans$fact),fixed=T)
+head(pmeans_1)
+
+# load prior means from (what is reported as) Exp 2a
+pmeans_2a = read.csv("../../1-prior/data/prior_means.csv")
+pmeans_2a
+#pmeans$fact = gsub(".","",as.character(pmeans$fact),fixed=T)
+head(pmeans_2a)
+# prior manipulation is called "itemType"
+
+# add "prior_type" column 
+pmeans_2a$prior_type <- pmeans_2a$itemType
+
+# merge prior means from Exp 2a into data
+cd_2a = left_join(cd,pmeans_2a,by=c("prior_type"))
+
+head(cd_2a)
+
+table(cd_2a$prior_type)
+
+################
 # merge contradictoriness means into cd
 # cd = left_join(cd,vmeans,by=c("verb"))
 cd = left_join(cd,pmeans,by=c("fact"))
