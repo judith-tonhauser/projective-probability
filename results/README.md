@@ -6,7 +6,7 @@ The folder "compare-diagnostics-and-response-tasks" compares the results of the 
 
 
 
-## slider ratings
+## slider ratings (reported in "factives-paper")
 1-prior -- Exp. 2a in prior paper: prior probability ratings given a fact (stimulus: "Fact: Julian is German. How likely is it that Julian dances salsa?")
 
 2-veridicality -- not reported anywhere: contradictoriness ratings (stimulus: "Sue: Jane knows that Bill dances salsa, but I know that he doesn't"; task: "Is Sue's utterance contradictory?"). We re-ran this experiment with a slightly different stimulus design (omitting the "I know that" part) after realizing that the stimulus assumes that the CC of "know" is entailed and that the diagnostic works just as well in the simplified way.
@@ -22,7 +22,7 @@ The folder "compare-diagnostics-and-response-tasks" compares the results of the 
 9-prior-projection -- Exp. 1 in prior paper: prior probability and certainty ratings for contents given a fact. Prior ratings as in 1-prior; certainty ratings as in 3-projectivity, but a within-participant design. This was originally "exp4" in the "attitude_preds_projection" repo, but we ran this for the prior paper, which lives in this repo.
 
 
-## binary ratings
+## binary ratings (reported in "prior-paper")
 6-veridicality2-binary -- Exp. 3b in factives paper: contradictoriness ratings (stimulus: "Sue: Jane knows that Bill dances salsa, but he doesn't"; task: "Is Sue's utterance contradictory?")
 
 7-veridicality3-binary -- Exp. 2b in factives paper: inference strength ratings (stimulus: "What is true: Jane knows that Bill dances salsa."; task: "Does it follow that Bill dances salsa?")
