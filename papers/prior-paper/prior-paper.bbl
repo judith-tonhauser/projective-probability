@@ -1,5 +1,5 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{29}
+\begin{thebibliography}{32}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrus{\'a}n(2011)]{abrusan2011}
@@ -7,18 +7,11 @@ Abrus{\'a}n, M{\'a}rta. 2011.
 \newblock Predicting the presuppositions of soft triggers.
 \newblock {\em Linguistics \& Philosophy\/} 34:491--535.
 
-\bibitem[Anand and Hacquard(2014)]{anand-hacquard2014}
-Anand, Pranav and Valentine Hacquard. 2014.
-\newblock Factivity, belief and discourse.
-\newblock In L.~Crni\v{c} and U.~Sauerland, eds., {\em The Art and Craft of
-  Semantics: A Festschrift for {I}rene {H}eim\/}, pages 69--90. MIT Working
-  Papers in Linguistics.
-
-\bibitem[Beaver et~al.(2017)Beaver, Roberts, Simons, and Tonhauser]{brst-ar}
-Beaver, David, Craige Roberts, Mandy Simons, and Judith Tonhauser. 2017.
-\newblock Questions {U}nder {D}iscussion: Where information structure meets
-  projective content.
-\newblock {\em Annual Review of Linguistics\/} 3:265--284.
+\bibitem[Abrus{\'a}n(2016)]{abrusan2016}
+Abrus{\'a}n, M{\'a}rta. 2016.
+\newblock Presupposition cancellation: {E}xplaining the `soft-hard' trigger
+  distinction.
+\newblock {\em Natural Language Semantics\/} 24:165--202.
 
 \bibitem[Bicknell and Rohde(2014)]{bicknell-rohde2009}
 Bicknell, Klinton and Hannah Rohde. 2014.
@@ -54,12 +47,30 @@ Chambers, {Craig G.}, {Michael K.} Tanenhaus, and {James S.} Magnuson. 2004.
 \newblock Actions and affordances in syntactic ambiguity resolution.
 \newblock {\em Journal of Experimental Psychology\/} 30:687--696.
 
+\bibitem[Cummins and Rohde(2015)]{cummins-rohde2015}
+Cummins, Chris and Hannah Rohde. 2015.
+\newblock Evoking context with contrastive stress: {E}ffects on pragmatic
+  enrichment.
+\newblock {\em Frontiers in Psychology\/} 6:Article 1779.
+
+\bibitem[{de Marneffe} et~al.(2019){de Marneffe}, Simons, and
+  Tonhauser]{demarneffe-etal-sub23}
+{de Marneffe}, Marie, Mandy Simons, and Judith Tonhauser. 2019.
+\newblock The {C}ommitment{B}ank: {I}nvestigating projection in naturally
+  occurring discourse.
+\newblock {\em Sinn und Bedeutung\/} 23:107--124.
+
 \bibitem[Degen et~al.(2015)Degen, Tessier, and Goodman]{degen-etal2015}
 Degen, Judith, {Michael Henry} Tessier, and {Noah D.} Goodman. 2015.
 \newblock Wonky worlds: {L}isteners revise world knowledge when utterances are
   odd.
 \newblock In {\em Proceedings of the 37th Annual Conference of the Cognitive
   Science Society\/}, page ???? Austin, TX: Cognitive Science Society.
+
+\bibitem[Dj\"arv and Bacovcin(2017)]{djaerv-bacovcin-salt27}
+Dj\"arv, Kajsa and {Hezekiah Akiva} Bacovcin. 2017.
+\newblock Prosodic effects on factive presupposition projection.
+\newblock {\em Semantics and Linguistic Theory\/} 27:116--133.
 
 \bibitem[Hagoort et~al.(2004)Hagoort, Hald, Mastiaansen, and
   Petersson]{hagoort-etal2004}
@@ -103,6 +114,12 @@ Mahler, Taylor. 2020.
 \newblock The social component of projection behavior of clausal complements.
 \newblock {\em Linguistic Society of America\/} 5:777--791.
 
+\bibitem[Mahler et~al.(2020)Mahler, de~Marneffe, and Lai]{mahler-etal2020}
+Mahler, Taylor, Marie-Catherine de~Marneffe, and Catherine Lai. 2020.
+\newblock The prosody of presupposition projection in naturally-occurring
+  utterances.
+\newblock {\em Sinn und Bedeutung\/} 24:20--37.
+
 \bibitem[Morey et~al.(2016)Morey, Hoekstra, Rouder, Lee, and
   Wagenmakers]{Morey2016}
 Morey, Richard~D., Rink Hoekstra, Jeffrey~N. Rouder, Michael~D. Lee, and
@@ -121,28 +138,24 @@ Nicenboim, Bruno and Shravan Vasishth. 2016.
 \newblock {\em R: A Language and Environment for Statistical Computing\/}.
 \newblock R Foundation for Statistical Computing, Vienna, Austria.
 
-\bibitem[Schlenker(2010)]{schlenker10}
-Schlenker, Philippe. 2010.
-\newblock Local contexts and local meanings.
-\newblock {\em Philosophical Studies\/} 151:115--142.
+\bibitem[Romoli(2015)]{romoli2015}
+Romoli, Jacopo. 2015.
+\newblock The presuppositions of soft triggers are obligatory scalar
+  implicatures.
+\newblock {\em Journal of Semantics\/} 32:173--291.
 
-\bibitem[Simons et~al.(2010)Simons, Tonhauser, Beaver, and
-  Roberts]{brst-salt10}
-Simons, Mandy, Judith Tonhauser, David Beaver, and Craige Roberts. 2010.
-\newblock What projects and why.
-\newblock {\em Semantics and Linguistic Theory\/} 11:309--327.
+\bibitem[Simons et~al.(2017)Simons, Beaver, Roberts, and
+  Tonhauser]{best-question}
+Simons, Mandy, David Beaver, Craige Roberts, and Judith Tonhauser. 2017.
+\newblock The {B}est {Q}uestion: Explaining the projection behavior of factive
+  verbs.
+\newblock {\em Discourse Processes\/} 3:187--206.
 
 \bibitem[Smithson and Verkuilen(2006)]{smithson2006}
 Smithson, Michael and Jay Verkuilen. 2006.
 \newblock A better lemon squeezer? {M}aximum-likelihood regression with
   beta-distributed dependent variables.
 \newblock {\em Psychological Methods\/} 11(1):54.
-
-\bibitem[Spector and Egr\'e(2015)]{spector-egre2015}
-Spector, Benjamin and Paul Egr\'e. 2015.
-\newblock A uniform semantics for embedding interrogatives: {\em {A}n} answer,
-  not necessarily {\em the} answer.
-\newblock {\em Synthese\/} 192:1729--1784.
 
 \bibitem[Stevens et~al.(2017)Stevens, {de Marneffe}, Speer, and
   Tonhauser]{stevens-etal2017}
@@ -168,6 +181,13 @@ Tonhauser, Judith, David Beaver, and Judith Degen. 2018.
 \newblock How projective is projective content? {G}radience in projectivity and
   at-issueness.
 \newblock {\em Journal of Semantics\/} 35:495--542.
+
+\bibitem[Tonhauser et~al.(2019)Tonhauser, de~Marneffe, Speer, and
+  Stevens]{tonhauser-etal-sub23}
+Tonhauser, Judith, Marie-Catherine de~Marneffe, {Shari R.} Speer, and Jon
+  Stevens. 2019.
+\newblock On the information structure sensitivity of projective content.
+\newblock {\em Sinn und Bedeutung\/} 23:363--389.
 
 \bibitem[Tonhauser and Degen(ms)]{tonhauser-degen-factive}
 Tonhauser, Judith and Judith Degen. ms.
