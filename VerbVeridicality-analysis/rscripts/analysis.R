@@ -84,10 +84,12 @@ names(d)
 length(unique(d$verb)) #78 verbs
 length(unique(d$index)) #859 total items: each has sentence and its negated variant
 
-# plot veridicality ratings ----
+# make ratings numeric
 str(d$pos_rating)
 d$pos_rating <- as.numeric(d$pos_rating)
 d$neg_rating <- as.numeric(d$neg_rating)
+
+# plot veridicality ratings ----
 
 # calculate veridicality mean
 v_means = d %>%
@@ -282,7 +284,7 @@ ggplot(p_means, aes(x=verb, y=Mean)) +
   #scale_alpha(range = c(.3,1)) +
   labs(color="Predicate type") +
   theme(legend.position="bottom") + 
-  ylab("Mean projectivity rating") +
+  ylab("Mean projection rating") +
   xlab("Predicate") 
 ggsave("../graphs/means-projection-by-predicate.pdf",height=4,width=9)
 

@@ -279,7 +279,7 @@ ggplot(p_means, aes(x=verb, y=Mean)) +
   #scale_alpha(range = c(.3,1)) +
   labs(color="Predicate type") +
   theme(legend.position="bottom") + 
-  ylab("Mean projectivity rating") +
+  ylab("Mean projection rating") +
   xlab("Predicate") 
 ggsave("../graphs/means-projection-by-predicate.pdf",height=4,width=9)
 
