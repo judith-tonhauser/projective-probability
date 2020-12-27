@@ -1,5 +1,5 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{32}
+\begin{thebibliography}{30}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Abrus{\'a}n(2011)]{abrusan2011}
@@ -12,6 +12,12 @@ Abrus{\'a}n, M{\'a}rta. 2016.
 \newblock Presupposition cancellation: {E}xplaining the `soft-hard' trigger
   distinction.
 \newblock {\em Natural Language Semantics\/} 24:165--202.
+
+\bibitem[Beaver and Geurts(2014)]{beaver-geurts-sep}
+Beaver, David and Bart Geurts. 2014.
+\newblock Presupposition.
+\newblock In E.~Zalta, ed., {\em The Stanford Encyclopedia of Philosophy\/}.
+  Stanford University.
 
 \bibitem[Bicknell and Rohde(2014)]{bicknell-rohde2009}
 Bicknell, Klinton and Hannah Rohde. 2014.
@@ -47,12 +53,6 @@ Chambers, {Craig G.}, {Michael K.} Tanenhaus, and {James S.} Magnuson. 2004.
 \newblock Actions and affordances in syntactic ambiguity resolution.
 \newblock {\em Journal of Experimental Psychology\/} 30:687--696.
 
-\bibitem[Cummins and Rohde(2015)]{cummins-rohde2015}
-Cummins, Chris and Hannah Rohde. 2015.
-\newblock Evoking context with contrastive stress: {E}ffects on pragmatic
-  enrichment.
-\newblock {\em Frontiers in Psychology\/} 6:Article 1779.
-
 \bibitem[{de Marneffe} et~al.(2019){de Marneffe}, Simons, and
   Tonhauser]{demarneffe-etal-sub23}
 {de Marneffe}, Marie, Mandy Simons, and Judith Tonhauser. 2019.
@@ -66,11 +66,6 @@ Degen, Judith, {Michael Henry} Tessier, and {Noah D.} Goodman. 2015.
   odd.
 \newblock In {\em Proceedings of the 37th Annual Conference of the Cognitive
   Science Society\/}, page ???? Austin, TX: Cognitive Science Society.
-
-\bibitem[Dj\"arv and Bacovcin(2017)]{djaerv-bacovcin-salt27}
-Dj\"arv, Kajsa and {Hezekiah Akiva} Bacovcin. 2017.
-\newblock Prosodic effects on factive presupposition projection.
-\newblock {\em Semantics and Linguistic Theory\/} 27:116--133.
 
 \bibitem[Hagoort et~al.(2004)Hagoort, Hald, Mastiaansen, and
   Petersson]{hagoort-etal2004}
@@ -104,6 +99,12 @@ Jaynes, Edwin and Oscar Kempthorne. 1976.
   probability theory, statistical inference, and statistical theories of
   science\/}, pages 175--257. Dordrecht: Springer Netherlands.
 
+\bibitem[Langendoen and Savin(1971)]{langendoen-savin71}
+Langendoen, Terry and Harris Savin. 1971.
+\newblock The projection problem for presuppositions.
+\newblock In C.~Fillmore and T.~Langendoen, eds., {\em Studies in Linguistic
+  Semantics\/}, pages 54--60. New York: Holt, Rinehart and Winston.
+
 \bibitem[Lorson(2018)]{lorson2018}
 Lorson, Alexandra. 2018.
 \newblock The influence of world knowledge on projectivity.
@@ -113,12 +114,6 @@ Lorson, Alexandra. 2018.
 Mahler, Taylor. 2020.
 \newblock The social component of projection behavior of clausal complements.
 \newblock {\em Linguistic Society of America\/} 5:777--791.
-
-\bibitem[Mahler et~al.(2020)Mahler, de~Marneffe, and Lai]{mahler-etal2020}
-Mahler, Taylor, Marie-Catherine de~Marneffe, and Catherine Lai. 2020.
-\newblock The prosody of presupposition projection in naturally-occurring
-  utterances.
-\newblock {\em Sinn und Bedeutung\/} 24:20--37.
 
 \bibitem[Morey et~al.(2016)Morey, Hoekstra, Rouder, Lee, and
   Wagenmakers]{Morey2016}
@@ -181,13 +176,6 @@ Tonhauser, Judith, David Beaver, and Judith Degen. 2018.
 \newblock How projective is projective content? {G}radience in projectivity and
   at-issueness.
 \newblock {\em Journal of Semantics\/} 35:495--542.
-
-\bibitem[Tonhauser et~al.(2019)Tonhauser, de~Marneffe, Speer, and
-  Stevens]{tonhauser-etal-sub23}
-Tonhauser, Judith, Marie-Catherine de~Marneffe, {Shari R.} Speer, and Jon
-  Stevens. 2019.
-\newblock On the information structure sensitivity of projective content.
-\newblock {\em Sinn und Bedeutung\/} 23:363--389.
 
 \bibitem[Tonhauser and Degen(ms)]{tonhauser-degen-factive}
 Tonhauser, Judith and Judith Degen. ms.
