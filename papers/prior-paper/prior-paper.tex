@@ -34,6 +34,9 @@
 \definecolor{Pink}{RGB}{255,50,170}
 \newcommand{\jd}[1]{\textcolor{Pink}{[jd: #1]}}  
 
+\newcommand{\jt}[1]{\textbf{\color{blue}JT: #1}}
+
+
 
 \def\bad{{\leavevmode\llap{*}}}
 \def\marginal{{\leavevmode\llap{?}}}
@@ -95,8 +98,6 @@
 
 \renewcommand\Authands{ and }
 
-\newcommand{\jt}[1]{\textbf{\color{blue}JT: #1}}
-
 \begin{document}
 
 %\tableofcontents
@@ -144,7 +145,7 @@ Inferences about speaker commitment are illustrated in (\ref{know}). A speaker w
 %
 %\end{itemize}
 
-Projection is gradient, as interpreters' inferences about speaker commitment to utterance content can vary in strength and several factors, including the discourse status of the content and the prosody of the utterance, have been observed to influence projection (for an overview see \citealt{tbd-variability}). The hypothesis that interpreters' beliefs influence projection was put forth in \citealt*{stevens-etal2017} and \citealt*{tbd-variability}\jd{also mahler and alexandra's work?}. These works observed by-item projection variability such that, for instance, the CC of {\em know} is more projective when it is {\em Kim flew to New York} than when it is {\em Kim flew to the moon} \jd{this was just an example, right? not one that we explicitly tested?}. Both works hypothesized that ``the projectivity of content may depend on the prior probability of the event described'' (\citealt[500]{tbd-variability}), such that more a priori likely content may be more likely to project: 
+Projection is gradient, as interpreters' inferences about speaker commitment to utterance content can vary in strength and several factors, including the discourse status of the content and the prosody of the utterance, have been observed to influence projection (for an overview see \citealt{tbd-variability}). The hypothesis that interpreters' beliefs influence projection was initially put forth in \citealt*{stevens-etal2017} and \citealt*{tbd-variability}\jd{also mahler and alexandra's work?}\jt{added ``initially'' and left out those works: Stevens et al and TBD put forth the hypothesis, without investigating it. please change as you see fit.}. These works observed by-item projection variability such that, for instance, the CC of {\em know} is more projective when it is {\em Kim flew to New York} than when it is {\em Kim flew to the moon} \jd{this was just an example, right? not one that we explicitly tested?}\jt{yes.}. Both works hypothesized that ``the projectivity of content may depend on the prior probability of the event described'' (\citealt[500]{tbd-variability}), such that more a priori likely content may be more likely to project: 
 
 %\citealt{stevens-etal2017} investigated the projection of the prejacent of manner adverb sentences; for instance, the content that Masha ran of the negated sentence {\em Masha didn't run quickly}. They hypothesized that the observed by-item variability might be due to prejacents differing in their prior probability and higher prior probability contents being more projective. \citealt{tbd-variability} investigated the projection of content associated with 19 American English expressions, including the content of the complement of clause-embedding predicates like {\em know}, illustrated in (\ref{know}), and the prejacent of {\em stop}; for instance, the content that Mary's daughter has been biting her nails of the polar question {\em Has Mary's daughter stopped biting her nails?}. These authors, too, hypothesized that prior probability influences projection (p.500), as formulated in the hypothesis in (\ref{hyp}):
 
@@ -296,7 +297,7 @@ The manipulation of the prior probability of the 20 contents was successful. Fig
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=.75\paperwidth]{../../results/9-prior-projection/graphs/prior-ratings}
+\includegraphics[width=.7\paperwidth]{../../results/9-prior-projection/graphs/prior-ratings}
 
 \caption{Mean prior probability by content and fact in Exp.~1. Error bars indicate 95\% bootstrapped confidence intervals. Light dots indicate participants' ratings.} 
 \label{f-prior}
@@ -307,7 +308,7 @@ To address the question of whether prior probability influences projection, Figu
 \begin{figure}[h!]
 \centering
 
-\includegraphics[width=.75\paperwidth]{../../results/9-prior-projection/graphs/means-projectivity-by-predicate-and-prior}
+\includegraphics[width=.7\paperwidth]{../../results/9-prior-projection/graphs/means-projectivity-by-predicate-and-prior}
 
 \caption{Mean certainty ratings by predicate and prior probability of the content of the complement in Exp.~1. Error bars indicate 95\% bootstrapped confidence intervals. Light dots indicate participants' ratings.} 
 \label{f-projection-mean}
@@ -321,7 +322,7 @@ Figure \ref{f-prior} revealed by-participant variation in prior probability rati
 
 \includegraphics[width=.7\paperwidth]{../../results/9-prior-projection/graphs/projection-by-prior}
 
-\caption{Certainty ratings by prior probability ratings by predicate in Exp.~1. Linear smoothers with 95\% confidence intervals are overlaid.\jd{put in same order as ifg 3}}
+\caption{Certainty ratings by prior probability ratings by predicate in Exp.~1. Linear smoothers with 95\% confidence intervals are overlaid.}
 \label{f-projection}
 \end{figure}
 
@@ -367,7 +368,30 @@ The materials of Exp.~2b were identical to those of the projection block of Exp.
 
 \subsection{Results and discussion}
 
-Exps.~2 replicated the critical result of Exp.~1, that the prior probability of content influences the projection of that content.\footnote{Exps.~2 also replicated other results of Exp.~1. First, Exp.~2a replicated the manipulation of the prior probability of the 20 contents: The Spearman rank correlation of the results of Exp~2a and the prior block of Exp.~1 was high, at .977; see Supplement \ref{a-exp2} for visualizations. Exp.~2b replicated \citepos{tonhauser-degen-factive} result that there is by-predicate variation in the projection of the content of the complement; see Supplement \ref{a-comparison}.} \jt{report models predicting a) projection mean Exp 2b from prior mean Exp 2b, b) projection mean Exp 1 from prior mean Exp 2b, and c) projection mean Exp 2b from prior mean Exp 1). USE COHENS D?} These results suggest that the result of Exp.~1 is not an artifact of the within-participant design of Exp.~1.
+Exp.~2a replicated the prior probability manipulation of Exp.~1. Figure \ref{f-prior-comparison} plots the mean prior probability ratings in Exp.~2a against those of Exp.~1. The Spearman rank correlation was high, at .977. For a visualization of the by-content prior ratings see Supplement \ref{a-exp2}.
+
+\begin{figure}[h!]
+\centering
+
+\includegraphics[width=.4\paperwidth]{../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2}
+
+\caption{Mean prior probability ratings in Exp.~2a against those of Exp.~1. Error bars indicate 95\% bootstrapped confidence intervals. The dotted line indicates \jt{what?}.}
+\label{f-prior-comparison}
+\end{figure}
+
+Exp.~2b replicated the critical result of Exp.~1, that prior probability influences projection.\footnote{Exp.~2b also replicated \citepos{tonhauser-degen-factive} result that there is by-predicate variation in the projection of the content of the complement; see Supplement \ref{a-comparison}.} Figure \ref{f-projection-mean-2b} shows that mean certainty ratings in Exp.~2b were higher for contents presented with higher probability facts than for contents presented with lower probability facts.
+
+\begin{figure}[h!]
+\centering
+
+\includegraphics[width=.7\paperwidth]{../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-prior}
+
+\caption{Mean certainty ratings by predicate and prior probability of the content of the complement in Exp.~2b. Error bars indicate 95\% bootstrapped confidence intervals. Light dots indicate participants' ratings.} 
+\label{f-projection-mean-2b}
+\end{figure}
+
+
+\jt{report models predicting a) projection mean Exp 2b from prior mean Exp 2b, b) projection mean Exp 1 from prior mean Exp 2b, and c) projection mean Exp 2b from prior mean Exp 1). USE COHENS D?} These results suggest that the result of Exp.~1 is not an artifact of the within-participant design of Exp.~1.
 
 \section{Concluding remarks}\label{s4}
 
@@ -526,18 +550,7 @@ We allowed both $\mu$ and $\phi$ to vary as a function of predicate, with refere
 
 The three tables in this section show the model outputs for Exps.~1, 2 and 3, respectively: Table \ref{tab:exp1modelresults} for Exps.~1a and 1b, Table \ref{tab:exp2modelresults} for Exps.~2a and 2b, and Table \ref{tab:exp3modelresults} for Exps.~3a and 3b. Each table shows maximum a posteriori (MAP) model estimates for projection ratings from the Beta regression model (left and middle column, mean $\mu$ and precision $\phi$) and the logistic regression model (right column, $\beta$)  with 95\% credible intervals.
 
-\section{Projection results (Exp.~2b) and comparisons}\label{a-comparison}
-
-Figure \ref{f-projection-mean-2b} shows that the mean certainty ratings of Exp.~2b were higher for contents presented with the higher probability facts than for contents presented with the lower probability fact. This result suggests that prior probability influences projection.
-
-\begin{figure}[h!]
-\centering
-
-\includegraphics[width=.75\paperwidth]{../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-prior}
-
-\caption{Mean certainty ratings by predicate and prior probability of the content of the complement in Exp.~2b. Error bars indicate 95\% bootstrapped confidence intervals. Light dots indicate participants' ratings.} 
-\label{f-projection-mean-2b}
-\end{figure}
+\section{Projection comparisons}\label{a-comparison}
 
 Comparisons of the projection results of Exp.~1, Exp.~2b, and \citepos{tonhauser-degen-factive} Exp.~1a (abbreviated `TD Exp.~1a') in Figure \ref{f-projection-comparisons} reveal striking similarities. The Spearman rank correlations were XX (Exp.~1 vs.\ TD Exp.~1a), XX (Exp.~2b vs.\ TD Exp.~1a) and XX (Exp.~1 vs.\ Exp.~2b).
 
@@ -561,9 +574,9 @@ Comparisons of the projection results of Exp.~1, Exp.~2b, and \citepos{tonhauser
 \label{f-projection-comparisons}
 \end{figure}
 
-\section{Prior probability results (Exp.~2a) and comparisons}\label{a-exp2}
+\section{Prior probability results in Exp.~2a}\label{a-exp2}
 
-The manipulation of the prior probability of the 20 contents was successful. Figure \ref{f-prior-2a} plots the mean prior probabilities of the 20 contents by fact (participants' ratings are given as light dots). The mean prior probability rating for each content was higher when the content was presented with the higher probability fact than when it was presented with the lower probability fact.
+Figure \ref{f-prior-2a} plots the mean prior probabilities of the 20 contents by fact. Participants' ratings are given as light dots. The mean prior probability rating for each content was higher when the content was presented with the higher probability fact than when it was presented with the lower probability fact.
 
 \begin{figure}[h!]
 \centering
@@ -573,16 +586,6 @@ The manipulation of the prior probability of the 20 contents was successful. Fig
 \label{f-prior-2a}
 \end{figure}
 
-Figure \ref{f-prior-comparison} plots the mean prior probability ratings in Exp.~2a against the mean prior probability ratings in Exp.~1. The Spearman rank correlation was XX. 
-
-\begin{figure}[h!]
-\centering
-
-\includegraphics[width=.5\paperwidth]{../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2}
-
-\caption{Mean prior probability ratings in Exp.~2a against those of Exp.~1. Error bars indicate 95\% bootstrapped confidence intervals.}
-\label{f-prior-comparison}
-\end{figure}
 
 \end{document}
 
