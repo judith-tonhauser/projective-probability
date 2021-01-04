@@ -1,14 +1,12 @@
-# Latex files
-# .pdf .aux .toc .bbl . blg .synctex.gz
 
 *.bbl
-*.out
 *.blg
 *.log
 *.synctex.gz
 *.aux
 *.synctex.gz
 *.toc
+
 papers/prior-paper/prior-paper.pdf
 papers/factives-paper/factives-paper.pdf
 
