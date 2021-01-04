@@ -1,5 +1,6 @@
 # Latex files
 # .pdf .aux .toc .bbl . blg .synctex.gz
+
 *.bbl
 *.out
 *.blg
@@ -8,7 +9,7 @@
 *.aux
 *.synctex.gz
 *.toc
-papers/prior-paper/prior.pdf
+papers/prior-paper/prior-paper.pdf
 papers/factives-paper/factives-paper.pdf
 
 # potentially large zoib model files
