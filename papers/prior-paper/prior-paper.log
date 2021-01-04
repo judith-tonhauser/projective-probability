@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 DEC 2020 09:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 JAN 2021 15:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1371,31 +1371,37 @@ LaTeX Warning: Reference `tab:exp3modelresults' on page 16 undefined on input l
 ine 551.
 
 
-<../../results/9-prior-projection/graphs/projection-comparison.pdf, id=531, 361
-.35pt x 361.35pt>
-File: ../../results/9-prior-projection/graphs/projection-comparison.pdf Graphic
- file (type pdf)
+<../../results/projection-comparisons/graphs/projection-comparison-35.pdf, id=5
+31, 216.81pt x 216.81pt>
+File: ../../results/projection-comparisons/graphs/projection-comparison-35.pdf 
+Graphic file (type pdf)
 
-<use ../../results/9-prior-projection/graphs/projection-comparison.pdf>
-Package pdftex.def Info: ../../results/9-prior-projection/graphs/projection-com
-parison.pdf used on input line 559.
-(pdftex.def)             Requested size: 155.02pt x 155.01907pt.
-File: ../../results/9-prior-projection/graphs/bunching-prior.pdf Graphic file (
-type pdf)
+<use ../../results/projection-comparisons/graphs/projection-comparison-35.pdf>
+Package pdftex.def Info: ../../results/projection-comparisons/graphs/projection
+-comparison-35.pdf used on input line 559.
+(pdftex.def)             Requested size: 155.02pt x 155.0279pt.
 
-<use ../../results/9-prior-projection/graphs/bunching-prior.pdf>
-Package pdftex.def Info: ../../results/9-prior-projection/graphs/bunching-prior
-.pdf used on input line 564.
-(pdftex.def)             Requested size: 155.02pt x 91.48853pt.
-File: ../../results/2-veridicality2/graphs/bunching.pdf Graphic file (type pdf)
+<../../results/projection-comparisons/graphs/projection-comparison-39.pdf, id=5
+32, 216.81pt x 216.81pt>
+File: ../../results/projection-comparisons/graphs/projection-comparison-39.pdf 
+Graphic file (type pdf)
 
+<use ../../results/projection-comparisons/graphs/projection-comparison-39.pdf>
+Package pdftex.def Info: ../../results/projection-comparisons/graphs/projection
+-comparison-39.pdf used on input line 564.
+(pdftex.def)             Requested size: 155.02pt x 155.0279pt.
 
-<use ../../results/2-veridicality2/graphs/bunching.pdf>
-Package pdftex.def Info: ../../results/2-veridicality2/graphs/bunching.pdf used
- on input line 569.
-(pdftex.def)             Requested size: 155.02pt x 91.48853pt.
+<../../results/projection-comparisons/graphs/projection-comparison-59.pdf, id=5
+33, 216.81pt x 216.81pt>
+File: ../../results/projection-comparisons/graphs/projection-comparison-59.pdf 
+Graphic file (type pdf)
 
-<../../results/1-prior/graphs/prior-ratings.pdf, id=537, 578.16pt x 505.89pt>
+<use ../../results/projection-comparisons/graphs/projection-comparison-59.pdf>
+Package pdftex.def Info: ../../results/projection-comparisons/graphs/projection
+-comparison-59.pdf used on input line 569.
+(pdftex.def)             Requested size: 155.02pt x 155.0279pt.
+
+<../../results/1-prior/graphs/prior-ratings.pdf, id=539, 578.16pt x 505.89pt>
 File: ../../results/1-prior/graphs/prior-ratings.pdf Graphic file (type pdf)
 
 <use ../../results/1-prior/graphs/prior-ratings.pdf>
@@ -1406,7 +1412,9 @@ Package pdftex.def Info: ../../results/1-prior/graphs/prior-ratings.pdf used on
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16 <../../results/9-prior-projection/graphs/projection-comparison.pdf>]
+[16 <../../results/projection-comparisons/graphs/projection-comparison-35.pdf> 
+<../../results/projection-comparisons/graphs/projection-comparison-39.pdf> <../
+../results/projection-comparisons/graphs/projection-comparison-59.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 590.
 
 [17 <../../results/1-prior/graphs/prior-ratings.pdf>]
@@ -1423,10 +1431,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 590.
  ) 
 Here is how much of TeX's memory you used:
- 24578 strings out of 493014
- 422773 string characters out of 6133351
- 540252 words of memory out of 5000000
- 27431 multiletter control sequences out of 15000+600000
+ 24589 strings out of 493014
+ 423518 string characters out of 6133351
+ 540267 words of memory out of 5000000
+ 27439 multiletter control sequences out of 15000+600000
  46914 words of font info for 117 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  55i,10n,77p,3243b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1440,10 +1448,10 @@ s/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
 mes/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmbi8
 a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on prior-paper.pdf (17 pages, 1290831 bytes).
+Output written on prior-paper.pdf (17 pages, 1302436 bytes).
 PDF statistics:
- 628 PDF objects out of 1000 (max. 8388607)
- 565 compressed objects within 6 object streams
+ 652 PDF objects out of 1000 (max. 8388607)
+ 585 compressed objects within 6 object streams
  137 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
 

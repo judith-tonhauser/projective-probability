@@ -15,7 +15,6 @@ library(forcats)
 library(ggrepel)
 library(cowplot)
 theme_set(theme_bw())
-theme_set(theme_cowplot())
 
 # load projection data for analysis ----
 
@@ -46,357 +45,126 @@ str(d_proj9$verb)
 
 p_means3 = d_proj3 %>%
   group_by(verb) %>%
-  summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-  mutate(YMinM = Mean - CILow, YMaxM = Mean + CIHigh, verb = fct_reorder(as.factor(verb),Mean)) %>%
+  summarize(Mean_3 = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+  mutate(YMinM_3 = Mean_3 - CILow, YMaxM_3 = Mean_3 + CIHigh, verb = fct_reorder(as.factor(verb),Mean_3)) %>%
   select(-CILow,-CIHigh)
 levels(p_means3$verb)
 str(p_means3$verb)
+View(p_means3) #.18-.62
 
 p_means5 = d_proj5 %>%
   group_by(verb) %>%
-  summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-  mutate(YMinM = Mean - CILow, YMaxM = Mean + CIHigh, verb = fct_reorder(as.factor(verb),p_means3$Mean)) %>%
+  summarize(Mean_5 = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+  mutate(YMinM_5 = Mean_5 - CILow, YMaxM_5 = Mean_5 + CIHigh, verb = fct_reorder(as.factor(verb),p_means3$Mean_3)) %>%
   select(-CILow,-CIHigh)
 levels(p_means5$verb)
-str(p_means9$verb)
+str(p_means5$verb)
+View(p_means5) #.11-.88
 
 p_means9 = d_proj9 %>%
   group_by(verb) %>%
-  summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-  mutate(YMinM = Mean - CILow, YMaxM = Mean + CIHigh, verb = fct_reorder(as.factor(verb),p_means3$Mean)) %>%
+  summarize(Mean_9 = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+  mutate(YMinM_9 = Mean_9 - CILow, YMaxM_9 = Mean_9 + CIHigh, verb = fct_reorder(as.factor(verb),p_means3$Mean_3)) %>%
   select(-CILow,-CIHigh)
 levels(p_means9$verb)
 str(p_means9$verb)
-
-p_means = p_means3 %>%
-  left_join(p_means5,by="verb") %>%
-  left_join(p_means9,by="verb")
-
-p_means
+View(p_means9) #.35-.60
 
 # bind the data ----
+p_means_35 = p_means3 %>%
+  left_join(p_means5,by="verb")
+View(p_means_35)
+
+p_means_39 = p_means3 %>%
+  left_join(p_means9,by="verb")
+View(p_means_39)
+
+p_means_59 = p_means5 %>%
+  left_join(p_means9,by="verb")
+
+# certainty ratings
+# prior paper Exp 1: p_means9
+# prior paper Exp 2b: p_means3
+# factives paper Exp 1a: p_means5
 
 
+## plot: Exp 2b (p_means3) against Exp 1a in TD (p_means5) ----
 
-## plot: Exp 2b in prior paper against Exp 1a in TD ----
-
-p_means3 = d_proj5 %>%
-  group_by(verb) %>%
-  summarize(Prop = mean(nResponse), CILow = ci.low(nResponse), CIHigh = ci.high(nResponse)) %>%
-  mutate(YMinP = Prop - CILow, YMaxP = Prop + CIHigh, verb = fct_reorder(as.factor(verb),Prop))
-#View(p_prop)
-levels(p_prop$verb)
-
-p_means = d_proj_nb %>%
-  group_by(verb) %>%
-  summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-  mutate(YMinM = Mean - CILow, YMaxM = Mean + CIHigh, verb = fct_reorder(as.factor(verb),p_prop$Prop)) %>%
-  select(-CILow,-CIHigh)
-#View(p_means)
-levels(p_means$verb)
-
-pd = p_prop %>%
-  left_join(p_means) %>%
-  mutate(VeridicalityGroup = factor(case_when(
-    verb %in% c("know", "discover", "reveal", "see", "be_annoyed") ~ "F", 
-    verb %in% c("pretend", "think", "suggest", "say") ~ "NF", 
-    verb %in% c("be_right","demonstrate") ~ "VNF",
-    verb %in% c("MC") ~ "MC",
-    TRUE ~ "V")))
-#View(pd)
-levels(pd$VeridicalityGroup)
-
-pd$VeridicalityGroup <- factor(pd$VeridicalityGroup, levels =rev(c("F","V","VNF","NF","MC")))
-
-# shape-predicate mapping
-# 21: mc
-# 22: non-veridical non-factive NF
-# 23: factive F
-# 24: optionally factive V
-# 25: veridical non-factive VNF
-
-pp <- ggplot(pd, aes(x=Mean, y=Prop, fill=VeridicalityGroup,shape=VeridicalityGroup)) +
-  geom_errorbar(aes(ymin=YMinP,ymax=YMaxP),width=0) +
-  geom_errorbarh(aes(xmin=YMinM,xmax=YMaxM),width=0) +
-  geom_point(stroke=.5,size=2.5,color="black") +
+plot <- ggplot(p_means_35, aes(x=Mean_3, y=Mean_5)) +
+  geom_errorbarh(aes(xmin=YMinM_3,xmax=YMaxM_3),width=0,color="blue") +
+  geom_errorbar(aes(ymin=YMinM_5,ymax=YMaxM_5),width=0,color="blue") +
+  geom_point(stroke=.5,size=2.5,color="blue") +
+  geom_text_repel(data=p_means_35,aes(x=Mean_3,y=Mean_5,label=verb),size = 3,segment.size=1,segment.color="black",segment.alpha=.2,nudge_x=.4,nudge_y=-.1,force=1) +
   # scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   # scale_alpha(range = c(.3,1)) +
   #scale_fill_manual(values=c("darkorchid","black","gray60","tomato1","dodgerblue")) +
-  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),
-                     labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
-  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),
-                    labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
+  #scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)), labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
+  #scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")), labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
-  ylab("Proportion of 'yes (certain)' ratings") +
-  xlab("Mean certainty rating") +
+  ylab("Mean certainty rating (Exp 2b)") +
+  xlab("Mean certainty rating (Exp 1a TD)") +
   theme(legend.position = "bottom") +
   coord_fixed(ratio = 1) +
   xlim(c(0,1)) +
   ylim(c(0,1))
-pp
-ggsave("../graphs/projectivity.pdf",height=3,width=3)
+plot
+ggsave("../graphs/projection-comparison-35.pdf",height=3,width=3)
 
-corr_projectivity = pd %>%
-  filter(verb != "MC") %>%
-  summarize(Cor=cor(Prop,Mean,method="spearman"))
-corr_projectivity #.983
+corr_projectivity = p_means_35 %>%
+  summarize(Cor=cor(Mean_3,Mean_5,method="spearman"))
+corr_projectivity #.986
 
-# inference diagnostic: binary versus continuous ----
+## plot: Exp 2b (p_means3) against Exp 1 (p_means9) ----
 
-# for inference entailment data, plot proportions against mean slider ratings
-einf_prop = d_inf_b %>%
-  group_by(verb) %>%
-  summarize(Prop = mean(nResponse), CILow = ci.low(nResponse), CIHigh = ci.high(nResponse)) %>%
-  mutate(YMinP = Prop - CILow, YMaxP = Prop + CIHigh, verb = fct_reorder(as.factor(verb),Prop))
-einf_prop
-
-einf_means = d_inf_nb %>%
-  group_by(verb) %>%
-  summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-  mutate(YMinM = Mean - CILow, YMaxM = Mean + CIHigh) %>%
-  mutate(verb=recode(verb, control_bad = "non-ent. C", control_good = "entailing C", annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform")) %>%
-  select(-CILow,-CIHigh)
-einf_means 
-
-einfd = einf_prop %>%
-  left_join(einf_means, by = "verb") %>%
-  mutate(VeridicalityGroup = factor(case_when(
-    verb %in% c("know", "discover", "reveal", "see", "be_annoyed") ~ "F", 
-    verb %in% c("pretend", "think", "suggest", "say") ~ "NF", 
-    verb %in% c("be_right","demonstrate") ~ "VNF",
-    verb %in% c("entailing C","non-ent. C") ~ "MC",
-    TRUE ~ "V")))
-einfd
-levels(einfd$VeridicalityGroup)
-
-einfd$VeridicalityGroup <- factor(einfd$VeridicalityGroup, levels =rev(c("F","V","VNF","NF","MC")))
-
-pe <- ggplot(einfd, aes(x=Mean, y=Prop, fill=VeridicalityGroup,shape=VeridicalityGroup)) +
-  geom_errorbar(aes(ymin=YMinP,ymax=YMaxP),width=0) +
-  geom_errorbarh(aes(xmin=YMinM,xmax=YMaxM),width=0) +
-  geom_point(stroke=.5,size=2.5,color="black") +
+plot <- ggplot(p_means_39, aes(x=Mean_9, y=Mean_3)) +
+  geom_errorbarh(aes(xmin=YMinM_9,xmax=YMaxM_9),width=0,color="blue") +
+  geom_errorbar(aes(ymin=YMinM_3,ymax=YMaxM_3),width=0,color="blue") +
+  geom_point(stroke=.5,size=2.5,color="blue") +
+  geom_text_repel(data=p_means_39,aes(x=Mean_9,y=Mean_3,label=verb),size = 3,segment.size=1,segment.color="black",segment.alpha=.2,nudge_x=.4,nudge_y=-.1,force=1) +
   # scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   # scale_alpha(range = c(.3,1)) +
-  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21))) +
-  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black"))) +
+  #scale_fill_manual(values=c("darkorchid","black","gray60","tomato1","dodgerblue")) +
+  #scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)), labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
+  #scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")), labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
-  # guides(fill=FALSE) +
-  # theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
-  # color=cols$Colors)) +
-  # theme(legend.position="top") +
-  ylab("Proportion of 'yes (def. follows)' ratings") +
-  xlab("Mean inference rating") +
-  theme(legend.position = "none") +
+  ylab("Mean certainty rating (Exp 1)") +
+  xlab("Mean certainty rating (Exp 2b)") +
+  theme(legend.position = "bottom") +
   coord_fixed(ratio = 1) +
   xlim(c(0,1)) +
   ylim(c(0,1))
-pe
-ggsave("../graphs/entailment-inference.pdf",height=3,width=3)
+plot
+ggsave("../graphs/projection-comparison-39.pdf",height=3,width=3)
 
+corr_projectivity = p_means_39 %>%
+  summarize(Cor=cor(Mean_3,Mean_9,method="spearman"))
+corr_projectivity #.971
 
-corr_inference = einfd %>%
-  filter(VeridicalityGroup != "MC") %>%
-  summarize(Cor=cor(Prop,Mean,method="spearman"))
-corr_inference #.989
+## plot: Exp 1 (p_means9) against Exp 1a in TD (p_means5) ----
 
-# contradictoriness diagnostic: binary versus continuous ----
-
-# for contradictoriness entailment data, plot proportions against mean slider ratings
-econtr_prop = d_contr_b %>%
-  group_by(verb) %>%
-  summarize(Prop = mean(nResponse), CILow = ci.low(nResponse), CIHigh = ci.high(nResponse)) %>%
-  mutate(YMinP = Prop - CILow, YMaxP = Prop + CIHigh, verb = fct_reorder(as.factor(verb),Prop))
-econtr_prop
-
-econtr_means = d_contr_nb %>%
-  group_by(verb) %>%
-  summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-  mutate(YMinM = Mean - CILow, YMaxM = Mean + CIHigh) %>%
-  mutate(verb=recode(verb, control_good = "non-contrd. C", control_bad = "contradictory C", annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform")) %>%
-  select(-CILow,-CIHigh)
-econtr_means
-
-length(levels(econtr_prop$verb)) == length(levels(econtr_means$verb))
-setdiff(levels(econtr_prop$verb), levels(econtr_means$verb))
-setdiff(levels(econtr_means$verb), levels(econtr_prop$verb))
-# join warning below appears to be due to factors having different level orders
-
-econtrd = econtr_prop %>%
-  left_join(econtr_means, by= "verb") %>%
-  mutate(VeridicalityGroup = factor(case_when(
-    verb %in% c("know", "discover", "reveal", "see", "be_annoyed") ~ "F", 
-    verb %in% c("pretend", "think", "suggest", "say") ~ "NF", 
-    verb %in% c("be_right","demonstrate") ~ "VNF",
-    verb %in% c("contradictory C","non-contrd. C") ~ "MC",
-    TRUE ~ "V")))
-econtrd
-levels(econtrd$VeridicalityGroup)
-
-econtrd$VeridicalityGroup <- factor(econtrd$VeridicalityGroup, levels =rev(c("F","V","VNF","NF","MC")))
-
-
-# factive: 23 (raute)
-# optionally factive (V): 24 (triangle up)
-# veridical non-factive: 25 (triangle down)
-# non-veridical non-factive: 22 (square)
-# MC: 21 (circle)
-
-pc <- ggplot(econtrd, aes(x=Mean, y=Prop, fill=VeridicalityGroup,shape=VeridicalityGroup)) +
-  geom_errorbar(aes(ymin=YMinP,ymax=YMaxP),width=0) +
-  geom_errorbarh(aes(xmin=YMinM,xmax=YMaxM),width=0) +
-  geom_point(stroke=.5,size=2.5,color="black") +
+plot <- ggplot(p_means_59, aes(x=Mean_9, y=Mean_5)) +
+  geom_errorbarh(aes(xmin=YMinM_9,xmax=YMaxM_9),width=0,color="blue") +
+  geom_errorbar(aes(ymin=YMinM_5,ymax=YMaxM_5),width=0,color="blue") +
+  geom_point(stroke=.5,size=2.5,color="blue") +
+  geom_text_repel(data=p_means_59,aes(x=Mean_9,y=Mean_5,label=verb),size = 3,segment.size=1,segment.color="black",segment.alpha=.2,nudge_x=.4,nudge_y=-.1,force=1) +
   # scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   # scale_alpha(range = c(.3,1)) +
-  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21))) +
-  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black"))) +
+  #scale_fill_manual(values=c("darkorchid","black","gray60","tomato1","dodgerblue")) +
+  #scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)), labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
+  #scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")), labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
-  # guides(fill=FALSE) +
-  # theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
-  # color=cols$Colors)) +
-  # theme(legend.position="top") +
-  ylab("Proportion of 'yes (contrd.)' ratings") +
-  xlab("Mean contradictoriness rating") +
-  theme(legend.position = "none") +
+  ylab("Mean certainty rating (Exp 1 TD)") +
+  xlab("Mean certainty rating (Exp 1)") +
+  theme(legend.position = "bottom") +
   coord_fixed(ratio = 1) +
   xlim(c(0,1)) +
   ylim(c(0,1))
-pc
-ggsave("../graphs/entailment-contradictory.pdf",height=3,width=3)
+plot
+ggsave("../graphs/projection-comparison-59.pdf",height=3,width=3)
 
-  
-corr_contradict = econtrd %>%
-  filter(VeridicalityGroup != "control") %>%
-  summarize(Cor=cor(Prop,Mean,method="spearman"))
-corr_contradict #.985
+corr_projectivity = p_means_59 %>%
+  summarize(Cor=cor(Mean_9,Mean_5,method="spearman"))
+corr_projectivity #.974
 
-# create joint binary/continuous comparison plot for appendix ----
 
-prow <- plot_grid( pp + theme(legend.position="none"),
-                   pe + theme(legend.position="none"),
-                   pc + theme(legend.position="none"),
-                   align = 'vh',
-                   #labels = c("A", "B", "C"),
-                   hjust = -1,
-                   nrow = 1
-)
-
-legend <- get_legend(pp + guides(color = guide_legend(nrow = 1)) +
-    theme(legend.position = "bottom"))
-
-p <- plot_grid(prow, legend, ncol = 1, rel_heights = c(1, .1))
-ggsave("../graphs/joint-comparison-plot.pdf",height=4,width=9)
-
-# compare the two gradient (non-binary = nb) entailment diagnostics ----
-table(d_inf_nb$verb)
-table(d_contr_nb$verb)
-
-einf_means = d_inf_nb %>%
-  group_by(verb) %>%
-  summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-  mutate(YMinM = Mean - CILow, YMaxM = Mean + CIHigh) %>%
-  mutate(verb=recode(verb, "non-ent. C" = "non-entailing", "entailing C" = "entailing")) %>%
-  select(-CILow,-CIHigh)
-einf_means 
-
-einf_means2 = d_contr_nb %>%
-  group_by(verb) %>%
-  summarize(Mean2 = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-  mutate(YMinM2 = Mean2 - CILow, YMaxM2 = Mean2 + CIHigh) %>%
-  mutate(verb=recode(verb, "non-contrd. C" = "non-entailing", "contradictory C" = "entailing")) %>%
-  select(-CILow,-CIHigh)
-einf_means2 
-
-e_inf_contr_nb = einf_means %>%
-  left_join(einf_means2, by = "verb") %>%
-  mutate(VeridicalityGroup = factor(case_when(
-    verb %in% c("know", "discover", "reveal", "see", "be_annoyed") ~ "F", 
-    verb %in% c("pretend", "think", "suggest", "say") ~ "NF", 
-    verb %in% c("be_right","demonstrate") ~ "VNF",
-    verb %in% c("entailing","non-entailing") ~ "control",
-    TRUE ~ "V")))
-e_inf_contr_nb
-levels(e_inf_contr_nb$VeridicalityGroup)
-
-ggplot(e_inf_contr_nb, aes(x=Mean, y=Mean2, fill=VeridicalityGroup)) +
-  geom_point(shape=21,stroke=.5,size=2.5,color="black") +
-  geom_errorbar(aes(ymin=YMinM,ymax=YMaxM),width=0) +
-  geom_errorbarh(aes(xmin=YMinM2,xmax=YMaxM2),width=0) +
-  # scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
-  # scale_alpha(range = c(.3,1)) +
-  scale_fill_manual(values=c("black","darkorchid","gray60","tomato1","dodgerblue")) +
-  geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
-  # guides(fill=FALSE) +
-  # theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
-  # color=cols$Colors)) +
-  # theme(legend.position="top") +
-  ylab("Proportion of 'yes (def. follows)' ratings") +
-  xlab("Mean inference rating") +
-  guides(fill=FALSE) +
-  coord_fixed(ratio = 1) +
-  xlim(c(0,1)) +
-  ylim(c(0,1))
-ggsave("../graphs/comparison-of-entailment-diagnostics.pdf",height=3,width=3)
-
-# Spearman rank correlation on targets and controls: gradient entailment diagnostics
-corr_inf_contr_nb = e_inf_contr_nb %>%
-  #filter(VeridicalityGroup != "control") %>%
-  summarize(Cor=cor(Mean,Mean2,method="spearman"))
-corr_inf_contr #.953
-
-# compare the two categorical (binary = b) entailment diagnostics ----
-table(d_inf_b$verb)
-table(d_contr_b$verb)
-
-einf_means = d_inf_b %>%
-  group_by(verb) %>%
-  summarize(Prop = mean(nResponse), CILow = ci.low(nResponse), CIHigh = ci.high(nResponse)) %>%
-  mutate(YMinM = Prop - CILow, YMaxM = Prop + CIHigh) %>%
-  mutate(verb=recode(verb, "non-ent. C" = "non-entailing", "entailing C" = "entailing")) %>%
-  select(-CILow,-CIHigh)
-einf_means 
-
-einf_means2 = d_contr_b %>%
-  group_by(verb) %>%
-  summarize(Prop2 = mean(nResponse), CILow = ci.low(nResponse), CIHigh = ci.high(nResponse)) %>%
-  mutate(YMinM2 = Prop2 - CILow, YMaxM2 = Prop2 + CIHigh) %>%
-  mutate(verb=recode(verb, "non-contrd. C" = "non-entailing", "contradictory C" = "entailing")) %>%
-  select(-CILow,-CIHigh)
-einf_means2 
-
-e_inf_contr_b = einf_means %>%
-  left_join(einf_means2, by = "verb") %>%
-  mutate(VeridicalityGroup = factor(case_when(
-    verb %in% c("know", "discover", "reveal", "see", "be_annoyed") ~ "F", 
-    verb %in% c("pretend", "think", "suggest", "say") ~ "NF", 
-    verb %in% c("be_right","demonstrate") ~ "VNF",
-    verb %in% c("entailing","non-entailing") ~ "control",
-    TRUE ~ "V")))
-e_inf_contr_b
-levels(e_inf_contr_b$VeridicalityGroup)
-
-ggplot(e_inf_contr_b, aes(x=Prop, y=Prop2, fill=VeridicalityGroup)) +
-  geom_point(shape=21,stroke=.5,size=2.5,color="black") +
-  geom_errorbar(aes(ymin=YMinM,ymax=YMaxM),width=0) +
-  geom_errorbarh(aes(xmin=YMinM2,xmax=YMaxM2),width=0) +
-  # scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
-  # scale_alpha(range = c(.3,1)) +
-  scale_fill_manual(values=c("black","darkorchid","gray60","tomato1","dodgerblue")) +
-  geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
-  # guides(fill=FALSE) +
-  # theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
-  # color=cols$Colors)) +
-  # theme(legend.position="top") +
-  ylab("Proportion of 'yes (def. follows)' ratings") +
-  xlab("Mean inference rating") +
-  guides(fill=FALSE) +
-  coord_fixed(ratio = 1) +
-  xlim(c(0,1)) +
-  ylim(c(0,1))
-ggsave("../graphs/comparison-of-entailment-diagnostics.pdf",height=3,width=3)
-
-# Spearman rank correlation on targets and controls: binary entailment diagnostics
-corr_inf_contr_b = e_inf_contr_b %>%
-  #filter(VeridicalityGroup != "control") %>%
-  summarize(Cor=cor(Prop,Prop2,method="spearman"))
-corr_inf_contr_b #.934
 
