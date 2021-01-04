@@ -188,6 +188,8 @@ d %>%
   summarize(count=n())
 #116 female, 168 male, 1 other, 1 undeclared
 
-# write cleaned dataset to file
-write_csv(d, path="../data/data_preprocessed.csv")
-
+# clean data = cd
+cd = d
+write.csv(cd, file = "../data/cd.csv")
+head(cd)
+nrow(cd) #14872

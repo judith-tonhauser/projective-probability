@@ -4,7 +4,7 @@ There are 10 experiments in this folder. They are described below.
 
 The folder "compare-diagnostics-and-response-tasks" compares the results of the (slider rating) experiments 2-veridicality2, 4-veridicality3, and 5-projectivity-no-fact, to the results of the (binary ratings) experiments 6-veridicality2-binary, 7-veridicality3-binary, and 8-projectivity-no-fact-binary, respectively. These comparisons are reported in Tonhauser & Degen "Are there factive predicates? An empirical investigation" (factives-paper.pdf).
 
-
+The folder "projection-comparisons" compares the results of the projection experiments 3-projectivity, 5-projectivity-no-fact, and 9-prior-projection. These comparisons are reported in Degen & Tonhauser "Prior probability predicts projection" (prior-paper.pdf).
 
 ## slider ratings (reported in "factives-paper" and "prior-paper")
 1-prior -- Exp. 2a in prior paper: prior probability ratings given a fact (stimulus: "Fact: Julian is German. How likely is it that Julian dances salsa?")

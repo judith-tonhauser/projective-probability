@@ -312,15 +312,17 @@ proj.means = t %>%
   ungroup() %>%
   mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, short_trigger = fct_reorder(as.factor(short_trigger),Mean))  
 proj.means
+#View(proj.means)
 
 nrow(proj.means) #40 (high_prior and low_prior for each of the 20 predicates)
 
-low = proj.means %>%
-  filter(prior_type == "low_prior") %>%
+high = proj.means %>%
+  filter(prior_type == "high_prior") %>%
   mutate(short_trigger = fct_reorder(short_trigger,Mean))
 
 t = t %>%
-  mutate(short_trigger = fct_relevel(short_trigger,levels(low$short_trigger)))
+  mutate(short_trigger = fct_relevel(short_trigger,levels(high$short_trigger)))
+table(t$short_trigger)
 
 ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
   #geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
