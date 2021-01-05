@@ -1,46 +1,61 @@
 This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: prior-paper.aux
-The style file: ../cslipubs-natbib.bst
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ../../bibliography.bib
-You've used 30 entries,
-            2811 wiz_defined-function locations,
-            813 strings with 10018 characters,
-and the built_in function-call counts, 14635 in all, are:
-= -- 1398
-> -- 741
-< -- 23
-+ -- 260
-- -- 212
-* -- 1199
-:= -- 2659
-add.period$ -- 125
-call.type$ -- 30
-change.case$ -- 230
-chr.to.int$ -- 30
-cite$ -- 30
-duplicate$ -- 589
-empty$ -- 1010
-format.name$ -- 260
-if$ -- 2946
-int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 27
-newline$ -- 155
-num.names$ -- 126
-pop$ -- 168
+Repeated entry---line 20635 of file ../../bibliography.bib
+ : @article{GoodmanFrank2016
+ :                          ,
+I'm skipping whatever remains of this entry
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+You've used 38 entries,
+            6951 wiz_defined-function locations,
+            1522 strings with 17769 characters,
+and the built_in function-call counts, 73898 in all, are:
+= -- 9140
+> -- 619
+< -- 3539
++ -- 3507
+- -- 78
+* -- 4810
+:= -- 13439
+add.period$ -- 165
+call.type$ -- 38
+change.case$ -- 657
+chr.to.int$ -- 0
+cite$ -- 76
+duplicate$ -- 1931
+empty$ -- 2925
+format.name$ -- 1009
+if$ -- 14078
+int.to.chr$ -- 0
+int.to.str$ -- 114
+missing$ -- 0
+newline$ -- 1002
+num.names$ -- 310
+pop$ -- 1217
 preamble$ -- 2
-purify$ -- 189
+purify$ -- 156
 quote$ -- 0
-skip$ -- 436
+skip$ -- 4918
 stack$ -- 0
-substring$ -- 877
-swap$ -- 116
-text.length$ -- 4
+substring$ -- 3817
+swap$ -- 1169
+text.length$ -- 101
 text.prefix$ -- 0
-top$ -- 0
-type$ -- 270
+top$ -- 1
+type$ -- 3488
 warning$ -- 0
-while$ -- 126
+while$ -- 349
 width$ -- 0
-write$ -- 395
+write$ -- 1243
+(There was 1 error message)

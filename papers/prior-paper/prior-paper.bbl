@@ -1,190 +1,1087 @@
 \newcommand{\noopsort}[1]{}\newcommand{\SortNoop}[1]{} \newcommand{\noop}[1]{}
-\begin{thebibliography}{30}
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\begin{thebibliography}{}
 
-\bibitem[Abrus{\'a}n(2011)]{abrusan2011}
-Abrus{\'a}n, M{\'a}rta. 2011.
-\newblock Predicting the presuppositions of soft triggers.
-\newblock {\em Linguistics \& Philosophy\/} 34:491--535.
+\bibitem [\protect \citeauthoryear {%
+Abrus{\'a}n%
+}{%
+Abrus{\'a}n%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+abrusan2011}
+\APACinsertmetastar {%
+abrusan2011}%
+\begin{APACrefauthors}%
+Abrus{\'a}n, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Predicting the presuppositions of soft triggers}
+  {Predicting the presuppositions of soft triggers}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Linguistics \& Philosophy}{34}{}{491--535}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s10988-012-9108-y} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Abrus{\'a}n(2016)]{abrusan2016}
-Abrus{\'a}n, M{\'a}rta. 2016.
-\newblock Presupposition cancellation: {E}xplaining the `soft-hard' trigger
-  distinction.
-\newblock {\em Natural Language Semantics\/} 24:165--202.
+\bibitem [\protect \citeauthoryear {%
+Abrus{\'a}n%
+}{%
+Abrus{\'a}n%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+abrusan2016}
+\APACinsertmetastar {%
+abrusan2016}%
+\begin{APACrefauthors}%
+Abrus{\'a}n, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Presupposition cancellation: {E}xplaining the
+  `soft-hard' trigger distinction} {Presupposition cancellation: {E}xplaining
+  the `soft-hard' trigger distinction}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Natural Language Semantics}{24}{}{165-202}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s11050-016-9122-7} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Beaver and Geurts(2014)]{beaver-geurts-sep}
-Beaver, David and Bart Geurts. 2014.
-\newblock Presupposition.
-\newblock In E.~Zalta, ed., {\em The Stanford Encyclopedia of Philosophy\/}.
-  Stanford University.
+\bibitem [\protect \citeauthoryear {%
+Beaver%
+\ \BBA {} Geurts%
+}{%
+Beaver%
+\ \BBA {} Geurts%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+beaver-geurts-sep}
+\APACinsertmetastar {%
+beaver-geurts-sep}%
+\begin{APACrefauthors}%
+Beaver, D.%
+\BCBT {}\ \BBA {} Geurts, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Presupposition} {Presupposition}.{\BBCQ}
+\newblock
+\BIn{} E.~Zalta\ (\BED), \APACrefbtitle {The Stanford Encyclopedia of
+  Philosophy.} {The stanford encyclopedia of philosophy.}
+\newblock
+\APACaddressPublisher{}{Stanford University}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Bicknell and Rohde(2014)]{bicknell-rohde2009}
-Bicknell, Klinton and Hannah Rohde. 2014.
-\newblock Dynamic integration of pragmatic expectations and real-world event
-  knowledge in syntactic ambiguity resolution.
-\newblock In {\em Proceedings of the 31st Annual Conference of the Cognitive
-  Science Society\/}, pages 1216--1221. Austin, TX: Cognitive Science Society.
+\bibitem [\protect \citeauthoryear {%
+Bicknell%
+\ \BBA {} Rohde%
+}{%
+Bicknell%
+\ \BBA {} Rohde%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+bicknell-rohde2009}
+\APACinsertmetastar {%
+bicknell-rohde2009}%
+\begin{APACrefauthors}%
+Bicknell, K.%
+\BCBT {}\ \BBA {} Rohde, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Dynamic integration of pragmatic expectations and
+  real-world event knowledge in syntactic ambiguity resolution} {Dynamic
+  integration of pragmatic expectations and real-world event knowledge in
+  syntactic ambiguity resolution}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 31st Annual Conference of the
+  Cognitive Science Society} {Proceedings of the 31st annual conference of the
+  cognitive science society}\ (\BPG~1216-1221).
+\newblock
+\APACaddressPublisher{}{Austin, TX: Cognitive Science Society}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Boyce et~al.(2018)Boyce, {von der Malsburg}, Poppels, and
-  Levy]{boyce-etal2018}
-Boyce, V, Titus {von der Malsburg}, Tim Poppels, and Roger Levy. 2018.
-\newblock Implicit gender in the production and comprehension of pronominal
-  references.
-\newblock In {\em Proceedings of the 31th Annual CUNY Conference on Human
-  Sentence Processing\/}.
+\bibitem [\protect \citeauthoryear {%
+Boyce%
+, {von der Malsburg}%
+, Poppels%
+\BCBL {}\ \BBA {} Levy%
+}{%
+Boyce%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+boyce-etal2018}
+\APACinsertmetastar {%
+boyce-etal2018}%
+\begin{APACrefauthors}%
+Boyce, V.%
+, {von der Malsburg}, T.%
+, Poppels, T.%
+\BCBL {}\ \BBA {} Levy, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Implicit gender in the production and comprehension of
+  pronominal references} {Implicit gender in the production and comprehension
+  of pronominal references}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 31th Annual CUNY Conference on Human
+  Sentence Processing.} {Proceedings of the 31th annual cuny conference on
+  human sentence processing.}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[B\"urkner(2017)]{buerkner2017}
-B\"urkner, Paul-Christian. 2017.
-\newblock {brms}: An {R} package for bayesian multilevel models using {Stan}.
-\newblock {\em Journal of Statistical Software\/} 80(1):1--28.
+\bibitem [\protect \citeauthoryear {%
+B\"urkner%
+}{%
+B\"urkner%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+buerkner2017}
+\APACinsertmetastar {%
+buerkner2017}%
+\begin{APACrefauthors}%
+B\"urkner, P\BHBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{brms}: An {R} Package for Bayesian Multilevel Models
+  Using {Stan}} {{brms}: An {R} package for bayesian multilevel models using
+  {Stan}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Statistical Software}{80}{1}{1--28}.
+\newblock
+\begin{APACrefDOI} \doi{10.18637/jss.v080.i01} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Chambers et~al.(2002)Chambers, Tanenhaus, Eberhard, Filip, and
-  Carlson]{chambers-etal02}
-Chambers, {Craig G.}, {Michael K.} Tanenhaus, {Kathleen M.} Eberhard, Hana
-  Filip, and {Greg N.} Carlson. 2002.
-\newblock Circumscribing referential domains during real-time language
-  comprehension.
-\newblock {\em Journal of Memory and Language\/} 47:30--49.
+\bibitem [\protect \citeauthoryear {%
+Chambers%
+, Tanenhaus%
+, Eberhard%
+, Filip%
+\BCBL {}\ \BBA {} Carlson%
+}{%
+Chambers%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2002}}%
+}]{%
+chambers-etal02}
+\APACinsertmetastar {%
+chambers-etal02}%
+\begin{APACrefauthors}%
+Chambers, C.%
+, Tanenhaus, M.%
+, Eberhard, K.%
+, Filip, H.%
+\BCBL {}\ \BBA {} Carlson, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Circumscribing referential domains during real-time
+  language comprehension} {Circumscribing referential domains during real-time
+  language comprehension}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Memory and Language}{47}{}{30-49}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Chambers et~al.(2004)Chambers, Tanenhaus, and
-  Magnuson]{chambers-etal04}
-Chambers, {Craig G.}, {Michael K.} Tanenhaus, and {James S.} Magnuson. 2004.
-\newblock Actions and affordances in syntactic ambiguity resolution.
-\newblock {\em Journal of Experimental Psychology\/} 30:687--696.
+\bibitem [\protect \citeauthoryear {%
+Chambers%
+, Tanenhaus%
+\BCBL {}\ \BBA {} Magnuson%
+}{%
+Chambers%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2004}}%
+}]{%
+chambers-etal04}
+\APACinsertmetastar {%
+chambers-etal04}%
+\begin{APACrefauthors}%
+Chambers, C.%
+, Tanenhaus, M.%
+\BCBL {}\ \BBA {} Magnuson, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Actions and affordances in syntactic ambiguity
+  resolution} {Actions and affordances in syntactic ambiguity
+  resolution}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Experimental Psychology}{30}{}{687-696}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[{de Marneffe} et~al.(2019){de Marneffe}, Simons, and
-  Tonhauser]{demarneffe-etal-sub23}
-{de Marneffe}, Marie, Mandy Simons, and Judith Tonhauser. 2019.
-\newblock The {C}ommitment{B}ank: {I}nvestigating projection in naturally
-  occurring discourse.
-\newblock {\em Sinn und Bedeutung\/} 23:107--124.
+\bibitem [\protect \citeauthoryear {%
+{de Marneffe}%
+, Simons%
+\BCBL {}\ \BBA {} Tonhauser%
+}{%
+{de Marneffe}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+demarneffe-etal-sub23}
+\APACinsertmetastar {%
+demarneffe-etal-sub23}%
+\begin{APACrefauthors}%
+{de Marneffe}, M.%
+, Simons, M.%
+\BCBL {}\ \BBA {} Tonhauser, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The {C}ommitment{B}ank: {I}nvestigating projection in
+  naturally occurring discourse} {The {C}ommitment{B}ank: {I}nvestigating
+  projection in naturally occurring discourse}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Sinn und Bedeutung}{23}{}{107-124}.
+\newblock
+\begin{APACrefDOI} \doi{10.18148/sub/2019.v23i2.601} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Degen et~al.(2015)Degen, Tessier, and Goodman]{degen-etal2015}
-Degen, Judith, {Michael Henry} Tessier, and {Noah D.} Goodman. 2015.
-\newblock Wonky worlds: {L}isteners revise world knowledge when utterances are
-  odd.
-\newblock In {\em Proceedings of the 37th Annual Conference of the Cognitive
-  Science Society\/}, page ???? Austin, TX: Cognitive Science Society.
+\bibitem [\protect \citeauthoryear {%
+Degen%
+, Hawkins%
+, Graf%
+, Kreiss%
+\BCBL {}\ \BBA {} Goodman%
+}{%
+Degen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+DegenEtAl2020}
+\APACinsertmetastar {%
+DegenEtAl2020}%
+\begin{APACrefauthors}%
+Degen, J.%
+, Hawkins, R\BPBI X\BPBI D.%
+, Graf, C.%
+, Kreiss, E.%
+\BCBL {}\ \BBA {} Goodman, N\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{When redundancy is useful: A Bayesian approach to
+  `overinformative' referring expressions}} {{When redundancy is useful: A
+  Bayesian approach to `overinformative' referring expressions}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychological Review}{127}{}{591–621}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/rev0000186} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Hagoort et~al.(2004)Hagoort, Hald, Mastiaansen, and
-  Petersson]{hagoort-etal2004}
-Hagoort, Peter, Lea Hald, Marcel Mastiaansen, and {Karl Magnus} Petersson.
-  2004.
-\newblock Integration of word meaning and world knowledge in language
-  comprehension.
-\newblock {\em Science\/} 304:438--441.
+\bibitem [\protect \citeauthoryear {%
+Degen%
+, Tessier%
+\BCBL {}\ \BBA {} Goodman%
+}{%
+Degen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+degen-etal2015}
+\APACinsertmetastar {%
+degen-etal2015}%
+\begin{APACrefauthors}%
+Degen, J.%
+, Tessier, M.%
+\BCBL {}\ \BBA {} Goodman, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Wonky worlds: {L}isteners revise world knowledge when
+  utterances are odd} {Wonky worlds: {L}isteners revise world knowledge when
+  utterances are odd}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 37th Annual Conference of the
+  Cognitive Science Society.} {Proceedings of the 37th annual conference of the
+  cognitive science society.}
+\newblock
+\APACaddressPublisher{}{Austin, TX: Cognitive Science Society}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Hald et~al.(2007)Hald, Steenbeek-Planting, and Hagoort]{hald-etal2007}
-Hald, Lea~A., {Esther G.} Steenbeek-Planting, and Peter Hagoort. 2007.
-\newblock The interaction of discourse context and world knowledge in online
-  sentence comprehension. evidence from the n400.
-\newblock {\em Brain research\/} 1146:210--218.
+\bibitem [\protect \citeauthoryear {%
+Goodman%
+\ \BBA {} Frank%
+}{%
+Goodman%
+\ \BBA {} Frank%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+GoodmanFrank2016}
+\APACinsertmetastar {%
+GoodmanFrank2016}%
+\begin{APACrefauthors}%
+Goodman, N\BPBI D.%
+\BCBT {}\ \BBA {} Frank, M\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Pragmatic Language Interpretation as Probabilistic
+  Inference}} {{Pragmatic Language Interpretation as Probabilistic
+  Inference}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Trends in Cognitive Sciences}{20}{11}{818--829}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1016/j.tics.2016.08.005}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.tics.2016.08.005} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Hanna and Tanenhaus(2004)]{hanna-tanenhaus04}
-Hanna, {Joy E.} and {Michael K.} Tanenhaus. 2004.
-\newblock Pragmatic effects on reference resolution in a collaborative task:
-  {E}vidence from eye movements.
-\newblock {\em Cognitive Science\/} 28:105--115.
+\bibitem [\protect \citeauthoryear {%
+Hagoort%
+, Hald%
+, Mastiaansen%
+\BCBL {}\ \BBA {} Petersson%
+}{%
+Hagoort%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2004}}%
+}]{%
+hagoort-etal2004}
+\APACinsertmetastar {%
+hagoort-etal2004}%
+\begin{APACrefauthors}%
+Hagoort, P.%
+, Hald, L.%
+, Mastiaansen, M.%
+\BCBL {}\ \BBA {} Petersson, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Integration of word meaning and world knowledge in
+  language comprehension} {Integration of word meaning and world knowledge in
+  language comprehension}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Science}{304}{}{438-441}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Heim(1983)]{heim83}
-Heim, Irene. 1983.
-\newblock On the projection problem for presuppositions.
-\newblock {\em West Coast Conference on Formal Linguistics\/} 2:114--125.
+\bibitem [\protect \citeauthoryear {%
+Hald%
+, Steenbeek-Planting%
+\BCBL {}\ \BBA {} Hagoort%
+}{%
+Hald%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2007}}%
+}]{%
+hald-etal2007}
+\APACinsertmetastar {%
+hald-etal2007}%
+\begin{APACrefauthors}%
+Hald, L\BPBI A.%
+, Steenbeek-Planting, E.%
+\BCBL {}\ \BBA {} Hagoort, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The interaction of discourse context and world knowledge
+  in online sentence comprehension. Evidence from the N400} {The interaction of
+  discourse context and world knowledge in online sentence comprehension.
+  evidence from the n400}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Brain research}{1146}{}{210-218}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Jaynes and Kempthorne(1976)]{Jaynes1976}
-Jaynes, Edwin and Oscar Kempthorne. 1976.
-\newblock {Confidence intervals vs. Bayesian intervals}.
-\newblock In W.~L. Harper and C.~A. Hooker, eds., {\em Foundations of
-  probability theory, statistical inference, and statistical theories of
-  science\/}, pages 175--257. Dordrecht: Springer Netherlands.
+\bibitem [\protect \citeauthoryear {%
+Hanna%
+\ \BBA {} Tanenhaus%
+}{%
+Hanna%
+\ \BBA {} Tanenhaus%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+hanna-tanenhaus04}
+\APACinsertmetastar {%
+hanna-tanenhaus04}%
+\begin{APACrefauthors}%
+Hanna, J.%
+\BCBT {}\ \BBA {} Tanenhaus, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Pragmatic effects on reference resolution in a
+  collaborative task: {E}vidence from eye movements} {Pragmatic effects on
+  reference resolution in a collaborative task: {E}vidence from eye
+  movements}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognitive Science}{28}{}{105-115}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Langendoen and Savin(1971)]{langendoen-savin71}
-Langendoen, Terry and Harris Savin. 1971.
-\newblock The projection problem for presuppositions.
-\newblock In C.~Fillmore and T.~Langendoen, eds., {\em Studies in Linguistic
-  Semantics\/}, pages 54--60. New York: Holt, Rinehart and Winston.
+\bibitem [\protect \citeauthoryear {%
+Heim%
+}{%
+Heim%
+}{%
+{\protect \APACyear {1983}}%
+}]{%
+heim83}
+\APACinsertmetastar {%
+heim83}%
+\begin{APACrefauthors}%
+Heim, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1983}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {On the projection problem for presuppositions} {On the
+  projection problem for presuppositions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{West Coast Conference on Formal
+  Linguistics}{2}{}{114-125}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Lorson(2018)]{lorson2018}
-Lorson, Alexandra. 2018.
-\newblock The influence of world knowledge on projectivity.
-\newblock M.A.\ thesis, University of Potsdam.
+\bibitem [\protect \citeauthoryear {%
+Jaynes%
+\ \BBA {} Kempthorne%
+}{%
+Jaynes%
+\ \BBA {} Kempthorne%
+}{%
+{\protect \APACyear {1976}}%
+}]{%
+Jaynes1976}
+\APACinsertmetastar {%
+Jaynes1976}%
+\begin{APACrefauthors}%
+Jaynes, E.%
+\BCBT {}\ \BBA {} Kempthorne, O.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1976}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Confidence intervals vs. Bayesian intervals}}
+  {{Confidence intervals vs. Bayesian intervals}}.{\BBCQ}
+\newblock
+\BIn{} W\BPBI L.~Harper\ \BBA {} C\BPBI A.~Hooker\ (\BEDS), \APACrefbtitle
+  {Foundations of probability theory, statistical inference, and statistical
+  theories of science} {Foundations of probability theory, statistical
+  inference, and statistical theories of science}\ (\BPGS\ 175--257).
+\newblock
+\APACaddressPublisher{Dordrecht}{Springer Netherlands}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/978-94-010-1853-1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Mahler(2020)]{mahler2020}
-Mahler, Taylor. 2020.
-\newblock The social component of projection behavior of clausal complements.
-\newblock {\em Linguistic Society of America\/} 5:777--791.
+\bibitem [\protect \citeauthoryear {%
+Kravtchenko%
+\ \BBA {} Demberg%
+}{%
+Kravtchenko%
+\ \BBA {} Demberg%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+kravtchenko2015}
+\APACinsertmetastar {%
+kravtchenko2015}%
+\begin{APACrefauthors}%
+Kravtchenko, E.%
+\BCBT {}\ \BBA {} Demberg, V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Semantically underinformative utterances trigger
+  pragmatic inferences.} {Semantically underinformative utterances trigger
+  pragmatic inferences.}{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 37th Annual Conference of the
+  Cognitive Science Society.} {Proceedings of the 37th annual conference of the
+  cognitive science society.}
+\newblock
+\APACaddressPublisher{}{Austin, TX: Cognitive Science Society}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Morey et~al.(2016)Morey, Hoekstra, Rouder, Lee, and
-  Wagenmakers]{Morey2016}
-Morey, Richard~D., Rink Hoekstra, Jeffrey~N. Rouder, Michael~D. Lee, and
-  Eric~J. Wagenmakers. 2016.
-\newblock {The fallacy of placing confidence in confidence intervals}.
-\newblock {\em Psychonomic Bulletin and Review\/} 23(1):103--123.
+\bibitem [\protect \citeauthoryear {%
+Langendoen%
+\ \BBA {} Savin%
+}{%
+Langendoen%
+\ \BBA {} Savin%
+}{%
+{\protect \APACyear {1971}}%
+}]{%
+langendoen-savin71}
+\APACinsertmetastar {%
+langendoen-savin71}%
+\begin{APACrefauthors}%
+Langendoen, T.%
+\BCBT {}\ \BBA {} Savin, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1971}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The projection problem for presuppositions} {The
+  projection problem for presuppositions}.{\BBCQ}
+\newblock
+\BIn{} C.~Fillmore\ \BBA {} T.~Langendoen\ (\BEDS), \APACrefbtitle {Studies in
+  Linguistic Semantics} {Studies in linguistic semantics}\ (\BPG~54-60).
+\newblock
+\APACaddressPublisher{}{New York: Holt, Rinehart and Winston}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Nicenboim and Vasishth(2016)]{Nicenboim2016}
-Nicenboim, Bruno and Shravan Vasishth. 2016.
-\newblock {Statistical methods for linguistic research: Foundational Ideas,
-  Part II}.
-\newblock {\em Linguistics and Language Compass\/} 10(11):591--613.
+\bibitem [\protect \citeauthoryear {%
+Lorson%
+}{%
+Lorson%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+lorson2018}
+\APACinsertmetastar {%
+lorson2018}%
+\begin{APACrefauthors}%
+Lorson, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+\APACrefbtitle {The influence of world knowledge on projectivity.} {The
+  influence of world knowledge on projectivity.}
+\newblock
+\APACrefnote{M.A.\ thesis, University of Potsdam}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[{R Core Team}(2016)]{R}
-{R Core Team}. 2016.
-\newblock {\em R: A Language and Environment for Statistical Computing\/}.
-\newblock R Foundation for Statistical Computing, Vienna, Austria.
+\bibitem [\protect \citeauthoryear {%
+Mahler%
+}{%
+Mahler%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+mahler2020}
+\APACinsertmetastar {%
+mahler2020}%
+\begin{APACrefauthors}%
+Mahler, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The social component of projection behavior of clausal
+  complements} {The social component of projection behavior of clausal
+  complements}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Linguistic Society of America}{5}{}{777-791}.
+\newblock
+\begin{APACrefDOI} \doi{10.3765/plsa.v5i1.4703} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Romoli(2015)]{romoli2015}
-Romoli, Jacopo. 2015.
-\newblock The presuppositions of soft triggers are obligatory scalar
-  implicatures.
-\newblock {\em Journal of Semantics\/} 32:173--291.
+\bibitem [\protect \citeauthoryear {%
+Mitchell%
+, Reiter%
+\BCBL {}\ \BBA {} Van~Deemter%
+}{%
+Mitchell%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+mitchell2013}
+\APACinsertmetastar {%
+mitchell2013}%
+\begin{APACrefauthors}%
+Mitchell, M.%
+, Reiter, E.%
+\BCBL {}\ \BBA {} Van~Deemter, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Typicality and Object Reference} {Typicality and object
+  reference}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognitive Science}{}{}{}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Simons et~al.(2017)Simons, Beaver, Roberts, and
-  Tonhauser]{best-question}
-Simons, Mandy, David Beaver, Craige Roberts, and Judith Tonhauser. 2017.
-\newblock The {B}est {Q}uestion: Explaining the projection behavior of factive
-  verbs.
-\newblock {\em Discourse Processes\/} 3:187--206.
+\bibitem [\protect \citeauthoryear {%
+Morey%
+, Hoekstra%
+, Rouder%
+, Lee%
+\BCBL {}\ \BBA {} Wagenmakers%
+}{%
+Morey%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+Morey2016}
+\APACinsertmetastar {%
+Morey2016}%
+\begin{APACrefauthors}%
+Morey, R\BPBI D.%
+, Hoekstra, R.%
+, Rouder, J\BPBI N.%
+, Lee, M\BPBI D.%
+\BCBL {}\ \BBA {} Wagenmakers, E\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{The fallacy of placing confidence in confidence
+  intervals}} {{The fallacy of placing confidence in confidence
+  intervals}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychonomic Bulletin and Review}{23}{1}{103--123}.
+\newblock
+\begin{APACrefDOI} \doi{10.3758/s13423-015-0947-8} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Smithson and Verkuilen(2006)]{smithson2006}
-Smithson, Michael and Jay Verkuilen. 2006.
-\newblock A better lemon squeezer? {M}aximum-likelihood regression with
-  beta-distributed dependent variables.
-\newblock {\em Psychological Methods\/} 11(1):54.
+\bibitem [\protect \citeauthoryear {%
+Nicenboim%
+\ \BBA {} Vasishth%
+}{%
+Nicenboim%
+\ \BBA {} Vasishth%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+Nicenboim2016}
+\APACinsertmetastar {%
+Nicenboim2016}%
+\begin{APACrefauthors}%
+Nicenboim, B.%
+\BCBT {}\ \BBA {} Vasishth, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Statistical methods for linguistic research:
+  Foundational Ideas, Part II}} {{Statistical methods for linguistic research:
+  Foundational Ideas, Part II}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Linguistics and Language Compass}{10}{11}{591--613}.
+\newblock
+\begin{APACrefDOI} \doi{10.1111/lnc3.12207} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Stevens et~al.(2017)Stevens, {de Marneffe}, Speer, and
-  Tonhauser]{stevens-etal2017}
-Stevens, {Jon Scott}, Marie-Catherine {de Marneffe}, {Shari R.} Speer, and
-  Judith Tonhauser. 2017.
-\newblock Rational use of prosody predicts projectivity in manner adverb
-  utterances.
-\newblock {\em Annual Meeting of the Cognitive Science Society\/}
-  39:1144--1149.
+\bibitem [\protect \citeauthoryear {%
+{R Core Team}%
+}{%
+{R Core Team}%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+R}
+\APACinsertmetastar {%
+R}%
+\begin{APACrefauthors}%
+{R Core Team}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {R: A Language and Environment for Statistical Computing}
+  {R: A language and environment for statistical computing}{\BBCQ}\
+  [\bibcomputersoftwaremanual].
+\newblock
+\APACaddressPublisher{Vienna, Austria}{}.
+\newblock
+\begin{APACrefURL} \url{https://www.R-project.org/} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Tessler and Goodman(2019)]{tessler-goodman2019}
-Tessler, Michael~Henry and {Noah D.} Goodman. 2019.
-\newblock The language of generalization.
-\newblock {\em Psychological Review\/} 126:395--436.
+\bibitem [\protect \citeauthoryear {%
+Romoli%
+}{%
+Romoli%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+romoli2015}
+\APACinsertmetastar {%
+romoli2015}%
+\begin{APACrefauthors}%
+Romoli, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The presuppositions of soft triggers are obligatory
+  scalar implicatures} {The presuppositions of soft triggers are obligatory
+  scalar implicatures}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Semantics}{32}{}{173-291}.
+\newblock
+\begin{APACrefDOI} \doi{10.1093/jos/fft017} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Tonhauser(2016)]{tonhauser-salt26}
-Tonhauser, Judith. 2016.
-\newblock Prosodic cues to speaker commitment.
-\newblock {\em Semantics and Linguistic Theory\/} 26:934--960.
+\bibitem [\protect \citeauthoryear {%
+{Rubio-Fern{\'a}ndez}%
+}{%
+{Rubio-Fern{\'a}ndez}%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+Rubio2016}
+\APACinsertmetastar {%
+Rubio2016}%
+\begin{APACrefauthors}%
+{Rubio-Fern{\'a}ndez}, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{{\APACmonth{02}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {How {{Redundant Are Redundant Color Adjectives}}? {{An
+  Efficiency}}-{{Based Analysis}} of {{Color Overspecification}}} {How
+  {{Redundant Are Redundant Color Adjectives}}? {{An Efficiency}}-{{Based
+  Analysis}} of {{Color Overspecification}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Frontiers in Psychology}{7}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.3389/fpsyg.2016.00153} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Tonhauser et~al.(2018)Tonhauser, Beaver, and Degen]{tbd-variability}
-Tonhauser, Judith, David Beaver, and Judith Degen. 2018.
-\newblock How projective is projective content? {G}radience in projectivity and
-  at-issueness.
-\newblock {\em Journal of Semantics\/} 35:495--542.
+\bibitem [\protect \citeauthoryear {%
+Simons%
+, Beaver%
+, Roberts%
+\BCBL {}\ \BBA {} Tonhauser%
+}{%
+Simons%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+best-question}
+\APACinsertmetastar {%
+best-question}%
+\begin{APACrefauthors}%
+Simons, M.%
+, Beaver, D.%
+, Roberts, C.%
+\BCBL {}\ \BBA {} Tonhauser, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The {B}est {Q}uestion: Explaining the projection
+  behavior of factive verbs} {The {B}est {Q}uestion: Explaining the projection
+  behavior of factive verbs}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Discourse Processes}{3}{}{187-206}.
+\newblock
+\begin{APACrefDOI} \doi{10.1080/0163853X.2016.1150660} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[Tonhauser and Degen(ms)]{tonhauser-degen-factive}
-Tonhauser, Judith and Judith Degen. ms.
-\newblock Which predicates are factive? {A}n empirical investigation.
-\newblock Manuscript, The Ohio State U and Stanford U.
+\bibitem [\protect \citeauthoryear {%
+Smithson%
+\ \BBA {} Verkuilen%
+}{%
+Smithson%
+\ \BBA {} Verkuilen%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+smithson2006}
+\APACinsertmetastar {%
+smithson2006}%
+\begin{APACrefauthors}%
+Smithson, M.%
+\BCBT {}\ \BBA {} Verkuilen, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A better lemon squeezer? {M}aximum-likelihood regression
+  with beta-distributed dependent variables.} {A better lemon squeezer?
+  {M}aximum-likelihood regression with beta-distributed dependent
+  variables.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychological Methods}{11}{1}{54}.
+\PrintBackRefs{\CurrentBib}
 
-\bibitem[van~der Sandt(1992)]{vds92}
-van~der Sandt, Rob. 1992.
-\newblock Presupposition projection as anaphora resolution.
-\newblock {\em Journal of Semantics\/} 9:333--377.
+\bibitem [\protect \citeauthoryear {%
+Stevens%
+, {de Marneffe}%
+, Speer%
+\BCBL {}\ \BBA {} Tonhauser%
+}{%
+Stevens%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+stevens-etal2017}
+\APACinsertmetastar {%
+stevens-etal2017}%
+\begin{APACrefauthors}%
+Stevens, J.%
+, {de Marneffe}, M\BHBI C.%
+, Speer, S.%
+\BCBL {}\ \BBA {} Tonhauser, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Rational use of prosody predicts projectivity in manner
+  adverb utterances} {Rational use of prosody predicts projectivity in manner
+  adverb utterances}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Annual Meeting of the Cognitive Science
+  Society}{39}{}{1144-1149}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tessler%
+\ \BBA {} Goodman%
+}{%
+Tessler%
+\ \BBA {} Goodman%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+tessler-goodman2019}
+\APACinsertmetastar {%
+tessler-goodman2019}%
+\begin{APACrefauthors}%
+Tessler, M\BPBI H.%
+\BCBT {}\ \BBA {} Goodman, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The language of generalization} {The language of
+  generalization}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychological Review}{126}{}{395-436}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tonhauser%
+}{%
+Tonhauser%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+tonhauser-salt26}
+\APACinsertmetastar {%
+tonhauser-salt26}%
+\begin{APACrefauthors}%
+Tonhauser, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Prosodic cues to speaker commitment} {Prosodic cues to
+  speaker commitment}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Semantics and Linguistic Theory}{26}{}{934-960}.
+\newblock
+\begin{APACrefDOI} \doi{10.3765/salt.v26i0.3788} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tonhauser%
+, Beaver%
+\BCBL {}\ \BBA {} Degen%
+}{%
+Tonhauser%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+tbd-variability}
+\APACinsertmetastar {%
+tbd-variability}%
+\begin{APACrefauthors}%
+Tonhauser, J.%
+, Beaver, D.%
+\BCBL {}\ \BBA {} Degen, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {How projective is projective content? {G}radience in
+  projectivity and at-issueness} {How projective is projective content?
+  {G}radience in projectivity and at-issueness}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Semantics}{35}{}{495-542}.
+\newblock
+\begin{APACrefDOI} \doi{10.1093/jos/ffy007} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tonhauser%
+\ \BBA {} Degen%
+}{%
+Tonhauser%
+\ \BBA {} Degen%
+}{%
+{\protect \APACyear {ms}}%
+}]{%
+tonhauser-degen-factive}
+\APACinsertmetastar {%
+tonhauser-degen-factive}%
+\begin{APACrefauthors}%
+Tonhauser, J.%
+\BCBT {}\ \BBA {} Degen, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{ms}{}{}.
+\newblock
+\APACrefbtitle {Which predicates are factive? {A}n empirical investigation.}
+  {Which predicates are factive? {A}n empirical investigation.}
+\newblock
+\APACrefnote{Manuscript, The Ohio State U and Stanford U}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+van~der Sandt%
+}{%
+van~der Sandt%
+}{%
+{\protect \APACyear {1992}}%
+}]{%
+vds92}
+\APACinsertmetastar {%
+vds92}%
+\begin{APACrefauthors}%
+van~der Sandt, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1992}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Presupposition Projection as Anaphora Resolution}
+  {Presupposition projection as anaphora resolution}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Semantics}{9}{}{333-377}.
+\newblock
+\begin{APACrefDOI} \doi{10.1093/jos/9.4.333} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Warren%
+\ \BBA {} McConnell%
+}{%
+Warren%
+\ \BBA {} McConnell%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+warren2007}
+\APACinsertmetastar {%
+warren2007}%
+\begin{APACrefauthors}%
+Warren, T.%
+\BCBT {}\ \BBA {} McConnell, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Investigating effects of selectional restriction
+  violations and plausibility violation severity on eye-movements in reading}
+  {Investigating effects of selectional restriction violations and plausibility
+  violation severity on eye-movements in reading}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychonomic bulletin \& review}{14}{4}{770--775}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Westerbeek%
+, Koolen%
+\BCBL {}\ \BBA {} Maes%
+}{%
+Westerbeek%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+westerbeek2015}
+\APACinsertmetastar {%
+westerbeek2015}%
+\begin{APACrefauthors}%
+Westerbeek, H.%
+, Koolen, R.%
+\BCBL {}\ \BBA {} Maes, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{{\APACmonth{07}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Stored Object Knowledge and the Production of Referring
+  Expressions: The Case of Color Typicality} {Stored object knowledge and the
+  production of referring expressions: The case of color typicality}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Frontiers in Psychology}{6}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.3389/fpsyg.2015.00935} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Winograd%
+}{%
+Winograd%
+}{%
+{\protect \APACyear {1972}}%
+}]{%
+winograd1972}
+\APACinsertmetastar {%
+winograd1972}%
+\begin{APACrefauthors}%
+Winograd, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1972}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Understanding natural language} {Understanding natural
+  language}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognitive psychology}{3}{1}{1--191}.
+\PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}
