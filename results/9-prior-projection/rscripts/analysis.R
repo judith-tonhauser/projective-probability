@@ -12,73 +12,77 @@ library(lme4)
 library(lmerTest)
 
 # load helper functions
-source('../../helpers.R')
+source('helpers.R')
 
 # load data
 d = read.csv("../data/data_preprocessed.csv")
 nrow(d) #14872
 names(d)
 
-# prepare for spreading: rename the 'prior' column into 'prior_type'
-colnames(d)[colnames(d)=="prior"] = "prior_type"
+d$item = as.factor(paste(d$short_trigger,d$content))
+d$workerid = as.factor(as.character(d$workerid))
 
-# doing this step before spreading solves the problem with prior_type in MC trials
 # exclude main clause controls
 d_nomc = droplevels(subset(d, short_trigger != "MC"))
-nrow(d_nomc) #11440 / 286 turkers = 40 target stimuli per Turker (20 proj, 20 prior)
+nrow(d_nomc) #5720 / 286 turkers = 20 target stimuli per Turker per block
 
-# spread responses over separate columns for projectivity and prior probability
-t_nomc = d_nomc %>%
-  mutate(block_proj = ifelse(question_type=="projective"&block=="block1", "block1", 
-                             ifelse(question_type=="projective"&block=="block2","block2",
-                                    ifelse(question_type=="prior"&block=="block1","block2","block1")))) %>%
-  select(workerid,content,short_trigger,question_type,response,prior_type,block_proj) %>%     # 'event' (CC) is missing... (?)
-  spread(question_type,response) %>%
-  unite(item,short_trigger,content,remove=F)
-nrow(t_nomc) #5720 = 286 turkers x 20 rows
+# set lower probability fact as reference level of prior_type
+contrasts(d_nomc$prior_type) = c(1,0)
 
-# center prior probability, projectivity, and at-issueness
-t_nomc = cbind(t_nomc,myCenter(t_nomc[,c("prior","projective","block_proj")]))
-summary(t_nomc)
+# analysis 1: does high/low prob fact predict actual prior ratings?
+m.prior = lmer(prior ~ prior_type + (1+prior_type|item) + (1+prior_type|workerid), data=d_nomc, REML=F)
+summary(m.prior)
 
-# is the CC of every predicate projective, compared to the main clause content? (SALT 2020)-----
-nrow(d) # data with main clauses
-names(d)
-table(d$content)
+# analysis 1a: does block order predict prior ratings beyond high/low prob fact?
+# center fixed effects predictors first to reduce collinearity
+d_nomc = cbind(d_nomc,myCenter(d_nomc[,c("prior_type","block_proj")]))
 
-# spread responses over separate columns for projectivity, at-issueness and prior probability
-d = d %>%
-  mutate(block_proj = ifelse(question_type=="projective"&block=="block1", "block1", 
-                             ifelse(question_type=="projective"&block=="block2","block2",
-                                    ifelse(question_type=="prior"&block=="block1","block2","block1")))) %>%
-  select(workerid,content,short_trigger,question_type,response,prior_type,block_proj) %>%     # 'event' (CC) is missing... (?)
-  spread(question_type,response) %>%
-  unite(item,short_trigger,content,remove=F)
-nrow(d) #7436 = 14872 / 2
-
-d$item = as.factor(paste(d$short_trigger,d$content))
-
-# LME model predicting rating from predicate
-table(d$short_trigger)
-table(d$prior)
-names(d)
-d$short_trigger <- relevel(d$short_trigger, ref = "MC")
-m = lmer(projective ~ short_trigger + prior + (1+short_trigger|workerid) + (1|item), data = d, REML=F)
-summary(m)
+m.prior.block = lmer(prior ~ cprior_type*cblock_proj + (1+cprior_type+cblock_proj|item) + (1+cprior_type|workerid), data=d_nomc, REML=F)
+summary(m.prior.block)
+# there was a main effect but no interaction of block order, such that if the prior block occurred second, ratings were lower (by .03 on average, ie negligible):
+# Estimate Std. Error        df t value Pr(>|t|)    
+# (Intercept)               0.46072    0.00597 402.59268  77.172  < 2e-16 ***
+# cprior_type              -0.45170    0.01450 376.28553 -31.159  < 2e-16 ***
+# cblock_proj              -0.03278    0.01055 278.24978  -3.108  0.00208
+# cprior_type:cblock_proj  -0.03060    0.02666 285.66661  -1.147  0.25214    
 
 
-# does prior predict projection?
-# this model accounts for the fact that we've seen by-predicate variability, both in projection and in effect of prior on projection
-model = lmer(projective ~ cprior  + (1+cprior|workerid) + (1|content) + (1+cprior|short_trigger), data = d, REML=F)
-summary(model)
+# analysis 2: does high/low prob fact predict projection ratings?
+m.proj = lmer(projective ~ prior_type + (1|item) + (1+prior_type|workerid), data=d_nomc, REML=F)
+summary(m.proj)
+ranef(m.proj)
 
-# compare to model with block interaction, to identify whether block order mattered
-model.2 = lmer(projective ~ cprior * cblock_proj + (1+cprior|workerid) + (1|content) + (1+cprior|short_trigger), data = t_nomc, REML=F)
-summary(model.2)
+# analysis 2a: does block order predict projection ratings beyond high/low prob fact?
+# center fixed effects predictors first to reduce collinearity
+d_nomc = cbind(d_nomc,myCenter(d_nomc[,c("prior_type","block_proj")]))
 
-anova(model,model.2)
+m.proj.block = lmer(projective ~ cprior_type*cblock_proj + (1+cblock_proj|item) + (1+cprior_type|workerid), data=d_nomc, REML=F)
+summary(m.proj.block)
+# no effect of block order
+# Estimate Std. Error         df t value Pr(>|t|)    
+# (Intercept)               0.470775   0.011252 551.065309  41.839   <2e-16 ***
+# cprior_type              -0.136584   0.011155 286.653961 -12.244   <2e-16 ***
+# cblock_proj               0.022431   0.016179 287.263276   1.386    0.167    
+# cprior_type:cblock_proj  -0.005968   0.022352 284.088611  -0.267    0.790  
 
-# auxiliary analysis to investigate which of the predicates the prior has a bigger or smaller effect on
-model = lmer(projective ~ cprior  * short_trigger - cprior + (1+cprior+short_trigger|workerid) + (1+short_trigger|content), data = t_nomc, REML=F)
-summary(model)
+# analysis 2b: does the prior effect hold independently of predicate?
+m.proj.pred = lmer(projective ~ cprior_type*short_trigger + (1|content) + (1+cprior_type|workerid), data=d_nomc, REML=F)
+summary(m.proj.pred)
+# answer: yes! lots of main effects of predicate, but no significant interactions with prior type (except for marginal interaction for know, p < .1, but not to be taken seriously)
+
+# analysis 3: does individual prior rating predict projection, and does it do so better than categorical high/low prior predictor?
+m.proj.ind = lmer(projective ~ prior + (1|item) + (1+prior|workerid), data=d_nomc, REML=F)
+
+summary(m.proj.ind)
+summary(m.proj)
+
+BIC(m.proj.ind)
+BIC(m.proj)
+
+m.proj.ind.plus = lmer(projective ~ prior + prior_type + (1|item) + (1+prior|workerid), data=d_nomc, REML=F)
+summary(m.proj.ind.plus)
+
+anova(m.proj.ind,m.proj.ind.plus)
+anova(m.proj,m.proj.ind.plus)
+# both the BIC comparison and the likelihood ratio comparison indicate that the individual-level prior model is better than the population-level one
 

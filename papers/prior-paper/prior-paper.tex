@@ -37,7 +37,8 @@
 
 \newcommand{\jt}[1]{\textbf{\color{blue}JT: #1}}
 
-
+\newcommand{\tableref}[1]{Tab.~\ref{#1}}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
 
 \def\bad{{\leavevmode\llap{*}}}
 \def\marginal{{\leavevmode\llap{?}}}
@@ -229,20 +230,23 @@ by measuring prior probability of contents and projection in a within-participan
 
 \section{Experiment 1}\label{s2}
 
-This experiment investigated the hypothesis in (\ref{hyp}), that the higher the prior probability of content, the more projective the content. Prior probability and projection ratings were collected for the contents of 20 clauses that realized the complements of 20 clause-embedding predicates.\footnote{\label{f-github}The experiments, data and R code for generating the figures and analyses of the experiments reported on in this paper are available at [redacted for review]. Exp.~1 was pregistered: [link removed for review]. All experiments were conducted with approval from the IRB of [university redacted] and informed consent was obtained.}
+This experiment tested whether higher prior probability content is more likely to project. Prior probability and projection ratings were collected for the contents of 20 clauses that realized the complements of 20 clause-embedding predicates.\footnote{\label{f-github}The experiments, data and R code for generating the figures and analyses of the experiments reported on in this paper are available at [redacted for review]. Exp.~1 was pregistered: [link removed for review]. All experiments were conducted with approval from the IRB of [university redacted] and informed consent was obtained.\jd{i think there's a way of anonymizing osf links?}}
 %\url{https://github.com/judith-tonhauser/factivity}.}  
 
+ %
 \paragraph{Participants} 300 participants with U.S.\ IP addresses and at least 99\% of previous HITs approved were recruited on Amazon's Mechanical Turk platform (ages: 18-82, median: 35.5; 119 female, 179 male, 1 other, 1 undeclared). They were paid \$1.80.
 
-\paragraph{Materials} The prior probability and the projection of the contents of 20 clauses were measured. As shown for the sample clause in (\ref{sample-clause}), each clause was paired with two facts. One fact was hypothesized to result in higher prior probability for the content  and the other in a lower prior probability. See Supplement \ref{a-stim} for the full set of clauses and facts. 
+\paragraph{Materials} The prior probability and the projection of the contents of 20 clauses were measured in separate blocks. Each clause (e.g., \emph{Julian dances salsa}) was paired with two facts between participants. The content of the clause was expected to have a higher prior probability in the presence of one fact (e.g., \emph{Julian is Cuban}) than of the other (e.g., \emph{Julian is German}). See Supplement \ref{a-stim} for the full set of clauses and facts. 
 
-\begin{exe}
-\ex\label{sample-clause} Sample clause: Julian dances salsa.
-\\ Higher probability fact: Julian is Cuban.
-\\ Lower probability fact: Julian is German.
-\end{exe}
+%\begin{exe}
+%\ex\label{sample-clause} Sample clause: Julian dances salsa.
+%\\ Higher probability fact: Julian is Cuban.
+%\\ Lower probability fact: Julian is German.
+%\end{exe}
 
-Prior probability and projection were measured in separate blocks. In the prior block, the 20 clauses were realized as the complements of {\em How likely is it that\ldots?}~questions. As shown in (\ref{target}), each target stimulus consisted of one of the two facts for that clause and the {\em How likely is it that\ldots?} question. There were a total of 40 target stimuli in the prior block.
+\jd{turn (3), (4), (5), and (6) into an image that provides good visual overview of the 2 tasks and the predicates -- probably just merge into figure of the tasks below. this will also save words.}
+
+In the prior block, the 20 clauses were realized as the complements of {\em How likely is it that\ldots?}~questions. As shown in (\ref{target})\jd{change to figure ref}, each target stimulus consisted of one of the two facts for that clause and the {\em How likely is it that\ldots?} question. There were a total of 40 target stimuli in the prior block.\jd{wait, is this true? we elicited high and low prior ratings from each participant?}
 
 \begin{exe}
 \ex\label{target}  %Sample target stimuli in the prior block
@@ -252,7 +256,7 @@ Prior probability and projection were measured in separate blocks. In the prior 
 \end{xlist}
 \end{exe}
 
-In the projection block, the target stimuli consisted of a fact and a polar question that was uttered by a named speaker, as shown in (\ref{stim}). The fact was one of the two facts that the clause was paired with. The polar questions were formed by realizing the 20 clauses as the complements of the 20 clause-embedding predicates in (\ref{preds}).  There were a total of 800 target stimuli in the projection block.
+In the projection block, the target stimuli consisted of a fact and a polar question that was uttered by a named speaker, as shown in (\ref{stim}).\jd{change to figure ref} The polar questions were formed by realizing the 20 clauses as the complements of the 20 clause-embedding predicates in (\ref{preds}).\jd{change to figure ref}   There were a total of 800 target stimuli in the projection block.\jd{wait what? that can't be right. didn't each participant see 20 prior and 20 projection trials?}
 
 \begin{exe}
 \ex\label{stim} %Sample target stimuli in the projection block
@@ -270,10 +274,10 @@ In the projection block, the target stimuli consisted of a fact and a polar ques
 
 {\em be annoyed, discover, know, reveal, see, acknowledge, admit, announce, confess, confirm, establish, hear, inform, prove, pretend, suggest, say, think, be right, demonstrate}
 \end{exe}
-The 20 predicates in (\ref{preds}) include a cross-section of English clause-embedding predicates: They include cognitive predicates (e.g., {\em know}), emotive predicates (e.g., {\em be annoyed}), communication predicates (e.g., {\em announce}), and inferential predicates (e.g., {\em prove}), as well as so-called factive and non-factive predicates (e.g., {\em know} vs.\ {\em think}); as mentioned above, \citeNP{tonhauser-degen-factive} challenge this latter classification.
+The 20 predicates in (\ref{preds})\jd{change to fig ref} include a cross-section of English clause-embedding predicates: They include cognitive predicates (e.g., {\em know}), emotive predicates (e.g., {\em be annoyed}), communication predicates (e.g., {\em announce}), and inferential predicates (e.g., {\em prove}), as well as so-called factive and non-factive predicates (e.g., {\em know} vs.\ {\em think})\footnote{\citeA{tonhauser-degen-factive} challenge the distinction between factive and non-factive predicates and we do not analyze the predicates separately, but we have \jd{include some way of marking the different predicate types because i'm not sure it'll get through review otherwise}.}
 
-The projection block also included 6 control stimuli, which were used to assess participants' attention to the task. The content of these stimuli was hypothesized to not project: For example, in (\ref{control}), the speaker is not committed to the main clause content, that Zack is coming to the meeting tomorrow. %The control stimuli were presented with a fact that we hypothesized to not influence the prior probability of the content. 
-The same 6 main clauses were also used to form the 6 filler stimuli in the prior block; these were not used to assess participants' attention. For the full set of stimuli see Supplement \ref{a-stim}.
+The projection block also included 6 control trials, which functioned as attention checks. The content of these items was expected not to project: For example, in (\ref{control})\jd{change to fig ref}, the speaker is not committed to the main clause content, that Zack is coming to the meeting tomorrow. %The control stimuli were presented with a fact that we hypothesized to not influence the prior probability of the content. 
+The same 6 main clauses were also used to form 6 filler trials in the prior block; these were not used to assess participants' attention. For the full set of items see Supplement \ref{a-stim}.
 
 \begin{exe}
 \ex\label{control} Sample control stimulus in the projection block \\ {\bf Fact (which Margaret knows):}  Zack is a member of the golf club. \\ {\bf Margaret:} Is Zack coming to the meeting tomorrow?
@@ -283,9 +287,10 @@ The same 6 main clauses were also used to form the 6 filler stimuli in the prior
 %\ex\label{control-prior} Sample filler stimulus in the prior block \\ {\bf Fact:}  Zack is a member of the golf club. \\ How likely is it that Zack is coming to the meeting tomorrow?
 %\end{exe}
 
-For each participant, a set consisting of the 20 clauses with one of their facts was randomly generated, with 10 higher and 10 lower probability facts, for a total of 20 clause/fact combinations. Participants saw a total of 52 stimuli: 20 target stimuli in each block, 6 control stimuli in the projection block and 6 filler stimuli in the prior block. In the prior block, participants rated the prior probability of the contents of these 20 clauses given the facts. In the projection block, the 20 clauses were randomly realized as the complements of the 20 clause-embedding predicates. Here, participants rated the projection of the contents of the 20 clauses given the facts. Block order and within-block trial order were randomized.
+Each participant's stimulus set was semi-randomly generated by first randomly pairing up the 20 predicates and clauses. Half of the items were then randomly assigned the respective clause's higher-probability fact, and half its lower-probability fact. Participants completed a total of 52 trials: 20 target trials in each block, 6 control trials in the projection block and 6 filler trials in the prior block. %In the prior block, participants rated the prior probability of the contents of these 20 clauses given the facts. In the projection block, the 20 clauses were randomly realized as the complements of the 20 clause-embedding predicates. Here, participants rated the projection of the contents of the 20 clauses given the facts. 
+Block order and within-block trial order were randomized.
 
-\paragraph{Procedure} In the projection block, participants were told to imagine that they are at a party and that, on walking into the kitchen, they overhear somebody ask somebody else a question. Participants were asked to rate whether the speaker was certain of the content of the complement, taking into consideration the fact that was presented. They gave their responses on a slider marked `no' at one end (coded as 0) and `yes' at the other (coded as 1), as shown in Figure \ref{fig-exp1-projection}. In the prior block, participants were told to read facts and to assess the likelihood of events, given those facts. They gave their responses on a slider marked `impossible' at one end (coded as 0) and `definitely' at the other (coded as 1), as shown in the sample trial in Figure \ref{f-exp1-prior}
+\paragraph{Procedure} In the projection block, participants were told to imagine that they are at a party and that, on walking into the kitchen, they overhear somebody ask somebody else a question. Participants were asked to rate whether the speaker was certain of the content of the complement, taking into consideration the fact that was presented. They gave their responses on a slider marked `no' at one end (coded as 0) and `yes' at the other (coded as 1), as shown in \figref{fig-exp1-projection}. In the prior block, participants were told to read facts and to assess the likelihood of events, given those facts. They gave their responses on a slider marked `impossible' at one end (coded as 0) and `definitely' at the other (coded as 1), as shown in the sample trial in  \figref{f-exp1-prior}
 
 \begin{figure}[h!]
 \centering
@@ -303,23 +308,24 @@ For each participant, a set consisting of the 20 clauses with one of their facts
 \caption{Sample trials in Exp.~1.}
 \end{figure}
 
-After completing the experiment, participants filled out a short, optional survey about their age, their gender, their native language(s) and, if English is their native language, whether they are a speaker of American English (as opposed to, e.g., Australian or Indian English). To encourage them to respond truthfully, participants were told that they would be paid no matter what answers they gave in the survey.
+After completing the experiment, participants filled out a short optional demographic survey. % about their age, their gender, their native language(s) and, if English is their native language, whether they are a speaker of American English (as opposed to, e.g., Australian or Indian English). 
+To encourage truthful responses, participants were told that they would be paid no matter what answers they gave in the survey.
 
-\paragraph{Data exclusion} Data was excluded based on self-declared non-native speaker status and other criteria given in Supplement \ref{a-exclusion}, leaving data from 286 participants to be analyzed (ages 18-82; median: 35.5; 116 female, 186 male, 1 other, 1 undeclared).
+\paragraph{Data exclusion} Data was excluded based on self-declared non-native speaker status and other criteria given in Supplement \ref{a-exclusion}, leaving 7436 data points from 286 participants to be analyzed (ages 18-82; median: 35.5; 116 female, 186 male, 1 other, 1 undeclared).
 
 \subsection{Results}
 
-The manipulation of the prior probability of the 20 contents was successful. Figure \ref{f-prior} plots the mean prior probabilities of the 20 contents by fact. For each content, the mean prior probability rating was higher when it was presented with the higher probability fact than when it was presented with the lower probability fact.
+\paragraph{Prior beliefs.}  \figref{f-prior} shows the mean prior probabilities of the 20 contents by fact. Each content's mean prior probability  was rated as higher when it was presented with its higher probability fact than when it was presented with its lower probability fact ($\beta$ = 0.45, $SE$ = 0.01, $t$ = 31.12, $p$ $<$ .0001), as assessed in a mixed-effects linear regression predicting slider rating from dummy-coded fact type (reference level: `lower probability') and random by-item and by-participant intercepts and slopes for fact type.\footnote{All analyses were conducted in R \cite{R} using the \texttt{lme4} package \cite{lme4}.} This suggests that the manipulation of the prior probability of the 20 contents was successful. 
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=.7\paperwidth]{../../results/9-prior-projection/graphs/prior-ratings}
 
-\caption{Mean prior probability by content and fact in Exp.~1. Error bars indicate 95\% bootstrapped confidence intervals. Light dots indicate participants' ratings.} 
+\caption{Mean prior probability by content and fact in Exp.~1. Error bars indicate 95\% bootstrapped confidence intervals. Transparent dots indicate individual participant ratings.} 
 \label{f-prior}
 \end{figure}
 
-To address the question of whether prior probability influences projection, Figure \ref{f-projection-mean} plots the mean certainty ratings for the CCs by  predicate and by fact, as well as the mean certainty rating for the main clause controls (abbreviated `MC'). As shown, the mean certainty ratings were higher for contents  presented with higher probability facts than for contents presented with lower probability facts. This result, which holds for all 20 clause-embedding predicates, suggests that prior probability influences projection.
+\paragraph{Do prior beliefs modulate projection?}  \figref{f-projection-mean} shows the mean certainty ratings for the CCs by  predicate and by fact, as well as the mean certainty rating for the main clause controls (abbreviated `MC'). The mean certainty ratings were higher for contents  presented with higher probability facts than for contents presented with lower probability facts ($\beta$ = 0.14, $SE$ = 0.01, $t$ = 12.24, $p$ $<$ .0001), as assessed by a mixed effects linear regression predicting mean certainty rating from dummy-coded fact type (reference level: `lower probability') and random by-item and by-participant intercepts and slopes for fact type.  This result, which holds for all 20 clause-embedding predicates, suggests that participants' prior beliefs about content probability systematically modulated the extent to which they take the speaker to be committed to that content.
 
 \begin{figure}[h!]
 \centering
@@ -329,9 +335,11 @@ To address the question of whether prior probability influences projection, Figu
 \caption{Mean certainty ratings by predicate and prior probability of the content of the complement in Exp.~1. Error bars indicate 95\% bootstrapped confidence intervals. Light dots indicate participants' ratings.} 
 \label{f-projection-mean}
 \end{figure}
-We also replicate \citepos{tonhauser-degen-factive} result that there is by-predicate variation in the projection of the CC: for instance, the CC of {\em be annoyed} is more projective than that of {\em discover}, which in turn is more projective than that of {\em announce}. The Spearman rank correlation between the mean certainty ratings in Exp.~1 (collapsing over facts) and \citepos{tonhauser-degen-factive} Exp.~1a is .991; see Supplement \ref{a-comparison} for a visualization. Exp.~1 thereby provides further evidence for the systematic influence of the predicate on projection.
 
-Figure \ref{f-prior} revealed by-participant variation in prior probability ratings, which means that participants' prior probability ratings need not align with the prior probability classification assumed in Figure \ref{f-projection-mean}. For example, given a particular content (e.g., that Julian dances salsa), it is possible that one participant's prior probability rating was lower than that of another participant, even though the first participant was presented with the higher probability fact (Julian is Cuban) and the second one with the lower probability fact (Julian is German). To investigate whether prior probability influences projection at the by-participant level, Figure \ref{f-projection} plots the participants' certainty ratings by their prior probability ratings. (The color coding here merely represents the type of fact the participant was presented with. No classification is imposed.) The linear smoothers suggest a positive correlation for each predicate between prior probability and certainty ratings such that contents with higher prior probability ratings receive higher certainty ratings. This result suggests that prior probability influences projection even at the by-participant level.
+We also replicated \citeA{tonhauser-degen-factive}'s result of by-predicate variation in the projection of the CC: for instance, the CC of {\em be annoyed} was more projective than that of {\em discover}, which in turn was more projective than that of {\em announce}. The Spearman rank correlation between the mean certainty ratings in Exp.~1 (collapsing over facts) and \citepos{tonhauser-degen-factive} Exp.~1a is .991; see Supplement \ref{a-comparison} for a visualization. Exp.~1 thereby also provides further evidence for the systematic influence of the predicate on projection, but crucially the effect of the prior was observable independently of predicate.
+
+Closer inspection of  \figref{f-prior} reveals by-participant variability in prior probability ratings. This means that individual participants' prior beliefs may not align with the prior probability classification assumed in  \figref{f-projection-mean}. For example, given a particular content (e.g., that Julian dances salsa), it is possible that one participant's prior probability rating was lower than that of another participant, even though the first participant was presented with the higher probability fact (Julian is Cuban) and the second one with the lower probability fact (Julian is German). \figref{f-projection} shows participants' certainty ratings by their individual prior probability ratings. %(The color coding here merely represents the type of fact the participant was presented with. No classification is imposed.) The linear smoothers suggest a positive correlation for each predicate between prior probability and certainty ratings such that contents with higher prior probability ratings receive higher certainty ratings. 
+To investigate whether prior beliefs modulate projection at the by-participant level,  we conducted the same mixed-effects analysis reported above, but used participants' individual prior probability ratings as the fixed effect prior predictor. Again, higher-prior-probability CCs were more likely to project ($\beta$ = 0.28, $SE$ = 0.02, $t$ = 13.85, $p$ $<$ .0001). This  suggests that prior probability influences projection even at the by-participant level. In fact, a Bayesian Information Criterion (BIC) model comparison  revealed that the individual-level model better captured the variance in the data (group-level model BIC: 2654; participant-level model BIC: 2291), suggesting that individual listeners' prior beliefs systematically modulate the extent to which they take the speaker to be committed to a content: the more they believe it, the more they take the speaker to believe it.
 
 \begin{figure}[h!]
 \centering
@@ -342,19 +350,19 @@ Figure \ref{f-prior} revealed by-participant variation in prior probability rati
 \label{f-projection}
 \end{figure}
 
-\newpage
-
-The qualitative observations about the relations between prior probability, clause-embedding predicate and projection were borne out statistically. We fitted a Bayesian mixed effects Beta regression model  with weakly informative priors using the \verb|brms| \cite{buerkner2017}  package in R \cite{R} on the target data (5,720 data points). The model predicted the certainty ratings from a fixed effect of prior probability and included the maximal random effects structure justified by the design, namely random by-participant and by-item intercepts (where an item is a combination of a predicate and a complement clause). A Beta regression model estimates the mean of the outcome distribution (like a linear regression model).\footnote{Beta regression models also estimate a second parameter, namely the precision, which is a measure of dispersion: the greater the precision, the more concentrated the ratings are around the mean. In this paper, we rely on the estimated mean to identify whether prior probability predicts projection. Both the estimated mean and precision are reported in the full model output table in Supplement \ref{modeldetails}.} We thus obtain a 95\% credible interval for \jt{the mean effect of prior probability on certainty?}. Supplement \ref{modeldetails} motivates the use of Beta regression over linear regression, provides a brief primer on how to interpret Bayesian mixed effects Beta regression models, and reports the full model output.
-
-\jt{We need to report two models here: predicting projection from prior at by-participant level, but also predicting mean projection from mean prior, to allow for comparison to Exps.~2}
-
-\jt{According to the Beta regression model, the estimated mean for each predicate was higher when....} 
+%\newpage
+%
+%The qualitative observations about the relations between prior probability, clause-embedding predicate and projection were borne out statistically. We fitted a Bayesian mixed effects Beta regression model  with weakly informative priors using the \verb|brms| \cite{buerkner2017}  package in R \cite{R} on the target data (5,720 data points). The model predicted the certainty ratings from a fixed effect of prior probability and included the maximal random effects structure justified by the design, namely random by-participant and by-item intercepts (where an item is a combination of a predicate and a complement clause). A Beta regression model estimates the mean of the outcome distribution (like a linear regression model).\footnote{Beta regression models also estimate a second parameter, namely the precision, which is a measure of dispersion: the greater the precision, the more concentrated the ratings are around the mean. In this paper, we rely on the estimated mean to identify whether prior probability predicts projection. Both the estimated mean and precision are reported in the full model output table in Supplement \ref{modeldetails}.} We thus obtain a 95\% credible interval for \jt{the mean effect of prior probability on certainty?}. Supplement \ref{modeldetails} motivates the use of Beta regression over linear regression, provides a brief primer on how to interpret Bayesian mixed effects Beta regression models, and reports the full model output.
+%
+%\jt{We need to report two models here: predicting projection from prior at by-participant level, but also predicting mean projection from mean prior, to allow for comparison to Exps.~2}
+%
+%\jt{According to the Beta regression model, the estimated mean for each predicate was higher when....} 
 
 \subsection{Discussion}
 
-The results of Exp.~1 provide empirical support for the hypothesis in (\ref{hyp}), advanced in \citeNP{stevens-etal2017} and \citeNP{tbd-variability}, that the higher the prior probability of content, the more projective it is. 
+\jd{I wonder whether most of this wouldn't be better served being discussed in the general discussion at the end, and here only briefly bring up the methodological issue that motivates exps 2? (especially given the space constraints?)}
 
-These results confirm \citepos{mahler2020} results and expand on them in several ways. First, while \citeNP{mahler2020} manipulated only the political party affiliation of the speaker, the manipulation in Exp.~1 relied on 20 distinct properties of the individuals denoted by the subjects of the 20 clauses (e.g., whether Julian is more likely to dance salsa if he is German or Cuban, or whether Zoe is more likely to have calculated the tip, if she is 5 years old or a math major). Thus, the result of Exp.~1 suggests a general effect of prior probability on projection.\footnote{None of our prior probability manipulations relied on gender stereotypes because we only became aware of \citeNP{lorson2018} after running Exp.~2.}
+The results of Exp.~1 provide empirical support for the hypothesis that higher prior probability content is more likely to project. These results confirm \citepos{mahler2020} results and expand on them in several ways. First, while \citeNP{mahler2020} manipulated only the political party affiliation of the speaker, the manipulation in Exp.~1 relied on 20 distinct properties of the individuals denoted by the subjects of the 20 clauses (e.g., whether Julian is more likely to dance salsa if he is German or Cuban, or whether Zoe is more likely to have calculated the tip, if she is 5 years old or a math major). Thus, the result of Exp.~1 suggests a general effect of prior probability on projection.\footnote{None of our prior probability manipulations relied on gender stereotypes because we only became aware of \citeNP{lorson2018} after running Exp.~2.}
 
 Second, while \citeNP{mahler2020} observed an influence of prior probability of the projection of the CCs of two classes of predicates (so-called factive and non-factive predicates), Exp.~1 observed such an influence for the CCs of 20 predicates. Thus, the result of Exp.~1 supports the assumption that the effect of prior probability on projection is more general than was suggested in \citeNP{mahler2020}. In fact, the results of Exp.~1 motivate the hypothesis that prior probability influences projection across the set of English clause-embedding predicates. Finally, prior probability and projection were measured in a within-participant design in Exp.~1, in contrast to \citeposs{mahler2020} experiment, which only measured projection.  Exp.~1 thus supports the claim that projection is influenced not only by the average prior probability of content but also by the prior probability that individual listeners assign to content. This result suggests that by-participant variability in projection experiments (see, e.g., \citeNP{tbd-variability,tonhauser-degen-factive}) may be due to participants assigning different prior probabilities to the contents under investigation. It is possible, however, that the within-participant design resulted in participants' responses on either block influencing their responses on the other block. To mitigate against this possibility, we conducted Exps.~2, where prior probability and projection ratings were collected from different populations.  
 
@@ -384,7 +392,7 @@ The materials of Exp.~2b were identical to those of the projection block of Exp.
 
 \subsection{Results and discussion}
 
-Exp.~2a replicated the prior probability manipulation of Exp.~1. Figure \ref{f-prior-comparison} plots the mean prior probability ratings in Exp.~2a against those of Exp.~1. The Spearman rank correlation was high, at .977. For a visualization of the by-content prior ratings see Supplement \ref{a-exp2}.
+Exp.~2a replicated the prior probability manipulation of Exp.~1.  \figref{f-prior-comparison} plots the mean prior probability ratings in Exp.~2a against those of Exp.~1. The Spearman rank correlation was high, at .977. For a visualization of the by-content prior ratings see Supplement \ref{a-exp2}.
 
 \begin{figure}[h!]
 \centering
@@ -395,7 +403,7 @@ Exp.~2a replicated the prior probability manipulation of Exp.~1. Figure \ref{f-p
 \label{f-prior-comparison}
 \end{figure}
 
-Exp.~2b replicated the critical result of Exp.~1, that prior probability influences projection.\footnote{Exp.~2b also replicated \citepos{tonhauser-degen-factive} result that there is by-predicate variation in the projection of the content of the complement; see Supplement \ref{a-comparison}.} Figure \ref{f-projection-mean-2b} shows that mean certainty ratings in Exp.~2b were higher for contents presented with higher probability facts than for contents presented with lower probability facts.
+Exp.~2b replicated the critical result of Exp.~1, that prior probability influences projection.\footnote{Exp.~2b also replicated \citepos{tonhauser-degen-factive} result that there is by-predicate variation in the projection of the content of the complement; see Supplement \ref{a-comparison}.}  \figref{f-projection-mean-2b} shows that mean certainty ratings in Exp.~2b were higher for contents presented with higher probability facts than for contents presented with lower probability facts.
 
 \begin{figure}[h!]
 \centering
@@ -533,7 +541,7 @@ There are three separate pieces to motivate: the use of \emph{mixed effects}, th
 
 \textbf{Using Bayesian models} rather than frequentist models is increasingly becoming the norm in psycholinguistic studies as computational power has increased and running Bayesian models has become more accessible with the introduction of R packages such as \verb|brms| \cite{buerkner2017}. The presence of an effect in frequentist models is evaluated by checking whether the {\em p-}value is smaller than $.05$, where the {\em p-}value is defined as the probability of obtaining data that is as skewed or more skewed than the observed data if the null-hypothesis was true, i.e., if the hypothesized effect was absent. Parameter estimates in frequentist models are obtained via maximum-likelihood techniques, i.e., by estimating the parameter values that maximize the probability of observing the data. Bayesian models, by contrast, return a full posterior distribution over parameter values that take into account not just the probability of the data under the parameter values, but also the prior probability of parameter values. In order to evaluate the evidence for an effect of a predictor of interest, one can report 95\% credible intervals and the posterior probability $P(\beta < 0)$ or $P(\beta > 0)$ that the predictor coefficient $\beta$ is either lower or greater than zero, depending on the direction of the expected effect. A 95\% credible interval (CI) demarcates the range of values that comprise 95\% of probability mass of the posterior beliefs such that no value inside the CI has a lower probability than any point outside it \cite{Jaynes1976, Morey2016}. There is substantial evidence for an effect if zero is (by a reasonably clear margin) not included in the 95\% CI and $P(\beta > 0)$ or $P(\beta < 0)$ is close to zero or one. Posterior probabilities indicate the probability that the parameter has a certain value, given the data and model -- these probabilities are thus \emph{not} frequentist {\em p-}values. In order to present statistics as close to widely used frequentist practices, and following \citeNP{Nicenboim2016}, we defined an inferential criterion that seems familiar (95\%), but the strength of evidence should not be taken as having clear cut-off points (such as in a null-hypothesis significance testing framework).
 
-\textbf{Using Beta regression} rather than linear regression was motivated by the violation of two of the  assumptions of linear regression: first, that residuals be normally distributed (where ``residuals'' refers to the residual error for each data point after fitting the model), and second, that the error term exhibit homoscedasticity (that it be roughly the same across different conditions). Slider ratings data has the property of being bounded by its endpoints (which we code as 0 and 1, respectively). This often leads to ``bunching'' behavior at the endpoints (see Figure \ref{fig:bunch} for the distribution of raw ratings in Exps.~1a, 2a, and 3a). 
+\textbf{Using Beta regression} rather than linear regression was motivated by the violation of two of the  assumptions of linear regression: first, that residuals be normally distributed (where ``residuals'' refers to the residual error for each data point after fitting the model), and second, that the error term exhibit homoscedasticity (that it be roughly the same across different conditions). Slider ratings data has the property of being bounded by its endpoints (which we code as 0 and 1, respectively). This often leads to ``bunching'' behavior at the endpoints (see  \figref{fig:bunch} for the distribution of raw ratings in Exps.~1a, 2a, and 3a). 
 
 
 \begin{figure}[h!]
@@ -573,7 +581,7 @@ The three tables in this section show the model outputs for Exps.~1, 2 and 3, re
 
 \section{Projection comparisons}\label{a-comparison}
 
-Figure \ref{f-projection-comparisons} compares the mean certainty ratings of the predicates and main clause controls in Exp.~1, Exp.~2b, and \citeNP{tonhauser-degen-factive} Exp.~1a (abbreviated `Exp.~1a TD'). The Spearman rank correlations were .986 (Exp.~2b vs.\ Exp.~1a TD), .971 (Exp.~1 vs.\ Exp.~2b) and .974 (Exp.~1a TD vs.\  Exp.~1).
+\figref{f-projection-comparisons} compares the mean certainty ratings of the predicates and main clause controls in Exp.~1, Exp.~2b, and \citeNP{tonhauser-degen-factive} Exp.~1a (abbreviated `Exp.~1a TD'). The Spearman rank correlations were .986 (Exp.~2b vs.\ Exp.~1a TD), .971 (Exp.~1 vs.\ Exp.~2b) and .974 (Exp.~1a TD vs.\  Exp.~1).
 
 \begin{figure}[h!]
 \begin{subfigure}{.33\textwidth}
@@ -597,7 +605,7 @@ Figure \ref{f-projection-comparisons} compares the mean certainty ratings of the
 
 \section{Prior probability results in Exp.~2a}\label{a-exp2}
 
-Figure \ref{f-prior-2a} plots the mean prior probabilities of the 20 contents by fact. Participants' ratings are given as light dots. The mean prior probability rating for each content was higher when the content was presented with the higher probability fact than when it was presented with the lower probability fact.
+\figref{f-prior-2a} plots the mean prior probabilities of the 20 contents by fact. Participants' ratings are given as light dots. The mean prior probability rating for each content was higher when the content was presented with the higher probability fact than when it was presented with the lower probability fact.
 
 \begin{figure}[h!]
 \centering
