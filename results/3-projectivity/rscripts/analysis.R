@@ -137,13 +137,43 @@ nrow(cd) #6916
 
 # load prior means
 pmeans = read.csv("../../1-prior/data/prior_means.csv")
-pmeans$fact = gsub(".","",as.character(pmeans$fact),fixed=T)
-pmeans
+pmeans$content = pmeans$event
+pmeans$fact_type = pmeans$itemType
 head(pmeans)
 
-# change predicate names
+# JD ADDED CODE START
+# change predicate names, get rid of MCs
 cd = cd %>%
-  mutate(verb=recode(verb, annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform"))
+  mutate(verb=recode(verb, annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform")) %>% 
+  filter(verb != "control") %>% 
+  mutate(fact_type = str_remove(fact_type, "fact")) %>% 
+  droplevels()
+
+# add prior means to dataset
+cd = cd %>% 
+  left_join(pmeans,by=c("content","fact_type"))
+
+# add items
+cd$item = as.factor(paste(cd$verb,cd$content))
+
+# set lower probability fact as reference level of fact_type
+cd$fact_type = as.factor(as.character(cd$fact_type))
+contrasts(cd$fact_type) = c(1,0)
+
+# analysis 1a: does high/low prob fact predict projection ratings?
+m.proj.cat = lmer(response ~ fact_type + (1+fact_type|item) + (1+fact_type|workerid), data=cd, REML=F)
+summary(m.proj.cat)
+
+# analysis 1b: does prior mean predict projection ratings?
+m.proj = lmer(response ~ Mean + (1+Mean|item) + (1+Mean|workerid), data=cd, REML=F)
+summary(m.proj)
+
+# the BIC of the categorical model is higher than that of the group-level means model
+BIC(m.proj.cat)
+BIC(m.proj) 
+
+# JD ADDED CODE END. DO WE NEED ALL THE STUFF THAT FOLLOWS? IT APPEARS TO BE CONFERENCE-SPECIFIC CODE, PERHAPS ALL JUST CLUTTER?
+
 
 # load prior means from (what is reported as) Exp 1
 pmeans_1 = read.csv("../../exp4/data/prior_means.csv")
