@@ -19,7 +19,8 @@ library(zoo)  # needed for function na_locf() which replaces each NA with the ne
 
 theme_set(theme_bw())
 
-d = read_csv("../data/data_preprocessed.csv")
+# load clean spread data
+d = read_csv("../data/cd.csv")
 nrow(d) #7436 / 26 = 286 turkers (data already in spread format)
 
 summary(d)
@@ -55,8 +56,10 @@ ggsave("../graphs/bunching-prior.pdf",width=3.4,height=2)
 cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7") # c("#999999",
 
 summary(t)
-table(t$prior_fact) #40 facts
-table(t$eventItem) #20 clauses
+table(t$prior_fact) 
+length(unique(t$prior_fact)) #40 facts
+table(t$eventItem) 
+length(unique(t$eventItem)) #20 clauses
 str(t$prior)
 
 # Fig 2: prior ratings by content (no main clause content) ----
@@ -119,34 +122,6 @@ proj.means = cd %>%
   mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, verb = fct_reorder(as.factor(short_trigger),Mean))  
 proj.means
 
-# define colors for the predicates
-# cols = data.frame(V=levels(proj.means$verb))
-# 
-# cols$VeridicalityGroup = as.factor(
-#   ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
-#          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-#                 ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
-#                        ifelse(cols$V %in% c("MC"),"MC","V")))))
-# 
-# levels(cols$V)
-# cols$V <- factor(cols$V, levels = cols[order(as.character(proj.means$verb)),]$V, ordered = TRUE)
-# 
-# cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
-#                       ifelse(cols$VeridicalityGroup == "NF", "gray60", 
-#                              ifelse(cols$VeridicalityGroup == "VNF","dodgerblue",
-#                                     ifelse(cols$VeridicalityGroup == "MC","black","tomato1"))))
-# 
-# cols$Colors
-# cols$V <- factor(cols$V, levels = cols[order(as.character(proj.means$verb)),]$V, ordered = TRUE)
-# levels(cols$V)
-# 
-# proj.means$VeridicalityGroup = as.factor(
-#   ifelse(proj.means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
-#          ifelse(proj.means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-#                 ifelse(proj.means$verb  %in% c("be_right","demonstrate"),"VNF",
-#                        ifelse(proj.means$verb  %in% c("MC"),"MC","V")))))
-
-
 # order predicates by high_prior
 high = proj.means %>%
   filter(prior_type != "low_prior") %>%
@@ -158,10 +133,16 @@ proj.means = proj.means %>%
   mutate(short_trigger = fct_relevel(short_trigger,levels(high$short_trigger)))
 levels(proj.means$short_trigger)
 
+# change factor levels for prior_type for plotting
+proj.means = proj.means %>%
+  mutate(prior_type = fct_relevel(prior_type, "main_clause", "low_prior", "high_prior"))
+levels(proj.means$prior_type)
+
 # to plot MC in different color and shape, copy MC data to new data frame and 
 # remove MC data, but not factor level, from proj.means
 mc.data = droplevels(subset(proj.means, proj.means$verb == "MC"))
 mc.data
+#View(mc.data)
 
 proj.means[proj.means$short_trigger == "MC",]$Mean <- NA
 proj.means[proj.means$short_trigger == "MC",]$YMin <- NA
@@ -173,21 +154,30 @@ subjmeans = cd %>%
   summarize(Mean = mean(projective))
 subjmeans$short_trigger <- factor(subjmeans$short_trigger, levels = unique(levels(proj.means$short_trigger)))
 levels(subjmeans$short_trigger)
+subjmeans
+subjmeans$prior_type <- as.factor(subjmeans$prior_type)
+
+# change factor levels for prior_type for plotting
+subjmeans = subjmeans %>%
+  mutate(prior_type = fct_relevel(prior_type, "main_clause", "low_prior", "high_prior"))
+levels(subjmeans$prior_type)
   
 levels(proj.means$prior_type)
-proj.means$prior_type <- as.factor(proj.means$prior_type)
+# [1] "main_clause"
+# [2] "low_prior"  
+# [3] "high_prior" 
 
 ggplot(proj.means, aes(x=short_trigger, y=Mean, color=prior_type,fill=prior_type,shape=prior_type)) + 
+  theme(legend.position = "top", legend.text=element_text(size=12)) +
   geom_point(data=subjmeans,aes(fill=prior_type,color=prior_type),shape=21,alpha=.08) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25) +
   geom_point(size = 3,color="black") +
-  scale_shape_manual(values=rev(c(21, 25, 24)),labels=rev(c("main clause","lower probability","higher probability")),name="Fact") +
-  scale_fill_manual(values=rev(c("black","#56B4E9","#E69F00")),labels=rev(c("main clause","lower probability","higher probability")),name="Fact") +
-  scale_color_manual(values=rev(c("black","#56B4E9","#E69F00")),labels=rev(c("main clause","lower probability","higher probability")),name="Fact") +  
+  scale_shape_manual(values=rev(c(24, 25, 21)),labels=rev(c("higher probability","lower probability","main clause")),name="Fact") +
+  scale_fill_manual(values=rev(c("#E69F00","#56B4E9","black")),labels=rev(c("higher probability","lower probability","main clause")),name="Fact") +
+  scale_color_manual(values=rev(c("#E69F00","#56B4E9","black")),labels=rev(c("higher probability","lower probability","main clause")),name="Fact") +  
   scale_alpha(range = c(.3,1)) +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
-  theme(legend.position = "top", legend.text=element_text(size=12)) +
   geom_errorbar(aes(x=1,ymin=mc.data$YMin,ymax=mc.data$YMax,width=.25),color="black",width=0) +  # set x to the position of MC
   geom_point(shape=20,size=4,aes(x=1,y=mc.data$Mean),color="black",show.legend = FALSE ) +  # set x to the position of MC
   ylab("Mean certainty rating") +
@@ -219,11 +209,16 @@ t = t %>%
   mutate(short_trigger = fct_relevel(short_trigger,levels(high$short_trigger)))
 table(t$short_trigger)
 
+# change factor levels for prior_type for plotting
+t = t %>%
+  mutate(prior_type = fct_relevel(prior_type, "low_prior", "high_prior"))
+levels(t$prior_type)
+
 ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
   #geom_abline(intercept=0,slope=1,linetype="dashed",color="gray50") +
   geom_smooth(method="lm",colour="grey50") +
   geom_point(shape=20, size=1, alpha=.3) +
-  scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  scale_color_manual(values=c("#56B4E9","#E69F00"),labels=c("lower probability","higher probability"),name="Fact") +
   xlab("Prior probability rating") +
   ylab("Certainty rating") +
   theme(legend.position = "top", legend.text=element_text(size=12)) +

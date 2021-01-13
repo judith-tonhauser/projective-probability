@@ -15,143 +15,36 @@ library(forcats)
 library(RColorBrewer)
 theme_set(theme_bw())
 
-## NO NEED TO RUN THIS FIRST BIT IF YOU JUST WANT TO LOAD CLEAN DATA. 
-## SEARCH FOR "load clean data for analysis"
-
-# load raw data
-d = read.csv("../experiment.csv")
-nrow(d) #7800 = 300 participants x 26 items
-names(d)
-length(unique(d$workerid)) #300 participants
-
-mean(d$Answer.time_in_minutes) #7.1
-median(d$Answer.time_in_minutes) #6
-
-d = d %>%
-  dplyr::select(workerid,rt,subjectGender,speakerGender,content,verb,fact,fact_type,contentNr,trigger_class,response,slide_number_in_experiment,age,language,assess,american,gender,comments,Answer.time_in_minutes)
-nrow(d) #7800
-
-# look at Turkers' comments
-unique(d$comments)
-
-# look at whether Turkers thought they understood the task
-table(d$assess)
-
-# age and gender info
-length(which(is.na(d$age))) #0 missing values
-table(d$age) #21-72
-median(d$age,na.rm=TRUE) #36
-table(d$gender)
-#145 female, 154 male
-
-### exclude non-American English speakers
-length(unique(d$workerid)) #300
-length(which(is.na(d$language))) #no missing responses
-table(d$language) 
-d <- subset(d, (d$language != "" & d$language != "Russian" & d$language != "Ukrainian" & d$language != "Arabic" & d$language != "chinese" & d$language != "hungarian" & d$language != "spanish"))
-d = droplevels(d)
-length(unique(d$workerid)) #292 (8 Turkers excluded)
-
-table(d$gender)
-length(which(is.na(d$american))) #78 (3 people didn't respond)
-table(d$american) 
-# coding error in HTML file: m=yes, f=no
-d <- subset(d, d$american == "m")
-d = droplevels(d)
-length(unique(d$workerid)) #277 (15 Turkers excluded, 23 excluded in total for language reasons)
-
-## exclude Turkers based on 6 controls
-names(d)
-table(d$contentNr)
-table(d$verb)
-
-# make control data subset
-c <- subset(d, d$verb == "control")
-c <- droplevels(c)
-nrow(c) #1662 / 6 controls = 277 Turkers
-
-# group mean on controls
-round(mean(c$response),2) #.21
-
-ggplot(c, aes(x=workerid,y=response)) +
-  geom_point(aes(colour = content),position=position_jitter(h=.01,w=0.02)) +
-  #geom_text(aes(label=workerid), vjust = 1, cex= 5)+
-  scale_y_continuous(breaks = pretty(c$response, n = 10)) +
-  ylab("Responses") +
-  xlab("Participant")
-ggsave(f="../graphs/raw-responses-to-controls.pdf",height=4,width=6.5)
-
-# group means on each control
-means = aggregate(response ~ contentNr, data=c, FUN="mean")
-means
-# contentNr  response
-# 1  control1 0.1877256
-# 2  control2 0.1822744
-# 3  control3 0.1749458
-# 4  control4 0.2440794
-# 5  control5 0.1886282
-# 6  control6 0.2560289
-
-# Turkers with response means on controls more than 2sd above group mean
-# this is the exclusion criterion we decided on for factivity paper
-c.means = aggregate(response~workerid, data=c, FUN="mean")
-c.means$YMin = c.means$response - aggregate(response~workerid, data=c, FUN="ci.low")$response
-c.means$YMax = c.means$response + aggregate(response~workerid, data=c, FUN="ci.high")$response
-c.means
-
-c.g <- c.means[c.means$response > (mean(c.means$response) + 2*sd(c.means$response)),]
-c.g 
-unique(length(c.g$workerid)) #11 Turkers gave high response
-mean(c.g$response) #.69
-
-outliers <- subset(c, c$workerid %in% c.g$workerid)
-outliers = droplevels(outliers)
-
-# look at the responses to the controls that these "outlier" Turkers did
-
-ggplot(outliers, aes(x=workerid,y=response)) +
-  geom_point(aes(colour = contentNr)) +
-  geom_text(aes(label=workerid), vjust = 1, cex= 5,position=position_jitter(h=.01,w=0.02)) +
-  #geom_text(aes(label=response), vjust = 2.5, cex= 5) +
-  scale_y_continuous(breaks = pretty(outliers$response, n = 10)) +
-  ylab("Responses") +
-  xlab("Participants")
-ggsave(f="../graphs/raw-responses-to-controls-by-outliers.pdf",height=6,width=10)
-
-# responses here are supposed to be low but these Turkers
-# gave high response to most control items
-
-# exclude the Turker identified above
-d <- subset(d, !(d$workerid %in% outliers$workerid))
-d <- droplevels(d)
-length(unique(d$workerid)) #266 Turkers remain (277 - 11)
-
-# clean data
-cd = d
-write.csv(cd, "../data/cd.csv")
-nrow(cd) #6916 / 26 items = 266 participants
-
-# load clean data for analysis ----
+# load clean data for analysis 
 cd = read.csv("../data/cd.csv")
 nrow(cd) #6916
 
-# load prior means
+# load prior means from Exp 2a
 pmeans = read.csv("../../1-prior/data/prior_means.csv")
 pmeans$content = pmeans$event
 pmeans$fact_type = pmeans$itemType
 head(pmeans)
 
-# JD ADDED CODE START
+table(cd$fact_type) #factH, factL
+str(cd$fact_type)
+table(pmeans$fact_type) #high, low
+
 # change predicate names, get rid of MCs
+table(cd$verb)
+
 cd = cd %>%
   mutate(verb=recode(verb, annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform")) %>% 
   filter(verb != "control") %>% 
-  mutate(fact_type = str_remove(fact_type, "fact")) %>% 
+  mutate(fact_type=recode(fact_type, factH = "high", factL = "low")) %>%
   droplevels()
+
+str(cd$fact_type)
+str(pmeans$fact_type)
 
 # add prior means to dataset
 cd = cd %>% 
   left_join(pmeans,by=c("content","fact_type"))
+summary(cd)
 
 # add items
 cd$item = as.factor(paste(cd$verb,cd$content))
@@ -173,7 +66,6 @@ BIC(m.proj.cat)
 BIC(m.proj) 
 
 # JD ADDED CODE END. DO WE NEED ALL THE STUFF THAT FOLLOWS? IT APPEARS TO BE CONFERENCE-SPECIFIC CODE, PERHAPS ALL JUST CLUTTER?
-
 
 # load prior means from (what is reported as) Exp 1
 pmeans_1 = read.csv("../../exp4/data/prior_means.csv")

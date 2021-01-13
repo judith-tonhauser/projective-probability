@@ -6,7 +6,7 @@
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(this.dir)
 
-source('../../helpers.R')
+source('helpers.R')
 
 # load required packages for pre-processing data
 library(tidyverse)
@@ -188,8 +188,69 @@ d %>%
   summarize(count=n())
 #116 female, 168 male, 1 other, 1 undeclared
 
-# clean data = cd
+# clean non-spread data
 cd = d
-write.csv(cd, file = "../data/cd.csv")
 head(cd)
 nrow(cd) #14872
+
+# spread the data
+
+# rename prior column into prior_type
+colnames(cd)[colnames(cd)=="prior"] = "prior_type"
+# fill in main_clause for the prior_type of main clauses
+cd[cd$short_trigger == "MC",]$prior_type <- "main_clause"
+
+summary(cd)
+table(cd$prior_type)
+#high_prior   low_prior main_clause 
+#5720        5720        3432
+
+table(cd$question_type)
+#prior projective 
+#7436       7436 
+
+# spread responses over separate columns for prior probability, projectivity and at-issueness
+cd = cd %>%
+  mutate(block_proj = ifelse(question_type=="projective"&block=="block1", "block1",
+                             ifelse(question_type=="projective"&block=="block2", "block2",
+                                    ifelse(question_type=="prior"&block=="block1", "block2", "block1")))) %>%
+  select(content,question_type,short_trigger,response,workerid,prior_type,prior_fact,block_proj) %>% 
+  spread(question_type,response)
+
+summary(cd)
+nrow(cd) #7436
+
+# create eventItem
+cd = cd %>%
+  mutate(eventItem = ifelse(prior_fact == "Charley lives in Mexico" | prior_fact == "Charley lives in Korea", "Charley speaks Spanish",
+                              ifelse(prior_fact == "Danny is a diabetic" | prior_fact == "Danny loves cake", "Danny ate the last cupcake",
+                                     ifelse(prior_fact == "Emily has been saving for a year" | prior_fact == "Emily never has any money", "Emily bought a car yesterday",
+                                            ifelse(prior_fact == "Emma is in first grade" | prior_fact == "Emma is in law school", "Emma studied on Saturday morning",
+                                                   ifelse(prior_fact == "Frank has always wanted a pet" | prior_fact == "Frank is allergic to cats", "Frank got a cat",
+                                                          ifelse(prior_fact == "Grace hates her sister" | prior_fact == "Grace loves her sister", "Grace visited her sister",
+                                                                 ifelse(prior_fact == "Isabella is a vegetarian" | prior_fact == "Isabella is from Argentina", "Isabella ate a steak on Sunday",
+                                                                        ifelse(prior_fact == "Jackson is obese" | prior_fact == "Jackson is training for a marathon", "Jackson ran 10 miles",
+                                                                               ifelse(prior_fact == "Jayden's car is in the shop" | prior_fact == "Jayden doesn't have a driver's license", "Jayden rented a car",
+                                                                                      ifelse(prior_fact == "Jon lives 10 miles away from work" | prior_fact == "Jon lives 2 blocks away from work", "Jon walks to work",
+                                                                                             ifelse(prior_fact == "Josh is a 5-year old boy" | prior_fact == "Josh is a 75-year old man", "Josh learned to ride a bike yesterday",
+                                                                                                    ifelse(prior_fact == "Josie doesn't have a passport" | prior_fact == "Josie loves France", "Josie went on vacation to France",
+                                                                                                           ifelse(prior_fact == "Julian is Cuban" | prior_fact == "Julian is German", "Julian dances salsa",
+                                                                                                                  ifelse(prior_fact == "Mary is a middle school student" | prior_fact == "Mary is taking a prenatal yoga class", "Mary is pregnant",
+                                                                                                                         ifelse(prior_fact == "Mia is a college student" | prior_fact == "Mia is a nun", "Mia drank 2 cocktails last night",
+                                                                                                                                ifelse(prior_fact == "Olivia has two small children" | prior_fact == "Olivia works the third shift", "Olivia sleeps until noon",
+                                                                                                                                       ifelse(prior_fact == "Owen lives in Chicago" | prior_fact == "Owen lives in New Orleans", "Owen shoveled snow last winter",
+                                                                                                                                              ifelse(prior_fact == "Sophia is a high end fashion model" | prior_fact == "Sophia is a hipster", "Sophia got a tattoo",
+                                                                                                                                                     ifelse(prior_fact == "Tony has been sober for 20 years" | prior_fact == "Tony really likes to party with his friends", "Tony had a drink last night",
+                                                                                                                                                            ifelse(prior_fact == "Zoe is 5 years old" | prior_fact == "Zoe is a math major", "Zoe calculated the tip",
+                                                                                                                                                                   ifelse(prior_fact == "Muffins are sold at the bakery", "MC",
+                                                                                                                                                                          ifelse(prior_fact == "Pizza is sold at the pizzeria", "MC",
+                                                                                                                                                                                 ifelse(prior_fact == "Many children like ice cream", "MC",
+                                                                                                                                                                                        ifelse(prior_fact == "Ballet is a type of dance", "MC",
+                                                                                                                                                                                               ifelse(prior_fact == "Garages are used to store cars and other things", "MC",
+                                                                                                                                                                                                      ifelse(prior_fact == "Hats are worn on the head", "MC",
+                                                                                                                                                                                                             NA)))))))))))))))))))))))))))
+table(cd$eventItem)
+
+# write clean spread data to file
+write.csv(cd, file = "../data/cd.csv")
+

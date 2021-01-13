@@ -221,5 +221,4 @@ cd = d
 write.csv(cd, file = "../data/cd.csv")
 head(cd)
 nrow(cd) #1650 / 22 items = 75 participants
-table(cd$fact,cd$itemNr)
 

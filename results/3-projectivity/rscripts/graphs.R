@@ -69,16 +69,28 @@ subjmeans = cd %>%
 subjmeans$verb <- factor(subjmeans$verb, levels = unique(levels(proj.means$verb)))
 levels(subjmeans$verb)
 
+subjmeans$fact_type <- as.factor(subjmeans$fact_type)
+levels(subjmeans$fact_type)
+
 levels(proj.means$fact_type)
 proj.means$fact_type <- as.factor(proj.means$fact_type)
+
+# change factor levels for fact_type for plotting
+proj.means = proj.means %>%
+  mutate(fact_type = fct_relevel(fact_type, "main clause", "factL", "factH"))
+levels(proj.means$fact_type)
+
+subjmeans = subjmeans %>%
+  mutate(fact_type = fct_relevel(fact_type, "main clause", "factL", "factH"))
+levels(subjmeans$fact_type)
 
 ggplot(proj.means, aes(x=verb, y=Mean, color=fact_type,fill=fact_type,shape=fact_type)) + 
   geom_point(data=subjmeans,aes(fill=fact_type,color=fact_type),shape=21,alpha=.08) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25) +
   geom_point(size = 3,color="black") +
-  scale_shape_manual(values=rev(c(21, 25, 24)),labels=rev(c("main clause","lower probability","higher probability")),name="Fact") +
-  scale_fill_manual(values=rev(c("black","#56B4E9","#E69F00")),labels=rev(c("main clause","lower probability","higher probability")),name="Fact") +
-  scale_color_manual(values=rev(c("black","#56B4E9","#E69F00")),labels=rev(c("main clause","lower probability","higher probability")),name="Fact") +  
+  scale_shape_manual(values=c(21, 25, 24),labels=c("main clause","lower probability","higher probability"),name="Fact") +
+  scale_fill_manual(values=c("black","#56B4E9","#E69F00"),labels=c("main clause","lower probability","higher probability"),name="Fact") +
+  scale_color_manual(values=c("black","#56B4E9","#E69F00"),labels=c("main clause","lower probability","higher probability"),name="Fact") +  
   scale_alpha(range = c(.3,1)) +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +

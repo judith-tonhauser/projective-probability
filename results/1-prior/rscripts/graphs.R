@@ -226,13 +226,18 @@ means
 nrow(means)
 names(means)
 
+# change factor levels for prior_type for plotting
+means = means %>%
+  mutate(prior_type = fct_relevel(prior_type, "low", "high"))
+levels(means$prior_type)
+
 ggplot(means, aes(x=Mean1, y=Mean2, color=prior_type,shape=prior_type,fill=prior_type)) +
   geom_errorbar(aes(ymin=YMin2,ymax=YMax2)) +
   geom_errorbarh(aes(xmin=YMin1,xmax=YMax1)) +
   geom_point(stroke=.5,size=2.5,color="black") +
-  scale_shape_manual(values=rev(c(25, 24)),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  scale_shape_manual(values=c(25, 24),labels=c("lower probability","higher probability"),name="Fact") +
+  scale_fill_manual(values=c("#56B4E9","#E69F00"),labels=c("lower probability","higher probability"),name="Fact") +
+  scale_color_manual(values=c("#56B4E9","#E69F00"),labels=c("lower probability","higher probability"),name="Fact") +
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
   ylab("Exp. 2a mean prior probability") +
   xlab("Exp. 1 mean prior probability") +
@@ -243,7 +248,7 @@ ggplot(means, aes(x=Mean1, y=Mean2, color=prior_type,shape=prior_type,fill=prior
 ggsave("../graphs/prior-probability-comparison-exp1-exp2.pdf",height=4,width=4)
 
 
-corr_means = means %>%
+qcorr_means = means %>%
   summarize(Cor=cor(Mean1,Mean2,method="spearman"))
 corr_means #.977
 

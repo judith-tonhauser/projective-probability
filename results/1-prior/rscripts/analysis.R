@@ -19,12 +19,16 @@ d = read_csv("../data/cd.csv")
 nrow(d) #1650
 names(d)
 
+table(d$prompt)
+
+# prompt is item, change workerid to factor
 d$item = as.factor(d$prompt)
 d$workerid = as.factor(as.character(d$workerid))
 
+table(d$itemType)
+
 # exclude fillers
 d_nomc = droplevels(subset(d, itemType != "F")) %>% 
-  droplevels() %>% 
   mutate(prior_type = as.factor(as.character(d_nomc$itemType)))
 nrow(d_nomc) #1500/20 trials = 75 participants
 

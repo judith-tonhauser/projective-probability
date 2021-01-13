@@ -15,8 +15,8 @@ library(lmerTest)
 source('helpers.R')
 
 # load data
-d = read.csv("../data/data_preprocessed.csv")
-nrow(d) #14872
+d = read.csv("../data/cd.csv")
+nrow(d) #7436
 names(d)
 
 d$item = as.factor(paste(d$short_trigger,d$content))
