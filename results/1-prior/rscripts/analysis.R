@@ -16,7 +16,7 @@ source('helpers.R')
 
 # load data
 d = read_csv("../data/cd.csv")
-nrow(d) #1650
+nrow(d) #1650 = 22 items x 75 participants
 names(d)
 
 table(d$prompt)

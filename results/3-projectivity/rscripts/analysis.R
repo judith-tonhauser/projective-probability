@@ -18,6 +18,7 @@ theme_set(theme_bw())
 # load clean data for analysis 
 cd = read.csv("../data/cd.csv")
 nrow(cd) #6916
+names(cd)
 
 # load prior means from Exp 2a
 pmeans = read.csv("../../1-prior/data/prior_means.csv")
@@ -31,12 +32,15 @@ table(pmeans$fact_type) #high, low
 
 # change predicate names, get rid of MCs
 table(cd$verb)
+str(cd$verb)
 
 cd = cd %>%
-  mutate(verb=recode(verb, annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform")) %>% 
+  mutate(verb=dplyr::recode(verb, annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform")) %>% 
   filter(verb != "control") %>% 
-  mutate(fact_type=recode(fact_type, factH = "high", factL = "low")) %>%
+  mutate(fact_type=dplyr::recode(fact_type, factH = "high", factL = "low")) %>%
   droplevels()
+
+nrow(cd) #5320 target items
 
 str(cd$fact_type)
 str(pmeans$fact_type)
@@ -64,6 +68,34 @@ summary(m.proj)
 # the BIC of the categorical model is higher than that of the group-level means model
 BIC(m.proj.cat)
 BIC(m.proj) 
+
+# redo analyses with 28 participants excluded who also took Exp 2a ----
+exclude = read.csv("../data/excluded.assid.csv")
+nrow(exclude) #28
+#View(exclude)
+
+cd = cd %>%
+  filter(!assignmentid %in% exclude$assignmentid)
+length(unique(cd$workerid)) #241 (25 Turkers excluded)
+
+# set lower probability fact as reference level of fact_type
+cd$fact_type = as.factor(as.character(cd$fact_type))
+contrasts(cd$fact_type) = c(1,0)
+
+# analysis 1a: does high/low prob fact predict projection ratings?
+m.proj.cat = lmer(response ~ fact_type + (1+fact_type|item) + (1+fact_type|workerid), data=cd, REML=F)
+summary(m.proj.cat)
+# fact_type1    0.1729     0.0142 258.3665   12.17   <2e-16 ***
+
+# analysis 1b: does prior mean predict projection ratings?
+m.proj = lmer(response ~ Mean + (1+Mean|item) + (1+Mean|workerid), data=cd, REML=F)
+summary(m.proj)
+# Mean          0.33658    0.02536 265.60585   13.27   <2e-16 ***
+
+# the BIC of the categorical model is higher than that of the group-level means model
+BIC(m.proj.cat)
+BIC(m.proj) 
+
 
 # JD ADDED CODE END. DO WE NEED ALL THE STUFF THAT FOLLOWS? IT APPEARS TO BE CONFERENCE-SPECIFIC CODE, PERHAPS ALL JUST CLUTTER?
 

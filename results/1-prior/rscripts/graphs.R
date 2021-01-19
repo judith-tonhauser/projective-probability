@@ -96,12 +96,15 @@ high = means %>%
   mutate(event = fct_reorder(event,Mean))
 
 means = means %>%
-  mutate(event = fct_relevel(event,levels(high$event)))
+  mutate(event = fct_relevel(event,levels(high$event))) %>% 
+  mutate(itemType = fct_relevel(itemType,"L"))
 means
 
 subjmeans = target %>%
   group_by(event,workerid,itemType) %>%
-  summarize(Mean = mean(response))
+  summarize(Mean = mean(response)) %>%
+  ungroup() %>% 
+  mutate(itemType = fct_relevel(as.factor(as.character(itemType)),"L"))
 subjmeans$event <- factor(subjmeans$event, levels = unique(levels(means$event)))
 levels(subjmeans$event)
 names(subjmeans)
@@ -110,16 +113,17 @@ ggplot(means, aes(x=event, y=Mean, color=itemType, shape=itemType, fill=itemType
   geom_point(data=subjmeans,aes(fill=itemType,color=itemType),shape=21,alpha=.05) +
   geom_point(stroke=.5,size=3,color="black") +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25) +
-  scale_shape_manual(values=rev(c(25, 24)),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
+  scale_shape_manual(values=c(25, 24),labels=c("lower probability","higher probability"),name="Fact") +
+  scale_fill_manual(values=c("#56B4E9","#E69F00"),labels=c("lower probability","higher probability"),name="Fact") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
-  scale_color_manual(name="Fact", breaks=c("higher probability","lower probability"),labels=c("higher probability", "lower probability"), 
-                     values=cbPalette) +
+  scale_color_manual(name="Fact", breaks=c("lower probability","higher probability"),labels=c("lower probability","higher probability"), 
+                     values=c("#56B4E9","#E69F00")) +
   theme(legend.position = "top", legend.text=element_text(size=12)) +
-  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 75, hjust = 1)) +
+  #theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 75, hjust = 1)) +
+  coord_flip() +
   ylab("Mean prior probability rating") +
   xlab("Content") 
-ggsave(f="../graphs/prior-ratings.pdf",height=7,width=8)
+ggsave(f="../graphs/prior-ratings.pdf",height=5,width=8)
 
 # mean prior probability ratings, content identified by clause ----
 # color-blind-friendly palette

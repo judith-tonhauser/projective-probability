@@ -25,7 +25,7 @@ mean(d$Answer.time_in_minutes) #7.1
 median(d$Answer.time_in_minutes) #6
 
 d = d %>%
-  dplyr::select(workerid,rt,subjectGender,speakerGender,content,verb,fact,fact_type,contentNr,trigger_class,response,slide_number_in_experiment,age,language,assess,american,gender,comments,Answer.time_in_minutes)
+  dplyr::select(workerid,rt,subjectGender,speakerGender,content,verb,fact,fact_type,contentNr,trigger_class,response,slide_number_in_experiment,age,language,assess,american,gender,comments,Answer.time_in_minutes,assignmentid)
 nrow(d) #7800
 
 # look at Turkers' comments
