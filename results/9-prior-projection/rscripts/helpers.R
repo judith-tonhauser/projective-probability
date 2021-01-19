@@ -37,7 +37,37 @@ ci.low <- function(x,na.rm=T) {
 ci.high <- function(x,na.rm=T) {
   quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm) - mean(x,na.rm=na.rm)}
 
-## for creating the summary table in Appendix D
+
+## for creating logistic model summary tables -- FIX, JUST COPIED FROM LINEAR< DOESNT WORK YET
+createLatexTableLinear = function(m, predictornames=c())
+{
+  coefs = m
+  
+  coefs[,1] = round(coefs[,1],digits=2)
+  coefs[,2] = round(coefs[,2],digits=2)
+  coefs[,4] = round(coefs[,4],digits=1)
+  coefs$P = ifelse(coefs[,5] > .05, paste(">",round(coefs[,5],digits=2),sep=""), ifelse(coefs[,5] < .0001, "\\textbf{<.0001}", ifelse(coefs[,5] < .001,"\\textbf{<.001}", ifelse(coefs[,5] < .01, "\\textbf{<.01}", "\\textbf{<.05}"))))
+  head(coefs)
+  coefs[,3] = NULL
+  coefs[,4] = NULL  
+  colnames(coefs) = c("Coef $\\beta$","SE($\\beta$)", "\\textbf{t}","$p$")
+  coefs
+  
+  if (length(predictornames > 0))
+  {
+    prednames = data.frame(PName=row.names(coefs),NewNames=predictornames)
+  } else {
+    prednames = data.frame(PName=row.names(coefs),NewNames=row.names(coefs))    
+  }
+  
+  row.names(coefs) = prednames$NewNames[prednames$PName == row.names(coefs)]
+  
+  latex(coefs,file="",title="",table.env=TRUE,booktabs=TRUE)
+}
+
+
+
+## for creating linear model summary tables
 createLatexTableLinear = function(m, predictornames=c())
 {
   coefs = m

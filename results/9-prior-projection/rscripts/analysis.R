@@ -70,13 +70,27 @@ m.proj.pred = lmer(projective ~ cprior_type*short_trigger + (1|content) + (1+cpr
 summary(m.proj.pred)
 # answer: yes! lots of main effects of predicate, but no significant interactions with prior type (except for marginal interaction for know, p < .1, but not to be taken seriously)
 
-# analysis 3: does individual prior rating predict projection, and does it do so better than categorical high/low prior predictor?
+# analysis 3: does group level prior rating predict projection?
+priormeans = d_nomc %>% 
+  group_by(content, prior_type) %>% 
+  summarise(prior_mean = mean(prior))
+nrow(priormeans) # 40 means, sanity check
+
+d_nomc = d_nomc %>% 
+  left_join(priormeans, by=c("content","prior_type"))
+
+m.proj.group = lmer(projective ~ prior_mean + (1|item) + (1+prior_mean|workerid), data=d_nomc, REML=F)
+summary(m.proj.group)
+
+# analysis 4: does individual prior rating predict projection, and does it do so better than categorical high/low prior predictor and group prior mean?
 m.proj.ind = lmer(projective ~ prior + (1|item) + (1+prior|workerid), data=d_nomc, REML=F)
 
 summary(m.proj.ind)
+summary(m.proj.group)
 summary(m.proj)
 
 BIC(m.proj.ind)
+BIC(m.proj.group)
 BIC(m.proj)
 
 m.proj.ind.plus = lmer(projective ~ prior + prior_type + (1|item) + (1+prior|workerid), data=d_nomc, REML=F)
@@ -84,5 +98,5 @@ summary(m.proj.ind.plus)
 
 anova(m.proj.ind,m.proj.ind.plus)
 anova(m.proj,m.proj.ind.plus)
-# both the BIC comparison and the likelihood ratio comparison indicate that the individual-level prior model is better than the population-level one
+# both the BIC comparison and the likelihood ratio comparison indicate that the individual-level prior model is better than the population-level or categorical one
 
