@@ -28,7 +28,7 @@ head(pmeans)
 
 table(cd$fact_type) #factH, factL
 str(cd$fact_type)
-table(pmeans$fact_type) #high, low
+table(pmeans$fact_type) #H, L
 
 # change predicate names, get rid of MCs
 table(cd$verb)
@@ -37,7 +37,7 @@ str(cd$verb)
 cd = cd %>%
   mutate(verb=dplyr::recode(verb, annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform")) %>% 
   filter(verb != "control") %>% 
-  mutate(fact_type=dplyr::recode(fact_type, factH = "high", factL = "low")) %>%
+  mutate(fact_type=dplyr::recode(fact_type, factH = "H", factL = "L")) %>%
   droplevels()
 
 nrow(cd) #5320 target items
@@ -69,10 +69,12 @@ summary(m.proj)
 BIC(m.proj.cat)
 BIC(m.proj) 
 
-# redo analyses with 28 participants excluded who also took Exp 2a ----
+# redo analyses with 28 Turkers excluded who also took Exp 2a ----
 exclude = read.csv("../data/excluded.assid.csv")
 nrow(exclude) #28
 #View(exclude)
+
+str(cd$item)
 
 cd = cd %>%
   filter(!assignmentid %in% exclude$assignmentid)
@@ -90,7 +92,7 @@ summary(m.proj.cat)
 # analysis 1b: does prior mean predict projection ratings?
 m.proj = lmer(response ~ Mean + (1+Mean|item) + (1+Mean|workerid), data=cd, REML=F)
 summary(m.proj)
-# Mean          0.33658    0.02536 265.60585   13.27   <2e-16 ***
+# Mean          0.32512    0.02594 244.65971   12.53   <2e-16 ***
 
 # the BIC of the categorical model is higher than that of the group-level means model
 BIC(m.proj.cat)
