@@ -95,7 +95,6 @@ plot <- ggplot(p_means_35, aes(x=Mean_3, y=Mean_5)) +
   geom_errorbar(aes(ymin=YMinM_5,ymax=YMaxM_5),width=0,color="blue") +
   geom_point(stroke=.5,size=2.5,color="blue") +
   geom_text_repel(data=p_means_35,aes(x=Mean_3,y=Mean_5,label=verb),size = 3,segment.size=1,segment.color="black",segment.alpha=.2,nudge_x=.4,nudge_y=-.1,force=1) +
-  # scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   # scale_alpha(range = c(.3,1)) +
   #scale_fill_manual(values=c("darkorchid","black","gray60","tomato1","dodgerblue")) +
   #scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)), labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
@@ -105,8 +104,10 @@ plot <- ggplot(p_means_35, aes(x=Mean_3, y=Mean_5)) +
   xlab("Mean certainty rating (Exp 1a TD)") +
   theme(legend.position = "bottom") +
   coord_fixed(ratio = 1) +
-  xlim(c(0,1)) +
-  ylim(c(0,1))
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0), labels= c("0",".2",".4",".6",".8","1")) +
+  scale_x_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0), labels= c("0",".2",".4",".6",".8","1"))
+  #xlim(c(0,1)) +
+  #ylim(c(0,1))
 plot
 ggsave("../graphs/projection-comparison-35.pdf",height=3,width=3)
 
@@ -121,7 +122,6 @@ plot <- ggplot(p_means_39, aes(x=Mean_9, y=Mean_3)) +
   geom_errorbar(aes(ymin=YMinM_3,ymax=YMaxM_3),width=0,color="blue") +
   geom_point(stroke=.5,size=2.5,color="blue") +
   geom_text_repel(data=p_means_39,aes(x=Mean_9,y=Mean_3,label=verb),size = 3,segment.size=1,segment.color="black",segment.alpha=.2,nudge_x=.4,nudge_y=-.1,force=1) +
-  # scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   # scale_alpha(range = c(.3,1)) +
   #scale_fill_manual(values=c("darkorchid","black","gray60","tomato1","dodgerblue")) +
   #scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)), labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
@@ -131,8 +131,10 @@ plot <- ggplot(p_means_39, aes(x=Mean_9, y=Mean_3)) +
   xlab("Mean certainty rating (Exp 2b)") +
   theme(legend.position = "bottom") +
   coord_fixed(ratio = 1) +
-  xlim(c(0,1)) +
-  ylim(c(0,1))
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0), labels= c("0",".2",".4",".6",".8","1")) +
+  scale_x_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0), labels= c("0",".2",".4",".6",".8","1"))
+  #xlim(c(0,1)) +
+  #ylim(c(0,1))
 plot
 ggsave("../graphs/projection-comparison-39.pdf",height=3,width=3)
 
@@ -157,8 +159,10 @@ plot <- ggplot(p_means_59, aes(x=Mean_9, y=Mean_5)) +
   xlab("Mean certainty rating (Exp 1)") +
   theme(legend.position = "bottom") +
   coord_fixed(ratio = 1) +
-  xlim(c(0,1)) +
-  ylim(c(0,1))
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0), labels= c("0",".2",".4",".6",".8","1")) +
+  scale_x_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0), labels= c("0",".2",".4",".6",".8","1")) 
+  #xlim(c(0,1)) +
+  #ylim(c(0,1))
 plot
 ggsave("../graphs/projection-comparison-59.pdf",height=3,width=3)
 

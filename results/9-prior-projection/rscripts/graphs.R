@@ -100,7 +100,7 @@ ggplot(means, aes(x=eventItem, y=Mean, color=prior_type,shape=prior_type,fill=pr
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25) +
   scale_shape_manual(values=c(25, 24),labels=c("lower probability","higher probability"),name="Fact") +
   scale_fill_manual(values=c("#56B4E9","#E69F00"),labels=c("lower probability","higher probability"),name="Fact") +
-  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,.2,.4,.6,.8,1), labels=c("0", ".2", ".4", ".6", ".8", "1")) +
   scale_color_manual(name="Fact",labels=c("lower probability", "higher probability"), values=c("#56B4E9","#E69F00")) +
   coord_flip() +
   theme(legend.position = "top", legend.text=element_text(size=12)) +
@@ -111,11 +111,11 @@ ggsave(f="../graphs/prior-ratings.pdf",height=5,width=8)
 
 
 # Fig 3: plot projection by prior type collapsing over predicate (with main clause content) ----
-nrow(cd)
-table(cd$prior_type)
+nrow(d)
+table(d$prior_type)
 
 # mean projectivity by predicate and prior type, with main clause controls
-proj.means = cd %>%
+proj.means = d %>%
   group_by(short_trigger,prior_type) %>%
   summarize(Mean = mean(projective), CILow = ci.low(projective), CIHigh = ci.high(projective)) %>%
   ungroup() %>%
@@ -149,7 +149,7 @@ proj.means[proj.means$short_trigger == "MC",]$YMin <- NA
 proj.means[proj.means$short_trigger == "MC",]$YMax <- NA
 
 # to add participants' ratings
-subjmeans = cd %>%
+subjmeans = d %>%
   group_by(workerid,short_trigger,prior_type) %>%
   summarize(Mean = mean(projective))
 subjmeans$short_trigger <- factor(subjmeans$short_trigger, levels = unique(levels(proj.means$short_trigger)))
@@ -176,7 +176,7 @@ ggplot(proj.means, aes(x=short_trigger, y=Mean, color=prior_type,fill=prior_type
   scale_fill_manual(values=rev(c("#E69F00","#56B4E9","black")),labels=rev(c("higher probability","lower probability","main clause")),name="Fact") +
   scale_color_manual(values=rev(c("#E69F00","#56B4E9","black")),labels=rev(c("higher probability","lower probability","main clause")),name="Fact") +  
   scale_alpha(range = c(.3,1)) +
-  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,.2,.4,.6,.8,1), labels=c("0", ".2", ".4", ".6", ".8", "1")) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
   geom_errorbar(aes(x=1,ymin=mc.data$YMin,ymax=mc.data$YMax,width=.25),color="black",width=0) +  # set x to the position of MC
   geom_point(shape=20,size=4,aes(x=1,y=mc.data$Mean),color="black",show.legend = FALSE ) +  # set x to the position of MC
@@ -185,7 +185,7 @@ ggplot(proj.means, aes(x=short_trigger, y=Mean, color=prior_type,fill=prior_type
 ggsave("../graphs/means-projectivity-by-predicate-and-prior.pdf",height=5,width=7)
 
 #### Fig 4: plot projectivity by prior probability on a by-participant level (no MC content) ----
-nrow(cd) #7436 (all data, i.e., with main clause content)
+nrow(d) #7436 (all data, i.e., with main clause content)
 nrow(t)  #5720 (target, i.e., without main clause content)
 
 names(t)
@@ -225,8 +225,8 @@ ggplot(t, aes(x=prior, y=projective,color=prior_type)) +
   guides(colour = guide_legend(override.aes = list(alpha = 1,size=3))) +
   #xlim(0,1) +
   #ylim(0,1) +
-  scale_x_continuous(breaks=c(0,.5,1),labels=c(0,.5,1)) +
-  scale_y_continuous(breaks=c(0,.5,1),labels=c(0,.5,1)) +
+  scale_x_continuous(breaks=c(0,.5,1),labels=c("0",".5","1")) +
+  scale_y_continuous(breaks=c(0,.5,1),labels=c("0",".5","1")) +
   theme(panel.spacing.x = unit(4, "mm")) +
   coord_fixed(ratio = 1) +
   facet_wrap(~short_trigger)

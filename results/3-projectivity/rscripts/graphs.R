@@ -22,7 +22,7 @@ summary(cd)
 
 # change predicate names
 cd = cd %>%
-  mutate(verb=recode(verb, annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform"))
+  mutate(verb=dplyr::recode(verb, annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform"))
 table(cd$verb)
 table(cd$fact_type)
 table(cd$verb,cd$fact_type)
@@ -92,7 +92,7 @@ ggplot(proj.means, aes(x=verb, y=Mean, color=fact_type,fill=fact_type,shape=fact
   scale_fill_manual(values=c("black","#56B4E9","#E69F00"),labels=c("main clause","lower probability","higher probability"),name="Fact") +
   scale_color_manual(values=c("black","#56B4E9","#E69F00"),labels=c("main clause","lower probability","higher probability"),name="Fact") +  
   scale_alpha(range = c(.3,1)) +
-  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0),labels= c("0",".2",".4",".6",".8","1")) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
   theme(legend.position = "top", legend.text=element_text(size=12)) +
   geom_errorbar(aes(x=1,ymin=mc.data$YMin,ymax=mc.data$YMax,width=.25),color="black",width=0) +  # set x to the position of MC

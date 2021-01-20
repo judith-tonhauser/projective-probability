@@ -115,7 +115,7 @@ ggplot(means, aes(x=event, y=Mean, color=itemType, shape=itemType, fill=itemType
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25) +
   scale_shape_manual(values=c(25, 24),labels=c("lower probability","higher probability"),name="Fact") +
   scale_fill_manual(values=c("#56B4E9","#E69F00"),labels=c("lower probability","higher probability"),name="Fact") +
-  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0), labels= c("0",".2",".4",".6",".8","1")) +
   scale_color_manual(name="Fact", breaks=c("lower probability","higher probability"),labels=c("lower probability","higher probability"), 
                      values=c("#56B4E9","#E69F00")) +
   theme(legend.position = "top", legend.text=element_text(size=12)) +
@@ -124,77 +124,6 @@ ggplot(means, aes(x=event, y=Mean, color=itemType, shape=itemType, fill=itemType
   ylab("Mean prior probability rating") +
   xlab("Content") 
 ggsave(f="../graphs/prior-ratings.pdf",height=5,width=8)
-
-# mean prior probability ratings, content identified by clause ----
-# color-blind-friendly palette
-cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7") # c("#999999", 
-
-means = target %>%
-  group_by(event,itemType) %>%
-  summarise(Mean = mean(response),CILow=ci.low(response),CIHigh=ci.high(response)) %>%
-  ungroup() %>%
-  mutate(YMin=Mean-CILow,YMax=Mean+CIHigh) %>%
-  select(-CILow,-CIHigh) %>%
-  mutate(itemType = fct_recode(itemType,high="H",low="L"))
-means
-
-# save for comparison with Exp2 findings
-write.csv(means,file="../data/prior_means.csv",row.names=F,quote=F)
-
-
-# means_wide = means %>%
-#   #select(-YMax,-YMin) %>%
-#   #pivot_wider(names_from = itemType, values_from = c(Mean))
-#   pivot_wider(names_from = itemType, values_from = c(Mean,YMax,YMin)) %>%
-#   select(event,Mean_high,Mean_low)
-# means_wide
-# means_wide$diff = means_wide$Mean_high - means_wide$Mean_low
-# 
-# means$event <- as.factor(means$event)
-# str(means$event)
-# levels(means$event)
-# 
-# means = merge(means,means_wide, by = "event")
-# means
-# 
-# tmp = means %>%
-#   filter(itemType == "high") %>%
-#   mutate(event = fct_reorder(event,diff))
-# 
-# means = means %>%
-#   mutate(event = fct_relevel(event,levels(tmp$event)))
-# means
-
-low = means %>%
-  filter(itemType == "low") %>%
-  mutate(event = fct_reorder(event,Mean))
-
-means = means %>%
-  mutate(event = fct_relevel(event,levels(low$event)))
-means
-
-subjmeans = target %>%
-  group_by(event,workerid,itemType) %>%
-  summarize(Mean = mean(response)) %>%
-  mutate(itemType = fct_recode(itemType,high="H",low="L"))
-subjmeans$event <- factor(subjmeans$event, levels = unique(levels(means$event)))
-levels(subjmeans$event)
-names(subjmeans)
-
-ggplot(means, aes(x=event, y=Mean, color=itemType,shape=itemType,fill=itemType)) + 
-  geom_point(data=subjmeans,aes(fill=itemType,color=itemType),shape=21,alpha=.08) +
-  geom_point(stroke=.5,size=3,color="black") +
-  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25) +
-  scale_shape_manual(values=rev(c(25, 24)),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=rev(c("lower probability","higher probability")),name="Fact") +
-  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
-  scale_color_manual(name="Fact", breaks=c("higher probability","lower probability"),labels=c("higher probability", "lower probability"), 
-                     values=cbPalette) +
-  theme(legend.position = "top",legend.text=element_text(size=12)) +
-  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 75, hjust = 1)) +
-  ylab("Mean prior probability") +
-  xlab("Content") 
-ggsave(f="../graphs/prior-ratings.pdf",height=7,width=8)
 
 # comparison of prior probability means from Exp 1 and Exp 2a ----
 
@@ -219,7 +148,8 @@ str(means1$prior_type)
 str(means1$event)
 
 means2 = means2 %>%
-  rename(prior_type = "itemType", Mean2 = "Mean", YMin2 = "YMin", YMax2 = "YMax")
+  rename(prior_type = "itemType", Mean2 = "Mean", YMin2 = "YMin", YMax2 = "YMax") %>%
+  mutate(prior_type = fct_recode(prior_type,high="H",low="L"))
 summary(means2) #event, prior_type (high, low), Mean2, YMin2, YMax2
 str(means2$prior_type)
 str(means1$event)
@@ -245,10 +175,12 @@ ggplot(means, aes(x=Mean1, y=Mean2, color=prior_type,shape=prior_type,fill=prior
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
   ylab("Exp. 2a mean prior probability") +
   xlab("Exp. 1 mean prior probability") +
+  scale_x_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0), labels= c("0",".2",".4",".6",".8","1")) +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0), labels= c("0",".2",".4",".6",".8","1")) +
   theme(legend.position = "top",legend.text=element_text(size=12)) +
-  coord_fixed(ratio = 1) +
-  xlim(c(0,1)) +
-  ylim(c(0,1))
+  coord_fixed(ratio = 1)
+  #xlim(c(0,1)) +
+  #ylim(c(0,1))
 ggsave("../graphs/prior-probability-comparison-exp1-exp2.pdf",height=4,width=4)
 
 
