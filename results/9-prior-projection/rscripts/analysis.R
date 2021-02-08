@@ -1,3 +1,4 @@
+# Prior paper Exp 1 (prior and projection, within-participant design)
 # experiment investigating prior and projection
 # contents of complements of 20 predicates
 # analysis.R
@@ -29,9 +30,11 @@ nrow(d_nomc) #5720 / 286 turkers = 20 target stimuli per Turker per block
 # set lower probability fact as reference level of prior_type
 contrasts(d_nomc$prior_type) = c(1,0)
 
-# analysis 1: does high/low prob fact predict actual prior ratings?
+# analysis 1: prior ----
+# does high/low prob fact predict actual prior ratings? 
 m.prior = lmer(prior ~ prior_type + (1+prior_type|item) + (1+prior_type|workerid), data=d_nomc, REML=F)
 summary(m.prior)
+# prior_type1   0.45166    0.01451 376.16696   31.12   <2e-16 ***
 
 # analysis 1a: does block order predict prior ratings beyond high/low prob fact?
 # center fixed effects predictors first to reduce collinearity
@@ -47,14 +50,18 @@ summary(m.prior.block)
 # cprior_type:cblock_proj  -0.03060    0.02666 285.66661  -1.147  0.25214    
 
 
-# analysis 2: does high/low prob fact predict projection ratings?
+# analysis 2: projection (categorical priors) ----
+# does high/low prob fact predict projection ratings?
 m.proj = lmer(projective ~ prior_type + (1|item) + (1+prior_type|workerid), data=d_nomc, REML=F)
 summary(m.proj)
+# prior_type1   0.13666    0.01116 286.55761   12.24   <2e-16 ***
 ranef(m.proj)
 
 # analysis 2a: does block order predict projection ratings beyond high/low prob fact?
+
+# do not rerun this code, if already run for analysis 1a
 # center fixed effects predictors first to reduce collinearity
-d_nomc = cbind(d_nomc,myCenter(d_nomc[,c("prior_type","block_proj")]))
+# d_nomc = cbind(d_nomc,myCenter(d_nomc[,c("prior_type","block_proj")]))
 
 m.proj.block = lmer(projective ~ cprior_type*cblock_proj + (1+cblock_proj|item) + (1+cprior_type|workerid), data=d_nomc, REML=F)
 summary(m.proj.block)
@@ -70,7 +77,10 @@ m.proj.pred = lmer(projective ~ cprior_type*short_trigger + (1|content) + (1+cpr
 summary(m.proj.pred)
 # answer: yes! lots of main effects of predicate, but no significant interactions with prior type (except for marginal interaction for know, p < .1, but not to be taken seriously)
 
-# analysis 3: does group level prior rating predict projection?
+# analysis 3: projection (group level priors) ----
+# does group level prior rating predict projection?
+summary(d_nomc)
+
 priormeans = d_nomc %>% 
   group_by(content, prior_type) %>% 
   summarise(prior_mean = mean(prior))
@@ -81,22 +91,27 @@ d_nomc = d_nomc %>%
 
 m.proj.group = lmer(projective ~ prior_mean + (1|item) + (1+prior_mean|workerid), data=d_nomc, REML=F)
 summary(m.proj.group)
+# prior_mean    0.30507    0.02424 298.33374   12.58   <2e-16 ***
 
-# analysis 4: does individual prior rating predict projection, and does it do so better than categorical high/low prior predictor and group prior mean?
+# analysis 4: projection (individual prior ratings) ----
+# does individual prior rating predict projection, 
+# and does it do so better than categorical high/low prior predictor and group prior mean?
 m.proj.ind = lmer(projective ~ prior + (1|item) + (1+prior|workerid), data=d_nomc, REML=F)
-
 summary(m.proj.ind)
+# prior         0.27546    0.01988 298.66260   13.85   <2e-16 ***
+  
 summary(m.proj.group)
 summary(m.proj)
 
-BIC(m.proj.ind)
-BIC(m.proj.group)
-BIC(m.proj)
+BIC(m.proj.ind) #2290.507
+BIC(m.proj.group) #2585.635
+BIC(m.proj) #2653.924
 
 m.proj.ind.plus = lmer(projective ~ prior + prior_type + (1|item) + (1+prior|workerid), data=d_nomc, REML=F)
 summary(m.proj.ind.plus)
 
 anova(m.proj.ind,m.proj.ind.plus)
 anova(m.proj,m.proj.ind.plus)
-# both the BIC comparison and the likelihood ratio comparison indicate that the individual-level prior model is better than the population-level or categorical one
+# both the BIC comparison and the likelihood ratio comparison indicate that 
+# the individual-level prior model is better than the population-level or categorical one
 

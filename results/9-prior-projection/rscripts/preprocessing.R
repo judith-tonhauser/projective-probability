@@ -1,5 +1,7 @@
+# Prior paper Exp 1 (prior and projection, within-participant design)
 # experiment investigating prior and projection
-# contents of complements of 20 predicates
+# for contents of complements of 20 predicates
+
 # preprocessing.R
 
 # set working directory to directory of script
@@ -62,10 +64,6 @@ d %>%
   summarize(count=n())
 #119 female, 179 male, 1 other, 1 undeclared
 
-# no recoding of responses
-#table(d$question_type,d$response)
-#d[d$question_type == "ai",]$response = 1 - d[d$question_type == "ai",]$response
-
 # make a trial number
 unique(d$slide_number_in_experiment) #slide numbers from 5 to 57
 d$trial = d$slide_number_in_experiment - 4
@@ -97,7 +95,6 @@ length(unique(d$workerid)) #297
 #data from 3 Turkers excluded for language reasons
 
 # exclude Turkers based on main clause controls in projection block
-# same exclusion criterion as in XPRAG 2019 projection experiment
 table(d$short_trigger,d$question_type)
 
 # main clause controls in projection block
@@ -149,8 +146,7 @@ d <- d %>%
   droplevels()
 length(unique(d$workerid)) # 286 remaining Turkers (11 Turkers excluded)
 
-# remove data from Turkers with low variance (as in factives paper)
-
+# remove data from Turkers with low variance 
 # exclude turkers who always clicked on roughly the same point on the scale 
 # ie turkers whose variance in overall response distribution is more 
 # than 2 sd below mean by-participant variance

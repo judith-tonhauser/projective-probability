@@ -16,7 +16,7 @@ library(RColorBrewer)
 theme_set(theme_bw())
 
 # load raw data
-d = read.csv("../experiment.csv")
+d = read.csv("../data/experiment.csv")
 nrow(d) #7800 = 300 participants x 26 items
 names(d)
 length(unique(d$workerid)) #300 participants
@@ -80,7 +80,7 @@ ggplot(c, aes(x=workerid,y=response)) +
   scale_y_continuous(breaks = pretty(c$response, n = 10)) +
   ylab("Responses") +
   xlab("Participant")
-ggsave(f="../graphs/raw-responses-to-controls.pdf",height=4,width=6.5)
+
 
 # group means on each control
 means = aggregate(response ~ contentNr, data=c, FUN="mean")
@@ -117,7 +117,7 @@ ggplot(outliers, aes(x=workerid,y=response)) +
   scale_y_continuous(breaks = pretty(outliers$response, n = 10)) +
   ylab("Responses") +
   xlab("Participants")
-ggsave(f="../graphs/raw-responses-to-controls-by-outliers.pdf",height=6,width=10)
+
 
 # responses here are supposed to be low but these Turkers
 # gave high response to most control items

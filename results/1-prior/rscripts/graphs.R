@@ -77,7 +77,7 @@ target$eventItemNr  = factor(target$eventItemNr,
 # color-blind-friendly palette
 cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7") # c("#999999",
 
-# Fig for supplement: prior ratings by content (no main clause content) ----
+# Fig A2 (supplement): prior ratings by content (no main clause content) ----
 means = target %>%
   group_by(itemType,event) %>%
   summarise(Mean=mean(response),CILow=ci.low(response),CIHigh=ci.high(response)) %>%
@@ -125,9 +125,9 @@ ggplot(means, aes(x=event, y=Mean, color=itemType, shape=itemType, fill=itemType
   xlab("Content") 
 ggsave(f="../graphs/prior-ratings.pdf",height=5,width=8)
 
-# comparison of prior probability means from Exp 1 and Exp 2a ----
+# Fig 5: comparison of prior probability means from Exp 1 and Exp 2a ----
 
-# load data from Exp1 (called exp4 in repo)
+# load data from Exp1 (9-prior-projection in repo)
 means1 <- read.csv(file="../../9-prior-projection/data/prior_means.csv")
 summary(means1) #eventItem, prior_type, Mean, YMin, YMax, CILow, CIHigh
 
@@ -135,7 +135,7 @@ means1 = means1 %>%
   select(-CILow,-CIHigh)
 summary(means1) #eventItem, prior_type (high_prior, low_prior), Mean, YMin, YMax
 
-# load data from this experiment (Exp2, called 1-prior in repo)
+# load data from this experiment 
 means2 <- read.csv(file="../data/prior_means.csv")
 summary(means2) #event, itemType (high, low), Mean, YMin, YMax
 
@@ -184,41 +184,6 @@ ggplot(means, aes(x=Mean1, y=Mean2, color=prior_type,shape=prior_type,fill=prior
 ggsave("../graphs/prior-probability-comparison-exp1-exp2.pdf",height=4,width=4)
 
 
-qcorr_means = means %>%
+corr_means = means %>%
   summarize(Cor=cor(Mean1,Mean2,method="spearman"))
 corr_means #.977
-
-# plot for XPRAG abstract (content identified only by number) ----
-# color-blind-friendly palette
-cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7") # c("#999999", 
-
-means = target %>%
-  group_by(itemNr,itemType) %>%
-  summarise(Mean = mean(response),CILow=ci.low(response),CIHigh=ci.high(response)) %>%
-  ungroup() %>%
-  mutate(YMin=Mean-CILow,YMax=Mean+CIHigh) %>%
-  mutate(itemType = fct_recode(itemType,high="H",low="L"))
-means
-
-low = means %>%
-  filter(itemType == "low") %>%
-  mutate(itemNr = fct_reorder(itemNr,Mean))
-low
-
-means = means %>%
-  mutate(item = fct_relevel(itemNr,levels(low$itemNr)))
-means
-
-ggplot(means, aes(x=item, y=Mean, color=itemType)) + 
-  geom_point() +
-  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25) +
-  # scale_x_continuous(breaks=seq(1,20,1)) +
-  scale_y_continuous(limits = c(-0.05,1.05),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
-  scale_color_manual(name="Fact", breaks=c("high","low"),labels=c("high", "low"), 
-                     values=cbPalette) +
-  theme(legend.position = "top") +
-  #theme(legend.position = c(0.3, 0.8)) +
-  ylab("Mean prior probability") +
-  xlab("Content of complement") 
-ggsave(f="../graphs/ratings-for-CCs.pdf",height=3.2,width=6)
-

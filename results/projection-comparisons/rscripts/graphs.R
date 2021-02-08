@@ -1,5 +1,5 @@
 # Prior paper
-# compare certainty ratings across experiments
+# compare certainty ratings across experiments for supplement
 
 # set working directory to directory of script
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
@@ -50,7 +50,7 @@ p_means3 = d_proj3 %>%
   select(-CILow,-CIHigh)
 levels(p_means3$verb)
 str(p_means3$verb)
-View(p_means3) #.18-.62
+#View(p_means3) #.18-.62
 
 p_means5 = d_proj5 %>%
   group_by(verb) %>%
@@ -59,16 +59,16 @@ p_means5 = d_proj5 %>%
   select(-CILow,-CIHigh)
 levels(p_means5$verb)
 str(p_means5$verb)
-View(p_means5) #.11-.88
+#View(p_means5) #.11-.88
 
 p_means9 = d_proj9 %>%
   group_by(verb) %>%
-  summarize(Mean_9 = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+  summarize(Mean_9 = mean(projective), CILow = ci.low(projective), CIHigh = ci.high(projective)) %>%
   mutate(YMinM_9 = Mean_9 - CILow, YMaxM_9 = Mean_9 + CIHigh, verb = fct_reorder(as.factor(verb),p_means3$Mean_3)) %>%
   select(-CILow,-CIHigh)
 levels(p_means9$verb)
 str(p_means9$verb)
-View(p_means9) #.35-.60
+View(p_means9) #.21-.73
 
 # bind the data ----
 p_means_35 = p_means3 %>%
@@ -140,7 +140,7 @@ ggsave("../graphs/projection-comparison-39.pdf",height=3,width=3)
 
 corr_projectivity = p_means_39 %>%
   summarize(Cor=cor(Mean_3,Mean_9,method="spearman"))
-corr_projectivity #.971
+corr_projectivity #.988
 
 ## plot: Exp 1 (p_means9) against Exp 1a in TD (p_means5) ----
 
@@ -168,7 +168,7 @@ ggsave("../graphs/projection-comparison-59.pdf",height=3,width=3)
 
 corr_projectivity = p_means_59 %>%
   summarize(Cor=cor(Mean_9,Mean_5,method="spearman"))
-corr_projectivity #.974
+corr_projectivity #.991
 
 
 

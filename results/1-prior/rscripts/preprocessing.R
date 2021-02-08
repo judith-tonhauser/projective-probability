@@ -16,7 +16,7 @@ library(dichromat)
 theme_set(theme_bw())
 
 # load raw data
-d = read.csv("../experiment.csv")
+d = read.csv("../data/experiment.csv")
 nrow(d) #2090 (95 participants x 22 items)
 names(d)
 length(unique(d$workerid)) #95 participants
@@ -86,12 +86,11 @@ round(mean(d.f1$response),2) #.86
 round(mean(d.f2$response),2) #.03
 
 ggplot(d.f12, aes(x=workerid,y=response)) +
-  geom_point(aes(colour = item)) +
-  geom_text(aes(label=workerid), vjust = 1, cex= 5)+
+  geom_point(aes(color = item)) +
+  geom_text(aes(label=workerid), vjust = 1, cex= 5) +
   scale_y_continuous(breaks = pretty(d.f12$response, n = 10)) +
   ylab("Responses to fillers") +
   xlab("Participant")
-ggsave(f="../graphs/filler-ratings.pdf",height=4,width=20)
 
 # Turkers with mean response to filler 1 that is more than 2sd below group mean
 # this is the exclusion criterion we decided on for the factivity paper
@@ -117,47 +116,6 @@ c.f2
 unique(length(c.f2$workerid)) #3 Turkers
 mean(c.f2$response)
 
-# # Turkers who gave responses to F1 lower than .8
-# # this is a bit arbitrary, I don't remember how we came to this number
-# f1 <- d.f1[d.f1$response < .8,]
-# f1
-# nrow(f1) #17
-# 
-# ggplot(f1, aes(x=workerid,y=response)) +
-#   geom_point(aes(colour = item)) +
-#   geom_text(aes(label=workerid), vjust = 1, cex= 5) +
-#   geom_text(aes(label=response), vjust = 2.5, cex= 5) +
-#   scale_y_continuous(breaks = pretty(f1$response, n = 10)) +
-#   ylab("Responses to filler 1") +
-#   xlab("Participants who gave bad responses (expected high)")
-# 
-# # Turkers who gave responses to F2 higher than .2
-# f2 <- d.f2[d.f2$response > .2,]
-# nrow(f2) #3
-# 
-# ggplot(f2, aes(x=workerid,y=response)) +
-#   geom_point(aes(colour = item)) +
-#   geom_text(aes(label=workerid), vjust = 1, cex= 5) +
-#   geom_text(aes(label=response), vjust = -2.5, cex= 5) +
-#   scale_y_continuous(breaks = pretty(f2$response, n = 10)) +
-#   ylab("Responses to filler 2") +
-#   xlab("Participants who gave bad responses (expected low)")
-
-# f <- rbind(c.f1,c.f2)
-# f
-# nrow(f) #22
-# 
-# ggplot(f, aes(x=workerid,y=response)) +
-#   geom_point(aes(colour = item)) +
-#   geom_text(aes(label=workerid), vjust = 1, cex= 5)+
-#   #geom_text(aes(label=response), vjust = -1, cex= 5) +
-#   scale_y_continuous(breaks = pretty(f$response, n = 10)) +
-#   ylab("Responses to fillers") +
-#   xlab("Participants who gave bad responses (red/F1 expected high, blue/F2 expected low)")
-# ggsave(f="../graphs/bad-filler-ratings.pdf",height=4,width=20)
-
-# length(unique(f$workerid)) #19 Turkers
-
 # exclude the Turkers identified above
 d <- subset(d, !(d$workerid %in% c.f1$workerid | d$workerid %in% c.f2$workerid))
 d <- droplevels(d)
@@ -174,7 +132,6 @@ ggplot(filler, aes(x=workerid,y=response)) +
   scale_y_continuous(breaks = pretty(filler$response, n = 10)) +
   ylab("Responses to controls") +
   xlab("'Good' Participant")
-ggsave(f="../graphs/filler-ratings-good-participants.pdf",height=4,width=20)
 
 # exclude turkers who always clicked on roughly the same point on the scale 
 # ie turkers whose variance in overall response distribution is more 
@@ -200,7 +157,7 @@ lvw = d %>%
 
 ggplot(lvw,aes(x=Participant,y=response)) +
   geom_point()
-# Turker 44 used the scale, just not the high end
+# Turker 44 used the scale, just not the very high end
 
 # nobody excluded 
 #d <- droplevels(subset(d, !(d$workerid %in% lowvarworkers)))
