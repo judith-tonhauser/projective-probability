@@ -172,7 +172,7 @@ levels(subjmeans$verb)
 
 # plot of means, 95% CIs and participants' ratings 
 ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
-  #geom_point(shape=21,fill="gray60",data=subjmeans, alpha=.1, color="gray40") +
+  geom_point(shape=21,fill="gray60",data=subjmeans, alpha=.1, color="gray40") +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="black") +
   geom_point(shape=21,stroke=.5,size=2.5,color="black") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
@@ -182,7 +182,7 @@ ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
                                                                  color=cols$Colors)) +
   theme(legend.position="top") +
-  ylab("Mean certainty rating \n (higher is more projective)") +
+  ylab("Mean certainty rating") +
   xlab("Predicate") +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
 ggsave("../graphs/3-way-means-projectivity-by-predicate-variability.pdf",height=4,width=7)
