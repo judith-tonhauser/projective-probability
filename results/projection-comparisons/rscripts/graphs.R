@@ -35,7 +35,7 @@ names(d_proj9)
 # sanity check
 nrow(d_proj3) #6916 / 26 = 266 participants
 nrow(d_proj5) #6916 / 26 = 266 participants (yes, same number of participants!)
-nrow(d_proj9) #14872 / 52 (20+20+6+6) = 286 participants
+nrow(d_proj9) #7436 / 26 (26 per block) = 286 participants
 
 # calculate projection means ----
 
@@ -50,7 +50,7 @@ p_means3 = d_proj3 %>%
   select(-CILow,-CIHigh)
 levels(p_means3$verb)
 str(p_means3$verb)
-#View(p_means3) #.18-.62
+#View(p_means3)
 
 p_means5 = d_proj5 %>%
   group_by(verb) %>%
@@ -59,7 +59,7 @@ p_means5 = d_proj5 %>%
   select(-CILow,-CIHigh)
 levels(p_means5$verb)
 str(p_means5$verb)
-#View(p_means5) #.11-.88
+#View(p_means5)
 
 p_means9 = d_proj9 %>%
   group_by(verb) %>%
@@ -68,16 +68,16 @@ p_means9 = d_proj9 %>%
   select(-CILow,-CIHigh)
 levels(p_means9$verb)
 str(p_means9$verb)
-View(p_means9) #.21-.73
+#View(p_means9)
 
 # bind the data ----
 p_means_35 = p_means3 %>%
   left_join(p_means5,by="verb")
-View(p_means_35)
+#View(p_means_35)
 
 p_means_39 = p_means3 %>%
   left_join(p_means9,by="verb")
-View(p_means_39)
+#View(p_means_39)
 
 p_means_59 = p_means5 %>%
   left_join(p_means9,by="verb")
