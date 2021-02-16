@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  16 FEB 2021 14:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  16 FEB 2021 15:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1254,14 +1254,14 @@ LaTeX Font Info:    Try loading font information for OT1+txtt on input line 195
 (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-<figures/exp1-prior-trial.pdf, id=216, 445.59445pt x 317.86723pt>
+<figures/exp1-prior-trial.pdf, id=217, 445.59445pt x 317.86723pt>
 File: figures/exp1-prior-trial.pdf Graphic file (type pdf)
 
 <use figures/exp1-prior-trial.pdf>
 Package pdftex.def Info: figures/exp1-prior-trial.pdf used on input line 214.
 (pdftex.def)             Requested size: 214.81839pt x 153.24387pt.
 
-<figures/exp1-projection-trial.pdf, id=217, 525.5886pt x 358.98969pt>
+<figures/exp1-projection-trial.pdf, id=218, 525.5886pt x 358.98969pt>
 File: figures/exp1-projection-trial.pdf Graphic file (type pdf)
 
 <use figures/exp1-projection-trial.pdf>
@@ -1269,14 +1269,14 @@ Package pdftex.def Info: figures/exp1-projection-trial.pdf used on input line 2
 19.
 (pdftex.def)             Requested size: 224.7766pt x 153.52994pt.
 
-<figures/exp1-prior-filler.png, id=218, 453.695pt x 331.2375pt>
+<figures/exp1-prior-filler.png, id=219, 453.695pt x 331.2375pt>
 File: figures/exp1-prior-filler.png Graphic file (type png)
 
 <use figures/exp1-prior-filler.png>
 Package pdftex.def Info: figures/exp1-prior-filler.png used on input line 231.
 (pdftex.def)             Requested size: 216.24118pt x 153.64476pt.
 
-<figures/exp1-projection-control.png, id=220, 546.04pt x 364.36125pt>
+<figures/exp1-projection-control.png, id=221, 546.04pt x 364.36125pt>
 File: figures/exp1-projection-control.png Graphic file (type png)
 
 <use figures/exp1-projection-control.png>
@@ -1289,7 +1289,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3] [4 <./figures/exp1-prior-trial.pdf> <./figures/exp1-projection-trial.pdf> <
 ./figures/exp1-prior-filler.png> <./figures/exp1-projection-control.png>]
-<../../results/9-prior-projection/graphs/prior-ratings.pdf, id=267, 578.16pt x 
+<../../results/9-prior-projection/graphs/prior-ratings.pdf, id=268, 578.16pt x 
 361.35pt>
 File: ../../results/9-prior-projection/graphs/prior-ratings.pdf Graphic file (t
 ype pdf)
@@ -1299,7 +1299,7 @@ pdf used on input line 280.
 (pdftex.def)             Requested size: 430.00462pt x 268.75119pt.
 
 <../../results/9-prior-projection/graphs/means-projectivity-by-predicate-and-pr
-ior.pdf, id=269, 505.89pt x 361.35pt>
+ior.pdf, id=270, 505.89pt x 361.35pt>
 File: ../../results/9-prior-projection/graphs/means-projectivity-by-predicate-a
 nd-prior.pdf Graphic file (type pdf)
 
@@ -1313,7 +1313,7 @@ vity-by-predicate-and-prior.pdf used on input line 291.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5 <../../results/9-prior-projection/graphs/prior-ratings.pdf>]
-<../../results/9-prior-projection/graphs/projection-by-prior.pdf, id=298, 505.8
+<../../results/9-prior-projection/graphs/projection-by-prior.pdf, id=299, 505.8
 9pt x 505.89pt>
 File: ../../results/9-prior-projection/graphs/projection-by-prior.pdf Graphic f
 ile (type pdf)
@@ -1330,7 +1330,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 -prior.pdf>] [7 <../../results/9-prior-projection/graphs/projection-by-prior.pd
 f>]
 <../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf, id=33
-8, 289.08pt x 289.08pt>
+9, 289.08pt x 289.08pt>
 File: ../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf G
 raphic file (type pdf)
 
@@ -1341,7 +1341,7 @@ son-exp1-exp2.pdf used on input line 346.
 
 [8 <../../results/1-prior/graphs/prior-probability-comparison-exp1-exp2.pdf>]
 <../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-prior.
-pdf, id=358, 505.89pt x 361.35pt>
+pdf, id=359, 505.89pt x 361.35pt>
 File: ../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-p
 rior.pdf Graphic file (type pdf)
 
@@ -1351,142 +1351,89 @@ Package pdftex.def Info: ../../results/3-projectivity/graphs/means-projectivity
 -by-predicate-and-prior.pdf used on input line 358.
 (pdftex.def)             Requested size: 430.00462pt x 307.15446pt.
  [9 <../../results/3-projectivity/graphs/means-projectivity-by-predicate-and-pr
-ior.pdf>]
-
-LaTeX Warning: Citation `heim83' undefined on input line 370.
-
-
-LaTeX Warning: Citation `vds92' undefined on input line 370.
-
-
-LaTeX Warning: Citation `abrusan2011' undefined on input line 370.
-
-
-LaTeX Warning: Citation `abrusan2016' undefined on input line 370.
-
-
-LaTeX Warning: Citation `romoli2015' undefined on input line 370.
-
-
-LaTeX Warning: Citation `best-question' undefined on input line 370.
-
-
-LaTeX Warning: Citation `qing2016' undefined on input line 370.
-
-
-LaTeX Warning: Citation `frankejaeger2016' undefined on input line 370.
-
-(./prior-paper.bbl
+ior.pdf>] (./prior-paper.bbl
 Missing character: There is no – in font txr!
  [10] [11]) [12] [13]
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 458.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 456.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 458.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 456.
 
 <../../results/projection-comparisons/graphs/projection-comparison-35.pdf, id=4
-70, 216.81pt x 216.81pt>
+74, 216.81pt x 216.81pt>
 File: ../../results/projection-comparisons/graphs/projection-comparison-35.pdf 
 Graphic file (type pdf)
 
 <use ../../results/projection-comparisons/graphs/projection-comparison-35.pdf>
 Package pdftex.def Info: ../../results/projection-comparisons/graphs/projection
--comparison-35.pdf used on input line 546.
+-comparison-35.pdf used on input line 544.
 (pdftex.def)             Requested size: 155.02pt x 155.0279pt.
 
 <../../results/projection-comparisons/graphs/projection-comparison-39.pdf, id=4
-71, 216.81pt x 216.81pt>
+75, 216.81pt x 216.81pt>
 File: ../../results/projection-comparisons/graphs/projection-comparison-39.pdf 
 Graphic file (type pdf)
 
 <use ../../results/projection-comparisons/graphs/projection-comparison-39.pdf>
 Package pdftex.def Info: ../../results/projection-comparisons/graphs/projection
--comparison-39.pdf used on input line 551.
+-comparison-39.pdf used on input line 549.
 (pdftex.def)             Requested size: 155.02pt x 155.0279pt.
 
 <../../results/projection-comparisons/graphs/projection-comparison-59.pdf, id=4
-72, 216.81pt x 216.81pt>
+76, 216.81pt x 216.81pt>
 File: ../../results/projection-comparisons/graphs/projection-comparison-59.pdf 
 Graphic file (type pdf)
 
 <use ../../results/projection-comparisons/graphs/projection-comparison-59.pdf>
 Package pdftex.def Info: ../../results/projection-comparisons/graphs/projection
--comparison-59.pdf used on input line 556.
+-comparison-59.pdf used on input line 554.
 (pdftex.def)             Requested size: 155.02pt x 155.0279pt.
 
 [14 <../../results/projection-comparisons/graphs/projection-comparison-35.pdf> 
 <../../results/projection-comparisons/graphs/projection-comparison-39.pdf> <../
 ../results/projection-comparisons/graphs/projection-comparison-59.pdf>]
-<../../results/1-prior/graphs/prior-ratings.pdf, id=511, 578.16pt x 361.35pt>
+<../../results/1-prior/graphs/prior-ratings.pdf, id=515, 578.16pt x 361.35pt>
 File: ../../results/1-prior/graphs/prior-ratings.pdf Graphic file (type pdf)
 
 <use ../../results/1-prior/graphs/prior-ratings.pdf>
 Package pdftex.def Info: ../../results/1-prior/graphs/prior-ratings.pdf used on
- input line 580.
+ input line 578.
 (pdftex.def)             Requested size: 460.72124pt x 287.95007pt.
  [15 <../../results/1-prior/graphs/prior-ratings.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 587.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 587.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 585.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 585.
  (./prior-paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 587.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 587.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 585.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 585.
 Package rerunfilecheck Info: File `prior-paper.out' has not changed.
 (rerunfilecheck)             Checksum: C88F64CF5EB0C52ECD7316BE6EE0BAE7;766.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 587.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 585.
  ) 
 Here is how much of TeX's memory you used:
- 24715 strings out of 493014
- 425069 string characters out of 6133351
- 544499 words of memory out of 5000000
- 27567 multiletter control sequences out of 15000+600000
- 49186 words of font info for 121 fonts, out of 8000000 for 9000
+ 24732 strings out of 493014
+ 425337 string characters out of 6133351
+ 545237 words of memory out of 5000000
+ 27583 multiletter control sequences out of 15000+600000
+ 50560 words of font info for 123 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  55i,10n,77p,3243b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.frankejaeger2016} has been referenced but do
-es not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.qing2016} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.best-question} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.romoli2015} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.abrusan2016} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.abrusan2011} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.vds92} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.heim83} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/texmf-dist
-/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/public/txfonts/txtt.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
-rw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/u
-tmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on prior-paper.pdf (15 pages, 1320069 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/public/txfonts/txtt.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times
+/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on prior-paper.pdf (15 pages, 1320172 bytes).
 PDF statistics:
- 589 PDF objects out of 1000 (max. 8388607)
- 529 compressed objects within 6 object streams
- 131 named destinations out of 1000 (max. 500000)
+ 593 PDF objects out of 1000 (max. 8388607)
+ 533 compressed objects within 6 object streams
+ 130 named destinations out of 1000 (max. 500000)
  182 words of extra memory for PDF output out of 10000 (max. 10000000)
 

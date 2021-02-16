@@ -2,6 +2,57 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Abrus{\'a}n%
+}{%
+Abrus{\'a}n%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+abrusan2011}
+\APACinsertmetastar {%
+abrusan2011}%
+\begin{APACrefauthors}%
+Abrus{\'a}n, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Predicting the presuppositions of soft triggers}
+  {Predicting the presuppositions of soft triggers}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Linguistics \& Philosophy}{34}{}{491--535}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s10988-012-9108-y} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Abrus{\'a}n%
+}{%
+Abrus{\'a}n%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+abrusan2016}
+\APACinsertmetastar {%
+abrusan2016}%
+\begin{APACrefauthors}%
+Abrus{\'a}n, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Presupposition cancellation: {E}xplaining the
+  `soft-hard' trigger distinction} {Presupposition cancellation: {E}xplaining
+  the `soft-hard' trigger distinction}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Natural Language Semantics}{24}{}{165-202}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s11050-016-9122-7} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Bates%
 , M{\"a}chler%
 , Bolker%
@@ -351,6 +402,33 @@ Dowty, D.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Franke%
+\ \BBA {} J{\"{a}}ger%
+}{%
+Franke%
+\ \BBA {} J{\"{a}}ger%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+frankejaeger2016}
+\APACinsertmetastar {%
+frankejaeger2016}%
+\begin{APACrefauthors}%
+Franke, M.%
+\BCBT {}\ \BBA {} J{\"{a}}ger, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Probabilistic pragmatics, or why Bayes ' rule is
+  probably important for pragmatics}} {{Probabilistic pragmatics, or why Bayes
+  ' rule is probably important for pragmatics}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Zeitschrift f{\"{u}}r Sprachwissenschaft}{35}{1}{3-44}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Goodman%
 \ \BBA {} Frank%
 }{%
@@ -464,6 +542,30 @@ Hanna, J.%
   movements}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Cognitive Science}{28}{}{105-115}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Heim%
+}{%
+Heim%
+}{%
+{\protect \APACyear {1983}}%
+}]{%
+heim83}
+\APACinsertmetastar {%
+heim83}%
+\begin{APACrefauthors}%
+Heim, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1983}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {On the projection problem for presuppositions} {On the
+  projection problem for presuppositions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{West Coast Conference on Formal
+  Linguistics}{2}{}{114-125}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -687,6 +789,35 @@ Peeters, B.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Qing%
+, Goodman%
+\BCBL {}\ \BBA {} Lassiter%
+}{%
+Qing%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+qing2016}
+\APACinsertmetastar {%
+qing2016}%
+\begin{APACrefauthors}%
+Qing, C.%
+, Goodman, N\BPBI D.%
+\BCBL {}\ \BBA {} Lassiter, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A rational speech-act model of projective content} {A
+  rational speech-act model of projective content}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 38th Annual Conference of the
+  Cognitive Science Society.} {Proceedings of the 38th annual conference of the
+  cognitive science society.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 {R Core Team}%
 }{%
 {R Core Team}%
@@ -710,6 +841,32 @@ R}%
 \APACaddressPublisher{Vienna, Austria}{}.
 \newblock
 \begin{APACrefURL} \url{https://www.R-project.org/} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Romoli%
+}{%
+Romoli%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+romoli2015}
+\APACinsertmetastar {%
+romoli2015}%
+\begin{APACrefauthors}%
+Romoli, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The presuppositions of soft triggers are obligatory
+  scalar implicatures} {The presuppositions of soft triggers are obligatory
+  scalar implicatures}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Semantics}{32}{}{173-291}.
+\newblock
+\begin{APACrefDOI} \doi{10.1093/jos/fft017} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -737,6 +894,38 @@ Rubio2016}%
 \APACjournalVolNumPages{Frontiers in Psychology}{7}{}{}.
 \newblock
 \begin{APACrefDOI} \doi{10.3389/fpsyg.2016.00153} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Simons%
+, Beaver%
+, Roberts%
+\BCBL {}\ \BBA {} Tonhauser%
+}{%
+Simons%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+best-question}
+\APACinsertmetastar {%
+best-question}%
+\begin{APACrefauthors}%
+Simons, M.%
+, Beaver, D.%
+, Roberts, C.%
+\BCBL {}\ \BBA {} Tonhauser, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The {B}est {Q}uestion: Explaining the projection
+  behavior of factive verbs} {The {B}est {Q}uestion: Explaining the projection
+  behavior of factive verbs}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Discourse Processes}{3}{}{187-206}.
+\newblock
+\begin{APACrefDOI} \doi{10.1080/0163853X.2016.1150660} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -851,6 +1040,31 @@ Tonhauser, J.%
 \newblock
 \APACrefnote{Manuscript under review, Stuttgart University and Stanford
   University, retrieved from \url{https://ling.auf.net/lingbuzz/005360}}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+van~der Sandt%
+}{%
+van~der Sandt%
+}{%
+{\protect \APACyear {1992}}%
+}]{%
+vds92}
+\APACinsertmetastar {%
+vds92}%
+\begin{APACrefauthors}%
+van~der Sandt, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1992}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Presupposition Projection as Anaphora Resolution}
+  {Presupposition projection as anaphora resolution}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Semantics}{9}{}{333-377}.
+\newblock
+\begin{APACrefDOI} \doi{10.1093/jos/9.4.333} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
