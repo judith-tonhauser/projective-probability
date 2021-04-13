@@ -27,6 +27,11 @@ d$workerid = as.factor(as.character(d$workerid))
 d_nomc = droplevels(subset(d, short_trigger != "MC"))
 nrow(d_nomc) #5720 / 286 turkers = 20 target stimuli per Turker per block
 
+# what's the min and max number of unique predicate/content combinations?
+min(table(d_nomc$short_trigger,d_nomc$content)) # 5
+max(table(d_nomc$short_trigger,d_nomc$content)) # 25
+
+
 # set lower probability fact as reference level of prior_type
 contrasts(d_nomc$prior_type) = c(1,0)
 
