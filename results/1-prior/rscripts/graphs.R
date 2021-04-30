@@ -187,3 +187,39 @@ ggsave("../graphs/prior-probability-comparison-exp1-exp2.pdf",height=4,width=4)
 corr_means = means %>%
   summarize(Cor=cor(Mean1,Mean2,method="spearman"))
 corr_means #.977
+
+# pool the two prior datasets and plot histograms
+# load data from Exp1 (9-prior-projection in repo)
+d_exp1prior = read.csv(file="../../9-prior-projection/data/cd.csv") %>%
+  filter(short_trigger != "MC") %>% 
+  select(prior_type,prior_fact,prior,eventItem) %>% 
+  rename(itemType=prior_type,response=prior,fact=prior_fact,event=eventItem) %>% 
+  mutate(itemType=fct_recode(itemType,"H"="high_prior","L"="low_prior"))
+
+d_exp2prior = target %>% 
+  select(itemType,response,fact,event)
+
+d = bind_rows(d_exp1prior,d_exp2prior) %>% 
+  mutate(itemType=str_trim(itemType),fact=str_trim(fact),event=str_trim(event)) %>% 
+  mutate(fact=str_remove(fact,fixed(".")))
+
+facts = d %>% 
+  mutate(fact = str_replace_all(fact,"&quotechar","'")) %>% 
+  select(itemType,fact,event) %>% 
+  unique() %>% 
+  mutate(fact=stringr::str_wrap(fact, 13)) %>% 
+  mutate(X=case_when(itemType == "H" ~ .75,
+                     itemType == "L" ~ .25))
+
+# plot by-item variability in priors
+ggplot(d, aes(x=response,fill=itemType)) +
+  geom_histogram(alpha=.7,position="identity") +
+  facet_wrap(~event,nrow=5) +
+  xlab("Prior probability rating") +
+  ylab("Number of responses") +
+  scale_fill_manual(values=rev(c("#56B4E9","#E69F00")),labels=c("higher probability","lower probability"),name="Fact") +
+  scale_color_manual(values=rev(c("#56B4E9","#E69F00")),labels=c("higher probability","lower probability"),name="Fact") +
+  geom_text(data=facts,aes(label=fact,y=50,x=X,color=itemType),size=3) +
+  theme(legend.position = "none")
+ggsave("../graphs/item-variability-prior.pdf",width=9.5,height=8.5)
+  

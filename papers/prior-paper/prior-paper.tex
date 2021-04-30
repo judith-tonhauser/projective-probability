@@ -196,7 +196,7 @@ Several differences between \citeposs{mahler2020} and \citeposs{lorson2018} inve
 
 \section{Experiment 1}\label{s2}
 
-This experiment tested whether higher prior probability content is more likely to project. Prior probability and projection ratings were collected for the contents of 20 clauses that realized the complements of 20 clause-embedding predicates.\footnote{\label{f-github}The experiments, data and R code for generating the figures and analyses of the experiments reported on in this paper are available at \url{https://github.com/judith-tonhauser/projective-probability}. Exp.~1 was pregistered: \url{https://osf.io/vd9ru/}. All experiments were conducted with approval from the IRB of The Ohio State University and informed consent was obtained.}%\footnote{\label{f-github}The experiments, data and R code for generating the figures and analyses of the experiments reported on in this paper are available at \url{https://anonymous.4open.science/r/fea573b9-1978-493a-88aa-8fbdae1e2f13/}. Exp.~1 was pregistered: [link redacted]. All experiments were conducted with approval from the IRB of [university redacted] and informed consent was obtained.}
+This experiment tested whether higher prior probability content is more likely to project. Prior probability and projection ratings were collected for the contents of 20 clauses that realized the complements of 20 clause-embedding predicates.\footnote{\label{f-github}The experiments, data and R code for generating the figures and analyses of the experiments reported on in this paper are available at \url{https://github.com/judith-tonhauser/projective-probability}. Exp.~1 was pre-registered: \url{https://osf.io/vd9ru/}. All experiments were conducted with approval from the IRB of The Ohio State University and informed consent was obtained.}%\footnote{\label{f-github}The experiments, data and R code for generating the figures and analyses of the experiments reported on in this paper are available at \url{https://anonymous.4open.science/r/fea573b9-1978-493a-88aa-8fbdae1e2f13/}. Exp.~1 was pregistered: [link redacted]. All experiments were conducted with approval from the IRB of [university redacted] and informed consent was obtained.}
 %\url{https://github.com/judith-tonhauser/factivity}.}  
 
 \subsection{Methods} 
@@ -311,7 +311,7 @@ We also replicated \citetpos{tonhauser-degen-factive} result of by-predicate var
 
 
 Closer inspection of  \figref{f-prior} reveals by-participant variability in prior probability ratings, suggesting that individual participants' prior beliefs may not align with the prior probability classification assumed in  \figref{f-projection-mean}. For example, given a particular content ({\em Julian dances salsa}), it is possible that one participant's prior probability rating was lower than that of another participant, even though the first participant was presented with the higher probability fact ({\em Julian is Cuban}) and the second one with the lower probability fact ({\em Julian is German}). \figref{f-projection} shows participants' certainty ratings by their individual prior probability ratings. %(The color coding here merely represents the type of fact the participant was presented with. No classification is imposed.) The linear smoothers suggest a positive correlation for each predicate between prior probability and certainty ratings such that contents with higher prior probability ratings receive higher certainty ratings. 
-To investigate whether prior beliefs modulate projection at the by-participant level,  we conducted the same mixed-effects analysis reported above, but used participants' individual, continuous prior probability ratings as the fixed effect prior predictor. Again, higher-prior-probability CCs were more likely to project ($\beta$ = 0.28, $SE$ = 0.02, $t$ = 13.85, $p$ $<$ .0001). This  suggests that prior beliefs modulate projection even at the by-participant level. In fact, a Bayesian Information Criterion (BIC) model comparison  revealed that the individual-level model better captured the variance in the data (categorical model BIC: 2654; group-level model BIC: 2586; individual-level model BIC: 2291), suggesting that individual listeners' prior beliefs systematically modulate the extent to which they take the speaker to be committed to a content: the more they believe it, the more they take the speaker to believe it.
+To investigate whether prior beliefs modulate projection at the by-participant level,  we conducted the same mixed-effects analysis reported above, but used participants' individual, continuous prior probability ratings as the fixed effect prior predictor. Again, higher-prior-probability CCs were more likely to project ($\beta$ = 0.28, $SE$ = 0.02, $t$ = 13.85, $p$ $<$ .0001). This  suggests that prior beliefs modulate projection even at the by-participant level. In fact, a Bayesian Information Criterion (BIC) model comparison  revealed that the individual-level model better captured the variance in the data (categorical model BIC: 2654; group-level model BIC: 2586; individual-level model BIC: 2291),\footnote{The BIC model comparisons were not pre-registered, so we also ran AIC model comparisons as a robustness check. The results were qualitatively identical (categorical model AIC: 2607; group-level model AIC: 2539; individual-level model AIC: 2244).} suggesting that individual listeners' prior beliefs systematically modulate the extent to which they take the speaker to be committed to a content: the more they believe it, the more they take the speaker to believe it.
 
 
 %\newpage
@@ -566,16 +566,25 @@ The control items in Exp.~2a are given in (\ref{control2}).
 \end{xlist}
 \end{exe}
 
-\figref{f-prior-2a} plots the mean prior probabilities of the 20 contents by fact. Participants' ratings are given as light dots. The mean prior probability rating for each content was higher when the content was presented with the higher probability fact than when it was presented with the lower probability fact.
+\figref{f-prior-2a} shows the mean prior probabilities of the 20 contents by fact. Participants' ratings are given as light dots. The mean prior probability rating for each content was higher when the content was presented with the higher probability fact than when it was presented with the lower probability fact.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=.75\paperwidth]{../../results/1-prior/graphs/prior-ratings}
-
 \caption{Mean prior probability by content and fact in Exp.~2a. Error bars indicate 95\% bootstrapped confidence intervals. Light dots indicate participants' ratings.} 
 \label{f-prior-2a}
 \end{figure}
 
+\section{Item variability in prior probability ratings}\label{app:prior-item}
+
+\figref{fig:item-prior} shows by-item histograms of prior probability ratings.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{../../results/1-prior/graphs/item-variability-prior}
+\caption{By-item histograms of prior probability ratings. Colors indicate whether the fact resulted in  lower (blue) vs.~higher (orange) prior probability ratings for the content indicated in the facet label.} 
+\label{fig:item-prior}
+\end{figure}
 
 \end{document}
 
