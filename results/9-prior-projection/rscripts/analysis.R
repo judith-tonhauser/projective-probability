@@ -33,6 +33,7 @@ max(table(d_nomc$short_trigger,d_nomc$content)) # 25
 
 
 # set lower probability fact as reference level of prior_type
+d_nomc$prior_type = as.factor(as.character(d_nomc$prior_type))
 contrasts(d_nomc$prior_type) = c(1,0)
 
 # analysis 1: prior ----
@@ -111,6 +112,10 @@ summary(m.proj)
 BIC(m.proj.ind) #2290.507
 BIC(m.proj.group) #2585.635
 BIC(m.proj) #2653.924
+
+AIC(m.proj.ind) #2243.945
+AIC(m.proj.group) #2539.073
+AIC(m.proj) #2607.362
 
 m.proj.ind.plus = lmer(projective ~ prior + prior_type + (1|item) + (1+prior|workerid), data=d_nomc, REML=F)
 summary(m.proj.ind.plus)
