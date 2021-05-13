@@ -28,9 +28,10 @@ d_nomc = droplevels(subset(d, short_trigger != "MC"))
 nrow(d_nomc) #5720 / 286 turkers = 20 target stimuli per Turker per block
 
 # what's the min and max number of unique predicate/content combinations?
+table(d_nomc$short_trigger,d_nomc$content)
 min(table(d_nomc$short_trigger,d_nomc$content)) # 5
 max(table(d_nomc$short_trigger,d_nomc$content)) # 25
-
+mean(table(d_nomc$short_trigger,d_nomc$content)) # 14.3
 
 # set lower probability fact as reference level of prior_type
 d_nomc$prior_type = as.factor(as.character(d_nomc$prior_type))

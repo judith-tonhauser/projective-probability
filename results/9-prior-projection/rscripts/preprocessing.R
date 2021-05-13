@@ -48,6 +48,8 @@ unique(ds$comments)
 d = d %>%
   left_join(ds, by=c("workerid"))
 
+min(d$Answer.time_in_minutes)
+max(d$Answer.time_in_minutes)
 mean(d$Answer.time_in_minutes) #9.17
 median(d$Answer.time_in_minutes) #8.45
 

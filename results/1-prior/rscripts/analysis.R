@@ -36,6 +36,11 @@ table(d_nomc$prior_type)
 #   H   L 
 # 750 750
 
+# what's the min and max number of unique content/fact combinations?
+table(d_nomc$prompt,d_nomc$prior_type)
+min(table(d_nomc$prompt,d_nomc$prior_type)) #36
+max(table(d_nomc$prompt,d_nomc$prior_type)) #39
+
 # set lower probability fact as reference level of prior_type
 contrasts(d_nomc$prior_type) = c(1,0)
 

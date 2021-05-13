@@ -45,6 +45,12 @@ table(cd$fact_type) #H, L
 str(cd$fact_type)
 str(pmeans$fact_type)
 
+# what's the min and max number of unique predicate/content combinations?
+table(cd$verb,cd$content)
+min(table(cd$verb,cd$content)) # 4
+max(table(cd$verb,cd$content)) # 27
+mean(table(cd$verb,cd$content)) #13.3
+
 # add prior means to dataset
 cd = cd %>% 
   left_join(pmeans,by=c("content","fact_type"))
