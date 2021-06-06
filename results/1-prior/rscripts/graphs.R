@@ -222,4 +222,5 @@ ggplot(d, aes(x=response,fill=itemType)) +
   geom_text(data=facts,aes(label=fact,y=50,x=X,color=itemType),size=3) +
   theme(legend.position = "none")
 ggsave("../graphs/item-variability-prior.pdf",width=9.5,height=8.5)
+ggsave("../graphs/item-variability-prior.png",width=9.5,height=8.5)
   
