@@ -15,6 +15,9 @@ library(dichromat)
 library(forcats)
 library(ggrepel)
 library(brms)
+library(emmeans)
+library(lme4)
+library(BayesPostEst)
 theme_set(theme_bw())
 
 # load clean data for analysis ----
@@ -57,9 +60,6 @@ cd %>%
   print(n=40)
 
 ## non-Bayesian models ----
-library(emmeans)
-library(lme4)
-
 summary(cd)
 
 # create item as combination of predicate and complement clause
@@ -96,8 +96,6 @@ comparison
 
 
 ## Bayesian models ----
-library(brms)
-library(BayesPostEst)
 head(cd)
 
 # brms model 
@@ -143,15 +141,35 @@ model.brms.proj.binary.b = brm(nResponse ~ predicate_type + (1|workerid) + (1|it
 summary(model.brms.proj.binary.b) 
 saveRDS(model.brms.proj.binary.b, "../models/brm_model_binary.rds")
 
+
+# to load saved model:
+model.brms.proj.binary.b = readRDS(file="../models/brm_model_binary.rds")
+
 mcmcReg(model.brms.proj.binary.b, pars = "b_", file="../models/brm_output_binary.tex")
+
+cd = cd %>% 
+  mutate(predicate_type_ternary = as.factor(case_when(verb %in% c("know", "reveal","see","discover","be_annoyed") ~ "factive",
+                                                      verb %in% c("think","say","pretend","suggest","MC") ~ "non-factive",
+                                              # verb == "MC" ~ "control",
+                                              TRUE ~ "opt-factive")))
+cd = cd %>% 
+  mutate(predicate_type_ternary = fct_relevel(predicate_type_ternary,"non-factive","opt-factive")) %>% 
+  droplevels()
+
+model.brms.proj.ternary.b = brm(nResponse ~ predicate_type_ternary + (1|workerid) + (1|item), data=cd, family=bernoulli(), cores = 4, control=list(max_treedepth = 15))
+summary(model.brms.proj.ternary.b) 
+saveRDS(model.brms.proj.ternary.b, "../models/brm_model_ternary.rds")
 
 # model comparison
 model.brms.proj.binary.b = add_criterion(model.brms.proj.binary.b, "waic")
+# model comparison
+model.brms.proj.ternary.b = add_criterion(model.brms.proj.ternary.b, "waic")
 model.brms.proj.b = add_criterion(model.brms.proj.b, "waic")
 
 # look at absolute waic
-waic(model.brms.proj.b) # 6719.0, higher -> worse
-waic(model.brms.proj.binary.b) # 6444.5, lower -> better
+waic(model.brms.proj.b) # 6444.5, lower -> better
+waic(model.brms.proj.ternary.b) # 6711.3 -> worse
+waic(model.brms.proj.binary.b) # 6719.0, higher -> worse 
 
 loo_compare(model.brms.proj.binary.b, model.brms.proj.b, criterion = "waic")
 

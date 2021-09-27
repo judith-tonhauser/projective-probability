@@ -6,7 +6,7 @@
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(this.dir)
 
-source('../../helpers.R')
+source('helpers.R')
 
 # load required packages
 library(tidyverse)
@@ -287,6 +287,15 @@ cd$content = as.factor(as.character(cd$content))
 cd$isMC = cd$verb == "MC"
 cd$isZeroOne = (cd$response == 0 | cd$response == 1)
 
+cd = cd %>% 
+  mutate(predicate_type_ternary = as.factor(case_when(verb %in% c("know", "reveal","see","discover","be_annoyed") ~ "factive",
+                                                      verb %in% c("think","say","pretend","suggest","MC") ~ "non-factive",
+                                                      # verb == "MC" ~ "control",
+                                                      TRUE ~ "opt-factive")))
+cd = cd %>% 
+  mutate(predicate_type_ternary = fct_relevel(predicate_type_ternary,"non-factive","opt-factive")) %>% 
+  droplevels()
+
 p = ggplot(cd, aes(x=response,fill=isMC)) +
   geom_histogram() +
   facet_wrap(~workerid)
@@ -379,13 +388,33 @@ saveRDS(m.b.fact,file="../data/beta-model-fact-mixed.rds")
 # to load model
 m.b.fact = readRDS(file="../data/beta-model-fact-mixed.rds")
 
+# ternary factivity predictor model
+betamodel.fact.ternary = bf(betaresponse ~ predicate_type_ternary + (1|workerid) + (1|item),
+                    phi ~ predicate_type_ternary + (1|workerid) + (1|item), # beta distribution's precision  )
+                    family = Beta())
+
+m.b.fact.ternary = brm(formula = betamodel.fact.ternary,
+               family=Beta(),
+               data=d, 
+               cores = 4,
+               control = list(adapt_delta = .95,max_treedepth=15))
+
+summary(m.b.fact.ternary)
+
+saveRDS(m.b.fact.ternary,file="../data/beta-model-fact-ternary-mixed.rds")
+
+# to load model
+m.b.fact.ternary = readRDS(file="../data/beta-model-fact-ternary-mixed.rds")
+
 
 # model comparison between binary factivity and predicate-specific predictor model. 
+m.b.fact.ternary = add_criterion(m.b.fact.ternary, "waic")
 m.b.fact = add_criterion(m.b.fact, "waic")
 m.b = add_criterion(m.b, "waic")
 
 # look at absolute waic
 waic(m.b.fact) # -18643.9, higher -> worse
+waic(m.b.fact.ternary) # -
 waic(m.b) #  -18971, lower -> better
 
 loo_compare(m.b.fact, m.b, criterion = "waic")
