@@ -1027,7 +1027,6 @@ Our main motivation in conducting these investigations was to understand which p
 
 Where do we go from here? There are two broad ways forward. First, one might object to the conclusion that the definitions in (\ref{def}) don't identify a class of factive predicates. We engage with several objections in section \ref{s41}. Alternatively, one could give up on the assumption that there is a coherent class of factive predicates (see also \citealt{karttunen2016} and \citealt{djaerv-thesis} for such moves). In section \ref{s43}, we discuss what this move would mean for projection analyses.
 
-%we have drawn \jd{too vague} from our results on a number of grounds. For instance, one might consider one of the two definitions in (\ref{def}) appropriate, but not the diagnostics for presupposed and entailed content that we used. Or one might propose a different definition, and test novel diagnostics for factive predicates under that definition. Investigations that follow up on such objections constitute an important avenue of research for analyses that posit factive predicates. It is also possible to maintain one of the two definitions and our diagnostics, but object to our conclusion on the grounds that different types of systematic experimental or participant noise may have obscured the boundaries between existing underlying categories. We engage with these possibilities in section \ref{s41}. The second broad way forward is to give up on the assumption that there is a coherent class of factive predicates (see also \citealt{karttunen2016} and \citealt{djaerv-thesis} for such moves). In section \ref{s43}, we discuss what this move would mean for projection analyses.
 
 \subsection{Objections}\label{s41}
 
@@ -1037,7 +1036,9 @@ The results of Exps.~1 as well as the meta-analyses of the existing datasets in 
 
 Our results in Exps.~1 are contingent on a particular operationalization of projection -- via the ``certain that'' diagnostic -- and a particular behavioral measurement -- via continuous slider ratings and binary `yes'/`no' judgments. There are multiple ways in which experimental noise might have been introduced and masked an underlying binary factivity category:  i) via the experimental items, which did not consist of the predicates alone, but of sentences in which the predicates were combined with particular subject noun phrases and complement clauses; ii) and which moreover were produced by a named speaker; iii) via the response tasks; and iv) via participant-internal noise. Each of i) to iv) could have introduced systematic noise into the ratings, yielding gradient responses for predicates that may underlyingly be either factive or non-factive.
 
-The experiments reported here were designed to mitigate several possible sources of systematic noise: i) all predicates occurred in the same sentence structures and were combined with the same set of complement clauses across participants; ii) all predicates were presented in utterances situated in the same context; iii) ratings were collected across different tasks; and iv) ratings were obtained from a large number of participants, whose response variability was taken into consideration in the statistical analysis. Reasons to believe that these decisions mitigated noise include the replication in gradient orderings of predicates across continuous (slider ratings) and categorical (selections) response measures (Exp.~1a vs. 1b); the replication of Exp.~1a in Exp.~1 of \citealt{degen-tonhauser-openmind}  with a Spearman rank correlation of .991; and the replication of gradient orderings of predicates in the meta-analyses of existing datasets, which varied in the experimental tasks and items.\footnote{For similar discussion in the experimental syntax literature on whether gradience in acceptability judgments reflects underlying gradience in the grammar, see \citealt{lau2014, lau2017, sprouse2007, sprouse2013, hofmeister2010, keller2000, sorace2005}. \jd{hm, this footnote made more sense before. something must have happened to the prose in the meantime, but this footnote needs to be placed elsewhere. i do really want to maintain a pointer to the experimental syntax literature, so shouldn't be deleted}} 
+The experiments reported here were designed to mitigate several possible sources of systematic noise: i) all predicates occurred in the same sentence structures and were combined with the same set of complement clauses across participants; ii) all predicates were presented in utterances situated in the same context; iii) ratings were collected across different tasks; and iv) ratings were obtained from a large number of participants, whose response variability was taken into consideration in the statistical analysis. Reasons to believe that these decisions mitigated noise include the replication in gradient orderings of predicates across continuous (slider ratings) and categorical (selections) response measures (Exp.~1a vs. 1b); the replication of Exp.~1a in Exp.~1 of \citealt{degen-tonhauser-openmind}  with a Spearman rank correlation of .991; and the replication of gradient orderings of predicates in the meta-analyses of existing datasets, which varied in the experimental tasks and items. We therefore consider it unlikely that experimental noise might have masked an underlying binary factivity category, though there is much need for discussion in the experimental semantics/pragmatics literature about the relation between behavioral data and semantic/pragmatic categories.\footnote{For such a discussion in the experimental syntax literature, see \citealt{lau2014, lau2017, sprouse2007, sprouse2013, hofmeister2010, keller2000, sorace2005}.}
+
+%\footnote{For such a discussion in the experimental syntax literature on whether gradience in acceptability judgments reflects underlying gradience in the grammar, see \citealt{lau2014, lau2017, sprouse2007, sprouse2013, hofmeister2010, keller2000, sorace2005}. 
 
 \subsubsection{Objection 2: The distinction between factive and non-factive predicates might be fuzzy}
 
@@ -1055,30 +1056,6 @@ It has been suggested to us, in personal communication and by a reviewer, that t
 %the average effect of the uncertainty experienced by listeners about the use of any given predicates, which may be resolved preferentially one way or another through pragmatic factors, may lead to the result that certain predicates appear generally more factive than others on average. 
 
 The suggestion is that one way to test whether it is possible to maintain a binary factivity category with these two assumptions is to fit so-called finite mixture models to the data \citep{jacobs1991, richardson1997}. These models allow for representing the possibility that multiple components, i.e., multiple sub-datasets, make up an overall dataset. For instance, the data for each predicate from Exp.~1a could be analyzed with mixture models with respect to how many components (one, two, three, four, five, \ldots) best account for the data. To illustrate, consider Figure \ref{fig:mixtures}, which shows simulated distributions of certainty ratings together with the optimal number of Gaussian components.\footnote{Models were fit using the \texttt{mclust} and \texttt{mixtools} packages \citep{benaglia2009, scrucca2016}  in R.} Given the aforementioned assumptions, one could attribute certainty ratings that are best captured with one Gaussian component with a mean of .4, as in panel (a), to a predicate that only has a non-factive lexical entry. Likewise, one could attribute certainty ratings that are best captured with one Gaussian component with a mean of .85, as in panel (b), to a predicate that only has a factive lexical entry.  Certainty ratings like those in panels (c) and (d), which are best captured by two Gaussian components, might then be attributed to predicates that have both a factive and a non-factive lexical entry, with differences between (c) and (d) being due to the predicates interacting differently with pragmatic factors that modulate projection. In short, the projection gradience observed in our Exp.~1a could be hypothesized to come about by virtue of one or two components being combined in various ways. 
-
-%whether the data is best accounted for by one component (e.g., a factive one, or a non-factive one) or two components (e.g., both a factive and a non-factive one). Figure \ref{fig:mixtures} shows examples of possible distributions of projection ratings that all have a mean of 0.7 but are optimally characterized by different numbers of Gaussian components.\footnote{Models were fit using the \texttt{mclust} and \texttt{mixtools} packages \citep{benaglia2009, scrucca2016}  in R, which use expectation maximization (EM) to estimate optimal parameter values.} \jt{factive/projective OK? Fig relies on colors}
-%
-%
-%\begin{figure}[h!]
-%\begin{subfigure}{.33\textwidth}
-%\includegraphics[width=\textwidth]{../../results/5-projectivity-no-fact/graphs/mixtures/example-1component}
-%\caption{One Gaussian component.}
-%\label{fig:1comp}
-%\end{subfigure}
-%\begin{subfigure}{.33\textwidth}
-%\includegraphics[width=\textwidth]{../../results/5-projectivity-no-fact/graphs/mixtures/example-2components}
-%\caption{Two Gaussian components.}
-%\label{fig:2comp}
-%\end{subfigure}
-%\begin{subfigure}{.33\textwidth}
-%\includegraphics[width=\textwidth]{../../results/5-projectivity-no-fact/graphs/mixtures/example-4components-reveal}
-%\caption{Four Gaussian components.}
-%\label{fig:reveal}
-%\end{subfigure}
-%\caption{Different possible rating distributions for a predicate with mean = .7 with overlaid optimal number of Gaussian curves.}
-%\label{fig:mixtures}
-%\end{figure}
-
 
 \begin{figure}[h!]
 \centering
