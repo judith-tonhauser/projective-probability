@@ -1,0 +1,44 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Disagreement about the definition of factive predicates}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Properties of the content of the complement of clause-embedding predicates}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{The goal of this paper and the investigated clause-embedding predicates}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Experiment 1: Presupposition}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Experiment 1a: Gradient projection ratings}{section.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Methods}{subsection.2.1}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Results and discussion}{subsection.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Experiment 1b: Categorical projection ratings}{section.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Methods}{subsection.2.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Results and discussion}{subsection.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.3}{Interim summary and converging evidence}{section.2}% 12
+\BOOKMARK [1][-]{section.3}{Experiments 2 and 3: Entailment}{}% 13
+\BOOKMARK [2][-]{subsection.3.1}{Exp. 2a: Gradient ratings using the inference diagnostic for entailment}{section.3}% 14
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Methods}{subsection.3.1}% 15
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Results}{subsection.3.1}% 16
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Discussion}{subsection.3.1}% 17
+\BOOKMARK [2][-]{subsection.3.2}{Exp. 2b: Categorical ratings using the inference diagnostic for entailment}{section.3}% 18
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Methods}{subsection.3.2}% 19
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Results and discussion}{subsection.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.3}{Exp. 3a: Gradient ratings using the contradictoriness diagnostic for entailment}{section.3}% 21
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Methods}{subsection.3.3}% 22
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Results and discussion}{subsection.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.4}{Exp. 3b: Categorical ratings using the contradictoriness diagnostic for entailment}{section.3}% 24
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Methods}{subsection.3.4}% 25
+\BOOKMARK [3][-]{subsubsection.3.4.2}{Results and discussion}{subsection.3.4}% 26
+\BOOKMARK [2][-]{subsection.3.5}{Interim summary and converging evidence}{section.3}% 27
+\BOOKMARK [1][-]{section.4}{General discussion}{}% 28
+\BOOKMARK [2][-]{subsection.4.1}{Objections}{section.4}% 29
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Objection 1: Noise might have obscured an underlyingly binary factivity category}{subsection.4.1}% 30
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Objection 2: The distinction between factive and non-factive predicates might be fuzzy}{subsection.4.1}% 31
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Objection 3: There may be uncertainty about which category a predicate belongs to}{subsection.4.1}% 32
+\BOOKMARK [3][-]{subsubsection.4.1.4}{Summary}{subsection.4.1}% 33
+\BOOKMARK [2][-]{subsection.4.2}{Implications for projection analyses}{section.4}% 34
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 35
+\BOOKMARK [1][-]{appendix.A}{20 complement clauses}{}% 36
+\BOOKMARK [1][-]{appendix.B}{Control stimuli in Exps. 1, 2 and 3}{}% 37
+\BOOKMARK [1][-]{appendix.C}{Data exclusion}{}% 38
+\BOOKMARK [1][-]{appendix.D}{Model details for Experiments 1, 2 and 3}{}% 39
+\BOOKMARK [2][-]{subsection.D.1}{Motivation for using Bayesian mixed effects Beta regression}{appendix.D}% 40
+\BOOKMARK [2][-]{subsection.D.2}{Coding choices and interpreting model output}{appendix.D}% 41
+\BOOKMARK [2][-]{subsection.D.3}{Model outputs for Experiments 1, 2 and 3}{appendix.D}% 42
+\BOOKMARK [1][-]{appendix.E}{Comparisons of gradient and categorical ratings}{}% 43
+\BOOKMARK [1][-]{appendix.F}{Mixture models applied to data from Exp. 1a}{}% 44
