@@ -14,7 +14,7 @@ setwd(this.dir)
 source('helpers.R')
 
 # load required packages
-require(tidyverse)
+library(tidyverse)
 library(mixtools)
 library(plotmm)
 library(BetaMixture)
@@ -261,6 +261,49 @@ baseplot = baseplot +
 filename = paste("../graphs/mixtures/example-4components-reveal.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
 
+# plot best mixture for "discover"
+dsub = cd %>% 
+  filter(verb == "discover")
+
+# 1.  test how many Gaussian components are justified
+mclust = Mclust(dsub$betaresponse)
+
+# print results to console
+print(summary(mclust))
+
+colors = cbPalette
+
+# plot optimal number of clusters
+mixmdl <- normalmixEM(dsub$betaresponse, k = mclust$G)
+responses <- data.frame(x=mixmdl$x)
+
+baseplot = ggplot(responses) +
+  geom_histogram(aes(x, ..density..), binwidth = .01, colour = "black", fill = "white")
+
+print("mean")
+print(mean(dsub$betaresponse))
+
+for (i in 1:mclust$G)
+{
+  print(paste("component ",i))
+  print("mu")
+  print(mixmdl$mu[i])
+  print("sigma")
+  print(mixmdl$sigma[i])
+  print("lambda")
+  print(mixmdl$lambda[i])
+  baseplot = baseplot +
+    stat_function(geom = "line", fun = plot_mix_comps_normal,
+                  args = list(mu = mixmdl$mu[i], sigma = mixmdl$sigma[i], lam = mixmdl$lambda[i]),
+                  colour = cbPalette[i], size = 1)
+  
+}
+baseplot = baseplot +
+  ylab("Density") + 
+  xlab("Slider value") +
+  scale_x_continuous(breaks=seq(0,1,by=.1))
+filename = paste("../graphs/mixtures/example-3components-discover.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
 
 # simulate idealized 2-component data with different mixtures
 simdata = data.frame(simvals = c(rnorm(90,mean=0.1,sd=0.03),rnorm(176,mean=0.9,sd=0.03)))
