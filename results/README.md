@@ -73,7 +73,7 @@ The directory `compare-diagnostics-and-response-tasks` compares the slider ratin
 
 # Additional studies
 
-2-veridicality -- not reported anywhere: contradictoriness ratings (stimulus: "Sue: Jane knows that Bill dances salsa, but I know that he doesn't"; task: "Is Sue's utterance contradictory?"). We re-ran this experiment with a slightly different stimulus design (omitting the "I know that" part) after realizing that the stimulus assumes that the CC of "know" is entailed and that the diagnostic works just as well in the simplified way.
+`2-veridicality` -- not reported anywhere: contradictoriness ratings (stimulus: "Sue: Jane knows that Bill dances salsa, but I know that he doesn't"; task: "Is Sue's utterance contradictory?"). We re-ran this experiment with a slightly different stimulus design (omitting the "I know that" part) after realizing that the stimulus assumes that the CC of "know" is entailed and that the diagnostic works just as well in the simplified way.
 
 
 
