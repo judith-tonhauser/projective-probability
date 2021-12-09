@@ -2,7 +2,7 @@ This repository contains (in alphabetical order):
 
 * bibliography.bib: The bibliography file for LaTeX papers.
 * CommitmentBank-analysis: An analysis of data from the CommitmentBank (de Marneffe et al 2019, Sinn und Bedeutung), reported on in Degen & Tonhauser (2022), "Are there factive predicates? An empirical investigation".
-* experiments: This folder contains information about experiments reported on in Degen & Tonhauser (2022), "Are there factive predicates? An empirical investigation" and Degen & Tonhauser (2021), "Prior probability predicts projection".
+* experiments: This folder contains information about experiments reported on in Degen & Tonhauser (2022), "Are there factive predicates? An empirical investigation" and Degen & Tonhauser (2021), "Prior beliefs modulate projection".
 * MegaVeridicality-analysis: An analysis of data from the MegaVeridicality dataset (White & Rawlins 2018, NELS), reported on in Degen & Tonhauser (2022), "Are there factive predicates? An empirical investigation."
 * papers: Papers based on the experiments in this repository.
 * plan.md: The plan we had when we started these experiments, including motivation and analysis.
