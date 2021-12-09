@@ -27,26 +27,56 @@ The folder "projection-comparisons" compares the results of the projection exper
 
 ## Degen & Tonhauser (2022), "Are there factive predicates? An empirical investigation."
 
-### slider ratings (reported in "factives-paper" and "prior-paper")
+### Exp. 1a
+
+* Location: `5-projectivity-no-fact`
+* Measurement: certainty ratings 
+* Measurement type: continuous slider ratings
+* Task: *"Sue asks: Does Jane know that Bill dances salsa?"; Task: "Is Sue certain that Bill dances salsa?"*
+
+### Exp. 1b
+
+* Location: `8-projectivity-no-fact-binary`
+* Measurement: certainty ratings 
+* Measurement type: binary choice
+* Task: *"Sue asks: Does Jane know that Bill dances salsa?"; Task: "Is Sue certain that Bill dances salsa?"*
+
+### Exp. 2a
+
+* Location: `4-veridicality3`
+* Measurement: inference strength ratings 
+* Measurement type: continuous slider ratings
+* Task: *"What is true: Jane knows that Bill dances salsa."; Task: "Does it follow that Bill dances salsa?"*
+
+### Exp. 2b
+
+* Location: `7-veridicality3-binary`
+* Measurement: inference strength ratings 
+* Measurement type: binary choice
+* Task: *"What is true: Jane knows that Bill dances salsa."; Task: "Does it follow that Bill dances salsa?"*
+
+
+### Exp. 3a
+
+* Location: `2-veridicality2`
+* Measurement: contradictoriness ratings 
+* Measurement type: continuous slider ratings
+* Task: *"Sue: Jane knows that Bill dances salsa, but he doesn't"; Task: "Is Sue's utterance contradictory?"*
+
+### Exp. 3b
+
+* Location: `6-veridicality2-binary`
+* Measurement: contradictoriness ratings 
+* Measurement type: binary choice
+* Task: *"Sue: Jane knows that Bill dances salsa, but he doesn't"; Task: "Is Sue's utterance contradictory?"*
+
+## Additional studies
 
 2-veridicality -- not reported anywhere: contradictoriness ratings (stimulus: "Sue: Jane knows that Bill dances salsa, but I know that he doesn't"; task: "Is Sue's utterance contradictory?"). We re-ran this experiment with a slightly different stimulus design (omitting the "I know that" part) after realizing that the stimulus assumes that the CC of "know" is entailed and that the diagnostic works just as well in the simplified way.
 
-2-veridicality2 -- Exp. 3a in factives paper: contradictoriness ratings (stimulus: "Sue: Jane knows that Bill dances salsa, but he doesn't"; task: "Is Sue's utterance contradictory?")
-
-
-4-veridicality3 -- Exp. 2a in factives paper: inference strength ratings (stimulus: "What is true: Jane knows that Bill dances salsa."; task: "Does it follow that Bill dances salsa?")
-
-5-projectivity-no-fact -- Exp. 1a in factives paper: certainty ratings (stimulus: "Sue asks: Does Jane know that Bill dances salsa?"; task: "Is Sue certain that Bill dances salsa?"). We ran this after realizing that before we can write the prior paper, we need to get clarity on the notion of factivity. Thus, the "factives-paper" was written before the "prior-paper".
 
 
 
-
-## binary ratings (reported in "factives-paper")
-6-veridicality2-binary -- Exp. 3b in factives paper: contradictoriness ratings (stimulus: "Sue: Jane knows that Bill dances salsa, but he doesn't"; task: "Is Sue's utterance contradictory?")
-
-7-veridicality3-binary -- Exp. 2b in factives paper: inference strength ratings (stimulus: "What is true: Jane knows that Bill dances salsa."; task: "Does it follow that Bill dances salsa?")
-
-8-projectivity-no-fact-binary -- Exp. 1b in factives paper: certainty ratings (stimulus: "Sue asks: Does Jane know that Bill dances salsa?"; task: "Is Sue certain that Bill dances salsa?")
 
 
 
