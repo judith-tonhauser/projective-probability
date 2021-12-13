@@ -19,7 +19,7 @@ library(mixtools)
 library(plotmm)
 library(BetaMixture)
 library(mclust)
-theme_set(theme_bw())
+theme_set(theme_classic())
 
 set.seed(123)
 cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7") 
@@ -58,11 +58,14 @@ colors = cbPalette
 mean(simdata$simvals_norm)
 
 ggplot(simdata) +
-  geom_histogram(aes(simvals_norm, ..density..), binwidth = .01, colour = "black", fill = "white") +
+  geom_histogram(aes(simvals_norm, ..density..), binwidth = .02, colour = "black", fill = "white") +
   stat_function(fun = dnorm, n = 101, args = list(mean = 0.85, sd = 0.05),colour = cbPalette[1], size = 1) + 
   ylab("Density") + 
   xlab("Slider value") +
-  scale_x_continuous(breaks=seq(0,1,by=.1),limits = c(0,1)) 
+  scale_x_continuous(breaks=seq(0,1,by=.1),limits = c(0,1)) +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank())
 
 filename = paste("../graphs/mixtures/example-1component-highmean.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
@@ -86,11 +89,14 @@ colors = cbPalette
 mean(simdata$simvals_norm)
 
 ggplot(simdata) +
-  geom_histogram(aes(simvals_norm, ..density..), binwidth = .01, colour = "black", fill = "white") +
+  geom_histogram(aes(simvals_norm, ..density..), binwidth = .02, colour = "black", fill = "white") +
   stat_function(fun = dnorm, n = 101, args = list(mean = 0.4, sd = 0.1),colour = cbPalette[1], size = 1) + 
   ylab("Density") + 
   xlab("Slider value") +
-  scale_x_continuous(breaks=seq(0,1,by=.1),limits = c(0,1)) 
+  scale_x_continuous(breaks=seq(0,1,by=.1),limits = c(0,1))  +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank())
 
 filename = paste("../graphs/mixtures/example-1component-lowmean.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
@@ -129,7 +135,7 @@ mixmdl$lambda[2]
 mean(simdata$simvals_norm)
 
 ggplot(responses) +
-  geom_histogram(aes(x, ..density..), binwidth = .01, colour = "black", fill = "white") +
+  geom_histogram(aes(x, ..density..), binwidth = .02, colour = "black", fill = "white") +
   stat_function(geom = "line", fun = plot_mix_comps_normal,
                 args = list(mu = mixmdl$mu[1], sigma = mixmdl$sigma[1], lam = mixmdl$lambda[1]),
                 colour = cbPalette[1], size = 1) +
@@ -138,7 +144,10 @@ ggplot(responses) +
                 colour = cbPalette[2], size = 1) +
   ylab("Density") + 
   xlab("Slider value") +
-  scale_x_continuous(breaks=seq(0,1,by=.1),limits=c(0,1))
+  scale_x_continuous(breaks=seq(0,1,by=.1),limits=c(0,1)) +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank())
 
 filename = paste("../graphs/mixtures/example-2components-lowermean.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
@@ -177,7 +186,7 @@ mixmdl$lambda[2]
 
 
 ggplot(responses) +
-  geom_histogram(aes(x, ..density..), binwidth = .01, colour = "black", fill = "white") +
+  geom_histogram(aes(x, ..density..), binwidth = .02, colour = "black", fill = "white") +
   stat_function(geom = "line", fun = plot_mix_comps_normal,
                 args = list(mu = mixmdl$mu[1], sigma = mixmdl$sigma[1], lam = mixmdl$lambda[1]),
                 colour = cbPalette[1], size = 1) +
@@ -186,7 +195,10 @@ ggplot(responses) +
                 colour = cbPalette[2], size = 1) +
   ylab("Density") + 
   xlab("Slider value") +
-  scale_x_continuous(breaks=seq(0,1,by=.1),limits=c(0,1))
+  scale_x_continuous(breaks=seq(0,1,by=.1),limits=c(0,1)) +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank())
 
 filename = paste("../graphs/mixtures/example-2components-highermean.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
@@ -229,7 +241,7 @@ mixmdl$sigma[3]
 mixmdl$lambda[3]
 
 ggplot(responses) +
-  geom_histogram(aes(x, ..density..), binwidth = .01, colour = "black", fill = "white") +
+  geom_histogram(aes(x, ..density..), binwidth = .02, colour = "black", fill = "white") +
   stat_function(geom = "line", fun = plot_mix_comps_normal,
                 args = list(mu = mixmdl$mu[1], sigma = mixmdl$sigma[1], lam = mixmdl$lambda[1]),
                 colour = cbPalette[1], size = 1) +
@@ -241,7 +253,10 @@ ggplot(responses) +
                 colour = cbPalette[3], size = 1) +  
   ylab("Density") + 
   xlab("Slider value") +
-  scale_x_continuous(breaks=seq(0,1,by=.1),limits=c(0,1))
+  scale_x_continuous(breaks=seq(0,1,by=.1),limits=c(0,1)) +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank())
 
 filename = paste("../graphs/mixtures/example-3components.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
@@ -289,7 +304,7 @@ mixmdl$sigma[4]
 mixmdl$lambda[4]
 
 ggplot(responses) +
-  geom_histogram(aes(x, ..density..), binwidth = .01, colour = "black", fill = "white") +
+  geom_histogram(aes(x, ..density..), binwidth = .02, colour = "black", fill = "white") +
   stat_function(geom = "line", fun = plot_mix_comps_normal,
                 args = list(mu = mixmdl$mu[1], sigma = mixmdl$sigma[1], lam = mixmdl$lambda[1]),
                 colour = cbPalette[1], size = 1) +
@@ -304,7 +319,10 @@ ggplot(responses) +
                 colour = cbPalette[4], size = 1) +    
   ylab("Density") + 
   xlab("Slider value") +
-  scale_x_continuous(breaks=seq(0,1,by=.1),limits=c(0,1))
+  scale_x_continuous(breaks=seq(0,1,by=.1),limits=c(0,1)) +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank())
 
 filename = paste("../graphs/mixtures/example-4components.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
@@ -491,15 +509,18 @@ for (p in levels(cd$verb)) {
     
   }
   # title = paste("\'",p,"\': mixed Gaussian model with ",mclust$G, " components",sep="")
-  title = p
+  # title = p
   baseplot = baseplot +
     # geom_label(aes(x=0.5,y=10,label=p)) +
     ylab("Density") + 
     xlab("Slider value") +
-    scale_x_continuous(breaks=seq(0,1,by=.1)) + 
-    ggtitle(title)
+    scale_x_continuous(breaks=seq(0,1,by=.1)) +
+    theme(
+      axis.text.y = element_blank(),
+      axis.ticks.y = element_blank())
+    # ggtitle(title)
   filename = paste("../graphs/mixtures/",p,"-gaussian.pdf",sep="")
-  ggsave(filename,width=4,height=3)
+  ggsave(filename,width=4,height=2.5)
   
   ######################################################
   # 2.  plot mixtures of varying number of beta components
@@ -516,7 +537,7 @@ for (p in levels(cd$verb)) {
   #     params[1,paste("beta_",j,sep="")] = betamdl$Iterations[nrow(betamdl$Iterations),paste("Beta_",j,sep="")]
   #     params[1,paste("mix_",j,sep="")] = betamdl$Iterations[nrow(betamdl$Iterations),paste("Mixture_Param_",j,sep="")]
   #   }
-  #   
+  # 
   #   # plot the inferred beta distributions
   #   baseplot = ggplot(dsub) +
   #     geom_histogram(aes(x=betaresponse, y=..density..), binwidth = .005, colour = "black", fill = "white")
@@ -525,14 +546,14 @@ for (p in levels(cd$verb)) {
   #     stat_function(fun = function(x) params$mix_1*0.3*dbeta(x, params$alpha_1, params$beta_1), color = cbPalette[1], size = 1) +
   #     stat_function(fun = function(x) params$mix_2*0.3*dbeta(x, params$alpha_2, params$beta_2), color = cbPalette[2], size = 1) +
   #     stat_function(fun = function(x) params$mix_3*0.3*dbeta(x, params$alpha_3, params$beta_3), color = cbPalette[3], size = 1)
-  #   
+  # 
   #   title = paste("\'",p,"\': mixed Beta model with ",n, " components",sep="")
   #   baseplot = baseplot +
-  #     ylab("Density") + 
+  #     ylab("Density") +
   #     xlab("Slider value") +
   #     scale_x_continuous(breaks=seq(0,1,by=.1)) +
   #     ggtitle(title)
-  #   filename = paste("../graphs/mixtures/",p,"_beta_",n,".pdf",sep="")
+  #   filename = paste("../graphs/mixtures/",p,"-beta-",n,".pdf",sep="")
   #   ggsave(filename)
   # 
   #   }

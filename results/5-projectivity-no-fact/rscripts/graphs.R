@@ -17,6 +17,8 @@ library(forcats)
 library(ggrepel)
 library(brms)
 library(knitr)
+library(viridis)
+library(gplots) # just to get named to hex color converter
 theme_set(theme_bw())
 
 # load clean data 
@@ -86,13 +88,36 @@ cols$VeridicalityGroup = as.factor(
 levels(cols$V)
 cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, ordered = TRUE)
 
-cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
-                      ifelse(cols$VeridicalityGroup == "NF", "gray60", 
-                             ifelse(cols$VeridicalityGroup == "VNF","dodgerblue",
-                                    ifelse(cols$VeridicalityGroup == "MC","black","tomato1"))))
+# cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid",
+#                       ifelse(cols$VeridicalityGroup == "NF", "gray60",
+#                              ifelse(cols$VeridicalityGroup == "VNF","dodgerblue",
+#                                     ifelse(cols$VeridicalityGroup == "MC","black","tomato1"))))
 
 
-cols$Colors
+# col2hex(c("darkorchid","gray60","dodgerblue","tomato1"))
+# check colors for how they look under different colorblindness types: 
+# https://davidmathlogic.com/colorblind/#%239932CC-%23999999-%231E90FF-%23FF6347
+
+
+# in case you want a different set of cb-friendly colors:
+# basecolors = viridis(n=5,option="D")#,start=.1,end=1)
+# colors = c(basecolors[5],basecolors[2],basecolors[3],basecolors[4],basecolors[1])
+
+# "magma" (or "A")
+# "inferno" (or "B")
+# "plasma" (or "C")
+# "viridis" (or "D")
+# "cividis" (or "E")
+# "rocket" (or "F")
+# "mako" (or "G")
+# "turbo" (or "H")
+
+# cols$Colors =  ifelse(cols$VeridicalityGroup == "F", colors[5], 
+#                       ifelse(cols$VeridicalityGroup == "NF", colors[2], 
+#                              ifelse(cols$VeridicalityGroup == "VNF", colors[3],
+#                                     ifelse(cols$VeridicalityGroup == "MC",colors[1],colors[4]))))
+# cols$Colors
+
 cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, ordered = TRUE)
 levels(cols$V)
 
@@ -109,11 +134,13 @@ subjmeans$verb <- factor(subjmeans$verb, levels = unique(levels(means$verb)))
 levels(subjmeans$verb)
 
 
+# Figure 2
 # plot of means, 95% CIs and participants' ratings 
-ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup)) +
-  geom_point(shape=21,fill="gray70",data=subjmeans, alpha=.1, color="gray40") +
-  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="black") +
-  geom_point(stroke=.5,size=2.5,color="black") +
+ggplot(means, aes(x=verb, y=Mean)) +
+  # geom_point(shape=21,fill="gray70",data=subjmeans, alpha=.1, color="gray40") +
+  geom_violin(data=subjmeans,scale="width",color="gray80") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax, fill=VeridicalityGroup, shape=VeridicalityGroup),width=0.1,color="black") +
+  geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_alpha(range = c(.3,1)) +
   scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","main clause\ncontrols")),name="Predicate type") +
@@ -126,6 +153,27 @@ ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGrou
   xlab("Predicate") +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
 ggsave("../graphs/means-projectivity-by-predicate-variability.pdf",height=4.5,width=7)
+
+
+# Figure 2, black and white
+ggplot(means, aes(x=verb, y=Mean)) +
+  # geom_point(shape=21,fill="gray70",data=subjmeans, alpha=.1, color="gray40") +
+  geom_violin(data=subjmeans,scale="width",color="gray80") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax, fill=VeridicalityGroup, shape=VeridicalityGroup),width=0.1,color="black") +
+  geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_alpha(range = c(.3,1)) +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","main clause\ncontrols")),name="Predicate type") +
+  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","main clause\ncontrols")),name="Predicate type") +
+  # guides(fill=FALSE, shape=F) +
+  # theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
+                                                                 # color=cols$Colors)) +
+  theme(legend.position="bottom") +
+  ylab("Mean certainty rating") +
+  xlab("Predicate") +
+  theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
+ggsave("../graphs/means-projectivity-by-predicate-variability-bw.pdf",height=4.5,width=7)
+
 
 # mean projectivity by predicate, including the main clause controls (3-way distinction for Stuttgart job talk Dec 2019)
 means = cd %>%
