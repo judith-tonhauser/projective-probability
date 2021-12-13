@@ -132,10 +132,12 @@ levels(means$VeridicalityGroup)
 levels(subjmeans$verb)
 levels(means$verb)
 
-ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup)) +
-  geom_point(shape=21,fill="gray70",data=subjmeans, alpha=.1, color="gray40") +
-  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="black") +
-  geom_point(stroke=.5,size=2.5,color="black") +
+# Figure 9
+ggplot(means, aes(x=verb, y=Mean)) +
+  # geom_point(shape=21,fill="gray70",data=subjmeans, alpha=.1, color="gray40") +
+  geom_violin(data=subjmeans,scale="width",color="gray80") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax, fill=VeridicalityGroup, shape=VeridicalityGroup),width=0.1,color="black") +
+  geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
   scale_shape_manual(values=c( 21, 22, 25, 24, 23),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
   scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
   # guides(fill=FALSE, shape=F) +
@@ -145,6 +147,22 @@ ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGrou
   ylab("Mean inference rating") +
   xlab("Predicate")
 ggsave("../graphs/means-inference-by-predicate-variability.pdf",height=4.5,width=7)
+
+# Figure 9, black and white
+ggplot(means, aes(x=verb, y=Mean)) +
+  # geom_point(shape=21,fill="gray70",data=subjmeans, alpha=.1, color="gray40") +
+  geom_violin(data=subjmeans,scale="width",color="gray80") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax, fill=VeridicalityGroup, shape=VeridicalityGroup),width=0.1,color="black") +
+  geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
+  scale_shape_manual(values=c( 21, 22, 25, 24, 23),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
+  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
+  # guides(fill=FALSE, shape=F) +
+  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1),legend.position="bottom") +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_alpha(range = c(.3,1)) +
+  ylab("Mean inference rating") +
+  xlab("Predicate")
+ggsave("../graphs/means-inference-by-predicate-variability-bw.pdf",height=4.5,width=7)
 
 # plot of means with participant ratings (3-way distinction, Tuebingen talk)
 means = cd %>%
