@@ -69,6 +69,7 @@ cd = cd %>%
   mutate(jittery = case_when(nResponse == 1 ~ .8,
                              nResponse == 0 ~ .2))
 
+# Figure 11
 ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup)) +
   geom_point(stroke=.5,size=2.5,color="black") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
@@ -85,6 +86,23 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup
   ylab("Proportion of 'yes (def. follows)' ratings") +
   xlab("Predicate") 
 ggsave("../graphs/proportion-by-predicate-variability-individual.pdf",height=4.5,width=7)
+
+# Figure 11, black and white
+ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup)) +
+  geom_point(stroke=.5,size=2.5,color="black") +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_alpha(range = c(.3,1)) +
+  geom_jitter(data=cd,aes(y=jittery),shape=1,color="gray40",alpha=.2,fill="black",height=.2,width=.3) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25,color="black") +
+  geom_point(stroke=.5,size=2.5,color="black") +
+  scale_shape_manual(values=c(21,22,25,24,23),labels=c("control","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=c("main clause\ncontrols","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
+  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) + 
+  theme(legend.position="bottom") +
+  theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
+  ylab("Proportion of 'yes (def. follows)' ratings") +
+  xlab("Predicate") 
+ggsave("../graphs/proportion-by-predicate-variability-individual-bw.pdf",height=4.5,width=7)
 
 
 # plot Turker's 'no' responses for predicates up to "demonstrate" ----
