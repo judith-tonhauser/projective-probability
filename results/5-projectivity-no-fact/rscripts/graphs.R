@@ -88,10 +88,10 @@ cols$VeridicalityGroup = as.factor(
 levels(cols$V)
 cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, ordered = TRUE)
 
-# cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid",
-#                       ifelse(cols$VeridicalityGroup == "NF", "gray60",
-#                              ifelse(cols$VeridicalityGroup == "VNF","dodgerblue",
-#                                     ifelse(cols$VeridicalityGroup == "MC","black","tomato1"))))
+cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid",
+                      ifelse(cols$VeridicalityGroup == "NF", "gray60",
+                             ifelse(cols$VeridicalityGroup == "VNF","dodgerblue",
+                                    ifelse(cols$VeridicalityGroup == "MC","black","tomato1"))))
 
 
 # col2hex(c("darkorchid","gray60","dodgerblue","tomato1"))
@@ -165,8 +165,7 @@ ggplot(means, aes(x=verb, y=Mean)) +
   scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","main clause\ncontrols")),name="Predicate type") +
   scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","main clause\ncontrols")),name="Predicate type") +
   # guides(fill=FALSE, shape=F) +
-  # theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
-                                                                 # color=cols$Colors)) +
+  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
   theme(legend.position="bottom") +
   ylab("Mean certainty rating") +
   xlab("Predicate") +
