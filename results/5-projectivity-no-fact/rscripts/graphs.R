@@ -157,7 +157,6 @@ ggsave("../graphs/means-projectivity-by-predicate-variability.pdf",height=4.5,wi
 
 # Figure 2, black and white
 ggplot(means, aes(x=verb, y=Mean)) +
-  # geom_point(shape=21,fill="gray70",data=subjmeans, alpha=.1, color="gray40") +
   geom_violin(data=subjmeans,scale="width",color="gray80") +
   geom_errorbar(aes(ymin=YMin,ymax=YMax, fill=VeridicalityGroup, shape=VeridicalityGroup),width=0.1,color="black") +
   geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
