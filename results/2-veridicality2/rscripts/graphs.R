@@ -136,22 +136,37 @@ means$VeridicalityGroup = factor(x=
                                                  ifelse(means$verb  %in% c("be_right","demonstrate"),"VNF",
                                                         ifelse(means$verb  %in% c("contradictory","non-contrad."),"control","V")))),levels=rev(c("F","V","VNF","NF","control")))
 
-ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup,shape=VeridicalityGroup)) +
-  geom_point(shape=21,fill="gray60",data=subjmeans, alpha=.1, color="gray40") +
-  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="black") +
-  geom_point(stroke=.5,size=2.5,color="black") +
+# Figure 13
+ggplot(means, aes(x=verb, y=Mean)) +
+  geom_violin(data=subjmeans,scale="width",color="gray80") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax, fill=VeridicalityGroup,shape=VeridicalityGroup),width=0.1,color="black") +
+  geom_point(aes(fill=VeridicalityGroup,shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_alpha(range = c(.3,1)) +
-  #scale_fill_manual(values=c("black","darkorchid","gray60","tomato1","dodgerblue")) +
-  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
-  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","controls")),name="Predicate type") +
-  # guides(fill=FALSE, shape=F) +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
   theme(legend.position="bottom") +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
                                                                  color=cols$Colors)) +
   ylab("Mean contradictoriness rating") +
   xlab("Predicate")
 ggsave("../graphs/means-contradictoriness-by-predicate-variability.pdf",height=4.5,width=7)
+
+# Figure 13, black and white
+ggplot(means, aes(x=verb, y=Mean)) +
+  geom_violin(data=subjmeans,scale="width",color="gray80") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax, fill=VeridicalityGroup,shape=VeridicalityGroup),width=0.1,color="black") +
+  geom_point(aes(fill=VeridicalityGroup,shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_alpha(range = c(.3,1)) +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
+  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
+  theme(legend.position="bottom") +
+  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
+  ylab("Mean contradictoriness rating") +
+  xlab("Predicate")
+ggsave("../graphs/means-contradictoriness-by-predicate-variability-bw.pdf",height=4.5,width=7)
+
 
 # plot of means with participant ratings (3-way distinction for Tuebingen talk)
 means = cd %>%
