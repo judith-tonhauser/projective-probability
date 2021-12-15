@@ -1,0 +1,149 @@
+\documentclass{language}
+\usepackage{lipsum}
+\usepackage{times}
+\usepackage{qtree}
+\usepackage{gb4e}
+
+\begin{document}
+
+\title{Example Of Using The Class File}
+\author{John Beavers\\Department of Linguistics\\The University of
+  Texas at Austin\\305 E. 23rd Street, Mail Code B5100\\
+Austin, TX 78712,
+  USA
+\and
+ Noam Chomsky\\Department of Linguistics\\
+P.O. Box 210025\\
+The University of Arizona\\
+Tucson, AZ 85721, USA}
+
+\date{}
+
+\maketitle
+
+\begin{abstract}
+\noindent\normalsize
+This is how an abstract would be formatted.\ackfootnote{The
+  acknowledgment footnote has a slightly different treatment.}
+
+\keywords{Template, linguistics, Language}
+
+\end{abstract}
+
+\section{Introduction}
+
+Here's a citation to \citet{Dowty79}, where we have parentheses, and
+another one in \citealp{Chomsky57}, where we do not.\footnote{Here's a
+  regular endnote. I'm testing whether if you make it longer it'll
+  trigger the right skipping afterwards, because for some reason for a
+  while we weren't getting a space between endnotes, but it looks good
+  now.} Here's an example, using {\tt gb4e}:
+%
+\begin{exe}
+  \ex\label{example}
+  \begin{xlist}
+    \ex This is an example.
+    \ex This is another example.
+    \end{xlist}
+\end{exe}
+%
+Example \ref{example} is the only one I'll use, and the whole bit
+about parentheses (e.g.\ \ref{example} vs. (\ref{example})) is
+something users will have to do themselves since it'll depend on their
+specific example package. The rest of this thing is mostly filled with
+lorem text just to give it some length.
+
+\subsection{Sub-introduction}
+\fsubsubsection{Sub-sub-introduction}
+\label{label1}
+
+\lipsum
+
+\begin{figure}
+  \begin{center}
+\Tree [.S [.NP D\\A N\\tree ] [.VP V\\is [.DP D\\a N\\figure ] ] ]
+    \caption{A figure of some kind}
+    
+  \end{center}    
+  
+\end{figure}
+
+
+\section{Background}
+
+\lipsum
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}[t]{cccc}
+      
+      {\bf This} & {\bf is} & {\bf a} & {\bf table}\\\hline
+      that & I & made & up
+    \end{tabular}
+    \caption{An example table}
+    
+  \end{center}    
+  
+\end{table}
+
+
+\subsection{Formal framework}
+
+\lipsum.\footnote{Another endnote.}
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}[t]{cccc}
+      
+      {\bf This} & {\bf is} & {\bf another} & {\bf table}\\\hline
+      that & I & made & up
+    \end{tabular}
+    \caption{A second example table}
+    
+  \end{center}    
+  
+\end{table}
+
+
+\section{Conclusion}
+\fsubsection{Summary}
+
+\lipsum
+
+
+
+\appendix
+
+\section{An Appendix}
+
+If anyone wants one.
+
+\listoftables
+
+\listoffigures
+
+%\bibliography{biblio}
+
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}{\relax}
+\providecommand{\urlprefix}{Online: }
+
+\bibitem[{Chomsky(1957)}]{Chomsky57}
+\textsc{Chomsky, Noam}. 1957.
+\newblock \emph{Syntactic structures}.
+\newblock The Hague, The Netherlands: Mounton.
+
+\bibitem[{Dowty(1979)}]{Dowty79}
+\textsc{Dowty, David}. 1979.
+\newblock \emph{Word meaning and {M}ontague {G}rammar}.
+\newblock Dordrecht: Reidel.
+
+\end{thebibliography}
+
+
+\fendnotes
+
+
+
+\end{document}
