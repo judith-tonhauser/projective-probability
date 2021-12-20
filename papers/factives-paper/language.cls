@@ -162,6 +162,7 @@
 {\normalfont\normalsize\sc}*{#1. \ }
 }
 
+
 \newcommand{\fsubsection}[1]{\@startsection
 {subsection}
 {2}

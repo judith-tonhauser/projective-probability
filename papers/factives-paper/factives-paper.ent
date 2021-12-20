@@ -44,7 +44,7 @@ taken
 to
 be
 syntactically
-non-factive
+nonfactive
 but
 semantically
 factive.
@@ -55,7 +55,7 @@ see
 \citealt
 {white-rawlins-nels2018},
 \citealt
-{djaerv-thesis}
+{djaerv-thesis},
 and
 references
 therein.
@@ -65,11 +65,11 @@ macro:->For
 instance,
 according
 to
-\citet
+\citealt
 [66f.]{beaver01},
-\citet
+\citealt
 [119-123]{gazdar79a}
-``describes
+`describes
 the
 inferences
 associated
@@ -84,10 +84,10 @@ indefeasible
 in
 simple
 affirmative
-sentences'',
+sentences',
 that
 is,
-``entailments''.
+`entailments'.
 And
 \citet
 [139]{schlenker10},
@@ -96,7 +96,7 @@ discussing
 CCs,
 pointed
 to
-``the
+`the
 pattern
 of
 inference
@@ -117,7 +117,7 @@ under
 negation
 and
 in
-questions''.
+questions'.
 Authors
 are
 not
@@ -139,7 +139,7 @@ realize}
 to
 illustrate
 that
-``[a]
+`[a]
 sentence
 can
 both
@@ -147,7 +147,7 @@ entail
 and
 presuppose
 another
-sentence'':
+sentence':
 {\em
 Joan
 realizes
@@ -157,12 +157,12 @@ deals
 with
 sentence
 structure}
-``both
+`both
 entails
 and
-presupposes''
+presupposes'
 ({\em
-ibid.}
+ibid.})
 that
 syntax
 deals
@@ -274,10 +274,10 @@ entailed.
 \@doanenote {4}
 macro:->According
 to
-\citet
+\citealt
 {kiparsky-kiparsky70}
 and
-\citet
+\citealt
 {karttunen71-implicative},
 optionally
 factive
@@ -291,7 +291,7 @@ report,
 emphasize,
 announce,
 admit,
-deduce}
+deduce},
 and
 {\em
 remember};
@@ -308,9 +308,9 @@ predicate
 in
 other
 research
-(e.g.,
+(e.g.\
 \citealt
-{simons07,kastner2015,abrusan2016,karttunen2016,aravind-hackl2017,cremers2018};
+{simons07,kastner2015,abrusan2016,karttunen2016,aravind-hackl2017,cremers2018});
 in
 \citealt
 {karttunen-zaenen2005}
@@ -319,7 +319,7 @@ and
 {karttunen2016},
 {\em
 acknowledge,
-admit}
+admit},
 and
 {\em
 confess}
@@ -330,7 +330,7 @@ factive;
 announce}
 is
 considered
-non-factive
+nonfactive
 in
 \citealt
 {karttunen-zaenen2005}.
@@ -342,12 +342,12 @@ what
 \citealt
 {karttunen71b}
 assumed,
-non-projection
+nonprojection
 of
 the
 CC
 of
-semi-factive
+semifactive
 predicates
 is
 possible
@@ -359,7 +359,7 @@ questions
 and
 conditionals
 (\citealt
-{beaver-belly}.
+{beaver-belly}).
 \@endanenote 
 \@doanenote {6}
 macro:->We
@@ -391,13 +391,14 @@ CC
 of
 these
 predicates
-(e.g.,
+(e.g.\
 \citealt
-{wyse,swanson2012,karttunen2016}.
+{wyse,swanson2012,karttunen2016}).
 \@endanenote 
 \@doanenote {7}
-macro:->\url
-{https://www.quora.com/Has-a-doctor-ever-falsely-informed-you-that-you-re-dying}
+macro:->\footnotesize
+{\url
+{https://www.quora.com/Has-a-doctor-ever-falsely-informed-you-that-you-re-dying}}
 \@endanenote 
 \@doanenote {8}
 macro:->https://books.google.de/books?id=BnU1qPRO-34C,
@@ -487,7 +488,7 @@ realized
 in
 polar
 questions
-(e.g.,
+(e.g.\
 {\em
 Is
 Maria
@@ -498,7 +499,7 @@ is
 moving
 back
 to
-Chicago?},
+Chicago?}),
 it
 is
 not
@@ -516,7 +517,7 @@ is
 entailed.
 \@endanenote 
 \@doanenote {11}
-macro:->\citet
+macro:->\citealt
 {anand-hacquard2014}
 assumed
 that
@@ -538,7 +539,7 @@ took
 reveal}
 to
 be
-non-factive,
+nonfactive,
 in
 contrast
 to,
@@ -558,7 +559,7 @@ been
 assumed
 for
 these
-6
+six
 predicates.
 \citet
 {anand-hacquard2014}
@@ -592,7 +593,7 @@ it
 is
 veridical
 and
-non-factive,
+nonfactive,
 but
 \citet
 {anand-hacquard2014}
@@ -600,9 +601,9 @@ took
 it
 to
 be
-non-veridical
+nonveridical
 and
-non-factive.
+nonfactive.
 \citet
 {swanson2012}
 took
@@ -639,7 +640,7 @@ listed
 it
 under
 the
-non-factive
+nonfactive
 predicates.
 \citet
 {swanson2012}
@@ -648,7 +649,7 @@ took
 establish}
 to
 be
-non-factive,
+nonfactive,
 but
 \citet
 {wyse}
@@ -672,22 +673,22 @@ considered
 a
 factive
 predicate
-(e.g.,
+(e.g.\
 \citealt
-{beaver-belly,anand-hacquard2014},
+{beaver-belly,anand-hacquard2014}),
 {\em
 hear}
 also
 has
 a
-non-factive
+nonfactive
 reportative
 evidential
 sense
 (see,
-e.g.,
+e.g.\
 \citealt
-{anderson86,simons07},
+{anderson86,simons07}),
 especially
 when
 it
@@ -712,7 +713,7 @@ experiments.
 macro:->\label
 {f-github}The
 experiments,
-data
+data,
 and
 R
 code
@@ -732,11 +733,8 @@ paper
 are
 available
 at
-[Github
-repository
-redacted
-for
-review].
+\url
+{https://github.com/judith-tonhauser/projective-probability}.
 All
 experiments
 were
@@ -745,18 +743,13 @@ with
 IRB
 approval.
 Exps.~1b,
-2b
+2b,
 and
 3b
 were
 preregistered:
-[link
-to
-OSF
-registration
-redacted
-for
-review].
+\url
+{WHERE?}.
 \@endanenote 
 \@doanenote {14}
 macro:->For
@@ -765,9 +758,9 @@ diagnostics
 for
 projection
 see,
-e.g.,
+e.g.\
 \citealt
-{smith-hall11,xue-onea11}
+{smith-hall11,xue-onea11},
 and
 \citealt
 {brst-lang11};
@@ -866,7 +859,7 @@ mean
 certainty
 ratings
 in
-\citetpos
+\citepos
 {tbd-variability}
 Exps.~1.
 For
@@ -896,7 +889,7 @@ of
 and
 .92
 in
-\citetpos
+\citepos
 {tbd-variability}
 Exps.~1a
 and
@@ -1081,7 +1074,7 @@ code.
 \@endanenote 
 \@doanenote {19}
 macro:->Exps.~1a,
-2a
+2a,
 and
 3a
 were
@@ -1092,7 +1085,7 @@ and
 2018,
 whereas
 Exps.~1b,
-2b
+2b,
 and
 3b
 were
@@ -1114,15 +1107,7 @@ increased
 minimum
 wage
 in
-$[$the
-region
-in
-which
-the
-researchers
-ran
-the
-experiment$]$.
+California.
 \@endanenote 
 \@doanenote {20}
 macro:->Recall
@@ -1175,7 +1160,7 @@ y-axis.
 \@doanenote {21}
 macro:->According
 to
-\citet
+\citealt
 [1739]{spector-egre2015},
 it
 is
@@ -1313,7 +1298,7 @@ and
 \emph
 {know,
 confirm,
-discover}
+discover},
 and
 {\em
 see}.
@@ -1588,7 +1573,7 @@ discussion
 in
 section
 \ref
-{s1}
+{s1})
 as
 well
 as
@@ -1682,7 +1667,7 @@ members
 of
 Congress.
 (\url
-{https://www.wonkette.com/08-21-2019}
+{https://www.wonkette.com/08-21-2019})
 \end
 {exe}
 
@@ -1705,7 +1690,7 @@ predicates
 can
 predict
 the
-non-projection
+nonprojection
 of
 factive
 CCs
@@ -2009,7 +1994,7 @@ component
 (see
 Supplement
 \ref
-{a-gaussian}.
+{a-gaussian}).
 However,
 the
 assumption
