@@ -749,7 +749,7 @@ and
 were
 preregistered:
 \url
-{WHERE?}.
+{https://osf.io/cxq47}.
 \@endanenote 
 \@doanenote {14}
 macro:->For
@@ -820,6 +820,54 @@ indirectly
 measured.
 \@endanenote 
 \@doanenote {16}
+macro:->This
+figure,
+like
+others
+in
+the
+paper,
+are
+presented
+in
+color
+in
+the
+electronic
+version
+of
+this
+article,
+but
+in
+grayscale
+in
+the
+print
+version.
+Color
+versions
+are
+also
+available
+open
+access
+along
+with
+the
+supplementary
+materials
+at
+[INSERT
+LINK
+TO
+HOSTING
+SITE
+AT
+MUSE].
+
+\@endanenote 
+\@doanenote {17}
 macro:->Choosing
 an
 arbitrary
@@ -947,7 +995,7 @@ the
 contents
 investigated.
 \@endanenote 
-\@doanenote {17}
+\@doanenote {18}
 macro:->Beta
 regression
 models
@@ -1022,7 +1070,7 @@ in
 Supplement
 D.
 \@endanenote 
-\@doanenote {18}
+\@doanenote {19}
 macro:->A
 Bayesian
 mixed
@@ -1071,7 +1119,7 @@ the
 model
 code.
 \@endanenote 
-\@doanenote {19}
+\@doanenote {20}
 macro:->Exps.~1a,
 2a,
 and
@@ -1108,7 +1156,7 @@ wage
 in
 California.
 \@endanenote 
-\@doanenote {20}
+\@doanenote {21}
 macro:->Recall
 that
 participants
@@ -1158,7 +1206,7 @@ against
 the
 y-axis.
 \@endanenote 
-\@doanenote {21}
+\@doanenote {22}
 macro:->According
 to
 \citealt
@@ -1187,7 +1235,7 @@ is
 weakly
 projective.
 \@endanenote 
-\@doanenote {22}
+\@doanenote {23}
 macro:->We
 re-plotted
 the
@@ -1216,7 +1264,7 @@ footnote
 \ref
 {f-github}.
 \@endanenote 
-\@doanenote {23}
+\@doanenote {24}
 macro:->\citealt
 {demarneffe-etal-sub23}
 found
@@ -1255,7 +1303,7 @@ as
 discussed
 above.
 \@endanenote 
-\@doanenote {24}
+\@doanenote {25}
 macro:->A
 Bayesian
 mixed
@@ -1317,7 +1365,7 @@ the
 model
 output.
 \@endanenote 
-\@doanenote {25}
+\@doanenote {26}
 macro:->A
 Bayesian
 mixed
@@ -1365,7 +1413,7 @@ the
 model
 output.
 \@endanenote 
-\@doanenote {26}
+\@doanenote {27}
 macro:->The
 differences
 in
@@ -1483,7 +1531,7 @@ also
 \citealt
 {pavlick-kwiatkowski2019}.
 \@endanenote 
-\@doanenote {27}
+\@doanenote {28}
 macro:->The
 VerbVeridicality
 dataset
@@ -1548,7 +1596,7 @@ in
 our
 Exp.~1a.
 \@endanenote 
-\@doanenote {28}
+\@doanenote {29}
 macro:->\label
 {mv}It
 is
@@ -1673,7 +1721,7 @@ Congress.
 {exe}
 
 \@endanenote 
-\@doanenote {29}
+\@doanenote {30}
 macro:->To
 be
 clear:
@@ -1839,7 +1887,7 @@ as
 independently
 motivated.
 \@endanenote 
-\@doanenote {30}
+\@doanenote {31}
 macro:->For
 such
 a
@@ -1859,7 +1907,7 @@ hofmeister2010,
 keller2000,
 sorace2005}.
 \@endanenote 
-\@doanenote {31}
+\@doanenote {32}
 macro:->The
 Widely
 Applicable
@@ -1929,7 +1977,7 @@ indicate
 better
 models.
 \@endanenote 
-\@doanenote {32}
+\@doanenote {33}
 macro:->Models
 were
 fit
@@ -1947,7 +1995,7 @@ scrucca2016}
 in
 R.
 \@endanenote 
-\@doanenote {33}
+\@doanenote {34}
 macro:->An
 additional
 problem:
@@ -2038,7 +2086,7 @@ much
 more
 complex.
 \@endanenote 
-\@doanenote {34}
+\@doanenote {35}
 macro:->Similarly,
 \citealt
 {white2021}
