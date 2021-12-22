@@ -25,7 +25,7 @@ d = read.csv("../data/CommitmentBank-All.csv", header=T, comment.char="")
 nrow(d) #11545
 length(unique(d$uID)) #1200 unique discourses
 
-#drop the non-epistemic modals
+#drop the nonepistemic modals
 dataM = droplevels(subset(d, ModalType != "AB" & ModalType != "CI" & ModalType != "DE"))
 length(unique(dataM$uID)) #982 unique discourses
 table(dataM$ModalType)
@@ -63,14 +63,14 @@ nrow(mean_proj) #45 verbs
 levels(mean_proj$VerbNum)
 
 # code the predicate type of the 45 predicates
-# abbreviations: factive (F), optionally factive (V), veridical non-factive (VNF), non-veridical non-factive (NF)
+# abbreviations: factive (F), optionally factive (V), veridical nonfactive (VNF), nonveridical nonfactive (NF)
 
 # Kiparsky & Kiparsky 1970 classification
 # factive: significant, odd, tragic, exciting, relevant, matters, counts, makes sense, suffices, amuses, bothers, regret, aware, grasp,
 # factive: comprehend, take into consideration/account, bear in mind, ignore, make clear, mind, forget, deplore, resent, care
 # optionally factive: anticipate, acknowledge, suspect, report, emphasize, announce, admit, deduce and remember
-# non-factive: likely, sure, possible, true, false, seems, appears, happens, chances, turns out, suppose, assert, allege, assume, claim
-# non-factive: charge, maintain, believe, conclude, conjecture, intimate, deem, fancy, figure
+# nonfactive: likely, sure, possible, true, false, seems, appears, happens, chances, turns out, suppose, assert, allege, assume, claim
+# nonfactive: charge, maintain, believe, conclude, conjecture, intimate, deem, fancy, figure
 
 # predicates of the 45 where a decision had to be made on how to classify (MW = Merriam Webster)
 # expect (NF, MW lists anticipate as first synonym, though also hope)
@@ -132,7 +132,7 @@ levels(mean_proj$VeridicalityGroup)
 
 # factive: 23 (raute)
 # optionally factive: 24 (triangle up)
-# non-veridical non-factive: 22 (square)
+# nonveridical nonfactive: 22 (square)
 
 #means with confidence intervals -- used for SuB poster
 mean_proj <- mutate(mean_proj,VerbNum = reorder(VerbNum, Mean, mean)) # put mean_proj in sorted order
@@ -144,6 +144,7 @@ levels(mean_proj$VerbNum)
 levels(cols$V)
 cols$Colors
 
+# Figure 5 in color
 ggplot(mean_proj, aes(x=VerbNum, y=Mean,fill=VeridicalityGroup,shape=VeridicalityGroup)) + 
   geom_point(stroke=.5,size=2.5,color="black") +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),color="gray50",alpha=.5) +
@@ -153,12 +154,14 @@ ggplot(mean_proj, aes(x=VerbNum, y=Mean,fill=VeridicalityGroup,shape=Veridicalit
         panel.grid.minor = element_blank()) +
   theme(panel.grid.major.y = element_line(colour="grey90", size=0.5)) +
   theme(axis.text.x = element_text(face = ifelse(levels(mean_proj$VerbNum) %in% bold,"bold","plain"))) +
-  scale_shape_manual(values=c(22,24,23),labels=c("non-veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
-  scale_fill_manual(values=c("gray60","tomato1","darkorchid"),labels=c("non-veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_shape_manual(values=c(22,24,23),labels=c("nonveridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_fill_manual(values=c("gray60","tomato1","darkorchid"),labels=c("nonveridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
                                                                  color=cols$Colors)) +
   theme(legend.position="bottom") +
   ylab("Mean certainty rating") +
   xlab("Predicate (with number of discourses)")
 ggsave("../graphs/means-projectivity-by-predicate-variability.pdf",height=5,width=9)
+ggsave("../../papers/factives-paper/Language-figures/color/Figure5.pdf",height=5,width=9)
+
 

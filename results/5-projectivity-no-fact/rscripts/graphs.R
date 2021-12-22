@@ -11,7 +11,6 @@ source('helpers.R')
 # load required packages
 library(tidyverse)
 library(tidybayes)
-library(dplyr)
 library(dichromat)
 library(forcats)
 library(ggrepel)
@@ -24,14 +23,6 @@ theme_set(theme_bw())
 # load clean data 
 cd = read.csv("../data/cd.csv")
 nrow(cd) #6916
-
-# plotting slider ratings suggests we should not use a linear regression model because of the slier endpoint bunching
-ggplot(cd, aes(x=response)) +
-  geom_histogram(bins=50) +
-  xlab("Rating") +
-  ylab("Number of ratings") +
-  scale_x_continuous(breaks=seq(0,1,by=.1))
-ggsave("../graphs/bunching.pdf",width=3.4,height=2)
 
 # how many ratings per predicate and per predicate-clause combination?
 
@@ -80,9 +71,9 @@ levels(means$verb)
 cols = data.frame(V=levels(means$verb))
 
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
+                ifelse(cols$V %in% c("be right","demonstrate"),"VNF",
                        ifelse(cols$V %in% c("MC"),"MC","V")))))
 
 levels(cols$V)
@@ -122,9 +113,9 @@ cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, orde
 levels(cols$V)
 
 means$VeridicalityGroup = factor(x=
-  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(means$verb  %in% c("be_right","demonstrate"),"VNF",
+                ifelse(means$verb  %in% c("be right","demonstrate"),"VNF",
                        ifelse(means$verb  %in% c("MC"),"MC","V")))),levels=rev(c("F","V","VNF","NF","MC")))
 
 subjmeans = cd %>%
@@ -134,7 +125,7 @@ subjmeans$verb <- factor(subjmeans$verb, levels = unique(levels(means$verb)))
 levels(subjmeans$verb)
 
 
-# Figure 2
+# Figure 2 Language paper color -----
 # plot of means, 95% CIs and participants' ratings 
 ggplot(means, aes(x=verb, y=Mean)) +
   # geom_point(shape=21,fill="gray70",data=subjmeans, alpha=.1, color="gray40") +
@@ -143,35 +134,37 @@ ggplot(means, aes(x=verb, y=Mean)) +
   geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_alpha(range = c(.3,1)) +
-  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","main clause\ncontrols")),name="Predicate type") +
-  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","main clause\ncontrols")),name="Predicate type") +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","main clause\ncontrols")),name="Predicate type") +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","main clause\ncontrols")),name="Predicate type") +
   # guides(fill=FALSE, shape=F) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
                                                                  color=cols$Colors)) +
   theme(legend.position="bottom") +
+  theme(panel.grid.major.x = element_blank()) +
   ylab("Mean certainty rating") +
   xlab("Predicate") +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
 ggsave("../graphs/means-projectivity-by-predicate-variability.pdf",height=4.5,width=7)
+ggsave("../../../papers/factives-paper/Language-figures/color/Figure2.pdf",height=4.5,width=7)
 
-
-# Figure 2, black and white
+# Figure 2 Language paper black and white -----
 ggplot(means, aes(x=verb, y=Mean)) +
   geom_violin(data=subjmeans,scale="width",color="gray80") +
   geom_errorbar(aes(ymin=YMin,ymax=YMax, fill=VeridicalityGroup, shape=VeridicalityGroup),width=0.1,color="black") +
   geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_alpha(range = c(.3,1)) +
-  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","main clause\ncontrols")),name="Predicate type") +
-  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","main clause\ncontrols")),name="Predicate type") +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","main clause\ncontrols")),name="Predicate type") +
+  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","main clause\ncontrols")),name="Predicate type") +
   # guides(fill=FALSE, shape=F) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
   theme(legend.position="bottom") +
+  theme(panel.grid.major.x = element_blank()) +
   ylab("Mean certainty rating") +
   xlab("Predicate") +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
 ggsave("../graphs/means-projectivity-by-predicate-variability-bw.pdf",height=4.5,width=7)
-
+ggsave("../../../papers/factives-paper/Language-figures/bw/Figure2.pdf",height=4.5,width=7)
 
 # mean projectivity by predicate, including the main clause controls (3-way distinction for Stuttgart job talk Dec 2019)
 means = cd %>%
@@ -185,9 +178,9 @@ levels(means$verb)
 cols = data.frame(V=levels(means$verb))
 
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"NF",
+                ifelse(cols$V %in% c("be right","demonstrate"),"NF",
                        ifelse(cols$V %in% c("MC"),"MC","V")))))
 
 levels(cols$V)
@@ -204,9 +197,9 @@ cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, orde
 levels(cols$V)
 
 means$VeridicalityGroup = as.factor(
-  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(means$verb  %in% c("be_right","demonstrate"),"NF",
+                ifelse(means$verb  %in% c("be right","demonstrate"),"NF",
                        ifelse(means$verb  %in% c("MC"),"MC","V")))))
 
 subjmeans = cd %>%
@@ -290,9 +283,9 @@ merged <- means %>%
 
 cols = data.frame(V=levels(t$verb))
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
+                ifelse(cols$V %in% c("be right","demonstrate"),"VNF",
                        ifelse(cols$V %in% c("MC"),"MC","V")))))
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
@@ -355,10 +348,10 @@ ggsave(file="../graphs/projection-by-contradictoriness.pdf",width=4.2,height=3.5
 
 # plots with binary entailment 
 merged$infEnt <- "no"
-merged$infEnt <- ifelse(merged$verb == "be_right" | merged$verb == "see" | merged$verb == "discover" | 
+merged$infEnt <- ifelse(merged$verb == "be right" | merged$verb == "see" | merged$verb == "discover" | 
                           merged$verb == "prove" | merged$verb == "confirm","yes","no")
 merged$contrEnt <- "no"
-merged$contrEnt <- ifelse(merged$verb == "be_right","yes","no")
+merged$contrEnt <- ifelse(merged$verb == "be right","yes","no")
 
 ggplot(merged, aes(x=mean_proj,y=infEnt)) +
   geom_text_repel(aes(label=verb),alpha=.8,size=4,color=cols$Colors) +
@@ -385,10 +378,10 @@ ggsave(file="../graphs/projection-by-contradictorinessEntailment.pdf",width=4.2,
 
 # plot by-participant variability
 cd$PresumedVerbType = as.factor(
-  ifelse(cd$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "factive", 
-         ifelse(cd$verb %in% c("pretend", "think", "suggest", "say"), "plain non-factive", 
-                ifelse(cd$verb %in% c("be_right","demonstrate"),"veridical non-factive",
-                       ifelse(cd$verb %in% c("MC"),"MC","projective non-factive")))))
+  ifelse(cd$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "factive", 
+         ifelse(cd$verb %in% c("pretend", "think", "suggest", "say"), "plain nonfactive", 
+                ifelse(cd$verb %in% c("be right","demonstrate"),"veridical nonfactive",
+                       ifelse(cd$verb %in% c("MC"),"MC","projective nonfactive")))))
 
 means = cd %>%
   group_by(PresumedVerbType,workerid) %>%

@@ -89,7 +89,7 @@ str(d$pos_rating)
 d$pos_rating <- as.numeric(d$pos_rating)
 d$neg_rating <- as.numeric(d$neg_rating)
 
-# plot veridicality ratings ----
+# Fig 16:  veridicality ratings ----
 
 # calculate veridicality mean
 v_means = d %>%
@@ -193,6 +193,7 @@ v_meansOUR = v_meansOUR %>%
 levels(v_meansOUR$VeridicalityGroup)
 # "NF"  "VNF" "V"   "F" 
 
+# Figure 16 in color
 ggplot(v_means, aes(x=verb, y=Mean)) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
   geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
@@ -202,7 +203,7 @@ ggplot(v_means, aes(x=verb, y=Mean)) +
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
   scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
-                     labels = c("non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive")) +
+                     labels = c("nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive")) +
   scale_y_continuous(limits = c(-1,2),breaks = c(-1,0,1,2)) +
   #scale_alpha(range = c(.3,1)) +
   labs(color="Predicate type") +
@@ -210,9 +211,10 @@ ggplot(v_means, aes(x=verb, y=Mean)) +
   ylab("Mean veridicality rating") +
   xlab("Predicate") 
 ggsave("../graphs/means-entailment-by-predicate.pdf",height=4,width=9)
+ggsave("../../papers/factives-paper/Language-figures/color/Figure16.pdf",height=4.5,width=7)
 
 
-# plot projection ratings  ----
+# Fig 6: projection ratings  ----
 
 p_means = d %>%
   group_by(verb) %>%
@@ -270,16 +272,20 @@ p_meansOUR = p_meansOUR %>%
 levels(p_meansOUR$VeridicalityGroup)
 # "NF"  "VNF" "V"   "F" 
 
+# Figure 6 in color
 ggplot(p_means, aes(x=verb, y=Mean)) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
   geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
   #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
   geom_text_repel(data=p_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.8) +
-  theme(panel.background = element_blank(), plot.background = element_blank(),
-        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
+  theme(#panel.background = element_blank(), 
+        #plot.background = element_blank(),
+        panel.grid.major.x = element_blank(), 
+        #panel.grid.minor = element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank()) +
   scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
-                     labels = c("non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive")) +
+                     labels = c("nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive")) +
   scale_y_continuous(limits = c(-1.3,2),breaks = c(-1,0,1,2)) +
   #scale_alpha(range = c(.3,1)) +
   labs(color="Predicate type") +
@@ -287,4 +293,6 @@ ggplot(p_means, aes(x=verb, y=Mean)) +
   ylab("Mean projection rating") +
   xlab("Predicate") 
 ggsave("../graphs/means-projection-by-predicate.pdf",height=4,width=9)
+ggsave("../../papers/factives-paper/Language-figures/color/Figure6.pdf",height=4.5,width=7)
+
 

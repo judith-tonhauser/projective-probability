@@ -39,9 +39,9 @@ levels(prop$verb)
 cols = data.frame(V=levels(prop$verb))
 
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
+                ifelse(cols$V %in% c("be right","demonstrate"),"VNF",
                        ifelse(cols$V %in% c("entailing", "non-entailing"),"MC","V")))))
 
 levels(cols$V)
@@ -56,9 +56,9 @@ cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid",
 # plot of proportions
 
 prop$VeridicalityGroup = as.factor(
-  ifelse(prop$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(prop$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(prop$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(prop$verb  %in% c("be_right","demonstrate"),"VNF",
+                ifelse(prop$verb  %in% c("be right","demonstrate"),"VNF",
                        ifelse(prop$verb  %in% c("entailing", "non-entailing"),"MC","V")))))
 
 prop = prop %>%
@@ -77,8 +77,8 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup
   geom_jitter(data=cd,aes(y=jittery),shape=1,color="gray40",alpha=.2,fill="black",height=.2,width=.3) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25,color="black") +
   geom_point(stroke=.5,size=2.5,color="black") +
-  scale_shape_manual(values=c(21,22,25,24,23),labels=c("control","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
-  scale_fill_manual(values=c("black","gray60","dodgerblue","tomato1","darkorchid"),labels=c("control","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_shape_manual(values=c(21,22,25,24,23),labels=c("control","nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_fill_manual(values=c("black","gray60","dodgerblue","tomato1","darkorchid"),labels=c("control","nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
                                                                  color=cols$Colors)) +
   theme(legend.position="bottom") +
@@ -86,6 +86,8 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup
   ylab("Proportion of 'yes (def. follows)' ratings") +
   xlab("Predicate") 
 ggsave("../graphs/proportion-by-predicate-variability-individual.pdf",height=4.5,width=7)
+ggsave("../../../papers/factives-paper/Language-figures/color/Figure11.pdf",height=4.5,width=7)
+
 
 # Figure 11, black and white
 ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup)) +
@@ -95,14 +97,15 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup
   geom_jitter(data=cd,aes(y=jittery),shape=1,color="gray40",alpha=.2,fill="black",height=.2,width=.3) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25,color="black") +
   geom_point(stroke=.5,size=2.5,color="black") +
-  scale_shape_manual(values=c(21,22,25,24,23),labels=c("control","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
-  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=c("control","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_shape_manual(values=c(21,22,25,24,23),labels=c("control","nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=c("control","nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) + 
   theme(legend.position="bottom") +
   theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
   ylab("Proportion of 'yes (def. follows)' ratings") +
   xlab("Predicate") 
 ggsave("../graphs/proportion-by-predicate-variability-individual-bw.pdf",height=4.5,width=7)
+ggsave("../../../papers/factives-paper/Language-figures/bw/Figure11.pdf",height=4.5,width=7)
 
 
 # plot Turker's 'no' responses for predicates up to "demonstrate" ----
@@ -111,8 +114,8 @@ table(cd$verb)
 # subset by relevant 13 predicates
 no <- droplevels(subset(cd,verb == "demonstrate" | verb == "confess" |verb == "reveal" |
                                     verb == "establish" | verb == "admit" |verb == "acknowledge" |
-                                    verb == "be_annoyed" | verb == "confirm" | verb == "discover" | 
-                                    verb == "know" | verb == "see" | verb == "be_right" | verb == "prove"))
+                                    verb == "be annoyed" | verb == "confirm" | verb == "discover" | 
+                                    verb == "know" | verb == "see" | verb == "be right" | verb == "prove"))
 
 table(no$verb)
 str(no$verb)
@@ -138,18 +141,18 @@ length(unique(no[no$response == "No",]$workerid)) #80 different workers
 # plot
 
 no$VeridicalityGroup = as.factor(
-  ifelse(no$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(no$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(no$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(no$verb  %in% c("be_right","demonstrate"),"VNF",
+                ifelse(no$verb  %in% c("be right","demonstrate"),"VNF",
                        ifelse(no$verb  %in% c("entailing C", "non-ent. C"),"MC","V")))))
 
 # define colors for the predicates
 cols = data.frame(V=levels(no$verb))
 
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
+                ifelse(cols$V %in% c("be right","demonstrate"),"VNF",
                        ifelse(cols$V %in% c("entailing C", "non-ent. C"),"MC","V")))))
 
 levels(cols$V)
@@ -240,8 +243,8 @@ summary(m)
 #   verbacknowledge   -2.7949     1.0519  -2.657  0.00788 ** 
 #   verbadmit         -2.9769     1.0463  -2.845  0.00444 ** 
 #   verbannounce      -5.8638     1.0155  -5.774 7.72e-09 ***
-#   verbbe_annoyed    -2.4563     1.0647  -2.307  0.02105 *  
-#   verbbe_right      -0.4467     1.2817  -0.349  0.72743    
+#   verbbe annoyed    -2.4563     1.0647  -2.307  0.02105 *  
+#   verbbe right      -0.4467     1.2817  -0.349  0.72743    
 # verbconfess       -4.0361     1.0263  -3.933 8.40e-05 ***
 #   verbconfirm       -2.1371     1.0806  -1.978  0.04795 *  
 #   verbdemonstrate   -4.5122     1.0216  -4.417 1.00e-05 ***

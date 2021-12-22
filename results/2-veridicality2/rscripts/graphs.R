@@ -37,12 +37,12 @@ ggsave("../graphs/bunching.pdf",width=3.4,height=2)
 # target data (20 items per Turker)
 names(cd)
 table(cd$verb)
-t <- subset(cd, cd$verb != "non-contrd. C" & cd$verb != "contradictory C")
+t <- subset(cd, cd$verb != "noncontrd. C" & cd$verb != "contradictory C")
 t <- droplevels(t)
 nrow(t) #5260 / 20 = 263 Turkers
 
 # target data plus good (entailing) controls
-te <- droplevels(subset(cd,cd$verb != "non-contrd. C"))
+te <- droplevels(subset(cd,cd$verb != "noncontrd. C"))
 nrow(te) #6312
 
 # how many ratings per predicate and per predicate-clause combination?
@@ -89,7 +89,7 @@ write.csv(means, file="../data/veridicality_item_means.csv",row.names=F,quote=F)
 table(cd$verb)
 
 cd = cd %>%
-  mutate(verb = fct_recode(verb,"non-contrad."="non-contrd. C","contradictory"="contradictory C"))
+  mutate(verb = fct_recode(verb,"noncontrad."="noncontrd. C","contradictory"="contradictory C"))
 
 # plot of means with participant ratings (4-way distinction for factivity paper)
 means = cd %>%
@@ -110,10 +110,10 @@ levels(cols$V)
 #cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, ordered = TRUE)
 
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
-                       ifelse(cols$V %in% c("non-contrad.","contradictory"),"MC","V")))))
+                ifelse(cols$V %in% c("be right","demonstrate"),"VNF",
+                       ifelse(cols$V %in% c("noncontrad.","contradictory"),"MC","V")))))
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
                       ifelse(cols$VeridicalityGroup == "NF", "gray60", 
@@ -131,10 +131,10 @@ subjmeans$verb <- factor(subjmeans$verb, levels = unique(levels(means$verb)))
 levels(subjmeans$verb)
 
 means$VeridicalityGroup = factor(x=
-                                   ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+                                   ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
                                           ifelse(means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                                                 ifelse(means$verb  %in% c("be_right","demonstrate"),"VNF",
-                                                        ifelse(means$verb  %in% c("contradictory","non-contrad."),"control","V")))),levels=rev(c("F","V","VNF","NF","control")))
+                                                 ifelse(means$verb  %in% c("be right","demonstrate"),"VNF",
+                                                        ifelse(means$verb  %in% c("contradictory","noncontrad."),"control","V")))),levels=rev(c("F","V","VNF","NF","control")))
 
 # Figure 13
 ggplot(means, aes(x=verb, y=Mean)) +
@@ -143,14 +143,17 @@ ggplot(means, aes(x=verb, y=Mean)) +
   geom_point(aes(fill=VeridicalityGroup,shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_alpha(range = c(.3,1)) +
-  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
-  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
   theme(legend.position="bottom") +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
                                                                  color=cols$Colors)) +
+  theme(panel.grid.major.x = element_blank()) +
   ylab("Mean contradictoriness rating") +
   xlab("Predicate")
 ggsave("../graphs/means-contradictoriness-by-predicate-variability.pdf",height=4.5,width=7)
+ggsave("../../../papers/factives-paper/Language-figures/color/Figure13.pdf",height=4.5,width=7)
+
 
 # Figure 13, black and white
 ggplot(means, aes(x=verb, y=Mean)) +
@@ -159,13 +162,16 @@ ggplot(means, aes(x=verb, y=Mean)) +
   geom_point(aes(fill=VeridicalityGroup,shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_alpha(range = c(.3,1)) +
-  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
-  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
+  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
   theme(legend.position="bottom") +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
+  theme(panel.grid.major.x = element_blank()) +
   ylab("Mean contradictoriness rating") +
   xlab("Predicate")
 ggsave("../graphs/means-contradictoriness-by-predicate-variability-bw.pdf",height=4.5,width=7)
+ggsave("../../../papers/factives-paper/Language-figures/bw/Figure13.pdf",height=4.5,width=7)
+
 
 
 # plot of means with participant ratings (3-way distinction for Tuebingen talk)
@@ -187,10 +193,10 @@ levels(cols$V)
 cols$V <- factor(cols$V, levels = levels(means$verb))
 
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"NF",
-                       ifelse(cols$V %in% c("non-contrd. C","contradictory C"),"MC","V")))))
+                ifelse(cols$V %in% c("be right","demonstrate"),"NF",
+                       ifelse(cols$V %in% c("noncontrd. C","contradictory C"),"MC","V")))))
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
                       ifelse(cols$VeridicalityGroup == "NF", "gray60", 
@@ -208,10 +214,10 @@ subjmeans$verb <- factor(subjmeans$verb, levels = unique(levels(means$verb)))
 levels(subjmeans$verb)
 
 means$VeridicalityGroup = as.factor(
-  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(means$verb  %in% c("be_right","demonstrate"),"NF",
-                       ifelse(means$verb  %in% c("non-contrd. C","contradictory C"),"MC","V")))))
+                ifelse(means$verb  %in% c("be right","demonstrate"),"NF",
+                       ifelse(means$verb  %in% c("noncontrd. C","contradictory C"),"MC","V")))))
 
 ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
   geom_point(shape=21,fill="gray60",data=subjmeans, alpha=.1, color="gray40") +
@@ -249,9 +255,9 @@ cd$verb <-factor(cd$verb, levels=levels(means$Verb))
 
 cols = data.frame(V=levels(cd$verb))
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"VNF","V"))))
+                ifelse(cols$V %in% c("be right","demonstrate"),"VNF","V"))))
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "blue", 
                       ifelse(cols$VeridicalityGroup == "NF", "brown", 
                              ifelse(cols$VeridicalityGroup == "VNF","cornflowerblue","black")))
@@ -279,10 +285,10 @@ cd$verb <-factor(cd$verb, levels=levels(means$Verb))
 
 cols = data.frame(V=levels(cd$verb))
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
-                       ifelse(cols$V %in% c("non-contrd. C","contradictory C"),"control","V")))))
+                ifelse(cols$V %in% c("be right","demonstrate"),"VNF",
+                       ifelse(cols$V %in% c("noncontrd. C","contradictory C"),"control","V")))))
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
                       ifelse(cols$VeridicalityGroup == "NF", "gray60", 
@@ -295,10 +301,10 @@ subjmeans = cd %>%
   mutate(Verb = fct_reorder(as.factor(verb),Mean))
 
 means$VeridicalityGroup = as.factor(
-  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(means$verb  %in% c("be_right","demonstrate"),"VNF",
-                       ifelse(means$verb  %in% c("non-contrd. C","contradictory C"),"control","V")))))
+                ifelse(means$verb  %in% c("be right","demonstrate"),"VNF",
+                       ifelse(means$verb  %in% c("noncontrd. C","contradictory C"),"control","V")))))
 
 # means for semfest talk
 
@@ -383,8 +389,8 @@ ggsave("../graphs/veridicality-subjmeans.pdf",height=3,width=6.5)
 
 # plot contradictoriness rating by participant for entailing predicates only
 table(t$verb)
-entailing = droplevels(subset(t,t$verb == "know" | t$verb == "be_right" 
-                              | t$verb == "be_annoyed" | t$verb == "reveal" 
+entailing = droplevels(subset(t,t$verb == "know" | t$verb == "be right" 
+                              | t$verb == "be annoyed" | t$verb == "reveal" 
                               | t$verb == "discover" | t$verb == "see" | t$verb == "establish"))
 nrow(entailing) #1883 = 269 participants x 7 entailing verbs
 

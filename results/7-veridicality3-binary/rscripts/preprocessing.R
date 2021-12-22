@@ -34,7 +34,7 @@ nrow(d) #12068
 table(d$verb)
 
 d = d %>%
-  mutate(verb=recode(verb, control_good = "entailing C", control_bad = "non-ent. C", annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform"),
+  mutate(verb=recode(verb, control_good = "entailing C", control_bad = "non-ent. C", annoyed = "be annoyed", be_right_that = "be right", inform_Sam = "inform"),
          nResponse = ifelse(response == "Yes",1,0))
 
 head(d)

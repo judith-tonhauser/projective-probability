@@ -218,10 +218,10 @@ round(mean(c.good$response),2) #.06
 
 # change the name of the predicates
 table(d$verb)
-d$verb <- gsub("be_right_that","be_right",d$verb)
+d$verb <- gsub("be_right_that","be right",d$verb)
 d$verb <- gsub("inform_Sam","inform",d$verb)
-d$verb <- gsub("annoyed","be_annoyed",d$verb)
-d$verb <- gsub("control_good","non-contrd. C",d$verb)
+d$verb <- gsub("annoyed","be annoyed",d$verb)
+d$verb <- gsub("control_good","noncontrd. C",d$verb)
 d$verb <- gsub("control_bad","contradictory C",d$verb)
 
 # save clean data = cd

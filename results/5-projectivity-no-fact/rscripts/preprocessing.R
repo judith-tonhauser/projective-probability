@@ -11,7 +11,6 @@ source('helpers.R')
 # load required packages
 library(tidyverse)
 library(tidybayes)
-library(dplyr)
 library(dichromat)
 library(forcats)
 library(ggrepel)
@@ -20,7 +19,7 @@ library(knitr)
 theme_set(theme_bw())
 
 # load raw data
-d = read.csv("../experiment.csv")
+d = read.csv("../data/experiment.csv")
 nrow(d) #7800 = 300 participants x 26 items
 names(d)
 length(unique(d$workerid)) #300 participants
@@ -204,7 +203,8 @@ round(mean(c$response),2) #.11
 
 # change cd verb names to match veridicality names
 d = d %>%
-  mutate(verb=recode(verb, control = "MC", annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform"))
+  mutate(verb=recode(verb, control = "MC", annoyed = "be annoyed", be_right_that = "be right", inform_Sam = "inform"))
+table(d$verb)
 
 # save clean data
 cd = d

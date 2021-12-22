@@ -19,14 +19,14 @@ theme_set(theme_bw())
 # MV1: judgments of "did that thing happen?" for positive and negated predicates with "that" complements
 mv1 = read.csv("../data/mega-veridicality-v1/mega-veridicality-v1.csv")
 
-# MV2: judgments of "did that thing happen?" for pos/neg predicates with non-finite complements
+# MV2: judgments of "did that thing happen?" for pos/neg predicates with nonfinite complements
 # not relevant for our paper or comparison
 #mv2 = read.csv("../data/mega-veridicality-v2/mega-veridicality-v2.csv")
 
 nrow(mv1) #21760
 #nrow(mv2) #50260
 
-### exclude non-American English speakers
+### exclude nonAmerican English speakers
 length(unique(mv1$participant)) #291
 #length(unique(mv2$participant)) #635
 
@@ -55,28 +55,29 @@ table(mv1$veridicality)
 
 # create veridicality_num which codes "yes" as 1, "no" as -1 and "maybe" as 0
 table(mv1$veridicality)
-
 str(mv1$veridicality)
-mv1$veridicality_num <- as.numeric(mv1$veridicality)
 
+mv1$veridicality_num[mv1$veridicality == "maybe"] <- 0 
+mv1$veridicality_num[mv1$veridicality == "no"] <- -1
+mv1$veridicality_num[mv1$veridicality == "yes"] <- 1
+str(mv1$veridicality_num)
+
+# check that all is in order
+table(mv1$veridicality)
 table(mv1$veridicality_num)
-
-mv1$veridicality_num[mv1$veridicality_num == 1] <- 0 #1 was maybe
-mv1$veridicality_num[mv1$veridicality_num == 2] <- -1 #2 was no
-mv1$veridicality_num[mv1$veridicality_num == 3] <- 1 #3 was yes
 
 # we had 20 predicates, their MV1 does not include "be right"
 table(mv1$verb) 
 
 # our 19 predicates 
-our_preds <- c("be_annoyed", "discover", "know", "reveal", "see", "pretend", "suggest", "say", "think", 
+our_preds <- c("be annoyed", "discover", "know", "reveal", "see", "pretend", "suggest", "say", "think", 
                "demonstrate", "acknowledge", "admit", "announce", "confess", "confirm", "establish", "hear", "inform", "prove")
 our_preds
 length(our_preds) #19
 
 # rename their predicate "annoy" for comparison with our "be annoyed"
 mv1 <- mv1 %>% 
-  mutate(verb=recode(verb, annoy = "be_annoyed"))
+  mutate(verb=recode(verb, annoy = "be annoyed"))
 
 # create items for mv1 
 
@@ -101,13 +102,13 @@ table(mv1$item)
 write.csv(mv1, "../data/mv1.csv")
 nrow(mv1) #21692
 
-# plot veridicality ratings ----
+# Fig 17: veridicality ratings ----
 
 # load data 
 mv1 = read.csv("../data/mv1.csv")
 nrow(mv1) #21692
 
-# create relevant subset: ratings for positive non-conditional matrix sentences
+# create relevant subset: ratings for positive nonconditional matrix sentences
 mv1_tmp <- droplevels(subset(mv1, mv1$polarity == "positive" & mv1$conditional2 == "matrix"))
 t <- table(mv1_tmp$verb)
 min(t) #9
@@ -139,7 +140,7 @@ cols = data.frame(V=levels(p_meansOUR$verb))
 cols
 
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
                 ifelse(cols$V %in% c("demonstrate"),"VNF", "V"))))
 
@@ -156,15 +157,15 @@ cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid",
 
 
 p_meansOUR$VeridicalityGroup = as.factor(
-  ifelse(p_meansOUR$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(p_meansOUR$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(p_meansOUR$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(p_meansOUR$verb  %in% c("be_right","demonstrate"),"VNF",
+                ifelse(p_meansOUR$verb  %in% c("be right","demonstrate"),"VNF",
                        ifelse(p_meansOUR$verb  %in% c("MC"),"MC","V")))))
 
 p_means$VeridicalityGroup = as.factor(
-  ifelse(p_means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(p_means$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(p_means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(p_means$verb  %in% c("be_right","demonstrate"),"VNF",
+                ifelse(p_means$verb  %in% c("be right","demonstrate"),"VNF",
                        ifelse(p_means$verb  %in% c("hear","acknowledge","confess","prove","confirm","establish","inform","announce","admit"),"V","X")))))
 
 cols$Colors
@@ -174,16 +175,20 @@ p_meansOUR = p_meansOUR %>%
 levels(p_meansOUR$VeridicalityGroup)
 # "NF"  "VNF" "V"   "F" 
 
+# Figure 17 in color
 ggplot(p_means, aes(x=verb, y=Mean)) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
   geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
   #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
   geom_text_repel(data=p_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.8) +
-  theme(panel.background = element_blank(), plot.background = element_blank(),
-        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
+  theme(#panel.background = element_blank(), 
+    #plot.background = element_blank(),
+    panel.grid.major.x = element_blank(), 
+    #panel.grid.minor = element_blank(),
+    axis.text.x=element_blank(),
+    axis.ticks.x=element_blank()) +
   scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
-                     labels = c("non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive")) +
+                     labels = c("nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive")) +
   scale_y_continuous(limits = c(-1.1,1.1),breaks = c(-1,0,1)) +
   #scale_alpha(range = c(.3,1)) +
   labs(color="Predicate type") +
@@ -191,9 +196,10 @@ ggplot(p_means, aes(x=verb, y=Mean)) +
   ylab("Mean veridicality rating") +
   xlab("Predicate") 
 ggsave("../graphs/means-entailment-by-predicate.pdf",height=4,width=9)
+ggsave("../../papers/factives-paper/Language-figures/color/Figure17.pdf",height=4,width=9)
 
 
-# plot projection ratings  ----
+# Fig 7: projection ratings ----
 
 # load data
 mv1 = read.csv("../data/mv1.csv")
@@ -230,7 +236,7 @@ cols = data.frame(V=levels(p_meansOUR$verb))
 cols
 
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
                 ifelse(cols$V %in% c("demonstrate"),"VNF", "V"))))
 
@@ -247,15 +253,15 @@ cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid",
 
 
 p_meansOUR$VeridicalityGroup = as.factor(
-  ifelse(p_meansOUR$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(p_meansOUR$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(p_meansOUR$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(p_meansOUR$verb  %in% c("be_right","demonstrate"),"VNF",
+                ifelse(p_meansOUR$verb  %in% c("be right","demonstrate"),"VNF",
                        ifelse(p_meansOUR$verb  %in% c("MC"),"MC","V")))))
 
 p_means$VeridicalityGroup = as.factor(
-  ifelse(p_means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(p_means$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(p_means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(p_means$verb  %in% c("be_right","demonstrate"),"VNF",
+                ifelse(p_means$verb  %in% c("be right","demonstrate"),"VNF",
                        ifelse(p_means$verb  %in% c("hear","acknowledge","confess","prove","confirm","establish","inform","announce","admit"),"V","X")))))
 
 cols$Colors
@@ -265,16 +271,20 @@ p_meansOUR = p_meansOUR %>%
 levels(p_meansOUR$VeridicalityGroup)
 # "NF"  "VNF" "V"   "F" 
 
+# Figure 7 in color
 ggplot(p_means, aes(x=verb, y=Mean)) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
   geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
   #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
   geom_text_repel(data=p_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.5) +
-  theme(panel.background = element_blank(), plot.background = element_blank(),
-        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
+  theme(#panel.background = element_blank(), 
+    #plot.background = element_blank(),
+    panel.grid.major.x = element_blank(), 
+    #panel.grid.minor = element_blank(),
+    axis.text.x=element_blank(),
+    axis.ticks.x=element_blank()) +
   scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
-                     labels = c("non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive")) +
+                     labels = c("nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive")) +
   scale_y_continuous(limits = c(-.7,1.1),breaks = c(-.5,0,1)) +
   #scale_alpha(range = c(.3,1)) +
   labs(color="Predicate type") +
@@ -282,6 +292,8 @@ ggplot(p_means, aes(x=verb, y=Mean)) +
   ylab("Mean projection rating") +
   xlab("Predicate") 
 ggsave("../graphs/means-projection-by-predicate.pdf",height=4,width=9)
+ggsave("../../papers/factives-paper/Language-figures/color/Figure7.pdf",height=4,width=9)
+
 
 # which predicates are veridical or factive according to definition (10b)? ----
 
@@ -347,7 +359,7 @@ ggplot(p_means, aes(x=verb, y=Mean)) +
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
   #scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
-                     #labels = c("non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive")) +
+                     #labels = c("nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive")) +
   scale_y_continuous(limits = c(-.7,1.1),breaks = c(-.5,0,1)) +
   #scale_alpha(range = c(.3,1)) +
   labs(color="Predicate type") +
@@ -376,7 +388,7 @@ t$total <- t$maybe + t$no + t$yes
 head(t)
 
 # Taking the majority response boundaries as a guide, the vast majority of verb-frame pairs 
-# are nonveridical (115 verbs), non-factive veridical (177 verbs), or factive (199 verbs), 
+# are nonveridical (115 verbs), nonfactive veridical (177 verbs), or factive (199 verbs), 
 # with far fewer being antiveridical in either positive or negative frames.
 
 # majority response: majority "yes" means "veridical"?
@@ -432,11 +444,11 @@ d = t %>%
 head(d)
 
 # Taking the majority response boundaries as a guide, the vast majority of verb-frame pairs 
-# are nonveridical (115 verbs), non-factive veridical (177 verbs), or factive (199 verbs), 
+# are nonveridical (115 verbs), nonfactive veridical (177 verbs), or factive (199 verbs), 
 # with far fewer being antiveridical in either positive or negative frames.
 
 
-# which predicates are veridical non-factive and which are factive?
+# which predicates are veridical nonfactive and which are factive?
 # can't figure out how they got their numbers...
 
 d$vnf <- ifelse(d$veridical == "yes" & d$projective == "no","yes","no")
@@ -787,11 +799,11 @@ table(mv1_s$verb)
 
 ## plots of their findings for our predicates ----
 
-# plot veridicality ratings (only use positive non-conditional matrix sentences)
+# plot veridicality ratings (only use positive nonconditional matrix sentences)
 
 table(mv1_s$verb,mv1_s$conditional2,mv1_s$polarity) #9-10 ratings per positive matrix sentence
 
-# create temporary subset: ratings for positive non-conditional matrix sentences
+# create temporary subset: ratings for positive nonconditional matrix sentences
 mv1_s_tmp <- droplevels(subset(mv1_s, mv1_s$polarity == "positive" & mv1_s$conditional2 == "matrix"))
 length(unique(mv1_s_tmp$participant)) #119 participants gave ratings
 

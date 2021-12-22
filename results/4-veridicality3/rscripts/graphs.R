@@ -103,9 +103,9 @@ levels(cols$V)
 #cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, ordered = TRUE)
 
 cols$VeridicalityGroup = factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
+                ifelse(cols$V %in% c("be right","demonstrate"),"VNF",
                        ifelse(cols$V %in% c("non-entailing","entailing"),"MC","V")))),levels=c("F","V","VNF","NF","MC"))
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
@@ -123,9 +123,9 @@ subjmeans$verb <- factor(subjmeans$verb, levels = unique(levels(means$verb)))
 levels(subjmeans$verb)
 
 means$VeridicalityGroup = factor(
-  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(means$verb  %in% c("be_right","demonstrate"),"VNF",
+                ifelse(means$verb  %in% c("be right","demonstrate"),"VNF",
                        ifelse(means$verb  %in% c("non-entailing","entailing"),"control","V")))),levels=rev(c("F","V","VNF","NF","control")))
 
 levels(means$VeridicalityGroup)
@@ -138,15 +138,17 @@ ggplot(means, aes(x=verb, y=Mean)) +
   geom_violin(data=subjmeans,scale="width",color="gray80") +
   geom_errorbar(aes(ymin=YMin,ymax=YMax, fill=VeridicalityGroup, shape=VeridicalityGroup),width=0.1,color="black") +
   geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
-  scale_shape_manual(values=c( 21, 22, 25, 24, 23),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
-  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
+  scale_shape_manual(values=c( 21, 22, 25, 24, 23),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
   # guides(fill=FALSE, shape=F) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, color=cols$Colors),legend.position="bottom") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_alpha(range = c(.3,1)) +
+  theme(panel.grid.major.x = element_blank()) +
   ylab("Mean inference rating") +
   xlab("Predicate")
 ggsave("../graphs/means-inference-by-predicate-variability.pdf",height=4.5,width=7)
+ggsave("../../../papers/factives-paper/Language-figures/color/Figure9.pdf",height=4.5,width=7)
 
 # Figure 9, black and white
 ggplot(means, aes(x=verb, y=Mean)) +
@@ -154,15 +156,17 @@ ggplot(means, aes(x=verb, y=Mean)) +
   geom_violin(data=subjmeans,scale="width",color="gray80") +
   geom_errorbar(aes(ymin=YMin,ymax=YMax, fill=VeridicalityGroup, shape=VeridicalityGroup),width=0.1,color="black") +
   geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
-  scale_shape_manual(values=c( 21, 22, 25, 24, 23),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
-  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=rev(c("factive","optionally\nfactive","veridical\nnon-factive","non-veridical\nnon-factive","control")),name="Predicate type") +
+  scale_shape_manual(values=c( 21, 22, 25, 24, 23),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
+  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
   # guides(fill=FALSE, shape=F) +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1),legend.position="bottom") +
   scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
   scale_alpha(range = c(.3,1)) +
+  theme(panel.grid.major.x = element_blank()) +
   ylab("Mean inference rating") +
   xlab("Predicate")
 ggsave("../graphs/means-inference-by-predicate-variability-bw.pdf",height=4.5,width=7)
+ggsave("../../../papers/factives-paper/Language-figures/bw/Figure9.pdf",height=4.5,width=7)
 
 # plot of means with participant ratings (3-way distinction, Tuebingen talk)
 means = cd %>%
@@ -184,9 +188,9 @@ levels(cols$V)
 cols$V <- factor(cols$V, levels = levels(means$verb))
 
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"NF",
+                ifelse(cols$V %in% c("be right","demonstrate"),"NF",
                        ifelse(cols$V %in% c("non-ent. C","entailing C"),"MC","V")))))
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
@@ -205,9 +209,9 @@ subjmeans$verb <- factor(subjmeans$verb, levels = unique(levels(means$verb)))
 levels(subjmeans$verb)
 
 means$VeridicalityGroup = as.factor(
-  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(means$verb  %in% c("be_right","demonstrate"),"NF",
+                ifelse(means$verb  %in% c("be right","demonstrate"),"NF",
                        ifelse(means$verb  %in% c("non-ent. C","entailing C"),"MC","V")))))
 
 ggplot(means, aes(x=verb, y=Mean, fill=VeridicalityGroup)) +
@@ -227,12 +231,12 @@ ggsave("../graphs/means-inference-by-predicate-variability-3way.pdf",height=4,wi
 
 # plot by-participant variability
 cd$PresumedVerbType = as.factor(
-  ifelse(cd$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "factive", 
-         ifelse(cd$verb %in% c("pretend", "think", "suggest", "say"), "plain non-factive", 
-                ifelse(cd$verb %in% c("be_right","demonstrate"),"veridical non-factive",
+  ifelse(cd$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "factive", 
+         ifelse(cd$verb %in% c("pretend", "think", "suggest", "say"), "plain nonfactive", 
+                ifelse(cd$verb %in% c("be right","demonstrate"),"veridical nonfactive",
                        ifelse(cd$verb %in% c("non-ent. C"),"non-entailing control",
                               ifelse(cd$verb %in% c("entailing C"),"entailing control",
-                                     "projective non-factive"))))))
+                                     "projective nonfactive"))))))
 table(cd$PresumedVerbType,cd$verb)
 
 means = cd %>%
@@ -286,9 +290,9 @@ table(cd$verb)
 
 cols = data.frame(V=levels(cd$Verb))
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
+                ifelse(cols$V %in% c("be right","demonstrate"),"VNF",
                        ifelse(cols$V %in% c("entailing C", "non-ent. C"),"control","V")))))
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
@@ -318,9 +322,9 @@ cd$verb <-factor(cd$verb, levels=means[order(means$Median), "verb"])
 
 cols = data.frame(V=levels(cd$Verb))
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
+                ifelse(cols$V %in% c("be right","demonstrate"),"VNF",
                        ifelse(cols$V %in% c("entailing C", "non-ent. C"),"control","V")))))
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 

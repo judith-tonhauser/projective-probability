@@ -33,9 +33,9 @@ levels(prop$verb)
 cols = data.frame(V=levels(prop$verb))
 
 cols$VeridicalityGroup = as.factor(
-  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("be_right","demonstrate"),"VNF",
+                ifelse(cols$V %in% c("be right","demonstrate"),"VNF",
                        ifelse(cols$V %in% c("MC"),"MC","V")))))
 
 levels(cols$V)
@@ -51,9 +51,9 @@ cols$Colors
 # plot of proportions
 
 prop$VeridicalityGroup = as.factor(
-  ifelse(prop$verb %in% c("know", "discover", "reveal", "see", "be_annoyed"), "F", 
+  ifelse(prop$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", 
          ifelse(prop$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(prop$verb  %in% c("be_right","demonstrate"),"VNF",
+                ifelse(prop$verb  %in% c("be right","demonstrate"),"VNF",
                        ifelse(prop$verb  %in% c("MC"),"MC","V")))))
 
 prop = prop %>%
@@ -63,8 +63,8 @@ levels(prop$VeridicalityGroup)
 
 # factive: 23 (raute)
 # optionally factive: 24 (triangle up)
-# veridical non-factive: 25 (triangle down)
-# non-veridical non-factive: 22 (square)
+# veridical nonfactive: 25 (triangle down)
+# nonveridical nonfactive: 22 (square)
 # MC: 21 (circle)
 
 # NF, V, VNF, MC, F
@@ -85,15 +85,18 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup
   geom_jitter(data=cd,aes(y=jittery),shape=1,color="gray40",alpha=.2,fill="black",height=.2,width=.3) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25,color="black") +
   geom_point(stroke=.5,size=2.5,color="black") +
-  scale_shape_manual(values=c(21,22,25,24,23),labels=c("main clause\ncontrols","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
-  scale_fill_manual(values=c("black","gray60","dodgerblue","tomato1","darkorchid"),labels=c("main clause\ncontrols","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_shape_manual(values=c(21,22,25,24,23),labels=c("main clause\ncontrols","nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_fill_manual(values=c("black","gray60","dodgerblue","tomato1","darkorchid"),labels=c("main clause\ncontrols","nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
                                                                  color=cols$Colors)) +
   theme(legend.position="bottom") +
+  #theme(panel.grid.major.x = element_blank()) +
   #theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
   ylab("Proportion of 'yes (certain)' ratings") +
   xlab("Predicate") 
 ggsave("../graphs/proportion-by-predicate-variability.pdf",height=4.5,width=7)
+ggsave("../../../papers/factives-paper/Language-figures/color/Figure4.pdf",height=4.5,width=7)
+
 
 # Figure 4, black and white
 ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup)) +
@@ -104,13 +107,16 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup
   geom_jitter(data=cd,aes(y=jittery),shape=1,color="gray40",alpha=.2,fill="black",height=.2,width=.3) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.25,color="black") +
   geom_point(stroke=.5,size=2.5,color="black") +
-  scale_shape_manual(values=c(21,22,25,24,23),labels=c("main clause\ncontrols","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
-  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=c("main clause\ncontrols","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
-  # scale_fill_manual(values=c("black","gray60","dodgerblue","tomato1","darkorchid"),labels=c("main clause\ncontrols","non-veridical\nnon-factive","veridical\nnon-factive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_shape_manual(values=c(21,22,25,24,23),labels=c("main clause\ncontrols","nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=c("main clause\ncontrols","nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
+  # scale_fill_manual(values=c("black","gray60","dodgerblue","tomato1","darkorchid"),labels=c("main clause\ncontrols","nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
   theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) + 
                                                                  # color=cols$Colors)) +
   theme(legend.position="bottom") +
+  #theme(panel.grid.major.x = element_blank()) +
   #theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
   ylab("Proportion of 'yes (certain)' ratings") +
   xlab("Predicate") 
 ggsave("../graphs/proportion-by-predicate-variability=bw.pdf",height=4.5,width=7)
+ggsave("../../../papers/factives-paper/Language-figures/bw/Figure4.pdf",height=4.5,width=7)
+

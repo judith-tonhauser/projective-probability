@@ -245,9 +245,9 @@ round(mean(c.good$response),2) #.96
 
 # change the name of the predicates
 table(d$verb)
-d$verb <- gsub("be_right_that","be_right",d$verb)
+d$verb <- gsub("be_right_that","be right",d$verb)
 d$verb <- gsub("inform_Sam","inform",d$verb)
-d$verb <- gsub("annoyed","be_annoyed",d$verb)
+d$verb <- gsub("annoyed","be annoyed",d$verb)
 d$verb <- gsub("control_good","entailing C",d$verb)
 d$verb <- gsub("control_bad","non-ent. C",d$verb)
 d$verb <- as.factor(d$verb)

@@ -39,7 +39,7 @@ nrow(d) #13650
 
 # recode some names and add nResponse column (numeric variant of yes/no response)
 d = d %>%
-  mutate(verb=recode(verb, control = "MC", annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform"),
+  mutate(verb=recode(verb, control = "MC", annoyed = "be annoyed", be_right_that = "be right", inform_Sam = "inform"),
          nResponse = ifelse(response == "Yes",1,0))
 
 # look at Turkers' comments

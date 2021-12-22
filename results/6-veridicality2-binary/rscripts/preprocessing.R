@@ -37,7 +37,7 @@ nrow(d) #12040
 table(d$verb)
 
 d = d %>%
-  mutate(verb=recode(verb, control_good = "non-contrd. C", control_bad = "contradictory C", annoyed = "be_annoyed", be_right_that = "be_right", inform_Sam = "inform"),
+  mutate(verb=recode(verb, control_good = "noncontrd. C", control_bad = "contradictory C", annoyed = "be annoyed", be_right_that = "be right", inform_Sam = "inform"),
          nResponse = ifelse(response == "Yes",1,0))
 
 head(d)
@@ -106,7 +106,7 @@ c.bad <- droplevels(c.bad)
 head(c.bad)
 nrow(c.bad) #1600 / 4 controls = 400 Turkers
 
-c.good <- subset(d, d$verb == "non-contrd. C")
+c.good <- subset(d, d$verb == "noncontrd. C")
 c.good <- droplevels(c.good)
 head(c.good)
 nrow(c.good) #1600
