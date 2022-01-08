@@ -29,8 +29,8 @@ grays = gray.colors(4,start=0.2,end=0.9)
 cd = read.csv("../data/cd.csv") %>% 
   mutate(verb=as.factor(verb))
 
-cd = cd %>% 
-  mutate(verb = fct_recode(verb, "be-annoyed"="be_annoyed", "be-right"="be_right"))
+# cd = cd %>% 
+  # mutate(verb = fct_recode(verb, "be-annoyed"="be_annoyed", "be-right"="be_right"))
 
 # first, because response assumes values of 0 and 1, which beta regression cannot handle, transform: (Smithson & Verkuilen 2006)
 # y'' = (y' ?? (n ??? 1) + 0.5)/n
@@ -71,6 +71,8 @@ ggplot(simdata) +
 
 filename = paste("../graphs/mixtures/example-1component-highmean.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
+filename = paste("../../../papers/factives-paper/Language-figures/color/Figure18b.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
 
 # Figure 18b, black and white
 ggplot(simdata) +
@@ -85,6 +87,9 @@ ggplot(simdata) +
 
 filename = paste("../graphs/mixtures/example-1component-highmean-bw.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
+filename = paste("../../../papers/factives-paper/Language-figures/bw/Figure18b.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
+
 
 # simulate idealized 1-component data with mean 0.4
 simdata = data.frame(simvals = rnorm(266,mean=0.4,sd=0.1))
@@ -117,6 +122,8 @@ ggplot(simdata) +
 
 filename = paste("../graphs/mixtures/example-1component-lowmean.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
+filename = paste("../../../papers/factives-paper/Language-figures/color/Figure18a.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
 
 # Figure 18a, black and white
 ggplot(simdata) +
@@ -131,7 +138,8 @@ ggplot(simdata) +
 
 filename = paste("../graphs/mixtures/example-1component-lowmean-bw.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
-
+filename = paste("../../../papers/factives-paper/Language-figures/bw/Figure18a.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
 
 # simulate idealized 2-component data with mean 0.6
 simdata = data.frame(simvals = c(rnorm(130,mean=0.3,sd=0.1),rnorm(136,mean=0.9,sd=0.03)))
@@ -183,6 +191,8 @@ ggplot(responses) +
 
 filename = paste("../graphs/mixtures/example-2components-lowermean.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
+filename = paste("../../../papers/factives-paper/Language-figures/color/Figure18c.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
 
 # Figure 18c, black adn white
 ggplot(responses) +
@@ -201,6 +211,8 @@ ggplot(responses) +
     axis.ticks.y = element_blank())
 
 filename = paste("../graphs/mixtures/example-2components-lowermean-bw.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
+filename = paste("../../../papers/factives-paper/Language-figures/bw/Figure18c.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
 
 # simulate idealized 2-component data with mean 0.7
@@ -252,6 +264,8 @@ ggplot(responses) +
 
 filename = paste("../graphs/mixtures/example-2components-highermean.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
+filename = paste("../../../papers/factives-paper/Language-figures/color/Figure18d.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
 
 # Figure 18d, black and white
 ggplot(responses) +
@@ -271,7 +285,8 @@ ggplot(responses) +
 
 filename = paste("../graphs/mixtures/example-2components-highermean-bw.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
-
+filename = paste("../../../papers/factives-paper/Language-figures/bw/Figure18d.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
 
 # simulate idealized 3-component data
 simdata = data.frame(simvals = c(rnorm(61,mean=0.32,sd=0.1),rnorm(100,mean=0.65,sd=0.05),rnorm(105,mean=0.85,sd=0.04)))
@@ -330,6 +345,8 @@ ggplot(responses) +
 
 filename = paste("../graphs/mixtures/example-3components.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
+filename = paste("../../../papers/factives-paper/Language-figures/color/Figure18e.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
 
 # Figure 18e, black and white
 ggplot(responses) +
@@ -352,7 +369,8 @@ ggplot(responses) +
 
 filename = paste("../graphs/mixtures/example-3components-bw.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
-
+filename = paste("../../../papers/factives-paper/Language-figures/bw/Figure18e.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
 
 # simulate idealized 3-component data
 simdata = data.frame(simvals = c(rnorm(40,mean=0.1,sd=0.02),rnorm(61,mean=0.32,sd=0.1),rnorm(100,mean=0.65,sd=0.05),rnorm(65,mean=0.85,sd=0.04)))
@@ -419,7 +437,8 @@ ggplot(responses) +
 
 filename = paste("../graphs/mixtures/example-4components.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
-
+filename = paste("../../../papers/factives-paper/Language-figures/color/Figure18f.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
 
 # Figure 18f, black and white
 ggplot(responses) +
@@ -445,7 +464,8 @@ ggplot(responses) +
 
 filename = paste("../graphs/mixtures/example-4components-bw.pdf",sep="")
 ggsave(filename,width=4,height=2.5)
-
+filename = paste("../../../papers/factives-paper/Language-figures/bw/Figure18f.pdf",sep="")
+ggsave(filename,width=4,height=2.5)
 
 
 
