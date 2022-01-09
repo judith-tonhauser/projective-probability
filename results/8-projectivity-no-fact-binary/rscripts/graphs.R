@@ -117,6 +117,5 @@ ggplot(prop, aes(x=verb, y=Mean, fill=VeridicalityGroup, shape=VeridicalityGroup
   #theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
   ylab("Proportion of 'yes (certain)' ratings") +
   xlab("Predicate") 
-ggsave("../graphs/proportion-by-predicate-variability=bw.pdf",height=4.5,width=7)
 ggsave("../../../papers/factives-paper/Language-figures/bw/Figure4.pdf",height=4.5,width=7)
 

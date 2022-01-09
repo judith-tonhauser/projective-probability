@@ -196,7 +196,10 @@ levels(v_meansOUR$VeridicalityGroup)
 # Figure 16 in color
 ggplot(v_means, aes(x=verb, y=Mean)) +
   geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
-  geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
+  geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
+  scale_shape_manual(values=c( 21, 22, 25, 24, 23),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
+  #geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
   #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
   geom_text_repel(data=v_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.8) +
   theme(panel.background = element_blank(), plot.background = element_blank(),
@@ -213,6 +216,49 @@ ggplot(v_means, aes(x=verb, y=Mean)) +
 ggsave("../graphs/means-entailment-by-predicate.pdf",height=4,width=9)
 ggsave("../../papers/factives-paper/Language-figures/color/Figure16.pdf",height=4.5,width=7)
 
+
+# Figure 16 in color (OLD, not bw-compatible)
+ggplot(v_means, aes(x=verb, y=Mean)) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
+  geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
+  #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
+  geom_text_repel(data=v_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.8) +
+  theme(panel.grid.major.x = element_blank(),axis.text.x=element_blank(),axis.ticks.x=element_blank())  +
+  #theme(panel.background = element_blank(), plot.background = element_blank(),
+         #panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+         #axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
+  scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
+                     labels = c("nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive")) +
+  scale_y_continuous(limits = c(-1,2),breaks = c(-1,0,1,2)) +
+  #scale_alpha(range = c(.3,1)) +
+  labs(color="Predicate type") +
+  theme(legend.position="bottom") + 
+  ylab("Mean veridicality rating") +
+  xlab("Predicate") 
+ggsave("../graphs/means-entailment-by-predicate.pdf",height=4,width=9)
+ggsave("../../papers/factives-paper/Language-figures/color/Figure16.pdf",height=4.5,width=7)
+
+# Figure 16, black and white
+scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
+
+ggplot(v_means, aes(x=verb, y=Mean)) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
+  geom_point(shape=16,stroke=.5,size=2.5,color="gray60") +
+  #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
+  geom_text_repel(data=v_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.8) +
+  theme(panel.grid.major.x = element_blank(),axis.text.x=element_blank(),axis.ticks.x=element_blank())  +
+  #theme(panel.background = element_blank(), plot.background = element_blank(),
+  #panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+  #axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
+  scale_color_manual(values=c(NF="gray60",VNF="gray60",V="gray60",F="gray60"),
+                     labels = c("nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive")) +
+  scale_y_continuous(limits = c(-1,2),breaks = c(-1,0,1,2)) +
+  #scale_alpha(range = c(.3,1)) +
+  labs(color="Predicate type") +
+  theme(legend.position="bottom") + 
+  ylab("Mean veridicality rating") +
+  xlab("Predicate") 
+ggsave("../../papers/factives-paper/Language-figures/bw/Figure16.pdf",height=4.5,width=7)  
 
 # Fig 6: projection ratings  ----
 
