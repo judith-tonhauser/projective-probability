@@ -164,4 +164,22 @@ ggplot(mean_proj, aes(x=VerbNum, y=Mean,fill=VeridicalityGroup,shape=Veridicalit
 ggsave("../graphs/means-projectivity-by-predicate-variability.pdf",height=5,width=9)
 ggsave("../../papers/factives-paper/Language-figures/color/Figure5.pdf",height=5,width=9)
 
+# Figure 5 in bw
+ggplot(mean_proj, aes(x=VerbNum, y=Mean,fill=VeridicalityGroup,shape=VeridicalityGroup)) + 
+  geom_point(stroke=.5,size=2.5,color="black") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),color="gray50",alpha=.5) +
+  #geom_hline(yintercept=0, linetype="dashed", color = "red") +
+  theme(panel.background = element_blank(), plot.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()) +
+  theme(panel.grid.major.y = element_line(colour="grey90", size=0.5)) +
+  theme(axis.text.x = element_text(face = ifelse(levels(mean_proj$VerbNum) %in% bold,"bold","plain"))) +
+  scale_shape_manual(values=c(22,24,23),labels=c("nonveridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
+  scale_fill_manual(values=rev(gray.colors(3,start=0,end=1)),,labels=c("nonveridical\nnonfactive","optionally\nfactive","factive"),name="Predicate type") +
+  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) +
+  theme(legend.position="bottom") +
+  ylab("Mean certainty rating") +
+  xlab("Predicate (with number of discourses)")
+ggsave("../../papers/factives-paper/Language-figures/bw/Figure5.pdf",height=5,width=9)
+
 
