@@ -70,7 +70,7 @@ table(d$verb)
 # not included: confess, establish, inform, be_annoyed, be_right
 # both "see" and "saw" are included in their data
 
-# our 19 predicates 
+# our 15 predicates + saw
 our_preds <- c("saw", "discover", "know", "reveal", "see", "pretend", "suggest", "say", "think", 
                "demonstrate", "acknowledge", "admit", "announce", "confirm", "hear", "prove")
 our_preds
@@ -145,40 +145,25 @@ v_means[v_means$Mean >= 1.5,]$verb
 # 62 reveal      -0.194  0.222  0.222  -0.417   0.0278
 # 63 saw          0.424  0.212  0.242   0.212   0.667 
 
-# create data subsets for our predicates
-v_meansOUR <- droplevels(subset(v_means,v_means$verb %in% our_preds))
-v_meansOUR
-levels(v_meansOUR$verb) #verbs sorted by projectivity mean (pretend...reveal)
 
-v_meansOUR = v_meansOUR %>%
-  mutate(verb = fct_reorder(as.factor(verb),Mean))
-
-# define colors for our predicates
-cols = data.frame(V=levels(v_meansOUR$verb))
+# define colors
+cols = data.frame(V=levels(v_means$verb))
 cols
 
 cols$VeridicalityGroup = as.factor(
   ifelse(cols$V %in% c("know", "discover", "reveal", "see", "saw", "be_annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("demonstrate"),"VNF", "V"))))
+                ifelse(cols$V %in% c("demonstrate"),"VNF", 
+                       ifelse(cols$V %in% c("hear","acknowledge","confess","prove","confirm","establish","inform","announce","admit"),"V",
+                              "X")))))
 
-levels(cols$V)
-
-cols = cols %>%
-  mutate(V = fct_reorder(as.factor(V),v_meansOUR$Mean))
-
-levels(cols$V) # sorted: 
+cols$VeridicalityGroup <- factor(cols$VeridicalityGroup, levels=c("X","NF","VNF","V","F"))
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
                       ifelse(cols$VeridicalityGroup == "NF", "gray60", 
-                             ifelse(cols$VeridicalityGroup == "VNF","dodgerblue","tomato1")))
+                             ifelse(cols$VeridicalityGroup == "VNF", "dodgerblue",
+                                    ifelse(cols$VeridicalityGroup == "V", "tomato1", "black"))))
 
-
-v_meansOUR$VeridicalityGroup = as.factor(
-  ifelse(v_meansOUR$verb %in% c("know", "discover", "reveal", "see", "saw", "be_annoyed"), "F", 
-         ifelse(v_meansOUR$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(v_meansOUR$verb  %in% c("be_right","demonstrate"),"VNF",
-                       ifelse(v_meansOUR$verb  %in% c("MC"),"MC","V")))))
 
 v_means$VeridicalityGroup = as.factor(
   ifelse(v_means$verb %in% c("know", "discover", "reveal", "see", "saw", "be_annoyed"), "F", 
@@ -186,159 +171,159 @@ v_means$VeridicalityGroup = as.factor(
                 ifelse(v_means$verb  %in% c("be_right","demonstrate"),"VNF",
                        ifelse(v_means$verb  %in% c("hear","acknowledge","confess","prove","confirm","establish","inform","announce","admit"),"V","X")))))
 
-cols$Colors
+v_means$VeridicalityGroup <- factor(v_means$VeridicalityGroup, levels=c("X","NF","VNF","V","F"))
 
-v_meansOUR = v_meansOUR %>%
-  mutate(VeridicalityGroup = fct_relevel(VeridicalityGroup, "NF","VNF","V","F"))
-levels(v_meansOUR$VeridicalityGroup)
-# "NF"  "VNF" "V"   "F" 
+
+# create data subset for our  predicates
+v_meansOUR <- droplevels(subset(v_means,v_means$verb %in% our_preds))
+v_meansOUR
+str(v_meansOUR$verb)
+levels(v_meansOUR$verb) # sorted by veridicality mean (pretend...reveal)
+
+
+# check to get shapes and colors to work out right
+levels(v_means$VeridicalityGroup)
+# "X"   "NF"  "VNF" "V"   "F"
+
+size <- ifelse(v_means$VeridicalityGroup == "X", 1, 3)
 
 # Figure 16 in color
 ggplot(v_means, aes(x=verb, y=Mean)) +
-  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
-  geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
-  scale_shape_manual(values=c( 21, 22, 25, 24, 23),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
-  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
-  #geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
-  #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
-  geom_text_repel(data=v_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.8) +
-  theme(panel.background = element_blank(), plot.background = element_blank(),
-        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
-  scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
-                     labels = c("nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive")) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray",alpha=.4) +
+  geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=size,color="black") +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),
+                     labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","predicate not in\nour experiments")),
+                     name="Predicate type") +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),
+                    labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","predicate not in\nour experiments")),
+                    name="Predicate type") +
+  theme(panel.grid.major.x = element_blank(), 
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),legend.position="bottom") +
+  guides(color = "none") +
+  geom_text_repel(data=v_meansOUR,aes(x=verb,y=Mean,label=verb,
+                                      color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.8) +
+  scale_color_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60"))) +
   scale_y_continuous(limits = c(-1,2),breaks = c(-1,0,1,2)) +
-  #scale_alpha(range = c(.3,1)) +
-  labs(color="Predicate type") +
-  theme(legend.position="bottom") + 
   ylab("Mean veridicality rating") +
-  xlab("Predicate") 
+  xlab("Predicate")
 ggsave("../graphs/means-entailment-by-predicate.pdf",height=4,width=9)
-ggsave("../../papers/factives-paper/Language-figures/color/Figure16.pdf",height=4.5,width=7)
+ggsave("../../papers/factives-paper/Language-figures/color/Figure16.pdf",height=4,width=9)
 
-
-# Figure 16 in color (OLD, not bw-compatible)
-ggplot(v_means, aes(x=verb, y=Mean)) +
-  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
-  geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
-  #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
-  geom_text_repel(data=v_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.8) +
-  theme(panel.grid.major.x = element_blank(),axis.text.x=element_blank(),axis.ticks.x=element_blank())  +
-  #theme(panel.background = element_blank(), plot.background = element_blank(),
-         #panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-         #axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
-  scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
-                     labels = c("nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive")) +
-  scale_y_continuous(limits = c(-1,2),breaks = c(-1,0,1,2)) +
-  #scale_alpha(range = c(.3,1)) +
-  labs(color="Predicate type") +
-  theme(legend.position="bottom") + 
-  ylab("Mean veridicality rating") +
-  xlab("Predicate") 
-ggsave("../graphs/means-entailment-by-predicate.pdf",height=4,width=9)
-ggsave("../../papers/factives-paper/Language-figures/color/Figure16.pdf",height=4.5,width=7)
 
 # Figure 16, black and white
-scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","control")),name="Predicate type") +
-
 ggplot(v_means, aes(x=verb, y=Mean)) +
-  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
-  geom_point(shape=16,stroke=.5,size=2.5,color="gray60") +
-  #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
-  geom_text_repel(data=v_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.8) +
-  theme(panel.grid.major.x = element_blank(),axis.text.x=element_blank(),axis.ticks.x=element_blank())  +
-  #theme(panel.background = element_blank(), plot.background = element_blank(),
-  #panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-  #axis.text.x=element_blank(),axis.ticks.x=element_blank()) +
-  scale_color_manual(values=c(NF="gray60",VNF="gray60",V="gray60",F="gray60"),
-                     labels = c("nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive")) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray",alpha=.4) +
+  geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=size,color="black") +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),
+                     labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","predicate not in\nour experiments")),
+                     name="Predicate type") +
+  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),
+                    labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","predicate not in\nour experiments")),
+                    name="Predicate type") +
+  theme(panel.grid.major.x = element_blank(), 
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),legend.position="bottom") +
+  guides(color = "none") +
+  geom_text_repel(data=v_meansOUR,aes(x=verb,y=Mean,label=verb),segment.color="black",nudge_x=.2,nudge_y=-.8) +
+  #scale_color_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60"))) +
   scale_y_continuous(limits = c(-1,2),breaks = c(-1,0,1,2)) +
-  #scale_alpha(range = c(.3,1)) +
-  labs(color="Predicate type") +
-  theme(legend.position="bottom") + 
   ylab("Mean veridicality rating") +
-  xlab("Predicate") 
-ggsave("../../papers/factives-paper/Language-figures/bw/Figure16.pdf",height=4.5,width=7)  
+  xlab("Predicate")
+ggsave("../../papers/factives-paper/Language-figures/bw/Figure16.pdf",height=4,width=9)  
 
 # Fig 6: projection ratings  ----
 
-p_means = d %>%
+v_means = d %>%
   group_by(verb) %>%
   summarize(Mean = mean(neg_rating), CILow = ci.low(neg_rating), CIHigh = ci.high(neg_rating)) %>%
   mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, verb = fct_reorder(as.factor(verb),Mean))
 options(tibble.print_max = Inf)
-p_means
-levels(p_means$verb) # verbs sorted by projection mean (...)
+v_means
+levels(v_means$verb) # verbs sorted by projection mean (...)
 
-# create data subsets for our predicates
-p_meansOUR <- droplevels(subset(p_means,p_means$verb %in% our_preds))
-p_meansOUR
-levels(p_meansOUR$verb) #verbs sorted by projectivity mean (pretend...reveal)
-
-p_meansOUR = p_meansOUR %>%
-  mutate(verb = fct_reorder(as.factor(verb),Mean))
-
-# define colors for our predicates
-cols = data.frame(V=levels(p_meansOUR$verb))
+# define colors
+cols = data.frame(V=levels(v_means$verb))
 cols
 
 cols$VeridicalityGroup = as.factor(
   ifelse(cols$V %in% c("know", "discover", "reveal", "see", "saw", "be_annoyed"), "F", 
          ifelse(cols$V %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(cols$V %in% c("demonstrate"),"VNF", "V"))))
+                ifelse(cols$V %in% c("demonstrate"),"VNF", 
+                       ifelse(cols$V %in% c("hear","acknowledge","confess","prove","confirm","establish","inform","announce","admit"),"V",
+                              "X")))))
 
-levels(cols$V)
-
-cols = cols %>%
-  mutate(V = fct_reorder(as.factor(V),p_meansOUR$Mean))
-
-levels(cols$V) # sorted: 
+cols$VeridicalityGroup <- factor(cols$VeridicalityGroup, levels=c("X","NF","VNF","V","F"))
 
 cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "darkorchid", 
                       ifelse(cols$VeridicalityGroup == "NF", "gray60", 
-                             ifelse(cols$VeridicalityGroup == "VNF","dodgerblue","tomato1")))
+                             ifelse(cols$VeridicalityGroup == "VNF", "dodgerblue",
+                                    ifelse(cols$VeridicalityGroup == "V", "tomato1", "black"))))
 
 
-p_meansOUR$VeridicalityGroup = as.factor(
-  ifelse(p_meansOUR$verb %in% c("know", "discover", "reveal", "see", "saw", "be_annoyed"), "F", 
-         ifelse(p_meansOUR$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(p_meansOUR$verb  %in% c("be_right","demonstrate"),"VNF",
-                       ifelse(p_meansOUR$verb  %in% c("MC"),"MC","V")))))
+v_means$VeridicalityGroup = as.factor(
+  ifelse(v_means$verb %in% c("know", "discover", "reveal", "see", "saw", "be_annoyed"), "F", 
+         ifelse(v_means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
+                ifelse(v_means$verb  %in% c("be_right","demonstrate"),"VNF",
+                       ifelse(v_means$verb  %in% c("hear","acknowledge","confess","prove","confirm","establish","inform","announce","admit"),"V","X")))))
 
-p_means$VeridicalityGroup = as.factor(
-  ifelse(p_means$verb %in% c("know", "discover", "reveal", "see", "saw", "be_annoyed"), "F", 
-         ifelse(p_means$verb  %in% c("pretend", "think", "suggest", "say"), "NF", 
-                ifelse(p_means$verb  %in% c("be_right","demonstrate"),"VNF",
-                       ifelse(p_means$verb  %in% c("hear","acknowledge","confess","prove","confirm","establish","inform","announce","admit"),"V","X")))))
+v_means$VeridicalityGroup <- factor(v_means$VeridicalityGroup, levels=c("X","NF","VNF","V","F"))
 
-cols$Colors
 
-p_meansOUR = p_meansOUR %>%
-  mutate(VeridicalityGroup = fct_relevel(VeridicalityGroup, "NF","VNF","V","F"))
-levels(p_meansOUR$VeridicalityGroup)
-# "NF"  "VNF" "V"   "F" 
+# create data subset for our  predicates
+v_meansOUR <- droplevels(subset(v_means,v_means$verb %in% our_preds))
+v_meansOUR
+str(v_meansOUR$verb)
+levels(v_meansOUR$verb) # sorted by projection mean (demonstrate...know)
+
+
+# check to get shapes and colors to work out right
+levels(v_means$VeridicalityGroup)
+# "X"   "NF"  "VNF" "V"   "F"
+
+size <- ifelse(v_means$VeridicalityGroup == "X", 1, 3)
 
 # Figure 6 in color
-ggplot(p_means, aes(x=verb, y=Mean)) +
-  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray") +
-  geom_point(shape=16,stroke=.5,size=2.5,color="palegreen4") +
-  #scale_fill_manual(values=c("gray60","dodgerblue","tomato1","darkorchid","palegreen4")) + 
-  geom_text_repel(data=p_meansOUR,aes(x=verb,y=Mean,label=verb,color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.8) +
-  theme(#panel.background = element_blank(), 
-        #plot.background = element_blank(),
-        panel.grid.major.x = element_blank(), 
-        #panel.grid.minor = element_blank(),
+ggplot(v_means, aes(x=verb, y=Mean)) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray",alpha=.4) +
+  geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=size,color="black") +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),
+                     labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","predicate not in\nour experiments")),
+                     name="Predicate type") +
+  scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),
+                    labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","predicate not in\nour experiments")),
+                    name="Predicate type") +
+  theme(panel.grid.major.x = element_blank(), 
         axis.text.x=element_blank(),
-        axis.ticks.x=element_blank()) +
-  scale_color_manual(values=c(NF="gray60",VNF="dodgerblue",V="tomato1",F="darkorchid"),
-                     labels = c("nonveridical\nnonfactive","veridical\nnonfactive","optionally\nfactive","factive")) +
-  scale_y_continuous(limits = c(-1.3,2),breaks = c(-1,0,1,2)) +
-  #scale_alpha(range = c(.3,1)) +
-  labs(color="Predicate type") +
-  theme(legend.position="bottom") + 
+        axis.ticks.x=element_blank(),legend.position="bottom") +
+  guides(color = "none") +
+  geom_text_repel(data=v_meansOUR,aes(x=verb,y=Mean,label=verb,
+                                      color=VeridicalityGroup),segment.color="black",nudge_x=.2,nudge_y=-.8) +
+  scale_color_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60"))) +
+  scale_y_continuous(limits = c(-1,2),breaks = c(-1,0,1,2)) +
   ylab("Mean projection rating") +
-  xlab("Predicate") 
+  xlab("Predicate")
 ggsave("../graphs/means-projection-by-predicate.pdf",height=4,width=9)
-ggsave("../../papers/factives-paper/Language-figures/color/Figure6.pdf",height=4.5,width=7)
+ggsave("../../papers/factives-paper/Language-figures/color/Figure6.pdf",height=4,width=9)
 
 
+# Figure 6, black and white
+ggplot(v_means, aes(x=verb, y=Mean)) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray",alpha=.4) +
+  geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=size,color="black") +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),
+                     labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","predicate not in\nour experiments")),
+                     name="Predicate type") +
+  scale_fill_manual(values=rev(gray.colors(5,start=0,end=1)),
+                    labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","predicate not in\nour experiments")),
+                    name="Predicate type") +
+  theme(panel.grid.major.x = element_blank(), 
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),legend.position="bottom") +
+  guides(color = "none") +
+  geom_text_repel(data=v_meansOUR,aes(x=verb,y=Mean,label=verb),segment.color="black",nudge_x=.2,nudge_y=-.8) +
+  #scale_color_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60"))) +
+  scale_y_continuous(limits = c(-1,2),breaks = c(-1,0,1,2)) +
+  ylab("Mean projection rating") +
+  xlab("Predicate")
+ggsave("../../papers/factives-paper/Language-figures/bw/Figure6.pdf",height=4,width=9) 

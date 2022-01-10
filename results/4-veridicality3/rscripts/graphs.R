@@ -132,7 +132,10 @@ levels(means$VeridicalityGroup)
 levels(subjmeans$verb)
 levels(means$verb)
 
-# Figure 9
+means$verb
+means$VeridicalityGroup
+
+# Figure 9 in color
 ggplot(means, aes(x=verb, y=Mean)) +
   # geom_point(shape=21,fill="gray70",data=subjmeans, alpha=.1, color="gray40") +
   geom_violin(data=subjmeans,scale="width",color="gray80") +
