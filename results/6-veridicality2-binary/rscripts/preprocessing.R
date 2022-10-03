@@ -1,6 +1,7 @@
 # Factives paper
 # 6-veridicality2-binary (contradictoriness diagnostic, binary)
 # preprocessing.R
+# (Exp 3b in Language paper)
 
 # set working directory to directory of script
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)

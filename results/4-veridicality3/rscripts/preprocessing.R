@@ -1,6 +1,7 @@
 # Factives paper
 # 4-veridicality3 (inference ratings, continuous task)
 # preprocessing.R
+# (Exp 2a in Language paper)
 
 # What is true: Dan knows that Sophia got a tattoo.
 # Does it follow that Sophia got a tattoo?
@@ -266,4 +267,4 @@ cd %>%
   unique() %>% 
   group_by(gender) %>% 
   summarize(count=n())
-# 132 female, 128 male
+# 132 female, 127 male

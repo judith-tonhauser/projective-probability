@@ -1,6 +1,7 @@
 # Factives paper
 # 2-veridicality2 (contradictoriness ratings, continuous task)
 # preprocessing.R
+# (Exp 3a in Language paper)
 
 # Sally: "Dan knows that Sophia got a tattoo, but she didn't."
 # Is Sally's utterance contradictory?

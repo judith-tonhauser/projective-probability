@@ -1,6 +1,7 @@
 # Factives paper
 # 8-projectivity-no-fact-binary (certainty ratings, binary task)
 # preprocessing.R
+# (Exp 1b in Language paper)
 
 # set working directory to directory of script
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
@@ -188,6 +189,10 @@ nrow(cd) #11336 / 26 items = 436 participants
 table(cd$age) #18-81
 length(which(is.na(cd$age))) # 26 missing values = 1 Turker
 median(cd$age,na.rm=TRUE) #37
-table(cd$gender)
-#207 female, 223 male, 2 other
+cd %>% 
+  select(gender, workerid) %>% 
+  unique() %>% 
+  group_by(gender) %>% 
+  summarize(count=n())
+#207 female, 223 male, 2 other, 4 NA
 

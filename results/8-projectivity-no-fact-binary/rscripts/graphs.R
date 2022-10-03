@@ -1,6 +1,7 @@
 # Factives paper
 # 8-projectivity-no-fact-binary (certainty ratings, binary task)
 # graphs.R
+# (Exp 1b in Language paper)
 
 # set working directory to directory of script
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)

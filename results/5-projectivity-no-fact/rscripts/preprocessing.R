@@ -1,6 +1,7 @@
 # Factives paper
 # 5-projectivity-no-fact (certainty ratings, continuous task)
 # preprocessing.R
+# (Exp 1a in Language paper)
 
 # set working directory to directory of script
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)

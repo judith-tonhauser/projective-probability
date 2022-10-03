@@ -1,6 +1,7 @@
 # Factives paper
 # 7-veridicality3-binary (inference diagnostic, binary)
 # preprocessing.R
+# (Exp 2b in Language paper)
 
 # set working directory to directory of script
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)

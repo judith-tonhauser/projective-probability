@@ -1,6 +1,7 @@
 # Factives paper
 # 4-veridicality3 (inference ratings, continuous task)
 # graphs.R
+# (Exp 2a in Language paper)
 
 # What is true: Dan knows that Sophia got a tattoo.
 # Does it follow that Sophia got a tattoo?
