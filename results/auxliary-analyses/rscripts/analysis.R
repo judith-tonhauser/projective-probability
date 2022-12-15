@@ -1,5 +1,4 @@
-# Does not-at-issueness predict veridicality? (aux analysis)
-# (wrinkle: nai data from interrogatives, veridicality data from unembedded)
+# Auxiliary analyses for lexical semantics of clause-embedding predicates
 
 # set working directory to directory of script
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
@@ -15,6 +14,88 @@ library(forcats)
 library(ggrepel)
 library(cowplot)
 theme_set(theme_bw())
+
+# Plot mean projection against mean veridicality ----
+
+# load data
+
+# load clean inference entailment data
+d_inf_nb = read.csv("../../4-veridicality3/data/cd.csv") %>%
+  filter(verb != "non-ent. C" & verb != "entailing C") %>%
+  group_by(verb) %>%
+  summarize(Mean_Inf = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+  mutate(YMinM_Inf = Mean_Inf - CILow, YMaxM_Inf = Mean_Inf + CIHigh, verb = fct_reorder(as.factor(verb),Mean_Inf)) %>%
+  select(-CILow,-CIHigh)
+summary(d_inf_nb)
+
+table(d_inf_nb$verb)
+
+
+# load clean contradictoriness entailment
+d_contr_nb = read.csv("../../2-veridicality2/data/cd.csv") %>%
+  filter(verb != "noncontrd. C" & verb != "contradictory C") %>%
+  group_by(verb) %>%
+  summarize(Mean_Contr = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+  mutate(YMinM_Contr = Mean_Contr - CILow, YMaxM_Contr = Mean_Contr + CIHigh, verb = fct_reorder(as.factor(verb),d_inf_nb$Mean_Inf)) %>%
+  select(-CILow,-CIHigh)
+summary(d_contr_nb)
+
+# load projection data
+d_proj = read.csv("../../5-projectivity-no-fact/data/cd.csv") %>%
+  filter(verb != "MC") %>%
+  group_by(verb) %>%
+  summarize(Mean_Proj = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+  mutate(YMinM_Proj = Mean_Proj - CILow, YMaxM_Proj = Mean_Proj + CIHigh, verb = fct_reorder(as.factor(verb),d_inf_nb$Mean_Inf)) %>%
+  select(-CILow,-CIHigh)
+table(d_proj$verb)
+
+# plot inference means against projection means
+
+tmp = d_proj %>%
+  left_join(d_inf_nb)
+summary(tmp)
+
+ggplot(tmp, aes(x=Mean_Inf, y=Mean_Proj)) +
+  geom_point(stroke=.5,size=2.5,color="black") +
+  geom_text_repel(aes(label = verb), point.padding = 0.5,
+                  segment.color = 'grey50') +
+  geom_errorbarh(aes(xmin=YMinM_Inf,xmax=YMaxM_Inf),width=0) +
+  geom_errorbar(aes(ymin=YMinM_Proj,ymax=YMaxM_Proj),width=0) +
+  geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
+  xlab("Mean veridicality rating (inference)") +
+  ylab("Mean certainty rating") +
+  theme(legend.position = "bottom") +
+  coord_fixed(ratio = 1) +
+  xlim(c(0,1)) +
+  ylim(c(0,1))
+ggsave("../graphs/mean-inf-against-mean-proj.pdf",height=6,width=6)
+
+# plot contradictoriness means against projection means
+
+tmp = d_proj %>%
+  left_join(d_contr_nb)
+summary(tmp)
+
+ggplot(tmp, aes(x=Mean_Contr, y=Mean_Proj)) +
+  geom_point(stroke=.5,size=2.5,color="black") +
+  geom_text_repel(aes(label = verb), point.padding = 0.5,
+                  segment.color = 'grey50') +
+  geom_errorbarh(aes(xmin=YMinM_Contr,xmax=YMaxM_Contr),width=0) +
+  geom_errorbar(aes(ymin=YMinM_Proj,ymax=YMaxM_Proj),width=0) +
+  
+  geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
+  xlab("Mean veridicality rating (contradictoriness)") +
+  ylab("Mean certainty rating") +
+  theme(legend.position = "bottom") +
+  coord_fixed(ratio = 1) +
+  xlim(c(0,1)) +
+  ylim(c(0,1))
+ggsave("../graphs/mean-contr-against-mean-proj.pdf",height=6,width=6)
+
+  
+
+# Does not-at-issueness predict veridicality? (aux analysis) -----
+# (wrinkle: nai data from interrogatives, veridicality data from unembedded)
 
 # load clean data for analysis ----
 
@@ -90,6 +171,8 @@ cor #-.13
 
 ggplot(tmp, aes(x=Mean_AI, y=Mean_Inf)) +
   geom_point(stroke=.5,size=2.5,color="black") +
+  geom_text_repel(aes(label = verb), point.padding = 0.5,
+                   segment.color = 'grey50') +
   geom_errorbarh(aes(xmin=YMinM_AI,xmax=YMaxM_AI),width=0) +
   geom_errorbar(aes(ymin=YMinM_Inf,ymax=YMaxM_Inf),width=0) +
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
@@ -113,6 +196,8 @@ cor #-.24
 
 ggplot(tmp, aes(x=Mean_AI, y=Mean_Contr)) +
   geom_point(stroke=.5,size=2.5,color="black") +
+  geom_text_repel(aes(label = verb), point.padding = 0.5,
+                   segment.color = 'grey50') +
   geom_errorbarh(aes(xmin=YMinM_AI,xmax=YMaxM_AI),width=0) +
   geom_errorbar(aes(ymin=YMinM_Contr,ymax=YMaxM_Contr),width=0) +
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
@@ -136,6 +221,8 @@ cor #-.09
 
 ggplot(tmp, aes(x=Mean_AI, y=Prop_Inf)) +
   geom_point(stroke=.5,size=2.5,color="black") +
+  geom_text_repel(aes(label = verb), point.padding = 0.5,
+                   segment.color = 'grey50') +
   geom_errorbarh(aes(xmin=YMinM_AI,xmax=YMaxM_AI),width=0) +
   geom_errorbar(aes(ymin=YMinP_Inf,ymax=YMaxP_Inf),width=0) +
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +
@@ -157,13 +244,10 @@ cor = tmp %>%
   summarize(Cor=cor(Mean_AI,Prop_Contr,method="spearman"))
 cor #-.27
 
-corr_contradict = econtrd %>%
-  filter(VeridicalityGroup != "control") %>%
-  summarize(Cor=cor(Prop,Mean,method="spearman"))
-corr_contradict #.985
-
 ggplot(tmp, aes(x=Mean_AI, y=Prop_Contr)) +
   geom_point(stroke=.5,size=2.5,color="black") +
+  geom_text_repel(aes(label = verb), point.padding = 0.5,
+                   segment.color = 'grey50') +
   geom_errorbarh(aes(xmin=YMinM_AI,xmax=YMaxM_AI),width=0) +
   geom_errorbar(aes(ymin=YMinP_Contr,ymax=YMaxP_Contr),width=0) +
   geom_abline(intercept=0,slope=1,color="gray70",linetype="dashed") +

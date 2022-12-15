@@ -327,3 +327,33 @@ ggplot(v_means, aes(x=verb, y=Mean)) +
   ylab("Mean projection rating") +
   xlab("Predicate")
 ggsave("../../papers/factives-paper/Language-figures/bw/Figure6.pdf",height=4,width=9) 
+
+# investigate difference between cognitive and emotive factives ----
+# emotive: felt, feel, fear, worry
+# cognitive: discover, recognize, learn, saw, see, know, remember, understand, realize, notice
+
+relevant = c("felt","feel","fear", "worry", "discover", "recognize", "learn", "saw", "see", "know", "remember", "understand", "realize", "notice")
+v_relevant <- droplevels(subset(v_means,v_means$verb %in% relevant))
+v_relevant
+
+ggplot(v_means, aes(x=verb, y=Mean)) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0.1,color="gray",alpha=.4) +
+  geom_point(color="black") +
+  #scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),
+  #                   labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","predicate not in\nour experiments")),
+  #                   name="Predicate type") +
+  #scale_fill_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60","black")),
+  #                  labels=rev(c("factive","optionally\nfactive","veridical\nnonfactive","nonveridical\nnonfactive","predicate not in\nour experiments")),
+  #                  name="Predicate type") +
+  theme(panel.grid.major.x = element_blank(), 
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),legend.position="bottom") +
+  guides(color = "none") +
+  geom_text_repel(data=v_relevant,aes(x=verb,y=Mean,label=verb),segment.color="black",nudge_x=.2,nudge_y=-.8) +
+  #scale_color_manual(values=rev(c("darkorchid","tomato1","dodgerblue","gray60"))) +
+  scale_y_continuous(limits = c(-1,2),breaks = c(-1,0,1,2)) +
+  ylab("Mean projection rating") +
+  xlab("Predicate")
+ggsave("../graphs/emotive-cognitive.pdf",height=4,width=9)
+
+

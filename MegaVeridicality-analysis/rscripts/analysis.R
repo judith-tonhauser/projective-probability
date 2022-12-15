@@ -1206,3 +1206,619 @@ corr_inference = vcontrd %>%
   summarize(Cor=cor(MeanOUR,Mean,method="spearman"))
 corr_inference #.514
 
+# AUX for SALT 2022 paper ----
+this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
+setwd(this.dir)
+
+source('helpers.R')
+
+# load required packages
+library(tidyverse)
+library(dichromat)
+library(ggrepel)
+theme_set(theme_bw())
+
+# load data
+mv1 = read.csv("../data/mv1.csv")
+nrow(mv1) #21692
+table(mv1$conditional2,mv1$polarity)
+
+# create new embedding variable
+mv1 = mv1 %>%
+  mutate(embedding = case_when(
+    polarity == "negative" & conditional2 == "matrix"  ~ "n",
+    polarity == "negative" & conditional2 == "conditional"  ~ "ncq",
+    polarity == "positive" & conditional2 == "conditional"  ~ "cq",
+    TRUE ~ "p"
+  ))
+
+# sanity check
+table(mv1$embedding)
+
+# subset to relevant embeddings
+mv1 <- droplevels(subset(mv1, mv1$embedding != "p"))
+table(mv1$embedding)
+
+# verb per embedding
+table(mv1$verb,mv1$embedding) #mostly 10 ratings per verb & embedding, sometimes 9 or 20
+
+length(unique(mv1$participant)) #290 participants gave ratings
+
+# get the relevant predicates to plot
+# we had 20 predicates, their data does not include "be right"
+our_preds <- c("be annoyed", "discover", "know", "reveal", "see", "pretend", "suggest", "say", "think", 
+               "demonstrate", "acknowledge", "admit", "announce", "confess", "confirm", "establish", "hear", "inform", "prove")
+our_preds
+length(our_preds) #19
+
+emotive = c("feel", "trust", "desire", "fear", "worry", "mourn", "grieve", "frighten", "envy", "scare", "anger",
+            "freak_out", "frustrate", "petrify", "puzzle", "regret", "devastate", "disappoint", "embitter", "shame",
+            "dismay", "be annoyed", "content", "detest", "disturb", "hate", "traumatize", "enjoy", "embarrass",
+            "irritate", "amuse", "elate", "love", "pain", "upset", "bother", "resent")
+length(emotive) #37
+
+cognitive = c("presuppose", "think", "believe", "suppose", "find", "discover", "see", "remember", "know", "comprehend",
+              "conceive", "contemplate", "disbelieve", "dispute", "doubt", "estimate", "figure", "figure_out", "gather",
+              "learn", "maintain", "notice", "realize", "recognize", "rediscover", "reveal", "see", "hear",
+              "understand")
+length(cognitive) #29
+
+# rename their predicate "annoy" for comparison with our "be annoyed"
+mv1 <- mv1 %>% 
+  mutate(verb=recode(verb, annoy = "be annoyed"))
+
+all_verbs <- c(our_preds, emotive,cognitive)
+all_verbs
+length(unique(all_verbs)) #77
+
+d <- droplevels(subset(mv1, mv1$verb %in% all_verbs))
+length(unique(d$verb)) #77
+#View(d)
+
+# to order predicates by mean projection
+tmp = d %>%
+  group_by(verb) %>%
+  summarize(Mean = mean(veridicality_num)) %>%
+  mutate(verb = fct_reorder(as.factor(verb),Mean))
+
+nrow(tmp) #77
+levels(tmp$verb) # ordered by mean, not alphabetically
+length(tmp$verb) #77
+
+# calculate projection mean by predicate and embedding
+means = d %>%
+  group_by(verb,embedding) %>%
+  summarize(Mean = mean(veridicality_num), CILow = ci.low(veridicality_num), CIHigh = ci.high(veridicality_num)) %>%
+  mutate(YMin = Mean - CILow, YMax = Mean + CIHigh)
+
+# relevel verb by overall mean
+means$verb <- factor(means$verb, levels = unique(levels(tmp$verb)))
+levels(p_means$verb)
+
+# color code the verbs
+cols = data.frame(verb=levels(means$verb))
+cols
+nrow(cols)
+
+cols$type = as.factor(
+  ifelse(cols$verb %in% cognitive, "cognitive", 
+         ifelse(cols$verb %in% emotive, "emotive", "other")))
+cols
+         
+cols$Colors =  ifelse(cols$type == "emotive", "#D55E00", 
+                      ifelse(cols$type == "cognitive", "#5b43c4", "black"))
+cols
+
+ggplot(means, aes(x=verb, y=Mean, color = embedding, group = embedding)) +
+  geom_text(aes(label = embedding, size = 150)) +
+  geom_line(aes(color=embedding), size=.5) + 
+  theme(#panel.grid.major.x = element_blank(), 
+        axis.ticks.x=element_blank(),legend.position="bottom") +
+  guides(color = "none", size = "none") +
+  #theme(axis.text.x = element_text(face = ifelse(levels(means$verb) %in% our_preds,"bold","plain"))) +
+  theme(axis.text.x = element_text(color=cols$Colors,size=12)) +
+  theme(axis.text.x = element_text(angle = 75, hjust = 1)) +
+  scale_y_continuous(limits = c(-1,1),breaks = c(-1,0,1)) +
+  ylab("Mean projection rating") +
+  xlab("Predicate")
+ggsave("../graphs/emotive-cognitive.pdf",height=4,width=9)
+
+# compare emotive, cognitive, communicative, inferential ----
+this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
+setwd(this.dir)
+
+source('helpers.R')
+
+# load required packages
+library(tidyverse)
+library(dichromat)
+library(ggrepel)
+theme_set(theme_bw())
+
+# load data
+mv1 = read.csv("../data/mv1.csv")
+nrow(mv1) #21692
+table(mv1$conditional2,mv1$polarity)
+
+# create new embedding variable
+mv1 = mv1 %>%
+  mutate(embedding = case_when(
+    polarity == "negative" & conditional2 == "matrix"  ~ "n",
+    polarity == "negative" & conditional2 == "conditional"  ~ "ncq",
+    polarity == "positive" & conditional2 == "conditional"  ~ "cq",
+    TRUE ~ "p"
+  ))
+
+# sanity check
+table(mv1$embedding)
+
+# subset to relevant embeddings
+mv1 <- droplevels(subset(mv1, mv1$embedding != "p"))
+table(mv1$embedding)
+
+# verb per embedding
+table(mv1$verb,mv1$embedding) #mostly 10 ratings per verb & embedding, sometimes 9 or 20
+
+length(unique(mv1$participant)) #290 participants gave ratings
+
+# get the relevant predicates to plot
+table(mv1$verb)
+
+emotive = c("trust", "desire", "fear", "worry", "mourn", "grieve", "frighten", "envy", "scare", "anger",
+            "freak_out", "frustrate", "petrify", "puzzle", "regret", "devastate", "disappoint", "embitter", "shame",
+            "dismay", "be annoyed", "content", "detest", "disturb", "hate", "traumatize", "enjoy", "embarrass",
+            "irritate", "amuse", "elate", "love", "pain", "upset", "bother", "resent")
+length(emotive) #37
+
+cognitive = c("feel", "presuppose", "think", "believe", "suppose", "find", "discover", "see", "remember", "know", "comprehend",
+              "conceive", "contemplate", "disbelieve", "dispute", "doubt", "estimate", "gather", "find_out", 
+              "learn", "maintain", "notice", "realize", "recognize", "rediscover", "reveal", "see", "hear",
+              "understand", "assume")
+length(cognitive) #29
+
+communicative = c("add", "advise", "alert", "argue", "announce", "assert", "assure", "babble", "bark", "cackle", "claim", 
+                  "communicate", "comment", "confess", "confirm", "convey", "declare", "discuss", "elaborate", "email",
+                  "express", "fax", "gab", "gloat", "gossip", "growl", "grunt", "gush", "hint", "inform", "insist", 
+                  "lecture", "lie", "maintain", "mention", "mutter", "narrate", "note", "phone", "publicize", "publish",
+                  "quip", "quote", "rant", "reassert", "recap", "reiterate", "repeat", "report", "say", "sing", "sob",
+                  "state", "stress", "tell", "underline", "utter", "vow", "warn", "weep", "whimper", "whine", "whisper",
+                  "wow", "yell")
+length(communicative) #64
+
+inferential = c("anticipate", "calculate", "compute", "conclude", "conjecture", "deduce", "derive", "establish", "estimate",
+                "expect", "figure", "figure_out", "generalize", "infer", "piece_together", "pinpoint", "predict",
+                "reason", "reason_out", "verify")
+length(inferential) #20
+
+# rename their predicate "annoy" for comparison with our "be annoyed"
+mv1 <- mv1 %>% 
+  mutate(verb=recode(verb, annoy = "be annoyed"))
+
+all_verbs <- c(emotive,cognitive,communicative,inferential)
+all_verbs
+length(unique(all_verbs)) #147
+
+d <- droplevels(subset(mv1, mv1$verb %in% all_verbs))
+length(unique(d$verb)) #147
+#View(d)
+
+# by-predicate mean
+mean.predicate = d %>%
+  group_by(verb) %>%
+  summarize(Mean = mean(veridicality_num), CILow = ci.low(veridicality_num), CIHigh = ci.high(veridicality_num)) %>%
+  mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, verb = fct_reorder(as.factor(verb),Mean))
+
+nrow(mean.predicate) #147
+levels(mean.predicate$verb) # ordered by mean, not alphabetically
+length(mean.predicate$verb) #147
+
+# by-type mean
+d$type = as.factor(
+  ifelse(d$verb %in% cognitive, "cognitive", 
+         ifelse(d$verb %in% emotive, "emotive", 
+                ifelse(d$verb %in% inferential, "inferential", "communicative"))))
+
+table(d$type)
+summary(d)
+
+mean.type = d %>%
+  group_by(type) %>%
+  summarize(Mean = mean(veridicality_num), CILow = ci.low(veridicality_num), CIHigh = ci.high(veridicality_num)) %>%
+  mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, type = fct_reorder(as.factor(type),Mean))
+
+nrow(mean.type) #4
+
+# color code the verbs
+cols = data.frame(verb=levels(mean.predicate$verb))
+cols
+nrow(cols)
+
+cols$type = as.factor(
+  ifelse(cols$verb %in% cognitive, "cognitive", 
+         ifelse(cols$verb %in% emotive, "emotive", 
+                ifelse(cols$verb %in% inferential, "inferential", "communicative"))))
+cols
+table(cols$type)
+
+cols$Colors =  ifelse(cols$type == "emotive", "#D55E00", 
+                      ifelse(cols$type == "cognitive", "#5b43c4", 
+                            ifelse(cols$type == "communicative", "gray", "green")))
+cols
+
+# add type to the dataset
+mean.predicate$type = as.factor(
+  ifelse(mean.predicate$verb %in% cognitive, "cognitive", 
+         ifelse(mean.predicate$verb %in% emotive, "emotive", 
+                ifelse(mean.predicate$verb %in% inferential, "inferential", "communicative"))))
+
+mean.predicate$Colors =  ifelse(mean.predicate$type == "emotive", "#D55E00", 
+                      ifelse(mean.predicate$type == "cognitive", "#5b43c4", 
+                             ifelse(mean.predicate$type == "communicative", "gray", "green")))
+
+ggplot(mean.predicate, aes(x=verb, y=Mean)) +
+  geom_point(color = "black") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0) +
+  #scale_color_manual(values = colors) +
+  #geom_line(aes(color=type), size=.5) + 
+  geom_hline(yintercept=.3) +
+  theme(axis.ticks.x=element_blank(),legend.position="top") +
+  #theme(axis.text.x = element_text(face = ifelse(levels(means$verb) %in% our_preds,"bold","plain"))) +
+  theme(axis.text.x = element_text(color=cols$Colors,size=10,angle = 75, hjust = 1)) +
+  scale_y_continuous(limits = c(-1,1),breaks = c(-1,0,1)) +
+  ylab("Mean projection rating") +
+  xlab("Predicate")
+ggsave("../graphs/by-predicate-and-type.pdf",height=4,width=13)
+
+ggplot(mean.type, aes(x=type, y=Mean)) +
+  geom_point(color = "black", size = 1) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.2) +
+  #scale_color_manual(values = colors) +
+  #geom_line(aes(color=type), size=.5) + 
+  theme(axis.ticks.x=element_blank(),legend.position="top") +
+  #theme(axis.text.x = element_text(face = ifelse(levels(means$verb) %in% our_preds,"bold","plain"))) +
+  theme(axis.text.x = element_text(color=cols$Colors,size=10,angle = 75, hjust = 1)) +
+  scale_y_continuous(limits = c(-1,1),breaks = c(-1,0,1)) +
+  ylab("Mean projection rating") +
+  xlab("Predicate")
+ggsave("../graphs/by-predicate-type.pdf",height=3,width=5)
+
+# SALT abstract 2023 plot ----
+this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
+setwd(this.dir)
+
+source('helpers.R')
+
+# load required packages
+library(tidyverse)
+library(dichromat)
+library(ggrepel)
+theme_set(theme_bw())
+
+# load data
+mv1 = read.csv("../data/mv1.csv")
+nrow(mv1) #21692
+table(mv1$conditional2,mv1$polarity)
+
+# create new embedding variable
+mv1 = mv1 %>%
+  mutate(embedding = case_when(
+    polarity == "negative" & conditional2 == "matrix"  ~ "n",
+    polarity == "negative" & conditional2 == "conditional"  ~ "ncq",
+    polarity == "positive" & conditional2 == "conditional"  ~ "cq",
+    TRUE ~ "p"
+  ))
+
+# sanity check
+table(mv1$embedding)
+
+# subset to relevant embeddings (negation, conditional/question)
+mv1 <- droplevels(subset(mv1, mv1$embedding != "p" & mv1$embedding != "ncq"))
+table(mv1$embedding)
+
+# subset to potentially relevant predicates
+our_preds <- c("be annoyed", "discover", "know", "reveal", "see", "pretend", "suggest", "say", "think", 
+               "demonstrate", "acknowledge", "admit", "announce", "confess", "confirm", "establish", "hear", "inform", "prove")
+
+emotive = c("trust", "desire", "fear", "worry", "mourn", "grieve", "frighten", "envy", "scare", "anger",
+                   "freak_out", "frustrate", "petrify", "puzzle", "regret", "devastate", "disappoint", "embitter", "shame",
+                   "dismay", "be annoyed", "content", "detest", "disturb", "hate", "traumatize", "enjoy", "embarrass",
+                   "irritate", "amuse", "elate", "love", "pain", "upset", "bother", "resent")
+
+cognitive = c("feel", "presuppose", "think", "believe", "suppose", "find", "discover", "see", "remember", "know", "comprehend",
+                     "conceive", "contemplate", "disbelieve", "dispute", "doubt", "estimate", "gather", "find_out", 
+                     "learn", "maintain", "notice", "realize", "recognize", "rediscover", "reveal", "see", "hear",
+                     "understand", "assume")
+
+preds <- c(our_preds, emotive, cognitive)
+
+d <- droplevels(subset(mv1, mv1$verb %in% select))
+length(unique(d$verb)) #71
+
+table(d$verb,d$embedding) #9-10 ratings per verb/embedding combination (20 for "worry", "freak out")
+
+# by-predicate and embedding projection mean
+means = d %>%
+  group_by(verb,embedding) %>%
+  summarize(Mean = mean(veridicality_num), CILow = ci.low(veridicality_num), CIHigh = ci.high(veridicality_num)) %>%
+  mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, verb = fct_reorder(as.factor(verb),Mean))
+
+# to order predicates by mean projection
+tmp = d %>%
+  group_by(verb) %>%
+  summarize(Mean = mean(veridicality_num)) %>%
+  mutate(verb = fct_reorder(as.factor(verb),Mean))
+
+nrow(tmp) #71
+levels(tmp$verb) # ordered by mean, not alphabetically
+length(tmp$verb) #71
+
+# relevel verb by overall mean
+means$verb <- factor(means$verb, levels = unique(levels(tmp$verb)))
+levels(means$verb)
+
+# color code the verbs
+cols = data.frame(verb=levels(means$verb))
+cols
+nrow(cols)
+
+cols$type = as.factor(
+  ifelse(cols$verb %in% cognitive, "cognitive", 
+         ifelse(cols$verb %in% emotive, "emotive", "our")))
+                
+cols
+table(cols$type) # if one of our predicates is cognitive or emotive, it is coded as that, not our
+# use verb %in% our_preds for bold-facing in graph
+
+cols$Colors =  ifelse(cols$type == "emotive", "#D55E00", 
+                      ifelse(cols$type == "cognitive", "#5b43c4", "gray"))
+cols
+
+# add type to the dataset
+means$type = as.factor(
+  ifelse(means$verb %in% cognitive, "cognitive", 
+         ifelse(means$verb %in% emotive, "emotive", "our")))
+                
+
+means$Colors =  ifelse(means$type == "emotive", "#D55E00", 
+                                       ifelse(means$type == "cognitive", "#5b43c4", "gray"))
+                                              
+
+
+ggplot(means, aes(x=verb, y=Mean, color = embedding, group = embedding)) +
+  geom_text(aes(label = embedding, size = 150)) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.2) +
+  geom_line(aes(color=embedding), size=.5) + 
+  theme(#panel.grid.major.x = element_blank(), 
+    axis.ticks.x=element_blank(),legend.position="bottom") +
+  guides(color = "none", size = "none") +
+  #theme(axis.text.x = element_text(face = ifelse(levels(means$verb) %in% our_preds,"bold","plain"))) +
+  theme(axis.text.x = element_text(color=cols$Colors,size=12)) +
+  theme(axis.text.x = element_text(angle = 75, hjust = 1)) +
+  scale_y_continuous(limits = c(-1,1),breaks = c(-1,0,1)) +
+  ylab("Mean projection rating") +
+  xlab("Predicate")
+#ggsave("../graphs/by-predicate-and-operator.pdf",height=4,width=13)
+
+# identify suitable predicates to illustrate variation by embedding operator
+#View(means)
+str(means)
+
+# include predicates with an at-ceiling mean under either embedding, or one of our predicates
+means$n_ceiling = ifelse(means$embedding == "n" & means$Mean == 1, "true", "false") 
+table(means$n_ceiling) #3 true
+
+means$cq_ceiling = ifelse(means$embedding == "cq" & means$Mean == 1, "true", "false")
+table(means$cq_ceiling) #22 true
+
+our_preds #19
+
+tmp <- droplevels(subset(means, means$n_ceiling == "true" | means$cq_ceiling == "true" | means$verb %in% our_preds))
+nrow(tmp) #55
+unique(tmp$verb) #35 verbs (not all with both embeddings)
+
+means_select <- droplevels(subset(means, means$verb %in% tmp$verb))
+nrow(means_select) #70 (= 2 embeddings x 35 verbs)
+
+ggplot(means_select, aes(x=verb, y=Mean, color = embedding, group = embedding)) +
+  geom_text(aes(label = embedding, size = 150)) +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=.2) +
+  theme(axis.ticks.x=element_blank(),legend.position="top") +
+  guides(size = "none") +
+  theme(axis.text.x = element_text(face = ifelse(levels(means_select$verb) %in% our_preds,"bold","plain"))) +
+  theme(axis.text.x = element_text(color=cols$Colors,size=12)) +
+  theme(axis.text.x = element_text(angle = 75, hjust = 1)) +
+  scale_y_continuous(limits = c(-1,1),breaks = c(-1,0,1)) +
+  ylab("Mean projection rating") +
+  xlab("Predicate")
+ggsave("../graphs/by-predicate-and-operator.pdf",height=4,width=13)
+
+# AUX for lexical semantics project ----
+this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
+setwd(this.dir)
+
+source('helpers.R')
+
+# load required packages
+library(tidyverse)
+library(dichromat)
+library(ggrepel)
+theme_set(theme_bw())
+
+# load data
+mv1 = read.csv("../data/mv1.csv")
+nrow(mv1) #21692
+table(mv1$conditional2,mv1$polarity)
+
+# create new embedding variable
+mv1 = mv1 %>%
+  mutate(embedding = case_when(
+    polarity == "negative" & conditional2 == "matrix"  ~ "n",
+    polarity == "negative" & conditional2 == "conditional"  ~ "ncq",
+    polarity == "positive" & conditional2 == "conditional"  ~ "cq",
+    TRUE ~ "p"
+  ))
+
+# sanity check
+table(mv1$embedding)
+
+# subset to relevant embeddings
+mv1.verid <- droplevels(subset(mv1, mv1$embedding == "p"))
+mv1.proj <- droplevels(subset(mv1, mv1$embedding != "p"))
+table(mv1.verid$embedding)
+table(mv1.proj$embedding)
+
+# verb per embedding
+table(mv1.verid$verb,mv1$embedding)
+table(mv1.proj$verb,mv1$embedding) #mostly 10 ratings per verb & embedding, sometimes 9 or 20
+
+length(unique(mv1$participant)) #159 participants gave ratings
+
+# get the relevant predicates to plot
+table(mv1.proj$verb)
+means = mv1 %>%
+  group_by(verb) %>%
+  summarize(Mean = mean(veridicality_num))
+View(means)
+
+
+
+evidential = c("discover", "dream", "establish", "feel", "figure_out", "figure", "find_out",
+               "generalize", "hallucinate", "hear", "imagine", "infer", "learn", "listen", 
+               "notice", "observe", "overhear", "perceive", "piece_together", "realize",
+               "reason_out", "recognize", "see")
+
+emotive = c("trust", "desire", "fear", "worry", "mourn", "grieve", "frighten", "envy", "scare", "anger",
+            "freak_out", "frustrate", "petrify", "puzzle", "regret", "devastate", "disappoint", "embitter", "shame",
+            "dismay", "be annoyed", "content", "detest", "disturb", "hate", "traumatize", "enjoy", "embarrass",
+            "irritate", "amuse", "elate", "love", "pain", "upset", "bother", "resent")
+length(emotive) #37
+
+cognitive = c("feel", "presuppose", "think", "believe", "suppose", "find", "discover", "see", "remember", "know", "comprehend",
+              "conceive", "contemplate", "disbelieve", "dispute", "doubt", "estimate", "gather", "find_out", 
+              "learn", "maintain", "notice", "realize", "recognize", "rediscover", "reveal", "see", "hear",
+              "understand", "assume")
+length(cognitive) #29
+
+communicative = c("add", "advise", "alert", "argue", "announce", "assert", "assure", "babble", "bark", "cackle", "claim", 
+                  "communicate", "comment", "confess", "confirm", "convey", "declare", "discuss", "elaborate", "email",
+                  "express", "fax", "gab", "gloat", "gossip", "growl", "grunt", "gush", "hint", "inform", "insist", 
+                  "lecture", "lie", "maintain", "mention", "mutter", "narrate", "note", "phone", "publicize", "publish",
+                  "quip", "quote", "rant", "reassert", "recap", "reiterate", "repeat", "report", "say", "sing", "sob",
+                  "state", "stress", "tell", "underline", "utter", "vow", "warn", "weep", "whimper", "whine", "whisper",
+                  "wow", "yell")
+length(communicative) #64
+
+inferential = c("anticipate", "calculate", "compute", "conclude", "conjecture", "deduce", "derive", "establish", "estimate",
+                "expect", "figure", "figure_out", "generalize", "infer", "piece_together", "pinpoint", "predict",
+                "reason", "reason_out", "verify")
+length(inferential) #20
+
+# chose here for plotting
+all_verbs <- c(emotive,cognitive,communicative,inferential,evidential)
+#all_verbs <- c(evidential)
+all_verbs
+length(unique(all_verbs)) #148
+
+d.proj <- droplevels(subset(mv1.proj, mv1.proj$verb %in% all_verbs))
+d.verid <- droplevels(subset(mv1.proj, mv1.proj$verb %in% all_verbs))
+length(unique(d$verb)) #148
+#View(d)
+
+# by-predicate means
+mean.proj = d.proj %>%
+  group_by(verb) %>%
+  summarize(Mean.Proj = mean(veridicality_num), CILow = ci.low(veridicality_num), CIHigh = ci.high(veridicality_num)) %>%
+  mutate(YMin.Proj = Mean.Proj - CILow, YMax.Proj = Mean.Proj + CIHigh, verb = fct_reorder(as.factor(verb),Mean.Proj))
+
+mean.verid = d.verid %>%
+  group_by(verb) %>%
+  summarize(Mean.Verid = mean(veridicality_num), CILow = ci.low(veridicality_num), CIHigh = ci.high(veridicality_num)) %>%
+  mutate(YMin.Verid = Mean.Verid - CILow, YMax.Verid = Mean.Verid + CIHigh, verb = fct_reorder(as.factor(verb),mean.proj$Mean.Proj))
+
+nrow(mean.proj)
+nrow(mean.verid)
+levels(mean.proj$verb) # ordered by mean, not alphabetically
+
+# # by-type mean
+# d$type = as.factor(
+#   ifelse(d$verb %in% cognitive, "cognitive", 
+#          ifelse(d$verb %in% emotive, "emotive", 
+#                 ifelse(d$verb %in% inferential, "inferential", "communicative"))))
+# 
+# table(d$type)
+# summary(d)
+# 
+# mean.type = d %>%
+#   group_by(type) %>%
+#   summarize(Mean = mean(veridicality_num), CILow = ci.low(veridicality_num), CIHigh = ci.high(veridicality_num)) %>%
+#   mutate(YMin = Mean - CILow, YMax = Mean + CIHigh, type = fct_reorder(as.factor(type),Mean))
+# 
+# nrow(mean.type) #4
+
+# color code the verbs
+cols = data.frame(verb=levels(mean.proj$verb))
+cols
+nrow(cols)
+
+cols$type = as.factor(
+  ifelse(cols$verb %in% cognitive, "cognitive", 
+         ifelse(cols$verb %in% emotive, "emotive", 
+                ifelse(cols$verb %in% inferential, "inferential", 
+                       ifelse(cols$verb %in% communicative, "communicative", "evidential")))))
+cols
+table(cols$type)
+
+cols$Colors =  ifelse(cols$type == "emotive", "#D55E00", 
+                      ifelse(cols$type == "cognitive", "#5b43c4", 
+                             ifelse(cols$type == "communicative", "gray", 
+                                    ifelse(cols$type == "inferential", "green", "black"))))
+cols
+
+# add type to the dataset
+mean.proj$type = as.factor(
+  ifelse(mean.proj$verb %in% cognitive, "cognitive", 
+         ifelse(mean.proj$verb %in% emotive, "emotive", 
+                ifelse(mean.proj$verb %in% inferential, "inferential", 
+                       ifelse(mean.proj$verb %in% "communicative", "communicative", "evidential")))))
+
+mean.verid$type = as.factor(
+  ifelse(mean.verid$verb %in% cognitive, "cognitive", 
+         ifelse(mean.verid$verb %in% emotive, "emotive", 
+                ifelse(mean.verid$verb %in% inferential, "inferential", 
+                       ifelse(mean.verid$verb %in% "communicative", "communicative", "evidential")))))
+
+
+mean.proj$Colors =  ifelse(mean.proj$type == "emotive", "#D55E00", 
+                                ifelse(mean.proj$type == "cognitive", "#5b43c4", 
+                                       ifelse(mean.proj$type == "communicative", "gray", 
+                                              ifelse(mean.proj$type == "inferential", "green", "black"))))
+
+mean.verid$Colors =  ifelse(mean.verid$type == "emotive", "#D55E00", 
+                           ifelse(mean.verid$type == "cognitive", "#5b43c4", 
+                                  ifelse(mean.verid$type == "communicative", "gray", 
+                                         ifelse(mean.verid$type == "inferential", "green", "black"))))
+
+tmp = mean.proj %>% 
+  left_join(mean.verid)
+View(tmp)
+
+ggplot(tmp, aes(x=Mean.Verid, y=Mean.Proj)) +
+  geom_point(color = "black") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax),width=0) +
+  #scale_color_manual(values = colors) +
+  #geom_line(aes(color=type), size=.5) + 
+  geom_hline(yintercept=.3) +
+  theme(axis.ticks.x=element_blank(),legend.position="top") +
+  #theme(axis.text.x = element_text(face = ifelse(levels(means$verb) %in% our_preds,"bold","plain"))) +
+  theme(axis.text.x = element_text(color=cols$Colors,size=10,angle = 75, hjust = 1)) +
+  scale_y_continuous(limits = c(-1,1),breaks = c(-1,0,1)) +
+  ylab("Mean projection rating") +
+  xlab("Predicate")
+ggsave("../graphs/veridicality-by-predicate-and-type.pdf",height=4,width=13)
+ggsave("../graphs/projection-for-evidential.pdf",height=4,width=13)
+
+
+
+
+
+
