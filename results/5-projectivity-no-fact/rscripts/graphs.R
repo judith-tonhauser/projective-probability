@@ -413,3 +413,44 @@ ggplot(means, aes(x=Participant, y=Mean, fill=PresumedVerbType)) +
   theme(axis.text.x = element_text(size = 6, angle = 45, hjust=1,vjust=1 )) 
 ggsave("../graphs/means-projectivity-by-participant.pdf",height=4,width=25)
 
+# plot for talk at Nicole's inauguration event ----
+
+# define colors for the predicates
+cols = data.frame(V=levels(means$verb))
+
+cols$VeridicalityGroup = as.factor(
+  ifelse(cols$V %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", "V"))
+  
+cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, ordered = TRUE)
+
+cols$Colors =  ifelse(cols$VeridicalityGroup == "F", "tomato1","gray60")
+
+cols$V <- factor(cols$V, levels = cols[order(as.character(means$verb)),]$V, ordered = TRUE)
+levels(cols$V)
+
+means$VeridicalityGroup = factor(x=ifelse(means$verb %in% c("know", "discover", "reveal", "see", "be annoyed"), "F", "V"))
+                                          
+subjmeans = cd %>%
+  group_by(verb,workerid) %>%
+  summarize(Mean = mean(response)) 
+subjmeans$verb <- factor(subjmeans$verb, levels = unique(levels(means$verb)))
+levels(subjmeans$verb)
+
+# plot of means, 95% CIs and participants' ratings 
+ggplot(means, aes(x=verb, y=Mean)) +
+  geom_violin(data=subjmeans,scale="width",color="gray80") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax, fill=VeridicalityGroup, shape=VeridicalityGroup),width=0.1,color="black") +
+  geom_point(aes(fill=VeridicalityGroup, shape=VeridicalityGroup),stroke=.5,size=2.5,color="black") +
+  scale_y_continuous(limits = c(0,1),breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+  scale_alpha(range = c(.3,1)) +
+  scale_shape_manual(values=rev(c(23, 24, 25, 22, 21)),labels=rev(c("factive","main clause\ncontrols")),name="Predicate type") +
+  scale_fill_manual(values=rev(c("gray60","tomato1")),labels=rev(c("factive","main clause\ncontrols")),name="Predicate type") +
+  guides(fill=FALSE, shape=F) +
+  theme(text = element_text(size=12), axis.text.x = element_text(size = 12, angle = 45, hjust = 1, 
+                                                                 color=cols$Colors)) +
+  theme(legend.position="bottom") +
+  theme(panel.grid.major.x = element_blank()) +
+  ylab("Mean certainty rating") +
+  xlab("Predicate") +
+  theme(axis.text.x = element_text(size = 12, angle = 45, hjust = 1)) 
+ggsave("../graphs/nicole.pdf",height=4,width=7)

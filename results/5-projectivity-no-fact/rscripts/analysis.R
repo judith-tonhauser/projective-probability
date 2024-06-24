@@ -325,7 +325,7 @@ betamodel = bf(betaresponse ~ verb + (1|workerid) + (1|item),
 m.b = brm(formula = betamodel,
           family=Beta(),
           data=d, 
-          cores = 4,
+          cores = 4, 
           control = list(adapt_delta = .95,max_treedepth=15))
 
 summary(m.b)

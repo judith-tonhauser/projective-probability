@@ -126,3 +126,8 @@ anova(m.proj,m.proj.ind.plus)
 # both the BIC comparison and the likelihood ratio comparison indicate that 
 # the individual-level prior model is better than the population-level or categorical one
 
+
+
+
+
+
